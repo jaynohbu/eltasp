@@ -117,9 +117,9 @@ end if
                         <option value="Last Year">Last Year</option>
                     </select></td>
                     <td align="left" valign="middle" class="bodyheader"><span class="bodycopy">
-                        <input name="txtStartDate" class="m_shorttextfield date" preset="shortdate" value="<%= vStartDate %>" size="16">
+                        <input name="txtStartDate" class="m_shorttextfield " preset="shortdate" value="<%= vStartDate %>" size="16">
                     </span></td>
-                    <td align="left" valign="middle" class="bodycopy"><input name="txtEndDate" class="m_shorttextfield date" preset="shortdate" value="<%= vEndDate %>" size="16"></td>
+                    <td align="left" valign="middle" class="bodycopy"><input name="txtEndDate" class="m_shorttextfield " preset="shortdate" value="<%= vEndDate %>" size="16"></td>
                     <td align="left" valign="middle" class="bodyheader">&nbsp;</td>
                     <td align="left" valign="middle" class="bodyheader">&nbsp;</td>
                     </tr>

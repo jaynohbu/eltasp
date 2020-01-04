@@ -702,7 +702,7 @@
                                                     to HAWB</a></div>
                                         </td>
                                         <td align="left" valign="top">
-                                            <input class="m_shorttextfield date" type="text" name="txtExecDate" size="14" id="txtExecDate"
+                                            <input class="m_shorttextfield " type="text" name="txtExecDate" size="14" id="txtExecDate"
                                                 preset="shortdate" /></td>
                                         <td align="left" valign="top">
                                             <select name="lstPrefix" size="1" class="bodycopy" style="width: 60px" onChange="PrefixChange(this);"
@@ -876,10 +876,10 @@
                                 &nbsp;
                             </td>
                             <td align="left" valign="top" style="height: 18px">
-                                <input class="m_shorttextfield date" type="text" name="txtDepDate" size="14" id="txtDepDate"
+                                <input class="m_shorttextfield " type="text" name="txtDepDate" size="14" id="txtDepDate"
                                     preset="shortdate" /></td>
                             <td align="left" valign="top" style="height: 18px">
-                                <input class="m_shorttextfield date" type="text" name="txtArrDate" size="14" id="txtArrDate"
+                                <input class="m_shorttextfield " type="text" name="txtArrDate" size="14" id="txtArrDate"
                                     preset="shortdate" /></td>
                         </tr>
                     </table>

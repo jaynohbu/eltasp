@@ -392,7 +392,7 @@ end sub
                         </td>
                         <td>
                             <b>
-                                <input name="txtCheckDate<%= i %>" type="text" class="m_shorttextfield date" preset="shortdate"
+                                <input name="txtCheckDate<%= i %>" type="text" class="m_shorttextfield " preset="shortdate"
                                     id="CheckDate" value="<%= CheckDate(i) %>" size="10">
                             </b>
                         </td>

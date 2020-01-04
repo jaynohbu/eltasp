@@ -894,7 +894,7 @@
                                                                 </td>
                                                                 <td valign="top" bgcolor="#FFFFFF" class="bodycopy">
                                                                     <span class="bodylistheader">
-                                                                        <input name="txtReceivedDate" id="txtReceivedDate" type="text" class="m_shorttextfield date"
+                                                                        <input name="txtReceivedDate" id="txtReceivedDate" type="text" class="m_shorttextfield "
                                                                             value="<%=Date() %>" size="32" style="width: 140px" preset="shortdate" />
                                                                     </span>
                                                                 </td>
@@ -919,7 +919,7 @@
                                                                     &nbsp;
                                                                 </td>
                                                                 <td height="18" bgcolor="#FFFFFF">
-                                                                    <input name="txtUpdatedDate" type="text" class="m_shorttextfield date" value="<%=Date() %>"
+                                                                    <input name="txtUpdatedDate" type="text" class="m_shorttextfield " value="<%=Date() %>"
                                                                         size="11" preset="shortdate" id="txtUpdatedDate" /></td>
                                                                 <td bgcolor="#FFFFFF">
                                                                     <span class="bodyheader">
@@ -1087,13 +1087,13 @@
                                                                 </td>
                                                                 <td height="18" bgcolor="#FFFFFF">
                                                                     <span class="bodylistheader">
-                                                                        <input name="txtPickupDate" id="txtPickupDate" type="text" class="m_shorttextfield date"
+                                                                        <input name="txtPickupDate" id="txtPickupDate" type="text" class="m_shorttextfield "
                                                                             value="" style="width: 140px" preset="shortdate" />
                                                                     </span>
                                                                 </td>
                                                                 <td>
                                                                     <span class="bodylistheader">
-                                                                        <input name="txtStorageDate" id="txtStorageDate" type="text" class="m_shorttextfield date"
+                                                                        <input name="txtStorageDate" id="txtStorageDate" type="text" class="m_shorttextfield "
                                                                             value="" size="32" style="width: 140px" preset="shortdate" />
                                                                     </span>
                                                                 </td>

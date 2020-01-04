@@ -828,7 +828,7 @@ End SUB
                                     </td>
                                     <td>
                                         <input id="txtBookingDate" name="txtBookingDate" type="text" value="<%=checkBlank(booking_date,Date) %>"
-                                            class="m_shorttextfield date" preset="shortdate" />
+                                            class="m_shorttextfield " preset="shortdate" />
                                     </td>
                                     <td>
                                     </td>
@@ -1099,7 +1099,7 @@ End SUB
                                         </select>
                                     </td>
                                     <td class="bodycopy">
-                                        <input name="txtETD" id="txtETD" class="m_shorttextfield date" preset="shortdate" value="<%= vDeptDate %>"
+                                        <input name="txtETD" id="txtETD" class="m_shorttextfield " preset="shortdate" value="<%= vDeptDate %>"
                                             size="19">
                                     </td>
                                     <td colspan="2">
@@ -1138,11 +1138,11 @@ End SUB
                                                 </select>
                                             </td>
                                             <td class="bodycopy">
-                                                <input name="txtETA" id="txtETA"  class="m_shorttextfield date" preset="shortdate" value="<%= vArrivalDate %>"
+                                                <input name="txtETA" id="txtETA"  class="m_shorttextfield " preset="shortdate" value="<%= vArrivalDate %>"
                                                     size="19" />
                                             </td>
                                             <td>
-                                                <input name="txtCutOff" id="txtCutOff" class="m_shorttextfield date" preset="shortdate" value="<%= vCutOff %>"
+                                                <input name="txtCutOff" id="txtCutOff" class="m_shorttextfield " preset="shortdate" value="<%= vCutOff %>"
                                                     size="19" />
                                             </td>
                                             <td>

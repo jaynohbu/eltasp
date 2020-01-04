@@ -1760,7 +1760,7 @@ function selectSearchType(){
                                             &nbsp;
                                         </td>
                                         <td height="20" align="left" valign="middle" class="bodyheader">
-                                            <input name="txtDate" type="text" class="m_shorttextfield date" preset="shortdate" value="<%= vPRDate %>"
+                                            <input name="txtDate" type="text" class="m_shorttextfield " preset="shortdate" value="<%= vPRDate %>"
                                                 size="30"></td>
                                         <td align="left" valign="middle">
                                         </td>
@@ -1915,7 +1915,7 @@ function selectSearchType(){
                                             </span>
                                         </td>
                                         <td align="left" valign="middle">
-                                            <input name="txtETD" type="text" class="m_shorttextfield date" preset="shortdate" value="<%= vETD %>"
+                                            <input name="txtETD" type="text" class="m_shorttextfield " preset="shortdate" value="<%= vETD %>"
                                                 size="19"></td>
                                         <td colspan="2" align="left" valign="middle">
                                             <select name="lstCargoLocation" class="smallselect" style="width: 250px">
@@ -1960,10 +1960,10 @@ function selectSearchType(){
                                             </select>
                                         </td>
                                         <td align="left" valign="middle">
-                                            <input name="txtETA" type="text" class="m_shorttextfield date" preset="shortdate" value="<%= vETA %>"
+                                            <input name="txtETA" type="text" class="m_shorttextfield " preset="shortdate" value="<%= vETA %>"
                                                 size="19"></td>
                                         <td align="left" valign="middle">
-                                            <input name="txtLastFreeDate" type="text" class="m_shorttextfield date" preset="shortdate"
+                                            <input name="txtLastFreeDate" type="text" class="m_shorttextfield " preset="shortdate"
                                                 value="<%= vLastFreeDate %>" size="19"></td>
                                         <td align="left" valign="middle">
                                             <input name="txtPlaceOfDelivery" type="text" class="shorttextfield date" maxlength="64"
@@ -2048,7 +2048,7 @@ function selectSearchType(){
                                             </span>
                                         </td>
                                         <td align="left" valign="middle">
-                                            <input name="txtITDate" type="text" class="m_shorttextfield date" preset="shortdate" value="<%= vITDate %>"
+                                            <input name="txtITDate" type="text" class="m_shorttextfield " preset="shortdate" value="<%= vITDate %>"
                                                 size="19"></td>
                                         <td colspan="2" align="left" valign="middle">
                                             <select name="lstITEntryPort" class="smallselect" style="width: 160px">

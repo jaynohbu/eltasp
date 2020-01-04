@@ -1857,7 +1857,7 @@ End Sub
                                         </td>
                                         <td align="left" valign="top" bgcolor="#FFFFFF">
                                             <font size="2">
-                                                <input name="txtInvoiceDate" id="txtInvoiceDate" type="text" class="m_shorttextfield date" preset="shortdate"
+                                                <input name="txtInvoiceDate" id="txtInvoiceDate" type="text" class="m_shorttextfield " preset="shortdate"
                                                     value="<%= InvoiceDate %>" size="14" />
                                             </font>
                                         </td>

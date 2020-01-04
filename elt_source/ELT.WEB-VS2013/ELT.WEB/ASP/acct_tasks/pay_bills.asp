@@ -1113,7 +1113,7 @@
                                     <tr align="left" valign="top" height="31">
                                         <td width="556" valign="bottom"></td>
                                         <td width="90" valign="bottom"><input name="txtDate" 
-                                            class="m_shorttextfield date" preset="shortdate" value="<%= vDate %>" size="12"></td>
+                                            class="m_shorttextfield " preset="shortdate" value="<%= vDate %>" size="12"></td>
                                     </tr>
                                     <tr align="left" valign="top"  height="32">
                                         <td height="29" colspan="2"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">

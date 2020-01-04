@@ -948,7 +948,7 @@
                                                             <tr>
                                                                 <td bgcolor="#FFFFFF">&nbsp;                                                                    </td>
                                                                 <td bgcolor="#FFFFFF">
-                                                                    <input name="txtUpdateDate" id="txtUpdateDate" type="text" class="m_shorttextfield date" value="<%=Date() %>"
+                                                                    <input name="txtUpdateDate" id="txtUpdateDate" type="text" class="m_shorttextfield " value="<%=Date() %>"
                                                                         size="16" preset="shortdate" /></td>
                                                                 <td bgcolor="#FFFFFF">
                                                                     <input name="txtRefNoOur"  type="text" class="m_shorttextfield" maxlength="32" 
@@ -1050,12 +1050,12 @@
                                                             <tr>
                                                                 <td bgcolor="#FFFFFF">&nbsp;                                                                    </td>
                                                                 <td bgcolor="#FFFFFF">
-                                                                    <input name="txtArrDate" type="text" class="m_shorttextfield date" value="" size="16"
+                                                                    <input name="txtArrDate" type="text" class="m_shorttextfield " value="" size="16"
                                                                         preset="shortdate" id="txtArrDate" />
-                                                                    <input name="txtDepDate" id="txtDepDate" type="hidden" class="m_shorttextfield date" value="" size="16"
+                                                                    <input name="txtDepDate" id="txtDepDate" type="hidden" class="m_shorttextfield " value="" size="16"
                                                                         preset="shortdate" />                                                                </td>
                                                                 <td bgcolor="#FFFFFF">
-                                                                    <input name="txtFreeDate" type="text" class="m_shorttextfield date" value="" size="16"
+                                                                    <input name="txtFreeDate" type="text" class="m_shorttextfield " value="" size="16"
                                                                         preset="shortdate" id="txtFreeDate" /></td>
                                                             </tr>
                                                             <tr>

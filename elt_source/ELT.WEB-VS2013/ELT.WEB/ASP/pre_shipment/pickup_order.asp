@@ -1024,15 +1024,15 @@
                                                                 <td>
                                                                 </td>
                                                                 <td class="bodycopy">
-                                                                    <input name="txtArrDate" id="txtArrDate"  type="text" class="m_shorttextfield date" value="" size="16"
+                                                                    <input name="txtArrDate" id="txtArrDate"  type="text" class="m_shorttextfield " value="" size="16"
                                                                         style="width: 140px" preset="shortdate" />
                                                                     <span style="width: 100px">
-                                                                        <input name="txtDepDate" id="txtDepDate" type="hidden" class="m_shorttextfield date" value="" size="13"
+                                                                        <input name="txtDepDate" id="txtDepDate" type="hidden" class="m_shorttextfield " value="" size="13"
                                                                             preset="shortdate" />
                                                                     </span>
                                                                 </td>
                                                                 <td height="8" class="bodycopy">
-                                                                    <input name="txtFreeDate" id="txtFreeDate" type="text" class="m_shorttextfield date" value="" size="16"
+                                                                    <input name="txtFreeDate" id="txtFreeDate" type="text" class="m_shorttextfield " value="" size="16"
                                                                         style="width: 140px" preset="shortdate" /></td>
                                                             </tr>
                                                             <tr>
@@ -1101,7 +1101,7 @@
                                                                     &nbsp;
                                                                 </td>
                                                                 <td height="18">
-                                                                    <input name="txtUpdateDate" id="txtUpdateDate" type="text" class="m_shorttextfield date" value="<%=Date() %>"
+                                                                    <input name="txtUpdateDate" id="txtUpdateDate" type="text" class="m_shorttextfield " value="<%=Date() %>"
                                                                         size="16" preset="shortdate" /></td>
                                                                 <td>
                                                                     <span class="bodyheader">

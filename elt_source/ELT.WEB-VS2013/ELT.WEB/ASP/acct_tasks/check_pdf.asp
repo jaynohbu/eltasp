@@ -276,7 +276,7 @@ response.expires = 0
 response.clear
 response.ContentType = "application/pdf"
 response.AddHeader "Content-Type", "application/pdf"
-response.AddHeader "Content-Disposition", "inline; filename=Check.pdf"
+response.AddHeader "Content-Disposition", "attachment; filename=Check.pdf"
 response.BinaryWrite zz
 
 set PDF=nothing

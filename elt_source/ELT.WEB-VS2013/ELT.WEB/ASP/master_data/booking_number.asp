@@ -264,12 +264,12 @@ Set rs=Nothing
                         </td>
                         <td width="170" align="left" valign="top" bgcolor="#FFFFFF">
                             From<br>
-                            <input name="txtStartMDate" id="txtStartMDate"  type="text" class="m_shorttextfield date" preset="shortdate"
+                            <input name="txtStartMDate" id="txtStartMDate"  type="text" class="m_shorttextfield " preset="shortdate"
                                 size="16" maxlength="10">
                         </td>
                         <td width="200" align="left" valign="top" bgcolor="#FFFFFF">
                             To<br>
-                            <input name="txtEndMDate" id="txtEndMDate"  type="text" class="m_shorttextfield date" preset="shortdate"
+                            <input name="txtEndMDate" id="txtEndMDate"  type="text" class="m_shorttextfield " preset="shortdate"
                                 size="16" maxlength="10">
                         </td>
                         <td width="153" bgcolor="#FFFFFF">

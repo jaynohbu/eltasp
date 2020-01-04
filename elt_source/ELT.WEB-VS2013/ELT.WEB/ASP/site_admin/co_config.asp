@@ -882,7 +882,7 @@ End Sub
                             <td align="left" bgcolor="#FFFFFF" class="bodycopy">
                                 IAC Exp Date</td>
                             <td colspan="4" align="left" bgcolor="#FFFFFF" class="bodycopy">
-                                <input name="txtFAAEDate" class="m_shorttextfield date" preset="shortdate" value="<%= vFAAEDate %>"
+                                <input name="txtFAAEDate" class="m_shorttextfield " preset="shortdate" value="<%= vFAAEDate %>"
                                     size="24">
                             </td>
                         </tr>

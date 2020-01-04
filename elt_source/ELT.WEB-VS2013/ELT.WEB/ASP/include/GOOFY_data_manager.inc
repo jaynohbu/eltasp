@@ -195,7 +195,7 @@ Class DataManager
             If rs.EOF Then
                 rs.AddNew
             Else
-                resVal = CInt(rs(0).value)
+                resVal = clng(rs(0).value)
             End If
 
             For j=0 To UBound(KeyArray)

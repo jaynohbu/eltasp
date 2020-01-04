@@ -933,7 +933,7 @@ function <%=iMoonComboBoxName%>_OnAddNewPlus(oText,oSelect,oDiv)
                                                 </td>
                                                 <td valign="top">
                                                     <input id="txtBookingDate" name="txtBookingDate" id="txtBookingDate"  type="text" value="<%=ConvertAnyValue(booking_date,"Date",Date)%>"
-                                                        class="m_shorttextfield date" preset="shortdate" />
+                                                        class="m_shorttextfield " preset="shortdate" />
                                                 </td>
                                             </tr>
                                             <tr>
@@ -1090,11 +1090,11 @@ function <%=iMoonComboBoxName%>_OnAddNewPlus(oText,oSelect,oDiv)
                                                                         <input name="txtFlight1" id="txtFlight1" class="shorttextfield" value="<%= vFlight1 %>" size="24">
                                                                     </td>
                                                                     <td colspan="2">
-                                                                        <input name="txtDeptDate1" id="txtDeptDate1" class="m_shorttextfield date" preset="shortdate" value="<%= vDeptDate1 %>"
+                                                                        <input name="txtDeptDate1" id="txtDeptDate1" class="m_shorttextfield " preset="shortdate" value="<%= vDeptDate1 %>"
                                                                             size="20">
                                                                     </td>
                                                                     <td>
-                                                                        <input name="txtArrivalDate1" id="txtArrivalDate1" class="m_shorttextfield date" preset="shortdate" value="<%= vArrivalDate1 %>"
+                                                                        <input name="txtArrivalDate1" id="txtArrivalDate1" class="m_shorttextfield " preset="shortdate" value="<%= vArrivalDate1 %>"
                                                                             size="20">
                                                                     </td>
                                                                     <td>
@@ -1124,11 +1124,11 @@ function <%=iMoonComboBoxName%>_OnAddNewPlus(oText,oSelect,oDiv)
                                                                                 <input name="txtFlight2" id="txtFlight2" class="shorttextfield" value="<%= vFlight2 %>" size="24">
                                                                             </td>
                                                                             <td colspan="2">
-                                                                                <input name="txtDeptDate2" id="txtDeptDate2"  class="m_shorttextfield date" preset="shortdate" value="<%= vDeptDate2 %>"
+                                                                                <input name="txtDeptDate2" id="txtDeptDate2"  class="m_shorttextfield " preset="shortdate" value="<%= vDeptDate2 %>"
                                                                                     size="20">
                                                                             </td>
                                                                             <td>
-                                                                                <input name="txtArrivalDate2" id="txtArrivalDate2" class="m_shorttextfield date" preset="shortdate" value="<%= vArrivalDate2 %>"
+                                                                                <input name="txtArrivalDate2" id="txtArrivalDate2" class="m_shorttextfield " preset="shortdate" value="<%= vArrivalDate2 %>"
                                                                                     size="20">
                                                                             </td>
                                                                             <td>

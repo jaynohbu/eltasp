@@ -835,7 +835,7 @@
                                                         <!-- End JPED -->
                                                     </td>
                                                     <td valign="top" class="bodycopy">
-                                                        <input name="txtUpdatedDate" type="text" class="m_shorttextfield date" value="" size="20"
+                                                        <input name="txtUpdatedDate" type="text" class="m_shorttextfield " value="" size="20"
                                                             preset="shortdate" /></td>
                                                     <td valign="top">
                                                         <input name="txtBookingNum" type="text" class="d_shorttextfield" value="" size="20"

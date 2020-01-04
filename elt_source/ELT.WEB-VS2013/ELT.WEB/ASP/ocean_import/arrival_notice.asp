@@ -2963,9 +2963,10 @@ function SaveClick(TranNo,PrintOK){
 function SaveClick2(TranNo,PrintOK){
     var lock="<%=vArApLock %>";
     if (lock != "Visible" && PrintOK == "yes") {
-	    PrintClick2("no");
+	    PrintClick2("yes");
 	    return false;
 	}
+
     document.getElementById("hDoInvoice").value="yes";
 
     if (document.form1.hConsigneeAcct.value == "" || document.form1.hConsigneeAcct.value == "0") {
@@ -3817,12 +3818,12 @@ function lstMAWB_OnAddNewPlus(){};
                                         <% End If %>
                                     </td>
                                     <td height="20" align="left" valign="middle" bgcolor="#FFFFFF">
-                                        <input name="txtDate" type="text" class="m_shorttextfield date" 
-                                            preset="shortdate" value="<%= vProcessDT %>"
+                                        <input name="txtDate" type="text" class="m_shorttextfield " 
+                                             value="<%= vProcessDT %>"
                                             size="24" id="txtDate">
                                     </td>
                                     <td align="left" valign="middle" bgcolor="#FFFFFF">
-                                        <input name="txtPickupDate" type="text" class="m_shorttextfield date" preset="shortdate"
+                                        <input name="txtPickupDate" type="text" class="m_shorttextfield " 
                                             value="<%= vPickupDate %>" size="24" id="txtPickupDate">
                                     </td>
                                 </tr>
@@ -3927,7 +3928,7 @@ function lstMAWB_OnAddNewPlus(){};
                                         </span>
                                     </td>
                                     <td align="left" valign="top" bgcolor="#FFFFFF">
-                                        <input name="txtETD" id="txtETD" type="text" class="m_shorttextfield date" preset="shortdate" value="<%= vETD %>"
+                                        <input name="txtETD" id="txtETD" type="text" class="m_shorttextfield "  value="<%= vETD %>"
                                             size="24">
                                     </td>
                                 </tr>
@@ -3996,7 +3997,7 @@ function lstMAWB_OnAddNewPlus(){};
                                         </select>
                                     </td>
                                     <td align="left" valign="middle" bgcolor="#FFFFFF">
-                                        <input name="txtETA" id="txtETA" type="text" preset="shortdate" class="m_shorttextfield date" value="<%= vETA %>"
+                                        <input name="txtETA" id="txtETA" type="text"  class="m_shorttextfield " value="<%= vETA %>"
                                             size="24">
                                     </td>
                                 </tr>
@@ -4014,7 +4015,7 @@ function lstMAWB_OnAddNewPlus(){};
                                             value="<%= vDeliveryPlace %>" size="30">
                                     </td>
                                     <td align="left" valign="middle" bgcolor="#FFFFFF">
-                                        <input name="txtETD2" id="txtETD2" type="text" class="m_shorttextfield date" preset="shortdate" value="<%= vETD2 %>"
+                                        <input name="txtETD2" id="txtETD2" type="text" class="m_shorttextfield "  value="<%= vETD2 %>"
                                             size="24">
                                     </td>
                                 </tr>
@@ -4032,7 +4033,7 @@ function lstMAWB_OnAddNewPlus(){};
                                             size="30">
                                     </td>
                                     <td align="left" valign="middle" bgcolor="#FFFFFF">
-                                        <input name="txtETA2" id="txtETA2" type="text" class="m_shorttextfield date" preset="shortdate" value="<%= vETA2 %>"
+                                        <input name="txtETA2" id="txtETA2" type="text" class="m_shorttextfield "  value="<%= vETA2 %>"
                                             size="24">
                                     </td>
                                 </tr>
@@ -4074,12 +4075,12 @@ function lstMAWB_OnAddNewPlus(){};
                                             size="60" id="txtContainerLocation">
                                     </td>
                                     <td align="left" valign="middle" bgcolor="#FFFFFF">
-                                        <input name="txtFreeDate" id="txtFreeDate" type="text" class="m_shorttextfield date" preset="shortdate"
+                                        <input name="txtFreeDate" id="txtFreeDate" type="text" class="m_shorttextfield " 
                                             value="<%= vFreeDate %>" size="30">
                                     </td>
                                     <td align="left" valign="middle" bgcolor="#FFFFFF">
-                                        <input name="txtGODate" type="text" class="m_shorttextfield date" 
-                                            preset="shortdate" value="<%= vGODate %>"
+                                        <input name="txtGODate" type="text" class="m_shorttextfield " 
+                                             value="<%= vGODate %>"
                                             size="24" id="txtGODate">
                                     </td>
                                 </tr>
@@ -4106,7 +4107,7 @@ function lstMAWB_OnAddNewPlus(){};
                                             size="60">
                                     </td>
                                     <td align="left" valign="middle">
-                                        <input name="txtITDate" id="txtITDate" type="text" class="m_shorttextfield date" preset="shortdate" value="<%= vITDate %>"
+                                        <input name="txtITDate" id="txtITDate" type="text" class="m_shorttextfield "  value="<%= vITDate %>"
                                             size="30">
                                     </td>
                                     <td align="left" valign="middle">

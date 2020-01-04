@@ -862,7 +862,7 @@ ON ERROR RESUME NEXT:
                                         <td bgcolor="#FFFFFF">
                                             &nbsp;</td>
                                         <td bgcolor="#FFFFFF">
-                                            <input name="txtDate" class="m_shorttextfield date" preset="shortdate" value="<%= iDate %>"
+                                            <input name="txtDate" class="m_shorttextfield " preset="shortdate" value="<%= iDate %>"
                                                 style="width: 87px"></td>
                                         <td bgcolor="#FFFFFF">
                                             <b>

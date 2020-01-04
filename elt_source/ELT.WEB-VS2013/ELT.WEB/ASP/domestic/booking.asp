@@ -905,7 +905,7 @@ popAddMAWB = showModalDialog("../Include/AddMAWB.asp?"+param,"AddMAWB","dialogWi
                                             </select>
                                             <!-- /End of Combobox/ -->                                        </td>
                                         <td valign="top">&nbsp;</td>
-                                        <td valign="top"><input name="txtBookingDate" type="text" class="m_shorttextfield date" id="txtBookingDate"
+                                        <td valign="top"><input name="txtBookingDate" type="text" class="m_shorttextfield " id="txtBookingDate"
                                                 value="<%=ConvertAnyValue(booking_date,"Date" , Date) %>" size="14" preset="shortdate" /></td>
 										<td valign="top"><% if NOT aFILEPrefix(0) = "NONE" and NOT aFILEPrefix(0) = "EDIT" then%>
                                             <select name="lstFILEPrefix" size="1" class="bodyheader" style="width: 80px" onChange="PrefixChange()">
@@ -1044,10 +1044,10 @@ popAddMAWB = showModalDialog("../Include/AddMAWB.asp?"+param,"AddMAWB","dialogWi
                                         <td class="bodycopy">
                                             <input name="txtFlight1" class="shorttextfield" maxLength="29" value="<%= vFlight1 %>" size="24"></td>
                                         <td colspan="2">
-                                            <input name="txtDeptDate1" class="m_shorttextfield date" preset="shortdate" value="<%= vDeptDate1 %>"
+                                            <input name="txtDeptDate1" class="m_shorttextfield " preset="shortdate" value="<%= vDeptDate1 %>"
                                                 size="20"></td>
                                         <td>
-                                            <input name="txtArrivalDate1" class="m_shorttextfield date" preset="shortdate" value="<%= vArrivalDate1 %>"
+                                            <input name="txtArrivalDate1" class="m_shorttextfield " preset="shortdate" value="<%= vArrivalDate1 %>"
                                                 size="20"></td>
                                         <td>&nbsp;                                            </td>
                                         <tr align="left" valign="middle" bgcolor="#F3f3f3" class="bodycopy" style="color: #000000">
@@ -1064,10 +1064,10 @@ popAddMAWB = showModalDialog("../Include/AddMAWB.asp?"+param,"AddMAWB","dialogWi
                                                 <td class="bodycopy">
                                                     <input name="txtFlight2" class="shorttextfield" maxLength="29" value="<%= vFlight2 %>" size="24"></td>
                                                 <td colspan="2">
-                                                    <input name="txtDeptDate2" class="m_shorttextfield date" preset="shortdate" value="<%= vDeptDate2 %>"
+                                                    <input name="txtDeptDate2" class="m_shorttextfield " preset="shortdate" value="<%= vDeptDate2 %>"
                                                         size="20"></td>
                                                 <td>
-                                                    <input name="txtArrivalDate2" class="m_shorttextfield date" preset="shortdate" value="<%= vArrivalDate2 %>"
+                                                    <input name="txtArrivalDate2" class="m_shorttextfield " preset="shortdate" value="<%= vArrivalDate2 %>"
                                                         size="20"></td>
                                                 <td>&nbsp;                                                    </td>
                                                 <tr align="left" valign="middle" bgcolor="#f3f3f3" class="bodycopy" style="color: #000000">

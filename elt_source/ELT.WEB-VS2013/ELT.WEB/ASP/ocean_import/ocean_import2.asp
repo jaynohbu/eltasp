@@ -1787,7 +1787,7 @@ function selectSearchType(){
                                             <input name="txtSubMAWB" type="text" maxlength="32" class="shorttextfield" value="<%= vSubMAWB %>"
                                                 size="28"></td>
                                         <td align="left" valign="middle" class="bodyheader">
-                                            <input name="txtDate" type="text" class="m_shorttextfield date" preset="shortdate" value="<%= vPRDate %>"
+                                            <input name="txtDate" type="text" class="m_shorttextfield " preset="shortdate" value="<%= vPRDate %>"
                                                 size="26"></td>
                                         <td align="left" valign="middle" class="bodyheader">
                                             &nbsp;</td>
@@ -1971,10 +1971,10 @@ function selectSearchType(){
                                             </select>
                                         </td>
                                         <td align="left" valign="middle">
-                                            <input name="txtETA" type="text" class="m_shorttextfield date" preset="shortdate" value="<%= vETA %>"
+                                            <input name="txtETA" type="text" class="m_shorttextfield " preset="shortdate" value="<%= vETA %>"
                                                 size="19"></td>
                                         <td align="left" valign="middle">
-                                            <input name="txtLastFreeDate" type="text" class="m_shorttextfield date" preset="shortdate"
+                                            <input name="txtLastFreeDate" type="text" class="m_shorttextfield " preset="shortdate"
                                                 value="<%= vLastFreeDate %>" size="19"></td>
                                         <td align="left" valign="middle">
                                             <input name="txtPlaceOfDelivery" type="text" class="shorttextfield" maxlength="64"
@@ -2049,7 +2049,7 @@ function selectSearchType(){
                                             <input name="txtITNumber" type="text" class="shorttextfield" value="<%= vITNumber %>"
                                                 size="20"></td>
                                         <td align="left" valign="middle">
-                                            <input name="txtITDate" type="text" class="m_shorttextfield date" preset="shortdate" value="<%= vITDate %>"
+                                            <input name="txtITDate" type="text" class="m_shorttextfield " preset="shortdate" value="<%= vITDate %>"
                                                 size="19"></td>
                                         <td colspan="2" align="left" valign="middle">
                                             <select name="lstITEntryPort" class="smallselect" style="width: 160px">

@@ -1249,7 +1249,7 @@
                                                         <input name="txtFFCity" value="" type="text" class="m_shorttextfield" preset="maxsize"
                                                             size="32" id="txtFFCity">
                                                         on
-                                                        <input name="txtCreatedDate" value="" type="text" class="m_shorttextfield date" preset="shortdate"
+                                                        <input name="txtCreatedDate" value="" type="text" class="m_shorttextfield " preset="shortdate"
                                                             size="32" id="txtCreatedDate"></td>
                                                     <td width="1%" class="bodycopy">
                                                         &nbsp;</td>
@@ -1266,7 +1266,7 @@
                                                             <tr>
                                                                 <td width="52%" rowspan="2" class="bodycopy">
                                                                     Sworn to before me this on
-                                                                    <input name="txtSwornDate" value="" type="text" class="m_shorttextfield date" preset="shortdate"
+                                                                    <input name="txtSwornDate" value="" type="text" class="m_shorttextfield " preset="shortdate"
                                                                         size="32" id="txtSwornDate">
                                                                     <br>
                                                                     <input name="txtPrepareBy" type="text" value="" class="shorttextfield" 

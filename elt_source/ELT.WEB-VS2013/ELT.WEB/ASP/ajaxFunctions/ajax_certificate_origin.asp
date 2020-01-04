@@ -503,7 +503,7 @@
         Dim tempList,SQL,rs
         Set rs = Server.CreateObject("ADODB.Recordset")
 	    Set tempList = Server.CreateObject("System.Collections.ArrayList")
-	     topNum ="top 10"
+	     
 	    If ship_type = "A" Then
 	        SQL = "SELECT DISTINCT " & topNum & " hawb_num FROM HAWB_master where elt_account_number=" _
 		        & elt_account_number & " AND hawb_num LIKE N'" & qStr & "%' AND hawb_num>=N'" _

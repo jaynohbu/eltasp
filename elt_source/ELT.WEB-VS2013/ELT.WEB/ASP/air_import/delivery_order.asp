@@ -581,7 +581,7 @@
                                                                     &nbsp;
                                                                 </td>
                                                                 <td>
-                                                                    <input name="txtUpdateDate" id="txtUpdateDate" type="text" class="m_shorttextfield date" value="<%=Date() %>"
+                                                                    <input name="txtUpdateDate" id="txtUpdateDate" type="text" class="m_shorttextfield " value="<%=Date() %>"
                                                                         size="16" preset="shortdate" /></td>
                                                                 <td>
                                                                     <input name="txtRefNoOur" id="txtRefNoOur" type="text" maxlength="32" class="m_shorttextfield" value=""
@@ -718,11 +718,11 @@
                                                                     <input name="txtArrDate"  id="txtArrDate" type="text" 
                                                                         class="m_shorttextfield  date" value="" size="16"
                                                                         preset="shortdate" checked="txtArrDate" />
-                                                                    <input name="txtDepDate" id="txtDepDate" type="hidden" class="m_shorttextfield date" value="" size="16"
+                                                                    <input name="txtDepDate" id="txtDepDate" type="hidden" class="m_shorttextfield " value="" size="16"
                                                                         preset="shortdate" />
                                                                 </td>
                                                                 <td>
-                                                                    <input name="txtFreeDate" type="text" class="m_shorttextfield date" value="" size="16"
+                                                                    <input name="txtFreeDate" type="text" class="m_shorttextfield " value="" size="16"
                                                                         preset="shortdate" id="txtFreeDate" /></td>
                                                             </tr>
                                                             <tr>

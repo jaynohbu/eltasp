@@ -1031,7 +1031,7 @@ Set eltConn = Nothing
                                             <input type="hidden" name="hShipperAcct" value="<%= vShipperAcct %>">
                                         </td>
                                         <td height="20" bgcolor="#FFFFFF">
-                                            <input name="txtExportDate" type="text" class="m_shorttextfield date" preset="shortdate"
+                                            <input name="txtExportDate" type="text" class="m_shorttextfield " preset="shortdate"
                                                 value="<%= vExportDate %>" size="22"></td>
                                         <td height="20" bgcolor="#FFFFFF">
                                             <input name="txtTranRefNo" type="text" class="shorttextfield" maxlength="32" value="<%= vTranRefNo %>"
@@ -1558,7 +1558,7 @@ Set eltConn = Nothing
                                     </tr>
                                     <tr align="left" valign="middle">
                                         <td>
-                                            <input name="txtTranDate" type="text" class="m_shorttextfield date" preset="shortdate"
+                                            <input name="txtTranDate" type="text" class="m_shorttextfield " preset="shortdate"
                                                 value="<%= vTranDate %>" size="26"></td>
                                         <td colspan="2">
                                             <input name="T26" type="text" class="shorttextfield" size="26"></td>

@@ -1,6 +1,5 @@
 ﻿<script src="/Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
 <script src="/Scripts/jquery-ui-1.8.20.min.js" type="text/javascript"></script>
-
 <link href="/Scripts/jquery-ui-1.10.3/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
 <style>
   
@@ -87,3 +86,10 @@ var ModalHandle = {
   });
 
 </script>
+
+<script type="text/javascript">
+        
+        $(document).ready(function () {
+          $("input[preset='shortdate']" ).datepicker(); 
+        });
+    </script>

@@ -236,7 +236,7 @@
                                         <td style="width: 556; height: 31" valign="bottom">
                                             &nbsp;</td>
                                         <td style="width: 90" valign="bottom">
-                                            <input name="txtDate" class="m_shorttextfield date" preset="shortdate" size="12" value="<%=vDate %>" /></td>
+                                            <input name="txtDate" class="m_shorttextfield " preset="shortdate" size="12" value="<%=vDate %>" /></td>
                                     </tr>
                                     <tr align="left" valign="top">
                                         <td style="height: 29" colspan="2">

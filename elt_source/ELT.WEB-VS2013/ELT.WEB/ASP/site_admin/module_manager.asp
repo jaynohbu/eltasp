@@ -15,7 +15,8 @@
     
     this_user_id = checkBlank(Request.QueryString.Item("UID"),user_id)
     If Request.QueryString.Item("mode") = "save" And (user_id <> 0 OR (LCase(login_name) = "system" And user_id=0)) then
-        Call UpdateTabs
+        'Call UpdateTabs
+		Call UpdatePageUserAccess
     End if
 
     Call GetAllTabs
@@ -23,14 +24,12 @@
     Sub GetAllTabs
         Dim SQL,dataObj
 
-        SQL = "select *,case when page_id not in (select page_id from tab_user where is_denied='Y' and elt_account_number=" _
-            & elt_account_number & " and user_id=" & this_user_id & ") then 'Y' else 'N' end as allow," _
-            & "case when page_id in (select page_id from tab_user where is_faved='Y' and elt_account_number=" _
-            & elt_account_number & " and user_id=" & this_user_id & ") then 'Y' else 'N' end as favorite from tab_master" _
-            & " where page_status='A' and page_label<>'Default Page' and page_label<>'Default Module Page'" _
+        SQL = "select *,case when page_id not in (select page_id from page_user_access where is_bloked=1 and elt_account_number=" _
+            & elt_account_number & " and user_id=" & this_user_id & ") then 'Y' else 'N' end as allow" _
+            & " from tab_master where page_status='A' and page_label<>'Default Page' and page_label<>'Default Module Page' AND is_obsolete <> 1" _
             & " order by top_seq_id,sub_seq_id,page_seq_id"
-   ' Response.Write SQL 
-   ' Response.end 
+   ''''Response.Write SQL 
+   ''''Response.end 
 
         Set dataObj = new DataManager
         dataObj.SetDataList(SQL)
@@ -39,12 +38,7 @@
     
     Sub UpdateTabs
         Dim SQL,rs,dataTable,dataObj,chkList,tmpPageId
-
-        SQL = "DELETE FROM tab_user WHERE is_denied='Y' AND is_faved='N' AND elt_account_number=" & elt_account_number & " AND user_id=" & this_user_id
-        Set rs = Server.CreateObject("ADODB.Recordset")
-        Set rs = eltConn.execute(SQL)
-        
-        Set dataObj = new DataManager
+		Set dataObj = new DataManager
         dataObj.SetColumnKeys("tab_user")
 
         For i=1 To Request.Form("chkAuthorizePage").Count
@@ -53,9 +47,54 @@
             dataTable.Add "elt_account_number", elt_account_number
             dataTable.Add "user_id", this_user_id
             dataTable.Add "page_id", tmpPageId
-            dataTable.Add "is_denied", "Y"
+            dataTable.Add "is_denied", "N"
             dataTable.Add "is_faved", "N"
             SQL = "SELECT * FROM tab_user WHERE page_id=" & tmpPageId & " AND elt_account_number=" & elt_account_number & " AND user_id=" & this_user_id
+            Call dataObj.UpdateDBRow(SQL,dataTable)
+        Next
+		
+		For i=1 To Request.Form("chkUnAuthorizePage").Count
+            tmpPageId = Request.Form("chkUnAuthorizePage")(i)
+            Set dataTable = Server.CreateObject("System.Collections.HashTable")
+            dataTable.Add "elt_account_number", elt_account_number
+            dataTable.Add "user_id", this_user_id
+            dataTable.Add "page_id", tmpPageId
+            dataTable.Add "is_denied", "Y"
+            dataTable.Add "is_faved", "N"
+            SQL = "SELECT * FROM page_user_access WHERE page_id=" & tmpPageId & " AND elt_account_number=" & elt_account_number & " AND user_id=" & this_user_id
+            Call dataObj.UpdateDBRow(SQL,dataTable)
+        Next
+        
+		SQL = "DELETE FROM tab_user WHERE is_denied='Y' AND is_faved='N' AND elt_account_number=" & elt_account_number & " AND user_id=" & this_user_id
+        Set rs = Server.CreateObject("ADODB.Recordset")
+        Set rs = eltConn.execute(SQL)
+		
+    End Sub
+	
+	Sub UpdatePageUserAccess
+        Dim SQL,rs,dataTable,dataObj,chkList,tmpPageId
+        Set dataObj = new DataManager
+        dataObj.SetColumnKeys("page_user_access")
+
+        For i=1 To Request.Form("chkAuthorizePage").Count
+            tmpPageId = Request.Form("chkAuthorizePage")(i)
+            Set dataTable = Server.CreateObject("System.Collections.HashTable")
+            dataTable.Add "elt_account_number", elt_account_number
+            dataTable.Add "user_id", this_user_id
+            dataTable.Add "page_id", tmpPageId
+            dataTable.Add "is_bloked", 0
+            SQL = "SELECT * FROM page_user_access WHERE page_id=" & tmpPageId & " AND elt_account_number=" & elt_account_number & " AND user_id=" & this_user_id
+            Call dataObj.UpdateDBRow(SQL,dataTable)
+        Next
+		
+		For i=1 To Request.Form("chkUnAuthorizePage").Count
+            tmpPageId = Request.Form("chkUnAuthorizePage")(i)
+            Set dataTable = Server.CreateObject("System.Collections.HashTable")
+            dataTable.Add "elt_account_number", elt_account_number
+            dataTable.Add "user_id", this_user_id
+            dataTable.Add "page_id", tmpPageId
+            dataTable.Add "is_bloked", 1
+            SQL = "SELECT * FROM page_user_access WHERE page_id=" & tmpPageId & " AND elt_account_number=" & elt_account_number & " AND user_id=" & this_user_id
             Call dataObj.UpdateDBRow(SQL,dataTable)
         Next
         
@@ -80,11 +119,11 @@
         function btnSaveClick(){
             
             var pageList = document.getElementsByName("chkAuthorizePage");
+			var pageListUnAuth = document.getElementsByName("chkUnAuthorizePage");
             var form = document.getElementById("form1");
             
             for(var i=0; i<pageList.length; i++){
-                pageList[i].style.visibility = "hidden";
-                pageList[i].checked = !(pageList[i].checked);
+				pageListUnAuth[i].checked = !pageList[i].checked;
             }
             form.action = "module_manager.asp?mode=save&UID=" + <%=this_user_id %>;
             form.method = "POST";
@@ -162,8 +201,9 @@
                             </td>
                             <td width="40%">
                                 <input type="checkbox" name="chkAuthorizePage" value="<%= pageList(i)("page_id") %>" <% If pageList(i)("allow") = "Y" Then Response.Write("checked") End If%> 
-                                <% if cInt(UserRight)<>9 And trim(LCASE(user_id)) <> "admin" And trim(LCASE(user_id)) <> "system" Then %> onclick="javascript:return false;"<% End If %> /> Authorize Page
-                                <input type="hidden" name="hIsFavoritePage" value="<%= pageList(i)("favorite") %>" />
+                                <% if cInt(UserRight)<>9 And trim(LCASE(user_id)) <> "admin" And trim(LCASE(user_id)) <> "system" Then %> onclick="javascript:return false;"<% End If %> /> 
+								<input type="checkbox" name="chkUnAuthorizePage" value="<%= pageList(i)("page_id") %>" <% If pageList(i)("allow") <> "Y" Then Response.Write("checked") End If%> style="display:none" />
+								Authorize Page
                             </td>
                         </tr>
                         <% End If %>

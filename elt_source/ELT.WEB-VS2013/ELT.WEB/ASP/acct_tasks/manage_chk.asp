@@ -155,11 +155,11 @@ end sub
                         <option value="Last Year">Last Year</option>
                     </select></td><%= vStartDate %>
 					<td><span class="bodycopy">
-					    <input name="txtStartDate" class="m_shorttextfield date" 
+					    <input name="txtStartDate" class="m_shorttextfield " 
                             value="" preset="shortdate" size="16" id="txtStartDate" />
 					</span></td><%= vEndDate %>
 					<td><span class="bodycopy">
-					    <input name="txtEndDate" class="m_shorttextfield date" 
+					    <input name="txtEndDate" class="m_shorttextfield " 
                             value="" preset="shortdate" size="16" id="txtEndDate" />
 					</span></td>
 					</tr>

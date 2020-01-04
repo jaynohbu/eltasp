@@ -1021,7 +1021,7 @@ function redirectToBill(resVal) {
                                             &nbsp;
                                         </td>
                                         <td height="18" bgcolor="#FFFFFF">
-                                            <input name="txtSODate" type="text" class="m_shorttextfield date" value='<%=checkBlank(dataTable("created_date"),Date()) %>'
+                                            <input name="txtSODate" type="text" class="m_shorttextfield " value='<%=checkBlank(dataTable("created_date"),Date()) %>'
                                                 size="16" style="width: 70px;
                                                 height: 16px" preset="shortdate" id="txtSODate" /></td>
                                         <td bgcolor="#FFFFFF">
@@ -1089,7 +1089,7 @@ function redirectToBill(resVal) {
                                                 value='<%=dataTable("carrier_ref_no") %>' style="width: 140px" />
                                         </td>
                                         <td>
-                                            <input id="txtReceivedDate" name="txtReceivedDate" type="hidden" class="m_shorttextfield date"
+                                            <input id="txtReceivedDate" name="txtReceivedDate" type="hidden" class="m_shorttextfield "
                                                 value='<%=dataTable("received_date") %>' style="width: 140px" preset="shortdate" /></td>
                                     </tr>
                                     <tr>
@@ -1115,7 +1115,7 @@ function redirectToBill(resVal) {
                                             &nbsp;
                                         </td>
                                         <td height="18">
-                                            <input name="txtShipOutDate" id="txtShipOutDate" type="text" class="m_shorttextfield date" 
+                                            <input name="txtShipOutDate" id="txtShipOutDate" type="text" class="m_shorttextfield " 
                                                 value='<%=checkBlank(dataTable("shipout_date"),Date()) %>'  style="width: 140px" preset="shortdate" /></td>
                                         <td>
                                             &nbsp;</td>

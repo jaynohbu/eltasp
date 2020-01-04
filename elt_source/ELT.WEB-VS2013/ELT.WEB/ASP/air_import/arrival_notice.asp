@@ -3235,11 +3235,11 @@ function  lstMAWB_OnAddNewPlus(){}
                                             
                                         </td>
                                         <td height="20" align="left" valign="top" bgcolor="#FFFFFF">
-                                            <input name="txtDate" type="text" class="m_shorttextfield date" 
+                                            <input name="txtDate" type="text" class="m_shorttextfield " 
                                                 preset="shortdate" value="<%= vProcessDT %>"
                                                 size="24" id="txtDate"></td>
                                         <td align="left" valign="top" bgcolor="#FFFFFF">
-                                            <input name="txtPickupDate" type="text" class="m_shorttextfield date" preset="shortdate"
+                                            <input name="txtPickupDate" type="text" class="m_shorttextfield " preset="shortdate"
                                                 value="<%= vPickupDate %>" size="24" id="txtPickupDate"></td>
                                     </tr>
                                     <tr bgcolor="#F3f3f3">
@@ -3330,7 +3330,7 @@ function  lstMAWB_OnAddNewPlus(){}
                                             </span>
                                         </td>
                                         <td align="left" valign="top" bgcolor="#FFFFFF">
-                                            <input name="txtETD" type="text" class="m_shorttextfield date" 
+                                            <input name="txtETD" type="text" class="m_shorttextfield " 
                                                 preset="shortdate" value="<%= vETD %>"
                                                 size="20" id="txtETD"></td>
                                     </tr>
@@ -3389,7 +3389,7 @@ function  lstMAWB_OnAddNewPlus(){}
                                             </select>
                                         </td>
                                         <td align="left" valign="top" bgcolor="#FFFFFF">
-                                            <input name="txtETA" type="text" class="m_shorttextfield date" 
+                                            <input name="txtETA" type="text" class="m_shorttextfield " 
                                                 preset="shortdate" value="<%= vETA %>"
                                                 size="20" id="txtETA"></td>
                                     </tr>
@@ -3404,7 +3404,7 @@ function  lstMAWB_OnAddNewPlus(){}
                                             <input name="txtDeliveryPlace" type="text" class="shorttextfield" maxlength="64"
                                                 value="<%= vDeliveryPlace %>" size="30" id="txtDeliveryPlace"></td>
                                         <td align="left" valign="top" bgcolor="#FFFFFF" style="height: 22px">
-                                            <input name="txtETD2" type="text" class="m_shorttextfield date" 
+                                            <input name="txtETD2" type="text" class="m_shorttextfield " 
                                                 preset="shortdate" value="<%= vETD2 %>"
                                                 size="20" id="txtETD2"></td>
                                     </tr>
@@ -3419,7 +3419,7 @@ function  lstMAWB_OnAddNewPlus(){}
                                             <input name="txtDestination" type="text" class="shorttextfield" value="<%= vDestination %>"
                                                 size="30" id="txtDestination"></td>
                                         <td align="left" valign="top" bgcolor="#FFFFFF">
-                                            <input name="txtETA2" type="text" class="m_shorttextfield date" 
+                                            <input name="txtETA2" type="text" class="m_shorttextfield " 
                                                 preset="shortdate" value="<%= vETA2 %>"
                                                 size="20" id="txtETA2"></td>
                                     </tr>
@@ -3454,10 +3454,10 @@ function  lstMAWB_OnAddNewPlus(){}
                                             <input name="txtContainerLocation" type="text" class="shorttextfield" value="<%= vContainerLocation %>"
                                                 size="60" id="txtContainerLocation"></td>
                                         <td align="left" valign="middle" bgcolor="#FFFFFF">
-                                            <input name="txtFreeDate" type="text" class="m_shorttextfield date" preset="shortdate"
+                                            <input name="txtFreeDate" type="text" class="m_shorttextfield " preset="shortdate"
                                                 value="<%= vFreeDate %>" size="30" id="txtFreeDate"></td>
                                         <td align="left" valign="middle" bgcolor="#FFFFFF">
-                                            <input name="txtGODate" type="text" class="m_shorttextfield date" 
+                                            <input name="txtGODate" type="text" class="m_shorttextfield " 
                                                 preset="shortdate" value="<%= vGODate %>"
                                                 size="20" id="txtGODate"></td>
                                     </tr>
@@ -3478,7 +3478,7 @@ function  lstMAWB_OnAddNewPlus(){}
                                             <input name="txtITNumber" type="text" class="shorttextfield" value="<%= vITNumber %>"
                                                 maxlength="64" size="60" id="txtITNumber"></td>
                                         <td align="left" valign="middle">
-                                            <input name="txtITDate" type="text" class="m_shorttextfield date" 
+                                            <input name="txtITDate" type="text" class="m_shorttextfield " 
                                                 preset="shortdate" value="<%= vITDate %>"
                                                 size="30" id="txtITDate"></td>
                                         <td align="left" valign="middle">
@@ -4220,8 +4220,8 @@ function SaveClick(tNo, pOK){
 function SaveClick2(TranNo,PrintOK){
 
     var lock="<%=vArApLock %>";
-    if (lock != "Visible" && PrintOK == "yes") {
-	    PrintClick2("no");
+    if (PrintOK == "yes") {
+	    PrintClick2("yes");
 	    return false;
 	}
     if (document.form1.hConsigneeAcct.value == "" || document.form1.hConsigneeAcct.value == "0") {
@@ -4289,7 +4289,7 @@ function SaveClick2(TranNo,PrintOK){
 	document.form1.method = "POST";
 	document.form1.target = "_self";
 	form1.submit();
-	console.log(document.form1.action );
+console.log(document.form1.action );
 	
 }
 
@@ -4619,6 +4619,7 @@ function PrintClick(){
     form1.submit();
 }
 function PrintClick2(doInvoice) {
+//alert(doInvoice);
     /////////////////////////////////////////////////
     var iType = "A";
     var Sec = document.form1.hSec.value;

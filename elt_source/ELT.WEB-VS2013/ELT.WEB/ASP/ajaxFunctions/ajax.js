@@ -40,8 +40,8 @@ ajax.xhr.Request.prototype = {
 
   this.req.open(met, httpUrl, true);
   this.req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); 
-  this.req.setRequestHeader('Content-length', post_parameter.length);
-  this.req.setRequestHeader('Connection', 'close');
+  //this.req.setRequestHeader('Content-length', post_parameter.length);
+ // this.req.setRequestHeader('Connection', 'close');
   
   var request = this;
   this.req.onreadystatechange = function() {

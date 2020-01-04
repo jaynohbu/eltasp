@@ -1198,7 +1198,7 @@
                                         <td>
                                             &nbsp;</td>
                                         <td bgcolor="#FFFFFF">
-                                            <input name="txtDate" class="m_shorttextfield date" preset="shortdate" value="<%= vDate %>"
+                                            <input name="txtDate" class="m_shorttextfield " preset="shortdate" value="<%= vDate %>"
                                                 size="15"></td>
                                         <td>
                                             <font size="3"><b>
@@ -1206,7 +1206,7 @@
                                             </b></font>
                                         </td>
                                         <td width="174">
-                                            <input name="txtDueDate" class="m_shorttextfield date" preset="shortdate" value="<%= vDueDate %>"
+                                            <input name="txtDueDate" class="m_shorttextfield " preset="shortdate" value="<%= vDueDate %>"
                                                 size="15"></td>
                                         <td width="169">
                                             <input name="txtAmount" class="readonlyboldright" value="<%= formatnumber(vAmount,2) %>"
@@ -1311,7 +1311,7 @@
                                     <% if ItemCheck(i)="Y" then response.write("checked") %> <% if ViewBill = "yes" then response.write " disabled='disabled'" end if %>>
                                 <input type="hidden" id="hItemInfo" name="hItemInfo<%= i %>" value="<%= ItemInfo(i) %>" class="hItemInfo"></td>
                             <td>
-                                <input name="txtItemDate<%= i %>" class="m_shorttextfield date" preset="shortdate" value="<%= ItemDate(i) %>"
+                                <input name="txtItemDate<%= i %>" class="m_shorttextfield " preset="shortdate" value="<%= ItemDate(i) %>"
                                     style="width: 70px" />
                             </td>
                             <td align="left" class="bodycopy">

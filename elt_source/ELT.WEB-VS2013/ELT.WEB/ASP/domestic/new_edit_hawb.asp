@@ -1303,7 +1303,7 @@ $(document).ready(function (){
                                             &nbsp;
                                         </td>
                                         <td>
-                                            <input name="txtExecutedDate" id="txtExecutedDate"  type="text" class="m_shorttextfield date" size="18" preset="shortdate" /></td>
+                                            <input name="txtExecutedDate" id="txtExecutedDate"  type="text" class="m_shorttextfield " size="18" preset="shortdate" /></td>
                                     </tr>
                                     <tr>
                                         <td colspan="4" height="1" bgcolor="#997132">

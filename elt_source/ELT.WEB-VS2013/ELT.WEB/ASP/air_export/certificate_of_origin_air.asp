@@ -563,7 +563,7 @@
 	        
             var url = "/ASP/ajaxFunctions/ajax_certificate_origin.asp?mode=list&type=" 
                 + typeValue + "&export=" + eType;
-           // document.write(url);
+            console.log(url);
             FillOutJPED(obj,url,changeFunction,vHeight);
         }
         
@@ -878,7 +878,7 @@
                                                         <!-- End JPED -->
                                                     </td>
                                                     <td valign="top" class="bodycopy">
-                                                        <input name="txtUpdatedDate" id="txtUpdatedDate" type="text" class="m_shorttextfield date" value="" size="20"
+                                                        <input name="txtUpdatedDate" id="txtUpdatedDate" type="text" class="m_shorttextfield " value="" size="20"
                                                             preset="shortdate" /></td>
                                                     <td valign="top">
                                                         <input name="txtDocNum" id="txtDocNum" type="text" class="m_shorttextfield" value="" size="20" /></td>
@@ -1217,7 +1217,7 @@
                                             <input name="txtFFCity" id="txtFFCity" value="" type="text" class="m_shorttextfield" preset="maxsize"
                                                 size="32">
                                             on
-                                            <input name="txtCreatedDate" id="txtCreatedDate" value="" type="text" class="m_shorttextfield date" preset="shortdate"
+                                            <input name="txtCreatedDate" id="txtCreatedDate" value="" type="text" class="m_shorttextfield " preset="shortdate"
                                                 size="32"></td>
                                         <td width="1%" class="bodycopy">
                                             &nbsp;
@@ -1237,7 +1237,7 @@
                                                 <tr>
                                                     <td width="52%" rowspan="2" class="bodycopy">
                                                         Sworn to before me this on
-                                                        <input name="txtSwornDate" id="txtSwornDate" value="" type="text" class="m_shorttextfield date" preset="shortdate"
+                                                        <input name="txtSwornDate" id="txtSwornDate" value="" type="text" class="m_shorttextfield " preset="shortdate"
                                                             size="32">
                                                         <br>
                                                         <input name="txtPrepareBy" id="txtPrepareBy" type="text" value="" class="m_shorttextfield" preset="maxsize"

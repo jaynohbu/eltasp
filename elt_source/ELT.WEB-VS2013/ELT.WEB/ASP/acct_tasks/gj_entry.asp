@@ -463,7 +463,7 @@ eltConn.CommitTrans()
                         </td>
                         <td align="left">
                             <span class="bodycopy">
-                                <input name="txtDate" class="m_shorttextfield date" preset="shortdate" value="<%= vDate %>"
+                                <input name="txtDate" class="m_shorttextfield " preset="shortdate" value="<%= vDate %>"
                                     size="16">
                             </span>
                         </td>

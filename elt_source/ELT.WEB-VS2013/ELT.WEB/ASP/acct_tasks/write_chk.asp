@@ -880,7 +880,7 @@
                                         &nbsp;
                                     </td>
                                     <td width="90" valign="bottom">
-                                        <input name="txtDate" class="m_shorttextfield date" preset="shortdate" value="<%= vDate %>"
+                                        <input name="txtDate" class="m_shorttextfield " preset="shortdate" value="<%= vDate %>"
                                             size="12">
                                     </td>
                                 </tr>
@@ -1017,7 +1017,7 @@
                             <input type="hidden" id="hBillNo"  class="hBillNo" name="hBillNo<%= i %>" value="<%= BillNo(i) %>">
                         </td>
                         <td align="left">
-                            <input name="txtBillDueDate<%= i %>" class="m_shorttextfield date" preset="shortdate"
+                            <input name="txtBillDueDate<%= i %>" class="m_shorttextfield " preset="shortdate"
                                 value="<%= BillDueDate(i) %>" size="10">
                         </td>
                         <td align="left">

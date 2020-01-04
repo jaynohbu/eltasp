@@ -828,8 +828,8 @@ end if%> width="11" height="7"><img src="../images/spacer.gif" width="12" height
 						end If
 						%>
                     <!--  row -->
-                    <td align="left" valign="middle" class="bodycopy"><input id="txtStartDate" name="txtStartDate" class="m_shorttextfield date" preset="shortdate" value="<%= vStartDate %>" size="16"style="readonly" onMouseDown="dw_change()"></td>
-                    <td align="left" valign="middle" class="bodycopy"><input id="txtEndDate" name="txtEndDate" class="m_shorttextfield date" preset="shortdate" value="<%= vEndDate %>" size="16" onMouseDown="dw_change()"></td>	
+                    <td align="left" valign="middle" class="bodycopy"><input id="txtStartDate" name="txtStartDate" class="m_shorttextfield " preset="shortdate" value="<%= vStartDate %>" size="16"style="readonly" onMouseDown="dw_change()"></td>
+                    <td align="left" valign="middle" class="bodycopy"><input id="txtEndDate" name="txtEndDate" class="m_shorttextfield " preset="shortdate" value="<%= vEndDate %>" size="16" onMouseDown="dw_change()"></td>	
                     <!--  row -->
                   </tr>
                   <!--  third line A-->

@@ -523,7 +523,7 @@
                                                     onclick="goToMAWB();" style="cursor: hand">Go to Bill of Lading </b></span>
                                         </td>
                                         <td valign="top">
-                                            <input name="txtBookingDate" type="text" class="m_shorttextfield date" id="txtBookingDate"
+                                            <input name="txtBookingDate" type="text" class="m_shorttextfield " id="txtBookingDate"
                                                 value="" size="14" preset="shortdate" /></td>
                                         <td colspan="2" valign="top">
                                             <% If aFilePrefix.Count>0 Then %>
@@ -653,10 +653,10 @@
                                             <!-- End JPED -->
                                         </td>
                                         <td>
-                                            <input name="txtDeptDate1" id="txtDeptDate1" class="m_shorttextfield date" preset="shortdate" tabindex="16"
+                                            <input name="txtDeptDate1" id="txtDeptDate1" class="m_shorttextfield " preset="shortdate" tabindex="16"
                                                 value="" size="20"></td>
                                         <td>
-                                            <input name="txtArrivalDate1" id="txtArrivalDate1" class="m_shorttextfield date" preset="shortdate" tabindex="17"
+                                            <input name="txtArrivalDate1" id="txtArrivalDate1" class="m_shorttextfield " preset="shortdate" tabindex="17"
                                                 value="" size="20"></td>
                                         <tr align="left" valign="middle" bgcolor="#f3f3f3" class="bodycopy">
                                             <td>

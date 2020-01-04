@@ -175,7 +175,7 @@
             If Err.number = 0 Then
                 aMailResult.Add "Emailing to " & vReceipientName & " was successful"
             Else
-                aMailResult.Add "Emailing to " & vReceipientName & " failed with an error (Error: " & Err.number & ")"
+                aMailResult.Add "Emailing to " & vReceipientName & " failed with an error (Error: " & Err.number & ")" & " Host: " & oMail.Host
             End If
             
         End Sub
