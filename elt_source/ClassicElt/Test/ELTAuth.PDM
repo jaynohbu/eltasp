@@ -1,0 +1,598 @@
+[Root]
+Most Recent Package=Standard Setup Package 3
+Most Recent Deploy=Web Deployment 2
+
+
+[Package|Internet Package 1|Root]
+SubWizProgID=PDWizard.InetCABPkgSubWiz
+BuildFolder=C:\ActiveX\ELTAuth\Package
+Controls Design-Time Support=Yes
+
+[Package|Internet Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Internet Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Internet Package 1|Files Found]
+
+[Package|Internet Package 1|Files Released]
+
+[Package|Internet Package 1|Missing Dependency Information]
+C:\WINDOWS\system32\iphlpapi.dll=
+
+[Package|Internet Package 1|Out-of-Date Dependency Information]
+
+[Package|Internet Package 1|Files Added]
+C:\WINDOWS\system32\MsStkPrp.dll=This file is needed for usercontrol design-time support.
+
+[Package|Internet Package 1|Files Removed]
+
+[Package|Internet Package 1|Files In Project]
+C:\ActiveX\ELTAuth\ELTAuth.ocx=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\iphlpapi.dll=Yes
+C:\WINDOWS\system32\MSSTKPRP.DLL=Yes
+
+[Package|Internet Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Internet Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Internet Package 1|Install Locations]
+
+[Package|Internet Package 1|Configure Shared Files]
+Applicable=
+
+[Package|Internet Package 1|ComponentInfo]
+ELTAuth.ocx=thiscab
+msvbvm60.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+oleaut32.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+olepro32.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+asycfilt.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+stdole2.tlb=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+COMCAT.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+iphlpapi.dll=thiscab
+MSSTKPRP.DLL=http://activex.microsoft.com/controls/vb6/MsStkPrp.cab
+
+[Package|Internet Package 1|ObjectInfo]
+ELTAuthMain=false;false
+
+[Package|Internet Package 1|Package]
+PackageFolder=C:\ActiveX\ELTAuth\Package
+ProjectFolder=C:\ActiveX\ELTAuth
+ServerSideCab=C:\ActiveX\ELTAuth\Package\ELTAuth.CAB
+File1=C:\ActiveX\ELTAuth\Package\ELTAuth.CAB
+File2=C:\ActiveX\ELTAuth\Package\ELTAuth.HTM
+Handler1=PDWizard.WebPostDplySubWiz
+Handler2=PDWizard.FolderDplySubWiz
+
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\ActiveX\ELTAuth\Package2
+Controls Design-Time Support=Yes
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+
+[Package|Standard Setup Package 1|Files Released]
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+C:\WINDOWS\system32\iphlpapi.dll=
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+
+[Package|Standard Setup Package 1|Files Added]
+c:\windows\system32\msstkprp.dll=This file is needed for usercontrol design-time support.
+
+[Package|Standard Setup Package 1|Files Removed]
+
+[Package|Standard Setup Package 1|Files In Project]
+C:\ActiveX\ELTAuth\ELTAuth.ocx=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\iphlpapi.dll=Yes
+C:\WINDOWS\system32\MSSTKPRP.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+C:\ActiveX\ELTAuth\ELTAuth.ocx=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\iphlpapi.dll=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\WINDOWS\system32\MSSTKPRP.DLL=$(WinSysPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+C:\ActiveX\ELTAuth\ELTAuth.ocx=Yes
+
+[Package|Standard Setup Package 1|ComponentInfo]
+ELTAuth.ocx=thiscab
+msvbvm60.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+oleaut32.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+olepro32.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+asycfilt.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+stdole2.tlb=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+COMCAT.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+iphlpapi.dll=thiscab
+MSSTKPRP.DLL=http://activex.microsoft.com/controls/vb6/MsStkPrp.cab
+
+[Package|Standard Setup Package 1|ObjectInfo]
+ELTAuthMain=true;true
+
+[Package|Standard Setup Package 1|Distribution]
+Type=single
+Size=
+Title=ELTAuth
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=C:\ActiveX\ELTAuth\Package2
+ProjectFolder=C:\ActiveX\ELTAuth
+ServerSideCab=
+File1=C:\ActiveX\ELTAuth\Package2\setup.exe
+File2=C:\ActiveX\ELTAuth\Package2\Setup.Lst
+File3=C:\ActiveX\ELTAuth\Package2\ELTAuth.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|Internet Package 2|Root]
+SubWizProgID=PDWizard.InetCABPkgSubWiz
+BuildFolder=C:\ActiveX\ELTAuth\Package2
+Controls Design-Time Support=Yes
+
+[Package|Internet Package 2|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Internet Package 2|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Internet Package 2|Files Found]
+
+[Package|Internet Package 2|Files Released]
+
+[Package|Internet Package 2|Missing Dependency Information]
+C:\WINDOWS\system32\iphlpapi.dll=
+
+[Package|Internet Package 2|Out-of-Date Dependency Information]
+
+[Package|Internet Package 2|Files Added]
+c:\windows\system32\msstkprp.dll=This file is needed for usercontrol design-time support.
+
+[Package|Internet Package 2|Files Removed]
+
+[Package|Internet Package 2|Files In Project]
+C:\ActiveX\ELTAuth\ELTAuth.ocx=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\iphlpapi.dll=Yes
+C:\WINDOWS\system32\MSSTKPRP.DLL=Yes
+
+[Package|Internet Package 2|Configure Registry Files]
+Applicable=No
+
+[Package|Internet Package 2|Configure Remote Servers]
+Applicable=No
+
+[Package|Internet Package 2|Install Locations]
+C:\ActiveX\ELTAuth\ELTAuth.ocx=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\iphlpapi.dll=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\WINDOWS\system32\MSSTKPRP.DLL=$(WinSysPath)
+
+[Package|Internet Package 2|Configure Shared Files]
+Applicable=Yes
+C:\ActiveX\ELTAuth\ELTAuth.ocx=Yes
+
+[Package|Internet Package 2|ComponentInfo]
+ELTAuth.ocx=thiscab
+msvbvm60.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+oleaut32.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+olepro32.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+asycfilt.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+stdole2.tlb=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+COMCAT.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+iphlpapi.dll=thiscab
+MSSTKPRP.DLL=http://activex.microsoft.com/controls/vb6/MsStkPrp.cab
+
+[Package|Internet Package 2|ObjectInfo]
+ELTAuthMain=true;true
+
+[Package|Internet Package 2|Distribution]
+Type=single
+Size=
+Title=ELTAuth
+
+[Package|Internet Package 2|Package]
+PackageFolder=C:\ActiveX\ELTAuth\Package2
+ProjectFolder=C:\ActiveX\ELTAuth
+ServerSideCab=C:\ActiveX\ELTAuth\Package2\ELTAuth.CAB
+File1=C:\ActiveX\ELTAuth\Package2\ELTAuth.CAB
+File2=C:\ActiveX\ELTAuth\Package2\ELTAuth.HTM
+Handler1=PDWizard.WebPostDplySubWiz
+Handler2=PDWizard.FolderDplySubWiz
+
+
+[Package|Standard Setup Package 2|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\ActiveX\ELTAuth\Package2
+Controls Design-Time Support=Yes
+
+[Package|Standard Setup Package 2|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 2|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 2|Files Found]
+
+[Package|Standard Setup Package 2|Files Released]
+
+[Package|Standard Setup Package 2|Missing Dependency Information]
+C:\WINDOWS\system32\iphlpapi.dll=
+
+[Package|Standard Setup Package 2|Out-of-Date Dependency Information]
+
+[Package|Standard Setup Package 2|Files Added]
+c:\windows\system32\msstkprp.dll=This file is needed for usercontrol design-time support.
+
+[Package|Standard Setup Package 2|Files Removed]
+
+[Package|Standard Setup Package 2|Files In Project]
+C:\ActiveX\ELTAuth\ELTAuth.ocx=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\iphlpapi.dll=Yes
+C:\WINDOWS\system32\MSSTKPRP.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Standard Setup Package 2|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 2|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 2|Install Locations]
+C:\ActiveX\ELTAuth\ELTAuth.ocx=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\iphlpapi.dll=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\WINDOWS\system32\MSSTKPRP.DLL=$(WinSysPath)
+
+[Package|Standard Setup Package 2|Configure Shared Files]
+Applicable=Yes
+C:\ActiveX\ELTAuth\ELTAuth.ocx=Yes
+
+[Package|Standard Setup Package 2|ComponentInfo]
+ELTAuth.ocx=thiscab
+msvbvm60.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+oleaut32.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+olepro32.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+asycfilt.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+stdole2.tlb=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+COMCAT.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+iphlpapi.dll=thiscab
+MSSTKPRP.DLL=http://activex.microsoft.com/controls/vb6/MsStkPrp.cab
+
+[Package|Standard Setup Package 2|ObjectInfo]
+ELTAuthMain=true;true
+
+[Package|Standard Setup Package 2|Distribution]
+Type=single
+Size=
+Title=ELTAuth
+
+[Package|Standard Setup Package 2|Package]
+PackageFolder=C:\ActiveX\ELTAuth\Package2
+ProjectFolder=C:\ActiveX\ELTAuth
+ServerSideCab=
+File1=C:\ActiveX\ELTAuth\Package2\setup.exe
+File2=C:\ActiveX\ELTAuth\Package2\Setup.Lst
+File3=C:\ActiveX\ELTAuth\Package2\ELTAuth.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|ELTAuth|Root]
+SubWizProgID=PDWizard.InetCABPkgSubWiz
+BuildFolder=C:\ActiveX\ELTAuth
+Controls Design-Time Support=Yes
+
+[Package|ELTAuth|Configure DAO ISAMs]
+Applicable=No
+
+[Package|ELTAuth|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|ELTAuth|Files Found]
+
+[Package|ELTAuth|Files Released]
+
+[Package|ELTAuth|Missing Dependency Information]
+C:\WINDOWS\system32\iphlpapi.dll=
+C:\ActiveX\ELTAuth\IEPrint.ocx=
+
+[Package|ELTAuth|Out-of-Date Dependency Information]
+
+[Package|ELTAuth|Files Added]
+c:\windows\system32\msstkprp.dll=This file is needed for usercontrol design-time support.
+
+[Package|ELTAuth|Files Removed]
+c:\windows\system32\iphlpapi.dll=
+c:\windows\system32\msstkprp.dll=
+c:\windows\system32\msvbvm60.dll=
+c:\windows\system32\oleaut32.dll=
+c:\windows\system32\olepro32.dll=
+c:\windows\system32\asycfilt.dll=
+c:\windows\system32\stdole2.tlb=
+c:\program files\microsoft visual studio\vb98\wizards\pdwizard\redist\comcat.dll=
+
+[Package|ELTAuth|Files In Project]
+C:\ActiveX\ELTAuth\ELTAuth.ocx=Yes
+C:\WINDOWS\system32\msvbvm60.dll=No
+C:\WINDOWS\system32\oleaut32.dll=No
+C:\WINDOWS\system32\olepro32.dll=No
+C:\WINDOWS\system32\asycfilt.dll=No
+C:\WINDOWS\system32\stdole2.tlb=No
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=No
+C:\WINDOWS\system32\iphlpapi.dll=No
+C:\WINDOWS\system32\MSSTKPRP.DLL=No
+C:\ActiveX\ELTAuth\IEPrint.ocx=Yes
+
+[Package|ELTAuth|Configure Registry Files]
+Applicable=No
+
+[Package|ELTAuth|Configure Remote Servers]
+Applicable=No
+
+[Package|ELTAuth|Install Locations]
+C:\ActiveX\ELTAuth\ELTAuth.ocx=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\iphlpapi.dll=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\WINDOWS\system32\MSSTKPRP.DLL=$(WinSysPath)
+
+[Package|ELTAuth|Configure Shared Files]
+Applicable=Yes
+C:\ActiveX\ELTAuth\ELTAuth.ocx=Yes
+
+[Package|ELTAuth|ComponentInfo]
+ELTAuth.ocx=thiscab
+msvbvm60.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+oleaut32.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+olepro32.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+asycfilt.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+stdole2.tlb=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+COMCAT.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+iphlpapi.dll=thiscab
+MSSTKPRP.DLL=http://activex.microsoft.com/controls/vb6/MsStkPrp.cab
+IEPrint.ocx=thiscab
+
+[Package|ELTAuth|ObjectInfo]
+ELTAuthMain=true;true
+
+[Package|ELTAuth|Distribution]
+Type=single
+Size=
+Title=ELTAuth
+
+[Package|ELTAuth|Package]
+PackageFolder=C:\ActiveX\ELTAuth
+ProjectFolder=C:\ActiveX\ELTAuth
+ServerSideCab=C:\ActiveX\ELTAuth\ELTAuth.CAB
+File1=C:\ActiveX\ELTAuth\ELTAuth.CAB
+File2=C:\ActiveX\ELTAuth\ELTAuth.HTM
+Handler1=PDWizard.WebPostDplySubWiz
+Handler2=PDWizard.FolderDplySubWiz
+
+[Deploy|Web Deployment 1|Root]
+Package=Internet Package 2
+Handler=PDWizard.WebPostDplySubWiz
+
+[Deploy|Web Deployment 1|Package Files]
+
+[Deploy|Web Deployment 1|Other Files and Folders]
+c:\activex\eltauth\eltauth.cab=
+
+[Deploy|Web Deployment 1|WebPost Site]
+URL=http://localhost
+Provider={8B14B770-748C-11D0-A309-00C04FD7CFC5}
+Explode=No
+
+[Deploy|Web Deployment 2|Root]
+Package=ELTAuth
+Handler=PDWizard.WebPostDplySubWiz
+
+[Deploy|Web Deployment 2|Package Files]
+C:\ActiveX\ELTAuth\ELTAuth.CAB=Yes
+C:\ActiveX\ELTAuth\ELTAuth.HTM=Yes
+
+[Deploy|Web Deployment 2|Other Files and Folders]
+
+[Deploy|Web Deployment 2|WebPost Site]
+URL=http://localhost
+Provider={8B14B770-748C-11D0-A309-00C04FD7CFC5}
+Explode=No
+
+
+[Package|Standard Setup Package 3|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\ActiveX\ELTAuth
+Controls Design-Time Support=Yes
+
+[Package|Standard Setup Package 3|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 3|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 3|Files Found]
+
+[Package|Standard Setup Package 3|Files Released]
+
+[Package|Standard Setup Package 3|Missing Dependency Information]
+C:\WINDOWS\system32\iphlpapi.dll=
+C:\ActiveX\ELTAuth\IEPrint.ocx=
+
+[Package|Standard Setup Package 3|Out-of-Date Dependency Information]
+
+[Package|Standard Setup Package 3|Files Added]
+c:\windows\system32\msstkprp.dll=This file is needed for usercontrol design-time support.
+
+[Package|Standard Setup Package 3|Files Removed]
+c:\windows\system32\iphlpapi.dll=
+c:\windows\system32\msstkprp.dll=
+c:\windows\system32\msvbvm60.dll=
+c:\windows\system32\oleaut32.dll=
+c:\windows\system32\olepro32.dll=
+c:\windows\system32\asycfilt.dll=
+c:\windows\system32\stdole2.tlb=
+c:\program files\microsoft visual studio\vb98\wizards\pdwizard\redist\comcat.dll=
+
+[Package|Standard Setup Package 3|Files In Project]
+C:\ActiveX\ELTAuth\ELTAuth.ocx=Yes
+C:\WINDOWS\system32\msvbvm60.dll=No
+C:\WINDOWS\system32\oleaut32.dll=No
+C:\WINDOWS\system32\olepro32.dll=No
+C:\WINDOWS\system32\asycfilt.dll=No
+C:\WINDOWS\system32\stdole2.tlb=No
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=No
+C:\WINDOWS\system32\iphlpapi.dll=No
+C:\WINDOWS\system32\MSSTKPRP.DLL=No
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\WINDOWS\system32\IEPrint.ocx=Yes
+
+[Package|Standard Setup Package 3|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 3|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 3|Install Locations]
+C:\ActiveX\ELTAuth\ELTAuth.ocx=$(WinSysPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\iphlpapi.dll=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\WINDOWS\system32\MSSTKPRP.DLL=$(WinSysPath)
+C:\ActiveX\ELTAuth\IEPrint.ocx=$(WinSysPath)
+C:\WINDOWS\system32\IEPrint.ocx=$(WinSysPath)
+
+[Package|Standard Setup Package 3|Configure Shared Files]
+Applicable=No
+C:\ActiveX\ELTAuth\ELTAuth.ocx=Yes
+
+[Package|Standard Setup Package 3|ComponentInfo]
+ELTAuth.ocx=thiscab
+msvbvm60.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+oleaut32.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+olepro32.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+asycfilt.dll=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+stdole2.tlb=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+COMCAT.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+iphlpapi.dll=thiscab
+MSSTKPRP.DLL=http://activex.microsoft.com/controls/vb6/MsStkPrp.cab
+IEPrint.ocx=thiscab
+
+[Package|Standard Setup Package 3|ObjectInfo]
+ELTAuthMain=true;true
+
+[Package|Standard Setup Package 3|Distribution]
+Type=single
+Size=
+Title=ELTAuth
+
+[Package|Standard Setup Package 3|Package]
+PackageFolder=C:\ActiveX\ELTAuth
+ProjectFolder=C:\ActiveX\ELTAuth
+ServerSideCab=
+File1=C:\ActiveX\ELTAuth\setup.exe
+File2=C:\ActiveX\ELTAuth\Setup.Lst
+File3=C:\ActiveX\ELTAuth\ELTAuth.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

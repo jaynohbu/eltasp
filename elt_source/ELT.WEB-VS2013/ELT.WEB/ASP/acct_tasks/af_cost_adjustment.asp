@@ -1,0 +1,317 @@
+<!--  #INCLUDE FILE="../include/transaction.txt" -->
+<!--  #INCLUDE FILE="../include/connection.asp" -->
+<html>
+<head>
+    <title>Profit Adjustment</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <link href="../css/elt_css.css" rel="stylesheet" type="text/css" />
+    <script language="JavaScript" type="text/JavaScript">
+<!--
+
+
+
+        function MM_preloadImages() { //v3.0
+            var d = document; if (d.images) {
+                if (!d.MM_p) d.MM_p = new Array();
+                var i, j = d.MM_p.length, a = MM_preloadImages.arguments; for (i = 0; i < a.length; i++)
+                    if (a[i].indexOf("#") != 0) { d.MM_p[j] = new Image; d.MM_p[j++].src = a[i]; } 
+            }
+        }
+//-->
+    </script>
+</head>
+<!--  #INCLUDE FILE="../include/header.asp" -->
+    <!--  #INCLUDE FILE="../include/ScriptHeader.inc" -->
+<!--  #include file="../include/recent_file.asp" -->
+<%
+Dim aHAWB(64),aCollect(32),aCost(32),aAdjCost(32),aPS(32),aAdjPS(32),aShare(32)
+Dim aOCarrier(32),aOAgent(32)
+Dim rs,SQL
+
+    Set rs=Server.CreateObject("ADODB.Recordset")
+    InvoiceNo=Request.QueryString("InvoiceNo")
+    vMAWB=Request.QueryString("MAWB")
+
+    if vMAWB="" then vMAWB=Request("txtMAWB")
+    vAgent=Request.QueryString("Agent")
+    if vAgent="" then vAgent=Request("txtCustomerNumber")
+    Save=Request.QueryString("SSave")
+        
+    if Save="yes" then
+        NoItem=Request("hNoItem")
+        tPS=0
+        
+        for i=0 to NoItem-1
+            vHAWB=Request("txtHAWB" & i)
+            vCost=Request("txtADJCost" & i)
+            vLastPS=Request("txtPS" & i)
+            vPS=Request("txtADJPS" & i)
+            if not vPS="" then
+                tPS=tPS+cDbl(vPS)
+            else
+                tPS=tPS+cDbl(vLastPS)
+            end if
+            vOCarrier=Request("txtOCarrier" & i)
+            if Not vOCarrier="" then
+                tPS=tPS+cDbl(vOCarrier)
+            end if
+            vOAgent=Request("txtOAgent" & i)
+            if Not vOAgent="" then
+                tPS=tPS+cDbl(vOAgent)
+            end if
+            
+            if Not vCost="" or Not vPS="" or Not vOCarrier="" or Not vOAgent="" then
+                SQL= "select hawb_num,af_cost,agent_profit,other_agent_profit_carrier,other_agent_profit_agent from HAWB_master "
+                SQL=SQL & " where elt_account_number=" & elt_account_number 
+                SQL=SQL & " and HAWB_NUM='" & vHAWB & "'"
+                SQL=SQL & " and agent_no=" & vAgent
+                SQL=SQL & " order by HAWB_NUM"
+
+                rs.Open SQL, eltConn, adOpenDynamic, adLockPessimistic, adCmdText
+                if Not vCost="" then
+                    rs("af_cost")=vCost
+                end if
+                if Not vPS="" then
+                    rs("agent_profit")=vPS
+                end if
+                if Not vOCarrier="" then
+                    rs("other_agent_profit_carrier")=vOCarrier
+                end if
+                if Not vOAgent="" then
+                    rs("other_agent_profit_agent")=vOAgent
+                end if
+				
+                rs.Update
+                rs.Close
+           end if
+        next
+
+        if Not InvoiceNo="" and Not InvoiceNo="0" then
+            SQL="select agent_profit,subtotal,amount_charged,balance from invoice where elt_account_number=" & elt_account_number & " and invoice_no=" & InvoiceNo
+            
+            rs.Open SQL, eltConn, adOpenDynamic, adLockPessimistic, adCmdText
+
+            if Not rs.EOF then
+                rs("agent_profit")=tPS
+                rs("amount_charged")=cDbl(rs("subtotal"))-tPS
+                rs("balance")=cDbl(rs("subtotal"))-tPS
+                rs.Update
+            end if
+            rs.Close
+			tmpTarget = "edit_invoice.asp?edit=yes&InvoiceNo=" & InvoiceNo
+%>
+<script language="javascript">
+    window.opener.location.replace('<%= tmpTarget %>');
+    window.close();
+</script>
+<%
+'            Response.Redirect("edit_invoice.asp?edit=yes&InvoiceNo=" & InvoiceNo)
+        else
+            url=Request("hQueryString")
+%>
+<script language="javascript">
+    window.opener.location.replace('<%= url %>');
+    window.close();
+</script>
+<%
+'            Response.Redirect("edit_invoice.asp?" & url)
+        end if
+    else
+        If vMAWB <> "" Then
+                
+	        SQL= "select hawb_num,total_weight_charge_hawb,af_cost,agent_profit,agent_profit_share,other_agent_profit_carrier,other_agent_profit_agent from HAWB_master "
+	        SQL=SQL & " where elt_account_number=" & elt_account_number 
+	        SQL=SQL & " and MAWB_NUM='" & vMAWB & "'"
+	        SQL=SQL & " and agent_no=" & vAgent
+	        SQL=SQL & " order by HAWB_NUM"
+    '        response.Write SQL
+	        rs.Open SQL, eltConn, , , adCmdText
+	        tIndex=0
+	        Do While Not rs.EOF
+		        aHAWB(tIndex)=rs("hawb_num")
+		        aCollect(tIndex)=rs("total_weight_charge_hawb")
+		        aCost(tIndex)=rs("af_cost")
+		        aPS(tIndex)=rs("agent_profit")
+		        aShare(tIndex)=rs("agent_profit_share")
+		        aOCarrier(tIndex)=rs("other_agent_profit_carrier")
+		        aOAgent(tIndex)=rs("other_agent_profit_agent")
+		        tIndex=tIndex+1
+		        rs.MoveNext
+	        Loop
+	        rs.Close
+	    End If
+    end if
+
+
+%>
+<body link="336699" vlink="336699" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"
+    onload="self.focus()">
+    <br />
+    <table width="95%" border="0" align="center" cellpadding="2" cellspacing="0">
+        <tr>
+            <td height="32" align="left" valign="middle" class="pageheader">
+                Profit Adjustment
+            </td>
+        </tr>
+    </table>
+    <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#89A979">
+        <tr>
+            <td>
+                <form name="form1">
+                <input type="hidden" name="hNoItem" value="<%= tIndex %>">
+                <input type="hidden" name="hQueryString" value="<%= query_string %>" />
+                <input type="hidden" name="hInvoiceNo" value="<%= InvoiceNo %>" />
+                <table width="100%" border="0" cellpadding="2" cellspacing="1">
+                    <tr bgcolor="D5E8CB">
+                        <td width="10%" height="8" align="left" valign="top" class="bodyheader">
+                        </td>
+                    </tr>
+                    <tr align="left" valign="middle" bgcolor="ecf7f8">
+                        <td height="24" bgcolor="E7F0E2" class="bodyheader">
+                            <br>
+                            <table width="60%" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="89A979"
+                                class="bodycopy">
+                                <tr>
+                                    <td height="20" bgcolor="D5E8CB">
+                                        <strong>HAWB</strong>
+                                    </td>
+                                    <td bgcolor="D5E8CB">
+                                        <strong>Frt Cost</strong>
+                                    </td>
+                                    <td bgcolor="D5E8CB">
+                                        <strong>Adjusted Cost</strong>
+                                    </td>
+                                    <td bgcolor="D5E8CB">
+                                        <strong>P/S</strong>
+                                    </td>
+                                    <td bgcolor="D5E8CB">
+                                        <strong>Adjusted P/S</strong>
+                                    </td>
+                                    <td bgcolor="D5E8CB">
+                                        <strong>O/C Carrier</strong>
+                                    </td>
+                                    <td bgcolor="D5E8CB">
+                                        <strong>O/C Agent</strong>
+                                    </td>
+                                </tr>
+                                <input type="hidden" id="CollectAmt" />
+                                <input type="hidden" id="ADJCost" />
+                                <input type="hidden" id="ADJPS" />
+                                <input type="hidden" id="Share" />
+                                <input type="hidden" id="OCarrier" />
+                                <input type="hidden" id="OAgent" />
+                                <% for i=0 to tIndex-1 %>
+            <tr bgcolor="#FFFFFF">
+                <td>
+                    <input name="txtHAWB<%= i %>" type="text" class="d_shorttextfield" value="<%= aHAWB(i) %>"
+                        size="12" readonly />
+                </td>
+                <td>
+                    <input name="txtCost<%= i %>" type="text" class="d_shorttextfield" value="<%= aCost(i) %>"
+                        size="12" readonly />
+                </td>
+                <td>
+                    <input name="txtADJCost<%= i %>" type="text" class="numberfield ADJCost" id="ADJCost" onchange="CostChange(<%= i+1 %>)"
+                        value="<%= aAdjCost(i) %>" size="12" />
+                </td>
+                <td>
+                    <input name="txtPS<%= i %>" type="text" class="d_shorttextfield" value="<%= aPS(i) %>"
+                        size="12" readonly />
+                </td>
+                <td>
+                    <input name="txtADJPS<%= i %>" type="text" class="numberfield ADJPS" id="ADJPS" value="<%= aADJPS(i) %>"
+                        size="12" />
+                </td>
+                <td>
+                    <input name="txtOCarrier<%= i %>" type="text" class="numberfield OCarrier" id="OCarrier" value="<%= aOCarrier(i) %>"
+                        size="12" />
+                </td>
+                <td>
+                    <input name="txtOAgent<%= i %>" type="text" class="numberfield OAgent" id="OAgent" value="<%= aOAgent(i) %>"
+                        size="12" />
+                </td>
+                <input type="hidden" id="CollectAmt" value="<%= aCollect(i) %>" class="CollectAmt" />
+                <input type="hidden" id="Share" value="<%= aShare(i) %>" class="Share" />
+            </tr>
+                                <% next %>
+                                <tr bgcolor="#FFFFFF">
+                                    <td height="20" colspan="7" bgcolor="f3f3f3">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr align="center" bgcolor="89A979">
+                                    <td height="22" colspan="7">
+                                        <img src="../images/button_save_medium.gif" width="46" height="18" name="bSave" onclick="SaveClick()"
+                                            style="cursor: hand" alt="" />
+                                    </td>
+                                </tr>
+                            </table>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr align="left" valign="middle" bgcolor="89A979">
+                        <td height="22" bgcolor="D5E8CB" class="bodyheader">
+                            &nbsp;
+                        </td>
+                    </tr>
+                </table>
+                </form>
+            </td>
+        </tr>
+    </table>
+    <br>
+</body>
+<script type="text/javascript">
+
+    function SaveClick(){
+        var Save=true;
+        var NoItem=document.form1.hNoItem.value;
+        for (var i=0; i< NoItem; i++){
+            if ($("input.ADJCost").get(i).value != "" && !IsNumeric($("input.ADJCost").get(i).value)) {
+		        alert( "Please enter a numeric value for Adjusted Freight Cost!");
+		        Save=false;
+		        break;
+	        }
+	        if ( $("input.ADJPS").get(i).value!="" && !IsNumeric($("input.ADJPS").get(i).value)){
+		        alert( "Please enter a numeric value for Adjusted Agent Profit!");
+		        Save=false;
+		        break;
+	        }
+	        if ( $("input.OCarrier").get(i).value!="" && !IsNumeric($("input.OCarrier").get(i).value)){
+		        alert( "Please enter a numeric value for other charge agent profit!");
+		       Save=false;
+		        break;
+	        }
+	        if ( $("input.OAgent").get(i).value!="" && !IsNumeric($("input.OAgent").get(i).value)){
+		        alert( "Please enter a numeric value for other charge agent profit!");
+		        Save=false;
+		        break;
+	        }
+       }
+        if (Save){
+	        document.form1.action="af_cost_adjustment.asp?SSave=yes&InvoiceNo=<%= InvoiceNo %>&MAWB=<%= vMAWB %>&Agent=<%= vAgent %>" + "&WindowName=" +window.name
+	        document.form1.method="POST";
+	        document.form1.target = "_self";
+	        form1.submit();
+        }
+    }
+    
+    function CostChange(ItemNo){
+        var CollectAmt=$("input.CollectAmt").get[ItemNo].value;
+        var Share=$("input.Share").get[ItemNo].value;
+        if (Share=="" )
+            Share=0;
+        var ADJCost=$("input.ADJCost").get[ItemNo].value;
+        if (!IsNumeric(ADJCost) ){
+	        alert( "Please enter a numeric number for adjusted COST!");
+	        return false;
+        }
+        var PS = (CollectAmt - ADJCost) * parseFloat(Share);
+        $("input.ADJPS").get[ItemNo].value = PS;
+    }
+    
+    function MenuMouseOut(){
+    }
+
+</script>
+</html>

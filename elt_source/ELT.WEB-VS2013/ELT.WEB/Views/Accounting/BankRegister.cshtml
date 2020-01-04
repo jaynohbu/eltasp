@@ -1,0 +1,59 @@
+﻿@model IEnumerable
+@{
+    ViewBag.Title = "Bank Register";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+@using ELT.WEB.Models
+@using ELT.CDT
+@using ELT.WEB.Controllers
+
+
+
+<script src="@Url.Content("~/Scripts/Common.js")" type="text/javascript"></script>
+
+<hgroup>
+    <h1 class="pageheader">@ViewBag.Title</h1>
+</hgroup>
+
+
+@using (Html.BeginForm("BankRegister", "Accounting", FormMethod.Post, new { Operation = "BankRegister" }))
+{
+
+
+
+    <table>
+        <tr>
+            <td></td>
+            <td colspan="2" style="text-align:right">
+                @foreach (string typeName in GridViewExportHelper.ExportTypes.Keys)
+                {
+                    <input type="submit" name="@typeName" value="@GridViewExportHelper.ExportTypes[typeName].Title" />
+                    <text>&nbsp;</text>
+                    //http://localhost/Report/AirExport
+                }
+
+                <input type="button" name="ReSelect" value="Go Back to Search" onclick="RedirectParentTo('@Url.Content("~/Accounting/BankRegister/parm=chkr")')" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:left"> 
+                <br />
+                Period: @ViewBag.PeriodBegin ~   @ViewBag.PeriodEnd 
+                <br />
+                Bank: @ViewBag.BankAccount 
+                <br />
+                    Payment Method:@ViewBag.PaymentMethod 
+             
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                @Html.Partial("_BankRegister/_BankRegister", Model)
+            </td>
+        </tr>
+        <tr><td></td><td></td><td></td></tr>
+    </table>
+    
+}

@@ -1,0 +1,43 @@
+<html>
+<head> 
+<!-- MeadCo ScriptX -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style><OBJECT ID="IEPrint" WIDTH="1" HEIGHT="1" CLASSID="CLSID:F290B058-CB26-460E-B3D4-8F36AEEDBE44" 
+codebase="IEPrint.cab#version=1,0,1,1">
+</OBJECT>
+<script language="javascript"> 
+function setDefault() {
+	IEPrint.left = 0.25;
+	IEPrint.right = 0.45;
+	IEPrint.top = 2;
+	IEPrint.bottom = 0.1 ;
+	IEPrint.header = "";
+	IEPrint.footer = "";
+	IEPrint.printbg = true;		
+	IEPrint.landscape = false
+	IEPrint.paper = "A4";
+	var defaultPrinter = IEPrint.GetDefaultPrinterName();
+}
+function printWindow() {
+	IEPrint.Print();			
+}
+function pageSetup() {
+	IEPrint.Preview();
+}
+</script>
+</head> 
+<BODY onLoad="setDefault();">
+<input type="button" name="pageSetupBtn" value="Setup" onClick="pageSetup();">
+<input type="button" name="printBtn" value="Print" onClick="printWindow();">
+<iframe id="fPrint" frameborder="no" height="90%" name="fPrint" scrolling="yes" 
+style="padding-right: 0px; padding-left: 0px; padding-bottom: 0px; margin: 0px; padding-top: 0px" width="100%"></iframe>
+</BODY>
+</html>

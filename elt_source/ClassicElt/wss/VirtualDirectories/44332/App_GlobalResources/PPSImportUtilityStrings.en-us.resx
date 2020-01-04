@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Button text</comment>
+  </data>
+  <data name="Finish" xml:space="preserve">
+    <value>Done</value>
+    <comment>Button Text</comment>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+    <comment>Button Text</comment>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+    <comment>Button Text</comment>
+  </data>
+  <data name="ReviewSettings_Title" xml:space="preserve">
+    <value>Review Settings</value>
+    <comment>Title</comment>
+  </data>
+  <data name="SelectTargetLibrary_FormDescription" xml:space="preserve">
+    <value>Data sources will be copied into a document library. The document library you select must support the "PerformancePoint Data Source" content type.</value>
+    <comment>Title</comment>
+  </data>
+  <data name="SelectTargetLibrary_FormTitle" xml:space="preserve">
+    <value>Choose Destination Document Library</value>
+    <comment>Title</comment>
+  </data>
+  <data name="SelectTargetLibrary_Warning" xml:space="preserve">
+    <value>It is recommended that you select an empty document library.</value>
+    <comment></comment>
+  </data>
+  <data name="SelectTargetList_FormDescription" xml:space="preserve">
+    <value>KPIs, scorecards, reports, dashboards, filters, and indicators will be copied into a "Dashboard Content" list. The list you select must support all of these content types.</value>
+    <comment>Description</comment>
+  </data>
+  <data name="SelectTargetList_Warning" xml:space="preserve">
+    <value>It is recommended that you select an empty list.</value>
+    <comment></comment>
+  </data>
+  <data name="SelectTargetList_FormTitle" xml:space="preserve">
+    <value>Choose Destination List</value>
+    <comment>Title</comment>
+  </data>
+  <data name="SelectSourceRepository_Authentication_FormLabel" xml:space="preserve">
+    <value>Authentication:</value>
+    <comment>Label</comment>
+  </data>
+  <data name="SelectSourceRepository_DomainUser_FormLabel" xml:space="preserve">
+    <value>Domain&amp;#092;user name:</value>
+    <comment>Label</comment>
+  </data>
+  <data name="SelectSourceRepository_FormTitle" xml:space="preserve">
+    <value>Log in to the PerformancePoint 2007 content server</value>
+    <comment>Title</comment>
+  </data>
+  <data name="SelectSourceRepository_Password_FormLabel" xml:space="preserve">
+    <value>Password:</value>
+    <comment>Label</comment>
+  </data>
+  <data name="SelectSourceRepository_Server_FormLabel" xml:space="preserve">
+    <value>SQL Server name/instance:</value>
+    <comment>Label</comment>
+  </data>
+  <data name="SelectSourceRepository_SQLUser_FormLabel" xml:space="preserve">
+    <value>Login:</value>
+    <comment>Label</comment>
+  </data>
+  <data name="SelectSourceDatabase_Database_FormLabel" xml:space="preserve">
+    <value>Database:</value>
+    <comment>Label</comment>
+  </data>
+  <data name="SelectSourceDatabase_Server_FormLabel" xml:space="preserve">
+    <value>SQL Server:</value>
+    <comment>Label</comment>
+  </data>
+  <data name="ScenarioDescription" xml:space="preserve">
+    <value>Testing</value>
+    <comment>Description</comment>
+  </data>
+  <data name="ScenarioTitle" xml:space="preserve">
+    <value>Import PerformancePoint Server 2007 Content</value>
+    <comment>Title</comment>
+  </data>
+  <data name="SelectSourceDatabase_FormTitle" xml:space="preserve">
+    <value>Connect to the PerformancePoint 2007 content database</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Exception_MissingDependentObject" xml:space="preserve">
+    <value>One or more dependent objects are missing</value>
+    <comment>Exception Message</comment>
+  </data>
+
+<data name="WelcomeIntro" xml:space="preserve">
+    <value>This wizard allows you to upgrade PerformancePoint Monitoring Server 2007 content to PerformancePoint Services.</value>
+    <comment></comment>
+  </data>
+
+<data name="WelcomeBeforeYouBegin" xml:space="preserve">
+    <value>Before you begin:</value>
+    <comment></comment>
+  </data>
+<data name="WelcomeBeforeYouBeginItem1" xml:space="preserve">
+    <value>The destination site must be using SharePoint Server 2010 &lt;b&gt;display mode.&lt;/b&gt;</value>
+    <comment></comment>
+  </data>
+
+<data name="WelcomeWhatWillBeImported" xml:space="preserve">
+    <value>What will be imported:</value>
+    <comment></comment>
+  </data>
+<data name="WelcomeWhatWillBeImportedItem1" xml:space="preserve">
+    <value>Imported content, such as dashboards and scorecards, will be placed in a &lt;b&gt;single list&lt;/b&gt;.</value>
+    <comment></comment>
+  </data>
+
+<data name="WelcomeWhatWillBeImportedItem2" xml:space="preserve">
+    <value>Imported data sources will be placed in a &lt;b&gt;single document library&lt;/b&gt;.</value>
+    <comment></comment>
+  </data>
+
+<data name="WelcomeWhatWillBeImportedItem3" xml:space="preserve">
+    <value>&lt;b&gt;Security will be copied, with some exceptions&lt;/b&gt;. Learn more in the administration guide.</value>
+    <comment></comment>
+  </data>
+
+<data name="WelcomeWhatWillBeImportedItem4" xml:space="preserve">
+    <value>&lt;b&gt;Redeploy dashboards&lt;/b&gt; to the desired location by using PerformancePoint Services.</value>
+    <comment></comment>
+  </data>
+
+<data name="WelcomeWhatWillBeImportedItem5" xml:space="preserve">
+    <value>The following report types &lt;b&gt;will not be imported&lt;/b&gt;, because they are not supported in PerformancePoint Services:</value>
+    <comment></comment>
+  </data>
+
+<data name="WelcomeWhatWillNotBeImportedItem1" xml:space="preserve">
+    <value>Spreadsheet</value>
+    <comment></comment>
+  </data>
+
+<data name="WelcomeWhatWillNotBeImportedItem2" xml:space="preserve">
+    <value>Trend Analysis Chart</value>
+    <comment></comment>
+  </data>
+
+<data name="WelcomeWhatWillNotBeImportedItem3" xml:space="preserve">
+    <value>PivotTable</value>
+    <comment></comment>
+  </data>
+
+<data name="WelcomeWhatWillNotBeImportedItem4" xml:space="preserve">
+    <value>PivotChart</value>
+    <comment>Description</comment>
+  </data>
+
+  <data name="Exception_InvalidLogin" xml:space="preserve">
+    <value>The user name or password is incorrect, or you do not have permission to log in.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_ServerLogin" xml:space="preserve">
+    <value>The user name or password is incorrect, or you do not have permission to log in.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_ServerLogin_WindowsAuth" xml:space="preserve">
+    <value>The user name or password is incorrect, or you do not have permission to log in.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_ServerLogin_SQLAuth" xml:space="preserve">
+    <value>The login or password is incorrect, or you do not have permission to log in.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_ServerNotResponding" xml:space="preserve">
+    <value>The server "{0}" is not responding.</value>
+    <comment>Exception Message displays server name</comment>
+  </data>
+  <data name="Message_DatabaseConnect" xml:space="preserve">
+    <value>Connecting to database...</value>
+    <comment>Label</comment>
+  </data>
+  <data name="Message_ServerLogin" xml:space="preserve">
+    <value>Logging in to server...</value>
+    <comment>Label</comment>
+  </data>
+
+  <data name="ReviewSettings_ImportDatabase" xml:space="preserve">
+    <value>PerformancePoint 2007 content will be imported from:</value>
+    <comment></comment>
+  </data>
+  <data name="ReviewSettings_ImportDataSources" xml:space="preserve">
+    <value>The &lt;b&gt;data sources&lt;/b&gt; will be copied to:</value>
+    <comment></comment>
+  </data>
+  <data name="ReviewSettings_ImportRemainingContents" xml:space="preserve">  
+    <value>The &lt;b&gt;remaining content&lt;/b&gt; items will be copied to:</value>
+    <comment></comment>
+  </data>
+  <data name="ReviewSettings_ImportComments" xml:space="preserve">
+    <value>&lt;b&gt;Comments&lt;/b&gt; will be copied into the PerformancePoint content database.</value>
+    <comment></comment>
+  </data>
+
+  <data name="ImportingContent_FormTitle" xml:space="preserve">
+    <value>Importing Content</value>
+    <comment>Title</comment>
+  </data>
+
+  <data name="ImportingContent_ImportStatus" xml:space="preserve">
+    <value>Importing:  &lt;span id="itemsImportedCount"&gt;{0}&lt;/span&gt; of &lt;span&gt;{1}&lt;/span&gt;</value>
+    <comment>Label</comment>
+  </data>
+
+  <data name="ImportResults_Title" xml:space="preserve">
+    <value>Import Results</value>
+    <comment></comment>
+  </data>
+
+  <data name="ImportResults_TheFollowingWarningsOccurred" xml:space="preserve">
+    <value>The following warnings occurred:</value>
+    <comment></comment>
+  </data>
+
+  <data name="ImportResults_TheFollowingErrorsOccurred" xml:space="preserve">
+    <value>The following problems occurred:</value>
+    <comment></comment>
+  </data>
+
+  <data name="ImportResults_SuccessCount" xml:space="preserve">
+    <value>{0} of {1} imported</value>
+    <comment>Title, shows how many items where imported and total items.</comment>
+  </data>
+
+  <data name="ImportResults_SuccessCountAll" xml:space="preserve">
+    <value>all {0} imported</value>
+    <comment>Title, shows how many items where imported and total items.</comment>
+  </data>
+
+  <data name="PermissionLevel_PPSEditor" xml:space="preserve">
+    <value>PerformancePoint Editor</value>
+    <comment>Label{InvalidChars="/\[]:|&lt;&gt;;+=;,?*'@"} {InvalidChars='"'}</comment>
+  </data>
+
+  <data name="PermissionLevel_PPSReader" xml:space="preserve">
+    <value>PerformancePoint Reader</value>
+    <comment>Label{InvalidChars="/\[]:|&lt;&gt;;+=;,?*'@"} {InvalidChars='"'}</comment>
+  </data>
+
+  <data name="Exception_Dashboard_MissingReportView" xml:space="preserve">
+    <value>A report used by this dashboard no longer exists.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_Dashboard_MissingScorecard" xml:space="preserve">
+    <value>A scorecard used by this dashboard no longer exists.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_Database_Invalid" xml:space="preserve">
+    <value>The database "{0}" is not a PerformancePoint 2007 content database. Choose a different database.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_Database_ListDatabases" xml:space="preserve">
+    <value>You do not have permission to read the list of databases. Choose a different user name and password.</value>
+    <comment>Exception Message</comment>
+  </data>
+
+  <data name="Exception_Database_ListDatabases_WindowsAuth" xml:space="preserve">
+    <value>You do not have permission to read the list of databases. Choose a different user name and password.</value>
+    <comment>Exception Message</comment>
+  </data>
+
+  <data name="Exception_Database_ListDatabases_SQLAuth" xml:space="preserve">
+    <value>You do not have permission to read the list of databases. Choose a different user name and password.</value>
+    <comment>Exception Message</comment>
+  </data>
+
+  <data name="Exception_Datasource_DuplicateCharacter" xml:space="preserve">
+    <value>This item was renamed to &lt;b&gt;{0}&lt;/b&gt; because data sources cannot contain two consecutive periods. ( .. )</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_Datasource_DuplicateName" xml:space="preserve">
+    <value>This item was renamed to &lt;b&gt;{0}&lt;/b&gt; because duplicate data source names are not supported in this version.</value>
+    <comment>Exception Message</comment>
+  </data>
+
+  <data name="Exception_Datasource_InvalidCharacters" xml:space="preserve">
+    <value>This item was renamed to &lt;b&gt;{0}&lt;/b&gt; because data sources cannot contain the following characters: " ' # % &amp; * : &lt; &gt; ? \ / {{ | }} ~ </value>
+    <comment>Exception Message DataSource name error, replaced items contain the original datasource name and new name.</comment>
+  </data>
+
+  <data name="Exception_Dashboard_InvalidCharacters" xml:space="preserve">
+    <value>This item was renamed to &lt;b&gt;{0}&lt;/b&gt; because dashboards cannot contain the following characters: " ' # % &amp; * : &lt; &gt; ? \ / {{ | }} ~ </value>
+    <comment>Exception Message dashboard name error, replaced items contain the original datasource name and new name.</comment>
+  </data>
+
+  <data name="Exception_Datasource_InvalidEndCharacter" xml:space="preserve">
+    <value>This item was renamed to &lt;b&gt;{0}&lt;/b&gt; because data sources cannot start or end with a period. ( . )</value>
+    <comment>Exception Message DataSource name error, replaced items contain the original datasource name and new name.</comment>
+  </data>
+  <data name="Exception_DocumentLibrary_InvalidType" xml:space="preserve">
+    <value>Choose a &lt;b&gt;document library&lt;/b&gt;, not a &lt;b&gt;list&lt;/b&gt;.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_DocumentLibrary_Permissions" xml:space="preserve">
+    <value>The &lt;b&gt;{0}&lt;/b&gt; identity does not have permission to write to this document library. Choose a different document library or connect with a different identity.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_Filter_MissingDatasource" xml:space="preserve">
+    <value>The data source used by the {0} filter of this dashboard no longer exists.</value>
+    <comment>Exception Message DataSource name error, replaced items contain the original datasource name and new name.</comment>
+  </data>
+  <data name="Exception_Kpi_Actual_MissingDatasource" xml:space="preserve">
+    <value>The data source used by the Actual metric of this KPI no longer exists.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_Kpi_Actual_MissingIndicator" xml:space="preserve">
+    <value>The indicator used by the Actual metric of this KPI no longer exists.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_List_InvalidType" xml:space="preserve">
+    <value>Choose a &lt;b&gt;list&lt;/b&gt;, not a &lt;b&gt;document library&lt;/b&gt;. </value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_List_MissingDataSourceType" xml:space="preserve">
+    <value>The document library does not support the PerformancePoint Data Source content type. Choose a different document library, or add the content type to it.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_List_MissingContentTypes" xml:space="preserve">
+    <value>The &lt;b&gt;{0}&lt;/b&gt; list does not support all of the PerformancePoint content types. Choose a different list, or add the following content types to the list: {1}</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_List_Permissions" xml:space="preserve">
+    <value>The &lt;b&gt;{0}&lt;/b&gt; identity does not have permission to write to this list. Choose a different list or connect with a different identity.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_ReportView_MissingDatasource" xml:space="preserve">
+    <value>The data source used by this report no longer exists.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_ReportView_PivotChart" xml:space="preserve">
+    <value>PivotChart reports are no longer supported. Recreate the report using Excel Services.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_ReportView_PivotTable" xml:space="preserve">
+    <value>PivotTable reports are no longer supported. Recreate the report using Excel Services.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_ReportView_TrendAnalysis" xml:space="preserve">
+    <value>Trend analysis charts are no longer supported. Recreate the chart using an analytic chart or Excel Services.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_Scorecard_MissingDatasource" xml:space="preserve">
+    <value>A data source used by this scorecard no longer exists.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_Scorecard_MissingKpi" xml:space="preserve">
+    <value>A KPI used by this scorecard no longer exists.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_SiteCollection_MissingFeature" xml:space="preserve">
+    <value>The &lt;b&gt;PerformancePoint&lt;/b&gt; feature is not enabled for the selected site collection. Enable the feature or choose a different site collection. </value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_Site_MissingFeature" xml:space="preserve">
+    <value>The &lt;b&gt;PerformancePoint&lt;/b&gt; feature is not enabled for the selected site. Enable the feature or choose a different site. </value>
+    <comment>Exception Message</comment>
+  </data>
+
+  <data name="Exception_Site_AccessDenied" xml:space="preserve">
+    <value>You don't have access to the selected site. </value>
+    <comment>Exception Message</comment>
+  </data>
+
+  <data name="Exception_SiteCollection_AccessDenied" xml:space="preserve">
+    <value>You don't have access to the selected site collection. </value>
+    <comment>Exception Message</comment>
+  </data>
+
+  <data name="Exception_Unknown" xml:space="preserve">
+    <value>Unreadable content was found in this item.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="UserCouldNotBeFound" xml:space="preserve">
+    <value>The user &lt;b&gt;{0}&lt;/b&gt;, who had the &lt;b&gt;{1}&lt;/b&gt; permission, cannot be found. This user will not be given permission to the item.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_WebApplication_MissingFeature" xml:space="preserve">
+    <value>The &lt;b&gt;PerformancePoint&lt;/b&gt; feature is not enabled for the web application in the selected site collection. Enable the feature or choose a different site collection.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_Kpi_Target_MissingDatasource" xml:space="preserve">
+    <value>Data source referenced by KPI no longer exists.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_Kpi_Target_MissingIndicator" xml:space="preserve">
+    <value>Indicator referenced by KPI metric no longer exists.</value>
+    <comment>Exception Message</comment>
+  </data>
+
+  <data name="Exception_Name_TooLong_KPI" xml:space="preserve">
+    <value>This item was renamed to &lt;b&gt;{0}&lt;/b&gt; because a KPI name cannot be longer than {1} characters in this version.</value>
+    <comment>Exception Message Displays Original Name and New Name</comment>
+  </data>
+
+  <data name="Exception_Name_TooLong_Scorecard" xml:space="preserve">
+    <value>This item was renamed to &lt;b&gt;{0}&lt;/b&gt; because a scorecard name cannot be longer than {1} characters in this version.</value>
+    <comment>Exception Message Displays Original Name and New Name</comment>
+  </data>
+
+  <data name="Exception_Name_TooLong_ReportView" xml:space="preserve">
+    <value>This item was renamed to &lt;b&gt;{0}&lt;/b&gt; because a report view name cannot be longer than {1} characters in this version.</value>
+    <comment>Exception Message Displays Original Name and New Name</comment>
+  </data>
+
+  <data name="Exception_Name_TooLong_Indicator" xml:space="preserve">
+    <value>This item was renamed to &lt;b&gt;{0}&lt;/b&gt; because an indicator name cannot be longer than {1} characters in this version.</value>
+    <comment>Exception Message Displays Original Name and New Name</comment>
+  </data>
+
+  <data name="Exception_Name_TooLong_Datasource" xml:space="preserve">
+    <value>This item was renamed to &lt;b&gt;{0}&lt;/b&gt; because a data source name cannot be longer than {1} characters in this version.</value>
+    <comment>Exception Message Displays Original Name and New Name</comment>
+  </data>
+
+  <data name="Exception_Name_TooLong_Dashboard" xml:space="preserve">
+    <value>This item was renamed to &lt;b&gt;{0}&lt;/b&gt; because a dashboard name cannot be longer than {1} characters in this version.</value>
+    <comment>Exception Message Displays Original Name and New Name</comment>
+  </data>
+
+  <data name="Exception_Name_TooLong_Filter" xml:space="preserve">
+    <value>This item was renamed to &lt;b&gt;{0}&lt;/b&gt; because a filter name cannot be longer than {1} characters in this version.</value>
+    <comment>Exception Message Displays Original Name and New Name</comment>
+  </data>
+
+  <data name="Exception_FolderName_TooLong" xml:space="preserve">
+    <value>&lt;b&gt;{0}&lt;/b&gt; was renamed to &lt;b&gt;{1}&lt;/b&gt; because the folder name exceeeded the maximum character limit.</value>
+    <comment>Exception Message Folder name error, replaced items contain the original folder name and new name.</comment>
+  </data>
+  <data name="Exception_ReportView_SDK" xml:space="preserve">
+    <value>This custom item has been imported, and its content has not been changed. Additional work might be required for this item to be used in PerformancePoint Services.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_ReportView_Spreadsheet" xml:space="preserve">
+    <value>Spreadsheet reports are no longer supported. Recreate the report using Excel Services.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="Exception_ReportView_Strategymap" xml:space="preserve">
+    <value>Strategy Map reports must be opened in Dashboard Designer to complete the import process.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="SelectSecurity_FormTitle" xml:space="preserve">
+    <value>How was security configured on the original server?</value>
+    <comment>Title</comment>
+  </data>
+  <data name="SelectSecurity_PerUser1" xml:space="preserve">
+    <value>Each user's own account is used to access all datasources.</value>
+    <comment>Description</comment>
+  </data>
+
+  <data name="SelectSecurity_PerUser2" xml:space="preserve">
+    <value>In the &lt;b&gt;web.config&lt;/b&gt; files, the &lt;b&gt;Bpm.ServerConnectionPerUser&lt;/b&gt; property was set to &lt;b&gt;True&lt;/b&gt;.</value>
+  </data>
+
+  <data name="SelectSecurity_PerUser3" xml:space="preserve">
+    <value>Note: to use this authentication method, a domain administrator must configure Kerberos Delegation between all instances of the PerformancePoint Service Application and the data source servers.</value>
+    <comment>Description</comment>
+  </data>
+
+  <data name="SelectSecurity_SharedIdentity" xml:space="preserve">
+    <value>A single shared user account was used to access all data sources.</value>
+    <comment>Description</comment>
+  </data>
+  <data name="SelectSecurity_SharedUserName1" xml:space="preserve">
+    <value>A single shared user account was used to access all data sources, and the "CustomData" connection string property was used to send the user name.</value>
+    <comment>Description</comment>
+  </data>
+
+  <data name="SelectSecurity_SharedUserName2" xml:space="preserve">
+    <value>In the &lt;b&gt;web.config&lt;/b&gt; files, the &lt;b&gt;Bpm.UseASCustomData&lt;/b&gt; property was set to &lt;b&gt;True&lt;/b&gt;.</value>
+    <comment>Description</comment>
+  </data>
+
+  <data name="Exception_Kpi_Actual_MissingDatasource1" xml:space="preserve">
+    <value>The data source used by the Actual metric of this KPI no longer exists.</value>
+    <comment>Exception Message</comment>
+  </data>
+  <data name="SelectSecurity_FormDescription1" xml:space="preserve">
+    <value>For data sources to work correctly, the authentication method used on the original server must be copied to the data sources being imported.</value>
+  </data>
+  <data name="SelectSecurity_FormDescription2" xml:space="preserve">
+    <value>In PerformancePoint 2007, this was set in the &lt;b&gt;web.config&lt;/b&gt; file, and applied to the entire server.</value>
+  </data>
+  <data name="SelectSecurity_PerUserTitle" xml:space="preserve">
+    <value>Per-user identity &lt;em class="PPSMAImportUtilityWarning"&gt;(requires Kerberos Delegation)&lt;/em&gt;</value>
+  </data>
+  <data name="SelectSecurity_SharedTitle" xml:space="preserve">
+    <value>Default authentication</value>
+  </data>
+  <data name="SelectSecurity_SharedUserNameTitle" xml:space="preserve">
+    <value>Default authentication with user name in connection string</value>
+  </data>
+  <data name="Exception_DocumentLibraryError_Title" xml:space="preserve">
+    <value>Cannot use the &lt;b&gt;{0}&lt;/b&gt; document library for import.</value>
+  </data>
+  <data name="Exception_ServerLoginTitle" xml:space="preserve">
+    <value>Cannot log into server</value>
+    <comment>Title for db login error</comment>
+  </data>
+  <data name="Exception_UnusableLocation_Title" xml:space="preserve">
+    <value>Cannot use the selected location for import.</value>
+  </data>
+  <data name="Exception_UnusableSiteCollection_Title" xml:space="preserve">
+    <value>Cannot use the selected site collection for import.</value>
+  </data>
+
+  <data name="Exception_UnusableSite_Title" xml:space="preserve">
+    <value>Cannot use the selected site for import.</value>
+  </data>
+
+  <data name="Title_Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+    <comment>the title for Dashboard</comment>
+  </data>
+  <data name="Title_Datasource" xml:space="preserve">
+    <value>Datasource</value>
+    <comment>the title for datasource</comment>
+  </data>
+  <data name="Title_Filter" xml:space="preserve">
+    <value>Filter</value>
+    <comment>the title for Filter</comment>
+  </data>
+  <data name="Title_Indicator" xml:space="preserve">
+    <value>Indicator</value>
+    <comment>the title for indicator</comment>
+  </data>
+  <data name="Title_KPI" xml:space="preserve">
+    <value>KPI</value>
+    <comment>the title for KPI</comment>
+  </data>
+  <data name="Title_PerformancePoint" xml:space="preserve">
+    <value>PerformancePoint</value>
+    <comment>the name of the application used for type display</comment>
+  </data>
+  <data name="Title_Report" xml:space="preserve">
+    <value>Report</value>
+    <comment>the title for Report</comment>
+  </data>
+  <data name="Title_Scorecard" xml:space="preserve">
+    <value>Scorecard</value>
+    <comment>the title for Scorecard</comment>
+  </data>
+  <data name="Title_Unknown" xml:space="preserve">
+    <value>Unknown</value>
+    <comment>the title for unknown</comment>
+  </data>
+  <data name="Exception_AccessDenied" xml:space="preserve">
+    <value>The {0} Identity does not have permission to access the list.</value>
+  </data>
+  <data name="Exception_List_Title" xml:space="preserve">
+    <value>Cannot use the &lt;b&gt;{0}&lt;/b&gt; list for import.</value>
+  </data>
+  <data name="FCOName_Dashboards" xml:space="preserve">
+    <value>Dashboards</value>
+    <comment>FCOName</comment>
+  </data>
+  <data name="FCOName_Annotations" xml:space="preserve">
+    <value>Comments</value>
+    <comment>FCOName</comment>
+  </data>
+  <data name="FCOName_Filters" xml:space="preserve">
+    <value>Filters</value>
+    <comment>FCOName</comment>
+  </data>
+  <data name="FCOName_Indicators" xml:space="preserve">
+    <value>Indicators</value>
+    <comment>FCOName</comment>
+  </data>
+  <data name="FCOName_KPIs" xml:space="preserve">
+    <value>KPIs</value>
+    <comment>FCOName</comment>
+  </data>
+  <data name="FCOName_Reports" xml:space="preserve">
+    <value>Report Views</value>
+    <comment>FCOName</comment>
+  </data>
+  <data name="FCOName_Scorecards" xml:space="preserve">
+    <value>Scorecards</value>
+    <comment>FCOName</comment>
+  </data>
+  <data name="FCOName_Datasources" xml:space="preserve">
+    <value>Data Sources</value>
+  </data>
+  <data name="FCO_Dashboard" xml:space="preserve">
+    <value>Dashboards</value>
+    <comment>FCO Folder Name</comment>
+  </data>
+  <data name="FCO_Datasources" xml:space="preserve">
+    <value>Datasources</value>
+    <comment>FCO Folder Name</comment>
+  </data>
+  <data name="FCO_Filters" xml:space="preserve">
+    <value>Filters</value>
+    <comment>FCO Folder Name</comment>
+  </data>
+  <data name="FCO_Indicators" xml:space="preserve">
+    <value>Indicators</value>
+    <comment>FCO Folder Name</comment>
+  </data>
+  <data name="FCO_Annotations" xml:space="preserve">
+    <value>Comments</value>
+    <comment>FCO Folder Name</comment>
+  </data>
+  <data name="FCO_KPI" xml:space="preserve">
+    <value>KPIs</value>
+    <comment>FCO Folder Name</comment>
+  </data>
+  <data name="FCO_Reports" xml:space="preserve">
+    <value>Reports</value>
+    <comment>FCO Folder Name</comment>
+  </data>
+  <data name="FCO_Scorecards" xml:space="preserve">
+    <value>Scorecards</value>
+    <comment>FCO Folder Name</comment>
+  </data>
+  <data name="StepFormat" xml:space="preserve">
+    <value>Step {0} of {1}</value>
+    <comment></comment>
+  </data>
+  <data name="SharedIdentity_AccessKey" xml:space="preserve">
+    <value>S</value>
+    <comment>AccessKey for the Shared Identity radio button on the SelectSecurity.aspx page</comment>
+  </data>
+  <data name="PerUserIdentity_AccessKey" xml:space="preserve">
+    <value>P</value>
+    <comment>AccessKey for the Per User Identity radio button on the SelectSecurity.aspx page</comment>
+  </data>
+  <data name="SharedIdentityAndAddAuthentication_AccessKey" xml:space="preserve">
+    <value>A</value>
+    <comment>AccessKey for the Shared Identity And Add Authentication radio button on the page SelectSecurity.aspx</comment>
+  </data>
+    <data name="SQLServer_AccessKey" xml:space="preserve">
+    <value>S</value>
+    <comment>AccessKey for the SQL Server Name textbox on the SelectSourceRepository.aspx page</comment>
+  </data>
+  <data name="Authentication_AccessKey" xml:space="preserve">
+    <value>A</value>
+    <comment>AccessKey for the Authentication dropdown on the SelectSourceRepository.aspx page</comment>
+  </data>
+  <data name="Username_AccessKey" xml:space="preserve">
+    <value>U</value>
+    <comment>AccessKey for the Username textbox on the SelectSourceRepository.aspx page</comment>
+  </data>
+  <data name="Password_AccessKey" xml:space="preserve">
+    <value>P</value>
+    <comment>AccessKey for the Password textbox on the SelectSourceRepository.aspx page</comment>
+  </data>
+  <data name="Database_AccessKey" xml:space="preserve">
+    <value>P</value>
+    <comment>AccessKey for the Database dropdown on the SelectSourceDatabase.aspx page</comment>
+  </data>
+
+  <data name="ImportDatabase_Format" xml:space="preserve">
+    <value>{0} / {1}</value>
+    <comment>{Locked} Format string for ImportDatabase used on the ReviewSettings.aspx page</comment>
+  </data>
+
+  <data name="ImportDataSources_Format" xml:space="preserve">
+    <value>&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</value>
+    <comment>{Locked} Format string for ImportDataSources used on the ReviewSettings.aspx page</comment>
+  </data>
+
+  <data name="ImportRemainingContents_Format" xml:space="preserve">
+    <value>&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</value>
+    <comment>{Locked} Format string for ImportRemainingContents used on the ReviewSettings.aspx page</comment>
+  </data>
+
+  <data name="TrendAnalysisChartError" xml:space="preserve">
+    <value>Trend Analysis Charts are no longer supported in this product.</value>
+  </data>
+
+  <data name="Processing_Throbber_Alt_Text" xml:space="preserve">
+    <value>Processing</value>
+  </data>
+
+  <data name="Error_Throbber_Alt_Text" xml:space="preserve">
+    <value>Processing</value>
+  </data>
+
+  <data name="AuthenticationMethod_SQL" xml:space="preserve">
+    <value>SQL Server Authentication</value>
+  </data>
+
+  <data name="AuthenticationMethod_Windows" xml:space="preserve">
+    <value>Windows Authentication</value>
+  </data>
+
+  <data name="Site_Collection" xml:space="preserve">
+    <value>Site Collection:</value>
+  </data>
+
+  <data name="ODBCNotSupported" xml:space="preserve">
+    <value>ODBC data sources are no longer supported.  Items that use this data source will not be functional.</value>
+  </data>
+
+  <data name="ObjectName" xml:space="preserve">
+    <value>Object Name</value>
+    <comment>This is used on the ULS log error message as a debugging help to the user.</comment>
+  </data>
+
+  <data name="ObjectType" xml:space="preserve">
+    <value>Object Type</value>
+    <comment>This is used on the ULS log error message as a debugging help to the user.</comment>
+  </data>
+
+</root>

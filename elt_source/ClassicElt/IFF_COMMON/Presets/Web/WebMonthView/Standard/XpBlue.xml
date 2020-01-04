@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="XpBlue" PresetDescription="Property values that give WebMonthView the look of Windows XP with a Blue theme." PresetType="All" />-->
+<ig_sched:WebMonthView 
+StyleSheetFileName="/ig_common/20053/styles/xpBlue/ig_webmonthview.css" />

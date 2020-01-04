@@ -1,0 +1,10 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxhl" Namespace="DevExpress.Web.ASPxHeadline" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxhl:ASPxHeadline runat="server" CssFilePath="~/App_Themes/iOS/{0}/styles.css" DateVerticalPosition="BelowHeader" TailPosition="KeepWithLastWord"
+	SpriteCssFilePath="~/App_Themes/iOS/{0}/sprite.css" CssPostfix="iOS">
+    <DateStyle Spacing="11" />
+    <ContentStyle LineHeight="16" />
+    <LeftPanelStyle Spacing="20" />
+</dxhl:ASPxHeadline>
+

@@ -1,0 +1,35 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxMenu" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxMenu runat="server" AutoSeparators="RootOnly" ShowPopOutImages="True" SpriteCssFilePath="~/App_Themes/Moderno/{0}/sprite.css" CssPostfix="Moderno" CssFilePath="~/App_Themes/Moderno/{0}/styles.css">
+    <LoadingPanelImage Url="Web/Loading.gif"></LoadingPanelImage>
+    <ItemSubMenuOffset FirstItemX="1" FirstItemY="-2" LastItemX="1" LastItemY="-2" X="1" Y="-2"></ItemSubMenuOffset>
+</dx:ASPxMenu>
+
+<dx:ASPxMenu runat="server" ItemAutoWidth="False" GutterImageSpacing="7px" ItemSpacing="0px" SeparatorColor="#AECAF0" SeparatorWidth="1px" ShowPopOutImages="True" SpriteCssFilePath="~/App_Themes/Moderno/{0}/sprite.css" CssPostfix="Moderno" CssFilePath="~/App_Themes/Moderno/{0}/styles.css" Width="100%" SkinID="MenuToolBar">
+    <LoadingPanelImage Url="Web/Loading.gif"></LoadingPanelImage>
+
+    <RootItemSubMenuOffset FirstItemX="-1" FirstItemY="-1" X="-1" Y="-1"></RootItemSubMenuOffset>
+
+    <ItemStyle DropDownButtonSpacing="12px" PopOutImageSpacing="18px" ImageSpacing="5px" VerticalAlign="Middle"></ItemStyle>
+    <SubMenuItemStyle ImageSpacing="7px"></SubMenuItemStyle>
+    <SubMenuStyle SeparatorColor="#AECAF0" BackColor="#F9F9F9"></SubMenuStyle>
+    <Border BorderColor="#AECAF0" BorderStyle="Solid" BorderWidth="1px"></Border>
+</dx:ASPxMenu>
+
+<dx:ASPxMenu runat="server" ItemSpacing="0px" AutoSeparators="None" ShowPopOutImages="True" SpriteCssFilePath="~/App_Themes/Moderno/{0}/sprite.css" 
+		CssPostfix="Moderno" CssFilePath="~/App_Themes/Moderno/{0}/styles.css" CssClass="menuButtons menuButtons_Moderno" SkinID="MenuButtons" SeparatorHeight="0px">
+    <LoadingPanelImage Url="Web/Loading.gif"></LoadingPanelImage>
+
+    <RootItemSubMenuOffset FirstItemX="-1" LastItemX="-1" X="-1"></RootItemSubMenuOffset>
+
+    <ItemStyle DropDownButtonSpacing="11px"></ItemStyle>
+    <SubMenuItemStyle Wrap="False"></SubMenuItemStyle>
+    <Border BorderWidth="0px"></Border>
+</dx:ASPxMenu>
+
+<dx:ASPxMenu runat="server" GutterImageSpacing="7px" ItemSpacing="0px" SeparatorColor="#AECAF0" SeparatorWidth="1px" ShowPopOutImages="True" 
+    SpriteCssFilePath="~/App_Themes/Moderno/{0}/sprite.css" CssPostfix="Moderno" CssFilePath="~/App_Themes/Moderno/{0}/styles.css" CssClass="menuLinks_Moderno" SkinID="MenuLinks">
+    <LoadingPanelImage Url="Web/Loading.gif"></LoadingPanelImage>
+</dx:ASPxMenu>
+

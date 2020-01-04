@@ -1,0 +1,6 @@
+﻿@{
+    ViewBag.Title = "UserAdmin";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+
+<iframe id ="ContentFrame" scrolling="no"   frameborder="0" width="100%" onload="autoResize('ContentFrame');" src="@Url.Content("~/ASP/site_admin/edit_user.asp" + ViewBag.Params)"></iframe>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="XpBlue" PresetDescription="Property values that give WebWeekView the look of Windows Xp with a blue them" PresetType="All" />-->
+<ig_sched:WebWeekView  
+StyleSheetFileName="/ig_common/20053/styles/xpsilver/ig_webweekview.css" />

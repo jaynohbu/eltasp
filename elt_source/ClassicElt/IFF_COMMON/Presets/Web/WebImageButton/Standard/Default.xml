@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Default" PresetDescription="Infragisitics Default WebImageButton Preset. If the 'Reset' box is checked then only Look properties are reset." PresetType="Appearance" />-->
+<igtxt:WebImageButton>
+	<RoundedCorners RenderingType="Auto" />
+	<HoverAppearance ContentShift="NotSet" />
+	<PressedAppearance ContentShift="NotSet" />
+	<FocusAppearance ContentShift="NotSet" />
+	<Appearance ContentShift="NotSet" />
+	<DisabledAppearance ContentShift="NotSet" />
+</igtxt:WebImageButton>

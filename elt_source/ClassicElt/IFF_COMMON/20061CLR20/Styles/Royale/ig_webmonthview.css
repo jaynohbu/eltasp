@@ -1,0 +1,292 @@
+/*  
+Theme Name: Royale
+Control Name: WebMonthView
+Version: 2005.3 Whidbey
+Author: Infragistics
+Author URI: http://www.infragistics.com/
+*/
+
+/*
+** Month Frame Oriented Classes
+*/
+
+.igmv_Month 
+{  
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: x-small;
+
+	overflow: auto;
+
+	position: relative;
+	
+	margin: 0px;
+	padding: 1px;
+}
+
+.igmv_Month table {
+	border-collapse: collapse;
+	border: 1px solid #10377C;
+}
+
+.igmv_WeekNumber 
+{
+	font-size: 8pt;
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	color: #1A55C4;
+	text-align: center;
+	background-color: #F7FBFD;
+
+	border-top: 1px solid #CCCCCC;
+
+	width: 20px;
+	padding: 0px 2px 0px 2px;
+}
+
+.igmv_MonthDayOfWeekHeader 
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #10377C;
+
+	/* overriding border that is set by igmv_WeekNumber */
+	border-top: 0px;
+	border-bottom: 2px solid #091C3E;
+
+	margin-left: 1px;
+	margin-right: 1px;
+	margin-top: 0px;
+	padding: 3px 2px 1px 0px;
+
+	cursor:default;
+	
+	height: 1%;
+	line-height: 14px;	
+}
+
+.igmv_CaptionHeader {	
+	background-image: url(images/MonthHeaderCaption_bg.png);
+	background-repeat: repeat-x;
+
+	border-right: 1px solid #10377C;
+	border-bottom: 1px solid #10377C;
+	border-top: 1px solid #10377C;
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;	
+	font-size: x-small;
+	text-align: center;
+	color: #FFFFFF;
+
+	/* Total height: 25px -- line-height + border-top + border-bottom */
+	line-height: 19px;
+	height: 1%;	
+}
+
+/*****************************************
+	Ensure CaptionHeader Styling
+	----------------------------
+	Table Location: first row, first column of table, igmv_CaptionHeader area
+	
+	Role: overrides igmv_WeekNumber styles that are
+	unwanted in the igmv_CaptionHeader area.
+	
+	Need: igmv_WeekNumber is applied in the first row, first column of the
+	table to ensure the WeekNumber width is applied 
+	properly to the first column.
+******************************************/
+tr.igmv_CaptionHeader td.igmv_WeekNumber {
+	border: 0px;
+	background-color: transparent;
+	line-height: 19px;
+	height: 1%;
+}
+
+/*
+** Day Oriented Classes
+*/
+.igmv_Day 
+{ 
+	color: #000000; 
+	background-color: #E4F0F8; 
+
+	border-left: 1px solid #4567A4;
+
+	height: 12%;
+	vertical-align: top;
+}
+
+.igmv_CompressedDay 
+{ 
+	color: #000000; 
+	background-color: #E4F0F8;
+
+	border-left: 1px solid #4567A4;
+	
+	height: 4%; 
+	vertical-align: top;
+}
+
+/*
+** NOTE: OtherMonthDay does not inherit from Day because Day by definition is non-Trailing. 
+*/
+.igmv_OtherMonthDay 
+{ 
+	color: #000000; 
+	background-color: #B1CBEC;
+
+	border-left: 1px solid #4567A4;
+
+	height: 12%;
+	vertical-align: top; 
+}
+
+.igmv_OtherCompressedDay 
+{ 
+	color: #000000; 
+	background-color: #B1CBEC;
+
+	border-left: 1px solid #4567A4;
+
+	height: 4%;
+	vertical-align: top;
+}
+
+.igmv_Today 
+{
+}
+
+.igmv_ActiveDay 
+{ 
+}
+
+
+/*
+** DayHeader Oriented Classes.
+*/
+
+.igmv_DayHeader 
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	color: #000000;
+	text-align: right;
+	background-color: #E4F0F8; 
+
+	border-left: 1px solid #4567A4;
+	border-top: 1px solid #4567A4;
+	
+	padding-right: 2px;
+
+	height: 3%;
+	line-height: 15px;
+}
+
+/*
+** NOTE: OtherMonthDayHeader does not inherit from DayHeader because DayHeader by definition is non-Trailing. 
+*/
+.igmv_OtherMonthDayHeader 
+{  	
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	color: #000000;
+	text-align: right;
+	background-color: #B1CBEC;
+
+	border-left: 1px solid #4567A4;
+	border-top: 1px solid #4567A4;
+	
+	padding-right: 2px;
+	padding-top: 1px;
+	
+	height: 3%;
+	line-height: 15px;
+}
+
+.igmv_TodayHeader 
+{
+	color: #FFFFFF;
+	background-color: #95C6F0;
+	background-image: url(images/TodayHeader_bg.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+.igmv_ActiveDayHeader 
+{
+	color: #FFFFFF;
+	background-color: #335EA8;
+	background-image:none;	
+}
+
+/*
+** Appointment Oriented Classes
+*/
+.igmv_Appointment 
+{ 
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	text-align: left;
+
+	margin-left: 1px;
+	margin-right: 1px;
+	margin-top: 1px;
+	padding-left: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	
+	cursor: hand;
+
+}
+
+.igmv_AllDayEvent 
+{ 
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small; 
+	text-align: left;
+	background-color: #FFFFFF;
+
+	border: 1px solid #000000;
+
+	margin-left: 1px;
+	margin-right: 1px;
+	margin-top: 1px;
+
+	cursor: hand;
+	
+	line-height: 15px;	
+}
+
+/*
+** SelectedAppointment inherits from Appointment and AllDayEvent
+*/
+.igmv_SelectedAppointment 
+{ 
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+/*
+ igmv_NavigationButton is applied to both Previous and Next buttons
+*/
+.igmv_NavigationButton {
+	background-color:Transparent;
+	cursor: hand;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	
+	position: absolute;
+	top: 3px;
+}
+
+.igmv_NavigationButtonPrev
+{
+	left: 3px;
+}
+
+.igmv_NavigationButtonNext
+{
+	right: 3px;
+}

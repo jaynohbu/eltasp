@@ -1,0 +1,56 @@
+﻿@model ELT.CDT.EmailItem
+<div class="EmailItem">
+    @Html.CheckBoxFor(m => m.IsSelected, new { @style = "text-align:left" })
+    <table>
+     <tr>
+            <td>
+                @Html.LabelFor(m => m.RecipientName)
+            </td>
+            <td>@Html.TextBoxFor(m => m.RecipientName)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.RecipientEmail)
+            </td>
+            <td>@Html.TextBoxFor(m => m.RecipientEmail)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.CC)
+            </td>
+            <td>@Html.TextBoxFor(m => m.CC)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Subject)
+            </td>
+            <td>@Html.TextBoxFor(m => m.Subject)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Attachments)
+            </td>
+            <td>
+                <div class="AttachmentList">                    
+                        @Html.EditorFor(x => x.Attachments)
+                        @{
+                            var url = Url.Content("~/FileManagement/FileAttacher?itemid=") + Model.EmailItemID + "&EmailType=" + Model.EmailType.ToString();
+                   <input type="button" value="Attach Files" style="font-size:10px; margin-top:5px; float:right; margin-left:10px;margin-right:10px;" onclick="viewPop('@url')"/>
+                            }
+                </div>
+                <div style="clear:right"></div>10px
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.TextMessage)
+            </td>
+            <td>@Html.TextAreaFor(m => m.TextMessage, new { @class = "MailMsgTypeA" })
+            </td>
+        </tr>
+    </table>
+</div>

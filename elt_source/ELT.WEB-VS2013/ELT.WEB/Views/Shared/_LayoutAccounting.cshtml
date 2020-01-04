@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <link href="~/Content/css/tab.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width" />
+     
+        <style type="text/css">
+            div#overlay {
+                display: none;
+                z-index: 2;
+                background: #000;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0px;
+                left: 0px;
+                text-align: center;
+            }
+
+            div#specialBox {
+                display: none;
+                position: absolute;
+                z-index: 3;
+                margin: 150px auto 0px auto;
+                width: 270px;
+                height: 100px;
+                top: 100px;
+                left: 40%;
+                background: #FFF;
+                color: #000;
+                padding-left: 20PX;
+                padding-right: 20PX;
+                padding-top: 30px;
+            }
+        </style>
+
+        <script type="text/javascript">
+            function overlayScroll() {
+                $("div#overlay").css("top", jQuery(window).scrollTop() + 'px');
+                $("div#specialBox").css("top", jQuery(window).scrollTop() + 'px');
+            }
+
+            function RedirectToReferer() {
+
+                document.location.href = "@ViewBag.Referer";
+            }
+            function toggleOverlay() {
+
+                var overlay = document.getElementById('overlay');
+
+                var specialBox = document.getElementById('specialBox');
+
+                specialBox.style.top = overlay.style.top;
+                overlay.style.opacity = 0.2;
+
+
+                if (overlay.style.display == "block") {
+
+                    overlay.style.display = "none";
+
+                    specialBox.style.display = "none";
+
+                } else {
+
+                    overlay.style.display = "block";
+
+                    specialBox.style.display = "block";
+
+                }
+
+            }
+
+        </script>
+
+
+    @Styles.Render("~/Scripts/jquery-ui-1.10.3/themes/base/jquery-ui.css")
+        @Scripts.Render("~/Scripts/jquery-1.7.1.js")
+         @Scripts.Render("~/Scripts/jquery-ui-1.8.20.min.js")
+        <script src="~/Scripts/OperationMaster.js" type="text/javascript"></script>
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/Scripts/Common.js")
+                @Html.DevExpress().GetStyleSheets( 
+    new StyleSheet { ExtensionSuite = ExtensionSuite.NavigationAndLayout }, 
+    new StyleSheet { ExtensionSuite = ExtensionSuite.GridView },
+        
+    // Default theme for some demos
+    new StyleSheet { ExtensionSuite = ExtensionSuite.NavigationAndLayout, Theme = "Metropolis" }
+) 
+
+@Html.DevExpress().GetScripts(
+         new Script { ExtensionSuite = ExtensionSuite.NavigationAndLayout },
+                new Script { ExtensionSuite = ExtensionSuite.Editors },
+                new Script { ExtensionSuite = ExtensionSuite.HtmlEditor },
+                new Script { ExtensionSuite = ExtensionSuite.GridView },
+                new Script { ExtensionSuite = ExtensionSuite.Chart },
+                new Script { ExtensionSuite = ExtensionSuite.Report }
+) 
+          <script type="text/javascript">
+              $(document).ready(function () {
+                  ResetUnselectedMenu();
+                  var current_uri = $("#ContentFrame").attr("src");
+                  $("#current_uri").text(current_uri);
+                  $("#current_uri").css("display", "none");
+
+
+                  if ("@ViewBag.NotAllowed" == "True") {
+                      toggleOverlay();
+
+                      $(window).scroll(function () {
+
+                          overlayScroll();
+                      })
+
+                  }
+
+
+              });
+              function ResetUnselectedMenu() {
+                  $(".leftDiv").find("li").attr("id", "");
+              }
+              $("#ContentFrame").change(function () {
+                  var current_uri = $("#ContentFrame").attr("src");
+                  $("#current_uri").text(current_uri);
+                  $("#current_uri").css("display", "none");
+              });
+ </script>
+      
+        
+    </head>
+
+<body>
+    <div id="bodyDiv" >
+        <!-- // MODULE SELECTION // -->
+        <div id="moduleSelect">
+ 
+            <div style="float: left">
+                <img src="@Url.Content("~/Images/feLogo.png")" alt="Product Logo" width="129" height="41" style="margin-top: 10px" />
+            </div>
+            <div style="margin-top: 14px; margin-left: 138px; text-align: left">
+            @Html.Action("ProductDropDownMenu", "Menu")
+            </div>
+        </div>
+        <!-- // MODULE LOGO disabled by MJ for replacing client logo 1/11/2008 // -->
+        <div id="logoHolder">
+            @Html.Action("Logo", "Home")
+        </div>
+        <!-- graphic devider -->
+        <div class="middleRight">
+        </div>
+        <div class="middleLeft" style="text-align: right">
+            <img src="@Url.Content("~/Images/mainnav_back2.gif")" alt="" /></div>
+       
+        <!-- navigation tabs -->
+       
+                @Html.Action("ProductMenu", "Menu")
+        
+      <section style=" text-align:center" class="content-wrapper main-content clear-fix">        
+                @RenderBody()
+      </section>
+    
+    </div>
+       @Html.Action("FavoriteMenu","Menu");
+</body>
+
+</html>

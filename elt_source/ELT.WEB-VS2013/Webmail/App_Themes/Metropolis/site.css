@@ -1,0 +1,40 @@
+﻿#LayoutSplitter .HeadPane,
+#PrintLayoutSplitter .HeadPane
+{
+	background: white;
+}
+#LayoutSplitter .dxsplPane_Metropolis, 
+#LayoutSplitter .dxsplPaneCollapsed_Metropolis,
+#LayoutSplitter .dxheControl_Metropolis
+{
+    border: 1px solid #c0c0c0;
+}
+
+.HeadPane .ActionToolbar .Spacer b
+{
+    background: #c0c0c0;
+}
+#LayoutSplitter .HeadPane .NavigationToolbar .NavigationMenu .dxm-item .dxm-content,
+#LayoutSplitter .HeadPane .NavigationToolbar .NavigationMenu .dxm-item .dxm-content.dxm-hovered
+{
+    color: #434343;
+}
+
+.HeadPane .ActionToolbar .SearchBox
+{
+    margin-top: 1px;
+}
+
+.ContactCard 
+{
+    border: 1px solid #c0c0c0;
+}
+.contacts .dxdvContent_Metropolis
+{
+    padding: 18px;
+}
+
+.CalendarNavArea
+{
+	background: white;
+}

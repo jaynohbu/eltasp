@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Netscape" PresetDescription="Infragistics Netscape Preset. Sets Look properties only. Note: The 'Reset' box should be checked." PresetType="Appearance" />-->
+<igtxt:WebImageButton UseBrowserDefaults="False">
+	<HoverAppearance ContentShift="NotSet" />
+	<FocusAppearance ContentShift="NotSet" />
+	<Appearance ContentShift="NotSet" />
+	<PressedAppearance>
+		<Style>
+			<BorderDetails ColorTop="120, 120, 120" ColorBottom="240, 240, 240" ColorRight="240, 240, 240" ColorLeft="120, 120, 120">
+			</BorderDetails>
+		</Style>
+	</PressedAppearance>
+	<DisabledAppearance ContentShift="NotSet" />
+	<Appearance>
+		<Style BorderWidth="2px" BorderStyle="Solid" BackColor="Control">
+			<BorderDetails ColorTop="240, 240, 240" ColorBottom="120, 120, 120" ColorRight="120, 120, 120" ColorLeft="240, 240, 240">
+			</BorderDetails>
+		</Style>
+	</Appearance>
+	<RoundedCorners RenderingType="Disabled">
+	</RoundedCorners>
+</igtxt:WebImageButton>

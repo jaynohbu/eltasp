@@ -1,0 +1,11 @@
+﻿
+	/* Pre-shipment */
+	#tabs .CurPre-shipmentDiv a {
+		background: url(/Images//navtab_cur_pslf.gif) no-repeat left top;
+	}	
+	#tabs .CurPre-shipmentDiv a span {
+		background: url(/Images//navtab_cur_psrt.gif) no-repeat right top;
+		color: #332a23;
+		/* bottom padding to hide bottom border line bottom border of tabs 5px+1px(for 1px bottom border)=6px */
+		padding-bottom:6px; 
+	}

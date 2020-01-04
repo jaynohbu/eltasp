@@ -1,0 +1,18 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxcc" Namespace="DevExpress.Web.ASPxCloudControl" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxcc:ASPxCloudControl runat="server" CssFilePath="~/App_Themes/iOS/{0}/styles.css" CssPostfix="iOS" 
+    MaxColor="White" MinColor="White" HorizontalAlign="Left" ValueColor="White" ItemBeginEndTextColor="White">
+    <RankProperties>
+        <dxcc:RankProperties Font-Size="17px" CssClass="dxccRank1"/>
+        <dxcc:RankProperties Font-Size="17px" CssClass="dxccRank2"/>
+        <dxcc:RankProperties Font-Size="17px" CssClass="dxccRank3"/>
+        <dxcc:RankProperties Font-Size="17px" CssClass="dxccRank4"/>
+        <dxcc:RankProperties Font-Size="17px" CssClass="dxccRank5"/>
+        <dxcc:RankProperties Font-Size="17px" CssClass="dxccRank6"/>
+        <dxcc:RankProperties Font-Size="17px" CssClass="dxccRank7"/>
+    </RankProperties>
+    <Paddings Padding="33px" />
+    <DisabledStyle ForeColor="White" />
+    <LinkStyle Color="White" />
+</dxcc:ASPxCloudControl>

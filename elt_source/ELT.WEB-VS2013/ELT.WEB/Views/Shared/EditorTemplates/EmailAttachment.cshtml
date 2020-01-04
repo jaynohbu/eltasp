@@ -1,0 +1,7 @@
+﻿@model ELT.CDT.EmailAttachment
+@Html.HiddenFor(m=>m.FileID)
+@Html.HiddenFor(m=>m.FileName)
+@Html.HiddenFor(m=>m.GeneratorPath)
+@Html.HiddenFor(m=>m.Owner_Email)
+<div class="Emailattachlink">@Html.CheckBoxFor(m => m.IsSelected) <a href="@Url.Content(Model.GeneratorPath)">@Model.FileName</a></div>
+

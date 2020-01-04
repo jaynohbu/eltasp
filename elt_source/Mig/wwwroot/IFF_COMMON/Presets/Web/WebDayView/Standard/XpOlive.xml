@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="XpOlive" PresetDescription="Property values that give WebDayView the look of Windows Xp with an Olive theme" PresetType="All" />-->
+<ig_sched:WebDayView  
+StyleSheetFileName="/ig_common/20053/styles/xpolive/ig_webdayview.css" />

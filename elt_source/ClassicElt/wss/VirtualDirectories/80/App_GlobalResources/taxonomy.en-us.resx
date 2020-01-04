@@ -1,0 +1,871 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="14.0.4756.1000" _dal="1" -->
+<!-- _LocalBinding -->
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="tsmt_grouppanel_descriptiondescription" xml:space="preserve">
+    <value>Type descriptive text to help users better organize and use term sets in this group.</value>
+    
+  </data>
+  <data name="fieldEditor_AllowFillinDescription" xml:space="preserve">
+    <value>Select whether users will be permitted to add values to the term set. (Only open term sets will allow 'Fill-in')</value>
+    
+  </data>
+  <data name="fieldEditor_AllowFillinTitle" xml:space="preserve">
+    <value>Allow Fill-in</value>
+    
+  </data>
+  <data name="fieldEditor_DefaultValueDescription" xml:space="preserve">
+    <value>Enter the default value for the column</value>
+    
+  </data>
+  <data name="fieldEditor_DefaultValueTitle" xml:space="preserve">
+    <value>Default Value</value>
+    
+  </data>
+  <data name="fieldEditor_AllowFillinLabel" xml:space="preserve">
+    <value>Allow 'Fill-in' choices:</value>
+    
+  </data>
+  <data name="fieldEditor_DefaultValueLabel" xml:space="preserve">
+    <value>Default value:</value>
+    
+  </data>
+  <data name="fieldEditor_MultiValueChangeConfirm" xml:space="preserve">
+    <value>This will remove all Metadata values except the first one</value>
+    
+  </data>
+  <data name="fieldEditor_MultiValueDescription" xml:space="preserve">
+    <value>Specify whether the column will allow more than one value&lt;br /&gt;&lt;b&gt;Note:&lt;/b&gt; allowing multiple values will prevent sorting in list views.</value>
+    
+  </data>
+  <data name="fieldEditor_MultiValueTitle" xml:space="preserve">
+    <value>Multiple Value field</value>
+    
+  </data>
+  <data name="fieldEditor_MultiValueLabel" xml:space="preserve">
+    <value>Allow multiple values</value>
+    
+  </data>
+  <data name="fieldEditor_ShowPathDescription" xml:space="preserve">
+    <value>The value selected from the term set can be displayed either as a single value or with the full hierarchical path.&lt;br /&gt;&lt;br /&gt;Example:&lt;br /&gt;Single value - &lt;em&gt;City&lt;/em&gt;&lt;br /&gt;Full hierarchical path - &lt;em&gt;Location, Continent, Country/Region, City&lt;/em&gt;</value>
+    
+  </data>
+  <data name="fieldEditor_ShowPathTitle" xml:space="preserve">
+    <value>Display format</value>
+    
+  </data>
+  <data name="fieldEditor_ShowPathEntirePath" xml:space="preserve">
+    <value>Display the entire path to the term in the field</value>
+    
+  </data>
+  <data name="fieldEditor_ShowPathLabel" xml:space="preserve">
+    <value>Display Value:</value>
+    
+  </data>
+  <data name="fieldEditor_ShowPathTermOnly" xml:space="preserve">
+    <value>Display term label in the field</value>
+    
+  </data>
+  <data name="fieldEditor_TermSetCreateLabel" xml:space="preserve">
+    <value>Customize your term set:</value>
+    
+  </data>
+  <data name="fieldEditor_TermSetCreateTermSetDescriptionLabel" xml:space="preserve">
+    <value>Description</value>
+    
+  </data>
+  <data name="fieldEditor_TermSetCreateTermSetDescription" xml:space="preserve">
+    <value>A custom term set will be available to other users in the site collection, however its terms will not be offered as suggestions in Enterprise Keywords columns.</value>
+    
+  </data>
+  <data name="fieldEditor_TermSetDescription" xml:space="preserve">
+    <value>Enter one or more terms, separated by semicolons, and select Find to filter the options to only include those which contain the desired values.&lt;br /&gt;&lt;br /&gt;After finding the term set that contains the list of values to display options for this column, click on a term to select the first level of the hierarchy to show in the column. All levels below the term you select will be seen when users choose a value.</value>
+    
+  </data>
+  <data name="fieldEditor_TermSetTitle" xml:space="preserve">
+    <value>Term Set Settings</value>
+    
+  </data>
+  <data name="fieldEditor_TermSetFindButtonText" xml:space="preserve">
+    <value>Find</value>
+    
+  </data>
+  <data name="fieldEditor_TermSetFindLabel" xml:space="preserve">
+    <value>Find term sets that include the following terms.</value>
+    
+  </data>
+  <data name="fieldEditor_TermSetResetButtonText" xml:space="preserve">
+    <value>Reset</value>
+    
+  </data>
+  <data name="fieldEditor_TermSetReuseLabel" xml:space="preserve">
+    <value>Use a managed term set:</value>
+    
+  </data>
+  <data name="fieldEditor_TunnelLinkText" xml:space="preserve">
+    <value>Edit Using Term Set Manager</value>
+    
+  </data>
+  <data name="MetadataHubPublishAction" xml:space="preserve">
+    <value>Manage publishing for this content type</value>
+  </data>
+  <data name="ManagectPublishing_breadcrumb" xml:space="preserve">
+    <value>Content Type Publishing</value>
+    
+  </data>
+  <data name="managectpublishing_description" xml:space="preserve">
+    <value>Content Type Publishing</value>
+    
+  </data>
+  <data name="managectpublishing_history_description" xml:space="preserve">
+    <value>The date on which one or more service applications have successfully published this content type.</value>
+    
+  </data>
+  <data name="managectpublishing_history_title" xml:space="preserve">
+    <value>Publishing History</value>
+    
+  </data>
+  <data name="managectpublishing_publishaction" xml:space="preserve">
+    <value>Publish</value>
+    
+  </data>
+  <data name="managectpublishing_publishdescription" xml:space="preserve">
+    <value>Make this content type available for download for all Web Applications (and Site Collections) consuming content types from this location.</value>
+    
+  </data>
+  <data name="managectpublishing_republishaction" xml:space="preserve">
+    <value>Republish</value>
+    
+  </data>
+  <data name="managectpublishing_republishdescription" xml:space="preserve">
+    <value>If you have made changes to this content type, the content type needs to be "republished" before the changes are available for download to Web Application consuming content types from this location.</value>
+    
+  </data>
+  <data name="managectpublishing_title" xml:space="preserve">
+    <value>Content Type Publishing</value>
+    
+  </data>
+  <data name="managectpublishing_unpublishaction" xml:space="preserve">
+    <value>Unpublish</value>
+    
+  </data>
+  <data name="managectpublishing_unpublishdescription" xml:space="preserve">
+    <value>Make this content type unavailable for download for all Web Applications (and Site Collections) consuming content types from this location. Any copies of this content type being used in other site collections will be unsealed and made into a local content type.</value>
+    
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+    
+  </data>
+  <data name="ssapp_checkbox_defaultassociation" xml:space="preserve">
+    <value>Add this service application to the farm's default list.</value>
+    
+  </data>
+  <data name="ssapp_description" xml:space="preserve">
+    <value>Specify the name, databases, application pool and content settings for this Managed Metadata Service.</value>
+    
+  </data>
+  <data name="ssapp_huburl_invalid" xml:space="preserve">
+    <value>Invalid URL or the URL contains a trailing slash.</value>
+    
+  </data>
+  <data name="ssapp_label_huburl" xml:space="preserve">
+    <value>Content Type hub</value>
+    
+  </data>
+  <data name="ssapp_label_name" xml:space="preserve">
+    <value>Name</value>
+    
+  </data>
+  <data name="ssapp_label_namerequired" xml:space="preserve">
+    <value>A name must be specified</value>
+    
+  </data>
+  <data name="ssapp_checkbox_reportsyndicationerrors" xml:space="preserve">
+    <value>Report syndication import errors from Site Collections using this service application.</value>
+    
+  </data>
+  <data name="ssapp_title_create" xml:space="preserve">
+    <value>Create New Managed Metadata Service</value>
+    
+  </data>
+  <data name="ssproxy_label_description" xml:space="preserve">
+    <value>Select the settings for this Managed Metadata Service Connection.</value>
+    
+  </data>
+  <data name="ssproxy_checkbox_keyworddefault" xml:space="preserve">
+    <value>This service application is the default storage location for Keywords.</value>
+    
+  </data>
+  <data name="ssproxy_checkbox_sitecollectiondefault" xml:space="preserve">
+    <value>This service application is the default storage location for column specific term sets.</value>
+    
+  </data>
+  <data name="ssproxy_checkbox_syndicationpushdown" xml:space="preserve">
+    <value>Push-down Content Type Publishing updates from the Content Type Gallery to sub-sites and lists using the content type.</value>
+    
+  </data>
+  <data name="ssproxy_subtitle_createoredit" xml:space="preserve">
+    <value>Managed Metadata Service Connection</value>
+    
+  </data>
+  <data name="ssproxy_title_edit" xml:space="preserve">
+    <value>Edit Managed Metadata Service Connection</value>
+    
+  </data>
+  <data name="tmt_customsortorder" xml:space="preserve">
+    <value>Custom Sort Order</value>
+    
+  </data>
+  <data name="tmt_customsortorder-tab" xml:space="preserve">
+    <value>CUSTOM SORT</value>
+    
+  </data>
+  <data name="tmt_customsortorder_descriptionforterm" xml:space="preserve">
+    <value>A custom sort can be applied to child terms below this term. Using a custom sort order will ensure that terms appear in a consistent order, regardless of the language or any changes in default labels.</value>
+    
+  </data>
+  <data name="tmt_customsortorder_descriptionfortermset" xml:space="preserve">
+    <value>A custom sort can be applied to child terms below this term set. Using a custom sort order will ensure that terms appear in a consistent order, regardless of the language or any changes in default labels.</value>
+    
+  </data>
+  <data name="tmt_customsortorder_label" xml:space="preserve">
+    <value>Label</value>
+    
+  </data>
+  <data name="tmt_customsortorder_order" xml:space="preserve">
+    <value>Sort Order</value>
+    
+  </data>
+  <data name="tmt_customsortorder_usedefault" xml:space="preserve">
+    <value>Use default sort order according to current language.</value>
+    
+  </data>
+  <data name="tmt_customsortorder_usecustom" xml:space="preserve">
+    <value>Use custom sort order.</value>
+    
+  </data>
+  <data name="tmt_rootpanel_simpleImport" xml:space="preserve">
+    <value>Sample Import</value>
+    
+  </data>
+  <data name="tmt_rootpanel_simpleImportInst" xml:space="preserve">
+    <value>The SharePoint metadata manager can import a term set from a UTF-8 CSV format file. Use the sample file as a template for creating import files. Then import the file into the desired group to create a new term set.</value>
+    
+  </data>
+  <data name="tmt_rootpanel_simpleImportLink" xml:space="preserve">
+    <value>View a sample import file</value>
+    
+  </data>
+  <data name="tmt_rootpanel_defaultlang" xml:space="preserve">
+    <value>Default Language</value>
+    
+  </data>
+  <data name="tmt_rootpanel_termstorelang" xml:space="preserve">
+    <value>Term Store Lanuage List</value>
+    
+  </data>
+  <data name="tmt_rootpanel_worklang" xml:space="preserve">
+    <value>Working Language List</value>
+    
+  </data>
+  <data name="tmt_servicenotavailable" xml:space="preserve">
+    <value>The Managed Metadata Service or Connection is currently not available. The Application Pool or Managed Metadata Web Service may not have been started.  Please Contact your Administrator.</value>
+    
+  </data>
+  <data name="tmt_serviceunauthorized" xml:space="preserve">
+    <value>The Managed Metadata Service is inaccessible because the current web application has not been granted permissions to access it. Please contact your Administrator.</value>
+    
+  </data>
+  <data name="tmt_noserviceassociation" xml:space="preserve">
+    <value>The Service Application being requested does not have a Connection associated with the Central Administration web application. To access the term management tool use Site Settings from a site configured with the appropriate Connection.</value>
+    
+  </data>
+  <data name="tsmt_grouppanel_descriptionlabel" xml:space="preserve">
+    <value>Description</value>
+    
+  </data>
+  <data name="tsmt_grouppanel_contributorsdescription" xml:space="preserve">
+    <value>Enter user names, group names, or e-mail addresses. Separate them with semicolons. These users will have full permissions to edit terms and term set hierarchies within this group.</value>
+    
+  </data>
+  <data name="tsmt_grouppanel_contributorslabel" xml:space="preserve">
+    <value>Contributors</value>
+    
+  </data>
+  <data name="tsmt_grouppanel_groupmanagersdescription" xml:space="preserve">
+    <value>Enter user names, group names, or e-mail addresses in order to grant group manager permissions. Separate multiple users with semicolons. These users will have contributor permissions and will also able to add users to the contributor role.</value>
+    
+  </data>
+  <data name="tsmt_grouppanel_groupmanagerslabel" xml:space="preserve">
+    <value>Group Managers</value>
+    
+  </data>
+  <data name="tsmt_grouppanel_groupnamedescription" xml:space="preserve">
+    <value>Type a name for this group as you want it to appear in the hierarchy.</value>
+    
+  </data>
+  <data name="tsmt_grouppanel_groupnamelabel" xml:space="preserve">
+    <value>Group Name</value>
+    
+  </data>
+  <data name="tsmt_termortermsetecb_reusetermtext" xml:space="preserve">
+    <value>Reuse Terms</value>
+    
+  </data>
+  <data name="tsmt_termpanel_alsomemberoflabel" xml:space="preserve">
+    <value>Member Of</value>
+    
+  </data>
+  <data name="tsmt_termpanel_availablefortaggingdescription" xml:space="preserve">
+    <value>Select whether this term is available to be used by end users for tagging. When unselected this term will be visible but not enabled in tagging tools.</value>
+    
+  </data>
+  <data name="tsmt_termpanel_availablefortagginglabel" xml:space="preserve">
+    <value>Available for Tagging</value>
+    
+  </data>
+  <data name="tsmt_termpanel_defaultlabeldescription" xml:space="preserve">
+    <value>Enter one label as the default for this language.</value>
+    
+  </data>
+  <data name="tsmt_termpanel_defaultlabellabel" xml:space="preserve">
+    <value>Default Label</value>
+    
+  </data>
+  <data name="tsmt_termpanel_descriptiondescription" xml:space="preserve">
+    <value>Descriptions will help users know when to use this term, and to disambiguate amongst similar terms.</value>
+    
+  </data>
+  <data name="tsmt_termpanel_descriptionlabel" xml:space="preserve">
+    <value>Description</value>
+    
+  </data>
+  <data name="tsmt_termpanel_languagedescription" xml:space="preserve">
+    <value>Select a language of the labels for the term you would like to edit.</value>
+    
+  </data>
+  <data name="tsmt_termpanel_languagelabel" xml:space="preserve">
+    <value>Language</value>
+    
+  </data>
+  <data name="tsmt_termpanel_otherlabelsdescription" xml:space="preserve">
+    <value>Enter synonyms and abbreviations for this term. (You can enter a word or phrase per line.)</value>
+    
+  </data>
+  <data name="tsmt_termpanel_otherlabelslabel" xml:space="preserve">
+    <value>Other Labels</value>
+    
+  </data>
+  <data name="tsmt_termsetpanel_availablefortaggingdescription" xml:space="preserve">
+    <value>Select whether this term set is available to be used by end users for tagging. When the checkbox is unselected, this term set will not be visible to most users.</value>
+    
+  </data>
+  <data name="tsmt_termsetpanel_availablefortagginglabel" xml:space="preserve">
+    <value>Available for Tagging</value>
+    
+  </data>
+  <data name="tsmt_termsetpanel_contact" xml:space="preserve">
+    <value>Contact</value>
+    
+  </data>
+  <data name="tsmt_termsetpanel_contactdescription" xml:space="preserve">
+    <value>Type an e-mail address for term suggestion and feedback. If this field is left blank, the suggestion feature will be disabled.</value>
+    
+  </data>
+  <data name="tsmt_termsetpanel_descriptionlabel" xml:space="preserve">
+    <value>Description</value>
+    
+  </data>
+  <data name="tsmt_termsetpanel_descriptiondescription" xml:space="preserve">
+    <value>Type descriptive text to help users understand the intended use of this term set.</value>
+    
+  </data>
+  <data name="tsmt_termsetpanel_keywordslabel" xml:space="preserve">
+    <value>Keywords</value>
+    
+  </data>
+  <data name="tsmt_termsetpanel_ownerdescription" xml:space="preserve">
+    <value>Identify the primary user or group of this term set.</value>
+    
+  </data>
+  <data name="tsmt_termsetpanel_ownerlabel" xml:space="preserve">
+    <value>Owner</value>
+    
+  </data>
+  <data name="tsmt_termsetpanel_stakeholdersdescription" xml:space="preserve">
+    <value>This information is used to track people and groups in the organization that should be notified before major changes are made to the term set. You can enter multiple users or groups.</value>
+    
+  </data>
+  <data name="tsmt_termsetpanel_stakeholderslabel" xml:space="preserve">
+    <value>Stakeholders</value>
+    
+  </data>
+  <data name="tsmt_termsetpanel_submissionpolicydescription" xml:space="preserve">
+    <value>When a term set is closed, only metadata managers can add terms to this term set. When it is open, users can add terms from a tagging application.</value>
+    
+  </data>
+  <data name="tsmt_termsetpanel_submissionpolicylabel" xml:space="preserve">
+    <value>Submission Policy</value>
+    
+  </data>
+  <data name="tsmt_termsetpanel_termsetnamedescription" xml:space="preserve">
+    <value>Type a new name for this term set as you want it to appear in the hierarchy.</value>
+    
+  </data>
+  <data name="tsmt_termsetpanel_termsetnamelabel" xml:space="preserve">
+    <value>Term Set Name</value>
+    
+  </data>
+  <data name="tsmt_treepicker_treetitle" xml:space="preserve">
+    <value>TAXONOMY TERM STORE</value>
+    
+  </data>
+  <data name="wt_add_label" xml:space="preserve">
+    <value>Select &gt;&gt;</value>
+    
+  </data>
+  <data name="wt_add_tooltip" xml:space="preserve">
+    <value>Add the highlighted item to this field</value>
+    
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+    
+  </data>
+  <data name="tsmt_error_invalidchars" xml:space="preserve">
+    <value>Name cannot contain any of the following characters: " ; &lt; &gt; | and Tab.</value>
+    
+  </data>
+  <data name="tsmt_error_invaliddescription" xml:space="preserve">
+    <value>Description cannot contain Tab character.</value>
+    
+  </data>
+  <data name="tsmt_error_invaliddescriptionlength" xml:space="preserve">
+    <value>Description cannot exceed 1000 characters.</value>
+    
+  </data>
+  <data name="tsmt_error_invalidnamelength" xml:space="preserve">
+    <value>Name cannot exceed 255 characters.</value>
+    
+  </data>
+  <data name="tsmt_error_nameblank" xml:space="preserve">
+    <value>Name cannot be blank</value>
+    
+  </data>
+  <data name="tsmt_termmemberlist_owner" xml:space="preserve">
+    <value>Owner</value>
+    
+  </data>
+  <data name="tsmt_termmemberlist_parentterm" xml:space="preserve">
+    <value>Parent Term</value>
+    
+  </data>
+  <data name="tsmt_termmemberlist_sourceterm" xml:space="preserve">
+    <value>Source Term</value>
+    
+  </data>
+  <data name="tsmt_termmemberlist_termsetcolumn" xml:space="preserve">
+    <value>Term Set Name</value>
+    
+  </data>
+  <data name="tsmt_termmemberlist_termsetdescription" xml:space="preserve">
+    <value>Term Set Description</value>
+    
+  </data>
+  <data name="tsmt_termsetpanel_policyclosed" xml:space="preserve">
+    <value>Closed</value>
+    
+  </data>
+  <data name="tsmt_termsetpanel_policyopen" xml:space="preserve">
+    <value>Open</value>
+    
+  </data>
+  <data name="tsmt_termslist_descriptioncolumn" xml:space="preserve">
+    <value>Description</value>
+    
+  </data>
+  <data name="tsmt_termslist_languagecolumn" xml:space="preserve">
+    <value>Language</value>
+    
+  </data>
+  <data name="tsmt_termslist_synonymcolumn" xml:space="preserve">
+    <value>Synonyms</value>
+    
+  </data>
+  <data name="tsmt_termslist_termcolumn" xml:space="preserve">
+    <value>Term</value>
+    
+  </data>
+  <data name="tsmt_groupecb_deletegroup" xml:space="preserve">
+    <value>Delete Group</value>
+    
+  </data>
+  <data name="tsmt_groupecb_import" xml:space="preserve">
+    <value>Import Term Set</value>
+    
+  </data>
+  <data name="tsmt_groupecb_newtermset" xml:space="preserve">
+    <value>New Term Set</value>
+    
+  </data>
+  <data name="tsmt_keywordecb_delete" xml:space="preserve">
+    <value>Delete Keyword</value>
+    
+  </data>
+  <data name="tsmt_keywordecb_move" xml:space="preserve">
+    <value>Move Keyword</value>
+    
+  </data>
+  <data name="tsmt_rootecb_newgroup" xml:space="preserve">
+    <value>New Group</value>
+    
+  </data>
+  <data name="tsmt_termecb_copy" xml:space="preserve">
+    <value>Copy Term</value>
+    
+  </data>
+  <data name="tsmt_termecb_copywchildren" xml:space="preserve">
+    <value>Copy Term with Children</value>
+    
+  </data>
+  <data name="tsmt_termecb_delete" xml:space="preserve">
+    <value>Delete Term</value>
+    
+  </data>
+  <data name="tsmt_termecb_deprecate" xml:space="preserve">
+    <value>Deprecate Term</value>
+    
+  </data>
+  <data name="tsmt_termecb_enable" xml:space="preserve">
+    <value>Enable Term</value>
+    
+  </data>
+  <data name="tsmt_termecb_merge" xml:space="preserve">
+    <value>Merge Terms</value>
+    
+  </data>
+  <data name="tsmt_termecb_move" xml:space="preserve">
+    <value>Move Term</value>
+    
+  </data>
+  <data name="tsmt_termsetecb_copy" xml:space="preserve">
+    <value>Copy Term Set</value>
+    
+  </data>
+  <data name="tsmt_termsetecb_delete" xml:space="preserve">
+    <value>Delete Term Set</value>
+    
+  </data>
+  <data name="tsmt_termsetecb_export" xml:space="preserve">
+    <value>Export</value>
+    
+  </data>
+  <data name="tsmt_termsetecb_move" xml:space="preserve">
+    <value>Move Term Set</value>
+    
+  </data>
+  <data name="tsmt_termsetecb_newkeyword" xml:space="preserve">
+    <value>New Keyword</value>
+    
+  </data>
+  <data name="tsmt_termsetecb_newterm" xml:space="preserve">
+    <value>Create Term</value>
+    
+  </data>
+  <data name="tsmt_title" xml:space="preserve">
+    <value>Term Store Management Tool</value>
+    
+  </data>
+  <data name="tmt_treepanel_displaylang" xml:space="preserve">
+    <value>Current display language</value>
+    
+  </data>
+  <data name="tsmt_searchlabel" xml:space="preserve">
+    <value>SEARCH</value>
+  </data>
+  <data name="taxonomyDisplayName" xml:space="preserve">
+    <value>Managed Metadata</value>
+    
+  </data>
+  <data name="taxonomyDescription" xml:space="preserve">
+    <value>Managed Metadata Short Description</value>
+    
+  </data>
+  <data name="import_incomplete" xml:space="preserve">
+    <value>Not all terms were imported successfully. Please see the server log for more information.</value>
+    
+  </data>
+  <data name="import_fileSelectionError" xml:space="preserve">
+    <value>Please make sure you have selected a valid csv file.</value>
+    
+  </data>
+  <data name="tsmt_propertypanel_cancel" xml:space="preserve">
+    <value>Cancel</value>
+    
+  </data>
+  <data name="tsmt_propertypanel_save" xml:space="preserve">
+    <value>Save</value>
+    
+  </data>
+  <data name="tsmt_propertypanel_title" xml:space="preserve">
+    <value>PROPERTIES</value>
+    
+  </data>
+  <data name="tsmt_rootpanel_admindescription" xml:space="preserve">
+    <value>You can enter user names, group names, or e-mail addresses. Separate them with semicolons.  These users will be permitted to create new term set groups and assign users to the group manager role.</value>
+    
+  </data>
+  <data name="tsmt_rootpanel_adminlabel" xml:space="preserve">
+    <value>Term Store Administrators</value>
+    
+  </data>
+  <data name="tsmt_rootpanel_defaultlangdescription" xml:space="preserve">
+    <value>Select the default language for all Metadata in the system. All terms must have a label defined in their default language.</value>
+    
+  </data>
+  <data name="tsmt_rootpanel_defaultlanglabel" xml:space="preserve">
+    <value>Default Language</value>
+    
+  </data>
+  <data name="tsmt_rootpanel_worklangdescription" xml:space="preserve">
+    <value>Select the "translation of" languages for terms in the term store. This will allow a term to have language specific labels and translations.</value>
+    
+  </data>
+  <data name="tsmt_rootpanel_worklanglabel" xml:space="preserve">
+    <value>Working Languages</value>
+    
+  </data>
+  <data name="wt_dialog_selectterm" xml:space="preserve">
+    <value>Double-click to select an item.</value>
+    
+  </data>
+  <data name="wt_addnewitem" xml:space="preserve">
+    <value>Add New Item</value>
+    
+  </data>
+  <data name="wt_addterm_description" xml:space="preserve">
+    <value>New items are added under the currently selected item.</value>
+    
+  </data>
+  <data name="wt_feedback_description" xml:space="preserve">
+    <value>Make a request or send feedback to the Term Set manager.</value>
+    
+  </data>
+  <data name="wt_feedback" xml:space="preserve">
+    <value>Send Feedback</value>
+    
+  </data>
+  <data name="fieldEditor_TermSetFindTextBox" xml:space="preserve">
+    <value>Find term sets that include the following terms</value>
+    
+  </data>
+  <data name="tmt_rootpanel_sa_selector_desc" xml:space="preserve">
+    <value>A site may consume multiple metadata applications. Select the one to see in the tree view.</value>
+    
+  </data>
+  <data name="tmt_rootpanel_sa_selector_name" xml:space="preserve">
+    <value>Available Service Applications</value>
+    
+  </data>
+  <data name="wt_addnewitem_tooltip" xml:space="preserve">
+    <value>Add a new item under the highlighted item.</value>
+    
+  </data>
+  <data name="syndicationhub_logDescription" xml:space="preserve">
+    <value>Content type publishing error log contains errors that happened during content type syndication for this site.</value>
+    
+  </data>
+  <data name="syndicationhub_logTitle" xml:space="preserve">
+    <value>Content type publishing error log</value>
+    
+  </data>
+  <data name="syndicationhub_pagetitle" xml:space="preserve">
+    <value>Content Type Publishing Hubs</value>
+    
+  </data>
+  <data name="syndicationhub_hubsTitle" xml:space="preserve">
+    <value>Hubs</value>
+    
+  </data>
+  <data name="syndicationhub_hubsDescription" xml:space="preserve">
+    <value>These service applications are publishing content types to this site collection.  In order to edit content types that have been published from these locations or to create and publish a new content type, select the hub URL.  To view the subscribed content type on this site collection, select the content type.</value>
+    
+  </data>
+  <data name="syndicationhub_refreshCheckboxLabel" xml:space="preserve">
+    <value>Refresh all published content types on next update</value>
+    
+  </data>
+  <data name="syndicationhub_refreshDescription" xml:space="preserve">
+    <value>The next time the content type subscriber timer job runs, update all published content types.</value>
+    
+  </data>
+  <data name="syndicationhub_refreshTitle" xml:space="preserve">
+    <value>Refresh All Published Content Types</value>
+    
+  </data>
+  <data name="ssapp_label_hubsectiondescription" xml:space="preserve">
+    <value>Enter the URL of the site collection (Content Type hub) from which this service application will consume content types.</value>
+    
+  </data>
+  <data name="ssproxy_literal_warnmultipledefaults" xml:space="preserve">
+    <value>Warning: Another service application on this farm is already configured as the default.  This feature will be disabled if multiple defaults are associated with a single web application.</value>
+    
+  </data>
+  <data name="metadatacolsettings_title">
+    <value>Enterprise Metadata and Keywords Settings</value>
+  </data>
+  <data name="metadatacolsettings_keywords_title">
+    <value>Add Enterprise Keywords</value>
+  </data>
+  <data name="metadatacolsettings_keywords_desc">
+    <value>An enterprise keywords column allows users to enter one or more text values that will be shared with other users and applications to allow for ease of search and filtering, as well as metadata consistency and reuse.&lt;br/&gt;&lt;br/&gt;Adding an Enterprise Keywords column also provides synchronization between existing legacy keyword fields and the managed metadata infrastructure. (Document tags will be copied into the Enterprise Keywords on upload.)</value>
+  </data>
+  <data name="metadatacolsettings_keywords_cbdesc">
+    <value>Add an Enterprise Keywords column to this list and enable Keyword synchronization</value>
+  </data>
+  <data name="metadatacolsettings_keywords_cblabel">
+    <value>Enterprise Keywords</value>
+  </data>
+  <data name="metadatacolsettings_promote_title">
+    <value>Metadata Publishing</value>
+  </data>
+  <data name="metadatacolsettings_promote_desc">
+    <value>Values added to Managed Metadata and Enterprise Keywords columns can be shared as social tags on My Sites to appear in newsfeeds, profile pages, tag clouds, and tag profile pages.</value>
+  </data>
+  <data name="metadatacolsettings_promote_cbdesc">
+    <value>Add values in Managed Metadata and Enterprise Keywords fields to My Site profiles as social tags.</value>
+  </data>
+  <data name="metadatacolsettings_promote_cblabel">
+    <value>Save metadata on this list as social tags</value>
+  </data>
+  <data name="metadatacolsettings_breadcrumb" xml:space="preserve">
+    <value>Enterprise Metadata Column Settings</value>
+    
+  </data>
+  <data name="metadatacolsettings_kewords_cbdesc2" xml:space="preserve">
+    <value>Apply Enterprise Keywords to all content types on this list.</value>
+    
+  </data>
+  <data name="metadatacolsettings_kewords_desc2" xml:space="preserve">
+    <value>One or more content types on this list do not have the Enterprise Keywords column. Check the box in order to apply the Enterprise Keywords column to all content types on this list.</value>
+    
+  </data>
+</root>

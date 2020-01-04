@@ -1,0 +1,47 @@
+﻿<link href="@Url.Content("~/Content/css/tab_preshipment.css")" rel="stylesheet" type="text/css" />
+<div id="Pre-shipmentDiv" style="overflow: hidden; height: 28px; position: relative;
+    left: 0px; width: 100%">
+    <div id="divMore" style="cursor: pointer; height: 28px; position: absolute; z-index: 1;
+        width: 20px">
+    <ul id="Pre-shipmentUL" style="position: absolute; margin-left: -57px; left: 0px;
+        width: 4000px">
+        <li id="PickupOrder"><a class="noLeft" 
+            href="@Url.Content("~/PreShipment/PickupOrder")" >
+            <span>Pickup Order </span></a>
+        </li>
+        <li id="WarehouseReceipt"><a class="noLeft" 
+            href="@Url.Content("~/PreShipment/WarehouseReceipt")" >
+            <span>Warehouse Receipt </span></a>
+        </li>
+        <li id="ShipOut"><a class="noLeft" 
+            href="@Url.Content("~/PreShipment/ShipOut")" >
+            <span>Ship Out </span></a></li>
+        <li id="OnHandReport"><a class="noLeft" 
+            href="@Url.Content("~/PreShipment/OnHandReport")" >
+            <span>On-Hand Report </span></a></li>
+        <li id="InOutReport"><a class="noLeft" 
+            href="@Url.Content("~/PreShipment/InOutReport")" >
+            <span>In &amp; Out Report </span></a></li>
+    </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //reset menu
+        var submenues = $("#Pre-shipmentUL>li");
+        submenues.each(function (index) {
+            $(this).removeClass("selected");
+
+        });
+
+        //detect the name of view
+        var currUrl = $(location).attr('href');
+        var parts = currUrl.split("/");
+        var currView = parts[4];
+
+        if (currView != "")
+            $("#" + currView + ">a").addClass("selected");
+
+        // $(".CurAirExportDiv").attr("id", "CurAirExportDiv");
+    });
+</script>

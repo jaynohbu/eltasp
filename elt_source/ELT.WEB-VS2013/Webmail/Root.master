@@ -1,0 +1,19 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Root.master.cs" Inherits="Root" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Webmail Client</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
+    <link type="text/css" rel="Stylesheet" href="Content/styles.css" />
+    <script type="text/javascript" src="Scripts/jquery-1.4.4.js"></script>
+</head>
+<body class="<%= Utils.CurrentPageName %>">
+    <script type="text/javascript" src="Scripts/Demo.js"></script>
+    <form id="form1" runat="server">
+        <asp:ContentPlaceHolder ID="RootHolder" runat="server" />
+        <dx:ASPxLoadingPanel ID="LoadingPanel" runat="server" ClientInstanceName="ClientLoadingPanel" Modal="true" />
+        <dx:ASPxHiddenField ID="HiddenField" runat="server" ClientInstanceName="ClientHiddenField" />
+    </form>
+</body>
+</html>

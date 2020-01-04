@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Root.master" AutoEventWireup="true" CodeFile="Print.master.cs" Inherits="Print" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="RootHolder" Runat="Server">
+    <dx:ASPxSplitter ID="PrintLayoutSplitter" runat="server" FullscreenMode="True" Width="100%" Height="100%" Orientation="Vertical" SeparatorVisible="false">
+        <Panes>
+            <dx:SplitterPane Size="30" Name="ToolbarPane" MinSize="20">
+                <ContentCollection>
+                    <dx:SplitterContentControl runat="server">
+                        <asp:ContentPlaceHolder ID="ToolbarHolder" runat="server" />
+                    </dx:SplitterContentControl>
+                </ContentCollection>
+                <PaneStyle CssClass="HeadPane">
+                    <BorderBottom BorderWidth="1" />
+                </PaneStyle>
+            </dx:SplitterPane>
+            <dx:SplitterPane ScrollBars="Auto">
+                <ContentCollection>
+                    <dx:SplitterContentControl runat="server">
+                        <asp:ContentPlaceHolder ID="ReportHolder" runat="server" />
+                    </dx:SplitterContentControl>
+                </ContentCollection>
+            </dx:SplitterPane>
+        </Panes>
+        <Styles>
+            <Pane HorizontalAlign="Center">
+                <Paddings Padding="0" />
+                <Border BorderWidth="0" /> 
+            </Pane>
+        </Styles>
+        <ClientSideEvents Init="MailDemo.ClientPrintLayoutSplitter_Init" />
+    </dx:ASPxSplitter>
+</asp:Content>

@@ -1,0 +1,33 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxGridView" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxGridView runat="server" CssFilePath="~/App_Themes/Moderno/{0}/styles.css" CssPostfix="Moderno">
+    <SettingsPager CurrentPageNumberFormat="{0}">
+    </SettingsPager>
+
+    <Settings GridLines="Vertical"></Settings>
+
+    <SettingsPopup>
+        <HeaderFilter MinWidth="280px" MinHeight="150px"></HeaderFilter>
+    </SettingsPopup>
+
+    <Images SpriteCssFilePath="~/App_Themes/Moderno/{0}/sprite.css">
+        <LoadingPanelOnStatusBar Url="GridView/gvLoadingOnStatusBar.gif"></LoadingPanelOnStatusBar>
+        <LoadingPanel Url="GridView/Loading.gif"></LoadingPanel>
+    </Images>
+
+    <ImagesFilterControl>
+        <LoadingPanel Url="Editors/Loading.gif"></LoadingPanel>
+    </ImagesFilterControl>
+
+    <Styles CssPostfix="Moderno" CssFilePath="~/App_Themes/Moderno/{0}/styles.css">
+        <LoadingPanel ImageSpacing="8px"></LoadingPanel>
+    </Styles>
+
+    <StylesEditors>
+        <CalendarHeader Spacing="1px"></CalendarHeader>
+        <CalendarFooter Spacing="16px"></CalendarFooter>
+        <ProgressBar Height="36px"></ProgressBar>
+    </StylesEditors>
+</dx:ASPxGridView>
+

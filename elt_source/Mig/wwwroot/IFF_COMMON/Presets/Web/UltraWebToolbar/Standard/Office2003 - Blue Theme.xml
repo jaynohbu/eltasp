@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Office 2003 - Blue Theme" PresetDescription="Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<igtbar:UltraWebToolbar BorderStyle="None" ImageDirectory="/ig_common/images/" MovableImage="ig_tb_move03.gif" BackColor="White" BackgroundImage="blueexplorer.gif" Font-Size="8pt" Font-Names="Arial" Font-Bold="False" ItemWidthDefault="80px" Movable="True" ItemSpacing="0" Height="22px" ItemPadding="0" ForeColor="Black">
+  <HoverStyle Cursor="Default" BorderWidth="1px" BorderColor="Navy" BorderStyle="Solid" BackgroundImage="None" BackColor="Bisque" Font-Size="8pt" Font-Names="Arial" Font-Bold="False" ForeColor="Black" />
+  <SelectedStyle Cursor="Default" BorderWidth="1px" BorderColor="Navy" BorderStyle="Solid" BackgroundImage="OrangeExplorer.gif" BackColor="Orange" Font-Size="8pt" Font-Names="Arial" Font-Bold="False" ForeColor="Black" />
+  <DefaultStyle BorderWidth="0px" BorderColor="Menu" BorderStyle="Solid" BackgroundImage="blueexplorer.gif" Font-Size="8pt" Font-Names="Arial" Font-Bold="False" ForeColor="Black" />
+</igtbar:UltraWebToolbar>

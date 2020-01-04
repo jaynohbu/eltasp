@@ -1,0 +1,74 @@
+// FreightEasyNet.odl : type library source for ActiveX Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (FreightEasyNet.tlb) that will become a resource in
+// FreightEasyNet.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(C3A6B5DE-D6ED-4AD5-B331-9A9D3056CFC3), version(1.0),
+  helpfile("FreightEasyNet.hlp"),
+  helpstring("FreightEasyNet ActiveX Control module"),
+  control ]
+library FREIGHTEASYNETLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CFreightEasyNetCtrl
+
+	[ uuid(E69A8679-82EF-4A8A-9932-ACDD2E3C7A79),
+	  helpstring("Dispatch interface for FreightEasyNet Control"), hidden ]
+	dispinterface _DFreightEasyNet
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CFreightEasyNetCtrl)
+			[id(1)] BSTR MacAddress;
+			[id(2)] BSTR IPAddress;
+			[id(3)] BSTR HostName;
+			[id(4)] BSTR DomainName;
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CFreightEasyNetCtrl)
+			[id(8)] short PrintForm(BSTR FormName, BSTR Port, BSTR OS);
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CFreightEasyNetCtrl
+
+	[ uuid(0FF0D076-75B2-4601-AB4D-6A7E436DF50C),
+	  helpstring("Event interface for FreightEasyNet Control") ]
+	dispinterface _DFreightEasyNetEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CFreightEasyNetCtrl)
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CFreightEasyNetCtrl
+
+	[ uuid(34FD3126-734C-4F94-B006-8E1B23E149C8),
+	  helpstring("FreightEasyNet Control"), control ]
+	coclass FreightEasyNet
+	{
+		[default] dispinterface _DFreightEasyNet;
+		[default, source] dispinterface _DFreightEasyNetEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

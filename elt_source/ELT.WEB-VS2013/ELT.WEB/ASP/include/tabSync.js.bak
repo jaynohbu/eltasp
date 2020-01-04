@@ -1,0 +1,200 @@
+// JavaScript Document
+
+//tmpURL = document.location.toString();
+
+
+ var tmpURL = PerformGetWorkName(document.location.toString());
+
+ var strTop;
+                switch (tmpURL)		
+                {		
+                    case "site_admin/edit_user.asp" :	strTop = "site_admin";	break;								
+                    case "site_admin/co_config.asp" :	strTop = "site_admin";	break;								
+                    case "board/list.aspx" :	strTop = "site_admin";	break;								
+                    case "misc/favoritemanagement.aspx" :	strTop = "site_admin";	break;								
+                    case "companyconfig/companyconfigcreate.aspx" :	strTop = "master_data";	break;								
+                    case "rate/ratemanagement.aspx" :	strTop = "master_data";	break;								
+                    case "master_data/edit_port.asp" :	strTop = "master_data";	break;								
+                    case "master_data/edit_freight.asp" :	strTop = "master_data";	break;								
+                    case "master_data/edit_sche_b.asp" :	strTop = "master_data";	break;								
+                    case "master_data/create_flight.asp" :	 strTop = "master_data";	break;								
+                    case "master_data/booking_number.asp" :	 strTop = "master_data";	break;								
+                    case "master_data/client_profile.asp" :	 strTop = "master_data";	break;								
+                    case "master_data/client_profile_list.asp" :	 strTop = "master_data";	break;	
+					case "air_export/pickup_order.asp" :	strTop = "air_export";	break;	
+                    case "air_export/ship_request.asp" :	strTop = "air_export";	break;								
+                    case "air_export/booking.asp" :	strTop = "air_export";	break;								
+                    case "air_export/new_edit_hawb.asp" :	strTop = "air_export";	break;								
+                    case "air_export/new_edit_mawb.asp" :	strTop = "air_export";	break;								
+                    case "air_export/sed.asp" :	strTop = "air_export";	break;								
+                    case "air_export/pre_alert.asp" :	strTop = "air_export";	break;								
+                    case "air_export/shipping_notice.asp" :	strTop = "air_export";	break;								
+                    case "air_export/print_label.asp" :	strTop = "air_export";	break;								
+                    case "air_export/ae_search.asp" :	strTop = "air_export";	break;								
+                    case "air_export/certificate_of_origin.asp" :	strTop = "air_export";	break;								
+                    case "ocean_export/pickup_order.asp" :	strTop = "ocean_export";	break;	
+					case "ocean_export/certificate_of_origin.asp" :	strTop = "ocean_export";	break;
+					case "ocean_export/shipp_request.asp" :	strTop = "ocean_export";	break;
+                    case "ocean_export/booking.asp" :	strTop = "ocean_export";	break;								
+                    case "ocean_export/new_edit_hbol.asp" :	strTop = "ocean_export";	break;								
+                    case "ocean_export/hbol2.asp" :	strTop = "ocean_export";	break;								
+                    case "ocean_export/new_edit_mbol.asp" :	strTop = "ocean_export";	break;								
+                    case "ocean_export/sed.asp" :	strTop = "ocean_export";	break;								
+                    case "ocean_export/pre_alert.asp" :	strTop = "ocean_export";	break;								
+                    case "ocean_export/shipping_notice.asp" :	strTop = "ocean_export";	break;								
+                    case "ocean_export/print_label.asp" :	strTop = "ocean_export";	break;								
+                    case "ocean_export/oe_search.asp" :	strTop = "ocean_export";	break;								
+                    case "air_import/air_import1.asp" :	strTop = "air_import";	break;								
+                    case "air_import/air_import2.asp" :	strTop = "air_import";	break;								
+                    case "air_import/proof_delivery.asp" :	strTop = "air_import";	break;								
+                    case "air_import/ai_search.asp" :	strTop = "air_import";	break;								
+                    case "air_import/earrival_notice.asp" :	strTop = "air_import";	break;
+					case "air_import/arrival_notice.asp" :	strTop = "air_import";	break;
+					case "air_import/delivery_order.asp" :	strTop = "air_import";	break;
+                    case "ocean_import/ocean_import1.asp" :	strTop = "ocean_import";	break;								
+                    case "ocean_import/ocean_import2.asp" :	strTop = "ocean_import";	break;
+					case "ocean_import/arrival_notice.asp" :	strTop = "ocean_import";	break;
+                    case "ocean_import/delivery_order.asp" :	strTop = "ocean_import";	break;
+					case "ocean_import/proof_delivery.asp" :	strTop = "ocean_import";	break;
+                    case "ocean_import/oi_search.asp" :	strTop = "ocean_import";	break;								
+                    case "ocean_import/earrival_notice.asp" :	strTop = "ocean_import";	break;								
+                    case "acct_tasks/create_invoi.asp" :	strTop = "acct_tasks";	break;								
+                    case "acct_tasks/edit_invoice.asp" :	strTop = "acct_tasks";	break;								
+                    case "accounting/searchinvoiceselection.aspx" :	strTop = "acct_tasks";	break;								
+                    case "accounting/searchinvoicedetail.aspx" :	strTop = "acct_tasks";	break;								
+                    case "accounting/searchinvoicedetail2.aspx" :	strTop = "acct_tasks";	break;								
+                    case "acct_tasks/receiv_pay.asp" :	strTop = "acct_tasks";	break;								
+                    case "acct_tasks/enter_bill.asp" :	strTop = "acct_tasks";	break;								
+                    case "acct_tasks/pay_bills.asp" :	strTop = "acct_tasks";	break;								
+                    case "acct_tasks/write_chk.asp" :	strTop = "acct_tasks";	break;								
+                    case "acct_tasks/print_chk.asp" :	strTop = "acct_tasks";	break;								
+                    case "acct_tasks/manage_chk.asp" :	strTop = "acct_tasks";	break;								
+                    case "acct_tasks/chart_acct.asp" :	strTop = "acct_tasks";	break;								
+                    case "acct_tasks/edit_co_items.asp" :	strTop = "acct_tasks";	break;								
+                    case "acct_tasks/edit_ch_items.asp" :	strTop = "acct_tasks";	break;								
+                    case "acct_tasks/gj_entry.asp" :	strTop = "acct_tasks";	break;								
+                    case "acct_tasks/fiscalclose.asp" :	strTop = "acct_tasks";	break;								
+                    case "accounting/aragingselection.aspx" :	strTop = "acct_reports";	break;								
+                    case "accounting/aragingdetail.aspx" :	strTop = "acct_reports";	break;								
+                    case "accounting/aragingdetail2.aspx" :	strTop = "acct_reports";	break;								
+                    case "acct_reports/ar_aging_det.asp" :	strTop = "acct_reports";	break;								
+                    case "acct_reports/ar_summ.asp" :	strTop = "acct_reports";	break;								
+                    case "acct_reports/ar_detail.asp" :	strTop = "acct_reports";	break;								
+                    case "acct_reports/expenses.asp" :	strTop = "acct_reports";	break;								
+					case "accounting/glselection.aspx" :	strTop = "acct_reports";	break;								
+					case "accounting/gldetail.aspx" :	strTop = "acct_reports";	break;								
+					case "accounting/gldetail2.aspx" :	strTop = "acct_reports";	break;								
+                    case "accounting/apagingselection.aspx" :	strTop = "acct_reports";	break;								
+                    case "accounting/apagingdetailunpost.aspx" :	strTop = "acct_reports";	break;								
+                    case "accounting/apagingdetailunpost2.aspx" :	strTop = "acct_reports";	break;								
+                    case "accounting/apagingdetail.aspx" :	strTop = "acct_reports";	break;								
+                    case "accounting/apagingdetail2.aspx" :	strTop = "acct_reports";	break;								
+                    case "pnl/pnlindex.aspx" :	strTop = "acct_reports";	break;								
+                    case "airexportbooking/airexportbookingreportselection.aspx" :	strTop = "reports";	break;								
+                    case "airexportbooking/airexportbookingreportdetail.aspx" :	strTop = "reports";	break;								
+                    case "airexportbooking/airexportbookingreportdetail2.aspx" :	strTop = "reports";	break;								
+					case "airexporthawb/airexportoperationselectionhawb.aspx" :	strTop = "reports";	break;								
+                    case "airexporthawb/airexportoperationdetailhawb.aspx" :	strTop = "reports";	break;								
+                    case "airexporthawb/airexportoperationdetailhawb2.aspx" :	strTop = "reports";	break;								
+                    case "airexportmawb/airexportoperationselectionmawb.aspx" :	strTop = "reports";	break;								
+                    case "airexportmawb/airexportoperationdetailmawb.aspx" :	strTop = "reports";	break;								
+                    case "airexportmawb/airexportoperationdetailmawb2.aspx" :	strTop = "reports";	break;								
+                    case "oceanexportbooking/oceanexportbookingreportselection.aspx" :	strTop = "reports";	break;								
+                    case "oceanexportbooking/oceanexportbookingreportdetail.aspx" :	strTop = "reports";	break;								
+                    case "oceanexportbooking/oceanexportbookingreportdetail2.aspx" :	strTop = "reports";	break;								
+					case "oceanexporthbol/oceanexportoperationselectionhbol.aspx" :	strTop = "reports";	break;								
+                    case "oceanexporthbol/oceanexportoperationdetailhbol.aspx" :	strTop = "reports";	break;								
+                    case "oceanexporthbol/oceanexportoperationdetailhbol2.aspx" :	strTop = "reports";	break;								
+					case "oceanexportmbol/oceanexportoperationselectionmbol.aspx" :	strTop = "reports";	break;								
+                    case "oceanexportmbol/oceanexportoperationdetailmbol.aspx" :	strTop = "reports";	break;								
+                    case "oceanexportmbol/oceanexportoperationdetailmbol2.aspx" :	strTop = "reports";	break;								
+                    case "import/airimportreportselection.aspx" :	strTop = "reports";	break;								
+                    case "import/airimportreportdetail.aspx" :	strTop = "reports";	break;								
+                    case "import/airimportreportdetail2.aspx" :	strTop = "reports";	break;								
+                    case "import/oceanimportreportselection.aspx" :	strTop = "reports";	break;								
+                    case "import/oceanimportreportdetail.aspx" :	strTop = "reports";	break;								
+                    case "import/oceanimportreportdetail2.aspx" :	strTop = "reports";	break;								
+                    case "companyconfig/companysearchselection.aspx" :	strTop = "reports";	break;								
+                    case "companyconfig/companysearchdetail.aspx" :	strTop = "reports";	break;								
+                    case "ams/ams_edi_ocean.aspx" :	strTop = "reports";	break;	
+//					case "pre_shipment/pickup_order.asp" :	strTop = "preshipment";	break;
+
+//                  default : strTop = tmpURL.substring(0,tmpURL.lastIndexOf("/")); break;		
+                    default : strTop = "-1"; break;		
+                }
+
+	if (strTop == "-1")
+	{
+	}
+	else
+	{
+	if (parent.document.frames['topFrame']) {
+		var cTop = parent.document.frames['topFrame'].location.toString().toLowerCase();
+		var lastSlashIndex = cTop.lastIndexOf("/");
+		var nTop = cTop.substring(0,lastSlashIndex+1) + strTop + '.htm';
+		if ( cTop != nTop ) {
+			parent.document.frames['topFrame'].location = nTop;
+		}		
+
+			try
+			{
+		/////////////////////////////////////////////////////////////////////
+
+		     var temp=tmpURL.split('/');
+		     var page=temp[1];
+			
+             if( parent.document.frames['topFrame'].pointTabOnload){
+            
+                parent.document.frames['topFrame'].pointTabOnload(page);
+             }
+			  if( parent.document.frames['mainFrame'].pointTabOnload){
+             
+                parent.document.frames['mainFrame'].pointTabOnload(page);
+             }
+            
+		/////////////////////////////////////////////////////////////////////		
+			}
+			catch (e)
+			{
+			}
+
+	}	
+}
+
+function PerformGetWorkName(Url)
+{
+if ( Url == null ) return Url;
+if ( Url.indexOf("?") >=0 ) {
+	Url = Url.substring(0,Url.indexOf("?"));
+}
+var lastSlashIndex = Url.lastIndexOf("/");
+if ( lastSlashIndex <= 0) return Url;
+var parentVirPath = Url.substring(0, lastSlashIndex);
+var strUrl1 = PerformValidName(Url);
+var strUrl2 = PerformValidName(parentVirPath);
+var tmpStr = strUrl2 + "/" + strUrl1;
+return tmpStr.toLowerCase();
+}
+
+function PerformValidName(Url)
+{
+var lastSlashIndex = Url.lastIndexOf("/");
+if(lastSlashIndex < 0) return Url;
+var parentVirPath = Url.substring(0, lastSlashIndex);
+var strUrl = Url.substring(lastSlashIndex+1);
+return strUrl;
+}
+
+ie=document.all?1:0
+
+if(window.parent)
+{
+	        if(window.parent.moveOnScroll) ie? window.onscroll=window.parent.checkScrolled:window.parent.checkScrolled();
+}
+
+// Scroll position
+if(document.all.scrollPositionX && document.all.scrollPositionY) 
+{
+ window.attachEvent("onscroll", saveScrollPosition);
+}
+

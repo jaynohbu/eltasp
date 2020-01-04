@@ -1,0 +1,109 @@
+﻿@model List<ELT.CDT.GeneralLedgerReportItem>
+
+
+@Html.DevExpress().GridView(
+    settings =>
+    {
+        settings.Name = "grid";
+        settings.CallbackRouteValues = new { Controller = "Accounting", Action = "_GeneralLedgerMasterPartial" };
+        settings.Width = Unit.Percentage(100);
+        settings.SettingsPager.PageSize = 50;
+        settings.Theme = "Metropolis";
+        settings.KeyFieldName = "GL_Number";
+        settings.Columns.Add("GL_Number", "GL No.");
+        settings.Columns.Add("GL_Name","GL Name");
+       
+
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Start_Balance";
+            column.Caption = "Starting Balance";
+
+            column.SetDataItemTemplateContent(a =>
+            {
+                if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Start_Balance"))))
+                {
+                    string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                    if (a.Text == "0") val = "0";
+                    ViewContext.Writer.Write(val
+                       );
+                }
+            });
+
+        });
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Debit";
+
+            column.SetDataItemTemplateContent(a =>
+            {
+                if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Debit"))))
+                {
+                    string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                    if (a.Text == "0") val = "0";
+                    ViewContext.Writer.Write(val
+                       );
+                }
+            });
+
+        });
+
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Credit";
+
+            column.SetDataItemTemplateContent(a =>
+            {
+                if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Credit"))))
+                {
+                    string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                    if (a.Text == "0") val = "0";
+                    ViewContext.Writer.Write(val
+                       );
+                }
+            });
+
+        });
+        
+        decimal total = 0;
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Accumulation";
+            column.UnboundType = DevExpress.Data.UnboundColumnType.String;
+           
+            column.Width = 80;
+            column.CellStyle.CssClass = "numeric";
+        });
+
+        settings.CustomUnboundColumnData = (sender, e) =>
+        {
+            if (e.Column.FieldName == "Accumulation")
+            {
+                if (e.ListSourceRowIndex == 0) total = 0;
+                decimal Debit = e.GetListSourceFieldValue("Debit") == "" ? 0 : Convert.ToDecimal(e.GetListSourceFieldValue("Debit"));
+                decimal Credit = e.GetListSourceFieldValue("Credit") == "" ? 0 : Convert.ToDecimal(e.GetListSourceFieldValue("Credit"));
+                total = total + Debit + Credit;
+              
+
+                string s_detail_total = "0";
+                if (total > 0)
+                    s_detail_total = string.Format("{0:###,###,###.00}", Convert.ToDecimal(total));
+                e.Value = s_detail_total;
+                
+                
+                e.Value = total;
+            }
+        };
+        settings.SettingsDetail.AllowOnlyOneMasterRowExpanded = false;
+        settings.SettingsDetail.ShowDetailRow = true;
+
+        settings.SetDetailRowTemplateContent(c =>
+        {
+            Html.RenderAction("_GeneralLedgerDetailPartial", new { GLNumber = DataBinder.Eval(c.DataItem, "GL_Number") });
+        });
+        settings.PreRender = (sender, e) =>
+        {
+            ((MVCxGridView)sender).DetailRows.ExpandRow(0);
+        };
+    }).Bind(Model).GetHtml() 
+

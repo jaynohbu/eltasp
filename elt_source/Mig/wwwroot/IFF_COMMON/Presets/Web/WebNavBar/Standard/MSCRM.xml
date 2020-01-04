@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="MSCRM Theme" PresetDescription="Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<ignavbar:WebNavBar Movable="False" BorderStyle="Solid" BorderWidth="1px" BackColor="#7288AC" BackgroundImage="" Font-Size="8pt" Font-Names="Microsoft Sans Serif" ForeColor="White" Theme="CorporateSilver">
+  <Navigation>
+    <End Tag="" Text="" DisabledImage="CorporateSilver/end_disabled.gif" Key="end" StepUnit="Last" TabIndex="0" HoverImage="CorporateSilver/end_hover.gif" Image="CorporateSilver/end_up.gif" DepthFirst="True" SelectedImage="CorporateSilver/end_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="2147483647" ToolTip="End">
+     <HoverStyle BorderColor="Blue" BorderStyle="Solid" ForeColor="White" BackColor="#64799C">
+      <BorderDetails WidthLeft="1px" WidthTop="1px" WidthRight="1px" WidthBottom="1px" />
+     </HoverStyle>
+     <SelectedStyle />
+     <DefaultStyle BorderStyle="Solid" ForeColor="White">
+      <BorderDetails ColorTop="114, 136, 172" WidthLeft="1px" ColorBottom="114, 136, 172" WidthTop="1px" ColorRight="114, 136, 172" WidthRight="1px" WidthBottom="1px" ColorLeft="114, 136, 172" />
+     </DefaultStyle>
+    </End>
+    <Start Tag="" Text="" DisabledImage="CorporateSilver/start_disabled.gif" Key="start" StepUnit="First" TabIndex="0" HoverImage="CorporateSilver/start_hover.gif" Image="CorporateSilver/start_up.gif" DepthFirst="True" SelectedImage="CorporateSilver/start_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="-2147483648" ToolTip="Start">
+     <HoverStyle BorderColor="Blue" BorderStyle="Solid" ForeColor="White" BackColor="#64799C">
+      <BorderDetails WidthLeft="1px" WidthTop="1px" WidthRight="1px" WidthBottom="1px" />
+     </HoverStyle>
+     <SelectedStyle />
+     <DefaultStyle BorderStyle="Solid" ForeColor="White">
+      <BorderDetails ColorTop="114, 136, 172" WidthLeft="1px" ColorBottom="114, 136, 172" WidthTop="1px" ColorRight="114, 136, 172" WidthRight="1px" WidthBottom="1px" ColorLeft="114, 136, 172" />
+     </DefaultStyle>
+    </Start>
+    <Next Tag="" Text="" DisabledImage="CorporateSilver/next_disabled.gif" Key="next" StepUnit="Row" TabIndex="0" HoverImage="CorporateSilver/next_hover.gif" Image="CorporateSilver/next_up.gif" DepthFirst="False" SelectedImage="CorporateSilver/next_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="1" ToolTip="Next">
+     <HoverStyle BorderColor="Blue" BorderStyle="Solid" ForeColor="White" BackColor="#64799C">
+      <BorderDetails WidthLeft="1px" WidthTop="1px" WidthRight="1px" WidthBottom="1px" />
+     </HoverStyle>
+     <SelectedStyle />
+     <DefaultStyle BorderStyle="Solid" ForeColor="White">
+      <BorderDetails ColorTop="114, 136, 172" WidthLeft="1px" ColorBottom="114, 136, 172" WidthTop="1px" ColorRight="114, 136, 172" WidthRight="1px" WidthBottom="1px" ColorLeft="114, 136, 172" />
+     </DefaultStyle>
+    </Next>
+    <Rewind Tag="" Text="" DisabledImage="CorporateSilver/rew_disabled.gif" Key="rew" StepUnit="Page" TabIndex="0" HoverImage="CorporateSilver/rew_hover.gif" Image="CorporateSilver/rew_up.gif" DepthFirst="False" SelectedImage="CorporateSilver/rew_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="-1" ToolTip="Reverse">
+     <HoverStyle BorderColor="Blue" BorderStyle="Solid" ForeColor="White" BackColor="#64799C">
+      <BorderDetails WidthLeft="1px" WidthTop="1px" WidthRight="1px" WidthBottom="1px" />
+     </HoverStyle>
+     <SelectedStyle />
+     <DefaultStyle BorderStyle="Solid" ForeColor="White">
+      <BorderDetails ColorTop="114, 136, 172" WidthLeft="1px" ColorBottom="114, 136, 172" WidthTop="1px" ColorRight="114, 136, 172" WidthRight="1px" WidthBottom="1px" ColorLeft="114, 136, 172" />
+     </DefaultStyle>
+    </Rewind>
+    <FastForward Tag="" Text="" DisabledImage="CorporateSilver/ff_disabled.gif" Key="ff" StepUnit="Page" TabIndex="0" HoverImage="CorporateSilver/ff_hover.gif" Image="CorporateSilver/ff_up.gif" DepthFirst="False" SelectedImage="CorporateSilver/ff_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="1" ToolTip="Forward">
+     <HoverStyle BorderColor="Blue" BorderStyle="Solid" ForeColor="White" BackColor="#64799C">
+      <BorderDetails WidthLeft="1px" WidthTop="1px" WidthRight="1px" WidthBottom="1px" />
+     </HoverStyle>
+     <SelectedStyle />
+     <DefaultStyle BorderStyle="Solid" ForeColor="White">
+      <BorderDetails ColorTop="114, 136, 172" WidthLeft="1px" ColorBottom="114, 136, 172" WidthTop="1px" ColorRight="114, 136, 172" WidthRight="1px" WidthBottom="1px" ColorLeft="114, 136, 172" />
+     </DefaultStyle>
+    </FastForward>
+    <Prev Tag="" Text="" DisabledImage="CorporateSilver/prev_disabled.gif" Key="prev" StepUnit="Row" TabIndex="0" HoverImage="CorporateSilver/prev_hover.gif" Image="CorporateSilver/prev_up.gif" DepthFirst="False" SelectedImage="CorporateSilver/prev_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="-1" ToolTip="Previous">
+     <HoverStyle BorderColor="Blue" BorderStyle="Solid" ForeColor="White" BackColor="#64799C">
+      <BorderDetails WidthLeft="1px" WidthTop="1px" WidthRight="1px" WidthBottom="1px" />
+     </HoverStyle>
+     <SelectedStyle />
+     <DefaultStyle BorderStyle="Solid" ForeColor="White">
+      <BorderDetails ColorTop="114, 136, 172" WidthLeft="1px" ColorBottom="114, 136, 172" WidthTop="1px" ColorRight="114, 136, 172" WidthRight="1px" WidthBottom="1px" ColorLeft="114, 136, 172" />
+     </DefaultStyle>
+    </Prev>
+  </Navigation>
+  <Extension>
+    <Submit Tag="" Text="" Key="submit" TabIndex="0" HoverImage="CorporateSilver/submit_hover.gif" ToolTip="Submit" SelectedImage="CorporateSilver/submit_down.gif" TargetURL="" DisabledImage="CorporateSilver/submit_disabled.gif" TargetFrame="" Image="CorporateSilver/submit_up.gif">
+     <HoverStyle BorderColor="Blue" BorderStyle="Solid" ForeColor="White" BackColor="#64799C">
+      <BorderDetails WidthLeft="1px" WidthTop="1px" WidthRight="1px" WidthBottom="1px" />
+     </HoverStyle>
+     <SelectedStyle />
+     <DefaultStyle BorderStyle="Solid" ForeColor="White">
+      <BorderDetails ColorTop="114, 136, 172" WidthLeft="1px" ColorBottom="114, 136, 172" WidthTop="1px" ColorRight="114, 136, 172" WidthRight="1px" WidthBottom="1px" ColorLeft="114, 136, 172" />
+     </DefaultStyle>
+    </Submit>
+    <Delete Tag="" Text="" Key="del" TabIndex="0" HoverImage="CorporateSilver/del_hover.gif" ToolTip="Delete" SelectedImage="CorporateSilver/del_down.gif" TargetURL="" DisabledImage="CorporateSilver/del_disabled.gif" TargetFrame="" Image="CorporateSilver/del_up.gif">
+     <HoverStyle BorderColor="Blue" BorderStyle="Solid" ForeColor="White" BackColor="#64799C">
+      <BorderDetails WidthLeft="1px" WidthTop="1px" WidthRight="1px" WidthBottom="1px" />
+     </HoverStyle>
+     <SelectedStyle />
+     <DefaultStyle BorderStyle="Solid" ForeColor="White">
+      <BorderDetails ColorTop="114, 136, 172" WidthLeft="1px" ColorBottom="114, 136, 172" WidthTop="1px" ColorRight="114, 136, 172" WidthRight="1px" WidthBottom="1px" ColorLeft="114, 136, 172" />
+     </DefaultStyle>
+    </Delete>
+    <Insert Tag="" Text="" Key="add" TabIndex="0" HoverImage="CorporateSilver/add_hover.gif" ToolTip="Insert" SelectedImage="CorporateSilver/add_down.gif" TargetURL="" DisabledImage="CorporateSilver/add_disabled.gif" TargetFrame="" Image="CorporateSilver/add_up.gif">
+     <HoverStyle BorderColor="Blue" BorderStyle="Solid" ForeColor="White" BackColor="#64799C">
+      <BorderDetails WidthLeft="1px" WidthTop="1px" WidthRight="1px" WidthBottom="1px" />
+     </HoverStyle>
+     <SelectedStyle />
+     <DefaultStyle BorderStyle="Solid" ForeColor="White">
+      <BorderDetails ColorTop="114, 136, 172" WidthLeft="1px" ColorBottom="114, 136, 172" WidthTop="1px" ColorRight="114, 136, 172" WidthRight="1px" WidthBottom="1px" ColorLeft="114, 136, 172" />
+     </DefaultStyle>
+    </Insert>
+  </Extension>
+</ignavbar:WebNavBar>

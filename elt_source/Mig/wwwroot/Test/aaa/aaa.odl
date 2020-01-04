@@ -1,0 +1,67 @@
+// aaa.odl : type library source for ActiveX Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (aaa.tlb) that will become a resource in
+// aaa.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(8C375C9A-DC33-4B02-ADA4-17E767A5FF59), version(1.0),
+  helpfile("aaa.hlp"),
+  helpstring("aaa ActiveX Control module"),
+  control ]
+library AAALib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CAaaCtrl
+
+	[ uuid(57E70DD8-791A-44CC-98F0-277EAA55CC30),
+	  helpstring("Dispatch interface for Aaa Control"), hidden ]
+	dispinterface _DAaa
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CAaaCtrl)
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CAaaCtrl)
+			//}}AFX_ODL_METHOD
+	};
+
+	//  Event dispatch interface for CAaaCtrl
+
+	[ uuid(73559503-F1C3-42CE-BDEF-98A4646FAFCD),
+	  helpstring("Event interface for Aaa Control") ]
+	dispinterface _DAaaEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CAaaCtrl)
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CAaaCtrl
+
+	[ uuid(BF731253-8017-493F-8985-4F126749B233),
+	  helpstring("Aaa Control"), control ]
+	coclass Aaa
+	{
+		[default] dispinterface _DAaa;
+		[default, source] dispinterface _DAaaEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

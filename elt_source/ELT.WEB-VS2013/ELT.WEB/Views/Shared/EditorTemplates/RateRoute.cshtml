@@ -1,0 +1,48 @@
+﻿@model ELT.WEB.Models.RateRoute
+
+@if (Model.Mode == ELT.WEB.Models.RateRouteMode.Add)
+{ 
+    <script>
+
+        $(document).ready(function () { $(".btnSaveAll").css("display", "none"); });
+
+    </script>
+    <td colspan="20">@Html.HiddenFor(m => m.RouteID)
+    @{
+    string route_id_thead = "th_" + Model.RouteID;
+
+    }
+        <div class="childGrid routeEdit">
+            <table>
+                <thead id="@route_id_thead">
+                    @Html.EditorFor(m=>m.HeaderRow)                  
+                </thead>               
+                <tfoot><tr><td colspan="16"><div class="AddBtnHolder"><input type="button" value="Save Route" onclick="SaveRoute('@Model.RouteID');" /></div></tr></tfoot>
+            </table>
+        </div>
+    </td>
+
+
+}
+else
+{
+    <script>
+
+        $(document).ready(function () { $(".btnSaveAll").css("display", "block"); });
+
+    </script>
+        <td colspan="20">@Html.HiddenFor(m => m.RouteID)
+                       <div class="childGrid">
+                <table>
+                    <thead>
+                        @Html.EditorFor(m => m.HeaderRow)                  
+                    </thead>
+                    <tbody>
+                        @Html.EditorFor(m => m.Rows)
+                    </tbody>
+                    <tfoot><tr><td colspan="17"><div><ul><li><a href="#" onclick="AddCarrier('@Model.RouteID')"><span> Add Carrier</span></a></li></ul></div></tr></tfoot>
+                </table>
+            </div>
+        </td>
+   
+}

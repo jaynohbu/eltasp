@@ -1,0 +1,315 @@
+﻿@model ELT.CDT.HierarchicalModelDataSource<ELT.CDT.TreeMenu>
+
+<div  id="igMyMenu"
+        style="cursor: hand; width: 253px;  position: absolute; left: -239px; z-index: 99999;  background-color:White;
+        top: 0px; visibility: visible">
+        <table id="tmpfavtable" cellspacing="0" cellpadding="0" width="251" bgcolor="#fcfcfc" 
+            border="0">
+            <tbody>
+                <tr>
+                    <td style="height: 14px; background-image: url(/iff_main/images/back_main_top.gif)" valign="top"
+                        colspan="3" align="left">
+                    </td>
+                    <td onclick="javascript:void(0);" style="width: 13px; background-image: url(/iff_main/images/main_back.gif);
+                        background-color: #fcfcfc" valign="top" rowspan="14" align="left">
+                        <img onclick="javascript:void(0);" id="moveImg" name="moveImg" alt="" src="/iff_main/images/button_open.gif"
+                            width="13" height="150"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 16px" bgcolor="#b5d0f1" valign="top" align="left">
+                        <img alt="" src="/iff_main/images/spacer.gif" width="16" height="1">
+                    </td>
+                    <td class="bodyheader" bgcolor="#b5d0f1" valign="top" width="206" align="left">
+                        <span style="width: 206px"><span class="style5">@ViewBag.WecomeMsg</span></span>
+                        <img src="/iff_main/images/spacer.gif" width="8" height="1">
+                    </td>
+                    <td style="width: 16px" bgcolor="#b5d0f1" valign="top" align="left">
+                        <img src="/iff_main/images/spacer.gif" width="16" height="1">
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td style="height: 8px" bgcolor="#b5d0f1" colspan="3">
+                    </td>
+                </tr>
+                <tr>
+                    <td height="10" background="/iff_main/images/back_main_bottom.gif" colspan="3">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <img id="tool" name="tool" alt="" src="/iff_main/images/icon_tool.gif" width="238"
+                            height="31">
+                    </td>
+                </tr>
+               
+                <tr>
+                    <td colspan="3">                       
+
+                            @Html.DevExpress().TreeView(
+                            settings =>
+                            {
+                            settings.Name = "FavoriteMenuTree";
+                            settings.AllowSelectNode = true;
+
+                            settings.TextField = "Text";
+                            settings.NavigateUrlField = "NavigateUrl";
+
+                            settings.NodeDataBound = (source, e) => {
+                             var item=   e.Node.DataItem;
+                            };
+                            settings.PreRender = (source, e) => {
+                                
+                            ASPxTreeView treeView = (ASPxTreeView)source;
+                            treeView.ExpandToDepth(2);
+                            };
+                            }).Bind(Model).GetHtml()
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <table  cellspacing="0" cellpadding="0" border="0" valign="top" bgcolor="#fcfcfc" height="6400px" >
+            <tbody>
+                <tr valign="top">
+                    <td style="height: 32px; width: 238px" valign="top">
+                       
+                    </td>
+                    <td style="height: 64px; width: 13px" valign="top" background="/iff_main/images/main_back.gif"
+                        rowspan="2" align="left">
+                        <img src="/iff_main/images/spacer.gif" width="13" height="64">
+                    </td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+    <script type="text/javascript">
+
+        function viewPrivateBoard() {
+            var sUrl = '/IFF_MAIN/Board/CompanyBoard.aspx';
+            var favorite = "";
+            favorite = window.open(sUrl, 'popupfavorite', 'staus=0,titlebar=0,toolbar=0,menubar=0,scrollbars=0,resizable=1,location=0,width=900,height=600,hotkeys=0');
+            favorite.focus();
+
+        }
+        function PopWindowURL(sUrl, width, height) {
+            var popWindow = window.open(sUrl, 'popupfavorite', 'staus=0,titlebar=0,toolbar=0,menubar=0,scrollbars=1,resizable=1,location=0,width=' + width + ',height=' + height + ',hotkeys=0');
+            popWindow.focus();
+        }
+
+        function go_favorite(sUrl, topModule) {
+
+            PopWindowURL(sUrl, 800, 600);
+            return false;
+        }
+        function SwapImage(obj, alt, src) {
+            obj.alt = alt;
+            obj.src = src;
+        }
+
+        function ShowSlideMenu(e) {
+            $("#moveImg").attr("src", '/iff_main/images/button_close.gif');
+            if (oMenu.state == 1) {
+                if (tim) {
+
+                    clearTimeout(tim);
+                }
+                mOut();
+
+            } else {
+                $("#moveImg").attr("src", '/iff_main/images/button_open.gif');
+            }
+        }
+
+        function HideSlideMenu(e) {
+            e = window.event || e;
+
+            if (e.clientX > (oMenu.width) && !oMenu.state) {
+                $("#moveImg").attr("src", '/iff_main/images/button_open.gif');
+                clearTimeout(tim);
+                mIn();
+
+            }
+        }
+        function HideOrShowSlideMenu(e) {
+         
+            if ($("#moveImg").attr("src").indexOf('button_open.gif') > -1) {
+                ShowSlideMenu(e);
+                
+            } else {
+                HideSlideMenu(e);
+               
+            }
+
+        }
+
+        function mIn() {
+
+            var left = parseInt($("#igMyMenu").css("left").toLowerCase().replace('px', ''));
+            var width = parseInt($("#igMyMenu").css("width").toLowerCase().replace('px', ''));
+
+            if (left > -width + lshow) {
+                oMenu.go = 1;
+                left = left - move;
+                left = left + "px";
+                $("#igMyMenu").css("left", left);
+                tim = setTimeout("mIn()", menuSpeed);
+            } else {
+                oMenu.go = 0;
+                oMenu.state = 1;
+            }
+        }
+
+        function mOut() {
+
+            try {
+                var left = parseInt($("#igMyMenu").css("left").toLowerCase().replace('px', ''));
+                if (left < -1) {
+                    oMenu.go = 1;
+                    left = left + move;
+                    left = left + "px";
+                    $("#igMyMenu").css("left", left);
+                    tim = setTimeout("mOut()", menuSpeed);
+                } else {
+                    oMenu.go = 0
+                    oMenu.state = 0
+                }
+            } catch (e) {
+
+            }
+        }
+        function makeMenu(obj, nest) {
+            try {
+                nest = (!nest) ? '' : 'document.' + nest + '.'
+                this.css = (n) ? eval(nest + 'document.' + obj) : eval(obj + '.style')
+                this.state = 1;
+                this.go = 0;
+                this.width = n ? this.css.document.width : eval(obj + '.offsetWidth');
+
+                this.obj = obj + "Object";
+                eval(this.obj + "=this");
+            } catch (e) { alert(e); }
+
+        }
+
+
+        ie = document.all ? 1 : 0;
+        n = document.layers ? 1 : 0;
+        lshow = 14;
+        var move = 30;
+        menuSpeed = 10;
+        var moveOnScroll = true;
+        var tim;
+        var ltop;
+
+        function menuInit() {
+
+            $("#igMyMenu").get(0).onclick = HideOrShowSlideMenu;
+            $("#igMyMenu").get(0).onmouseout = HideSlideMenu;
+           
+            
+            
+            $("#igMyMenu").css("height", screen.availHeight + "px");
+            try {
+                oMenu = new makeMenu('igMyMenu');
+                scrolled = n ? "window.pageYOffset" : "document.body.scrollTop";
+                oMenu.css.left = -oMenu.width + lshow;
+                ltop = (n) ? oMenu.css.top : oMenu.css.pixelTop;
+                $(window).scroll(function () {
+
+                    checkScrolled();
+                })
+
+                intervalCallMemo();
+
+            } catch (e) { alert(e); }
+
+        }
+
+        function ReloadMenu() {
+            __doPostBack("btnReload", "");
+        }
+
+
+        function checkScrolled() {
+            $("#igMyMenu").css("top", jQuery(window).scrollTop() + 'px');
+
+        }
+
+
+        function cBoardAssign() {
+            try {
+                var xmlHTTP = new ActiveXObject('Microsoft.XMLHTTP')
+                xmlHTTP.open('get', '/IFF_MAIN/Board/member/login_ok_board.asp?h_url=/ / ', false);
+                xmlHTTP.send();
+            }
+            catch (e) { }
+        }
+
+
+        function intervalCallMemo() {
+            memoLoad(true);
+            setInterval("memoLoad(false)", 10000);
+        }
+
+        function OpenWindow(url, intWidth, intHeight) {
+            window.open(url, "msg", "left=10,top=10,width=" + intWidth + ",height=" + intHeight + ",resizable=0,scrollbars=1");
+        }
+
+        function memoLoad(z) {
+
+            if (window.ActiveXObject) {
+                try {
+                    xmlHTTP = new ActiveXObject("Msxml2.XMLHTTP");
+                } catch (e) {
+                    try {
+                        xmlHTTP = new ActiveXObject("Microsoft.XMLHTTP");
+                    } catch (e1) {
+                        return;
+                    }
+                }
+            } else if (window.XMLHttpRequest) {
+                xmlHTTP = new XMLHttpRequest();
+            } else { return; }
+
+            try {
+                xmlHTTP.open("get", "/iff_main/board/message/top_check_memo.asp", false);
+                xmlHTTP.send();
+
+                var sourceCode = xmlHTTP.responseText;
+                //alert(sourceCode);
+                var memoArrived;
+                var memoMsgDisplayedAlready;
+                if (sourceCode) {
+                    if (sourceCode.indexOf("session was expired") >= 0 || sourceCode.indexOf("disconnected") >= 0) {
+                        parent.frames['dummyFrame'].document.write(sourceCode)
+                    }
+
+                    if (sourceCode.indexOf("img_memo_on") >= 0) {
+                        memoArrived = true;
+                    }
+                    else {
+                        memoArrived = false;
+                    }
+
+                    var obj = document.getElementById('img_memo_on');
+                    if (obj) {
+                        memoMsgDisplayedAlready = true;
+                    }
+                    else {
+                        memoMsgDisplayedAlready = false;
+                    }
+
+                    if (!z) {
+                        if (memoArrived != memoMsgDisplayedAlready) z = true;
+                    }
+                    if (z) {
+                        document.getElementById('memoFrame').innerHTML = sourceCode;
+                    }
+                }
+            } catch (e) { }
+        }
+        $(document).ready(function () { menuInit(); });
+    </script>

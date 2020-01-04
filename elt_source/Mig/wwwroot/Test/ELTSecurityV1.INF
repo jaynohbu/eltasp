@@ -1,0 +1,8 @@
+[Add.Code]
+ELTSecurityV1.ocx=ELTSecurityV1.ocx
+
+[AuthByMac.ocx]
+file=thiscab
+clsid={7C0DA1CC-FDFB-440A-A3BD-D7398E51A189}
+RegisterServer=yes
+FileVersion=1,0,0,0

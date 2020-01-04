@@ -1,0 +1,97 @@
+﻿@model ELT.WEB.Models.EmailNotificationFormModel
+@{
+    ViewBag.Title = "Shipping Notice";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+@Styles.Render("~/Content/css/DomesticFreight.css")
+<h3>Shipping Notice</h3>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $(".bSend").click(function () {            
+            $("#hShouldSend").val("True");
+            $("#FormEmailItems").submit();
+        });
+
+    });
+    function OnStartCallback(s, e) {
+    }
+    function OnEndCallback(s, e) {
+    }
+    function OnSelectedIndexChanged(s, e) {
+        var lb = s.GetListBoxControl();
+        if (lb) {
+            var item = lb.GetSelectedItem();
+            if (item) {
+                $("#hBillNumber").val(item.text);
+                $("#FormEmailItems").submit();
+            }
+        }
+    }
+
+    function ShowMessage(message) {
+        message = "<p>" + message + "</p>";
+        $("#ModalPlaceHolder").remove();
+        var content = "<div id='ModalPlaceHolder'></div>";
+        $('body').append(content);
+        $("#ModalPlaceHolder").append(message).dialog({
+            autoOpen: true,
+            modal: true,
+            resizable: "auto",
+            width: "auto",
+            height: "auto",
+            minHeight: "auto"
+        }
+        );
+    }
+        
+</script>
+@Html.AntiForgeryToken()
+@Html.ValidationSummary()
+<div class="Body">
+    <div class="SearchBoxLeft">
+        <div class="BillSlectionBox" id="BillSlectionBox">
+            @{
+           
+                Html.RenderPartial("_BillSelectionBox", Model);                
+              }
+        </div>
+    </div>
+    <div class="ButtonBoxRight">
+    </div>
+    <div class="FormTable">
+        <div class="FormTableHeader">
+            <img class="bSend" width="101" height="18"  alt="Send Email"  src="@Url.Content("~/images/button_send_email.gif")" />
+            
+        </div>
+        <div class="FormTableBody">
+            <div class="FormTableRow" style="position: relative">
+                <div class="FormInnerTable">
+                    <div class="FormInnerTableHeader">
+                    </div>
+                    <div class="FormInnerTableAlterLable">
+                        @Html.LabelFor(m => m.SenderName)
+                    </div>
+                    <div class="FormInnerTableAlterContent">
+                        @Html.TextBoxFor(m => m.SenderName)
+                    </div>
+                    <div class="FormInnerTableAlterLable">
+                        @Html.LabelFor(m => m.SenderEmail)
+                    </div>
+                    <div class="FormInnerTableAlterContent">
+                        @Html.TextBoxFor(m => m.SenderEmail)
+                    </div>
+                </div>
+            </div>
+            <div class="FormTableRow">
+                <div id="DivItems">
+                    @{ Html.RenderPartial("_NotificationEmailItems", Model);}
+                </div>
+            </div>
+        </div>
+        <div class="FormTableFooter">
+            <img class="bSend" width="101" height="18"  alt="Send Email"   src="@Url.Content("~/images/button_send_email.gif")" />
+           
+        </div>
+    </div>
+</div>

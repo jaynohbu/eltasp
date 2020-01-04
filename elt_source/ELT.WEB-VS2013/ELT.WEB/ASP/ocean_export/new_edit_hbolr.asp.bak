@@ -1,0 +1,1340 @@
+<!--  #INCLUDE FILE="../include/transaction.txt" -->
+<html>
+<head>
+<title>HBOL VIEW</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link href="../css/elt_css.css" rel="stylesheet" type="text/css">
+<!--  #INCLUDE FILE="../include/connection.asp" -->
+</head>
+<!--  #INCLUDE FILE="../include/header.asp" -->
+<%
+Dim rs,rs1,SQL
+Set rs = Server.CreateObject("ADODB.Recordset")
+
+Dim vHBOL,vMBOL,vBookingNum,vAgentName,vAgentInfo,vAgentAcct
+Dim vShipperName,vShipperInfo,vShipperAcct
+Dim vConsigneeName,vConsigneeInfo,vConsigneeAcct,vNotifyInfo
+Dim vExportRef,vOriginCountry,vExportInstr,vLandingPier,vMoveType
+Dim vConYes,vPreCarriage,vPreReceiptPlace
+Dim vExportCarrier,vLandingPort,vUnloadingPort,vDepartureDate
+Dim vDeliveryPlace,vDesc1,vDesc2,vDesc3,vPieces,vWeightCP,vGrossWeight
+Dim vMeasurement
+Dim vWidth,vLength,vHeight,vChargeableWeight,vChargeRate
+Dim vTotalWeightCharge
+Dim vShowPrepaidWeightCharge,vShowCollectWeightCharge
+Dim vShowPrepaidOtherCharge,vShowCollectOtherCharge
+Dim vOtherChargeCP,vChargeItem,vChargeAmt,vVendor,vCost
+Dim vDeclaredValue,vBy,vDate,vPlace
+Dim vTotalPrepaid,vTotalCollect
+
+vHBOL=Request.QueryString("HBOL")
+if vHBOL="" then vHBOL="0"
+
+if vHBOL="0" then
+		SQL= "select dba_name,business_address,business_city,business_state,business_zip,business_country from agent where elt_account_number = " & elt_account_number
+		rs.Open SQL, eltConn, , , adCmdText	
+		If Not rs.EOF Then
+			vAgentName = rs("dba_name")
+			AgentAddress=rs("business_address")
+			AgentCity = rs("business_city")
+			AgentState = rs("business_state")
+			AgentZip = rs("business_zip")
+			AgentCountry = rs("business_country")
+			vAgentInfo=vAgentName & chr(10) & AgentAddress & chr(10) & AgentCity & "," & AgentState & " " & AgentZip & " " & AgentCountry
+			vBy=vAgentName
+			vPlace=AgentCity
+		End If
+		rs.Close
+	end if
+	vConYes="Y"
+	vDate=Now
+	vTotalPrepaid=0
+	vTotalCollect=0
+	vDesc3="SAID TO CONTAIN:"
+	if Not vHBOL="0" then
+		SQL= "select * from hbol_master where elt_account_number = " & elt_account_number & " and hbol_num='" & vHBOL & "'"
+		rs.Open SQL, eltConn, , , adCmdText
+		if Not rs.EOF then
+			vBookingNum=rs("booking_num")
+			vMBOL=rs("mbol_num")
+			vAgentName=rs("agent_name")
+			vAgentAcct=cLng(rs("agent_no"))
+			vAgentInfo=rs("agent_info")
+			vShipperName=rs("shipper_name")
+			vShipperInfo=rs("shipper_info")
+			vShipperAcct=cLng(rs("shipper_acct_num"))
+			vConsigneeName=rs("consignee_name")
+			vConsigneeInfo=rs("consignee_info")
+			vConsigneeAcct=cLng(rs("consignee_acct_num"))
+			vNotifyInfo=rs("notify_info")
+			vExportRef=rs("export_ref")
+			vForwardAgentInfo=rs("forward_agent_info")
+			vOriginCountry=rs("origin_country")
+			vDestCountry=rs("dest_country")
+			vExportInstr=rs("export_instr")
+			vLoadingPier=rs("loading_pier")
+			vMoveType=rs("move_type")
+			vConYes=rs("containerized")
+			vPreCarriage=rs("pre_carriage")
+			vPreReceiptPlace=rs("pre_receipt_place")
+			vExportCarrier=rs("export_carrier")
+			vVN=rs("vessel_name")
+			vLoadingPort=rs("loading_port")
+			vUnloadingPort=rs("unloading_port")
+			vDeliveryPlace=rs("delivery_place")
+			vDepartureDate=rs("departure_date")
+			vWeightCP=rs("weight_cp")
+			vPieces=rs("pieces")
+			vScale=rs("scale")
+			vGrossWeight=cDbl(rs("gross_weight"))
+			vMeasurement=cDbl(rs("measurement"))
+			vGWLB=vGrossWeight*2.2
+			vMCFT=FormatNumber(vMeasurement*35.314666721,2)
+			'vLength=rs("length")
+			'vWidth=rs("width")
+			'vHeight=rs("height")
+			'vChargeableWeight=rs("chargeable_weight")
+			vChargeRate=rs("charge_rate")
+			vTotalWeightCharge=cDbl(rs("total_weight_charge"))
+			if vWeightCP="P" then
+				vTotalPrepaid=vTotalPrepaid+vTotalWeightCharge
+			else
+				vTotalCollect=vTotalCollect+vTotalWeightCharge
+			end if
+			vDesc1=rs("desc1")
+			vDesc2=rs("desc2")
+			vDesc3=rs("desc3")
+			'vDesc4=rs("desc4")
+			vDesc5=rs("desc5")
+			if IsNULL(vScale) or vScale="K" or vScale="" then
+				vGrossWeight1=cDbl(rs("gross_weight"))
+				vLb1=Round(vGrossWeight1*2.204,2)
+				vMeasurement1=cDbl(rs("measurement"))
+				vCF1=Round(vMeasurement1*35.31,2)
+			else
+				vLb1=cDbl(rs("gross_weight"))
+				vGrossWeight1=Round(vLb1*0.454,2)
+				vCF1=cDbl(rs("measurement"))
+				vMeasurement1=Round(vCF1/35.31,2)
+			end if
+			vDesc6=vGrossWeight1 & " KG" & "  " & vMeasurement1 & " CBM" & chr(13)
+			vDesc6=vDesc6 & vLb1 & " LB" & "  " & vCF1 & " CF"
+			vManifestDesc=rs("manifest_desc")
+			vDemDetail=rs("dem_detail")
+			vShowPrepaidWeightCharge=rs("show_prepaid_weight_charge")
+			vShowCollectWeightCharge=rs("show_collect_weight_charge")
+			vShowPrepaidOtherCharge=rs("show_prepaid_other_charge")
+			vShowCollectOtherCharge=rs("show_collect_other_charge")
+			vDeclaredValue=rs("declared_value")
+			vDate=rs("tran_date")
+			vBy=rs("tran_by")
+			vPlace=rs("tran_place")
+		end if
+		rs.Close
+		SQL= "select * from hbol_other_charge where elt_account_number = " & elt_account_number & " and hbol_num='" & vHBOL & "' order by tran_no"
+		rs.Open SQL, eltConn, , , adCmdText
+		tIndex=0
+		Do while Not rs.EOF
+			aChargeNo(tIndex)=rs("tran_no")
+			aChargeCP(tIndex)=rs("coll_prepaid")
+			aChargeItem(tIndex)=rs("charge_code")
+			aChargeItemName(tIndex)=rs("charge_desc")
+			aChargeAmt(tIndex)=cDbl(rs("charge_amt"))
+			'aChargeVendor(tIndex)=cLng(rs("vendor_num"))
+			'aChargeCost(tIndex)=rs("cost_amt")
+			if aChargeCP(tIndex)="P" then
+				vTotalPrepaid=vTotalPrepaid+aChargeAmt(tIndex)
+			else
+				vTotalCollect=vTotalCollect+aChargeAmt(tIndex)
+			end if
+			rs.MoveNext
+			tIndex=tIndex+1
+		Loop
+		rs.Close
+	else
+		tIndex=4
+	end if
+
+
+Set rs=Nothing
+%>
+
+<!--  #include file="../include/recent_file.asp" -->
+
+<body link="336699" vlink="336699" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<br>
+<table width="95%" border="0" align="center" cellpadding="2" cellspacing="0">
+  <tr> 
+    <td height="32" align="left" valign="middle" class="pageheader">Hbol VIEW</td>
+  </tr>
+</table>
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#6D8C80"  bgcolor="#6D8C80" class="border1px">
+  <tr> 
+    <td>
+      <form method="post" name="form1" action="_self">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tr> 
+          <td colspan="2" height="8" align="left" valign="top" bgcolor="BFD0C9" class="bodyheader"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="1" bgcolor="#6D8C80"></td>
+        </tr>
+        <tr> 
+          <td colspan="2"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="bodycopy">
+                <tr align="left" valign="middle" bgcolor="BFD0C9"> 
+                  <td height="20"> <table width="100%" border="0" cellpadding="0" cellspacing="0" class="bodycopy">
+                      <tr> 
+                        <td height="20" align="left" valign="middle"> <input type='hidden' name=cCOLO Value="Y" <% if vCOLO="Y" then response.write("checked") %> readonly>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td align="right" valign="middle"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                      </tr>
+					  <tr>
+					    <td colspan="2" height="1" bgcolor="6D8C80"></td>
+					  </tr>
+                    </table></td>
+                </tr>
+				     <tr>
+				       <td>
+					   <table width="100%" border="0" cellpadding="1" cellspacing="2" class="bodycopy">
+                      <tr> 
+                        <td height="20" colspan="2" bgcolor="E0EDE8"><strong>2. 
+                          Exporter</strong></td>
+                        <td width="20%" bgcolor="E0EDE8"><strong>5. Document No.</strong></td>
+                        <td width="14%" bgcolor="E0EDE8"><strong>5a. B/L No.</strong></td>
+                        <td width="26%" bgcolor="E0EDE8"><strong>5b. Agent</strong></td>
+                      </tr>
+                      <tr align="left" valign="middle"> 
+                        <td colspan="2" valign="top">&nbsp;</td>
+                        <td valign="top"> 
+						<input type="text" class="shorttextfield" name="lstBookingNum" Value="<%= vBookingNum %>" style="WIDTH: 120px" readonly> 						
+&nbsp;&nbsp;&nbsp;                        </td>
+                        <td valign="top"><input name="txtHBOL" class="shorttextfield" Value="<%= vHBOL %>" size="10" readonly></td>
+                        <td valign="top"> 
+						<input name="lstAgent" class="shorttextfield" Value="<%= vAgentName %>" style="WIDTH: 200px" size="10" readonly>						</td>
+                      </tr>
+                      <tr align="left" valign="middle"> 
+                        <td colspan="2" valign="top"> <TEXTAREA name="txtShipperInfo" cols=45 rows=4 class="multilinetextfield" readonly><%= vShipperInfo %></TEXTAREA>                        </td>
+                        <td colspan="3" valign="top"><table width="100%" border="0" cellspacing="0" class="bodycopy">
+                            <tr> 
+                              <td height="20" bgcolor="E0EDE8"><strong>6. Export 
+                                Reference</strong></td>
+                            </tr>
+                            <tr> 
+                              <td> <TEXTAREA name="txtExportRef" cols=60 rows=3 class="multilinetextfield" readonly><%= vExportRef %></TEXTAREA>                              </td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                      <tr align="left" valign="middle" bgcolor="E0EDE8"> 
+                        <td height="20" colspan="2" bgcolor="E0EDE8"><strong>3. 
+                          Consigned To</strong></td>
+                        <td colspan="3" bgcolor="E0EDE8"><strong>7. Forwarding 
+                          Agent</strong></td>
+                      </tr>
+                      <tr align="left" valign="middle"> 
+                        <td colspan="2" valign="top"><textarea name="txtConsigneeInfo" cols=45 rows=4 class="multilinetextfield" readonly><%= vConsigneeInfo %></textarea>                        </td>
+                        <td colspan="3" valign="top"> <table width="100%" border="0" cellpadding="0" cellspacing="2" class="bodycopy">
+                            <tr> 
+                              <td> <TEXTAREA name="txtForwardAgentInfo" cols=60 rows=3 class="multilinetextfield" readonly><%= vForwardAgentInfo %></TEXTAREA>                              </td>
+                            </tr>
+                            <tr> 
+                              <td height="20" bgcolor="E0EDE8"><strong>8. Point 
+                                (State) of Origin or FTZ No.</strong></td>
+                            </tr>
+                            <tr> 
+                              <td> <input name="txtOriginCountry" class="shorttextfield" Value="<%= vOriginCountry %>" readonly>                              </td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                      <tr align="left" valign="middle" bgcolor="E0EDE8"> 
+                        <td height="20" colspan="2" bgcolor="E0EDE8"><strong>4.Notify 
+                          Party/Intermediate Consignee</strong></td>
+                        <td colspan="3"><strong>9. Domestic Routing/Export Instructions</strong></td>
+                      </tr>
+                      <tr align="left" valign="middle"> 
+                        <td colspan="2" valign="top"><textarea name="txtNotifyInfo" cols=45 rows=4 class="multilinetextfield" readonly><%= vNotifyInfo %></textarea>
+                          <table width="100%" border="0" cellpadding="1" cellspacing="2" class="bodycopy">
+                            
+                          </table></td>
+                        <td colspan="3" valign="top"> <TEXTAREA name="txtExportInstr" cols=60 rows=5 class="multilinetextfield" readonly><%= vExportInstr %></TEXTAREA>                        </td>
+                      </tr>
+                      <tr align="left" valign="middle"> 
+                        <td width="18%" height="20" bgcolor="E0EDE8"><strong>12. 
+                          Pre-Carriage By </strong></td>
+                        <td width="22%" bgcolor="E0EDE8"><strong>13. Place of 
+                          Receipt By Pre-Carrier</strong></td>
+                        <td colspan="3" bgcolor="#FFFFFF">&nbsp;</td>
+                      </tr>
+                      <tr align="left" valign="middle"> 
+                        <td bgcolor="#FFFFFF"> <input name="txtPreCarriage" class="shorttextfield" Value="<%= vPreCarriage %>" size="32" readonly>                        </td>
+                        <td bgcolor="#FFFFFF"> <input name="txtPreReceiptPlace" class="shorttextfield" Value="<%= vPreReceiptPlace %>" readonly>                        </td>
+                        <td colspan="3" bgcolor="#FFFFFF">&nbsp;</td>
+                      </tr>
+                      <tr align="left" valign="middle"> 
+                        <td height="20" bgcolor="E0EDE8"><strong>14. Exporting 
+                          Carrier</strong></td>
+                        <td bgcolor="E0EDE8"><strong>15. Port of Loading/Export</strong></td>
+                        <td colspan="3" bgcolor="E0EDE8"><strong>10. Loading Pier/Terminal</strong></td>
+                      </tr>
+                      <tr align="left" valign="middle"> 
+                        <td> <input name="txtExportCarrier" type=text class="shorttextfield" Value="<%= vExportCarrier %>" size="32" readonly>                        </td>
+                        <td> <input name="txtLoadingPort" type=text class="shorttextfield" Value="<%= vLoadingPort %>" readonly>                        </td>
+                        <td> <input name="txtLoadingPier" class="shorttextfield" Value="<%= vLoadingPier %>" readonly>                        </td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr align="left" valign="top" bgcolor="E0EDE8"> 
+                        <td height="20" bgcolor="E0EDE8"><strong>16. Foreign Port 
+                          of Unloading</strong> <br></td>
+                        <td><strong>17. Place of Delivery By On-Carrier</strong></td>
+                        <td><strong>11. Type of Move</strong></td>
+                        <td colspan="2"><strong>11a. Containerized</strong></td>
+                      </tr>
+                      <tr align="left" valign="middle"> 
+                        <td> <input name="txtUnloadingPort" type=text class="shorttextfield" Value="<%= vUnloadingPort %>" readonly>                        </td>
+                        <td> <input name="txtDeliveryPlace" class="shorttextfield" Value="<%= vDeliveryPlace %>" readonly>                        </td>
+                        <td> <input name="lstMoveType" type=text class="shorttextfield" value="<%= vMoveType %>">                        </td>
+                        <td> <input type="checkbox" name="cConYes" value="Y" <% if vConYes="Y" then response.write("checked") %>  disabled="disabled">
+                          &nbsp; Yes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" name="cConNo" value="Y" <% if not vConYes="Y" then response.write("checked") %>  disabled="disabled"> 
+                          &nbsp; No</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                    </table>
+					   </td>
+				     </tr>
+					 <tr>
+					 <td>
+					 <table width="100%" border="0" cellpadding="2" cellspacing="0" class="bodycopy">
+                      					  <tr>
+					    <td colspan="9" height="2" bgcolor="6D8C80"></td>
+					  </tr>
+					  <tr align="left" valign="middle" bgcolor="BFD0C9"> 
+                        <td height="20" colspan="9" class="bodyheader">FREIGHT 
+                          CHARGE<strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                          <input type="checkbox" name="cShowPWeightCharge" value="Y" <% if vShowPrepaidWeightCharge="Y" then response.write("checked") %>  disabled="disabled">
+                          Show Prepaid Ocean Freight &nbsp;&nbsp;&nbsp;&nbsp; 
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                          <input type="checkbox" name="cShowCWeightCharge" value="Y" <% if vShowCollectWeightCharge="Y" then response.write("checked") %>  disabled="disabled">
+                          Show Collect Ocean Freight &nbsp; </strong></td>
+                      </tr>
+					                        					  <tr>
+					    <td colspan="9" height="1" bgcolor="FFFFFF"></td>
+					  </tr>
+                      <tr align="left" valign="middle" bgcolor="E0EDE8"> 
+                        <td height="20"><strong>C/P</strong></td>
+                        <td><strong>No. of Pieces</strong></td>
+                        <td><strong>Gross Weight (KG)</strong></td>
+                        <td><strong>Gross Weight (LB)</strong></td>
+                        <td><strong>Dimension (CBM)</strong></td>
+                        <td><strong>Dimension(CFT)</strong></td>
+                        <td><strong>Rate</strong></td>
+                        <td><strong>Total</strong></td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr align="left" valign="middle"> 
+                        <td><%response.write(vWeightCP)%></td>
+                        <td><input name="txtPieces" class="numberfield" OnBlur="CheckData()" Value="<%= vPieces %>" size="8" readonly></td>
+                        <td><input name="txtGrossWeight" class="shorttextfield" OnBlur="CheckData1()" Value="<%= vGrossWeight %>" size="15" readonly></td>
+                        <td><input name="txtGWLB" class="shorttextfield" OnBlur="CheckData2()" Value="<%= vGWLB %>" size="15" readonly></td>
+                        <td><input type=hidden name="hDemDetail" Value="<%= vDemDetail %>" readonly > 
+                          <input name="txtMeasurement" class="shorttextfield" OnBlur="CheckData3()" Value="<%= vMeasurement %>" size="15" readonly>
+                        </td>
+                        <td><input name="txtMCFT" class="shorttextfield" OnBlur="CheckData4()" Value="<%= vMCFT %>" size="15" readonly>
+                        </td>
+                        <td><input name="txtChargeRate" class="shorttextfield" Value="<%= vChargeRate %>" size="10" readonly></td>
+                        <td><input name="txtTotalWeightCharge" class="shorttextfield" OnBlur="TotalWeightCharge()" Value="<%= vTotalWeightCharge %>" size="15" readonly></td>
+                        <td></td>
+                      </tr>
+                      <tr align="left" valign="middle" bgcolor="f3f3f3"> 
+                        <td height="20">&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                    </table>
+
+					 </td>
+					 </tr>
+					 <tr>
+					 <td>
+					 <table width="100%" border="0" cellpadding="1" cellspacing="2" class="bodycopy">
+                      <tr align="left" valign="top" bgcolor="E0EDE8"> 
+                        <td width="16%" height="21"><strong>18. Marks and Numbers</strong></td>
+                        <td width="15%"><strong>19. Number of Packages</strong></td>
+                        <td width="27%"><strong>20. Description of Commodities</strong> 
+                          <br>
+                          in Schedule B Detail</td>
+                        <td width="26%" bgcolor="E0EDE8"><strong>21. Gross Weight</strong> 
+                          (KG) &nbsp;&nbsp;&nbsp; <strong>22. Measurement</strong> 
+                        </td>
+                      </tr>
+                      <tr align="left" valign="top"> 
+                        <td rowspan="4"> <TEXTAREA name="txtDesc1" cols="12" rows=17 WRAP=VIRTUAL class="multilinetextfield" readonly><%= vDesc1 %></TEXTAREA></td>
+                        <td rowspan="4"> <textarea name="txtDesc2" cols="9" rows="17" wrap=VIRTUAL class="multilinetextfield" readonly><%= vDesc2 %></textarea></td>
+                        <td rowspan="4"> <textarea name="txtDesc3" cols="34" rows="17" wrap=VIRTUAL class="multilinetextfield" readonly><%= vDesc3 %></textarea></td>
+                        <td><textarea name="txtDesc6" cols="25" rows="11" wrap=VIRTUAL class="multilinetextfield" readonly><%= vDesc6 %></textarea></td>
+                      </tr>
+                      <tr align="left" valign="top"> 
+                        <td><textarea name="txtDesc5" cols="25" rows="5" wrap=VIRTUAL class="multilinetextfield" readonly><%= vDesc5 %></textarea></td>
+                      </tr>
+                      <tr align="left" valign="top"> 
+                        <td height="20" valign="middle" bgcolor="E0EDE8"><strong>Menifest 
+                          Description</strong></td>
+                      </tr>
+                      <tr align="left" valign="top"> 
+                        <td><textarea name="txtManifestDesc" cols="25" rows="4" wrap=hard class="multilinetextfield" readonly><%= vManifestDesc %></textarea></td>
+                      </tr>
+                    </table>
+					 </td>
+					 </tr>
+					 					 <tr>
+					 <td>
+					 <table width="100%" border="0" cellpadding="2" cellspacing="0" class="bodycopy">
+                      <tr align="left" valign="middle"> 
+                        <td height="1" colspan="5" bgcolor="#6D8C80"></td>
+                      </tr>
+                      <tr align="left" valign="middle" bgcolor="BFD0C9"> 
+                        <td height="20" colspan="5" class="bodyheader">OTHER CHARGE 
+                          <strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                          <input type="hidden" name="cShowPOtherCharge" value="Y" <% if vShowPrepaidOtherCharge="Y" then response.write("checked") %> readonly>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                          <input type="hidden" name="cShowCOtherCharge" value="Y" <% if vShowCollectOtherCharge="Y" then response.write("checked") %> readonly>
+                          </strong> </td>
+                      </tr>
+					                        <tr align="left" valign="middle"> 
+                        <td height="1" colspan="5" bgcolor="#FFFFFF"></td>
+                      </tr>
+                      <tr align="left" valign="middle" bgcolor="E0EDE8"> 
+                        <td width="206" height="20"><strong>C/P</strong></td>
+                        <td width="220"><strong>Charge Item</strong></td>
+                        <td colspan="3"><strong>Amount</strong></td>
+                      </tr>
+                      <input type="hidden" id="ChargeAmt" name="1">
+                      <input type="hidden" id="CostAmt" name="2">
+                      <input type="hidden" id="ChargeItem" name="3">
+                      <input type="hidden" id="ChargeVendor" name="4">
+                      <input type="hidden" id="ItemName" name="5">
+                      <% for i=0 to tIndex-1 %>
+                      <tr align="left" valign="middle" bgcolor="#FFFFFF"> 
+                        <td height="20"><input type=hidden id=ItemName Name="hItemName<%= i %>" Value="<%= aChargeItemName(i) %>">
+                            <% if aChargeCP(i)="C" then response.write("C") %>
+                            <% if aChargeCP(i)="P" then response.write("P") %>
+						</td>
+                        <td><input name="lstChargeItem<%= i %>" class="shorttextfield" Value="<%= aItemNo(k)%>" style="WIDTH: 175px" readonly></td>
+                        <td><input name="txtChargeAmt<%= i %>" class="shorttextfield" id="ChargeAmt" Value="<%= aChargeAmt(i) %>" size="26" readonly></td>
+                        <td>&nbsp;</td>
+                        <td width="71"></td>
+                      </tr>
+                      <% next %>
+                      <tr align="left" valign="middle" bgcolor="#F3f3f3"> 
+                        <td width="206" height="20">&nbsp; </td>
+                        <td width="220">&nbsp;</td>
+                        <td width="363">&nbsp;</td>
+                        <td width="71">&nbsp;</td>
+                        <td></td>
+                      </tr>
+                      <tr align="left" valign="middle"> 
+                        <td height="1" colspan="5" bgcolor="ffffff"></td>
+                      </tr>
+                      <tr align="left" valign="middle" bgcolor="E0EDE8"> 
+                        <td height="20" colspan="2" bgcolor="E0EDE8"> <div align="left"> 
+                          </div></td>
+                        <td colspan="3">&nbsp; </td>
+                      </tr>
+                      <tr align="left" valign="middle"> 
+                        <td height="1" colspan="5" bgcolor="ffffff"></td>
+                      </tr>
+                      <tr align="left" valign="middle" bgcolor="#FFFFFF"> 
+                        <td height="20" colspan="5">Carrier has a policy against 
+                          payment, solicitation, or receipt of any rebate, directly 
+                          or indirectly. which would be unlawful under the United 
+                          Stated Shipping Act. 1984 as amended.</td>
+                      </tr>
+                      <tr align="left" valign="middle" bgcolor="#FFFFFF"> 
+                        <td colspan="5" height="20">DECLARED VALUE 
+                          <input name="txtDeclaredValue" class="shorttextfield" OnBlur="CheckData()" Value="<%= vDeclaredValue %>" size="16" readonly>
+                          READ CLAUSE 29 HEREOF CONCERNING EXTRA FREIGHT AND CARRIER'S 
+                          LIMITATIONS OF LIABILITY.</td>
+                      </tr>
+                    </table>
+					 </td>
+					 </tr>
+					 <tr>
+					 <td>
+					 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="50%" align="left" valign="top"> 
+                          <table width="100%" border="0" cellpadding="1" cellspacing="2" class="bodycopy">
+                            <tr align="center" valign="middle" bgcolor="E0EDE8"> 
+                              <td colspan="3"><strong>Freight Rates, Charges, 
+                                Weights and/Or Measurements</strong></td>
+                            </tr>
+                            <tr align="left" valign="middle" bgcolor="E0EDE8"> 
+                              <td width="60%" height="20">Subject to Correction</td>
+                              <td width="20%">Prepaid</td>
+                              <td width="20%" bgcolor="E0EDE8">Collect</td>
+                            </tr>
+                            <tr align="left" valign="middle"> 
+                              <td>
+                                <input name="txtOceanFreight" class="shorttextfield" Value="Ocean Freight" size="32" readonly>
+                                </td>
+                              <td> 
+                                <input name="txtPOceanFreight" class="numberfield" Value="<% if vWeightCP="P" then response.write(vTotalWeightCharge) %>" size="12" ReadOnly>
+                                </td>
+                              <td> 
+                                <input name="txtCOceanFreight" class="numberfield" Value="<% if vWeightCP="C" then response.write(vTotalWeightCharge) %>" size="12" ReadOnly>
+                                </td>
+                            </tr>
+					  <input type=hidden id="POtherCharge" name="6">
+					  <input type=hidden id="COtherCharge">
+<% for i=0 to 9 %>                            
+							<tr align="left" valign="middle"> 
+                              <td> <input name="txtOtherChargeDesc<%= i %>" class="shorttextfield" value="<%= aChargeItemName(i) %>" size="32" readonly></td>
+                              <td>
+                                <input name="txtPOtherCharge<%= i %>" class="numberfield" id="POtherCharge" Value="<% if aChargeCP(i)="P" then response.write(aChargeAmt(i)) %>" size="12" ReadOnly>
+                                </td>
+                              <td>
+                                <input name="txtCOtherCharge<%= i %>" class="numberfield" id="COtherCharge" Value="<% if aChargeCP(i)="C" then response.write(aChargeAmt(i)) %>" size="12" ReadOnly>
+                                </td>
+                            </tr>
+<% next %>
+                            <tr>
+                              <td align="right" valign="middle"><strong>Grand 
+                                Total</strong></td>
+                              <td align="left" valign="middle">
+                                <strong>
+                                <input name="txtTotalPrepaid" class="numberfield" Value="<%= vTotalPrepaid %>" size="12" ReadOnly>
+                                </strong>
+                                </td>
+                              <td align="left" valign="middle"><strong>
+                                <input name="txtTotalCollect" class="numberfield" Value="<%= vTotalCollect %>" size="12" ReadOnly></strong>
+                                </td>
+                            </tr>
+                            <tr>
+                              <td>&nbsp;</td>
+                              <td align="left" valign="middle">&nbsp;</td>
+                              <td align="left" valign="middle">&nbsp;</td>
+                            </tr>
+                          </table></td>
+                        <td align="left" valign="top"><table width="100%" border="0" cellpadding="2" cellspacing="2" class="bodycopy">
+                            <tr> 
+                              <td colspan="4" align="left" valign="middle">Received 
+                                by Carrier for shipment by ocean vessel between 
+                                port of loading and port of discharge, and for 
+                                arrangement of pre-carriage from place of receipt 
+                                and on-carriage to place of delivery, where stated 
+                                above, the goods as specified above in apparent 
+                                good order and condition unless otherwise stated,. 
+                                The goods to be delivered at the above mentioned 
+                                port of discharge or place of delivery, whichever 
+                                is applicable, subject always to the exceptions, 
+                                limitations, conditions and liberties set out 
+                                on the reverse side hereof, to which the Shipper 
+                                and/or Consignee agree to accepting this Bill 
+                                of loading. IN WITNESS WHEREOF three(3) original 
+                                Bills of loading have been signed, not otherwise 
+                                stated above, one of which being accomplished 
+                                the other shall be void.</td>
+                            </tr>
+                            <tr> 
+                              <td width="10%" align="left" valign="middle">At</td>
+                              <td width="40%" align="left" valign="middle"><code><kbd><sup> 
+                                <input name="txtPlace" class="shorttextfield" Value="<%= vPlace %>" size="37" readonly>
+                                </sup></kbd></code></td>
+                              <td width="10%" align="left" valign="middle">&nbsp;</td>
+                              <td width="40%" align="left" valign="middle">&nbsp;</td>
+                            </tr>
+                            <tr> 
+                              <td align="left" valign="middle">By</td>
+                              <td align="left" valign="middle"><code><kbd><sup> 
+                                <input name="txtBy" class="shorttextfield" Value="<%= vBy %>" size="37" readonly>
+                                </sup></kbd></code></td>
+                              <td align="left" valign="middle">&nbsp;</td>
+                              <td align="left" valign="middle">&nbsp;</td>
+                            </tr>
+                            <tr> 
+                              <td height="21" align="left" valign="middle">Date</td>
+                              <td align="left" valign="middle"><code><kbd><sup> 
+                                <input name="txtDate" class="shorttextfield" Value="<%= vDate %>" size="37" readonly>
+                                </sup></kbd></code></td>
+                              <td align="left" valign="middle">&nbsp;</td>
+                              <td align="left" valign="middle">&nbsp;</td>
+                            </tr>
+                            <tr bgcolor="E0EDE8"> 
+                              <td height="20" colspan="2" align="left" valign="middle"><strong>MBOL 
+                                No</strong></td>
+                              <td colspan="2" align="left" valign="middle"><strong>HBOL 
+                                No</strong></td>
+                            </tr>
+                            <tr>
+                              <td colspan="2" align="left" valign="middle"><code><kbd><sup>
+                                <input name="txtMBOL" class="shorttextfield" Value="<%= vMBOL %>" size="20" Readonly>
+                                </sup></kbd></code></td>
+                              <td colspan="2" align="left" valign="middle"><code><kbd><sup>
+                                <input name="T15" class="shorttextfield" Value="<%= vHBOL %>" size="20" readonly>
+                                </sup></kbd></code></td>
+                            </tr>
+                          </table></td>
+  </tr>
+  
+</table>
+
+					 </td>
+					 </tr>
+              </table></td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="1" bgcolor="6D8C80"></td>
+        </tr>
+		<tr> 
+            <td height="24" colspan="2" align="center" valign="middle" bgcolor="#BFD0C9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <img src="../images/button_print_medium.gif" width="52" height="18" name="bPrint" OnClick="PrintForm()"  style="cursor:hand">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            </td>
+        </tr>
+      </table>
+	  </form>
+      </td>
+        </tr>
+</table>
+<br>
+</body>
+<SCRIPT LANGUAGE="vbscript">
+<!---
+AskOverWrite="<%= AskOverWrite %>"
+if AskOverWrite="yes" then
+	ok=MsgBox ("The HBOL is existed. Overwrite it?" & chr(13) & "Yes?",36,"Message")
+	if ok=6 then	
+		document.form1.action="new_edit_hbol.asp?Save=yes&OverWrite=yes"
+		document.form1.method="POST"
+		form1.submit()
+	end if
+end if
+Sub AgentChange()
+Dim sindex,AgentName
+sindex=Document.form1.lstAgent.Selectedindex
+AgentName=Document.form1.lstAgent.item(sindex).Text
+AgentInfo=Document.form1.lstAgent.item(sindex).Value
+document.form1.hAgent.Value=AgentName
+pos=Instr(AgentInfo,"-")
+if pos>0 then
+	AgentAcct=Left(AgentInfo,pos-1)
+	AgentInfo=Mid(AgentInfo,pos+1,200)
+end if
+document.form1.hAgentInfo.Value=AgentInfo
+document.form1.hAgentAcct.Value=AgentAcct
+document.form1.txtExportInstr.Value=AgentInfo
+End Sub
+Sub ShipperChange()
+Dim sindex,ShipperInfo,ShipperName
+sindex=Document.form1.lstShipper.Selectedindex
+ShipperInfo=Document.form1.lstShipper.item(sindex).value
+ShipperName=Document.form1.lstShipper.item(sindex).Text
+pos=Instr(shipperInfo,"-")
+if pos>0 then
+	ShipperAcct=Left(ShipperInfo,pos-1)
+	ShipperInfo=Mid(ShipperInfo,pos+1,200)
+end if
+document.form1.hShipper.Value=ShipperName
+document.form1.txtShipperInfo.Value=ShipperInfo
+document.form1.hShipperAcct.Value=ShipperAcct
+'document.frmHAWB.txtSignature.Value="AS AGENT" & chr(10) & "FOR " & ShipperName
+End Sub
+Sub ConsigneeChange()
+Dim sindex,ConsigneeInfo,ConsigneeName
+sindex=Document.form1.lstConsignee.Selectedindex
+ConsigneeInfo=Document.form1.lstConsignee.item(sindex).value
+ConsigneeName=Document.form1.lstConsignee.item(sindex).Text
+pos=Instr(ConsigneeInfo,"-")
+if pos>0 then
+	ConsigneeAcct=Left(ConsigneeInfo,pos-1)
+	ConsigneeInfo=Mid(ConsigneeInfo,pos+1,200)
+end if
+document.form1.hConsignee.Value=ConsigneeName
+document.form1.txtConsigneeInfo.Value=ConsigneeInfo
+document.form1.hConsigneeAcct.Value=ConsigneeAcct
+End Sub
+Sub NotifyChange()
+Dim sindex,ShipperInfo,ShipperName
+sindex=Document.form1.lstNotify.Selectedindex
+NotifyInfo=Document.form1.lstNotify.item(sindex).value
+pos=Instr(NotifyInfo,"-")
+if pos>0 then
+	NotifyInfo=Mid(NotifyInfo,pos+1,200)
+end if
+document.form1.txtNotifyInfo.Value=NotifyInfo
+End Sub
+Sub SaveClick(SaveAsNew)
+OC=document.form1.hNoItem.Value
+for i=1 to OC
+	oItem=document.all("ChargeItem").item(i).Value
+	oAmt=document.all("ChargeAmt").item(i).Value
+	if oAmt="" then oAmt=0
+	'oVendor=document.all("ChargeVendor").item(i).Value
+	'oCost=document.all("CostAmt").item(i).Value
+	if oCost="" then oCost=0
+	if Not IsNumeric(oAmt) then
+		MsgBox "Please enter a Numeric Value for CHARGE AMT!"
+		exit Sub
+	end if
+	if Not IsNumeric(oCost) then
+		MsgBox "Please enter a Numeric Value for CHARGE COST!"
+		exit Sub
+	end if
+	if not oAmt=0 and oItem=0 then
+		MsgBox "Please select an item!"
+		Exit Sub
+	end if
+	'if oVendor=0 and Not oCost=0 then
+	'	MsgBox "Please select a Vendor!"
+	'	Exit Sub
+	'end if
+	if Not oAmt="" and Not IsNumeric(oAmt) then
+		MsgBox "Please enter a Numeric Value for CHARGE AMT!"
+		exit Sub
+	end if
+	'if Not oCost="" and Not IsNumeric(oCost) then
+	'	MsgBox "Please enter a Numeric Value for CHARGE COST!"
+	'	exit Sub
+	'end if
+next
+if document.form1.lstShipper.Value="" then
+	MsgBox "Please select an exporter!"
+'elseif document.form1.lstConsignee.Value="" then
+'	MsgBox "Please select a consignee!"
+elseif document.form1.lstBookingNum.Value="" then
+	MsgBox "Please select a Booking Number!"
+else
+	NewHBOL=document.form1.hNewHBOL.value
+	HBOLPrefix=document.form1.hHBOLPrefix.Value
+	if HBOLPrefix="" then
+		HBOLPrefix=document.form1.lstHBOLPrefix.item(0).Text
+		document.form1.hHBOLPrefix.Value=HBOLPrefix
+	end if
+	if SaveAsNew="yes" then
+		document.form1.action="new_edit_hbol.asp?SaveAsNew=yes"
+	else
+		document.form1.action="new_edit_hbol.asp?Save=yes&New=" & NewHBOL
+	end if
+	document.form1.method="POST"
+	form1.submit()
+end if
+End Sub
+
+
+Sub AddItem()
+NoItem=Cint(document.form1.hNoItem.Value)
+'if document.all("ChargeItem").item(NoItem+1).Value=0 then
+'	MsgBox "Please select a charge item!"
+''elseif document.all("ChargeVendor").item(NoItem+1).Value=0 then
+'	'MsgBox "Please select a vendor!"
+'elseif document.all("ChargeAmt").item(NoItem+1).Value="" then
+'	MsgBox "Please enter a charge amt!"
+'elseif IsNumeric(document.all("ChargeAmt").item(NoItem+1).Value)=false then
+'	MsgBox "Please enter a numeric value for charge amt!"
+'elseif IsNumeric(document.all("CostAmt").item(NoItem+1).Value)=false and not document.all("CostAmt").item(NoItem+1).Value="" then
+'	MsgBox "Please enter a numeric value for cost amt!"
+if NoItem>=10 then
+	MsgBox "Can't have more than 10 Charge Items!"
+else
+	'if document.all("CostAmt").item(NoItem+1).Value="" then
+	'	document.all("CostAmt").item(NoItem+1).Value=0
+	'end if
+	document.form1.hNoItem.Value=NoItem+1
+	document.form1.action="new_edit_hbol.asp?Add=yes"
+	document.form1.method="POST"
+	form1.submit()
+end if
+End Sub
+Sub DeleteItem(ItemNo)
+	if document.form1.hNoItem.Value>0 and not cint(document.form1.hNoItem.Value)=ItemNo then
+		ok=MsgBox ("Are you sure you want to delete this item?" & chr(13) & "Continue?",36,"Message")
+		if ok=6 then	
+			document.form1.action="new_edit_hbol.asp?Delete=yes&dItemNo=" & ItemNo
+			document.form1.method="POST"
+			form1.submit()
+		end if
+	end if
+End Sub
+Sub ConYes()
+if document.form1.cConYes.Checked=True then
+	document.form1.cConNo.Checked=False
+else
+	document.form1.cConNo.Checked=True
+end if
+End Sub
+Sub ConNo()
+if document.form1.cConNo.Checked=True then
+	document.form1.cConYes.Checked=False
+else
+	document.form1.cConYes.Checked=True
+end if
+End Sub
+Sub CalClick()
+WeightCP=document.form1.lstWeightCP.Value
+GWKG=document.form1.txtGrossWeight.Value
+GWLB=document.form1.txtGWLB.Value
+Pieces=document.form1.txtPieces.Value
+Rate=document.form1.txtChargeRate.Value
+if Rate="" then Rate=0
+'Dem=document.form1.txtDemDetail.Value
+MCBM=document.form1.txtMeasurement.Value
+MCFT=document.form1.txtMCFT.Value
+TotalDem=0
+
+'if Dem="" then Dem="0@0X0X0"
+'pos=InStr(Dem,Chr(10))
+'TotalDem=0
+'TotalPieces=0
+'do While(pos>0)
+'	if len(Dem)>0 then
+'		DD=Left(Dem,pos-1)
+'	end if
+'	pos1=InStr(DD,"@")
+'	if pos1>0 then
+'		D1=Left(DD,pos1-1)
+'		TotalPieces=TotalPieces+D1
+'		DD=Mid(DD,pos1+1,1000)
+'	else
+'		D1=0
+'	end if
+'	pos1=Instr(DD,"X")
+'	if pos1>0 then
+'		D2=Left(DD,pos1-1)
+'		DD=Mid(DD,pos1+1,100)
+'	else
+'		D2=0
+'	end if
+'	pos1=Instr(DD,"X")
+'	if pos1>0 then
+'		D3=Left(DD,pos1-1)
+'		D4=Mid(DD,pos1+1,100)
+'	else
+'		D3=0
+'	end if
+'	if IsNumeric(D4)=false then D4=0
+'	TemDem=D1*D2*D3*D4
+'	TotalDem=TotalDem + TemDem
+'	dem=Mid(dem,pos+1,2000)
+'	pos=InStr(Dem,Chr(10))
+'loop
+'if Scale="K" then
+'	TotalDem=Round(TotalDem,2)/1000000
+'else
+'	TotalDem=Round(TotalDem,2)/1728
+'end if
+
+if IsNumeric(Pieces)=False then
+	MsgBox "Please enter a numeric value for No. of Pieces!"
+elseif IsNumeric(GrossWeight)=False then
+	MsgBox "Please enter a numeric value for Gross Weight!"
+elseif not Rate="" and IsNumeric(Rate)=false then
+	MsgBox "Please enter a numeric value for Rate!"
+elseif not Measuremnet="" and IsNumeric(Measurement)=false then
+	MsgBox "Please enter a numeric value for MEASUREMENT!"
+elseif cLng(TotalPieces)>0 and not cLng(TotalPieces)=cLng(Pieces) then
+	MsgBox "Pieces mismatch!"
+else
+	if Not MCBM="" then
+		if MCBM>0 then
+			TotalDem=MCBM
+		end if
+	end if
+	cw=cdbl(TotalDem)
+	GrossWeight=cdbl(GWKG)/1000
+	if cw < cdbl(GrossWeight) then cw=GrossWeight
+	tc=Round(cDbl(Rate) * cw,2)
+	if not document.form1.txtTotalWeightCharge.Value="" then
+		if document.form1.txtTotalWeightCharge.Value=0 then
+			document.form1.txtTotalWeightCharge.Value=tc
+			if WeightCP="P" then
+				document.form1.txtPOceanFreight.Value=tc
+				document.form1.txtCOceanFreight.Value=0
+			else
+				document.form1.txtCOceanFreight.Value=tc
+				document.form1.txtPOceanFreight.Value=0
+			end if
+		end if
+	elseif document.form1.txtTotalWeightCharge.Value="" then
+		document.form1.txtTotalWeightCharge.Value=tc
+		if WeightCP="P" then
+			document.form1.txtPOceanFreight.Value=tc
+			document.form1.txtCOceanFreight.Value=0
+		else
+			document.form1.txtCOceanFreight.Value=tc
+			document.form1.txtPOceanFreight.Value=0
+		end if
+	end if
+	document.form1.txtMeasurement.value=Round(TotalDem,2)
+end if
+'if Scale="K" then
+'	vLb=Round(vGrossWeight*2.204,2)
+'	vCF=Round(vMeasurement*35.31,2)
+'else
+'	vLb=vGrossWeight
+'	vGrossWeight=Round(vLb*0.454,2)
+'	vCF=cDbl(vMeasurement)
+'	vMeasurement=Round(vCF/35.31,2)
+'end if
+vDesc6=GWKG & " KG" & "  " & MCBM & " CBM" & chr(13)
+vDesc6=vDesc6 & GWLB & " LB" & "  " & MCFT & " CF"
+document.form1.txtDesc6.Value=vDesc6
+End Sub
+
+
+Sub ItemChange(k)
+sIndex=document.all("ChargeItem").item(k+1).SelectedIndex
+document.all("ItemName").item(k+1).Value=document.all("ChargeItem").item(k+1).item(sIndex).Text
+End Sub
+
+
+Sub TotalWeightCharge()
+WeightCharge=document.form1.txtTotalWeightCharge.Value
+if Not WeightCharge="" then
+	if IsNumeric(WeightCharge)=false then
+		MsgBox "Please enter a numeric value!"
+		document.form1.txtTotalWeightCharge.Value=""
+	else
+		if document.form1.lstWeightCP.value="P" then
+			document.form1.txtPOceanFreight.Value=WeightCharge
+			document.form1.txtCOceanFreight.Value=""
+			TotalPCharge=cdbl(WeightCharge)
+		else
+			document.form1.txtCOceanFreight.Value=WeightCharge
+			document.form1.txtPOceanFreight.Value=""
+			TotalCCharge=cdbl(WeightCharge)
+		end if
+		for k=1 to 10
+			pc=document.all("POtherCharge").item(k).Value
+			if not pc="" then
+				pc=cdbl(pc)
+			else
+				pc=0
+			end if
+			TotalPCharge=TotalPCharge+pc
+			cc=document.all("COtherCharge").item(k).Value
+			if not cc="" then
+				cc=cdbl(cc)
+			else
+				cc=0
+			end if
+			TotalCCharge=TotalCCharge+cc
+		next
+		document.form1.txtTotalPrepaid.Value=TotalPCharge
+		document.form1.txtTotalCollect.Value=TotalCCharge
+	end if
+end if
+End Sub
+Sub BookingChange()
+sIndex=document.form1.lstBookingNum.selectedindex
+BookingNum=document.form1.lstBookingNum.item(sindex).Text
+document.form1.hBookingNum.Value=BookingNum
+bInfo=document.form1.lstBookingNum.value
+pos=0
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	DepartureDate=Mid(bInfo,1,pos-1)
+	bInfo=Mid(bInfo,pos+1,200)
+end if
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	LoadingPort=Mid(bInfo,1,pos-1)
+	bInfo=Mid(bInfo,pos+1,200)
+end if
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	unLoadingPort=Mid(bInfo,1,pos-1)
+	bInfo=Mid(bInfo,pos+1,200)
+end if
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	ExportCarrier=Mid(bInfo,1,pos-1)
+	bInfo=Mid(bInfo,pos+1,200)
+end if
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	Country=Mid(bInfo,1,pos-1)
+	bInfo=Mid(bInfo,pos+1,200)
+end if
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	MBOLNum=Mid(bInfo,1,pos-1)
+	bInfo=Mid(bInfo,pos+1,200)
+end if
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	MoveType=Mid(bInfo,1,pos-1)
+	bInfo=Mid(bInfo,pos+1,200)
+end if
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	ReceiptPlace=Mid(bInfo,1,pos-1)
+	bInfo=Mid(bInfo,pos+1,200)
+end if
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	DeliveryPlace=Mid(bInfo,1,pos-1)
+	bInfo=Mid(bInfo,pos+1,200)
+end if
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	FileNo=Mid(bInfo,1,pos-1)
+	bInfo=Mid(bInfo,pos+1,200)
+end if
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	DestCountry=Mid(bInfo,1,pos-1)
+	VN=Mid(bInfo,pos+1,200)
+end if
+document.form1.txtLoadingPort.Value=LoadingPort
+document.form1.txtUnLoadingPort.Value=unLoadingPort
+document.form1.txtExportCarrier.Value=ExportCarrier
+document.form1.txtDeliveryPlace.Value=DeliveryPlace
+document.form1.txtOriginCountry.Value=Country
+document.form1.hDepartureDate.Value=DepartureDate
+document.form1.txtMBOL.value=MBOLNum
+document.form1.lstMoveType.value=MoveType
+document.form1.txtPreReceiptPlace.Value=ReceiptPlace
+document.form1.txtDeliveryPlace.Value=DeliveryPlace
+document.form1.txtExportRef.Value=FileNo & chr(10) & "MBOL:" & MBOLNum
+document.form1.hDestCountry.Value=DestCountry
+document.form1.hVesselName.Value=VN
+CP=document.form1.lstWeightCP.Value
+
+if CP="C" then
+	CP="COLLECT"
+else
+	CP="PREPAID"
+end if
+Desc5="FREIGHT " & CP & chr(13) & "LADEN ON BOARD:" & chr(13) & DepartureDate & chr(13) & ExportCarrier & chr(13) & LoadingPort
+document.form1.txtDesc5.Value=Desc5
+End Sub
+
+Sub WeightCPChange()
+sIndex=document.form1.lstBookingNum.selectedindex
+BookingNum=document.form1.lstBookingNum.item(sindex).Text
+document.form1.hBookingNum.Value=BookingNum
+bInfo=document.form1.lstBookingNum.value
+pos=0
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	DepartureDate=Mid(bInfo,1,pos-1)
+	bInfo=Mid(bInfo,pos+1,200)
+end if
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	LoadingPort=Mid(bInfo,1,pos-1)
+	bInfo=Mid(bInfo,pos+1,200)
+end if
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	unLoadingPort=Mid(bInfo,1,pos-1)
+	bInfo=Mid(bInfo,pos+1,200)
+end if
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	ExportCarrier=Mid(bInfo,1,pos-1)
+	bInfo=Mid(bInfo,pos+1,200)
+end if
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	Country=Mid(bInfo,1,pos-1)
+	MBOLNum=Mid(bInfo,pos+1,200)
+end if
+'document.form1.txtLoadingPort.Value=LoadingPort
+'document.form1.txtUnLoadingPort.Value=unLoadingPort
+'document.form1.txtExportCarrier.Value=ExportCarrier
+'document.form1.txtDeliveryPlace.Value=DeliveryPlace
+'document.form1.txtOriginCountry.Value=Country
+'document.form1.hDepartureDate.Value=DepartureDate
+CP=document.form1.lstWeightCP.Value
+if CP="C" then
+	CP="COLLECT"
+else
+	CP="PREPAID"
+end if
+Desc5="FREIGHT " & CP & chr(13) & "LADEN ON BOARD:" & chr(13) & DepartureDate & chr(13) & ExportCarrier & chr(13) & LoadingPort
+document.form1.txtDesc5.Value=Desc5
+WeightCharge=document.form1.txtTotalWeightCharge.Value
+if Not WeightCharge="" then
+	if IsNumeric(WeightCharge)=false then
+		MsgBox "Please enter a numeric value!"
+		document.form1.txtTotalWeightCharge.Value=""
+	else
+		if document.form1.lstWeightCP.value="P" then
+			document.form1.txtPOceanFreight.Value=WeightCharge
+			document.form1.txtCOceanFreight.Value=""
+			TotalPCharge=cdbl(WeightCharge)
+		else
+			document.form1.txtCOceanFreight.Value=WeightCharge
+			document.form1.txtPOceanFreight.Value=""
+			TotalCCharge=cdbl(WeightCharge)
+		end if
+		for k=1 to 10
+			pc=document.all("POtherCharge").item(k).Value
+			if not pc="" then
+				pc=cdbl(pc)
+			else
+				pc=0
+			end if
+			TotalPCharge=TotalPCharge+pc
+			cc=document.all("COtherCharge").item(k).Value
+			if not cc="" then
+				cc=cdbl(cc)
+			else
+				cc=0
+			end if
+			TotalCCharge=TotalCCharge+cc
+		next
+		document.form1.txtTotalPrepaid.Value=TotalPCharge
+		document.form1.txtTotalCollect.Value=TotalCCharge
+	end if
+end if
+End Sub
+
+Sub CheckData()
+Pieces=document.form1.txtPieces.Value
+GWKG=document.form1.txtGrossWeight.Value 'this is in KG
+GWLB=document.form1.txtGWLB.Value
+MCBM=document.form1.txtMeasurement.Value 'this is in CBM
+MCFT=document.form1.txtMCFT.Value
+DeclaredValue=document.form1.txtDeclaredValue.Value
+if Not Pieces="" then
+	if IsNumeric(Pieces)=False then
+		MsgBox "Please enter a numeric value for PIECES!"
+		document.form1.txtPieces.Value=""
+	end if
+end if
+if Not GWKG="" then
+	if IsNumeric(GWKG)=False then
+		MsgBox "Please enter a numeric value for GrossWeight/KG!"
+		document.form1.txtGrossWeight.Value=""
+	end if
+end if
+if Not GWLB="" then
+	if IsNumeric(GWLB)=False then
+		MsgBox "Please enter a numeric value for GrossWeight/LB!"
+		document.form1.txtGWLB.Value=""
+	end if
+end if
+if Not MCBM="" then
+	if IsNumeric(MCBM)=False then
+		MsgBox "Please enter a numeric value for Measurement/CBM!"
+		document.form1.txtMeasurement.Value=""
+	end if
+end if
+if Not MCFT="" then
+	if IsNumeric(MCFT)=False then
+		MsgBox "Please enter a numeric value for Measurement/CFT!"
+		document.form1.txtMCFT.Value=""
+	end if
+end if
+if Not DeclaredValue="" then
+	if IsNumeric(DeclaredValue)=False then
+		MsgBox "Please enter a numeric value for DeclaredValue!"
+		document.form1.txtDeclaredValue.Value=""
+	end if
+end if
+End Sub
+
+Sub CheckData1()
+GWKG=document.form1.txtGrossWeight.Value 'this is in KG
+if Not GWKG="" then
+	if IsNumeric(GWKG)=False then
+		MsgBox "Please enter a numeric value for GrossWeight/KG!"
+		document.form1.txtGrossWeight.Value=""
+		exit Sub
+	end if
+	GWLB=GWKG*2.2
+	document.form1.txtGWLB.Value=Round(GWLB,2)
+end if
+End Sub
+
+Sub CheckData2()
+GWLB=document.form1.txtGWLB.Value 'this is in LB
+if Not GWLB="" then
+	if IsNumeric(GWLB)=False then
+		MsgBox "Please enter a numeric value for GrossWeight/LB!"
+		document.form1.txtGWLB.Value=""
+		exit Sub
+	end if
+	GWKG=GWLB*0.454
+	document.form1.txtGrossWeight.Value=Round(GWKG,2)
+end if
+End Sub
+
+Sub CheckData3()
+MCBM=document.form1.txtMeasurement.Value 'this is in CBM
+if Not MCBM="" then
+	if IsNumeric(MCBM)=False then
+		MsgBox "Please enter a numeric value for Measurement/CBM!"
+		document.form1.txtMeasurement.Value=""
+		exit Sub
+	end if
+	MCFT=MCBM*35.314666721
+	document.form1.txtMCFT.Value=Round(MCFT,2)
+end if
+End Sub
+
+Sub CheckData4()
+MCFT=document.form1.txtMCFT.Value 'this is in CFT
+if Not MCFT="" then
+	if IsNumeric(MCFT)=False then
+		MsgBox "Please enter a numeric value for Measurement/CFT!"
+		document.form1.txtMCFT.Value=""
+		exit Sub
+	end if
+	MCBM=MCFT/35.314666721
+	document.form1.txtMeasurement.Value=Round(MCBM,2)
+end if
+End Sub
+
+Sub DeleteHBOL()
+HBOL=document.form1.txtHBOL.Value
+ok=MsgBox ("Are you sure you want to delete HBOL " & HBOL & "?" & chr(13) & "Continue?",36,"Message")
+if ok=6 then	
+	document.form1.action="new_edit_hbol.asp?DeleteHBOL=yes&HBOL=" & HBOL
+	document.form1.method="POST"
+	form1.submit()
+end if
+End Sub
+
+Sub key()
+HBOL=document.form1.txtHBOL.value
+if Window.event.Keycode=13 then
+	document.form1.action="new_edit_hbol.asp?hbol=" & HBOL
+	document.form1.method="POST"
+	form1.submit()
+end if
+End Sub
+
+Sub bAddDemClick()
+Dim D1,D2,D3,D4,DD
+D1=document.form1.txtQty.Value
+D2=document.form1.txtLength.Value
+D3=document.form1.txtWidth.Value
+D4=document.form1.txtHeight.Value
+If IsNumeric(D1)=false Or IsNumeric(D2)=false Or IsNumeric(D3)=false Or IsNumeric(D4)=false then
+	msgbox "Please enter numerical values only!"
+Else
+	DD=D1 & "@" & D2 & "X" & D3 & "X" & D4 & Chr(10)
+	document.form1.txtDemDetail.Value=document.form1.txtDemDetail.Value & DD
+	document.form1.txtQty.Value=""
+	document.form1.txtLength.Value=""
+	document.form1.txtWidth.Value=""
+	document.form1.txtHeight.Value=""
+End If
+End Sub
+
+Sub ScaleChange()
+Scale=document.form1.lstScale.Value
+GrossWeight=document.form1.txtGrossWeight.Value
+Measurement=document.form1.txtMeasurement.Value
+Rate=document.form1.txtChargeRate.Value
+Total=document.form1.txtTotalWeightCharge.Value
+if Scale="K" then
+	if Not GrossWeight="" then
+		GrossWeight=Round(cDbl(GrossWeight)*0.454/1000,2)
+	end if
+	if Not Measurement="" then
+		Measurement=cDbl(Measurement)/35.314666721
+	end if
+	if Not Rate="" then
+		if GrossWeight>Measurement then
+			Rate=Rate/0.454
+			Total=GrossWeight
+		else
+			Rate=Rate*35.314666721
+			Total=Measurement
+		end if
+		Total=Total*Rate
+	end if
+else
+	if Not GrossWeight="" then
+		GrossWeight=Round(cDbl(GrossWeight)/454,2)
+	end if
+	if Not Measurement="" then
+		Measurement=cDbl(Measurement)*35.314666721
+	end if
+	if Not Rate="" then
+		if GrossWeight>Measurement then
+			Rate=Rate*0.454
+			Total=GrossWeight
+		else
+			Rate=Rate/35.314666721
+			Total=Measurement
+		end if
+		Total=Total*Rate
+	end if
+end if
+document.form1.txtGrossWeight.Value=GrossWeight*1000
+document.form1.txtMeasurement.Value=Measurement
+document.form1.txtChargeRate.Value=Rate
+document.form1.txtTotalWeightCharge.Value=Round(Total,2)
+End Sub
+
+Sub COLOClick()
+'if document.form1.cCOLO.checked=true then
+'	document.form1.txtHBOLPrefix.style.visibility="hidden"
+'else
+'	document.form1.txtHBOLPrefix.style.visibility="visible"
+'end if
+'document.form1.action="new_edit_hbol.asp"
+'document.form1.method="POST"
+'form1.submit()
+End Sub
+
+Sub HBOLChange()
+	'if Not document.form1.cCOLO.checked=true then
+	'	if Not IsNumeric(document.form1.txtHBOL.Value) then
+	'		MsgBox "Please enter a Numeric Value for HBOL Number!"
+	'		document.form1.txtHBOL.Value=""
+	'	end if
+	'end if
+End Sub
+
+Sub PrefixChange()
+sindex=document.form1.lstHBOLPrefix.selectedindex
+Prefix=document.form1.lstHBOLPrefix.item(sindex).Text
+document.form1.hHBOLPrefix.Value=Prefix
+'NextHBOL=document.form1.lstHBOLPrefix.item(sindex).Value
+'HBOL=Prefix & "-" & NextHBOL
+'document.form1.txtHBOL.value=HBOL
+'document.form1.hHBOLPrefix.Value=Prefix
+'document.form1.action="new_edit_hbol.asp?HBOL=" & HBOL
+'document.form1.method="POST"
+'form1.submit()
+End Sub
+
+Sub MBOLEditClick()
+sindex=document.form1.lstBookingNum.selectedindex
+if sindex>0 then
+	BookingNum=document.form1.lstBookingNum.item(sindex).Text
+	document.form1.action="new_edit_mbol.asp?BookingNum=" & BookingNum
+	document.form1.method="POST"
+	form1.submit()
+end if
+End Sub
+
+Sub DimCalClick(Scale)
+props = "scrollBars=yes,resizable=yes,toolbar=no,menubar=no,location=no,directories=no,width=300,height=250"
+window.open "ocean_dimcal.asp?S=" & Scale, "Dimension_Calculation", props
+End Sub
+
+Sub MenuMouseOver()
+  document.form1.lstHBOLPrefix.style.visibility="hidden"
+End Sub
+
+Sub MenuMouseOut()
+  document.form1.lstHBOLPrefix.style.visibility="visible"
+End Sub
+--->
+</SCRIPT>
+
+<!--  #INCLUDE FILE="../include/StatusFooter.asp" -->
+</html>

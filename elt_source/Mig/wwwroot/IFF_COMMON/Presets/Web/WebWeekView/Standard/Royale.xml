@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Royale" PresetDescription="Property values that give WebWeekView a Royale theme." PresetType="All" />-->
+<ig_sched:WebWeekView 
+StyleSheetFileName="/ig_common/20053/styles/royale/ig_webweekview.css" />

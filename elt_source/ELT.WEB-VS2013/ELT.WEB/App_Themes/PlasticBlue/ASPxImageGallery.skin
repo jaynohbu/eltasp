@@ -1,0 +1,15 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxImageGallery" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxImageGallery runat="server" PagerPanelSpacing="3" ItemSpacing="3">
+    <Images SpriteCssFilePath="~/App_Themes/PlasticBlue/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/PlasticBlue/Web/dvLoading.gif" />
+    </Images>
+    <Styles CssPostfix="PlasticBlue" CssFilePath="~/App_Themes/PlasticBlue/{0}/styles.css">
+        <LoadingPanel ImageSpacing="6px" />
+        <Pager ForeColor="White" />
+        <PagerPageSizeItem>
+            <ComboBoxStyle ForeColor="Black" />
+        </PagerPageSizeItem>
+    </Styles>
+</dx:ASPxImageGallery>

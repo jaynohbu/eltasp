@@ -1,0 +1,14 @@
+<browsers>
+
+    <browser refID="default">
+        <controlAdapters>
+            <adapter controlType="Microsoft.SharePoint.Portal.WebControls.RSSAggregatorWebPart, Microsoft.SharePoint.Portal, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+                     adapterType="Microsoft.SharePoint.Portal.WebControls.RSSAggregatorWebPartMobileAdapter, Microsoft.SharePoint.Portal, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+            <adapter controlType="Microsoft.SharePoint.Portal.WebControls.BusinessDataDetailsWebPart, Microsoft.SharePoint.Portal, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+                     adapterType="Microsoft.SharePoint.Portal.WebControls.BusinessDataDetailsWebPartMobileAdapter, Microsoft.SharePoint.Portal, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+            <adapter controlType="Microsoft.SharePoint.Portal.WebControls.BusinessDataItemBuilder, Microsoft.SharePoint.Portal, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+                     adapterType="Microsoft.SharePoint.Portal.WebControls.BusinessDataItemBuilderMobileAdapter, Microsoft.SharePoint.Portal, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+        </controlAdapters>
+    </browser>
+
+</browsers>

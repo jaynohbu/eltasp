@@ -1,0 +1,59 @@
+﻿@model ELT.WEB.Models.ARAgingMasterModel
+@{
+    ViewBag.Title = "A/R Aging";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+@using ELT.WEB.Models
+@using ELT.CDT
+@using ELT.WEB.Controllers
+
+
+
+<hgroup>
+    <h1 class="pageheader">@ViewBag.Title</h1>
+</hgroup>
+
+@using (Html.BeginForm("ARAging", "Accounting", FormMethod.Post, new { Operation = "ARAging" }))
+{
+
+    {      
+    <table>
+        <tr>
+            <td></td>
+            <td colspan="2" style="text-align:right">
+                @foreach (string typeName in GridViewExportHelper.ExportTypes.Keys)
+                {
+                    <input type="submit" name="@typeName" value="@GridViewExportHelper.ExportTypes[typeName].Title" />
+                    <text>&nbsp;</text>
+                    //http://localhost/Report/AirExport
+                }
+
+                <input type="button" name="ReSelect" value="Go Back to Search" onclick="RedirectParentTo('@Url.Content("~/Accounting/ARAging/")')" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:left">
+                As Of: @Model.AsOf
+                <br />
+               @if (Model.Branch != "")
+                {
+                   <Text> @Model.Branch </Text>
+                }
+              <br />
+                   @if (Model.Company != "")
+                {
+                   <Text>Company: @Model.Company </Text>
+                }
+              
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                @Html.Partial("_ARAging/_ARAgingMaster", Model)
+            </td>
+        </tr>
+        <tr><td></td><td></td><td></td></tr>
+    </table>
+    }
+}

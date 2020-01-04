@@ -1,0 +1,65 @@
+﻿@model ELT.CDT.EArrivalNoticeEmailItem
+<div class="EmailItem">
+    @Html.CheckBoxFor(m => m.IsSelected, new { @style = "text-align:left" })
+    <table>
+     <tr>
+            <td>
+                @Html.LabelFor(m => m.RecipientName)
+            </td>
+            <td>@Html.TextBoxFor(m => m.RecipientName)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.RecipientEmail)
+            </td>
+            <td>@Html.TextBoxFor(m => m.RecipientEmail)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.CC)
+            </td>
+            <td>@Html.TextBoxFor(m => m.CC)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Subject)
+            </td>
+            <td>@Html.TextBoxFor(m => m.Subject)
+            </td>
+        </tr>
+        <tr>
+            <td>
+               
+            </td>
+            <td>
+                <div class="ArrivalNoticeItems">   
+                <table style="border: 1px solid"><tr ><td style="border: 1px solid">House Bill No.</td><td style="border: 1px solid">Arrivial Notice</td><td style="border: 1px solid">Arrival Notice & Freight Charge</td></tr>              
+                        @Html.EditorFor(x => x.ArrivalNoticeItems)      
+                        </table>                
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Attachments)
+            </td>
+            <td>
+                <div class="AttachmentList">
+                    
+                        @Html.EditorFor(x => x.Attachments)
+                   
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.TextMessage)
+            </td>
+            <td>@Html.TextAreaFor(m => m.TextMessage, new { @class = "MailMsgTypeA" })
+            </td>
+        </tr>
+    </table>
+</div>

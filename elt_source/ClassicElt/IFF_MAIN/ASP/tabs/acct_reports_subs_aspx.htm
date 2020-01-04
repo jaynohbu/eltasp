@@ -1,0 +1,148 @@
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+var currentTabIndex=-1;
+
+var tabCount=12;// change when the # of tabs differnt 
+var TabImgsOff=new Array();
+
+TabImgsOff[0]='../images/acc_re_sales.gif';//change the names of off-state img src
+TabImgsOff[1]='../images/acc_re_aras.gif';
+TabImgsOff[2]='../images/acc_re_arad.gif';
+TabImgsOff[3]='../images/acc_re_ex.gif';
+TabImgsOff[4]='../images/acc_re_apas.gif';
+TabImgsOff[5]='../images/acc_re_apad.gif';
+TabImgsOff[6]='../images/acc_re_tb.gif';
+TabImgsOff[7]='../images/acc_re_bs.gif';
+TabImgsOff[8]='../images/acc_re_is.gif';
+TabImgsOff[9]='../images/acc_re_gl.gif';
+TabImgsOff[10]='../images/acc_re_cr.gif';
+TabImgsOff[11]='../images/acc_re_pnl.gif';
+
+var TabImgsOn=new Array();
+
+TabImgsOn[0]='../images/acc_re_sales_over.gif';////change the names of on-state img src
+TabImgsOn[1]='../images/acc_re_aras_over.gif';
+TabImgsOn[2]='../images/acc_re_arad_over.gif';
+TabImgsOn[3]='../images/acc_re_ex_over.gif';
+TabImgsOn[4]='../images/acc_re_apas_over.gif';
+TabImgsOn[5]='../images/acc_re_apad_over.gif';
+TabImgsOn[6]='../images/acc_re_tb_over.gif';
+TabImgsOn[7]='../images/acc_re_bs_over.gif';
+TabImgsOn[8]='../images/acc_re_is_over.gif';
+TabImgsOn[9]='../images/acc_re_gl_over.gif';
+TabImgsOn[10]='../images/acc_re_cr_over.gif';
+TabImgsOn[11]='../images/acc_re_pnl_over.gif';
+
+
+var TabPages=new Array();
+
+TabPages[0]='../../../ASPX/Reports/Accounting/GLSelection.aspx?parm=sales'
+TabPages[1]='../../../ASPX/Reports/Accounting/ARAgingSelection.aspx'
+TabPages[2]='../../ASPX/Reports/Accounting/SearchInvoiceSelection.aspx'
+TabPages[3]='../../../ASPX/Reports/Accounting/GLSelection.aspx?parm=expns'
+TabPages[4]='../../../ASPX/Reports/Accounting/APAgingSelection.aspx'
+TabPages[5]='../../../ASPX/Reports/Accounting/GLSelection.aspx?parm=apdet'
+TabPages[6]='../../../ASPX/Reports/Accounting/GLSelection.aspx?parm=trial'
+TabPages[7]='../../../ASPX/Reports/Accounting/GLSelection.aspx?parm=bal'
+TabPages[8]='../../../ASPX/Reports/Accounting/GLSelection.aspx?parm=incom'
+TabPages[9]='../../../ASPX/Reports/Accounting/GLSelection.aspx?parm=genl'
+TabPages[10]='../../../ASPX/Reports/Accounting/GLSelection.aspx?parm=chkr'
+TabPages[11]='../../../ASPX/Reports/PNL/PnlIndex.aspx'
+
+
+function pointTabOnload(page){ 
+    
+    for(var i=0;i<tabCount;i++){
+   //alert(page+"   "+TabPages[i]);
+        if(TabPages[i]==page){        
+            currentTabIndex=i;
+	   }
+    }
+    setToCurrentTab();  
+}
+
+function pointTab(obj){
+   var temp=obj.id.split('-');
+   currentTabIndex=temp[1];  
+}
+
+function setToCurrentTab(){
+//alert(currentTabIndex);
+   var index=currentTabIndex;   
+   var id;
+   var img;      
+   for(var i=0;i< tabCount;i++){ 
+    id="t-"+i; 	
+        if(i!=index){
+            document.getElementById(id).firstChild.src=TabImgsOff[i];
+        }else{
+           document.getElementById(id).firstChild.src=TabImgsOn[i];        
+        }
+  }  
+}
+
+function refreshTabsOnMoving(){
+ 
+   var index=currentTabIndex; 
+   var id;
+   var img;      
+   for(var i=0;i< tabCount;i++){ 
+    id="t-"+i;     
+    document.getElementById(id).firstChild.src=TabImgsOff[i];        
+   }
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//-->
+</script>
+
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style><body onLoad="MM_preloadImages('../../../ASP/images/acc_re_sales.gif','../../../ASP/images/acc_re_aras_over.gif','../../../ASP/images/acc_re_arad.gif','../../../ASP/images/acc_re_ars.gif','../../../ASP/images/acc_re_ard.gif','../../../ASP/images/acc_re_ex.gif','../../../ASP/images/acc_re_apas.gif','../../../ASP/images/acc_re_apad.gif','../../../ASP/images/acc_re_aps.gif','../../../ASP/images/acc_re_apd.gif','../../../ASP/images/acc_re_tb.gif','../../../ASP/images/acc_re_bs.gif','../../../ASP/images/acc_re_is.gif','../../../ASP/images/acc_re_gl.gif','../../../ASP/images/acc_re_cr.gif','../../../ASP/images/acc_re_sales_over.gif','../../../ASP/images/acc_re_aras.gif')">
+<table width="100%" height="42" border="0" cellpadding="0" cellspacing="0" background="../../../ASP/images/back_acc_sub.gif">
+  <tr> 
+    <td height="19" align="center" valign="top">
+	
+	<a href="../../../ASPX/Reports/Accounting/GLSelection.aspx?parm=sales" target="_self" onMouseOver="MM_swapImage('Imagesa','','../../../ASP/images/acc_re_sales_over.gif','Imagearas','','../../../ASP/images/acc_re_aras.gif','Imagearad','','../../../ASP/images/acc_re_arad.gif','Imagears','','../../../ASP/images/acc_re_ars.gif','Imageard','','../../../ASP/images/acc_re_ard.gif','Imageex','','../../../ASP/images/acc_re_ex.gif','Imageapas','','../../../ASP/images/acc_re_apas.gif','Imageapad','','../../../ASP/images/acc_re_apad.gif','Imageaps','','../../../ASP/images/acc_re_aps.gif','Imageapd','','../../../ASP/images/acc_re_apd.gif','Imagetb','','../../../ASP/images/acc_re_tb.gif','Imagebs','','../../../ASP/images/acc_re_bs.gif','Imageis','','../../../ASP/images/acc_re_is.gif','Imagegl','','../../../ASP/images/acc_re_gl.gif','Imagecr','','../../../ASP/images/acc_re_cr.gif','Imagepnl','','../../../ASP/images/acc_re_pnl.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../../../ASP/images/acc_re_sales.gif" name="Imagesa" width="44" height="19" border="0"></a><a href="../../../ASPX/Reports/Accounting/ARAgingSelection.aspx" target="_self" onMouseOver="MM_swapImage('Imagesa','','../../../ASP/images/acc_re_sales.gif','Imagearas','','../../../ASP/images/acc_re_aras_over.gif','Imagearad','','../../../ASP/images/acc_re_arad.gif','Imagears','','../../../ASP/images/acc_re_ars.gif','Imageard','','../../../ASP/images/acc_re_ard.gif','Imageex','','../../../ASP/images/acc_re_ex.gif','Imageapas','','../../../ASP/images/acc_re_apas.gif','Imageapad','','../../../ASP/images/acc_re_apad.gif','Imageaps','','../../../ASP/images/acc_re_aps.gif','Imageapd','','../../../ASP/images/acc_re_apd.gif','Imagetb','','../../../ASP/images/acc_re_tb.gif','Imagebs','','../../../ASP/images/acc_re_bs.gif','Imageis','','../../../ASP/images/acc_re_is.gif','Imagegl','','../../../ASP/images/acc_re_gl.gif','Imagecr','','../../../ASP/images/acc_re_cr.gif','Imagepnl','','../../../ASP/images/acc_re_pnl.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../../../ASP/images/acc_re_aras.gif" name="Imagearas" width="68" height="19" border="0"></a><a href="../../../ASPX/Reports/Accounting/GLSelection.aspx?parm=ardet" target="_self" onMouseOver="MM_swapImage('Imagesa','','../../../ASP/images/acc_re_sales.gif','Imagearas','','../../../ASP/images/acc_re_aras.gif','Imagearad','','../../../ASP/images/acc_re_arad_over.gif','Imagears','','../../../ASP/images/acc_re_ars.gif','Imageard','','../../../ASP/images/acc_re_ard.gif','Imageex','','../../../ASP/images/acc_re_ex.gif','Imageapas','','../../../ASP/images/acc_re_apas.gif','Imageapad','','../../../ASP/images/acc_re_apad.gif','Imageaps','','../../../ASP/images/acc_re_aps.gif','Imageapd','','../../../ASP/images/acc_re_apd.gif','Imagetb','','../../../ASP/images/acc_re_tb.gif','Imagebs','','../../../ASP/images/acc_re_bs.gif','Imageis','','../../../ASP/images/acc_re_is.gif','Imagegl','','../../../ASP/images/acc_re_gl.gif','Imagecr','','../../../ASP/images/acc_re_cr.gif','Imagepnl','','../../../ASP/images/acc_re_pnl.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../../../ASP/images/acc_re_arad.gif" name="Imagearad" width="72" height="19" border="0" id="Imagearad"></a><a href="../../../ASPX/Reports/Accounting/GLSelection.aspx?parm=ardet" target="_self" onMouseOver="MM_swapImage('Imagesa','','../../../ASP/images/acc_re_sales.gif','Imagearas','','../../../ASP/images/acc_re_aras.gif','Imagearad','','../../../ASP/images/acc_re_arad.gif','Imagears','','../../../ASP/images/acc_re_ars_over.gif','Imageard','','../../../ASP/images/acc_re_ard.gif','Imageex','','../../../ASP/images/acc_re_ex.gif','Imageapas','','../../../ASP/images/acc_re_apas.gif','Imageapad','','../../../ASP/images/acc_re_apad.gif','Imageaps','','../../../ASP/images/acc_re_aps.gif','Imageapd','','../../../ASP/images/acc_re_apd.gif','Imagetb','','../../../ASP/images/acc_re_tb.gif','Imagebs','','../../../ASP/images/acc_re_bs.gif','Imageis','','../../../ASP/images/acc_re_is.gif','Imagegl','','../../../ASP/images/acc_re_gl.gif','Imagecr','','../../../ASP/images/acc_re_cr.gif','Imagepnl','','../../../ASP/images/acc_re_pnl.gif',1)" onMouseOut="MM_swapImgRestore()"></a><a href="../../../ASPX/Reports/Accounting/GLSelection.aspx?parm=ardet" target="_self" onMouseOver="MM_swapImage('Imagesa','','../../../ASP/images/acc_re_sales.gif','Imagearas','','../../../ASP/images/acc_re_aras.gif','Imagearad','','../../../ASP/images/acc_re_arad.gif','Imagears','','../../../ASP/images/acc_re_ars.gif','Imageard','','../../../ASP/images/acc_re_ard_over.gif','Imageex','','../../../ASP/images/acc_re_ex.gif','Imageapas','','../../../ASP/images/acc_re_apas.gif','Imageapad','','../../../ASP/images/acc_re_apad.gif','Imageaps','','../../../ASP/images/acc_re_aps.gif','Imageapd','','../../../ASP/images/acc_re_apd.gif','Imagetb','','../../../ASP/images/acc_re_tb.gif','Imagebs','','../../../ASP/images/acc_re_bs.gif','Imageis','','../../../ASP/images/acc_re_is.gif','Imagegl','','../../../ASP/images/acc_re_gl.gif','Imagecr','','../../../ASP/images/acc_re_cr.gif','Imagepnl','','../../../ASP/images/acc_re_pnl.gif',1)" onMouseOut="MM_swapImgRestore()"></a><a href="../../../ASPX/Reports/Accounting/GLSelection.aspx?parm=expns" target="_self" onMouseOver="MM_swapImage('Imagesa','','../../../ASP/images/acc_re_sales.gif','Imagearas','','../../../ASP/images/acc_re_aras.gif','Imagearad','','../../../ASP/images/acc_re_arad.gif','Imagears','','../../../ASP/images/acc_re_ars.gif','Imageard','','../../../ASP/images/acc_re_ard.gif','Imageex','','../../../ASP/images/acc_re_ex_over.gif','Imageapas','','../../../ASP/images/acc_re_apas.gif','Imageapad','','../../../ASP/images/acc_re_apad.gif','Imageaps','','../../../ASP/images/acc_re_aps.gif','Imageapd','','../../../ASP/images/acc_re_apd.gif','Imagetb','','../../../ASP/images/acc_re_tb.gif','Imagebs','','../../../ASP/images/acc_re_bs.gif','Imageis','','../../../ASP/images/acc_re_is.gif','Imagegl','','../../../ASP/images/acc_re_gl.gif','Imagecr','','../../../ASP/images/acc_re_cr.gif','Imagepnl','','../../../ASP/images/acc_re_pnl.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../../../ASP/images/acc_re_ex.gif" name="Imageex" width="65" height="19" border="0"></a><a href="../../../ASPX/Reports/Accounting/APAgingSelection.aspx" target="_self" onMouseOver="MM_swapImage('Imagesa','','../../../ASP/images/acc_re_sales.gif','Imagearas','','../../../ASP/images/acc_re_aras.gif','Imagearad','','../../../ASP/images/acc_re_arad.gif','Imagears','','../../../ASP/images/acc_re_ars.gif','Imageard','','../../../ASP/images/acc_re_ard.gif','Imageex','','../../../ASP/images/acc_re_ex.gif','Imageapas','','../../../ASP/images/acc_re_apas_over.gif','Imageapad','','../../../ASP/images/acc_re_apad.gif','Imageaps','','../../../ASP/images/acc_re_aps.gif','Imageapd','','../../../ASP/images/acc_re_apd.gif','Imagetb','','../../../ASP/images/acc_re_tb.gif','Imagebs','','../../../ASP/images/acc_re_bs.gif','Imageis','','../../../ASP/images/acc_re_is.gif','Imagegl','','../../../ASP/images/acc_re_gl.gif','Imagecr','','../../../ASP/images/acc_re_cr.gif','Imagepnl','','../../../ASP/images/acc_re_pnl.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../../../ASP/images/acc_re_apas.gif" name="Imageapas" width="66" height="19" border="0"></a><a href="../../../ASPX/Reports/Accounting/GLSelection.aspx?parm=apdet" target="_self" onMouseOver="MM_swapImage('Imagesa','','../../../ASP/images/acc_re_sales.gif','Imagearas','','../../../ASP/images/acc_re_aras.gif','Imagearad','','../../../ASP/images/acc_re_arad.gif','Imagears','','../../../ASP/images/acc_re_ars.gif','Imageard','','../../../ASP/images/acc_re_ard.gif','Imageex','','../../../ASP/images/acc_re_ex.gif','Imageapas','','../../../ASP/images/acc_re_apas.gif','Imageapad','','../../../ASP/images/acc_re_apad_over.gif','Imageaps','','../../../ASP/images/acc_re_aps.gif','Imageapd','','../../../ASP/images/acc_re_apd.gif','Imagetb','','../../../ASP/images/acc_re_tb.gif','Imagebs','','../../../ASP/images/acc_re_bs.gif','Imageis','','../../../ASP/images/acc_re_is.gif','Imagegl','','../../../ASP/images/acc_re_gl.gif','Imagecr','','../../../ASP/images/acc_re_cr.gif','Imagepnl','','../../../ASP/images/acc_re_pnl.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../../../ASP/images/acc_re_apad.gif" name="Imageapad" width="70" height="19" border="0"></a></td>
+  </tr>
+  <tr>
+    <td height="23" align="center" valign="top">
+	
+	<a href="../../../ASPX/Reports/Accounting/GLSelection.aspx?parm=apsumm" target="_self" onMouseOver="MM_swapImage('Imagesa','','../../../ASP/images/acc_re_sales.gif','Imagearas','','../../../ASP/images/acc_re_aras.gif','Imagearad','','../../../ASP/images/acc_re_arad.gif','Imagears','','../../../ASP/images/acc_re_ars.gif','Imageard','','../../../ASP/images/acc_re_ard.gif','Imageex','','../../../ASP/images/acc_re_ex.gif','Imageapas','','../../../ASP/images/acc_re_apas.gif','Imageapad','','../../../ASP/images/acc_re_apad.gif','Imageaps','','../../../ASP/images/acc_re_aps_over.gif','Imageapd','','../../../ASP/images/acc_re_apd.gif','Imagetb','','../../../ASP/images/acc_re_tb.gif','Imagebs','','../../../ASP/images/acc_re_bs.gif','Imageis','','../../../ASP/images/acc_re_is.gif','Imagegl','','../../../ASP/images/acc_re_gl.gif','Imagecr','','../../../ASP/images/acc_re_cr.gif','Imagepnl','','../../../ASP/images/acc_re_pnl.gif',1)" onMouseOut="MM_swapImgRestore()"></a><a href="../../../ASPX/Reports/Accounting/GLSelection.aspx?parm=apdet" target="_self" onMouseOver="MM_swapImage('Imagesa','','../../../ASP/images/acc_re_sales.gif','Imagearas','','../../../ASP/images/acc_re_aras.gif','Imagearad','','../../../ASP/images/acc_re_arad.gif','Imagears','','../../../ASP/images/acc_re_ars.gif','Imageard','','../../../ASP/images/acc_re_ard.gif','Imageex','','../../../ASP/images/acc_re_ex.gif','Imageapas','','../../../ASP/images/acc_re_apas.gif','Imageapad','','../../../ASP/images/acc_re_apad.gif','Imageaps','','../../../ASP/images/acc_re_aps.gif','Imageapd','','../../../ASP/images/acc_re_apd_over.gif','Imagetb','','../../../ASP/images/acc_re_tb.gif','Imagebs','','../../../ASP/images/acc_re_bs.gif','Imageis','','../../../ASP/images/acc_re_is.gif','Imagegl','','../../../ASP/images/acc_re_gl.gif','Imagecr','','../../../ASP/images/acc_re_cr.gif','Imagepnl','','../../../ASP/images/acc_re_pnl.gif',1)" onMouseOut="MM_swapImgRestore()"></a><a href="../../../ASPX/Reports/Accounting/GLSelection.aspx?parm=trial" target="_self" onMouseOver="MM_swapImage('Imagesa','','../../../ASP/images/acc_re_sales.gif','Imagearas','','../../../ASP/images/acc_re_aras.gif','Imagearad','','../../../ASP/images/acc_re_arad.gif','Imagears','','../../../ASP/images/acc_re_ars.gif','Imageard','','../../../ASP/images/acc_re_ard.gif','Imageex','','../../../ASP/images/acc_re_ex.gif','Imageapas','','../../../ASP/images/acc_re_apas.gif','Imageapad','','../../../ASP/images/acc_re_apad.gif','Imageaps','','../../../ASP/images/acc_re_aps.gif','Imageapd','','../../../ASP/images/acc_re_apd.gif','Imagetb','','../../../ASP/images/acc_re_tb_over.gif','Imagebs','','../../../ASP/images/acc_re_bs.gif','Imageis','','../../../ASP/images/acc_re_is.gif','Imagegl','','../../../ASP/images/acc_re_gl.gif','Imagecr','','../../../ASP/images/acc_re_cr.gif','Imagepnl','','../../../ASP/images/acc_re_pnl.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../../../ASP/images/acc_re_tb.gif" name="Imagetb" width="81" height="22" border="0"></a><a href="../../../ASPX/Reports/Accounting/GLSelection.aspx?parm=bal" target="_self" onMouseOver="MM_swapImage('Imagesa','','../../../ASP/images/acc_re_sales.gif','Imagearas','','../../../ASP/images/acc_re_aras.gif','Imagearad','','../../../ASP/images/acc_re_arad.gif','Imagears','','../../../ASP/images/acc_re_ars.gif','Imageard','','../../../ASP/images/acc_re_ard.gif','Imageex','','../../../ASP/images/acc_re_ex.gif','Imageapas','','../../../ASP/images/acc_re_apas.gif','Imageapad','','../../../ASP/images/acc_re_apad.gif','Imageaps','','../../../ASP/images/acc_re_aps.gif','Imageapd','','../../../ASP/images/acc_re_apd.gif','Imagetb','','../../../ASP/images/acc_re_tb.gif','Imagebs','','../../../ASP/images/acc_re_bs_over.gif','Imageis','','../../../ASP/images/acc_re_is.gif','Imagegl','','../../../ASP/images/acc_re_gl.gif','Imagecr','','../../../ASP/images/acc_re_cr.gif','Imagepnl','','../../../ASP/images/acc_re_pnl.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../../../ASP/images/acc_re_bs.gif" name="Imagebs" width="89" height="22" border="0"></a><a href="../../../ASPX/Reports/Accounting/GLSelection.aspx?parm=incom" target="_self" onMouseOver="MM_swapImage('Imagesa','','../../../ASP/images/acc_re_sales.gif','Imagearas','','../../../ASP/images/acc_re_aras.gif','Imagearad','','../../../ASP/images/acc_re_arad.gif','Imagears','','../../../ASP/images/acc_re_ars.gif','Imageard','','../../../ASP/images/acc_re_ard.gif','Imageex','','../../../ASP/images/acc_re_ex.gif','Imageapas','','../../../ASP/images/acc_re_apas.gif','Imageapad','','../../../ASP/images/acc_re_apad.gif','Imageaps','','../../../ASP/images/acc_re_aps.gif','Imageapd','','../../../ASP/images/acc_re_apd.gif','Imagetb','','../../../ASP/images/acc_re_tb.gif','Imagebs','','../../../ASP/images/acc_re_bs.gif','Imageis','','../../../ASP/images/acc_re_is_over.gif','Imagegl','','../../../ASP/images/acc_re_gl.gif','Imagecr','','../../../ASP/images/acc_re_cr.gif','Imagepnl','','../../../ASP/images/acc_re_pnl.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../../../ASP/images/acc_re_is.gif" name="Imageis" width="111" height="22" border="0"></a><a href="../../../ASPX/Reports/Accounting/GLSelection.aspx?parm=genl" target="_self" onMouseOver="MM_swapImage('Imagesa','','../../../ASP/images/acc_re_sales.gif','Imagearas','','../../../ASP/images/acc_re_aras.gif','Imagearad','','../../../ASP/images/acc_re_arad.gif','Imagears','','../../../ASP/images/acc_re_ars.gif','Imageard','','../../../ASP/images/acc_re_ard.gif','Imageex','','../../../ASP/images/acc_re_ex.gif','Imageapas','','../../../ASP/images/acc_re_apas.gif','Imageapad','','../../../ASP/images/acc_re_apad.gif','Imageaps','','../../../ASP/images/acc_re_aps.gif','Imageapd','','../../../ASP/images/acc_re_apd.gif','Imagetb','','../../../ASP/images/acc_re_tb.gif','Imagebs','','../../../ASP/images/acc_re_bs.gif','Imageis','','../../../ASP/images/acc_re_is.gif','Imagegl','','../../../ASP/images/acc_re_gl_over.gif','Imagecr','','../../../ASP/images/acc_re_cr.gif','Imagepnl','','../../../ASP/images/acc_re_pnl.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../../../ASP/images/acc_re_gl.gif" name="Imagegl" width="94" height="22" border="0"></a><a href="../../../ASPX/Reports/Accounting/GLSelection.aspx?parm=chkr" target="_self" onMouseOver="MM_swapImage('Imagesa','','../../../ASP/images/acc_re_sales.gif','Imagearas','','../../../ASP/images/acc_re_aras.gif','Imagearad','','../../../ASP/images/acc_re_arad.gif','Imagears','','../../../ASP/images/acc_re_ars.gif','Imageard','','../../../ASP/images/acc_re_ard.gif','Imageex','','../../../ASP/images/acc_re_ex.gif','Imageapas','','../../../ASP/images/acc_re_apas.gif','Imageapad','','../../../ASP/images/acc_re_apad.gif','Imageaps','','../../../ASP/images/acc_re_aps.gif','Imageapd','','../../../ASP/images/acc_re_apd.gif','Imagetb','','../../../ASP/images/acc_re_tb.gif','Imagebs','','../../../ASP/images/acc_re_bs.gif','Imageis','','../../../ASP/images/acc_re_is.gif','Imagegl','','../../../ASP/images/acc_re_gl.gif','Imagecr','','../../../ASP/images/acc_re_cr_over.gif','Imagepnl','','../../../ASP/images/acc_re_pnl.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../../../ASP/images/acc_re_cr.gif" name="Imagecr" width="85" height="22" border="0"></a><a href="../../../ASPX/Reports/PNL/PnlIndex.aspx" target="_self" onMouseOver="MM_swapImage('Imagesa','','../../../ASP/images/acc_re_sales.gif','Imagearas','','../../../ASP/images/acc_re_aras.gif','Imagearad','','../../../ASP/images/acc_re_arad.gif','Imagears','','../../../ASP/images/acc_re_ars.gif','Imageard','','../../../ASP/images/acc_re_ard.gif','Imageex','','../../../ASP/images/acc_re_ex.gif','Imageapas','','../../../ASP/images/acc_re_apas.gif','Imageapad','','../../../ASP/images/acc_re_apad.gif','Imageaps','','../../../ASP/images/acc_re_aps.gif','Imageapd','','../../../ASP/images/acc_re_apd.gif','Imagetb','','../../../ASP/images/acc_re_tb.gif','Imagebs','','../../../ASP/images/acc_re_bs.gif','Imageis','','../../../ASP/images/acc_re_is.gif','Imagegl','','../../../ASP/images/acc_re_gl.gif','Imagecr','','../../../ASP/images/acc_re_cr.gif','Imagepnl','','../../../ASP/images/acc_re_pnl_over.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../../../ASP/images/acc_re_pnl.gif" name="Imagepnl" width="74" height="22" border="0"></a></td>
+  </tr>
+</table>

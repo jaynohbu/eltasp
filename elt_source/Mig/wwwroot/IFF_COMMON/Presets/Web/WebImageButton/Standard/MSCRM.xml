@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="MSCRM" PresetDescription="Infragistics MSCRM Preset. Sets Look properties only. Notes: 1. The 'Reset' box should be checked. 2. The background images are used." PresetType="Appearance" />-->
+<igtxt:WebImageButton UseBrowserDefaults="False">
+	<RoundedCorners HeightOfBottomEdge="2" WidthOfRightEdge="2" ImageUrl="ig_butCRM1.gif" MaxHeight="40" MaxWidth="400" HoverImageUrl="ig_butCRM2.gif" RenderingType="FileImages" PressedImageUrl="ig_butCRM2.gif">
+	</RoundedCorners>
+	<HoverAppearance ContentShift="NotSet" />
+	<PressedAppearance ContentShift="NotSet" />
+	<FocusAppearance ContentShift="NotSet" />
+	<Appearance ContentShift="NotSet" />
+	<DisabledAppearance ContentShift="NotSet" />
+</igtxt:WebImageButton>

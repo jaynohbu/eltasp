@@ -1,0 +1,84 @@
+﻿@Html.DevExpress().GridView(
+    settings =>
+    {
+        settings.Name = "grid";
+        settings.CallbackRouteValues = new { Controller = "Accounting", Action = "TrialBalancePartial" };
+
+        settings.Width = Unit.Pixel(800);
+        settings.SettingsPager.PageSize = 50;
+        settings.Theme = "Metropolis";
+
+        settings.KeyFieldName = "GlAccountNumber";
+
+        var date = settings.Columns.Add("GlAccountNumber");
+        date.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+        date.Width = 80;
+
+        var glacc = settings.Columns.Add("GLAccountName");
+        glacc.Width = 390;
+        
+
+        settings.Columns.Add(c =>
+        {
+            c.FieldName = "Debit";
+            c.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            c.Width =110;
+            c.CellStyle.CssClass = "numeric";
+        });
+        settings.Columns.Add(c =>
+        {
+            c.FieldName = "Credit";
+            c.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            c.Width =110;
+            c.CellStyle.CssClass = "numeric";
+        });
+        settings.Columns.Add(c =>
+        {
+            c.FieldName = "Balance ";
+            c.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            c.Width = 110;
+            c.CellStyle.CssClass = "numeric";
+        });
+        
+        decimal total = 0;
+        
+        settings.CustomUnboundColumnData = (sender, e) =>
+        {
+            decimal amount = Convert.ToDecimal(e.GetListSourceFieldValue("Balance"));
+            decimal cre = Convert.ToDecimal(e.GetListSourceFieldValue("CreditAmt"));
+            decimal deb = Convert.ToDecimal(e.GetListSourceFieldValue("DebitAmt"));
+
+            if (e.Column.FieldName == "Debit")
+            {
+                e.Value = deb;
+            }
+            
+            if (e.Column.FieldName == "Credit")
+            {
+                e.Value = cre;
+            }
+
+            if (e.Column.FieldName == "Balance ")
+            {
+               // total = amount + total;
+                e.Value = amount;
+            }
+            
+          
+
+        };
+
+        settings.Settings.ShowFooter = true;
+
+        var creSum = settings.TotalSummary.Add(DevExpress.Data.SummaryItemType.Sum, "Credit");
+        creSum.DisplayFormat = "f";
+        creSum.ShowInColumn = "Credit";
+
+        var debSum = settings.TotalSummary.Add(DevExpress.Data.SummaryItemType.Sum, "Debit");
+        debSum.DisplayFormat = "f";
+        debSum.ShowInColumn = "Debit";
+
+        var balSum = settings.TotalSummary.Add(DevExpress.Data.SummaryItemType.Sum, "Balance");
+        balSum.DisplayFormat = "f";
+        balSum.ShowInColumn = "Balance ";
+    }).Bind(Model).GetHtml()

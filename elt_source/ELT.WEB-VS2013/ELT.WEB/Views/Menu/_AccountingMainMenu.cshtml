@@ -1,0 +1,31 @@
+﻿@model ELT.WEB.Models.Menu
+<div id="tabs">
+    <div class="rightDiv">
+        <ul>
+            <li>              
+                <img src="@Url.Content("~/Images/button_logout_type.gif")" onclick="logOut()"
+                    name="logout" width="54" height="18" id="logout" onmouseout="this.src='@Url.Content("~/Images/button_logout_type.gif")'"
+                    onmouseover="this.src='@Url.Content("~/Images/button_logout_type_over.gif")'"
+                    style="margin-right: 30px; margin-top: 3px; cursor: pointer; border: none 0px"
+                    alt="Click to logout" />
+            </li>
+        </ul>
+    </div>
+    <div class="leftDiv">
+        <ul>
+            <li class="CurGeneralDiv"><a href="@Url.Content("~/Accounting/ChartOfAccount")"><span>General
+            </span></a></li>
+            <li class="CurAccountReceivableDiv" ><a href="@Url.Content("~/Accounting/InvoiceQueue")"><span>Account Receivable
+            </span></a></li>
+            <li class="CurAccountPayableDiv"><a  href="@Url.Content("~/Accounting/PayableQueue")"><span>Account Payable </span>
+            </a></li>
+            <li class="CurBankDiv"><a  href="@Url.Content("~/Accounting/BankRegister/parm=chkr")"><span>Bank </span></a></li>
+            <li class="CurAccountReportDiv"><a  href="@Url.Content("~/Accounting/Sales/parm=sales")"><span>Account Report </span>
+            </a></li>
+            <li class="CurFinancialDiv"><a  href="@Url.Content("~/Accounting/BalanceSheet/parm=bal")"><span>Financial </span></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+  @Html.Action("MainMenu", "Menu")

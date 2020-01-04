@@ -1,0 +1,103 @@
+﻿
+@model List<ELT.CDT.GeneralLedgerTransactionalItem>
+
+@Html.DevExpress().GridView(settings => {
+
+    settings.Name = "detailGrid_" + ViewData["GLNumber"];
+    settings.SettingsDetail.MasterGridName = "grid";
+    settings.CallbackRouteValues = new { Controller = "Accounting", Action = "_GeneralLedgerDetailPartial", KeyFieldName = "glNumber", Key = Model[0].GL_Number };
+    settings.Width = Unit.Percentage(100);
+    settings.SettingsPager.PageSize = 50;
+    settings.KeyFieldName = "Num";
+    settings.SettingsBehavior.AllowSort = false;
+    settings.Columns.Add("Date");
+    settings.Columns.Add("Type");
+    settings.Columns.Add(c =>
+    {
+        c.Caption = "Tran(Check)#.";
+        c.FieldName = "Num";
+        c.SetDataItemTemplateContent(a =>
+        {
+            if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Num"))))
+            {
+                string url = DataBinder.Eval(a.DataItem, "Link").ToString();
+                url = "\"" + url + "\"";
+                ViewContext.Writer.Write(
+                    "<a href='javascript:void(0)' onclick = 'viewPop(" + url + ")'>" + a.Text + "</a>");
+            }
+        });
+
+        c.CellStyle.CssClass = "numeric";
+
+    });
+
+    settings.Columns.Add("Company_Name","Company");
+    settings.Columns.Add("Memo");   
+    settings.Columns.Add("Split");
+
+    settings.Columns.Add(column =>
+    {
+        column.FieldName = "Debit";
+
+        column.SetDataItemTemplateContent(a =>
+        {
+            if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Debit"))))
+            {
+                string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                if (a.Text == "0") val = "0";
+                ViewContext.Writer.Write(val
+                   );
+            }
+        });
+
+    });
+
+    settings.Columns.Add(column =>
+    {
+        column.FieldName = "Credit";
+
+        column.SetDataItemTemplateContent(a =>
+        {
+            if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Credit"))))
+            {
+                string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                if (a.Text == "0") val = "0";
+                ViewContext.Writer.Write(val
+                   );
+            }
+        });
+
+    });
+    
+
+   
+
+    decimal total = 0;
+    settings.Columns.Add(column =>
+    {
+        column.FieldName = "Accumulation";
+        column.UnboundType = DevExpress.Data.UnboundColumnType.String;  
+        column.Width = 80;
+        column.CellStyle.CssClass = "numeric";
+    });
+
+    settings.CustomUnboundColumnData = (sender, e) =>
+    {
+        if (e.Column.FieldName == "Accumulation")
+        {
+            if (e.ListSourceRowIndex == 0) total = 0;
+           
+                decimal Debit = e.GetListSourceFieldValue("Debit") == "" ? 0 : Convert.ToDecimal(e.GetListSourceFieldValue("Debit"));
+                decimal Credit = e.GetListSourceFieldValue("Credit") == "" ? 0 :Convert.ToDecimal(e.GetListSourceFieldValue("Credit"));
+                total = total + Debit + Credit;
+            
+            string s_detail_total = "0";
+            if (total > 0)
+                s_detail_total = string.Format("{0:###,###,###.00}", Convert.ToDecimal(total));
+            e.Value = s_detail_total;
+        }
+    };
+            
+
+
+  }).Bind(Model).GetHtml()

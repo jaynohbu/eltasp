@@ -1,0 +1,7 @@
+﻿@{
+    ViewBag.Title = "ARCreditNote";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+
+<iframe id ="ContentFrame" runat="server" scrolling="no"   frameborder="0" width="100%" onload="autoResize('ContentFrame');" src="@Url.Content("~/ASP/acct_tasks/edit_credit_note.asp" + ViewBag.Params)"></iframe>
+

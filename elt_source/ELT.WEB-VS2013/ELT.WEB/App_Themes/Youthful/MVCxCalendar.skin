@@ -1,0 +1,18 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxmvc:MVCxCalendar runat="server" CssFilePath="~/App_Themes/Youthful/{0}/styles.css" CssPostfix="Youthful" SpriteCssFilePath="~/App_Themes/Youthful/{0}/sprite.css" >
+	<ValidationSettings>
+		<ErrorFrameStyle ImageSpacing="4px">
+			<ErrorTextPaddings PaddingLeft="4px" />
+		</ErrorFrameStyle>
+	</ValidationSettings>
+	<FooterStyle Spacing="3px" />
+	<HeaderStyle Spacing="8px" />
+	<FastNavStyle MonthYearSpacing="1px" ImageSpacing="14px" />
+	<FastNavFooterStyle Spacing="3px" />
+	<LoadingPanelImage Url="~/App_Themes/Youthful/Web/Loading.gif" />
+	<SettingsLoadingPanel Text="" />
+</dxmvc:MVCxCalendar>
+

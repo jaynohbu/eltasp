@@ -1,0 +1,8 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Charts" Assembly="DevExpress.Charts.v13.2.Core, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" namespace="DevExpress.XtraCharts" assembly="DevExpress.XtraCharts.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" namespace="DevExpress.XtraCharts.Web" assembly="DevExpress.XtraCharts.v13.2.Web, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:WebChartControl runat="server" LoadingPanelImage-Url="~/App_Themes/Metropolis/Chart/Loading.gif" CssPostfix="Metropolis" CssFilePath="~/App_Themes/Metropolis/{0}/styles.css">
+</dx:WebChartControl>
+

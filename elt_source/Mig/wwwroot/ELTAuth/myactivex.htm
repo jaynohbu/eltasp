@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<TITLE>New Page</TITLE>
+</HEAD>
+<script>
+function testFunction(){
+	
+	alert(ClientTrack1.GetMacAddr());
+	ClientTrack2.Preview();
+
+}
+</script>
+
+<BODY onload="testFunction();">
+
+<OBJECT ID="ClientTrack1" CODEBASE="./ClientTrack.ocx" 
+	CLASSID="CLSID:794834BD-2C77-4D7E-9189-68AA99DC426B" 
+	style="visibility:hidden;width:0px;height:0px">
+	<PARAM name="copyright" value="http://www.freighteasy.net">
+</OBJECT>
+<OBJECT ID="ClientTrack2" CODEBASE="./IEPrint.ocx" 
+	CLASSID="CLSID:F290B058-CB26-460E-B3D4-8F36AEEDBE44" 
+	style="visibility:hidden;width:0px;height:0px">
+	<PARAM name="copyright" value="http://www.freighteasy.net">
+</OBJECT>
+
+test activex
+</BODY>
+</HTML>

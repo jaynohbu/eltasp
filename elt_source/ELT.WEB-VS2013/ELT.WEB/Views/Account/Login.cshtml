@@ -1,0 +1,58 @@
+﻿@model ELT.WEB.Models.LoginModel
+@{
+    ViewBag.Title = "Member Log-in";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+@Styles.Render("~/Content/css/form.css")
+<hgroup class="title">
+    <h1>@ViewBag.Title</h1>
+</hgroup>
+<div class="AccountForm">
+    <section>
+
+@using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+{
+    @*@Html.AntiForgeryToken()*@
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Log in Form</legend>
+        <ol>          
+            <li>
+                @Html.LabelFor(m => m.ELT_account_number)
+                @Html.TextBoxFor(m => m.ELT_account_number, new { @Value = "" })
+                @Html.ValidationMessageFor(m => m.ELT_account_number)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName)
+
+                @Html.ValidationMessageFor(m => m.UserName)
+            </li>
+        
+            <li>
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.Password)
+            </li>
+
+
+
+            <li>
+                @Html.CheckBoxFor(m => m.RememberMe)
+                @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
+            </li>
+        </ol>
+        <input type="submit" value="Log in" />
+    </fieldset>
+    @*<p>
+        @Html.ActionLink("Register", "Register") if you don't have an account.
+    </p>*@
+}
+</section>
+   
+</div>
+@section Scripts {
+}
+@section righttop{
+}

@@ -1,0 +1,31 @@
+﻿@model ELT.WEB.Models.APDisputeDetailModel
+
+@Html.DevExpress().GridView(settings => {   
+
+    settings.Name = "detailGrid_" + Model.Key.Replace(' ', '_');
+    settings.SettingsDetail.MasterGridName = "grid";
+    settings.CallbackRouteValues = new { Controller = "Accounting", Action = "APDisputeDetail", KeyFieldName = Model.KeyFieldName, Key = Model.Key };
+    settings.Width = Unit.Percentage(100);
+    settings.KeyFieldName = Model.KeyFieldName;
+    settings.SettingsPager.PageSize = 50;    
+
+    
+     //public string Customer_Number { get; set; }  
+     //   public string Date { get; set; }
+     //   public string Memo { get; set; }
+     //   public string FileNo { get; set; }
+     //   public string Payment_Method { get; set; }
+        
+     //   public string Due_Amount { get; set; }
+     //   public string Paid_Amount { get; set; }
+     //   public string Dispute_Amount { get; set; }    
+
+    settings.Columns.Add("Date");
+
+    settings.Columns.Add("FileNo", "File No.");
+    settings.Columns.Add("Payment_Method", "Payment Method");
+    settings.Columns.Add("Due_Amount", "Due");
+    settings.Columns.Add("Paid_Amount", "Paid");
+    settings.Columns.Add("Dispute_Amount", "Dispute");
+
+  }).Bind(Model.Elements).GetHtml()

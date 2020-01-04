@@ -1,0 +1,10 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxwschs" Namespace="DevExpress.Web.ASPxScheduler.Controls" Assembly="DevExpress.Web.ASPxScheduler.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<dxwschs:WeekOfMonthEdit runat="server" 
+	CssFilePath="~/App_Themes/DevEx/{0}/styles.css" CssPostfix="DevEx"
+	SpriteCssFilePath="~/App_Themes/DevEx/{0}/sprite.css" >
+    <LoadingPanelStyle ImageSpacing="5" />
+    <LoadingPanelImage Url="~/App_Themes/DevEx/Web/Loading.gif" />
+</dxwschs:WeekOfMonthEdit>
+

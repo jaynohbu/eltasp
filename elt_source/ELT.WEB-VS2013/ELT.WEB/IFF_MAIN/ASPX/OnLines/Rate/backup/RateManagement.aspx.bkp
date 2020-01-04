@@ -1,0 +1,754 @@
+<%@ Register TagPrefix="igtbar" Namespace="Infragistics.WebUI.UltraWebToolbar" Assembly="Infragistics.WebUI.UltraWebToolbar.v5.1, Version=5.1.20051.1045, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<%@ Register TagPrefix="igtxt" Namespace="Infragistics.WebUI.WebDataInput" Assembly="Infragistics.WebUI.WebDataInput.v5.1, Version=5.1.20051.1045, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<%@ Page language="c#" Codebehind="RateManagement.aspx.cs" AutoEventWireup="false" Inherits="IFF_MAIN.ASPX.Reports.Accounting.RateManagement" %>
+<%@ Register TagPrefix="igcmbo" Namespace="Infragistics.WebUI.WebCombo" Assembly="Infragistics.WebUI.WebCombo.v5.1, Version=5.1.20051.1045, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<%@ Register TagPrefix="cc2" Namespace="iMoonComboBox.WebControls" Assembly="iMoonComboBox" %>
+<%@ Register TagPrefix="igtbl" Namespace="Infragistics.WebUI.UltraWebGrid" Assembly="Infragistics.WebUI.UltraWebGrid.v5.1, Version=5.1.20051.1045, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<%@ Register TagPrefix="cc1" Namespace="Infragistics.WebUI.UltraWebGrid.ExcelExport" Assembly="Infragistics.WebUI.UltraWebGrid.ExcelExport.v5.1, Version=5.1.20051.1045, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+  <HEAD>
+		<title>RateManagement</title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name=GENERATOR>
+		<meta content=C# name=CODE_LANGUAGE>
+		<meta content=JavaScript name=vs_defaultClientScript>
+		<meta content=http://schemas.microsoft.com/intellisense/ie5 name=vs_targetSchema>
+		<!--  #INCLUDE FILE="../../include/common.htm" -->
+		<script language=javascript>
+
+function SetCombo() {
+
+	if( document.Form1.RadioButtonList1_1.checked || document.Form1.RadioButtonList1_3.checked) {
+			document.Form1.ComboBox1.value = "";
+			document.Form1.ComboBox1_Text.value = "";
+			document.Form1.ComboBox1_Text.style.backgroundColor = "#E0E0E0";			
+			document.Form1.ComboBox1.style.backgroundColor = "#E0E0E0";	
+			document.Form1.ComboBox1.disabled = true;
+			document.Form1.ComboBox1_Text.disabled = true;			
+	}
+	else
+	{
+			document.Form1.ComboBox1.disabled = false;	
+			document.Form1.ComboBox1_Text.disabled = false;
+			document.Form1.ComboBox1_Text.style.backgroundColor = "#FFFFC0";
+			document.Form1.ComboBox1.style.backgroundColor ="#FFFFC0";
+	}
+
+
+}
+
+function MsgCombo() {
+
+	if( document.Form1.RadioButtonList1_1.checked || document.Form1.RadioButtonList1_3.checked) {
+			document.Form1.ComboBox1.value = "";
+			alert("You can not select company name for airline or IATA rate.");
+	}
+}
+
+function ReqDataCheck() {
+	if( document.Form1.ComboBox1.value != "") {
+		document.Form1.txtNum.value = document.Form1.ComboBox1.selectedIndex;
+		return true;
+	 }
+}
+
+function AddRow(strGrid,strBand) {
+var oGrid1 = igtbl_getGridById(strGrid);
+igtbl_addNew(oGrid1.Id,strBand);	
+return false;
+}
+
+function formRest(tr,id) {
+
+	ReqDataCheck();							  
+	
+	var idText = id.Key;
+	
+	if(idText == 'NEW') {
+		__doPostBack("btnNew", "");   		
+		return true;
+	}
+	else if(idText == 'CANCEL' ) {
+		__doPostBack("btnReset", "");
+		return true;
+	}
+	else if(idText == 'RESET' ) {
+		__doPostBack("btnReset", "");
+		return true;
+	}
+	else if(idText == 'EXEC' ) {
+		ReqDataCheck();
+		__doPostBack("btnShow", "");   		
+		return true;
+	}
+	else if(idText == 'DCI' ) {
+		__doPostBack("btnDelete", "");   		
+		return true;
+	}
+	else if ( idText == 'SAVE' ) {
+//		if(!dataValidation()) return true;
+		__doPostBack("btnSave", "");			
+	}	
+	else if (idText == 'Asce') {
+		__doPostBack("btnSortAsce", "");			
+	}	
+	else if (idText == 'Desc') {
+		__doPostBack("btnSortDesc", "");			
+	}	
+	else if (idText == 'EXCEL') {
+		__doPostBack("btnExcel", "");			
+	}	
+	else if (idText == 'XML') {
+		__doPostBack("btnXML", "");			
+	}	
+	else if(idText == 'BACK' ) {
+		__doPostBack("btnBack", "");   		
+		return true;
+	}
+	
+	
+}
+
+function SelectAllRows() {
+
+var oGrid = igtbl_getGridById('UltraWebGrid1');
+var oRows = oGrid.Rows;
+oGrid.suspendUpdates(true);
+	for(i=0; i<oRows.length; i++) {
+		oRow = oRows.getRow(i);
+		oRow.getCellFromKey('Chk').Element.style.backgroundImage =  'url(../../../Images/mark_x.gif)';
+		oRow.getCellFromKey("x").setValue("x");
+		oRow.getCellFromKey('e').setValue('e');
+		oRow.getCellFromKey("x").Element.style.backgroundColor = "Red";
+		oRow.getCellFromKey('e').Element.style.backgroundColor = "Lavender";		
+		var oChildRows	= oRow.Rows;
+		for(j=0; j<oChildRows.length; j++) {
+				oChildRow = oChildRows.getRow(j);
+				oChildRow.getCellFromKey('Chk').Element.style.backgroundImage =  'url(../../../Images/mark_x.gif)';
+				oChildRow.getCellFromKey("x").setValue("x");
+				oChildRow.getCellFromKey('e').setValue('e');
+				oChildRow.getCellFromKey("x").Element.style.backgroundColor = "Red";
+				oChildRow.getCellFromKey('e').Element.style.backgroundColor = "Lavender";		
+		}
+	}		
+	
+	oUltraWebGrid1.suspendUpdates(false);
+}
+
+function unSelectAllRows() {
+	
+var oGrid = igtbl_getGridById('UltraWebGrid1');
+var oRows = oGrid.Rows;
+oGrid.suspendUpdates(true);
+	for(i=0; i<oRows.length; i++) {
+		oRow = oRows.getRow(i);
+		oRow.getCellFromKey('Chk').Element.style.backgroundImage =  'url(../../../Images/mark_o.gif)';
+		oRow.getCellFromKey("x").setValue("");
+		oRow.getCellFromKey('e').setValue('e');
+		oRow.getCellFromKey("x").Element.style.backgroundColor = "Lavender";
+		oRow.getCellFromKey('e').Element.style.backgroundColor = "Lavender";		
+		var oChildRows	= oRow.Rows;
+		for(j=0; j<oChildRows.length; j++) {
+				oChildRow = oChildRows.getRow(j);
+				oChildRow.getCellFromKey('Chk').Element.style.backgroundImage =  'url(../../../Images/mark_o.gif)';
+				oChildRow.getCellFromKey("x").setValue("");
+				oChildRow.getCellFromKey('e').setValue('e');
+				oChildRow.getCellFromKey("x").Element.style.backgroundColor = "Lavender";
+				oChildRow.getCellFromKey('e').Element.style.backgroundColor = "Lavender";		
+		}
+	}		
+		
+	oUltraWebGrid1.suspendUpdates(false);
+
+}
+
+function gridRowDelete(strGrid) {
+igtbl_deleteSelRows(strGrid);
+
+}
+
+function gridRowDeleteAll(strGrid) {
+	var oGrid = igtbl_getGridById(strGrid);
+	var oRows = oGrid.Rows;
+
+	for(i=(oRows.length-1); i>=0; i--) {
+	 strRow = strGrid+"r_"+i;
+	 igtbl_deleteRow(strGrid,strRow);	 
+	}
+}
+
+function DeleteRows() {
+
+var oGrid = igtbl_getGridById('UltraWebGrid1');
+var oRows = oGrid.Rows;
+oGrid.suspendUpdates(true);
+
+	for(i=0; i<oRows.length; i++) {
+		oRow = oRows.getRow(i);
+		if( oRow.getCellFromKey('Chk').Element.style.backgroundImage ==  'url(../../../Images/mark_x.gif)' ) {
+		oRow.setSelected(true);
+		var oChildRows	= oRow.Rows;
+			for(j=0; j<oChildRows.length; j++) {
+					oChildRow = oChildRows.getRow(j);
+					if( oChildRow.getCellFromKey('Chk').Element.style.backgroundImage ==  'url(../../../Images/mark_x.gif)' ) {
+					oChildRow.setSelected(true);
+					}
+			}
+		}
+	}		
+
+oUltraWebGrid1.suspendUpdates(false);
+gridRowDelete(oGrid.Id);
+
+}
+
+
+/*
+var igS;
+function acuh(tableName,itemName) {
+var cell = igtbl_getElementById(itemName);
+	  cell.innerHTML = igS;		
+}
+
+function bcuh(tableName,itemName) {
+var cell = igtbl_getElementById(itemName);
+	 igS = cell.innerHTML; 	
+}
+*/
+
+function vlsch(gn,ValueListID,cellId) {
+	var cell=igtbl_getCellById(cellId);
+	var row=igtbl_getRowById(cellId);
+
+	if(cell.Column.Key=="Company Name") {
+		var list = igtbl_getElementById(ValueListID);
+		row.getCellFromKey('Code').setValue(list.value);
+	}
+//	else if(cell.Column.Key=="Airline") {
+//		var list = igtbl_getElementById(ValueListID);
+//		row.getCellFromKey('Airline_Code').setValue(list.value);
+//	}
+	
+}
+
+function acuh(gridName,cellId) {
+var row=igtbl_getRowById(cellId);
+var s = row.getCellFromKey("a").getValue();
+if (s=="a") {
+	return false;
+}
+
+s = row.getCellFromKey("x").getValue();
+if (s=="x") {
+	return false;
+}
+row.getCellFromKey('e').setValue('e');
+row.getCellFromKey('e').Element.style.backgroundColor = "Lavender";
+row.ParentRow.getCellFromKey('e').setValue('e');
+row.ParentRow.getCellFromKey('e').Element.style.backgroundColor = "Lavender";
+}
+
+function arih(gridName,rowId) {
+var row=igtbl_getRowById(rowId);
+row.getCellFromKey("a").setValue("a");
+row.getCellFromKey("a").Element.style.backgroundColor = "LightGreen";
+
+var band = igtbl_getBandById(rowId);
+if(band.Key == 'RateHeader') {
+	row.getCellFromKey('R0').setValue('Min.($)');
+	
+	if( document.Form1.RadioButtonList1_1.checked || document.Form1.RadioButtonList1_3.checked) {
+			row.getCellFromKey('Company Name').setValue('N/A');
+	}
+	else {
+			row.getCellFromKey('Company Name').setValue('Please Double Click...');
+	}
+	row.getCellFromKey('Origin').setValue('Double Click...');
+	row.getCellFromKey('Destination').setValue('Double Click...');
+	row.getCellFromKey('Kg/Lb').setValue('Double Click...');
+}
+else {
+	row.ParentRow.getCellFromKey('e').setValue('e');
+	row.ParentRow.getCellFromKey('e').Element.style.backgroundColor = "Lavender";
+	row.getCellFromKey('Airline').setValue('Please Double Click...');	
+}
+}
+
+function beemh(gridName,cellId) {
+var band = igtbl_getBandById(cellId);
+var cell=igtbl_getCellById(cellId);
+var row=igtbl_getRowById(cellId);
+
+var s = row.getCellFromKey("a").getValue();
+if (s=="a") {
+	return false;
+}
+
+if(cell.Column.Key=="Add") return true;
+
+		if(band.Key == 'RateDetail') {
+			if(cell.Column.Key=="Company Name") {
+				igtbl_EndEditMode(gridName);
+				alert( "You can not edit Company name.");
+				return true;
+			}
+		}
+		else if(band.Key == 'RateHeader') {						
+			if(cell.Column.Key=="Company Name" || cell.Column.Key=="Origin" || cell.Column.Key=="Destination" || cell.Column.Key=="Kg/Lb") {
+				igtbl_EndEditMode(gridName);	
+				alert( "You can not edit this field.");
+				return true;			
+			}
+		}
+}
+function ccbh(gridName,cellId) {
+
+//var g=igtbl_getGridById(gridName);
+var row = igtbl_getRowById(cellId);
+var cell = row.getCell(1);
+
+	if(row != null)
+		igtbl_setActiveRow(gridName, row.Element);
+	else {
+		var cell = igtbl_getActiveCell(gridName);
+		if(cell != null)
+			igtbl_setActiveCell(gridName, cell.Element);
+	}
+
+igtbl_addNew(gridName,'1');
+return false;
+
+}
+
+function cch(gridName,cellId,button) {
+
+var SelectedChild = 'url(../../../Images/mark_o.gif)';
+var SelectedParent = 'url(../../../Images/mark_o.gif)';
+var row=igtbl_getRowById(cellId);
+var cell=igtbl_getCellById(cellId);
+var oCell = igtbl_getCellById(cellId);
+var cUrl = oCell.Element.style.backgroundImage;
+var band = igtbl_getBandById(row.Id);
+		if(band.Key == 'RateDetail') {
+
+			if(cell.Column.Key=="Chk") {
+				if(cUrl==SelectedChild) {
+					oCell.Element.style.backgroundImage =  'url(../../../Images/mark_x.gif)';
+					row.getCellFromKey("x").setValue("x");
+					row.getCellFromKey("x").Element.style.backgroundColor = "Red";
+					row.ParentRow.getCellFromKey('e').setValue('e');
+					row.ParentRow.getCellFromKey('e').Element.style.backgroundColor = "Lavender";
+					row.setSelected(true);
+				}
+				else {
+					if(	row.ParentRow.getCellFromKey("x").getValue() == "x" ) {
+						alert('Please uncheck the parent node first.');
+						return false;
+					}
+					oCell.Element.style.backgroundImage =  'url(../../../Images/mark_o.gif)';
+					row.getCellFromKey("x").setValue('');
+					row.getCellFromKey("x").Element.style.backgroundColor = "Lavender";
+					row.ParentRow.getCellFromKey('e').setValue('e');
+					row.ParentRow.getCellFromKey('e').Element.style.backgroundColor = "Lavender";
+					row.setSelected(true);
+				}
+			}
+		}
+		else if(band.Key == 'RateHeader') {		
+			if(cell.Column.Key=="Add") {
+			igtbl_addNew(gridName,'1');			
+			return false;	
+			}
+			
+			if(cell.Column.Key=="Chk") {
+				if(cUrl==SelectedParent) {
+
+					oCell.Element.style.backgroundImage =  'url(../../../Images/mark_x.gif)';					
+					row.getCellFromKey("x").setValue("x");
+					row.getCellFromKey('e').setValue('e');
+					row.getCellFromKey("x").Element.style.backgroundColor = "Red";
+					row.getCellFromKey('e').Element.style.backgroundColor = "Lavender";
+					
+					row.setSelected(true);
+					var oChildRows	= row.Rows;
+					for(j=0; j<oChildRows.length; j++) {
+							oChildRow = oChildRows.getRow(j);
+							oChildRow.getCellFromKey("x").setValue("x");
+							oChildRow.getCellFromKey("x").Element.style.backgroundColor = "Red";
+
+							oChildRow.setSelected(true);
+							oChildoCell= oChildRow.getCell(1);
+							oChildoCell.Element.style.backgroundImage =  'url(../../../Images/mark_x.gif)';
+						}
+				}
+				else {
+
+					oCell.Element.style.backgroundImage =  'url(../../../Images/mark_o.gif)';
+					row.getCellFromKey("x").setValue('');
+					row.getCellFromKey('e').setValue('e');
+					row.getCellFromKey("x").Element.style.backgroundColor = "Lavender";
+					row.getCellFromKey('e').Element.style.backgroundColor = "Lavender";
+					row.setSelected(true);
+					var oChildRows = row.Rows;
+					for(j=0; j<oChildRows.length; j++) {
+							oChildRow = oChildRows.getRow(j);
+							oChildRow.getCellFromKey("x").setValue('');
+							oChildRow.getCellFromKey("x").Element.style.backgroundColor = "Lavender";
+							oChildRow.setSelected(true);
+							oChildoCell= oChildRow.getCell(1);
+							oChildoCell.Element.style.backgroundImage =  'url(../../../Images/mark_o.gif)';
+					}
+				}
+			}
+		}
+
+}
+
+function DeleteRow() {
+
+	var SelectedChild = 'url(../../../Images/mark_x.gif)';
+	var SelectedParent = 'url(../../../Images/mark_x.gif)';
+	
+	var oGrid = oUltraWebGrid1;
+	var oRows = oGrid.Rows;
+
+	for(i=0; i<oRows.length; i++) {
+		oRow = oRows.getRow(i);
+		oCell = oRow.getCell(1);
+		
+		if (oCell.Element.style.backgroundImage == SelectedParent) {
+			var oChildRows = oRow.Rows;
+			for(j=0; j<oChildRows.length; j++) {
+						oChildRow = oChildRows.getRow(j);
+						oChildoCell= oChildRow.getCell(1);
+						if(oChildoCell.Element.style.backgroundImage ==  SelectedChild) {
+							igtbl_deleteRow(oGrid.Id,oChildRow.Id);
+						}
+			}			
+
+		igtbl_deleteRow(oGrid.Id,oRow.Id);
+			
+		}			
+
+	}
+	return false;
+}
+
+function ExpandAllRows(btnEl) {		
+var oUltraWebGrid1 = igtbl_getGridById('UltraWebGrid1');
+if(!oUltraWebGrid1) return true;		
+	var oGrid = oUltraWebGrid1;
+	var oBands = oGrid.Bands;
+	var oBand = oBands[0];
+	var oColumns = oBand.Columns;
+	var count = oColumns.length;
+	var oRows = oGrid.Rows;
+	oGrid.suspendUpdates(true);
+	for(i=0; i<oRows.length; i++) {
+		oRow = oRows.getRow(i);
+		if(btnEl.value == "Expand All") {
+			oRow.setExpanded(true);
+		}
+		else {
+			oRow.setExpanded(false);
+		}
+	}
+	oGrid.suspendUpdates(false);
+	if(btnEl.value == "Expand All") 
+		btnEl.value = "Collapse All";
+	else		
+		btnEl.value = "Expand All";		
+}
+	
+function resetFind() {
+	var btnEl = igtbl_getElementById("Find");
+	btnEl.value="Find";
+}
+
+function FindValue(btnEl) {
+var oUltraWebGrid1 = igtbl_getGridById('UltraWebGrid1');
+	var eVal = igtbl_getElementById("FindVal");
+	findValue = eVal.value;
+	var re = new RegExp("^" + findValue, "gi");
+	if(btnEl.value=="Find") {
+		igtbl_clearSelectionAll(oUltraWebGrid1.Id)
+		var oCell = oUltraWebGrid1.find(re);
+		if(oCell != null) {
+			btnEl.value="Find Next";
+			var row = oCell.Row.ParentRow;
+			while(row != null) {
+				row.setExpanded(true);
+				row = row.ParentRow;
+			}
+			oCell.setSelected(true);
+		}
+		else
+		{
+		alert("Not found! : "+findValue)
+		}
+	}
+	else {
+		var oCell = oUltraWebGrid1.findNext();
+		if(oCell == null) {
+			btnEl.value="Find";
+		}
+		else {
+			var row = oCell.Row.ParentRow;
+			while(row != null) {
+				row.setExpanded(true);
+				row = row.ParentRow;
+			}
+			oCell.setSelected(true);
+		}
+	}
+}
+	
+	
+		</script>
+		<LINK href="/IFF_MAIN/ASPX/CSS/AppStyle.css" type=text/css rel=stylesheet>
+  </HEAD>
+	<body MS_POSITIONING="FlowLayout">
+		<form id=Form1 method=post runat="server">
+			<table height=12 cellSpacing=0 cellPadding=0 width="100%" border=0>
+				<tr>
+					<td vAlign=top align=center><IMG height=6 src="../../../images/spacer.gif" width=260><IMG height=7 src="../../../images/pointer_md.gif" width=11><IMG height=6 src="../../../images/spacer.gif" width=160></td>
+				</tr>
+			</table>
+			<TABLE id=Table2 height="100%" cellSpacing=0 cellPadding=0 width="100%" bgColor=#ffffff>
+				<TR>
+					<TD height=20></TD>
+					<TD height=20>
+						<TABLE id=Table3 cellSpacing=0 cellPadding=0 width="100%">
+							<TR>
+								<TD style="HEIGHT: 1px"></TD>
+								<TD style="HEIGHT: 1px"><asp:label id=Label1 runat="server" Font-Italic="True" Height="8px" Font-Size="Larger" ForeColor="Navy"
+										Font-Bold="True" Width="100%"> Rate Management</asp:label></TD>
+								<TD style="HEIGHT: 1px"></TD>
+							</TR>
+							<TR>
+								<TD></TD>
+								<TD style="HEIGHT: 3px" vAlign=top bgColor=#73beb6><FONT face=±¼¸²></FONT></TD>
+								<TD></TD>
+							</TR>
+							<TR>
+								<TD style="HEIGHT: 16px"></TD>
+								<TD noWrap rowSpan=1>
+									<TABLE id=Table6 style="WIDTH: 1353px; HEIGHT: 80px" cellSpacing=0 cellPadding=0 width=1353
+										border=0>
+										<TR>
+											<TD style="WIDTH: 533px; HEIGHT: 111px">
+												<TABLE id=Table1 height="88" width="714" style="WIDTH: 714px; HEIGHT: 88px">
+													<TR>
+														<TD style="WIDTH: 40px" vAlign=middle align=left><asp:label id=Label2 runat="server" ForeColor="Navy" Width="160px">Please select the Rate type</asp:label></TD>
+														<TD style="WIDTH: 100px" vAlign=middle align=left><asp:radiobuttonlist id=RadioButtonList1 runat="server" Height="100%" Width="168px">
+																<asp:ListItem Value="Agent Buying Rate" Selected="True">Agent Buying Rate</asp:ListItem>
+																<asp:ListItem Value="Airline Buying Rate">Airline Buying Rate</asp:ListItem>
+																<asp:ListItem Value="Customer Selling Rate">Customer Selling Rate</asp:ListItem>
+																<asp:ListItem Value="IATA Rate">IATA Rate</asp:ListItem>
+															</asp:radiobuttonlist></TD>
+														<TD style="WIDTH: 159px; HEIGHT: 32px" vAlign=middle align=right><asp:label id=Label13 runat="server" Height="19px" ForeColor="Navy" Width="168px"> Company name (optional)</asp:label></TD>
+														<TD style="WIDTH: 159px; HEIGHT: 32px" vAlign=middle align=right><cc2:combobox id=ComboBox1 runat="server" Width="200px" DESIGNTIMEDRAGDROP="166" Rows="20" BackColor="#FFFFC0"></cc2:combobox></TD>
+													</TR>
+													<TR>
+														<TD style="WIDTH: 40px" vAlign=middle align=left></TD>
+														<TD style="WIDTH: 100px" vAlign=middle align=center></TD>
+														<TD style="WIDTH: 159px; HEIGHT: 32px" vAlign=middle align=right></TD>
+														<TD vAlign=middle align=right>
+																<asp:ImageButton id=ImageButton1 runat="server" ImageUrl="../../../images/button_go.gif"></asp:ImageButton></TD>
+													</TR>
+												</TABLE>
+											</TD>
+											<TD style="HEIGHT: 111px" vAlign=middle align=center><FONT 
+          face=±¼¸²></FONT></TD>
+										</TR>
+									</TABLE>
+								</TD>
+								<TD style="HEIGHT: 16px"></TD>
+							</TR>
+						</TABLE>
+						<asp:label id=lblError runat="server" Width="100%" Font-Bold="True" ForeColor="Red" Font-Italic="True"
+							Font-Underline="True"></asp:label>
+					</TD>
+					<TD style="WIDTH: 2px" height=20></TD>
+				</TR>
+				<TR>
+					<TD style="HEIGHT: 4px"></TD>
+					<TD style="HEIGHT: 4px" bgColor=#73beb6><FONT 
+      face=±¼¸²></FONT></TD>
+					<TD style="WIDTH: 2px; HEIGHT: 4px"></TD>
+				</TR>
+				<TR>
+					<TD style="HEIGHT: 19px" height=19></TD>
+					<TD style="HEIGHT: 19px" vAlign=top height=19>
+						<igtbar:ultrawebtoolbar id=UltraWebToolbar1 runat="server" Width="184px" ForeColor="Black" Font-Size="9pt"
+							BackColor="White" ItemWidthDefault="80px" MovableImage="ig_tb_move00.gif" ImageDirectory="/ig_common/images/"
+							BorderWidth="2px" BorderStyle="None" Font-Names="Arial">
+<HoverStyle Cursor="Hand" Font-Size="9pt" Font-Names="Arial" BorderStyle="Outset" ForeColor="Black" BackColor="Silver">
+</HoverStyle>
+
+<ClientSideEvents Click="formRest">
+</ClientSideEvents>
+
+<SelectedStyle Cursor="Default" Font-Size="9pt" Font-Names="Arial" BorderStyle="Inset" ForeColor="Black" BackColor="Silver">
+</SelectedStyle>
+
+<Items>
+<igtbar:TBarButton Key="BACK" Image="../../../images/button_back.gif"></igtbar:TBarButton>
+<igtbar:TBarButton Tag="" Key="EXEC" HoverImage="" ToolTip="" SelectedImage="" TargetURL="" DisabledImage="" TargetFrame="" Visible="False" Image="../../../images/button_execute.gif"></igtbar:TBarButton>
+<igtbar:TBarButton Tag="" Key="RESET" HoverImage="" ToolTip="" SelectedImage="" TargetURL="" DisabledImage="" TargetFrame="" Image="../../../images/button_refresh.gif"></igtbar:TBarButton>
+<igtbar:TBarButton Tag="" Key="NEW" HoverImage="" ToolTip="" SelectedImage="" TargetURL="" DisabledImage="" TargetFrame="" Image="../../../images/button_create.gif"></igtbar:TBarButton>
+<igtbar:TBarButton Tag="" Key="SAVE" HoverImage="" ToolTip="" SelectedImage="" TargetURL="" DisabledImage="" TargetFrame="" Image="../../../images/button_save_ig.gif"></igtbar:TBarButton>
+<igtbar:TBarButton Tag="" Key="DCI" HoverImage="" ToolTip="" SelectedImage="" TargetURL="" DisabledImage="" TargetFrame="" Image="../../../Images/button_delete_ckitem.gif">
+<DefaultStyle Width="160px">
+</DefaultStyle>
+</igtbar:TBarButton>
+<igtbar:TBarButton Tag="" Key="Asce" HoverImage="" ToolTip="" SelectedImage="" TargetURL="" DisabledImage="" TargetFrame="" Image="../../../images/button_asce.gif"></igtbar:TBarButton>
+<igtbar:TBarButton Tag="" Key="Desc" HoverImage="" ToolTip="" SelectedImage="" TargetURL="" DisabledImage="" TargetFrame="" Image="../../../images/button_desc.gif"></igtbar:TBarButton>
+<igtbar:TBarButton Tag="" Key="EXCEL" HoverImage="" ToolTip="" SelectedImage="" TargetURL="" DisabledImage="" TargetFrame="" Image="../../../Images/button_exel.gif"></igtbar:TBarButton>
+<igtbar:TBarButton Tag="" Key="XML" HoverImage="" ToolTip="" SelectedImage="" TargetURL="" DisabledImage="" TargetFrame="" Image="../../../Images/button_xmlg.gif"></igtbar:TBarButton>
+</Items>
+
+<DefaultStyle Cursor="Hand" BorderWidth="1px" Font-Size="9pt" Font-Names="Arial" BorderColor="White" BorderStyle="None" ForeColor="Black" BackColor="White">
+</DefaultStyle>
+						</igtbar:ultrawebtoolbar></TD>
+					<TD style="WIDTH: 2px; HEIGHT: 19px" height=19></TD>
+				</TR>
+				<TR>
+					<TD height=5></TD>
+					<TD vAlign=top height=5><asp:button id=btnAddCom runat="server" Text="Add Company or Route"></asp:button></TD>
+					<TD style="WIDTH: 2px" height=5></TD>
+				</TR>
+				<TR>
+					<TD></TD>
+					<TD vAlign=top align=left><igtbl:ultrawebgrid id=UltraWebGrid1 runat="server" Height="100%" Width="100%">
+<DisplayLayout ColWidthDefault="80px" AllowAddNewDefault="Yes" RowHeightDefault="20px" Version="4.00" ViewType="Hierarchical" HeaderClickActionDefault="SortMulti" BorderCollapseDefault="Separate" Name="UltraWebGrid1" CellClickActionDefault="Edit" NoDataMessage="Please select a rate type. And then click the execute button." AllowUpdateDefault="Yes">
+
+<AddNewBox Prompt="Enter New Company" Location="Top">
+
+<Style BorderWidth="1px" BorderStyle="Solid" BackColor="LightGray">
+
+<BorderDetails ColorTop="White" WidthLeft="1px" StyleBottom="Outset" WidthTop="1px" StyleTop="Outset" StyleRight="Outset" StyleLeft="Outset" ColorLeft="White">
+</BorderDetails>
+
+</Style>
+
+<ButtonStyle Width="70px" Cursor="Hand" BackgroundImage="../../../Images/button_add.gif" CustomRules="background-repeat:no-repeat">
+</ButtonStyle>
+
+</AddNewBox>
+
+<Pager>
+
+<Style BorderWidth="1px" BorderStyle="Solid" BackColor="LightGray">
+
+<BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White">
+</BorderDetails>
+
+</Style>
+
+</Pager>
+
+<HeaderStyleDefault BorderStyle="Solid" ForeColor="Black" BackColor="#CCEBED" Height="17px">
+
+<BorderDetails WidthLeft="0px" StyleBottom="Solid" ColorBottom="204, 235, 237" WidthRight="0px" StyleTop="None" StyleRight="None" WidthBottom="1px" StyleLeft="None">
+</BorderDetails>
+
+</HeaderStyleDefault>
+
+<RowSelectorStyleDefault Cursor="Hand" BackColor="#CCEBED" CustomRules="background-position:center center;background-repeat:no-repeat">
+
+<BorderDetails WidthLeft="0px" ColorBottom="224, 224, 224" WidthTop="0px" WidthRight="0px" WidthBottom="0px">
+</BorderDetails>
+
+</RowSelectorStyleDefault>
+
+<FrameStyle Width="100%" BorderWidth="1px" Font-Size="8pt" Font-Names="Tahoma" BorderColor="#CCEBED" BorderStyle="Solid" Height="100%">
+</FrameStyle>
+
+<FooterStyleDefault BorderWidth="1px" BorderStyle="Solid" BackColor="#CFDDF0">
+
+<BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White">
+</BorderDetails>
+
+</FooterStyleDefault>
+
+<ClientSideEvents ClickCellButtonHandler="ccbh" AfterCellUpdateHandler="acuh" ValueListSelChangeHandler="vlsch" BeforeEnterEditModeHandler="beemh" CellClickHandler="cch" AfterRowInsertHandler="arih">
+</ClientSideEvents>
+
+<GroupByBox>
+
+<BandLabelStyle BackColor="White">
+</BandLabelStyle>
+
+</GroupByBox>
+
+<EditCellStyleDefault BorderWidth="0px" BorderStyle="None">
+</EditCellStyleDefault>
+
+<RowStyleDefault BorderWidth="1px" BorderColor="#CCEBED" BorderStyle="Solid">
+
+<Padding Left="3px">
+</Padding>
+
+<BorderDetails WidthLeft="0px" WidthTop="0px" WidthRight="1px" StyleLeft="None">
+</BorderDetails>
+
+</RowStyleDefault>
+
+</DisplayLayout>
+
+<Bands>
+<igtbl:UltraGridBand></igtbl:UltraGridBand>
+</Bands>
+						</igtbl:ultrawebgrid></TD>
+					<TD style="WIDTH: 1px"></TD>
+				</TR>
+				<TR>
+					<TD style="HEIGHT: 94px"></TD>
+					<TD style="HEIGHT: 94px" vAlign=top align=left>
+						<TABLE id=Table5 style="WIDTH: 430px; HEIGHT: 4px" height=4 cellSpacing=1 cellPadding=1
+							border=0>
+							<TR vAlign=top align=center>
+								<TD style="WIDTH: 87px" vAlign=middle align=left><INPUT id=ExpandAll style="WIDTH: 80px; HEIGHT: 20px; BACKGROUND-COLOR: #e0e0e0" onclick=javascript:ExpandAllRows(this);
+										type=button value="Expand All" name=ExpandAll></TD>
+								<TD style="WIDTH: 340px" vAlign=middle align=left>
+									<asp:radiobutton id=radSingle runat="server" Width="100px" Height="8px" Text="Single Page" Checked="True"
+										AutoPostBack="True" GroupName="SingleMulti"></asp:radiobutton>
+									<asp:radiobutton id=radMulti runat="server" Width="100px" Height="8px" Text="Multi Page" AutoPostBack="True"
+										GroupName="SingleMulti"></asp:radiobutton>
+									<asp:checkbox id=CheckBox1 runat="server" Width="104px" Text="Intelli. Search" Checked="True"
+										AutoPostBack="True"></asp:checkbox></TD>
+							</TR>
+						</TABLE>
+					</TD>
+					<TD style="WIDTH: 1px; HEIGHT: 94px"></TD>
+				</TR>
+				<TR>
+					<TD></TD>
+					<TD>
+						<asp:button id=btnShow runat="server" Width="60px" Font-Size="Larger" DESIGNTIMEDRAGDROP="263"
+							Visible="False"></asp:button>
+						<asp:button id=btnNew runat="server" Width="60px" Font-Size="Larger" DESIGNTIMEDRAGDROP="264"
+							Visible="False"></asp:button>
+						<asp:button id=btnCancel runat="server" Width="60px" Font-Size="Larger" DESIGNTIMEDRAGDROP="265"
+							Visible="False"></asp:button>
+						<asp:button id=btnSave runat="server" Width="60px" Font-Size="Larger" DESIGNTIMEDRAGDROP="266"
+							Visible="False"></asp:button>
+						<asp:button id=btnDelete runat="server" Width="60px" Font-Size="Larger" DESIGNTIMEDRAGDROP="267"
+							Visible="False"></asp:button>
+						<asp:button id=btnBack runat="server" Width="60px" DESIGNTIMEDRAGDROP="268" Visible="False"
+							Text="<< Back"></asp:button></TD>
+					<TD style="WIDTH: 1px"></TD>
+				</TR>
+			</TABLE>
+			<asp:button id=btnValidate runat="server" Visible="False" Text="for Validation"></asp:button><asp:linkbutton id=LinkButton1 runat="server" Visible="False">LinkButton</asp:linkbutton><asp:textbox id=txtMode runat="server" Visible="False"></asp:textbox><cc1:ultrawebgridexcelexporter id=UltraWebGridExcelExporter1 runat="server"></cc1:ultrawebgridexcelexporter><asp:textbox id=txtNum runat="server" Height="1px" Width="1px"></asp:textbox><asp:button id=btnSortAsce runat="server" Height="20px" Width="80px" BackColor="#E0E0E0" Visible="False"
+				Text="Asce."></asp:button><asp:button id=btnSortDesc runat="server" Height="20px" Width="80px" BackColor="#E0E0E0" Visible="False"
+				Text="Desc."></asp:button><asp:button id=btnPrint runat="server" Height="20px" Width="80px" BackColor="#E0E0E0" Visible="False"
+				Text="Print"></asp:button><asp:button id=btnExcel runat="server" Height="20px" Width="80px" BackColor="#E0E0E0" Visible="False"
+				Text="Excel"></asp:button><asp:button id=btnXML runat="server" Height="20px" Width="80px" BackColor="#E0E0E0" Visible="False"
+				Text="XML"></asp:button><asp:button id=btnReset runat="server" Height="20px" Width="80px" BackColor="#E0E0E0" Visible="False"
+				Text="Reset"></asp:button><igtxt:webnumericedit id=WebNumericEdit1 runat="server" Width="50px" Visible="False" MinDecimalPlaces="Two"></igtxt:webnumericedit><igtxt:webpercentedit id=WebPercentEdit1 runat="server" Width="50px" Visible="False" MinDecimalPlaces="Two"
+				MaxLength="999"></igtxt:webpercentedit><asp:rangevalidator id=RangeValidator1 runat="server" BorderStyle="Solid" MaximumValue="999999999" MinimumValue="0"
+				Type="Currency" ControlToValidate="UltraWebGrid1" ErrorMessage="Enter a numeric value"></asp:rangevalidator></form>
+	</body>
+</HTML>

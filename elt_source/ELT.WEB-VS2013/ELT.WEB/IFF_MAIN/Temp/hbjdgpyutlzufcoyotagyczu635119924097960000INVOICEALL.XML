@@ -1,0 +1,76 @@
+<INVOICE>
+  <xs:schema id="INVOICE" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="INVOICE" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="INVOICE">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="invoice_no" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Customer_Number" type="xs:string" minOccurs="0" />
+                <xs:element name="Customer" type="xs:string" minOccurs="0" />
+                <xs:element name="mawb_num" type="xs:string" minOccurs="0" />
+                <xs:element name="hawb_num" type="xs:string" minOccurs="0" />
+                <xs:element name="invoice_date" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="invoice_type" type="xs:string" minOccurs="0" />
+                <xs:element name="import_export" type="xs:string" minOccurs="0" />
+                <xs:element name="air_ocean" type="xs:string" minOccurs="0" />
+                <xs:element name="Ref_No" type="xs:string" minOccurs="0" />
+                <xs:element name="File_No" type="xs:string" minOccurs="0" />
+                <xs:element name="Total_Pieces" type="xs:string" minOccurs="0" />
+                <xs:element name="Total_Gross_Weight" type="xs:string" minOccurs="0" />
+                <xs:element name="amount_charged" type="xs:decimal" minOccurs="0" />
+                <xs:element name="agent_profit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="sale_tax" type="xs:decimal" minOccurs="0" />
+                <xs:element name="total_cost" type="xs:decimal" minOccurs="0" />
+                <xs:element name="subtotal" type="xs:decimal" minOccurs="0" />
+                <xs:element name="amount_paid" type="xs:decimal" minOccurs="0" />
+                <xs:element name="balance" type="xs:decimal" minOccurs="0" />
+                <xs:element name="pay_status" type="xs:string" minOccurs="0" />
+                <xs:element name="Origin_Dest" type="xs:string" minOccurs="0" />
+                <xs:element name="Origin" type="xs:string" minOccurs="0" />
+                <xs:element name="Destination" type="xs:string" minOccurs="0" />
+                <xs:element name="Shipper" type="xs:string" minOccurs="0" />
+                <xs:element name="Consignee" type="xs:string" minOccurs="0" />
+                <xs:element name="Carrier" type="xs:string" minOccurs="0" />
+                <xs:element name="Arrival_Dept" type="xs:string" minOccurs="0" />
+                <xs:element name="Description" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <INVOICE>
+    <invoice_no>90963</invoice_no>
+    <Customer_Number>45</Customer_Number>
+    <Customer>LogiGear</Customer>
+    <mawb_num>297-0919 6552</mawb_num>
+    <hawb_num>1X-4843</hawb_num>
+    <invoice_date>2013-08-01T00:00:00-07:00</invoice_date>
+    <invoice_type>I</invoice_type>
+    <import_export>E</import_export>
+    <air_ocean />
+    <Ref_No>CONSOL # 164</Ref_No>
+    <File_No>1X-4843</File_No>
+    <Total_Pieces>2 BOXES</Total_Pieces>
+    <Total_Gross_Weight>25Lb</Total_Gross_Weight>
+    <amount_charged>425.00</amount_charged>
+    <agent_profit>0.00</agent_profit>
+    <sale_tax>0.00</sale_tax>
+    <total_cost>0.00</total_cost>
+    <subtotal>425.00</subtotal>
+    <amount_paid>0.00</amount_paid>
+    <balance>425.00</balance>
+    <pay_status>A</pay_status>
+    <Origin_Dest />
+    <Origin>SAN JOSE, CA</Origin>
+    <Destination>HOCHIMINH/ DA NANG</Destination>
+    <Shipper>LOGIGEAR</Shipper>
+    <Consignee>LOGIGEAR</Consignee>
+    <Carrier>CHINA AIRLINES</Carrier>
+    <Arrival_Dept>7/29/13 - 7/27/13</Arrival_Dept>
+    <Description>PACKING LIST ATTACHED</Description>
+  </INVOICE>
+</INVOICE>

@@ -1,0 +1,39 @@
+<%@ Register assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Data" TagPrefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxDataView" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxGridView" tagprefix="dx" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxmvc:MVCxGridView runat="server" CssFilePath="~/App_Themes/iOS/{0}/styles.css" CssPostfix="iOS">
+    <Images SpriteCssFilePath="~/App_Themes/iOS/{0}/sprite.css" >
+        <LoadingPanel Url="~/App_Themes/iOS/GridView/Loading.gif"></LoadingPanel>
+        <LoadingPanelOnStatusBar Url="~/App_Themes/iOS/GridView/gvLoadingOnStatusBar.gif"></LoadingPanelOnStatusBar>
+    </Images>
+    <Styles>
+        <LoadingPanel ImageSpacing="5px" />
+    </Styles>
+    <ImagesFilterControl>
+        <LoadingPanel Url="~/App_Themes/iOS/Editors/Loading.gif"></LoadingPanel>
+    </ImagesFilterControl>
+    <SettingsPager CurrentPageNumberFormat="{0}">
+    </SettingsPager>
+    <Settings GridLines="Horizontal"/>
+    <SettingsPopup>
+        <HeaderFilter MinWidth="250" MinHeight="250" />
+        <CustomizationWindow Width="200" />
+    </SettingsPopup>
+</dxmvc:MVCxGridView>
+
+<dxmvc:MVCxGridView runat="server" CssFilePath="~/App_Themes/iOS/{0}/styles.css" CssPostfix="iOS" SkinID="Switch">
+    <Images SpriteCssFilePath="~/App_Themes/iOS/{0}/sprite.css" />
+    <SettingsPager CurrentPageNumberFormat="{0}" />
+    <ImagesEditors>
+        <CheckBoxChecked SpriteProperties-CssClass="dxEditors_edtCheckBoxSwitchOn_iOS" />
+        <CheckBoxUnchecked  SpriteProperties-CssClass="dxEditors_edtCheckBoxSwitchOff_iOS" />
+    </ImagesEditors>
+    <StylesEditors>
+        <CheckBoxFocused CssClass="dxeSwitchFocused_iOS" />
+        <CheckBox CssClass="dxeSwitch_iOS" />
+    </StylesEditors>
+</dxmvc:MVCxGridView>
+

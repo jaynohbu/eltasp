@@ -1,0 +1,114 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SOlist">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="shipper_name" type="xs:string" minOccurs="0" />
+              <xs:element name="customer_name" type="xs:string" minOccurs="0" />
+              <xs:element name="received_name" type="xs:string" minOccurs="0" />
+              <xs:element name="auto_uid" type="xs:decimal" minOccurs="0" />
+              <xs:element name="wr_num" type="xs:string" minOccurs="0" />
+              <xs:element name="elt_account_number" type="xs:decimal" minOccurs="0" />
+              <xs:element name="carrier_ref_no" type="xs:string" minOccurs="0" />
+              <xs:element name="customer_ref_no" type="xs:string" minOccurs="0" />
+              <xs:element name="system_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="created_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="received_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="pickup_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="storage_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="shipper_acct" type="xs:decimal" minOccurs="0" />
+              <xs:element name="shipper_contact" type="xs:string" minOccurs="0" />
+              <xs:element name="customer_acct" type="xs:decimal" minOccurs="0" />
+              <xs:element name="customer_contact" type="xs:string" minOccurs="0" />
+              <xs:element name="trucker_acct" type="xs:decimal" minOccurs="0" />
+              <xs:element name="inland_amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="inland_type" type="xs:string" minOccurs="0" />
+              <xs:element name="danger_good" type="xs:string" minOccurs="0" />
+              <xs:element name="handling_info" type="xs:string" minOccurs="0" />
+              <xs:element name="item_piece_origin" type="xs:decimal" minOccurs="0" />
+              <xs:element name="item_piece_remain" type="xs:decimal" minOccurs="0" />
+              <xs:element name="item_desc" type="xs:string" minOccurs="0" />
+              <xs:element name="item_weight" type="xs:decimal" minOccurs="0" />
+              <xs:element name="item_weight_scale" type="xs:string" minOccurs="0" />
+              <xs:element name="item_dimension" type="xs:string" minOccurs="0" />
+              <xs:element name="item_dimension_scale" type="xs:string" minOccurs="0" />
+              <xs:element name="item_remark" type="xs:string" minOccurs="0" />
+              <xs:element name="job_status" type="xs:string" minOccurs="0" />
+              <xs:element name="PO_NO" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DATEINFO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StartDate" type="xs:string" minOccurs="0" />
+              <xs:element name="EndDate" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SOList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="shipper_name" type="xs:string" minOccurs="0" />
+              <xs:element name="customer_name" type="xs:string" minOccurs="0" />
+              <xs:element name="received_name" type="xs:string" minOccurs="0" />
+              <xs:element name="auto_uid" type="xs:decimal" minOccurs="0" />
+              <xs:element name="wr_num" type="xs:string" minOccurs="0" />
+              <xs:element name="elt_account_number" type="xs:decimal" minOccurs="0" />
+              <xs:element name="carrier_ref_no" type="xs:string" minOccurs="0" />
+              <xs:element name="customer_ref_no" type="xs:string" minOccurs="0" />
+              <xs:element name="system_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="created_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="received_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="pickup_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="storage_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="shipper_acct" type="xs:decimal" minOccurs="0" />
+              <xs:element name="shipper_contact" type="xs:string" minOccurs="0" />
+              <xs:element name="customer_acct" type="xs:decimal" minOccurs="0" />
+              <xs:element name="customer_contact" type="xs:string" minOccurs="0" />
+              <xs:element name="trucker_acct" type="xs:decimal" minOccurs="0" />
+              <xs:element name="inland_amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="inland_type" type="xs:string" minOccurs="0" />
+              <xs:element name="danger_good" type="xs:string" minOccurs="0" />
+              <xs:element name="handling_info" type="xs:string" minOccurs="0" />
+              <xs:element name="item_piece_origin" type="xs:decimal" minOccurs="0" />
+              <xs:element name="item_piece_remain" type="xs:decimal" minOccurs="0" />
+              <xs:element name="item_desc" type="xs:string" minOccurs="0" />
+              <xs:element name="item_weight" type="xs:decimal" minOccurs="0" />
+              <xs:element name="item_weight_scale" type="xs:string" minOccurs="0" />
+              <xs:element name="item_dimension" type="xs:string" minOccurs="0" />
+              <xs:element name="item_dimension_scale" type="xs:string" minOccurs="0" />
+              <xs:element name="item_remark" type="xs:string" minOccurs="0" />
+              <xs:element name="job_status" type="xs:string" minOccurs="0" />
+              <xs:element name="PO_NO" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Business">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="business_legal_name" type="xs:string" minOccurs="0" />
+              <xs:element name="business_address" type="xs:string" minOccurs="0" />
+              <xs:element name="business_city" type="xs:string" minOccurs="0" />
+              <xs:element name="business_state" type="xs:string" minOccurs="0" />
+              <xs:element name="business_country" type="xs:string" minOccurs="0" />
+              <xs:element name="business_phone" type="xs:string" minOccurs="0" />
+              <xs:element name="business_fax" type="xs:string" minOccurs="0" />
+              <xs:element name="business_url" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Images">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="image_files" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

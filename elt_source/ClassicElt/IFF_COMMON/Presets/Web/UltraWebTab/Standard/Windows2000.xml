@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Windows 2000" PresetDescription="Infragistics Windows 2000 Preset.  Sets both Look and Behavior properties." PresetType="All" />-->
+<igtab:UltraWebTab BorderColor="#A0A0A0" BorderStyle="Ridge" ThreeDEffect="False" BorderWidth="2px">
+  <DisabledTabStyle />
+  <BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" StyleTop="Solid" StyleLeft="Solid" ColorLeft="White" />
+  <DefaultTabStyle Height="20px" Font-Size="8pt" Font-Names="Microsoft Sans Serif" ForeColor="Black" BackColor="#D2D0CC">
+    <Padding Top="2px" />
+  </DefaultTabStyle>
+  <RoundedImage LeftSideWidth="10" RightSideWidth="10" ShiftOfImages="2" NormalImage="ig_tab_win2000.gif" FillStyle="LeftMergedWithCenter" />
+  <DefaultTabSeparatorStyle />
+  <SelectedTabStyle>
+    <Padding Bottom="2px" />
+  </SelectedTabStyle>
+</igtab:UltraWebTab>

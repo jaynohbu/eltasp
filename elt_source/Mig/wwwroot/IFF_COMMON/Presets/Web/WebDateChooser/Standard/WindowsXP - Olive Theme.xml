@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="WindowsXP - Olive Theme" PresetDescription="Infragists Windows XP Olive Theme.  Sets both Look and Behavior properties." PresetType="All" />-->
+<igsch:WebDateChooser >
+  <ClientSideEvents />
+  <CalendarLayout DayNameFormat="FirstLetter" FooterFormat="" ShowNextPrevMonth="False" ShowTitle="False" ShowFooter="False">
+    <DayStyle Font-Size="9pt" Font-Names="Arial" BackColor="White" />
+    <SelectedDayStyle BackColor="#8BA169" />
+    <OtherMonthDayStyle ForeColor="White" />
+    <DayHeaderStyle ForeColor="White" BackColor="#D4D6BA" />
+    <TitleStyle BackColor="White" />
+  </CalendarLayout>
+  <DropButton ImageUrl2="/ig_common/images/igsch_dropdown_down_o2003olive.gif" ImageUrl1="/ig_common/images/igsch_dropdown_up_o2003olive.gif">
+    <HoverStyle />
+    <Style />
+  </DropButton>
+  <ExpandEffects ShadowColor="LightGray" />
+</igsch:WebDateChooser>

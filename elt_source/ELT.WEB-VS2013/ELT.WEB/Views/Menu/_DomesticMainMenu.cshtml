@@ -1,0 +1,38 @@
+﻿
+@model ELT.WEB.Models.Menu
+<div id="tabs">
+    <div class="rightDiv">
+        <ul>
+            <li>
+                <img src="@Url.Content("~/Images/button_logout_type.gif")" onclick="logOut()"
+                    name="logout" width="54" height="18" id="logout" onmouseout="this.src='@Url.Content("~/Images/button_logout_type.gif")'"
+                    onmouseover="this.src='@Url.Content("~/Images/button_logout_type_over.gif")'"
+                    style="margin-right: 30px; margin-top: 3px; cursor: pointer; border: none 0px"
+                    alt="Click to logout" />
+            </li>
+        </ul>
+    </div>
+    <div class="leftDiv">
+
+        <ul>
+
+            <li class="CurSiteAdminDiv" ><a href="@Url.Content("~/SiteAdmin/")"><span>Site Admin
+            </span></a></li>
+
+            <li class="CurMasterDataDiv"><a href="@Url.Content("~/MasterData/")" class=""><span>Master Data
+            </span></a></li>
+
+            <li class="CurPre-shipmentDiv"><a href="@Url.Content("~/PreShipment/PickupOrder")" class=""><span>Pre-shipment
+            </span></a></li>
+
+            <li class="CurDomesticFreightDiv"><a href="@Url.Content("~/DomesticFreight/HouseAirBill")" ><span>DomesticFreight
+            </span></a></li>         
+
+            <li class="CurDomesticReportDiv"><a href="@Url.Content("~/DomesticReport/OperatonReport")" class=""><span>Report
+            </span></a></li>
+
+        </ul>
+    </div>
+</div>
+  @Html.Action("MainMenu","Menu")
+

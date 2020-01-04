@@ -1,0 +1,4 @@
+vti_encoding:SR|utf8-nl
+vti_timelastmodified:TR|18 Mar 2006 10:26:00 -0000
+vti_extenderversion:SR|5.0.2.6790
+vti_backlinkinfo:VX|IFF_MAIN/ASPX/Reports/AirExportHAWB/airexportoperationselectionhawb.aspx IFF_MAIN/ASPX/Reports/OceanExportHBOL/oceanexportoperationselectionhbol.aspx IFF_MAIN/ASPX/Reports/OceanExportMBOL/oceanexportoperationselectionmbol.aspx IFF_MAIN/ASPX/Reports/PNL/PnlIndex.aspx IFF_MAIN/ASPX/Reports/AirExportBooking/airexportbookingreportselection.aspx IFF_MAIN/ASPX/Reports/Import/airimportreportselection.aspx IFF_MAIN/ASPX/Reports/Import/oceanimportreportselection.aspx IFF_MAIN/ASPX/Reports/Accounting/apagingselection.aspx IFF_MAIN/ASPX/Reports/Accounting/searchinvoiceselection.aspx IFF_MAIN/ASPX/Reports/AirExportMAWB/airexportoperationselectionmawb.aspx IFF_MAIN/ASPX/Reports/Accounting/aragingselection.aspx IFF_MAIN/ASPX/Reports/Accounting/GLSelection.aspx IFF_MAIN/ASPX/Reports/OceanExportBooking/oceanexportbookingreportselection.aspx

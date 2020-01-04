@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Default Rounded Images" PresetDescription="Infragistics Default Rounded Images Preset.  Sets both Look and Behavior properties." PresetType="All" />-->
+<igtab:UltraWebTab BorderColor="Black" BorderStyle="Solid" BorderWidth="1px">
+  <DisabledTabStyle />
+  <BorderDetails ColorTop="White" ColorLeft="White" />
+  <DefaultTabStyle BackColor="Silver" />
+  <RoundedImage FillStyle="LeftMergedWithCenter" />
+  <DefaultTabSeparatorStyle />
+  <SelectedTabStyle />
+</igtab:UltraWebTab>

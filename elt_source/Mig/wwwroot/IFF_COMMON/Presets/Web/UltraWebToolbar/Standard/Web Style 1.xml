@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Web Style 1" PresetDescription="Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<igtbar:UltraWebToolbar ImageDirectory="/ig_common/images/" BorderStyle="Solid" Movable="False" MovableImage="ig_tb_move00.gif" BorderWidth="0px" BorderColor="DarkBlue" BackColor="DarkBlue" ForeColor="White" BackgroundImage="none" Font-Size="10pt" Font-Names="Arial" ItemWidthDefault="80px" ItemPadding="4" Height="24px">
+  <HoverStyle Cursor="Default" Font-Bold="True" BackColor="DarkBlue" BorderStyle="None" ForeColor="Gold" BackgroundImage="none" />
+  <SelectedStyle Cursor="Default" Font-Bold="True" BackColor="DarkBlue" BorderStyle="None" ForeColor="Yellow" BackgroundImage="none" />
+  <DefaultStyle BackColor="DarkBlue" Font-Bold="True" BorderStyle="None" ForeColor="White" BackgroundImage="none" />
+</igtbar:UltraWebToolbar>

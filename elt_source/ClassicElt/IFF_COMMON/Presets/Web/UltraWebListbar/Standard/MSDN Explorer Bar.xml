@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="MSDN Explorer Bar " PresetDescription="Infragistics MSDN Explorer Bar Preset.   Sets both Look and Behavior properties." PresetType="All" />-->
+<iglbar:UltraWebListbar BarWidth="100%" BorderStyle="None" MergeStyles="True" ItemIconStyle="SmallWithInsetText" ViewType="ExplorerBar" GroupSpacing="15px" BorderWidth="4px">
+  <DefaultGroupStyle Cursor="Default" Height="100%" BorderWidth="1px" BorderColor="Blue" BorderStyle="Solid" BackColor="WhiteSmoke" />
+  <DefaultItemStyle Cursor="Default" Font-Size="8pt" Font-Names="Verdana">
+    <Margin Left="1px" />
+  </DefaultItemStyle>
+  <DefaultItemHoverStyle ForeColor="Blue" />
+  <DefaultGroupHeaderAppearance>
+    <CollapsedAppearance LeftCornerImage="leftcollapsed.gif" RightCornerImage="rightcollapsed.gif" ExpansionIndicatorImage="downarrows_white.gif">
+      <Style ForeColor="Black" BackColor="Silver" />
+    </CollapsedAppearance>
+    <HoverAppearance>
+      <Style />
+    </HoverAppearance>
+    <ExpandedAppearance LeftCornerImage="left.gif" RightCornerImage="right.gif" ExpansionIndicatorImage="uparrows_white.gif">
+      <Style Width="100%" Cursor="Default" Height="100%" Font-Size="10pt" Font-Names="Verdana" ForeColor="White" BackColor="Blue" />
+    </ExpandedAppearance>
+  </DefaultGroupHeaderAppearance>
+  <DefaultItemSelectedStyle Cursor="Default" BorderWidth="1px" BorderStyle="Inset" />
+</iglbar:UltraWebListbar>

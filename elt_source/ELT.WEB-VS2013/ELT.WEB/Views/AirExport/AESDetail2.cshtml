@@ -1,0 +1,260 @@
+﻿@model ELT.WEB.Models.AESModel
+
+@{
+    ViewBag.Title = "AESDetail2";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+
+<h2>AESDetail2</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>AESModel</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AESNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AESNo)
+            @Html.ValidationMessageFor(model => model.AESNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EltAccountNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EltAccountNumber)
+            @Html.ValidationMessageFor(model => model.EltAccountNumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FileType)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FileType)
+            @Html.ValidationMessageFor(model => model.FileType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HAWB)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HAWB)
+            @Html.ValidationMessageFor(model => model.HAWB)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MAWB)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MAWB)
+            @Html.ValidationMessageFor(model => model.MAWB)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ShipmentReferenceNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ShipmentReferenceNumber)
+            @Html.ValidationMessageFor(model => model.ShipmentReferenceNumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TransportationReferenceNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TransportationReferenceNumber)
+            @Html.ValidationMessageFor(model => model.TransportationReferenceNumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StateOfOrigin)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.StateOfOrigin)
+            @Html.ValidationMessageFor(model => model.StateOfOrigin)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PortOfExport)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PortOfExport)
+            @Html.ValidationMessageFor(model => model.PortOfExport)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CountryOfDestination)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CountryOfDestination)
+            @Html.ValidationMessageFor(model => model.CountryOfDestination)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PortOfUnloading)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PortOfUnloading)
+            @Html.ValidationMessageFor(model => model.PortOfUnloading)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DepartureDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DepartureDate)
+            @Html.ValidationMessageFor(model => model.DepartureDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ModeOfTransportation)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ModeOfTransportation)
+            @Html.ValidationMessageFor(model => model.ModeOfTransportation)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CarrierID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CarrierID)
+            @Html.ValidationMessageFor(model => model.CarrierID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CarrierName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CarrierName)
+            @Html.ValidationMessageFor(model => model.CarrierName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PartiesToTransaction)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PartiesToTransaction)
+            @Html.ValidationMessageFor(model => model.PartiesToTransaction)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HazardousCargo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HazardousCargo)
+            @Html.ValidationMessageFor(model => model.HazardousCargo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RoutedExportTransaction)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RoutedExportTransaction)
+            @Html.ValidationMessageFor(model => model.RoutedExportTransaction)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.InbondType)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.InbondType)
+            @Html.ValidationMessageFor(model => model.InbondType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ForeignTradeZone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ForeignTradeZone)
+            @Html.ValidationMessageFor(model => model.ForeignTradeZone)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.InbondNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.InbondNumber)
+            @Html.ValidationMessageFor(model => model.InbondNumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ITNNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ITNNo)
+            @Html.ValidationMessageFor(model => model.ITNNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AESStatus)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AESStatus)
+            @Html.ValidationMessageFor(model => model.AESStatus)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AESSubmitDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AESSubmitDate)
+            @Html.ValidationMessageFor(model => model.AESSubmitDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LastUpdated)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LastUpdated)
+            @Html.ValidationMessageFor(model => model.LastUpdated)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ExporterID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ExporterID)
+            @Html.ValidationMessageFor(model => model.ExporterID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FreightForwarderID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FreightForwarderID)
+            @Html.ValidationMessageFor(model => model.FreightForwarderID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UltimateConsigneeID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.UltimateConsigneeID)
+            @Html.ValidationMessageFor(model => model.UltimateConsigneeID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IntermediateConsigneeID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IntermediateConsigneeID)
+            @Html.ValidationMessageFor(model => model.IntermediateConsigneeID)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

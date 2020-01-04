@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="PETest" PresetDescription="Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<igchart:UltraChart Height="528px" BackgroundImageFileName="" ID="UltraChart1" Layer="(Collection)" Width="706px" UserLayerIndex="" BackColor="White" ImageUrl="">
+  <ColorModel ModelStyle="CustomSkin">
+    <Skin>
+      <PEs>
+        <igchartprop:PaintElement Fill="Silver" FillGradientStyle="BackwardDiagonal" ElementType="Gradient" />
+        <igchartprop:PaintElement Fill="#C00000" FillGradientStyle="BackwardDiagonal" ElementType="Gradient" />
+        <igchartprop:PaintElement Fill="InactiveCaption" FillGradientStyle="BackwardDiagonal" ElementType="Gradient" />
+      </PEs>
+    </Skin>
+  </ColorModel>
+  <TitleBottom HorizontalAlign="Far" Location="Bottom">
+    <Margins />
+  </TitleBottom>
+  <Axis>
+    <Y TickmarkInterval="0">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels ItemFormatString="&lt;DATA_VALUE:00.00&gt;" Flip="False" ItemFormat="DataValue" VerticalAlign="Center" OrientationAngle="0" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </Y>
+    <Y2 Visible="False" TickmarkInterval="0">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels HorizontalAlign="Near" ItemFormatString="&lt;DATA_VALUE:00.00&gt;" Flip="False" ItemFormat="DataValue" VerticalAlign="Center" OrientationAngle="0" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </Y2>
+    <X2 Visible="False" TickmarkInterval="0">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels ItemFormatString="&lt;ITEM_LABEL&gt;" Flip="False" ItemFormat="ItemLabel" VerticalAlign="Center" Orientation="VerticalLeftFacing" OrientationAngle="0" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </X2>
+    <Z2 Visible="False" TickmarkInterval="0">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels HorizontalAlign="Near" SeriesFormatString="" ItemFormatString="" Flip="False" ItemFormat="None" VerticalAlign="Center" OrientationAngle="0" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </Z2>
+    <Z Visible="False" TickmarkInterval="0">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels HorizontalAlign="Near" SeriesFormatString="" ItemFormatString="" Flip="False" ItemFormat="None" VerticalAlign="Center" OrientationAngle="0" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </Z>
+    <X TickmarkInterval="0">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels HorizontalAlign="Near" ItemFormatString="&lt;ITEM_LABEL&gt;" Flip="False" ItemFormat="ItemLabel" VerticalAlign="Center" Orientation="VerticalLeftFacing" OrientationAngle="0" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </X>
+  </Axis>
+  <Data ZeroAligned="True" />
+  <Tooltips />
+  <TitleRight Location="Right">
+    <Margins />
+  </TitleRight>
+  <TitleLeft Location="Left">
+    <Margins />
+  </TitleLeft>
+</igchart:UltraChart>

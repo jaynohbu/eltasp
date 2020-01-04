@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="MSCRM" PresetDescription="Infragistics WebTab MSCRM Look and Feel.  Sets both Look and Behavior properties." PresetType="All" />-->
+<igtab:UltraWebTab TabOrientation="LeftTop" BorderStyle="None" BackColor="#D0CDC0">
+  <HoverTabStyle ForeColor="Black" BackColor="#BAB9AE" />
+  <DisabledTabStyle />
+  <DefaultTabStyle Font-Size="9pt" Font-Names="Microsoft Sans Serif" ForeColor="#666666" BackColor="#D0CDC0">
+    <Padding Bottom="3px" Top="5px" Right="15px" />
+    <BorderDetails WidthLeft="1px" StyleBottom="Solid" ColorBottom="#838574" WidthBottom="1px" StyleLeft="Solid" ColorLeft="#838574" />
+  </DefaultTabStyle>
+  <DefaultTabSeparatorStyle Height="3px" ForeColor="#D0CDC0" BackColor="#D0CDC0" CustomRules="background-color:#D0CDC0">
+    <BorderDetails StyleBottom="None" StyleTop="None" StyleRight="None" StyleLeft="Solid" ColorLeft="#D0CDC0" />
+  </DefaultTabSeparatorStyle>
+  <SelectedTabStyle ForeColor="Black" BackColor="#EFEFEB">
+    <BorderDetails StyleBottom="Solid" ColorBottom="#9FA090" StyleLeft="Solid" ColorLeft="#9FA090" />
+  </SelectedTabStyle>
+</igtab:UltraWebTab>

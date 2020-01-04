@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="INVOICE" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="INVOICE" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="INVOICE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="invoice_no" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Customer_Number" type="xs:string" minOccurs="0" />
+              <xs:element name="Customer" type="xs:string" minOccurs="0" />
+              <xs:element name="mawb_num" type="xs:string" minOccurs="0" />
+              <xs:element name="hawb_num" type="xs:string" minOccurs="0" />
+              <xs:element name="invoice_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="invoice_type" type="xs:string" minOccurs="0" />
+              <xs:element name="import_export" type="xs:string" minOccurs="0" />
+              <xs:element name="air_ocean" type="xs:string" minOccurs="0" />
+              <xs:element name="Ref_No" type="xs:string" minOccurs="0" />
+              <xs:element name="File_No" type="xs:string" minOccurs="0" />
+              <xs:element name="Total_Pieces" type="xs:string" minOccurs="0" />
+              <xs:element name="Total_Gross_Weight" type="xs:string" minOccurs="0" />
+              <xs:element name="amount_charged" type="xs:decimal" minOccurs="0" />
+              <xs:element name="agent_profit" type="xs:decimal" minOccurs="0" />
+              <xs:element name="sale_tax" type="xs:decimal" minOccurs="0" />
+              <xs:element name="total_cost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="subtotal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="amount_paid" type="xs:decimal" minOccurs="0" />
+              <xs:element name="balance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="pay_status" type="xs:string" minOccurs="0" />
+              <xs:element name="Origin_Dest" type="xs:string" minOccurs="0" />
+              <xs:element name="Origin" type="xs:string" minOccurs="0" />
+              <xs:element name="Destination" type="xs:string" minOccurs="0" />
+              <xs:element name="Shipper" type="xs:string" minOccurs="0" />
+              <xs:element name="Consignee" type="xs:string" minOccurs="0" />
+              <xs:element name="Carrier" type="xs:string" minOccurs="0" />
+              <xs:element name="Arrival_Dept" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

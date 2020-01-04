@@ -1,0 +1,35 @@
+﻿#LayoutSplitter .HeadPane,
+#PrintLayoutSplitter .HeadPane
+{
+	background: #d6dcbb;
+}
+
+.CalendarNavArea
+{
+	background: #e2e8c9;
+}
+
+.HeadPane .ActionToolbar .Spacer b
+{
+    background: #758d5e;
+}
+
+#LayoutSplitter .HeadPane .NavigationToolbar .NavigationMenu .dxm-item .dxm-content,
+#LayoutSplitter .HeadPane .NavigationToolbar .NavigationMenu .dxm-item.dxm-hovered .dxm-content
+{
+    color: #707e62;
+}
+
+.HeadPane .ActionToolbar .SearchBox
+{
+    margin-top: 1px;
+}
+
+.ContactCard 
+{
+    border: 1px solid #a4b26d;
+}
+.contacts .dxdvContent_Office2003Olive
+{
+    padding: 5px;
+}

@@ -1,0 +1,14 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxmvc:MVCxTokenBox runat="server" SpriteCssFilePath="~/App_Themes/SoftOrange/{0}/sprite.css" CssFilePath="~/App_Themes/SoftOrange/{0}/styles.css" CssPostfix="SoftOrange" LoadingPanelImagePosition="Top">
+    <ValidationSettings>
+        <ErrorFrameStyle ImageSpacing="4px">
+            <ErrorTextPaddings PaddingLeft="4px"></ErrorTextPaddings>
+        </ErrorFrameStyle>
+    </ValidationSettings>
+    <ButtonStyle Cursor="pointer" Width="11px"></ButtonStyle>
+    <LoadingPanelImage Url="~/App_Themes/SoftOrange/Editors/Loading.gif"></LoadingPanelImage>
+</dxmvc:MVCxTokenBox>
+

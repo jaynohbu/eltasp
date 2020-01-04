@@ -1,0 +1,6 @@
+﻿@{
+    ViewBag.Title = "ChartOfAccount";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+
+<iframe id ="ContentFrame" scrolling="no"   frameborder="0" width="100%" onload="autoResize('ContentFrame');" src="@Url.Content("~/ASP/acct_tasks/chart_acct.asp" + ViewBag.Params)"></iframe>

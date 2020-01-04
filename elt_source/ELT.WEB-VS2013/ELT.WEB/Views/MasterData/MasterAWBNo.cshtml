@@ -1,0 +1,8 @@
+﻿@{
+    ViewBag.Title = "MasterAWBNo";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+
+<iframe id ="ContentFrame" scrolling="no"   frameborder="0" width="100%" onload="autoResize('ContentFrame');" src="@Url.Content("~/ASP/master_data/booking_number.asp" + ViewBag.Params)"></iframe>
+
+<h2>MasterAWBNo</h2>

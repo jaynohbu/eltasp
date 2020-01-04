@@ -1,0 +1,350 @@
+/************************************************************************/
+/* CSS DOCUMENT                                                         */
+/* This is for Accounting module created by MJ 10/19/2007.              */
+/************************************************************************/
+body {
+	margin: 0 auto;
+	width: 92%;
+	margin-bottom:1.5em;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #efeee6;
+}
+label img {
+	margin-right: 5px;
+	vertical-align: baseline;
+}
+.highlight {
+	color:#CC6600;
+}
+.btn {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+.controlHeader {
+	background-repeat: repeat-x;
+	background-position: -8px 1px;
+	height: 19px;
+	border-bottom: #929dab 1px solid;
+	border-top: #c0c9c8 1px solid;
+	font-size: 10px;
+	padding-left: 10px;
+	color: #203f5f;
+	background-image: url(/iff_main/Images/controlHeaderBack.gif);
+}
+fieldset {
+	border: 1px #CCCCCC solid;
+	background-color: #ffffff;
+	padding: 0;
+	margin: 0;
+}
+legend {
+	font: bold 70%/normal Verdana, Arial, Helvetica, sans-serif ;
+	color: #333366;
+	margin-left: -10px;	
+	background-color:#ff8987;
+}
+hr {
+	float: none;
+	border-top: 1px dotted #999999;
+	height:1px;
+	clear:both;
+	margin-top: 20px;
+	margin-bottom: 4px;
+}
+.wrapper {
+	margin: 14px 14px 20px 14px;
+	padding: 0;
+	border: 0;
+}
+.normalLabel {
+	float: left;
+	width: 100%;
+	font-size: 71%;	
+	clear: both;
+	padding: 12px 10px 4px 0; 
+}
+.radiobtnType {
+	font-size: 71%;	
+	margin-bottom:4px;
+}
+.print {
+	font-size: 71%;
+	float:right;
+	vertical-align:top;
+	margin-bottom:8px;
+	text-align:right;
+
+}
+img {
+	border:none;	
+}
+.print a {
+	color: #000000;
+	text-decoration: none;
+}
+.print a:hover {
+	color:#CC3300;
+	border:none;
+	text-decoration: none;
+}
+/* PAGE HEADER  ************************************************/
+.pageName {
+	padding-top: 28px;	
+}
+h1{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 92%;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #000000;
+	display: block;
+	margin: 0;
+}
+h2 {
+	font: bold 68%/normal Verdana, Arial, Helvetica, sans-serif;
+	margin: 14px 0;
+}
+h3 {
+	font: 76% normal Verdana, Arial, Helvetica, sans-serif;
+	color: #003366;
+}
+br {
+	clear: both;
+}
+p.pageInfo {
+	width: 60%;
+	font: 71% normal;
+	font-style: italic;
+	color:#444444;
+	background: no-repeat url(/iff_main/Images/icon_info_vista.png) left center;
+	margin: 13px 0 24px 0;
+	padding: 6px 0 6px 48px;
+}
+.leftFloat {
+	float: left;
+	padding-right: 30px;
+	margin: 0;
+}
+.clear {
+	clear:both;
+}
+/* WIDGETS *****************************************************/
+.selectdDate {
+	font: 71% normal;	
+}
+.dateText {
+	font: normal 84%/normal Verdana, Arial, Helvetica, sans-serif;
+}
+.nofield, .nofieldRequired, .smallselect {
+	background-color: #ffffff;
+	border: 1px solid #7f9db9;
+	font: normal 70%/normal Verdana, Arial, Helvetica, sans-serif;
+	padding: 2px 0 2px 2px;
+	margin: 0;
+}
+.nofield, .nofieldRequired {
+	text-align: right;
+}
+.nofieldRequired  {
+	background-color: #FFFFCC;
+}
+.smallselect {
+	float: none;
+	clear:both;
+}
+.orangeDrop {
+	font: normal 68%/normal Verdana, Arial, Helvetica, sans-serif;
+	border: 1px solid #7f9db9;
+	margin: 0;
+	padding: 0 0 0 0;
+	float:left;
+}
+.orangeDrop input {
+	float:left;
+	border: none;
+	font: normal 100%/normal Verdana, Arial, Helvetica, sans-serif;
+	margin-top:1px;
+	margin-left: 2px;
+	margin-right: -2px;
+}
+.orangeDrop img {
+	border: 0;
+	padding: 0;
+	background-position: left center;
+	background-color:#3399CC;
+	vertical-align:middle;
+	cursor:pointer;
+	float:right;
+}
+.inputNoborder {
+	font: normal 70%/normal Verdana, Arial, Helvetica, sans-serif;
+	border: none;
+	background-color: Transparent;
+}
+/***********************************************/
+/* BUTTON AREA                                 */
+/***********************************************/
+.btnText {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	cursor: pointer;
+}
+#buttonArea {
+	font: bold 0.55em/1.5em Verdana;
+	line-height: normal;
+	margin: 0;
+	padding: 0;
+	margin-top: 15px;
+	clear: both;
+	text-align:right;
+}
+#buttonArea ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#buttonArea li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+#buttonArea a {
+	float: left;
+	background:url(/iff_main/Images/button_newback_left.gif) no-repeat left top;
+	margin:0 0 0 14px;
+	/* right padding for between tabs & left padding for left sliding door width */
+	padding:0 0 0 6px; 
+	text-decoration:none;
+}
+#buttonArea a span {
+	float:left;
+	display:block;
+	background:url(/iff_main/Images/button_newback_right.gif) no-repeat right top;
+	/* bottom padding to show bottom border line bottom border of tabs */
+	padding:5px 14px 4px 8px; 
+	color:#828282;
+}
+/* Commented Backslash Hack hides rule from IE5-Mac */
+#buttonArea a span {
+	float:none;
+}
+/* End IE5-Mac hack */
+#buttonArea a:hover span {
+   	color:#333333;
+}
+#buttonArea a:hover {
+    background-position:0% -24px;
+}
+#buttonArea a:hover span {
+    background-position:100% -24px;
+}
+/***********************************************************/
+/* TABLE STYLE                                             */
+/***********************************************************/
+.tableHead, .tableHeadNo {
+	font: bold 66%/normal Verdana, Arial, Helvetica, sans-serif;
+	padding: 5px 6px;
+	margin: 0;
+	text-align:left;
+	background-image: url(/iff_main/Images/tableHeadBack.gif);
+	background-repeat:repeat-x;
+	background-position: 1px 1px;
+	background-color: #ffffff;
+	border-right: 1px solid #89a9ce;
+	border-bottom: 1px solid #89a9ce;
+	border-top: 1px solid #89a9ce;
+}
+.tablePaging {
+	font: bold 66%/normal Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;	
+	color: #0216de;
+	text-align:center;
+}
+.tableHeadNo {
+	text-align:right;
+}
+.tableData, .tableDataNo {
+	text-align: left;
+}
+.tableData, .tableDataNo, .tableDataCenter {
+	font: normal 68%/normal Verdana, Arial, Helvetica, sans-serif;
+	padding: 3px 6px;
+	margin: 0;	
+	border-right: 1px dotted #89a9ce;
+	border-bottom: 1px dotted #89a9ce;
+	border-top: 1px dotted #89a9ce;	
+}
+.tableData a:link {
+	color:#0216de;
+	text-decoration: none;	
+}
+.tableData a:visited {
+	color:#0216de;
+	text-decoration: none;
+}
+.tableData a:hover {
+	color: #c41002;	
+}
+.tableDataCenter{
+	text-align: center; 
+}
+.tableDataNo {
+	text-align:right;		
+}
+.tableCaption {
+	font: normal 68%/normal Verdana, Arial, Helvetica, sans-serif;
+}
+/***********************************************************/
+/* INFRAGISTICS CALENDAR STYLE                             */
+/***********************************************************/
+.CalStyle {
+}
+.CalDayHeader {
+	color:#616b76;
+	background:#d9e2e1;
+	font: bold 9px/normal Verdana, Arial, Helvetica, sans-serif;
+	padding: 5px 0;
+
+}
+.CalDay {
+	font: 11px/normal Verdana, Arial, Helvetica, sans-serif;
+	background: #f4f2ee;
+	border: solid 1px #d9e2e1;
+	border-top: none;
+	border-left: none;
+	color: #4e5862;
+	padding: 3px 0;
+}
+.CalToday {
+	font: bold 11px/normal Verdana, Arial, Helvetica, sans-serif; 
+	font-weight: bold;
+	background-color: #f4f2ee;
+	border: solid 1px #d9e2e1;
+	border-top: none;
+	border-left: none;
+	color: #e55211;
+	padding: 3px 0;
+}
+.CalSelectedDay {
+	font: bold 12px/normal Verdana, Arial, Helvetica, sans-serif;
+	color: #4e5862;
+	background-color: #3399FF;
+	border: solid 1px #d9e2e1;
+	border-top: none;
+	border-left: none;
+}
+.TitleStyle {
+	padding:4px 0;
+	color:#ffffff;
+	background-color: #a2adbc;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: normal;
+	font-weight: bold;
+}
+.NextPrevStyle {
+	font: bold 11px/normal Verdana, Arial, Helvetica, sans-serif;
+	color: #ffffff;
+	background-color: #a2adbc;
+	padding: 0 17px;
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Visual Studio 2005" PresetDescription="A panel as it would appear in Visual Studio 2005." PresetType="Appearance" />-->
+<igmisc:WebPanel>
+  <PanelStyle CustomRules="FILTER:progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#7FEBE8D7, EndColorStr=#7FCFCCBB, GradientType=1) progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#7FCFCCBB, EndColorStr=#7FEBE8D7, GradientType=0);">
+    <BorderDetails WidthLeft="1px" StyleBottom="Solid" ColorBottom="Gray" ColorRight="Gray" WidthRight="1px" StyleRight="Solid" WidthBottom="1px" StyleLeft="Solid" ColorLeft="224, 224, 224" />
+  </PanelStyle>
+  <Header>
+    <HoverAppearance>
+      <Style ForeColor="Blue" />
+    </HoverAppearance>
+    <ExpandedAppearance>
+      <Style Font-Size="9pt" Font-Names="Times New Roman" ForeColor="Black" BackgroundImage="igpnl_vs2k5.png">
+        <BorderDetails ColorTop="LightGray" WidthLeft="1px" WidthTop="1px" ColorRight="Gray" WidthRight="1px" StyleTop="Solid" StyleRight="Solid" StyleLeft="Solid" ColorLeft="LightGray" />
+      </Style>
+    </ExpandedAppearance>
+    <ExpansionIndicator />
+  </Header>
+</igmisc:WebPanel>

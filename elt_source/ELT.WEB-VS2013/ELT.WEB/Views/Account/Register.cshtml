@@ -1,0 +1,79 @@
+﻿@model ELT.WEB.Models.RegisterModel
+@{
+    ViewBag.Title = "Register";
+
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+@Styles.Render("~/Content/css/form.css")
+
+<div class="AccountForm">
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>Create a new account.</h2>
+</hgroup>
+    <section>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Registration Form</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName, new { @Value = ViewBag.UserEmail })
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.ConfirmPassword)
+                @Html.PasswordFor(m => m.ConfirmPassword)
+            </li>
+        </ol>
+        <input type="submit" value="Register" />
+    </fieldset>
+}
+</section>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+@section righttop{
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="100%" align="left" valign="top" bgcolor="#edf2f8">
+                <div id="features">
+                    <img src="../../Images/FreightEasy/images/feature_default.gif" width="202" height="52" />
+                    <h4>
+                        FreightEasy&trade; was designed with one overarching goal in mind: to give our members
+                        a competitive edge. We have achieved this goal by concentrating on system features
+                        that will have a real impact on real businesses.</h4>
+                    <h5>
+                        <a href="/Home/FeatureStory">< Read More ></a></h5>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td height="1" bgcolor="#9dc8ef">
+            </td>
+        </tr>
+        <tr>
+            <td align="left" valign="top">
+                <div id="featurequeston">
+                    Learn how FreightEasy&trade; features will improve the way you do business.
+                </div>
+                <select name="listbox" id="listbox" onchange="javascript:listboxscript();">
+                    <option value="0">Choose from the following:</option>
+                    <option value="1">Customer Care</option>
+                    <option value="2">Mobility</option>
+                    <option value="3">Accounting</option>
+                    <option value="4">SaaS</option>
+                    <option value="5">System Design</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+}

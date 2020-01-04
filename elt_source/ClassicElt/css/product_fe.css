@@ -1,0 +1,81 @@
+/***********************************************/
+/* HTML tag styles                             */
+/***********************************************/ 
+
+body {
+	font-family: arial, tahoma, helvetica, sans-serif;
+	background-color: white;
+	margin: 0;
+	padding: 0;
+}
+a {
+	color: #00c;
+	text-decoration: none;
+	background: url(../images/link_back.gif) bottom left repeat-x;
+}
+
+a:visited {
+	color: #66c;
+}
+
+a:hover {
+	color: #b83423;
+	text-decoration: underline;
+	background: none;
+}
+
+a:active {
+	color: red;
+}
+
+abbr, acronym, .abbr {
+	border: 0;
+	cursor: help;
+}
+#logo{
+	float:left;
+	width: 68%;
+	margin: 0;
+	padding-bottom: 0;
+}
+#framenavi {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+#navBar{
+	margin: 0 0 0 68%;
+	padding: 0px;
+	background-color: #FFFFFF;
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+#content{
+	float:left;
+	width: 68%;
+	margin: 0;
+	padding-bottom: 0;
+}
+#framebody {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+#sidebody{
+	margin: 0 0 0 68%;
+	padding: 0px;
+	background-color: #FFFFFF;
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+#siteinfo {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	color: #575757;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	line-height: 1.3em;
+	font-size: 65%;
+}

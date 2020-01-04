@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Windows-XP-Silver" PresetDescription="Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<igchart:UltraChart BackgroundImageFileName=""  ForeColor="Black" CrossHairColor="Gray" EnableCrossHair="True" BackColor="Menu" ImageUrl="">
+  <ColorModel ColorBegin="#E0E0E0" ColorEnd="#404040" ModelStyle="CustomSkin" Scaling="Increasing">
+    <Skin>
+      <PEs>
+        <igchartprop:PaintElement Fill="Silver" FillGradientStyle="BackwardDiagonal" ElementType="Gradient" FillStopColor="White" />
+      </PEs>
+    </Skin>
+  </ColorModel>
+  <TitleTop Font="Lucida Console, 10.2pt" Visible="False" FontColor="Green" HorizontalAlign="Center">
+    <Margins />
+  </TitleTop>
+  <TitleBottom Font="Lucida Console, 10.2pt" Visible="False" FontColor="Green" HorizontalAlign="Far" Location="Bottom">
+    <Margins />
+  </TitleBottom>
+  <Axis BackColor="#E0E0E0">
+    <Y LineEndCapStyle="ArrowAnchor" LineColor="Gray" TickmarkInterval="0" LineThickness="1" Extent="40">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels Font="Times New Roman, 7.8pt" HorizontalAlign="Far" ItemFormatString="&lt;DATA_VALUE:00.00&gt;" Flip="False" ItemFormat="DataValue" VerticalAlign="Center" FontColor="Gray" Orientation="Horizontal" OrientationAngle="0" />
+      <MajorGridLines Color="Silver" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </Y>
+    <Y2 Visible="False" LineColor="Gray" TickmarkInterval="0">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels Font="Times New Roman, 7.8pt" HorizontalAlign="Near" ItemFormatString="&lt;DATA_VALUE:00.00&gt;" Flip="False" ItemFormat="DataValue" VerticalAlign="Center" FontColor="#404040" Orientation="Horizontal" OrientationAngle="0" />
+      <MajorGridLines Color="#80FF80" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </Y2>
+    <X2 LineEndCapStyle="ArrowAnchor" Visible="False" TickmarkInterval="0" LineThickness="1">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels Font="Times New Roman, 7.8pt" SeriesFormatString="" ItemFormatString="&lt;ITEM_LABEL&gt;" Flip="False" ItemFormat="ItemLabel" VerticalAlign="Center" FontColor="#0000C0" Orientation="VerticalLeftFacing" OrientationAngle="0" />
+      <MajorGridLines Color="Gray" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </X2>
+    <Z2 Visible="False" LineColor="#404040" TickmarkInterval="0" LineThickness="1">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels HorizontalAlign="Near" SeriesFormatString="" ItemFormatString="" Flip="False" ItemFormat="None" VerticalAlign="Center" OrientationAngle="0" />
+      <MajorGridLines Color="RoyalBlue" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </Z2>
+    <Z Visible="False" LineColor="Gray" TickmarkInterval="0" LineThickness="1">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels Font="Times New Roman, 7.8pt" HorizontalAlign="Near" SeriesFormatString="" ItemFormatString="&lt;ITEM_LABEL&gt;" Flip="False" ItemFormat="ItemLabel" VerticalAlign="Center" FontColor="Green" Orientation="Horizontal" OrientationAngle="0" />
+      <MajorGridLines Color="Gray" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </Z>
+    <X LineEndCapStyle="ArrowAnchor" LineColor="Gray" TickmarkInterval="0" LineThickness="1" Extent="60">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels Font="Times New Roman, 7.8pt" HorizontalAlign="Near" SeriesFormatString="" ItemFormatString="&lt;ITEM_LABEL&gt;" Flip="False" ItemFormat="ItemLabel" VerticalAlign="Center" FontColor="Gray" Orientation="VerticalLeftFacing" OrientationAngle="0" />
+      <MajorGridLines Color="Silver" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </X>
+  </Axis>
+  <Data ZeroAligned="True" />
+  <Legend Font="Times New Roman, 7.8pt" Visible="True" BorderColor="#404040" FontColor="#404040" BackgroundColor="Menu" />
+  <Tooltips FontColor="Green" BorderColor="Green" BackColor="#C0FFC0" />
+  <TitleRight FontColor="Green" Location="Right">
+    <Margins />
+  </TitleRight>
+  <TitleLeft FontColor="Green" Location="Left">
+    <Margins />
+  </TitleLeft>
+</igchart:UltraChart>

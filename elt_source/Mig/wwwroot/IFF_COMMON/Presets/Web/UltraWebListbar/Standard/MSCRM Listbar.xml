@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="MSCRM - Listbar" PresetDescription="Infragistics MSCRM Look and Feel for Listbar.   Sets both Look and Behavior properties." PresetType="All" />-->
+<iglbar:UltraWebListbar BarWidth="100%" BorderStyle="None">
+  <DefaultGroupStyle Height="100%" BorderColor="DarkGray" BorderStyle="None" BackColor="#DFDDCF" />
+  <DefaultItemStyle Cursor="Hand" Font-Size="9pt" Font-Names="Microsoft Sans Serif" BorderStyle="None" BackColor="#DDDBCD">
+    <BorderDetails WidthLeft="1px" StyleBottom="Solid" ColorBottom="#838574" WidthBottom="1px" StyleLeft="Solid" ColorLeft="#838574" />
+  </DefaultItemStyle>
+  <DefaultItemHoverStyle Cursor="Hand" Font-Size="9pt" Font-Names="Microsoft Sans Serif" BorderStyle="None" ForeColor="Black" BackColor="#BAB9AE">
+    <BorderDetails WidthLeft="1px" StyleBottom="Solid" ColorBottom="#838574" WidthBottom="1px" StyleLeft="Solid" ColorLeft="#838574" />
+  </DefaultItemHoverStyle>
+  <DefaultGroupButtonSelectedStyle Cursor="Default" BorderStyle="None" />
+  <DefaultItemSelectedStyle Cursor="Hand" Font-Size="9pt" Font-Names="Microsoft Sans Serif" BorderStyle="None" BackColor="#EFEFEB">
+    <BorderDetails WidthLeft="1px" StyleBottom="Solid" ColorBottom="#9FA090" WidthBottom="1px" StyleLeft="Solid" ColorLeft="#9FA090" />
+  </DefaultItemSelectedStyle>
+  <DefaultGroupButtonStyle Cursor="Default" Height="0px" Font-Size="XX-Small" BorderStyle="None" BackColor="Transparent" />
+  <DefaultGroupButtonHoverStyle BorderColor="Control" BorderStyle="None" BackColor="Menu" />
+</iglbar:UltraWebListbar>

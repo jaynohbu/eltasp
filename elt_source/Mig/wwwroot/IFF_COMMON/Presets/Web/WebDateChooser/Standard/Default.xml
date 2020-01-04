@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Default" PresetDescription="Infragistics Default WebSchedule.  Sets both Look and Behavior properties." PresetType="All" />-->
+<igsch:WebDateChooser >
+  <ClientSideEvents />
+  <DropButton>
+    <HoverStyle />
+    <Style />
+  </DropButton>
+  <ExpandEffects ShadowColor="LightGray" />
+</igsch:WebDateChooser>

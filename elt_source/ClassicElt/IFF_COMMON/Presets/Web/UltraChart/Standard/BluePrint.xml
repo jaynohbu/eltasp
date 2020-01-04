@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="BluePrint" PresetDescription="Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<igchart:UltraChart  BackgroundImageFileName=""  BackColor="InactiveCaptionText" >
+  <ColorModel ColorBegin="Blue" ColorEnd="DarkBlue" ModelStyle="LinearRange" />
+  <TitleTop Font="Lucida Console, 10.2pt" FontColor="#0000C0">
+    <Margins />
+  </TitleTop>
+  <Border CornerRadius="30" Raised="True" Color="#0000C0" />
+  <TitleBottom Font="Lucida Console, 10.2pt" Visible="False" Text="Copyright Infragistics Inc." FontColor="#0000C0" HorizontalAlign="Far" Location="Bottom">
+    <Margins />
+  </TitleBottom>
+  <Axis BackColor="#C0C0FF">
+    <Y LineColor="Blue" TickmarkInterval="0">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels Font="Lucida Console, 7.8pt" HorizontalAlign="Far" ItemFormatString="&lt;DATA_VALUE:00.00&gt;" Flip="False" ItemFormat="DataValue" VerticalAlign="Center" FontColor="#0000C0" Orientation="Horizontal" OrientationAngle="0" />
+      <MajorGridLines Color="Blue" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </Y>
+    <Y2 Visible="False" LineColor="#0000C0" TickmarkInterval="0">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels Font="Lucida Console, 7.8pt" HorizontalAlign="Near" ItemFormatString="&lt;DATA_VALUE:00.00&gt;" Flip="False" ItemFormat="DataValue" VerticalAlign="Center" FontColor="#0000C0" Orientation="Horizontal" OrientationAngle="0" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </Y2>
+    <X2 Visible="False" LineColor="Blue" TickmarkInterval="0">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels Font="Lucida Console, 7.8pt" ItemFormatString="&lt;ITEM_LABEL:MM-dd-yy&gt;" Flip="False" ItemFormat="Custom" VerticalAlign="Center" Orientation="VerticalLeftFacing" OrientationAngle="0" />
+      <MajorGridLines Color="Blue" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </X2>
+    <Z2 Visible="False" TickmarkInterval="0">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels HorizontalAlign="Near" SeriesFormatString="" ItemFormatString="" Flip="False" ItemFormat="None" VerticalAlign="Center" OrientationAngle="0" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </Z2>
+    <Z Visible="False" TickmarkInterval="0">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels Font="Lucida Console, 7.8pt" HorizontalAlign="Near" SeriesFormatString="" ItemFormatString="&lt;DATA_VALUE:00.00&gt;" Flip="False" ItemFormat="DataValue" VerticalAlign="Center" Orientation="Horizontal" OrientationAngle="0" />
+      <MajorGridLines AlphaLevel="143" Color="Blue" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </Z>
+    <X LineColor="Blue" TickmarkInterval="0">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels Font="Lucida Console, 7.8pt" HorizontalAlign="Near" ItemFormatString="&lt;ITEM_LABEL:MM-dd-yy&gt;" Flip="False" ItemFormat="Custom" VerticalAlign="Center" FontColor="#0000C0" Orientation="VerticalLeftFacing" OrientationAngle="0" />
+      <MajorGridLines Color="Blue" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </X>
+  </Axis>
+  <Legend FontColor="Navy" BackgroundColor="#C0C0FF" />
+  <Tooltips FontColor="Navy"  BackColor="#C0C0FF" />
+  <TitleRight Text="UltraChart for .NET is #1 !" FontColor="#0000C0" Location="Right">
+    <Margins />
+  </TitleRight>
+  <CandleChart VolumeColor="#C0C0FF" NegativeRangeColor="Navy" WickThickness="2" PositiveRangeColor="#C0C0FF" />
+  <TitleLeft FontColor="#0000C0" Location="Left">
+    <Margins />
+  </TitleLeft>
+</igchart:UltraChart>

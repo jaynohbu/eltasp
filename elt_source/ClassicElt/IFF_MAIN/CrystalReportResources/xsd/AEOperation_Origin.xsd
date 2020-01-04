@@ -1,0 +1,93 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Child">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="File_x0023_" type="xs:string" minOccurs="0" />
+              <xs:element name="Master" type="xs:string" minOccurs="0" />
+              <xs:element name="House" type="xs:string" minOccurs="0" />
+              <xs:element name="Shipper" type="xs:string" minOccurs="0" />
+              <xs:element name="Consignee" type="xs:string" minOccurs="0" />
+              <xs:element name="Agent" type="xs:string" minOccurs="0" />
+              <xs:element name="Carrier" type="xs:string" minOccurs="0" />
+              <xs:element name="Origin" type="xs:string" minOccurs="0" />
+              <xs:element name="Destination" type="xs:string" minOccurs="0" />
+              <xs:element name="Date" type="xs:string" minOccurs="0" />
+              <xs:element name="Sales_x0020_Rep." type="xs:string" minOccurs="0" />
+              <xs:element name="Processed_x0020_By" type="xs:string" minOccurs="0" />
+              <xs:element name="Quantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Gross_x0020_Wt." type="xs:decimal" minOccurs="0" />
+              <xs:element name="Chargeable_x0020_Wt." type="xs:decimal" minOccurs="0" />
+              <xs:element name="Freight_x0020_Charge" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Other_x0020_Charge" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="parent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Origin" type="xs:string" minOccurs="0" />
+              <xs:element name="Gross_x0020_Wt." type="xs:double" minOccurs="0" />
+              <xs:element name="Chargeable_x0020_Wt." type="xs:double" minOccurs="0" />
+              <xs:element name="Quantity" type="xs:int" minOccurs="0" />
+              <xs:element name="Freight_x0020_Charge" type="xs:double" minOccurs="0" />
+              <xs:element name="Other_x0020_Charge" type="xs:double" minOccurs="0" />
+              <xs:element name="Frequency" type="xs:int" minOccurs="0" />
+              <xs:element name="Percentage" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Business">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="business_legal_name" type="xs:string" minOccurs="0" />
+              <xs:element name="business_address" type="xs:string" minOccurs="0" />
+              <xs:element name="business_city" type="xs:string" minOccurs="0" />
+              <xs:element name="business_state" type="xs:string" minOccurs="0" />
+              <xs:element name="business_country" type="xs:string" minOccurs="0" />
+              <xs:element name="business_phone" type="xs:string" minOccurs="0" />
+              <xs:element name="business_fax" type="xs:string" minOccurs="0" />
+              <xs:element name="business_url" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Images">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="image_files" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Other">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Param0" type="xs:string" minOccurs="0" />
+              <xs:element name="Param1" type="xs:string" minOccurs="0" />
+              <xs:element name="Param2" type="xs:string" minOccurs="0" />
+              <xs:element name="Param3" type="xs:string" minOccurs="0" />
+              <xs:element name="Param4" type="xs:string" minOccurs="0" />
+              <xs:element name="Param5" type="xs:string" minOccurs="0" />
+              <xs:element name="Param6" type="xs:string" minOccurs="0" />
+              <xs:element name="Param7" type="xs:string" minOccurs="0" />
+              <xs:element name="Param8" type="xs:string" minOccurs="0" />
+              <xs:element name="Param9" type="xs:string" minOccurs="0" />
+              <xs:element name="Param10" type="xs:string" minOccurs="0" />
+              <xs:element name="Param11" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//parent" />
+      <xs:field xpath="Origin" />
+    </xs:unique>
+    <xs:keyref name="Relation1" refer="Constraint1">
+      <xs:selector xpath=".//Child" />
+      <xs:field xpath="Origin" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

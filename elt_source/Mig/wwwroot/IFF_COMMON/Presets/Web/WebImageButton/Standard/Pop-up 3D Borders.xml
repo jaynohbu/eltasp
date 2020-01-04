@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Pop-up 3D Borders" PresetDescription="Infragistics Pop-up 3D Borders Preset. Sets Look properties only. Notes: 1. The 'Reset' box should be checked. 2. Borders appear on mouse move and press." PresetType="Appearance" />-->
+<igtxt:WebImageButton UseBrowserDefaults="False">
+	<FocusAppearance ContentShift="None">
+		<Style BorderColor="#909090">
+		</Style>
+	</FocusAppearance>
+	<PressedAppearance>
+		<Style>
+			<BorderDetails ColorTop="104, 104, 104" ColorBottom="248, 248, 248" ColorRight="248, 248, 248" ColorLeft="104, 104, 104">
+			</BorderDetails>
+		</Style>
+	</PressedAppearance>
+	<HoverAppearance ContentShift="UpLeft">
+		<Style>
+			<BorderDetails ColorTop="248, 248, 248" ColorBottom="104, 104, 104" ColorRight="104, 104, 104" ColorLeft="248, 248, 248">
+			</BorderDetails>
+		</Style>
+	</HoverAppearance>
+	<Appearance>
+		<Style BorderWidth="1px" BorderColor="Transparent" BorderStyle="Solid" BackColor="Control">
+		</Style>
+	</Appearance>
+	<DisabledAppearance ContentShift="NotSet" />
+	<RoundedCorners RenderingType="Disabled">
+	</RoundedCorners>
+</igtxt:WebImageButton>

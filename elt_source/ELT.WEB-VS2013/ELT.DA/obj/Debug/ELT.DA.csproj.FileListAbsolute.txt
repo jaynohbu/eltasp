@@ -1,0 +1,8 @@
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.DA\bin\Debug\ELT.DA.dll.config
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.DA\bin\Debug\ELT.DA.dll
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.DA\bin\Debug\ELT.DA.pdb
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.DA\bin\Debug\ELT.CDT.dll
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.DA\bin\Debug\ELT.CDT.pdb
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.DA\obj\Debug\ELT.DA.csprojResolveAssemblyReference.cache
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.DA\obj\Debug\ELT.DA.dll
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.DA\obj\Debug\ELT.DA.pdb

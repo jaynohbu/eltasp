@@ -1,0 +1,2607 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Infragistics.WebUI.WebNavBar</name>
+    </assembly>
+    <members>
+        <member name="T:Infragistics.WebUI.WebNavBar.Base64Representation">
+            <summary>
+            This type supports the Infragistics control infrastructure and is not
+            intended for use from application code.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.Base64Representation.#ctor(Infragistics.WebUI.UltraWebToolbar.TBarButton)">
+            <summary>
+            Creates an instance of the <b>Base64Representation</b> for the base <b>UltraWebToolbar</b> button class.
+            </summary>
+            <param name="tbarButton">The <b>TBarButton</b> instance whose default
+            object settings should be representable as a BASE64-encoded line of
+            text.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.Base64Representation.#ctor(Infragistics.WebUI.WebNavBar.NavButton)">
+            <summary>
+            Creates an instance of the <b>Base64Representation</b> for a <b>WebNavBar</b> navigation button class.
+            </summary>
+            <param name="nButton">The <b>NavButton</b> instance whose default
+            object settings should be representable as a BASE64-encoded line of
+            text.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.Base64Representation.ToString">
+            <summary>
+            Gets a text representation of the BASE64-encoded representation.
+            </summary>
+            <returns>
+            The text representation in BASE64-encoding, or the empty
+            string if the information associated with this <b>Base64Representation</b> instance is characterized as empty.
+            </returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.ButtonImagePropertyProvider.#ctor(System.Web.UI.Page,Infragistics.WebUI.UltraWebToolbar.TBarButton)">
+            <summary>
+            Creates an implementation of the <b>IButtonImagePropertyProvider</b> interface.
+            </summary>
+            <param name="pageSvcs">A provider of <b>Page</b> services, which is required to
+            obtain <em>WebResourceUrl</em> resolution.</param>
+            <param name="baseObj">A base-class implementation of each method.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.ButtonImagePropertyProvider.GetDefaultImage">
+            <summary>
+            Gets the default button image.
+            </summary>
+            <returns>The image URL for the button image in the "up" state.</returns>
+            <remarks>
+            <p class="body">This method has been overridden to provide embedded
+            image resource support.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.ButtonImagePropertyProvider.GetSelectedImage">
+            <summary>
+            Gets the selected button image.
+            </summary>
+            <returns>The image URL for the button image in the "down" state.</returns>
+            <remarks>
+            <p class="body">This method has been overridden to provide embedded
+            image resource support.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.ButtonImagePropertyProvider.GetHoverImage">
+            <summary>
+            Gets the hover button image.
+            </summary>
+            <returns>The image URL for the button image in the "hover" state.</returns>
+            <remarks>
+            <p class="body">This method has been overridden to provide embedded
+            image resource support.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.ButtonImagePropertyProvider.GetDisabledImage">
+            <summary>
+            Gets the disabled button image.
+            </summary>
+            <returns>The image URL for the button image in the "gray" state.</returns>
+            <remarks>
+            <p class="body">This method has been overridden to provide embedded
+            image resource support.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.NeutralButtonImagePropertyProvider.#ctor(System.Web.UI.Page,Infragistics.WebUI.UltraWebToolbar.TBarButton)">
+            <summary>
+            Creates an implementation of the <b>IButtonImagePropertyProvider</b> interface.
+            </summary>
+            <param name="pageSvcs">A provider of <b>Page</b> services, which is required to
+            obtain <em>WebResourceUrl</em> resolution.</param>
+            <param name="baseObj">A base-class implementation of each method.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.NeutralButtonImagePropertyProvider.GetDefaultImage">
+            <summary>
+            Gets the default button image.
+            </summary>
+            <returns>The image URL for the button image in the "up" state.</returns>
+            <remarks>
+            <p class="body">This method has been overridden to provide embedded
+            image resource support.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.NeutralButtonImagePropertyProvider.GetSelectedImage">
+            <summary>
+            Gets the selected button image.
+            </summary>
+            <returns>The image URL for the button image in the "down" state.</returns>
+            <remarks>
+            <p class="body">This method has been overridden to provide embedded
+            image resource support.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.NeutralButtonImagePropertyProvider.GetHoverImage">
+            <summary>
+            Gets the hover button image.
+            </summary>
+            <returns>The image URL for the button image in the "hover" state.</returns>
+            <remarks>
+            <p class="body">This method has been overridden to provide embedded
+            image resource support.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.NeutralButtonImagePropertyProvider.GetDisabledImage">
+            <summary>
+            Gets the disabled button image.
+            </summary>
+            <returns>The image URL for the button image in the "gray" state.</returns>
+            <remarks>
+            <p class="body">This method has been overridden to provide embedded
+            image resource support.</p>
+            </remarks>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.ButtonTypeConverter">
+            <summary>
+            Auxillary class that helps with NavButton and TBarButton object conversions.
+            </summary>
+            <remarks>
+            <p class="body">This class exposes methods that identify whether it is capable of helping to convert a <see cref="T:Infragistics.WebUI.WebNavBar.NavButton"/> or <b>TBarButton</b> instance into another type of object, and then performing those conversions.  This functionality is predominantly required for serialization and design-time support.</p>
+            <p class="body">Please consult the .NET Framework SDK documentation for the <a href="ms-help://MS.NETFrameworkSDK/cpref/html/frlrfSystemComponentModelExpandableObjectConverterClassTopic.htm">ExpandableObjectConverter</a> class for more details on the usage of this helper class.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.ButtonTypeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Indicates whether conversion to an arbitrary type is possible.
+            </summary>
+            <param name="context">A context applicable when called from the environs of a TypeConverter.</param>
+            <param name="destinationType">A Type that is the target of a conversion.</param>
+            <returns>True if conversion is supported, or false if not.</returns>
+            <remarks>
+            <p class="body">Developers should call this method prior to calling <see cref="M:Infragistics.WebUI.WebNavBar.ButtonTypeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)"/>, to determine whether a type conversion into an <b>InstanceDescriptor</b> is supported by this class.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.ButtonTypeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+            <summary>
+            Converts NavButton or TBarButton instances into InstanceDescriptor objects.
+            </summary>
+            <param name="context">An ITypeDescriptor that provides context when this method is called within the context of a TypeConverter.</param>
+            <param name="culture">Identifies the Culture for the type to convert to.</param>
+            <param name="buttonObj">An instance object to convert.</param>
+            <param name="destinationType">The type to convert an object into.</param>
+            <returns>An object of the destinationType, or null (Nothing in Visual Basic .NET) if that conversion wasn't possible.</returns>
+            <remarks>
+            <p class="body">This method converts objects of <see cref="T:Infragistics.WebUI.WebNavBar.NavButton"/> or <b>TBarButton</b> into InstanceDescriptor objects that are used during serialization and for the design-time environment.  Call the <see cref="M:Infragistics.WebUI.WebNavBar.ButtonTypeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)"/> method to ascertain whether conversion between two Types is supported.</p>
+            <p class="body">Since types in .NET vary on culture, two types having the same name with different cultures are distinct types.  Make sure that when converting types the culture argument to this method matches the culture of the Infragistics assemblies installed on the machine.</p>
+            <p class="body">Additionally, the method requires that the chartText parameter be of type ChartTextAppearance. The destinationType must be of type InstanceDescriptor.  If either of these criteria are not met, then this method falls back on the base class implementation, if any.</p>
+            <p class="body">Please consult the .NET Framework SDK documentation for the <a href="ms-help://MS.NETFrameworkSDK/cpref/html/frlrfSystemComponentModelDesignSerializationInstanceDescriptorClassTopic.htm">InstanceDescriptor</a> for more details on the usage of this helper class.</p>
+            </remarks>
+            <exception cref="T:System.ArgumentException">The type of <i>buttonObj</i> is not allowed.  Only <b>NavButton</b> and <b>TBarButton</b> conversions are supported by <see cref="T:Infragistics.WebUI.WebNavBar.ButtonTypeConverter"/>.</exception>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.ClientSideEvents">
+            <summary>
+            Set of custom client-side event handlers registered with WebNavBar that will receive callbacks in response
+            to supported client-side events.
+            </summary>
+            <remarks>
+            <p class="body">Because of the stateless nature of web connections, and the typical delays involved in returning information from the server, 
+            WebNavBar implements both client-side events and server-side events. Developers may choose whether they would like to respond to client-side
+            events, which must be implemented through JavaScript.</p>
+            <p class="body">The <b>ClientSideEvents</b> object maintains a list of event handlers that are implemented on the client and called in response to 
+            events as they occur in the user's browser.</p>
+            <p class="body">Each event entry in this object is a text string that names a JavaScript function. The named function must be implemented by the
+            developer in JavaScript code and included in either a literal &lt;SCRIPT&gt; block or through the <b>Page</b> method, <a href="ms-help://MS.NETFrameworkSDK/cpref/html/frlrfSystemWebUIPageClassRegisterClientScriptBlockTopic.htm">RegisterClientScriptBlock</a>.
+            There are two obligatory parameters passed to every client-side event handler: the WebNavBar object and an Item object.  Depending on the nature
+            of the event, there may be additional parameters.  Look at the event's description for details.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.ClientSideEvents.#ctor">
+            <summary>
+            Public constructor for ClientSideEvents object
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.ClientSideEvents.ToString">
+            <summary>
+            Gets a text representation of the <b>ClientSideEvents</b> object.
+            </summary>
+            <returns>This method is presently implemented to return an empty
+            string for design-time display purposes only.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.ClientSideEvents.Reset">
+            <summary>
+            Resets all properties of the <see cref="T:Infragistics.WebUI.WebNavBar.ClientSideEvents"/> class to their default values.
+            </summary>
+            <remarks>
+            <p class="body">Invoke this method to reset all properties of the ClientSideEvents class to their default values.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.ClientSideEvents.CopyFrom(Infragistics.WebUI.WebNavBar.ClientSideEvents)">
+            <summary>
+            Copies the ClientSideEvents object
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.Click">
+            <summary>
+            Returns or sets a string of text that specifies the name of the JavaScript function to be called when a button is clicked on the client.
+            </summary>
+            <remarks>
+            	<p class="body">The name of the JavaScript function can be user defined or native. For example, to specify that the native function alert should be called, this property could be set to "alert('hello')." To specify that a user-defined function, myFunction, should be called, this property would be set to "myFunction."</p>
+            	<p class="body">A user-defined function must be defined either inline or in a linked JavaScript (.JS) file and can accept the following parameters:</p>
+            	<dl>
+            		<dt><i>oNavBar</i></dt><dd><p class="body">Object. The CSOM navbar object calling the function.</p></dd>
+            		<dt><i>oButton</i></dt><dd><p class="body">Object. The CSOM object of the button that was clicked.</p></dd>
+            		<dt><i>oEvent</i></dt><dd><p class="body">Object. The CSOM event object.</p></dd>
+            	</dl>
+            	<p class="body">The parameters above are optional and can be named as desired.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.Initialize">
+            <summary>
+            Returns or sets a string of text that specifies the name of the JavaScript function to be called when the internal document object model is being initialized on the client.
+            </summary>
+            <remarks>
+            	<p class="body">The name of the JavaScript function can be user defined or native. For example, to specify that the native function alert should be called, this property could be set to "alert('hello')." To specify that a user-defined function, myFunction, should be called, this property would be set to "myFunction."</p>
+            	<p class="body">A user-defined function must be defined either inline or in a linked JavaScript (.JS) file, above where the UltraWebToolbar control is defined on the page, and can accept the following parameters:</p>
+            	<dl>
+            		<dt><i>oNavBar</i></dt><dd><p class="body">Object. The CSOM navbar object calling the function.</p></dd>
+            		<dt><i>oEvent</i></dt><dd><p class="body">Object. The CSOM event object.</p></dd>
+            	</dl>
+            	<p class="body">The parameters above are optional and can be named as desired.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.MouseOver">
+            <summary>
+            Returns or sets a string of text that specifies the name of the JavaScript function to be called when the cursor enters a button of the WebNavBar on the client.
+            </summary>
+            <remarks>
+            	<p class="body">The name of the JavaScript function can be user defined or native. For example, to specify that the native function alert should be called, this property could be set to "alert('hello')." To specify that a user-defined function, myFunction, should be called, this property would be set to "myFunction."</p>
+            	<p class="body">A user-defined function must be defined either inline or in a linked JavaScript (.JS) file and can accept the following parameters:</p>
+            	<dl>
+            		<dt><i>oNavBar</i></dt><dd><p class="body">Object. The CSOM navbar object calling the function.</p></dd>
+            		<dt><i>oItem</i></dt><dd><p class="body">Object. The CSOM object of the button the cursor entered.</p></dd>
+            		<dt><i>oEvent</i></dt><dd><p class="body">Object. The CSOM event object.</p></dd>
+            	</dl>
+            	<p class="body">The parameters above are optional and can be named as desired.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.MouseOut">
+            <summary>
+            Returns or sets a string of text that specifies the name of the JavaScript function to be called when the cursor leaves a button of the WebNavBar on the client.
+            </summary>
+            <remarks>
+            	<p class="body">The name of the JavaScript function can be user defined or native. For example, to specify that the native function alert should be called, this property could be set to "alert('hello')." To specify that a user-defined function, myFunction, should be called, this property would be set to "myFunction."</p>
+            	<p class="body">A user-defined function must be defined either inline or in a linked JavaScript (.JS) file and can accept the following parameters:</p>
+            	<dl>
+            		<dt><i>oNavBar</i></dt><dd><p class="body">Object. The CSOM navbar object calling the function.</p></dd>
+            		<dt><i>oButton</i></dt><dd><p class="body">Object. The CSOM object of the button the cursor left.</p></dd>
+            		<dt><i>oEvent</i></dt><dd><p class="body">Object. The CSOM event object.</p></dd>
+            	</dl>
+            	<p class="body">The parameters above are optional and can be named as desired.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.BeforeMoveToStart">
+            <summary>
+            Returns or sets a string of text that specifies the name of the JavaScript function to be called before a user clicks the move to start button of the WebNavBar on the client.
+            </summary>
+            <remarks>
+            	<p class="body">The name of the JavaScript function can be user defined or native. For example, to specify that the native function alert should be called, this property could be set to "alert('hello')." To specify that a user-defined function, myFunction, should be called, this property would be set to "myFunction."</p>
+            	<p class="body">A user-defined function must be defined either inline or in a linked JavaScript (.JS) file and can accept the following parameters:</p>
+            	<dl>
+            		<dt><i>oNavBar</i></dt><dd><p class="body">Object. The CSOM navbar object calling the function.</p></dd>
+            		<dt><i>oButton</i></dt><dd><p class="body">Object. The CSOM object of the button the cursor left.</p></dd>
+            		<dt><i>oEvent</i></dt><dd><p class="body">Object. The CSOM event object.</p></dd>
+            	</dl>
+            	<p class="body">The parameters above are optional and can be named as desired.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.AfterMoveToStart">
+            <summary>
+            Returns or sets a string of text that specifies the name of the JavaScript function to be called after a user clicked the move to start button of the WebNavBar on the client.
+            </summary>
+            <remarks>
+            	<p class="body">The name of the JavaScript function can be user defined or native. For example, to specify that the native function alert should be called, this property could be set to "alert('hello')." To specify that a user-defined function, myFunction, should be called, this property would be set to "myFunction."</p>
+            	<p class="body">A user-defined function must be defined either inline or in a linked JavaScript (.JS) file and can accept the following parameters:</p>
+            	<dl>
+            		<dt><i>oNavBar</i></dt><dd><p class="body">Object. The CSOM navbar object calling the function.</p></dd>
+            		<dt><i>oButton</i></dt><dd><p class="body">Object. The CSOM object of the button the cursor left.</p></dd>
+            		<dt><i>oEvent</i></dt><dd><p class="body">Object. The CSOM event object.</p></dd>
+            	</dl>
+            	<p class="body">The parameters above are optional and can be named as desired.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.BeforeMoveBackward">
+            <summary>
+            Returns or sets a string of text that specifies the name of the JavaScript function to be called before a user clicks the move backward button of the WebNavBar on the client.
+            </summary>
+            <remarks>
+            	<p class="body">The name of the JavaScript function can be user defined or native. For example, to specify that the native function alert should be called, this property could be set to "alert('hello')." To specify that a user-defined function, myFunction, should be called, this property would be set to "myFunction."</p>
+            	<p class="body">A user-defined function must be defined either inline or in a linked JavaScript (.JS) file and can accept the following parameters:</p>
+            	<dl>
+            		<dt><i>oNavBar</i></dt><dd><p class="body">Object. The CSOM navbar object calling the function.</p></dd>
+            		<dt><i>oButton</i></dt><dd><p class="body">Object. The CSOM object of the button the cursor left.</p></dd>
+            		<dt><i>oEvent</i></dt><dd><p class="body">Object. The CSOM event object.</p></dd>
+            	</dl>
+            	<p class="body">The parameters above are optional and can be named as desired.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.AfterMoveBackward">
+            <summary>
+            Returns or sets a string of text that specifies the name of the JavaScript function to be called after a user clicked the move backward button of the WebNavBar on the client.
+            </summary>
+            <remarks>
+            	<p class="body">The name of the JavaScript function can be user defined or native. For example, to specify that the native function alert should be called, this property could be set to "alert('hello')." To specify that a user-defined function, myFunction, should be called, this property would be set to "myFunction."</p>
+            	<p class="body">A user-defined function must be defined either inline or in a linked JavaScript (.JS) file and can accept the following parameters:</p>
+            	<dl>
+            		<dt><i>oNavBar</i></dt><dd><p class="body">Object. The CSOM navbar object calling the function.</p></dd>
+            		<dt><i>oButton</i></dt><dd><p class="body">Object. The CSOM object of the button the cursor left.</p></dd>
+            		<dt><i>oEvent</i></dt><dd><p class="body">Object. The CSOM event object.</p></dd>
+            	</dl>
+            	<p class="body">The parameters above are optional and can be named as desired.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.BeforeMovePrev">
+            <summary>
+            Returns or sets a string of text that specifies the name of the JavaScript function to be called before a user clicks the move to previous button of the WebNavBar on the client.
+            </summary>
+            <remarks>
+            	<p class="body">The name of the JavaScript function can be user defined or native. For example, to specify that the native function alert should be called, this property could be set to "alert('hello')." To specify that a user-defined function, myFunction, should be called, this property would be set to "myFunction."</p>
+            	<p class="body">A user-defined function must be defined either inline or in a linked JavaScript (.JS) file and can accept the following parameters:</p>
+            	<dl>
+            		<dt><i>oNavBar</i></dt><dd><p class="body">Object. The CSOM navbar object calling the function.</p></dd>
+            		<dt><i>oButton</i></dt><dd><p class="body">Object. The CSOM object of the button the cursor left.</p></dd>
+            		<dt><i>oEvent</i></dt><dd><p class="body">Object. The CSOM event object.</p></dd>
+            	</dl>
+            	<p class="body">The parameters above are optional and can be named as desired.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.AfterMovePrev">
+            <summary>
+            Returns or sets a string of text that specifies the name of the JavaScript function to be called after a user clicked the move to previous button of the WebNavBar on the client.
+            </summary>
+            <remarks>
+            	<p class="body">The name of the JavaScript function can be user defined or native. For example, to specify that the native function alert should be called, this property could be set to "alert('hello')." To specify that a user-defined function, myFunction, should be called, this property would be set to "myFunction."</p>
+            	<p class="body">A user-defined function must be defined either inline or in a linked JavaScript (.JS) file and can accept the following parameters:</p>
+            	<dl>
+            		<dt><i>oNavBar</i></dt><dd><p class="body">Object. The CSOM navbar object calling the function.</p></dd>
+            		<dt><i>oButton</i></dt><dd><p class="body">Object. The CSOM object of the button the cursor left.</p></dd>
+            		<dt><i>oEvent</i></dt><dd><p class="body">Object. The CSOM event object.</p></dd>
+            	</dl>
+            	<p class="body">The parameters above are optional and can be named as desired.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.BeforeMoveNext">
+            <summary>
+            Returns or sets a string of text that specifies the name of the JavaScript function to be called before a user clicks the move to next button of the WebNavBar on the client.
+            </summary>
+            <remarks>
+            	<p class="body">The name of the JavaScript function can be user defined or native. For example, to specify that the native function alert should be called, this property could be set to "alert('hello')." To specify that a user-defined function, myFunction, should be called, this property would be set to "myFunction."</p>
+            	<p class="body">A user-defined function must be defined either inline or in a linked JavaScript (.JS) file and can accept the following parameters:</p>
+            	<dl>
+            		<dt><i>oNavBar</i></dt><dd><p class="body">Object. The CSOM navbar object calling the function.</p></dd>
+            		<dt><i>oButton</i></dt><dd><p class="body">Object. The CSOM object of the button the cursor left.</p></dd>
+            		<dt><i>oEvent</i></dt><dd><p class="body">Object. The CSOM event object.</p></dd>
+            	</dl>
+            	<p class="body">The parameters above are optional and can be named as desired.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.AfterMoveNext">
+            <summary>
+            Returns or sets a string of text that specifies the name of the JavaScript function to be called after a user clicked the move to next button of the WebNavBar on the client.
+            </summary>
+            <remarks>
+            	<p class="body">The name of the JavaScript function can be user defined or native. For example, to specify that the native function alert should be called, this property could be set to "alert('hello')." To specify that a user-defined function, myFunction, should be called, this property would be set to "myFunction."</p>
+            	<p class="body">A user-defined function must be defined either inline or in a linked JavaScript (.JS) file and can accept the following parameters:</p>
+            	<dl>
+            		<dt><i>oNavBar</i></dt><dd><p class="body">Object. The CSOM navbar object calling the function.</p></dd>
+            		<dt><i>oButton</i></dt><dd><p class="body">Object. The CSOM object of the button the cursor left.</p></dd>
+            		<dt><i>oEvent</i></dt><dd><p class="body">Object. The CSOM event object.</p></dd>
+            	</dl>
+            	<p class="body">The parameters above are optional and can be named as desired.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.BeforeMoveForward">
+            <summary>
+            Returns or sets a string of text that specifies the name of the JavaScript function to be called before a user clicks the move forward button of the WebNavBar on the client.
+            </summary>
+            <remarks>
+            	<p class="body">The name of the JavaScript function can be user defined or native. For example, to specify that the native function alert should be called, this property could be set to "alert('hello')." To specify that a user-defined function, myFunction, should be called, this property would be set to "myFunction."</p>
+            	<p class="body">A user-defined function must be defined either inline or in a linked JavaScript (.JS) file and can accept the following parameters:</p>
+            	<dl>
+            		<dt><i>oNavBar</i></dt><dd><p class="body">Object. The CSOM navbar object calling the function.</p></dd>
+            		<dt><i>oButton</i></dt><dd><p class="body">Object. The CSOM object of the button the cursor left.</p></dd>
+            		<dt><i>oEvent</i></dt><dd><p class="body">Object. The CSOM event object.</p></dd>
+            	</dl>
+            	<p class="body">The parameters above are optional and can be named as desired.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.AfterMoveForward">
+            <summary>
+            Returns or sets a string of text that specifies the name of the JavaScript function to be called after a user clicked the move forward button of the WebNavBar on the client.
+            </summary>
+            <remarks>
+            	<p class="body">The name of the JavaScript function can be user defined or native. For example, to specify that the native function alert should be called, this property could be set to "alert('hello')." To specify that a user-defined function, myFunction, should be called, this property would be set to "myFunction."</p>
+            	<p class="body">A user-defined function must be defined either inline or in a linked JavaScript (.JS) file and can accept the following parameters:</p>
+            	<dl>
+            		<dt><i>oNavBar</i></dt><dd><p class="body">Object. The CSOM navbar object calling the function.</p></dd>
+            		<dt><i>oButton</i></dt><dd><p class="body">Object. The CSOM object of the button the cursor left.</p></dd>
+            		<dt><i>oEvent</i></dt><dd><p class="body">Object. The CSOM event object.</p></dd>
+            	</dl>
+            	<p class="body">The parameters above are optional and can be named as desired.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.BeforeMoveToEnd">
+            <summary>
+            Returns or sets a string of text that specifies the name of the JavaScript function to be called before a user clicks the move to end button of the WebNavBar on the client.
+            </summary>
+            <remarks>
+            	<p class="body">The name of the JavaScript function can be user defined or native. For example, to specify that the native function alert should be called, this property could be set to "alert('hello')." To specify that a user-defined function, myFunction, should be called, this property would be set to "myFunction."</p>
+            	<p class="body">A user-defined function must be defined either inline or in a linked JavaScript (.JS) file and can accept the following parameters:</p>
+            	<dl>
+            		<dt><i>oNavBar</i></dt><dd><p class="body">Object. The CSOM navbar object calling the function.</p></dd>
+            		<dt><i>oButton</i></dt><dd><p class="body">Object. The CSOM object of the button the cursor left.</p></dd>
+            		<dt><i>oEvent</i></dt><dd><p class="body">Object. The CSOM event object.</p></dd>
+            	</dl>
+            	<p class="body">The parameters above are optional and can be named as desired.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.AfterMoveToEnd">
+            <summary>
+            Returns or sets a string of text that specifies the name of the JavaScript function to be called after a user clicked the move to end button of the WebNavBar on the client.
+            </summary>
+            <remarks>
+            	<p class="body">The name of the JavaScript function can be user defined or native. For example, to specify that the native function alert should be called, this property could be set to "alert('hello')." To specify that a user-defined function, myFunction, should be called, this property would be set to "myFunction."</p>
+            	<p class="body">A user-defined function must be defined either inline or in a linked JavaScript (.JS) file and can accept the following parameters:</p>
+            	<dl>
+            		<dt><i>oNavBar</i></dt><dd><p class="body">Object. The CSOM navbar object calling the function.</p></dd>
+            		<dt><i>oButton</i></dt><dd><p class="body">Object. The CSOM object of the button the cursor left.</p></dd>
+            		<dt><i>oEvent</i></dt><dd><p class="body">Object. The CSOM event object.</p></dd>
+            	</dl>
+            	<p class="body">The parameters above are optional and can be named as desired.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.BeforeInsertRow">
+            <summary>
+            Returns or sets a string of text that specifies the name of the JavaScript function to be called before a user clicks the insert button of the WebNavBar on the client.
+            </summary>
+            <remarks>
+            	<p class="body">The name of the JavaScript function can be user defined or native. For example, to specify that the native function alert should be called, this property could be set to "alert('hello')." To specify that a user-defined function, myFunction, should be called, this property would be set to "myFunction."</p>
+            	<p class="body">A user-defined function must be defined either inline or in a linked JavaScript (.JS) file and can accept the following parameters:</p>
+            	<dl>
+            		<dt><i>oNavBar</i></dt><dd><p class="body">Object. The CSOM navbar object calling the function.</p></dd>
+            		<dt><i>oButton</i></dt><dd><p class="body">Object. The CSOM object of the button the cursor left.</p></dd>
+            		<dt><i>oEvent</i></dt><dd><p class="body">Object. The CSOM event object.</p></dd>
+            	</dl>
+            	<p class="body">The parameters above are optional and can be named as desired.</p>
+            	<p class="body">At the developer's discretion, the postback of a server-side insertion event handler may be overriden by setting <b>cancelPostBack</b> to False on the <i>oEvent</i> argument.
+            This should only be done if an <see cref="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.AfterInsertRow"/> handler has been subscribed, and/or the default client-side insertion handling is sufficient.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.AfterInsertRow">
+            <summary>
+            Returns or sets a string of text that specifies the name of the JavaScript function to be called after a user clicked the insert button of the WebNavBar on the client.
+            </summary>
+            <remarks>
+            	<p class="body">The name of the JavaScript function can be user defined or native. For example, to specify that the native function alert should be called, this property could be set to "alert('hello')." To specify that a user-defined function, myFunction, should be called, this property would be set to "myFunction."</p>
+            	<p class="body">A user-defined function must be defined either inline or in a linked JavaScript (.JS) file and can accept the following parameters:</p>
+            	<dl>
+            		<dt><i>oNavBar</i></dt><dd><p class="body">Object. The CSOM navbar object calling the function.</p></dd>
+            		<dt><i>oButton</i></dt><dd><p class="body">Object. The CSOM object of the button the cursor left.</p></dd>
+            		<dt><i>oEvent</i></dt><dd><p class="body">Object. The CSOM event object.</p></dd>
+            	</dl>
+            	<p class="body">The parameters above are optional and can be named as desired.</p>
+            	<p class="body">Observe that the <b>AfterInsertRow</b> client-side event will not fire if the insertion event posts back for server-side handling.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.BeforeDeleteRow">
+            <summary>
+            Returns or sets a string of text that specifies the name of the JavaScript function to be called before a user clicks the delete button of the WebNavBar on the client.
+            </summary>
+            <remarks>
+            	<p class="body">The name of the JavaScript function can be user defined or native. For example, to specify that the native function alert should be called, this property could be set to "alert('hello')." To specify that a user-defined function, myFunction, should be called, this property would be set to "myFunction."</p>
+            	<p class="body">A user-defined function must be defined either inline or in a linked JavaScript (.JS) file and can accept the following parameters:</p>
+            	<dl>
+            		<dt><i>oNavBar</i></dt><dd><p class="body">Object. The CSOM navbar object calling the function.</p></dd>
+            		<dt><i>oButton</i></dt><dd><p class="body">Object. The CSOM object of the button the cursor left.</p></dd>
+            		<dt><i>oEvent</i></dt><dd><p class="body">Object. The CSOM event object.</p></dd>
+            	</dl>
+            	<p class="body">The parameters above are optional and can be named as desired.</p>
+            	<p class="body">At the developer's discretion, the postback of a server-side deletion event handler may be overriden by setting <b>cancelPostBack</b> to False on the <i>oEvent</i> argument.
+            This should only be done if an <see cref="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.AfterDeleteRow"/> handler has been subscribed, and/or the default client-side deletion handling is sufficient.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.AfterDeleteRow">
+            <summary>
+            Returns or sets a string of text that specifies the name of the JavaScript function to be called after a user clicked the delete button of the WebNavBar on the client.
+            </summary>
+            <remarks>
+            	<p class="body">The name of the JavaScript function can be user defined or native. For example, to specify that the native function alert should be called, this property could be set to "alert('hello')." To specify that a user-defined function, myFunction, should be called, this property would be set to "myFunction."</p>
+            	<p class="body">A user-defined function must be defined either inline or in a linked JavaScript (.JS) file and can accept the following parameters:</p>
+            	<dl>
+            		<dt><i>oNavBar</i></dt><dd><p class="body">Object. The CSOM navbar object calling the function.</p></dd>
+            		<dt><i>oButton</i></dt><dd><p class="body">Object. The CSOM object of the button the cursor left.</p></dd>
+            		<dt><i>oEvent</i></dt><dd><p class="body">Object. The CSOM event object.</p></dd>
+            	</dl>
+            	<p class="body">The parameters above are optional and can be named as desired.</p>
+            	<p class="body">Observe that the <b>AfterDeleteRow</b> client-side event will not fire if the deletion event posts back for server-side handling.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.IsTrackingViewState">
+            <summary>
+            Determines whether tracking of changes is performed by view state.
+            </summary>
+            <value>True if tracking through viewstate of the property
+            values changes of this <b>ClientSideEvents</b> object is 
+            being performed; otherwise False when tracking has been
+            disabled.
+            </value>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ClientSideEvents.ViewState">
+            <summary>
+            Gets a dictionary of state information (StateBag) that allows you to save and restore the view state of a server control across multiple requests for the same page.
+            </summary>
+            <remarks>
+            <p class="body">A server control's view state is the accumulation of all its property values. In order to preserve these values across HTTP requests, ASP.NET server controls use this property, which is an instance of the StateBag class, to store the property values. The values are then passed as a variable to an HTML hidden input element when subsequent requests are processed. For more information about saving server control view state, see <a href="ms-help://MS.NETFrameworkSDK/cpguidenf/html/cpconmantainingstateincontrol.htm">Maintaining State in a Control</a>.</p>
+            </remarks>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.NavBarPosition">
+            <summary>
+            Docking position of the Web Navigation Bar on UltraWebGrid.
+            </summary>
+            <remarks>
+            <p class="body">These settings have no effect if <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.GridID">GridID</see> is unset.</p>
+            </remarks>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavBarPosition.Top">
+            <summary>
+            Attached to the top of an UltraWebGrid.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavBarPosition.Bottom">
+            <summary>
+            Attached to the bottom of an UltraWebGrid.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavBarPosition.Floating">
+            <summary>
+            Freestanding; detached from its associated UltraWebGrid.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.NavDirection">
+            <summary>
+            Indicates the direction of movement when navigating with Web Nav Bar.
+            </summary>
+            <remarks>
+            <p class="body">While the magnitude of the scalar movement amount (positive
+            or negative distances) may imply a direction of navigation, it is limited to
+            only two-dimensional navigation.  For greatest flexibility in future applications,
+            developers should make a practice of setting the appropriate <b>Direction</b>
+            properties of any navigational objects they work with.</p>
+            <see cref="T:Infragistics.WebUI.WebNavBar.NavStep"/>
+            </remarks>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavDirection.Forward">
+            <summary>
+            Movement in the forward direction.  Presently, this setting also applies to top-down and left-to-right navigation.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavDirection.Back">
+            <summary>
+            Movement in the back direction.  Presently, this setting also applies to bottom-up and right-to-left navigation.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.NavUnit">
+            <summary>
+            Defines the unit by which distances navigated are measured.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavUnit.Row">
+            <summary>
+            The distance to navigate is specified by an integral number of rows.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavUnit.Page">
+            <summary>
+            The distance to navigate is specified by an integral number of pages.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavUnit.First">
+            <summary>
+            Navigates to the beginning.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavUnit.Last">
+            <summary>
+            Navigates to the end.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.NavBarTheme">
+            <summary>
+            Button image themes supplied with the WebNavBar control.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavBarTheme.Custom">
+            <summary>
+            The developer supplies a custom button image theme.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavBarTheme.CorporateSilver">
+            <summary>
+            Simple silver and gray push buttons (the default).
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavBarTheme.CorporateSilver_Embedded">
+            <summary>
+            Simple silver and gray push buttons through embedded resources.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavBarTheme.CorporateGold">
+            <summary>
+            Simple gold and yellow push buttons.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavBarTheme.CorporateGold_Embedded">
+            <summary>
+            Simple gold and yellow push buttons through embedded resources.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavBarTheme.XpBlue">
+            <summary>
+            Light blue chevron push buttons complimenting the XP look-and-feel and scheme.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavBarTheme.XpBlue_Embedded">
+            <summary>
+            Light blue chevron push buttons through embedded resources that compliment the XP scheme.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavBarTheme.XpOlive">
+            <summary>
+            Olive drab chevron push buttons complimenting an alternate XP look-and-feel and scheme.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavBarTheme.XpOlive_Embedded">
+            <summary>
+            Olive drab chevron push buttons through embedded resources that compliment an alternate XP scheme.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavBarTheme.XpSilver">
+            <summary>
+            Silvery-gray chevron push buttons complimenting an alternate XP look-and-feel and scheme.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavBarTheme.XpSilver_Embedded">
+            <summary>
+            Silvery-gray chevron push buttons complimenting an alternate XP through embedded resources that compliment an alternate XP scheme.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.InsertRowLocation">
+            <summary>
+            Defines the places in which a new row can be inserted into an UltraWebGrid relative to
+            the currently active row.
+            </summary>
+            <remarks>
+            <p class="body">Developers will use this enumeration when specifying property values for the
+            <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.InsertRowLocationDefault">InsertRowLocationDefault</see>
+            property, or working with the <see cref="T:Infragistics.WebUI.WebNavBar.BeforeInsertRowEventArgs">BeforeInsertRowEventArgs</see>.</p>
+            <p class="body">When setting a <b>Child</b> placement for newly inserted rows, a first child
+            is customarily inserted. If the application requires the new row to appear elsewhere within
+            the child row collection, it should first reposition the <see cref="P:Infragistics.WebUI.UltraWebGrid.UltraGridLayout.ActiveRow">ActiveRow</see>
+            in the child row collection and then use a placement of <b>Before</b> or <b>After</b>.</p>
+            <p class="body">The setting of the <b>InsertRowLocation</b> has no bearing upon the handling
+            of events, and its values should not be confused with events which are also named according to
+            a <b>Before</b>- and <b>After</b>- naming convention).</p>
+            </remarks>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.InsertRowLocation.Before">
+            <summary>
+            A new row is added as the sibling immediately preceding the active row.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.InsertRowLocation.Child">
+            <summary>
+            A new row is added as the first child immediately beneath the active row.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.InsertRowLocation.After">
+            <summary>
+            A new row is added as the sibling immediately following the active row.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.BeforeNavigateEventArgs">
+            <summary>
+            Event arguments provided to developers preceding navigational
+            events for which they have subscribed.
+            </summary>
+            <remarks>
+            <p class="body">An event that provides a developer with notification
+            using an instance of <b>BeforeNavigateEventArgs</b> is one that has not
+            been committed, and permits the developer the opportunity to cancel
+            it before it commits.
+            </p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.BeforeNavigateEventArgs.#ctor(Infragistics.WebUI.WebNavBar.NavStep)">
+            <summary>
+            Creates an instance of an event arguments package for post-navigation events.
+            </summary>
+            <param name="stepInfo">Description of expected navigation.</param>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.BeforeNavigateEventArgs.Step">
+            <summary>
+            A description of the expected navigation associated with this event notification.
+            </summary>
+            <remarks>
+            <p class="body">Developers may still cancel this event by setting the <b>Cancel</b>
+            property to true. This property only describes the navigation that will take place
+            if the event proceeds.</p>
+            </remarks>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.AfterNavigateEventArgs">
+            <summary>
+            Event arguments provided to developers following navigational
+            events for which they have subscribed.
+            </summary>
+            <remarks>
+            <p class="body">The state of the application will have changed to
+            reflect the navigation of the end user.  These arguments permit
+            developers with an opportunity to perform follow-up processing
+            based on the new location of the end user.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.AfterNavigateEventArgs.#ctor(Infragistics.WebUI.WebNavBar.NavStep)">
+            <summary>
+            Creates an instance of an event arguments package for post-navigation events.
+            </summary>
+            <param name="stepInfo">Description of navigation performed.</param>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.AfterNavigateEventArgs.Step">
+            <summary>
+            A description of the navigation performed prior to this event notification.
+            </summary>
+            <remarks>
+            <p class="body">The information furnished by this property is for developers'
+            information only. It may be useful in performing follow-up processing in the
+            aftermath of the end user's change of location.</p>
+            </remarks>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.BeforeInsertRowEventArgs">
+            <summary>
+            Event arguments provided to developers before a new row insertion by the
+            Insert button.
+            </summary>
+            <remarks>
+            <p class="body">These arguments permit developers to cancel a new row insertion
+            triggered by the Insert extension button by setting the <b>Cancel</b> property
+            to True.</p>
+            <p class="body">Developers may also handle the <see cref="E:Infragistics.WebUI.WebNavBar.WebNavBar.BeforeInsertRow">BeforeInsertRow</see>
+            event and modify the placement of the newly inserted row within the UltraWebGrid.  By
+            default, new rows are placed relative to the <see cref="P:Infragistics.WebUI.UltraWebGrid.UltraGridLayout.ActiveRow">ActiveRow</see>.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.BeforeInsertRowEventArgs.#ctor(System.Object,Infragistics.WebUI.WebNavBar.InsertRowLocation)">
+            <summary>
+            Creates a new instance of event arguments for the BeforeInsertRow event.
+            </summary>
+            <param name="dataRow">An UltraGridRow instance reflecting the row used as a
+            landmark for the insertion of a new row.</param>
+            <param name="defaultPlacement">
+            The placement of the new row relative to <i>dataRow</i>.
+            </param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.BeforeInsertRowEventArgs.IsValid(System.String)">
+            <summary>
+            Indicates whether the current landmark is within the scope of the attached UltraWebGrid.
+            </summary>
+            <param name="targetControlID">
+            The control ID of the attached instance of an UltraWebGrid.
+            </param>
+            <returns>True if <b>Current</b> refers to a position valid within the context of the
+            <i>targetControlID</i>, False otherwise.</returns>
+            <remarks>
+            <p class="body">The most likely reason for failure is that the data object specified
+            in <see cref="P:Infragistics.WebUI.WebNavBar.BeforeInsertRowEventArgs.Current"/> does not belong to the <i>targetControlID</i>, or is orphaned.
+            If the object is orphaned, try adding it to the collection of data objects belonging
+            to the control, <i>targetControlID</i>.</p>
+            <p class="body">For example, developers may produce an invalid instance of
+            <see cref="T:Infragistics.WebUI.WebNavBar.BeforeInsertRowEventArgs"/> when the <see cref="T:Infragistics.WebUI.UltraWebGrid.UltraGridRow">UltraGridRow</see>
+            they have assigned to <b>Current</b> does not belong to the UltraWebGrid identified by <i>targetControlID</i>. Add the
+            <b>UltraGridRow</b> to the <see cref="P:Infragistics.WebUI.UltraWebGrid.UltraWebGrid.Rows">Rows</see> collection
+            of the UltraWebGrid attached to this WebNavBar.  It will then represent a valid position within the context of
+            the grid.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.BeforeInsertRowEventArgs.Current">
+            <summary>
+            The current landmark position from which the new data is to be inserted.
+            </summary>
+            <remarks>
+            <p class="body">Developers are advised to check whether the value returned by this property
+            is of type <see cref="T:Infragistics.WebUI.UltraWebGrid.UltraGridRow"/>.  The landmark for an
+            insertion can be a generic object.</p>
+            <p class="body">Developers should only assign objects of type <b>UltraGridRow</b> to this
+            property.</p>
+            <seealso cref="P:Infragistics.WebUI.WebNavBar.BeforeInsertRowEventArgs.Location"/>
+            </remarks>
+            <exception cref="T:System.ArgumentException">Thrown when the <i>value</i> assigned to <b>Current</b>
+            was not of a supported data type.  The only data type presently supported is <b>UltraGridRow</b>.
+            </exception>
+            <exception cref="T:System.ArgumentException">Thrown when the <i>value</i> assigned to <b>Current</b>
+            does not have information describing its context.  For example, an <b>UltraGridRow</b> whose
+            <see cref="P:Infragistics.WebUI.UltraWebGrid.UltraGridRow.Band">Band</see> property is improperly
+            set or set to null (Nothing in Visual Basic .NET).</exception>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.BeforeInsertRowEventArgs.Location">
+            <summary>
+            Placement of the newly inserted data relative to the position of the current landmark.
+            </summary>
+            <remarks>
+            <p class="body">Developers handling the <see cref="E:Infragistics.WebUI.WebNavBar.WebNavBar.BeforeInsertRow">BeforeInsertRow</see>
+            event can modify the default row insertion placement defined by <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.InsertRowLocationDefault">InsertRowLocationDefault</see>
+            by changing this property in their event arguments.</p>
+            <seealso cref="P:Infragistics.WebUI.WebNavBar.BeforeInsertRowEventArgs.Current"/>
+            </remarks>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.AfterInsertRowEventArgs">
+            <summary>
+            Event arguments provided to developers following the insertion of a new row with
+            the Insert button.
+            </summary>
+            <remarks>
+            <p class="body">Developers may handle the <see cref="E:Infragistics.WebUI.WebNavBar.WebNavBar.AfterInsertRow">AfterInsertRow</see>
+            event to perform follow-up processing upon the newly inserted row.  An example of follow-up processing a web application
+            may perform is to insert default data values into the cells of the newly created row.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.AfterInsertRowEventArgs.#ctor(System.Object)">
+            <summary>
+            Creates an instance of the event arguments for the AfterInsertRow event.
+            </summary>
+            <param name="dataRow">A data object representing the newly added UltraGridRow.</param>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.AfterInsertRowEventArgs.Row">
+            <summary>
+            Retrieves the data object inserted into the attached control's collection of data objects.
+            </summary>
+            <remarks>
+            <p class="body">Developers should check the value returned from this property to ensure that
+            it is of the <see cref="T:Infragistics.WebUI.UltraWebGrid.UltraGridRow">UltraGridRow</see> type,
+            as the property may represent a generic data object/</p>
+            </remarks>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.BeforeDeleteRowEventArgs">
+            <summary>
+            Event arguments provided to developers before a deletion of selected rows performed by
+            the Delete button.
+            </summary>
+            <remarks>
+            <p class="body">These arguments permit developers to cancel a selected rows deletion
+            triggered by the Delete extension button by setting the <b>Cancel</b> property
+            to True.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.BeforeDeleteRowEventArgs.#ctor(System.Object[])">
+            <summary>
+            Creates an instance of the cancelable event arguments for the BeforeDeleteRow event.
+            </summary>
+            <param name="selectedRows">A copy of the currently selected UltraGridRow data objects
+            that are about to be deleted.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.BeforeDeleteRowEventArgs.IsValid(System.String)">
+            <summary>
+            Indicates whether the selected rows are valid within the scope of the attached UltraWebGrid.
+            </summary>
+            <param name="targetControlID">
+            The control ID of the attached instance of an UltraWebGrid.
+            </param>
+            <returns>True if all selected rows of <b>Rows</b> belong to the <i>targetControlID</i> and may be deleted, False otherwise.</returns>
+            <remarks>
+            	<p class="body">The most likely reason for failure is that one or more data objects specified in <see cref="P:Infragistics.WebUI.WebNavBar.BeforeDeleteRowEventArgs.Rows"/> does not belong to the <i>targetControlID</i>, or has been orphaned.  If the object is orphaned, try adding it to the collection of data objects belonging to the control identified by <i>targetControlID</i>.</p>
+            	<seealso cref="M:Infragistics.WebUI.WebNavBar.BeforeDeleteRowEventArgs.IsValid(System.String,System.Boolean)"/>
+            </remarks>
+            <exception cref="T:System.ArgumentException">Thrown when the data object is not of a
+            supported data type (the only data type presently supported in <b>UltraGridRow</b>.
+            </exception>
+            <exception cref="T:System.ArgumentException">Thrown when there exists a row which is
+            missing information vital to determining whether it is a valid row in <i>targetControlID</i>.
+            One cause of this fault could be a <see cref="P:Infragistics.WebUI.UltraWebGrid.UltraGridRow.Band">Band</see>
+            reference of null (Nothing in Visual Basic .NET).</exception>
+            <exception cref="T:System.ArgumentException">Thrown when the data object being deleted
+            does not belong to the control identified by <i>targetControlID</i>.</exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.BeforeDeleteRowEventArgs.IsValid(System.String,System.Boolean)">
+            <summary>
+            Indicates whether the selected rows are valid within the scope of the attached UltraWebGrid, optionally not throwing an exception.
+            </summary>
+            <param name="targetControlID">
+            The control ID of the attached instance of an UltraWebGrid.
+            </param>
+            <param name="suppressExceptions">
+            A flag indicating whether exceptions should not be thrown.
+            </param>
+            <returns>True if all selected rows of <b>Rows</b> belong to the <i>targetControlID</i>
+            and may be deleted, False otherwise.</returns>
+            <remarks>
+            	<p class="body">The most likely reason for failure is that one or more data objects specified in <see cref="P:Infragistics.WebUI.WebNavBar.BeforeDeleteRowEventArgs.Rows"/> does not belong to the <i>targetControlID</i>, or has been orphaned.  If the object is orphaned, try adding it to the collection of data objects belonging to the control identified by <i>targetControlID</i>.</p>
+            	<p class="body">If this method failed when <i>suppressExceptions</i> was True, try recreating the situation passing <i>suppressExceptions</i> as False. The exception message thrown may provide more information regarding the reason for failure.</p>
+            </remarks>
+            <exception cref="T:System.ArgumentException">Thrown when the data object is not of a
+            supported data type (the only data type presently supported in <b>UltraGridRow</b>.
+            </exception>
+            <exception cref="T:System.ArgumentException">Thrown when there exists a row which is
+            missing information vital to determining whether it is a valid row in <i>targetControlID</i>.
+            One cause of this fault could be a <see cref="P:Infragistics.WebUI.UltraWebGrid.UltraGridRow.Band">Band</see>
+            reference of null (Nothing in Visual Basic .NET).</exception>
+            <exception cref="T:System.ArgumentException">Thrown when the data object being deleted
+            does not belong to the control identified by <i>targetControlID</i>.</exception>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.BeforeDeleteRowEventArgs.Rows">
+            <summary>
+            Gets the currently selected set of rows that are about to be deleted.
+            </summary>
+            <remarks>
+            	<p class="body">Developers may cancel the deletion of individual rows within the set by setting individual slots of the array to null (or Nothing in Visual Basic .NET),</p>
+            	<p class="body">When accessing this contents of this array, developers should check that the object reference returned is of the expected type, 
+            <see cref="T:Infragistics.WebUI.UltraWebGrid.UltraGridRow">UltraGridRow</see>.
+            The contents of this array could be any generic data object.  When storing object references within this array, developers should only assign objects of the <b>UltraGridRow</b> data type.</p>
+            </remarks>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.AfterDeleteRowEventArgs">
+            <summary>
+            Event arguments notifying handlers of the AfterDeleteRow event of
+            how many rows were removed by the Delete button.
+            </summary>
+            <remarks>
+            <p class="body">If an application requires the set of data items
+            removed from the attached control for post-processing, then the
+            developer must handle the <see cref="E:Infragistics.WebUI.WebNavBar.WebNavBar.BeforeDeleteRow">BeforeDeleteRow</see>
+            event in addition to <b>AfterDeleteRow</b>.  In the handler of the
+            <i>Before</i>- event, the developer can save a reference to the
+            <see cref="P:Infragistics.WebUI.WebNavBar.BeforeDeleteRowEventArgs.Rows">Rows</see>, and examine
+            that array of data items once they have expired within the handler
+            of the <i>After</i>= event.</p>
+            <p class="body">The set of deleted items is not made available by the
+            <b>AfterDeleteRowEventArgs</b> class because the items have been deleted
+            from their parent control. Some of their properties may no longer be
+            valid.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.AfterDeleteRowEventArgs.#ctor(System.Int32)">
+            <summary>
+            Creates a set of event arguments for the AfterDeleteRow event.
+            </summary>
+            <param name="count">Number of data objects removed.</param>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.AfterDeleteRowEventArgs.Count">
+            <summary>
+            The number of data objects removed from the attached control's collection of data objects.
+            </summary>
+            <remarks><p class="body">If this property's value is 0, it means that no data objects were deleted.  Had the deletion operation been canceled, no <b>AfterDeleteRowEvent</b> would have occured.</p></remarks>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.BeforeNavigateEventHandler">
+            <summary>
+            Event handler for responding to cancelable pre-navigation events.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.AfterNavigateEventHandler">
+            <summary>
+            Event handler for performing follow-up processing after a navigable action has executed.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.BeforeInsertRowEventHandler">
+            <summary>
+            Event handler for responding to cancelable row insertion events.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.AfterInsertRowEventHandler">
+            <summary>
+            Event handler for performing follow-up processing upon a newly inserted row.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.BeforeDeleteRowEventHandler">
+            <summary>
+            Event handler for responding to cancelable row deletion events.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.AfterDeleteRowEventHandler">
+            <summary>
+            Event handler for performing follow-up processing upon recently deleted row(s).
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.ExtensionButtonCollection">
+            <summary>
+            Collection of named extension buttons that perform non-navigational operations.
+            </summary>
+            <remarks>
+            <p class="body">Developers can customize the properties and events of these buttons.
+            When dealing with extension buttons, application code should be flexible concerning
+            the existence of any particular button property.  It is conceivable that the properties
+            of this collection could return a null (Nothing in Visual Basic .NET) object reference
+            for an extension button if it is not applicable to the WebNavBar control.
+            </p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.ExtensionButtonCollection.#ctor">
+            <summary>
+            Creates a collection of the extension buttons.
+            </summary>
+            <remarks>
+            <seealso cref="T:Infragistics.WebUI.UltraWebToolbar.TBarButton"/>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.ExtensionButtonCollection.#ctor(Infragistics.WebUI.WebNavBar.WebNavBar)">
+            <summary>
+            Creates a collection of the extension buttons for the specified WebNavBar.
+            </summary>
+            <param name="parent">The WebNavBar control containing this button collection.</param>
+            <remarks>
+            <seealso cref="T:Infragistics.WebUI.UltraWebToolbar.TBarButton"/>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.ExtensionButtonCollection.ResetInsert">
+            <summary>
+            Resets the <see cref="P:Infragistics.WebUI.WebNavBar.ExtensionButtonCollection.Insert"/> button to it's default settings.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.ExtensionButtonCollection.ResetDelete">
+            <summary>
+            Resets the <see cref="P:Infragistics.WebUI.WebNavBar.ExtensionButtonCollection.Delete"/> button to it's default settings.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.ExtensionButtonCollection.ResetSubmit">
+            <summary>
+            Resets the <see cref="P:Infragistics.WebUI.WebNavBar.ExtensionButtonCollection.Submit"/> button to it's default settings.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.ExtensionButtonCollection.System#IDisposable#Dispose">
+            <summary>
+            Cleans up before destroying the ExtensionButtonCollection.
+            </summary>
+            <remarks>
+            <p class="body">Disposes of any host references containing with this collection prior to
+            its disposal by the Common Language Runtime.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.ExtensionButtonCollection.ToString">
+            <summary>
+            Returns a string representation of this collection.
+            </summary>
+            <returns>An empty string.</returns>
+            <remarks>
+            <p class="body">This method is only intended for use during design-time,
+            where its value populates the Properties Editor.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ExtensionButtonCollection.Insert">
+            <summary>
+            Insert row button.
+            </summary>
+            <remarks>
+            <p class="body">This button is customarily used to insert a new row into
+            the attached UltraWebGrid.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ExtensionButtonCollection.Delete">
+            <summary>
+            Remove row button.
+            </summary>
+            <remarks>
+            <p class="body">This button is customarily used to remove the currently
+            selected row(s) from the attached UltraWebGrid.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ExtensionButtonCollection.Submit">
+            <summary>
+            Submit button that purposefully posts back to the web server.
+            </summary>
+            <remarks>
+            <p class="body">This button is customarily used to postback to the
+            webserver and update the data associated with the attached UltraWebGrid.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ExtensionButtonCollection.Count">
+            <summary>
+            Number of buttons enlisted in this collection.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.ExtensionButtonCollection.Visible">
+            <summary>
+            Visibility of the extension buttons.
+            </summary>
+            <value>An indication that extension buttons are displayed to the end user.</value>
+            <remarks>
+            <p class="body">Developers may turn the visibility of all extension buttons (as a set) off
+            by setting this property to false.  Individual buttons within this set cannot be turned off.
+            </p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.GridRenderPlugIn.#ctor(Infragistics.WebUI.UltraWebGrid.RenderDelegate,Infragistics.WebUI.WebNavBar.NavBarPosition,System.ComponentModel.IComponent)">
+            <summary>
+            Creates an instance of the GridRenderPlugIn with the specified callback.
+            </summary>
+            <param name="cb">A delegate to callback that performs the necessary rendering
+            of WebNavBar.</param>
+            <param name="nbp">Position at which the navigation bar should dock itself within
+            the extendible rendering container.</param>
+            <param name="component">Component used to implement <b>IComponent</b> for design-time
+            service needs of the grid's designer.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.GridRenderPlugIn.Register(Infragistics.WebUI.UltraWebGrid.IPlugInConsumer)">
+            <summary>
+            Register this plug-in renderer factory with the given plug-in consumer.
+            </summary>
+            <param name="consumer">A consumer of plug-in renderers, such as UltraWebGrid.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.GridRenderPlugIn.Unregister(Infragistics.WebUI.UltraWebGrid.IPlugInConsumer)">
+            <summary>
+            Unregister this plug-in renderer factory on the specified plug-in consumer.
+            </summary>
+            <param name="consumer">A consumer of plug-in renderers where this factory
+            has already been registered.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.GridRenderPlugIn.Infragistics#WebUI#UltraWebGrid#IPlugInFactory#CreateExternalRenderer">
+            <summary>
+            Creates an implementation of the <b>IPlugInRender</b> interface that renders the WebNavBar at the appropriate position on the WebNavBar.
+            </summary>
+            <returns>An implementation of <b>IPlugInRender</b>.</returns>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.GridRenderPlugIn.Position">
+            <summary>
+            Identifies where within the UltraWebGrid the navigation bar should dock, or whether it should instead be freestanding.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.NavButton">
+            <summary>
+            Button with navigational features.
+            </summary>
+            <remarks>
+            <p class="body">The Web Navigation Bar is made up of a core
+            set of <b>NavButton</b> instances, plus any number of functional
+            extension button instances of <b>TBarButton</b>.  Developers can
+            flexibly customize the navigational behavior of buttons derived
+            from this class at design-time through their <see cref="P:Infragistics.WebUI.WebNavBar.NavButton.Step"/>
+            and <see cref="P:Infragistics.WebUI.WebNavBar.NavButton.StepUnit"/> properties.
+            </p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.NavButton.#ctor">
+            <summary>
+            Creates a new instance of a Navigation button.
+            </summary>
+            <remarks>
+            <p class="body">This constructor is made available for use by the ASP.NET Framework
+            only; and should not be called from application logic.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.NavButton.#ctor(System.String,System.Int32,Infragistics.WebUI.WebNavBar.ImageSettings)">
+            <summary>
+            Creates a new instance of a Navigation button with the specified parameters.
+            </summary>
+            <param name="buttonName">Name of the button, used as its Key.</param>
+            <param name="tabIndex">Ordinal tab stop sequence number of the button.</param>
+            <param name="imageUrls">A set of image URLs for various button states.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.NavButton.OnClick(Infragistics.WebUI.UltraWebToolbar.ButtonEvent)">
+            <summary>
+            Propagates the Click event to all subscribers.
+            </summary>
+            <param name="args">Button event arguments to pass to.</param>
+            <remarks>
+            <p class="body">This protected method is called by <see cref="M:Infragistics.WebUI.WebNavBar.NavButton.HandleToolbarClick(System.Object,Infragistics.WebUI.UltraWebToolbar.ButtonEvent)"/> (indirectly
+            from the contained UltraWebToolbar instance) when this <b>NavButton</b> has been
+            clicked upon, and that event posts back to the server.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.NavButton.ToString">
+            <summary>
+            Represents this NavButton instance in text format.
+            </summary>
+            <returns>
+            A string representation of the NavButton.
+            </returns>
+            <remarks>
+            <p class="body">This method provides the description appearing
+            in the <b>ToolbarItemEditor</b> form at design-time.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.NavButton.Step">
+            <summary>
+            Specifies the the stepping distance and direction in which this button navigates.
+            </summary>
+            <remarks>
+            <p class="body">This property in concert with <see cref="P:Infragistics.WebUI.WebNavBar.NavButton.StepUnit"/> determines the
+            stepping interval that the WebNavBar traverses by default with each click of this
+            NavButton.</p>
+            <p class="body">A positive value for this property implies that the direction of
+            navigation will be in the forward (top-down or left-to-right) direction.
+            Conversely, a negative value for this property implies that the direction of
+            navigation will be in the reverse (bottom-up or right-to-left) direction.</p>
+            <p class="body">Only whole integral steps are permitted to be made by the
+            <see cref="T:Infragistics.WebUI.WebNavBar.NavButton"/> type, fractional steps are not supported.</p>
+            <seealso cref="T:Infragistics.WebUI.WebNavBar.NavStep"/>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.NavButton.ToolTip">
+            <summary>
+            The text which should be displayed when this object is moused over.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.NavButton.StepUnit">
+            <summary>
+            Specifies the unit of measure for the stepping distance this button navigates.
+            </summary>
+            <remarks>
+            <p class="body">This property in concert with <see cref="P:Infragistics.WebUI.WebNavBar.NavButton.Step"/> determines the
+            stepping interval that the WebNavBar traverses by default with each click of this
+            NavButton.</p>
+            <seealso cref="T:Infragistics.WebUI.WebNavBar.NavUnit"/>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.NavButton.DepthFirst">
+            <summary>
+            Specifies that depth-first traversal and ascent should be attempted whenever possible.
+            </summary>
+            <remarks>
+            	<p class="body">Setting this property to True permits navigation up/down through hierarchical structures such as that in a hierarchical UltraWebGrid.  When not attached to an UltraWebGrid, the semantic effect of this property is implementation dependent but should represent the notion of ascending and descending movement.</p>
+            	<p class="body">By default, the <b>DepthFirst</b> indicator is False which means navigation will be constrained to the current band.</p>
+            	<p class="body">The value of this indicator presently determines whether a <see cref="T:Infragistics.WebUI.WebNavBar.RelativeStep"/> or <see cref="T:Infragistics.WebUI.WebNavBar.BandedRelativeStep"/> is passed to the event handler(s) subscribed to this button's corresponding affect on the
+            WebNavBar control.</p>
+            	<seealso cref="T:Infragistics.WebUI.WebNavBar.NavUnit"/>
+            </remarks>
+        </member>
+        <member name="E:Infragistics.WebUI.WebNavBar.NavButton.Click">
+            <summary>
+            An event fired when the Navigation Button has been clicked by the end user.
+            </summary>
+            <remarks>
+            <p class="body">The type of the event handler for this method is <b>UltraWebToolbar.ButtonClickedEventHandler</b>.
+            If developers subscribe their own event handlers to this event, then they should include a using or import of the
+            <b>Infragistics.WebUI.UltraWebToolbar</b> namespace in the appropriate source file.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.NavButton.Infragistics#WebUI#UltraWebToolbar#ITBarButton#Button">
+            <summary>
+            Gets the base button object reference.
+            </summary>
+            <value>An object reference to this button's base class.</value>
+            <remarks>
+            <p class="body">This property implements <b>ITBarButton</b>, which
+            provides a wrapper around any <b>TBarButton</b> subclass.  UltraWebToolbar
+            uses this property to access arbitrary subclasses, without having to know
+            the actual implementation's fully qualified type name.</p>
+            <p class="body">If your application provides its own <b>TBarButton</b> subclass
+            for UltraWebToolbar, it must implement this read-only property.</p>
+            </remarks>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.NavButtonCollection">
+            <summary>
+            Collection of core, named navigational buttons.
+            </summary>
+            <remarks>
+            <p class="body">Developers can customize the properties and events of these buttons.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.NavButtonCollection.#ctor">
+            <summary>
+            Creates a collection of the core navigational buttons.
+            </summary>
+            <remarks>
+            <seealso cref="T:Infragistics.WebUI.WebNavBar.NavButton"/>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.NavButtonCollection.#ctor(Infragistics.WebUI.WebNavBar.WebNavBar)">
+            <summary>
+            Creates a collection of the core navigational buttons with the given WebNavBar as its parent.
+            </summary>
+            <param name="parent">The WebNavBar control containing this button collection.</param>
+            <remarks>
+            	<seealso cref="T:Infragistics.WebUI.WebNavBar.NavButton"/>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.NavButtonCollection.ResetStart">
+            <summary>
+            Resets the <see cref="P:Infragistics.WebUI.WebNavBar.NavButtonCollection.Start"/> button to it's default settings.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.NavButtonCollection.ResetRewind">
+            <summary>
+            Resets the <see cref="P:Infragistics.WebUI.WebNavBar.NavButtonCollection.Rewind"/> button to it's default settings.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.NavButtonCollection.ResetPrev">
+            <summary>
+            Resets the <see cref="P:Infragistics.WebUI.WebNavBar.NavButtonCollection.Prev"/> button to it's default settings.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.NavButtonCollection.ResetNext">
+            <summary>
+            Resets the <see cref="P:Infragistics.WebUI.WebNavBar.NavButtonCollection.Next"/> button to it's default settings.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.NavButtonCollection.ResetFastForward">
+            <summary>
+            Resets the <see cref="P:Infragistics.WebUI.WebNavBar.NavButtonCollection.FastForward"/> button to it's default settings.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.NavButtonCollection.ResetEnd">
+            <summary>
+            Resets the <see cref="P:Infragistics.WebUI.WebNavBar.NavButtonCollection.End"/> button to it's default settings.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.NavButtonCollection.System#IDisposable#Dispose">
+            <summary>
+            Cleans up before destroying the NavButtonCollection.
+            </summary>
+            <remarks>
+            <p class="body">Disposes of any host references containing with this collection prior to
+            its disposal by the Common Language Runtime.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.NavButtonCollection.ToString">
+            <summary>
+            Returns a string representation of this collection.
+            </summary>
+            <returns>An empty string.</returns>
+            <remarks>
+            <p class="body">This method is only intended for use during design-time,
+            where its value populates the Properties Editor.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.NavButtonCollection.Start">
+            <summary>
+            Start button.
+            </summary>
+            <remarks>
+            <p class="body">This button customarily goes to the start of the data grid,
+            however developers may customize it to go the the first row of a page or
+            the first row of a set of child rows.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.NavButtonCollection.Rewind">
+            <summary>
+            Rewind button.
+            </summary>
+            <remarks>
+            <p class="body">This button customarily goes back to the previous page,
+            however developers may customize it to go back an incremental number of
+            pages.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.NavButtonCollection.Prev">
+            <summary>
+            Previous button.
+            </summary>
+            <remarks>
+            <p class="body">This button customarily goes back to the previous row,
+            or to the parent row if the active row is the first child row.  However,
+            developers may customize it to go back to the previous page.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.NavButtonCollection.Next">
+            <summary>
+            Next button.
+            </summary>
+            <remarks>
+            <p class="body">This button customarily goes back to the previous row,
+            or to the parent row if the active row is the first child row.  However,
+            developers may customize it to go back to the previous page.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.NavButtonCollection.FastForward">
+            <summary>
+            Fast Forward button.
+            </summary>
+            <remarks>
+            <p class="body">This button customarily goes to the following page,
+            but the developer can customize it to go forward by an interval of
+            pages.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.NavButtonCollection.End">
+            <summary>
+            End button.
+            </summary>
+            <remarks>
+            <p class="body">This button customarily goes to the end of the data grid,
+            however developers may customize it to go the the last row of a page or
+            the last row of a set of child rows.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.NavButtonCollection.Count">
+            <summary>
+            Number of buttons enlisted in this collection.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.NavButtonCollection.Visible">
+            <summary>
+            Visibility of the core navigation buttons.
+            </summary>
+            <value>An indication that core navigation button are displayed to the end user.</value>
+            <remarks>
+            <p class="body">Developers may turn the visibility of core navigation buttons (as a set) off
+            by setting this property to false.  Individual buttons within this set cannot be turned off.
+            </p>
+            </remarks>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.NavStep">
+            <summary>
+            NavStep is the base class of the class hierarchy describing possible
+            navigational movements.
+            </summary>
+            <remarks>
+            <p class="body">Instances of one of this class' many subclasses are
+            transported behind the surface of the Navigational event model.  These
+            reflect the fundamental changes of location that can be represented by
+            the WebNavBar control.</p>
+            <p class="body">In most cases where developers encounter <b>NavStep</b>
+            object references, the functionality of interest is handled by the
+            particular subclass.  Use the <b>System.Object</b> method, GetType()
+            to identify the specific properties of the <b>NavStep</b> instance.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.NavStep.#ctor">
+            <summary>
+            Creates an instance of the NavStep base class with default state.
+            </summary>
+            <remarks>
+            <p class="body">This default constructor is provided for the use of
+            container collections only; and serves little practical purpose.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.NavStep.FilterStep">
+            <summary>
+            Filters the step value in accordance with custom requirements of subclasses.
+            </summary>
+            <returns>The step value filtered based on the setting of <b>StepResolution</b>.</returns>
+            <remarks>
+            <p class="body">Inheritors can use this method to customize
+            the filtering of the step value to any tolerance required by their subclass.
+            In order to take advantage of the default filtering provided by <see cref="P:Infragistics.WebUI.WebNavBar.NavStep.StepResolution"/>,
+            however, the overriden implementation of this method must call its base class'
+            implementation.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.NavStep.Step">
+            <summary>
+            Number of steps taken.
+            </summary>
+            <remarks>
+            <p class="body">The actual distance navigated is determined by the number of
+            steps taken, and the unit size of each individual step defined by <see cref="P:Infragistics.WebUI.WebNavBar.NavStep.Unit"/>.</p>
+            <p class="body">While this property accepts fractional steps, some subclasses
+            may truncate or round fractional values when navigating.</p>
+            <seealso cref="P:Infragistics.WebUI.WebNavBar.NavStep.StepResolved"/>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.NavStep.StepResolved">
+            <summary>
+            Number of steps taken, subject to custom application-specific logic.
+            </summary>
+            <remarks>
+            <p class="body">While <see cref="P:Infragistics.WebUI.WebNavBar.NavStep.Step"/> represents fractional steps, some subclasses may only work with whole
+            steps, absolute positive steps, or steps within a certain range of values (no more and no less).  This property
+            should be used by subclasses when they are working with the <b>Step</b> value.  It subjects the
+            value assigned to <b>Step</b> by the developer to the custom whole number requirements specified
+            by the property, <see cref="P:Infragistics.WebUI.WebNavBar.NavStep.StepResolution"/>.  For further control over this value, inheritors can
+            override the virtual method, <see cref="M:Infragistics.WebUI.WebNavBar.NavStep.FilterStep"/>.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.NavStep.StepResolution">
+            <summary>
+            Specifies several common tolerances that are applied to the Step amount.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.NavStep.Unit">
+            <summary>
+            Size of each individual step.
+            </summary>
+            <remarks>
+            <p class="body">The actual distance navigated is determined by the size of each
+            individual step, and the number of steps taken defined by <see cref="P:Infragistics.WebUI.WebNavBar.NavStep.Step"/>.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.NavStep.Direction">
+            <summary>
+            Direction in which a movement of one or more steps occurs.
+            </summary>
+            <remarks>
+            <p class="body">Do not confuse <b>Direction</b> with the arithmetic sign of the
+            scalar value, <see cref="P:Infragistics.WebUI.WebNavBar.NavStep.Step"/>.  Developers should always set the appropriate
+            <b>Direction</b> for navigation, since this gives them greater flexibility than
+            the bidirectional nature of the number line.</p>
+            <seealso cref="T:Infragistics.WebUI.WebNavBar.NavDirection">Directional Navigation</seealso>
+            </remarks>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.NavStep.Resolution">
+            <summary>
+            Defines a number of common tolerances that are enforced upon the step distance.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavStep.Resolution.Default">
+            <summary>
+            No filtering by default; however subclasses may implement their own filtering
+            through an override of the <b>FilterStep</b> method.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavStep.Resolution.None">
+            <summary>
+            Absolutely no filtering of the step value is done.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavStep.Resolution.Floor">
+            <summary>
+            Removes any fractional piece of the step distance, rounding its value down to
+            the next lesser integer.  This is not the same as <b>Truncate</b> when the
+            value is negative.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavStep.Resolution.Ceiling">
+            <summary>
+            Removes any fractional piece of the step distance, rounding its value up to the
+            next greater integer.  This is not the same as <b>Truncate</b> when the value is
+            positive.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavStep.Resolution.Round">
+            <summary>
+            Rounds the step distance to the nearest whole integer.  Half steps are rounded
+            up.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.NavStep.Resolution.Truncate">
+            <summary>
+            Always chops off any fractional piece of the step distance, making it a whole
+            integer.  This differs from <b>Floor</b> and <b>Ceiling</b>.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.RelativeStep">
+            <summary>
+            Navigates a relative distance away from the current location in an UltraWebGrid.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.RelativeStep.#ctor(System.Int32,Infragistics.WebUI.WebNavBar.NavUnit)">
+            <summary>
+            Creates a new instance of a relative step object, describing how to navigate from a current position to a new position in UltraWebGrid.
+            </summary>
+            <param name="stepSize">The number of the steps as a whole number (negative
+            numbers imply navigating backward).</param>
+            <param name="stepUnit">The unit in which steps are measured.</param>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.BandedRelativeStep">
+            <summary>
+            Navigates a relative distance away from the current location in an UltraWebGrid,
+            respecting the current band or alternately traversing depth-first.
+            </summary>
+            <remarks>
+            <p class="body">This class must be used to properly represent navigation through
+            hierarchical UltraWebGrids.  It supports this navigation through the addition of
+            a <see cref="P:Infragistics.WebUI.WebNavBar.BandedRelativeStep.DepthFirst"/> flag that enables child row expansion to occur in the
+            default navigation step processing.</p>
+            <p class="body">In most cases when traversing depth-first, developers should specify
+            single steps unless the web application has <i>a priori</i> knowledge of the location
+            it is navigating toward.</p>
+            <p class="body">When the application is traversing with respect for the current band,
+            and it is necessary to return to the first (or last) rows within the band, it's
+            advisable to set the <see cref="P:Infragistics.WebUI.WebNavBar.NavStep.Unit">Unit</see> to <b>First</b>
+            (or <b>Last</b>) and leave <b>DepthFirst</b> at False such that steps are not taken
+            that would ascend outside of the current band.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.BandedRelativeStep.#ctor(System.Int32,Infragistics.WebUI.WebNavBar.NavUnit,System.Boolean)">
+            <summary>
+            Creates a new instance of a banded relative step object, describing how to navigate from a current position to a new position in UltraWebGrid when respecting bands or traversing in a depth-first manner.
+            </summary>
+            <param name="stepSize">The number of the steps as a whole number (negative
+            numbers imply navigating backward).</param>
+            <param name="stepUnit">The unit in which steps are measured.</param>
+            <param name="depthFirst">Indicates whether depth-first traversal is to be
+            attemped at each step.</param>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.BandedRelativeStep.DepthFirst">
+            <summary>
+            Indicates that the navigation should be performed in a depth-first manner.
+            </summary>
+            <remarks>
+            <p class="body">Set this flag to False to navigate only within the same
+            <b>RowsCollection</b> without checking on each step whether an <b>UltraGridRow</b>
+            has child rows.  This is the default behavior, referred to as having respect for
+            the current band, is the same behavior implied by <see cref="T:Infragistics.WebUI.WebNavBar.RelativeStep"/>.</p>
+            <p class="body">Developers may set this flag to True when they want navigation
+            to proceed down into a hierarchical UltraWebGrid, or up into higher bands from
+            a child band.</p>
+            <p class="body">There is no advantage in supplying a <see cref="T:Infragistics.WebUI.WebNavBar.BandedRelativeStep"/>
+            object if it is known that the UltraWebGrid is bound to flat data.  In that case, use
+            if the <b>RelativeStep</b> class is recommended.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.LocalizedCategoryAttribute.GetLocalizedString(System.String)">
+            <summary>
+            Returns the localized category name.
+            </summary>
+            <param name="value">Name of the category to retreive.</param>
+            <returns>The localized string value.</returns>
+        </member>
+        <member name="T:Infragistics.WebUI.WebNavBar.WebNavBar">
+            <summary>
+            Navigational element for UltraWebGrid supporting browsing by rows and pages.
+            </summary>
+            <remarks>
+            <p class="body">The WebNavBar element is a navigational device with a common VCR-style
+            metaphor the many end users find intuitive.  It supports strong integration with the
+            <b>UltraWebGrid</b> element in web applications, allowing it to support row-by-row or page-by-page
+            navigation, either constrained to the current band or up-and-down hierarchies (the <i>depth
+            first</i> mode of operation).  It can also appear on web forms in a standalone mode, like an
+            <b>UltraWebToolbar</b> specialized for use in navigational situations.</p>
+            <p class="body">Whether the WebNavBar is in standalone or bound to an <b>UltraWebGrid</b> is
+            determined by the <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.GridID"/> property.  By default when a WebNavBar is dropped on a
+            web form from the designer's toolbox, it assumes a standalone posture until a <b>GridID</b> is
+            set.  When bound, the WebNavBar can optionally dock itself within the associated <b>UltraWebGrid</b>
+            based on the setting of its <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.Position"/> property.</p>
+            <p class="body">In standalone mode, the WebNavBar offers behavior developers familiar with the
+            <b>UltraWebToolbar</b> are already familiar with, such as the ability to float and drag across
+            a page (see the <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.Movable"/> property).  Individual buttons on the WebNavBar can have
+            their <b>TargetFrame</b> and <b>TargetURL</b> properties set to support web site navigation
+            between pages or frames.</p>
+            <p class="body">Both modes of operation of the WebNavBar (standalone and bound) provide developers
+            with exceptional customizational capabilities related to how the WebNavBar appears.  Several
+            pre-defined looks can be established with one setting through the <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.Theme"/> property.
+            Aside from the appearance, developers can tailor the dynamic response of the WebNavBar through
+            handling its <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.ClientSideEvents"/> and subscribing to a sophisticated server-side event
+            model.</p> 
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.#ctor">
+            <summary>
+            Creates an instance of the Web Navigation Bar control.
+            </summary>
+            <remarks>
+            <p class="body">Developers that create instances of the Web Navigation Bar
+            dynamically should use the constructor that accepts an <i>ID</i> parameter.
+            </p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.#ctor(System.String)">
+            <summary>
+            Creates an instance of the Web Navigation Bar control with the specified ID.
+            </summary>
+            <param name="id">The ID that uniquely identifies this control on the Page.</param>
+            <remarks>
+            <p class="body">Developers should use this constructor when dynamically creating
+            instances of the Web Navigation Bar control.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.ResetExtension">
+            <summary>
+            Resets the <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.Extension"/> buttons collection to their default settings.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.ResetNavigation">
+            <summary>
+            Resets the <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.Navigation"/> buttons collection to their default settings.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.OnInit(System.EventArgs)">
+            <summary>
+            Receives notification from the ASP.NET framework that this control and its children have been instantiated from parsing of the Page.
+            </summary>
+            <param name="args">Not used.</param>
+            <remarks><p class="body">The initialization event is handled by constructing button set properties with default values if they have not already been constructed by ASP.NET.  Inheritors may add additional functionality occuring on initialization to this method, but must ensure the base class' OnInit method is called.</p></remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.OnLoad(System.EventArgs)">
+            <summary>
+            Receives notification from the ASP.NET framework that all controls have been loaded onto the Page.
+            </summary>
+            <param name="args">Not used.</param>
+            <remarks><p class="body">This method ensures that the UltraWebGrid control that this navigation bar is attached to (via the <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.GridID"/> property) has been initialized and populated with data.</p></remarks>
+        </member>
+        <member name="F:Infragistics.WebUI.WebNavBar.WebNavBar.filterDoc">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.SavePreset(System.String,System.String,System.String,Infragistics.WebUI.PresetType)">
+            <summary>
+            Saves the properties of a control to a file, so that they can be used by another control via the LoadPreset method. 
+            </summary>
+            <param name="filePath">The absolute path in which to save the Preset File.</param>
+            <param name="name">The name the preset will have.</param>
+            <param name="desc">A description of the preset.</param>
+            <param name="presetType">The type of properties (Appearance, Behavior, or Both) which should be saved in this preset.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.SavePreset(System.IO.TextWriter,System.String,System.String,Infragistics.WebUI.PresetType)">
+            <summary>
+            Saves the properties of a control to a file, so that they can be used by another control via the LoadPreset method. 
+            </summary>
+            <param name="textWriter">The Text writer in which to write the Preset File. The writer will not be closed at the end of the call, and should be closed afterwards.</param>
+            <param name="name">The name the preset will have.</param>
+            <param name="desc">A description of the preset.</param>
+            <param name="presetType">The type of properties (Appearance, Behavior, or Both) which should be saved in this preset.</param>
+            <remarks>
+            <p class="body">This can be used to save a preset to a .NET string by passing a <strong>StringWriter</strong> as <em>textWriter</em>.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.SavePreset(System.IO.Stream,System.String,System.String,Infragistics.WebUI.PresetType)">
+            <summary>
+            Saves the properties of a control to a file, so that they can be used by another control via the LoadPreset method. 
+            </summary>
+            <param name="stream">The stream in which to write Preset File. The stream will not be closed at the end of the call, and should be closed afterwards.</param>
+            <param name="name">The name the preset will have.</param>
+            <param name="desc">A description of the preset.</param>
+            <param name="presetType">The type of properties (Appearance, Behavior, or Both) which should be saved in this preset.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.LoadPreset(System.String,System.Boolean)">
+            <summary>
+            Sets properties on the control that effect Appearance, Behavior, or Both, based on the information in the predefined Preset File. 
+            </summary>
+            <param name="filePath">The absolute path of the Preset File.</param>
+            <param name="reset">Whether to reset all properties on this control to their
+            default values before applying the preset.</param>
+            <remarks>
+            <p class="body">If you experience seemingly arbitrary properties "bleeding"
+            through based on the order in which you apply more than one preset, then
+            you should consider specifying the <em>reset</em> option to clear properties
+            (where possible) before applying subsequent presets.</p>
+            <p class="body">The <em>reset</em> mechanism depends on control properties
+            having a corresponding <b>Reset</b> method implemented for themselves. It
+            cannot reset properties that do not have a <b>Reset</b> method defined.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.LoadPreset(System.IO.Stream,System.Boolean)">
+            <summary>
+            Sets properties on the control that effect Appearance, Behavior, or Both, based on the information in the predefined Preset File. 
+            </summary>
+            <param name="stream">A Stream that references a Preset File. The stream will not be closed at the end of the call, and should be closed afterwards.</param>
+            <param name="reset">Whether to reset all properties on this control to their
+            default values before applying the preset.</param>
+            <remarks>
+            <p class="body">If you experience seemingly arbitrary properties "bleeding"
+            through based on the order in which you apply more than one preset, then
+            you should consider specifying the <em>reset</em> option to clear properties
+            (where possible) before applying subsequent presets.</p>
+            <p class="body">The <em>reset</em> mechanism depends on control properties
+            having a corresponding <b>Reset</b> method implemented for themselves. It
+            cannot reset properties that do not have a <b>Reset</b> method defined.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.LoadPreset(System.IO.TextReader,System.Boolean)">
+            <summary>
+            Sets properties on the control that effect Appearance, Behavior, or Both, based on the information in the predefined Preset File. 
+            </summary>
+            <param name="reader">A Text Reader that references a Preset File. The reader will not be closed at the end of the call, and should be closed afterwards.</param>
+            <param name="reset">Whether to reset all properties on this control to their
+            default values before applying the preset.</param>
+            <remarks>
+            <p class="body">If you experience seemingly arbitrary properties "bleeding"
+            through based on the order in which you apply more than one preset, then
+            you should consider specifying the <em>reset</em> option to clear properties
+            (where possible) before applying subsequent presets.</p>
+            <p class="body">The <em>reset</em> mechanism depends on control properties
+            having a corresponding <b>Reset</b> method implemented for themselves. It
+            cannot reset properties that do not have a <b>Reset</b> method defined.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.OnNext(Infragistics.WebUI.UltraWebToolbar.ButtonEvent)">
+            <summary>
+            Fires events related to the user clicking the NavButton customarily associated with moving to the Next item.
+            </summary>
+            <param name="bea">Button event arguments, where the <b>Data</b> property contains
+            a <see cref="T:Infragistics.WebUI.WebNavBar.NavStep"/> describing what navigation should be performed.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.OnPrevious(Infragistics.WebUI.UltraWebToolbar.ButtonEvent)">
+            <summary>
+            Fires events related to the user clicking the NavButton customarily associated with moving to the Previous item.
+            </summary>
+            <param name="bea">Button event arguments, where the <b>Data</b> property contains
+            a <see cref="T:Infragistics.WebUI.WebNavBar.NavStep"/> describing what navigation should be performed.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.OnForward(Infragistics.WebUI.UltraWebToolbar.ButtonEvent)">
+            <summary>
+            Fires events related to the user clicking the NavButton customarily associated with jumping ahead to the subsequent group of items.
+            </summary>
+            <param name="bea">Button event arguments, where the <b>Data</b> property contains
+            a <see cref="T:Infragistics.WebUI.WebNavBar.NavStep"/> describing what navigation should be performed.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.OnReverse(Infragistics.WebUI.UltraWebToolbar.ButtonEvent)">
+            <summary>
+            Fires events related to the user clicking the NavButton customarily associated with jumping back to the prior group of items.
+            </summary>
+            <param name="bea">Button event arguments, where the <b>Data</b> property contains
+            a <see cref="T:Infragistics.WebUI.WebNavBar.NavStep"/> describing what navigation should be performed.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.OnStart(Infragistics.WebUI.UltraWebToolbar.ButtonEvent)">
+            <summary>
+            Fires events related to the user clicking the NavButton customarily associated with navigating to the beginning of all items.
+            </summary>
+            <param name="bea">Button event arguments, where the <b>Data</b> property contains
+            a <see cref="T:Infragistics.WebUI.WebNavBar.NavStep"/> describing what navigation should be performed.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.OnEnd(Infragistics.WebUI.UltraWebToolbar.ButtonEvent)">
+            <summary>
+            Fires events related to the user clicking the NavButton customarily associated with navigating to the end of all items.
+            </summary>
+            <param name="bea">Button event arguments, where the <b>Data</b> property contains
+            a <see cref="T:Infragistics.WebUI.WebNavBar.NavStep"/> describing what navigation should be performed.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.OnInsert(Infragistics.WebUI.UltraWebToolbar.ButtonEvent)">
+            <summary>
+            Fires events related to the user clicking the extension button customarily associated with inserting an item after the active row of an attached UltraWebGrid.
+            </summary>
+            <param name="bea">Button event arguments, where the properties contain information
+            describing the data manipulation that should be performed.</param>
+            <exception cref="T:System.InvalidOperationException">
+            	<p class="body">Thrown when the <b>ActiveRow</b> of the attached UltraWebGrid (or
+              the revised <see cref="P:Infragistics.WebUI.WebNavBar.BeforeInsertRowEventArgs.Current">Current</see> position)
+              is null (or Nothing in Visual Basic .NET) and the <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.InsertRowLocationDefault"/>
+              (or revised <see cref="P:Infragistics.WebUI.WebNavBar.BeforeInsertRowEventArgs.Location">Location</see> is set to
+              <b>Child</b>.</p>
+            	<p class="body">This operation is invalid because <b>Child</b> implies adding a
+              first child to the row specified by <b>Current</b>, but this is not possible when
+              that row does not exist.  Use <b>Before</b> or <b>After</b> instead, or specify
+              a row for <b>Current</b>.</p>
+            </exception>
+            <exception cref="T:System.Data.ReadOnlyException">
+            	<p class="body">Thrown when an insertion is attempted while either the current
+              <b>DisplayLayout</b> (by default) or <b>UltraGridBand</b> (for the band of the
+              active row) disallows the addition of new rows.</p>
+            	<p class="body">Change the <b>AllowAddNewDefault</b> property on the <b>DisplayLayout</b>
+              or the <b>AllowAdd</b> property on the current <b>UltraGridBand</b> to <b>Yes</b>.
+              This enables insert operations to be made to the UltraWebGrid.</p>
+            </exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.OnDelete(Infragistics.WebUI.UltraWebToolbar.ButtonEvent)">
+            <summary>
+            Fires events related to the user clicking the extension button customarily associated with deleting selected items in an attached UltraWebGrid.
+            </summary>
+            <param name="bea">Button event arguments, where the <b>Data</b> property contains
+            some information describing the data manipulation that should be performed.</param>
+            <exception cref="T:System.Data.ReadOnlyException">
+            	<p class="body">Thrown when a deletion is attempted while either the current
+              <b>DisplayLayout</b> (by default) or <b>UltraGridBand</b> (for the band of any
+              selected row) disallows the removal of rows.</p>
+            	<p class="body">Change the <b>AllowDeleteDefault</b> property on the <b>DisplayLayout</b>
+              or the <b>AllowDelete</b> property on the current <b>UltraGridBand</b> to <b>Yes</b>.
+              This enables delete operations to be made to the UltraWebGrid.</p>
+            </exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.Infragistics#WebUI#UltraWebToolbar#IButtonFactoryPlugIn#Create">
+            <summary>
+            Creates a general-purpose WebNavBar button with default properties.
+            </summary>
+            <returns>A default extension button.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.Infragistics#WebUI#UltraWebToolbar#IButtonFactoryPlugIn#Create(System.String)">
+            <summary>
+            Creates a general-purpose WebNavBar button with the specified Text property.
+            </summary>
+            <param name="text">Text to associate with the newly created button.</param>
+            <returns>A default extension button with <b>Text</b> set to <i>text</i>.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.Infragistics#WebUI#UltraWebToolbar#IButtonFactoryPlugIn#Create(System.String,System.Boolean)">
+            <summary>
+            Creates a general-purpose WebNavBar button with the specified Key property, or returns an instance of such a button if one already exists.
+            </summary>
+            <param name="key">The string that will be given to the Key property
+            of the ITBarButton-implementing object.</param>
+            <param name="useCache">Indicates whether a cache lookup should be performed.</param>
+            <returns>An object implementing ITBarButton, generally an instance of
+            <see cref="T:Infragistics.WebUI.UltraWebToolbar.TBarButton"/> or one of its subclasses.</returns>
+            <remarks>
+            	<p class="body">An <see cref="T:Infragistics.WebUI.UltraWebToolbar.ITBarButton"/> wrapper is created using this factory method if a button doesn't already exist in the cache (or <i>useCache</i>
+            was False).  If an appropriate button instance matching <b>Key</b> already exists, an object reference to that instance is returned.</p>
+            	<seealso cref="P:Infragistics.WebUI.UltraWebToolbar.IButtonFactoryPlugIn.HasCache"/>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">Thrown when <i>key</i> is null
+            (or Nothing in Visual Basic).</exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.Infragistics#WebUI#Design#IGetClientSideEvents#GetClientSideControlName">
+            <summary>
+            This method supports the Infragistics control infrastructure and is not intended to be called by applications.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.Infragistics#WebUI#Design#IGetClientSideEvents#GetClientSideEvents">
+            <summary>
+            This method supports the Infragistics control infrastructure and is not intended to be called by applications.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.System#IDisposable#Dispose">
+            <summary>
+            Disposes of resources consumed by this Control.
+            </summary>
+            <remarks>
+            <p class="body">This method implements the <b>IDisposable</b> interface of the .NET Framework.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.Infragistics#WebUI#UltraWebToolbar#IToolbarContainer#GetToolbar">
+            <summary>
+            This method supports the Infragistics control infrastructure and is not
+            intended to be called by applications.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.Infragistics#WebUI#UltraWebToolbar#IToolbarContainer#ViewStateLoaded">
+            <summary>Internal use only.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.Infragistics#WebUI#Design#IProvideDesignTimeHtml#GetDesignTimeHtml">
+            <summary>
+            Retrieves the design-time appearance of the WebNavBar.
+            </summary>
+            <returns>HTML markup, UTF-16 encoded.</returns>
+            <remarks>
+            <p class="body">This method must only be called at design-time,
+            it is intended for use by the design-time environment code only.
+            An exception is thrown when it is called at run-time.</p>
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">Thrown when an
+            attempt is made to retrieve design-time HTML when WebNavBar is not
+            in a designer environment (i.e., the method was called at run-time).
+            </exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.Initialize">
+            <summary>
+            Initializes the button collections on a dynamically-created instance of the <strong>WebNavBar</strong> element.
+            </summary>
+            <remarks>
+            	<p class="body">WebNavBar uses this call to fill it's button collections with standard navigation and extension buttons.  During the routine life cycle of a WebNavBar created at design-time on the Page, it is not necessary for your application to call this method.  However the WebNavBar contains a precaution that prevents repeatedly adding duplicate buttons to itself, leading the WebNavBar to ordinarily bypass this initialization step when it sees the current HTTP request was a postback or the buttons can be
+            expected to be reloaded through viewstate (viewstate is enabled). When you create a WebNavBar dynamically as the result of a postback you must tell the WebNavBar to initialize these buttons by calling this method, otherwise the buttons will fail to appear.</p>
+            	<p class="body">Applications must only call this method when they are dynamically creating a WebNavBar element to add to their Page at run-time.
+            The proper time to call this method is as soon as possible after calling the WebNavBar's constructor, but before setting any properties on it's button collections or adding it to a container (such as the Page Controls collection.)</p>
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">
+            	<p class="body">Thrown when the <strong>Initialize</strong> method is
+            called after the control has passed through it's loaded state.  The most
+            likely causes are that the Web application does not need to call this
+            method because the WebNavBar control should have already initialized
+            itself successfully, or the call to Initialize was made to the WebNavBar
+            control too late (for example, after it had already been added to a
+            container like the Page Controls collection.)</p>
+            	<p class="body">When any child control, like the WebNavBar control, is
+            added to a container attached to the Page it begins to "catch up" to the
+            current stage of Page processing. In many dynamic creation scenarios,
+            such as creating and adding a dynamic WebNavBar in a button click event
+            handler, this means the WebNavBar processes through it's load event at
+            the time your application called the <strong>Add</strong> method to place
+            it into it's container.  Applications must call Initialize before calling
+            Add to avoid this exception.</p>
+            </exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.IsDocked">
+            <summary>
+            Gets the current docking state of the WebNavBar with any attached UltraWebGrid.
+            </summary>
+            <returns>
+            True if the WebNavBar is docked inside of an UltraWebGrid, False otherwise.
+            </returns>
+            <remarks>
+            <p class="body">A WebNavBar is docked when both of the following conditions are true:</p>
+            <list>
+            <item>The WebNavBar has a <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.Position"/> of floating.</item>
+            <item>The WebNavBar is bound to an UltraWebGrid via its <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.GridID"/> property.</item>
+            </list>
+            <p class="body">Unless both conditions are met, the WebNavBar is still considered to be
+            freestanding, irregardless of what the <b>Position</b> property indicates.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.CreateChildControls">
+            <summary>
+            Not to use.  Overridden by the WebNavBar control to create the child control structure.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.PreRenderNavBar(System.Object,System.EventArgs)">
+            <summary>
+            Determines and initializes the proper client-side renderer according to the BrowserTarget property.
+            </summary>
+            <param name="sender">Not used.</param>
+            <param name="e">Not used.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the <b>WebNavBar</b> element.
+            </summary>
+            <remarks>
+            <p class="body">The ASP.NET Framework calls this method on all <i>visible</i>
+            child controls within the page's control hierarchy to render their HTML into
+            the page sent to the client's browser.  Developers should not invoke this
+            method directly.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.RenderGeneralJavaScript">
+            <summary>
+            Renders the <b>WebNavBar</b> general script.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebNavBar.WebNavBar.RenderStartupJavaScript">
+            <summary>
+            Renders the WebNavBar startup script.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.About">
+            <summary>
+            Displays the About box describing this Control.
+            </summary>
+            <remarks>
+            <p class="body">Developers can use this property to identify the
+            version number of the <b>WebNavBar</b> they are using, licensing
+            and Infragistics contact information.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.Infragistics#WebUI#Shared#IUltraLicensedComponent#License">
+            <summary>
+            Gets the license cached within this Control.
+            </summary>
+            <remarks>
+            <p class="body">This property isn't intended for developer use.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.System#ComponentModel#IComponent#Site">
+            <summary>
+            Gets or sets the <b>WebNavBar</b>'s site.
+            </summary>
+            <value>Any <b>ISite</b> implementation where the navigation bar is
+            situated, or null (Nothing in Visual Basic .NET) if there is no such
+            site.</value>
+            <remarks>
+            <p class="body">The <b>WebNavBar</b> overrides this property only at
+            design time to receive notifications when new components are added to
+            the WebForm. It checks newly added components to see if they match
+            the <b>UltraWebGrid</b> type. Those that do are accumulated into a
+            list to validate assignments to the <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.GridID"/> at design
+            time. These notifications (and the <b>GridID</b> assignment) may
+            take place <em>before</em> the <b>UltraWebGrid</b> is added to the
+            <b>Page</b>'s controls collection, which creates a situation in which
+            validation would not be possible without this supplemental list.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.GridID">
+            <summary>
+            WebNavBar attaches to the UltraWebGrid with this name on the current page, and provides navigation services for users of that grid.
+            </summary>
+            <remarks>
+            	<p class="body">Developers must set this property to a valid ID for an UltraWebGrid instance located on the current Page.  The WebNavBar may continue to exist either docked to the UltraWebGrid, or freestanding elsewhere on the Page.</p>
+            	<p class="body">The effects of attaching multiple WebNavBar controls to the same UltraWebgrid instance are undefined.</p>
+            	<seealso cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.Position">Positioning and Docking with WebNavBar</seealso>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.BackColor">
+            <summary>
+            Background color of the navigation bar.
+            </summary>
+            <remarks>
+            <p class="body">The <b>BackColor</b> property is superceded when <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.BackgroundImage"/> is also specified.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.BackgroundImage">
+            <summary>
+            Background image (or texture) of the navigation bar.
+            </summary>
+            <remarks>
+            <p class="body">Developers may apply a custom <b>BackgroundImage</b> with this property that
+            complements their <b>Theme</b> setting.  Realize that under most conditions, the WebNavBar's
+            button face images will consume most of the foreground, and any texture should match the
+            prevailing motif.  This behavior can be tempered by increasing the padding surrounding the
+            button faces or under certain <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.Align"/> settings such as <b>Center</b> or <b>Justify</b>.
+            </p>
+            <p class="body">Any background image or texture may obscure the setting of <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.BackColor"/>
+            and may make text labels hard to read depending on the image's contrast with the selection of 
+            the <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.ForeColor"/>.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.BorderColor">
+            <summary>
+            Outline color at the edges of the navigation bar.
+            </summary>
+            <remarks>
+            <p class="body">The border color setting is only visible provided the
+            <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.BorderStyle"/> and <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.BorderWidth"/> properties
+            have been set (or inherited).</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.BorderStyle">
+            <summary>
+            Outline drawing style around the navigation bar.
+            </summary>
+            <remarks>
+            <p class="body">The border style setting is only visible provided the
+            <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.BorderColor"/> and <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.BorderWidth"/> properties
+            have been set (or inherited).</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.BorderWidth">
+            <summary>
+            Outline thickness of the edges of the navigation bar.
+            </summary>
+            <remarks>
+            <p class="body">The default for WebNavBar is to display no border.
+            The thickness of the border must be increased before a border can
+            be displayed.</p>
+            <seealso cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.BorderStyle"/>
+            <seealso cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.BorderColor"/>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.ClientID">
+            <summary>
+            Retrieves the client-side identifier.
+            </summary>
+            <value>An identifier suitable for use in client-side scripting languages.</value>
+            <remarks>
+            <p class="body">The client-side ID replaces any and all '_' and ':' characters within this
+            Control's <b>UniqueID</b> with lowercase 'x' characters. This substitution is necessary to
+            allow correct client-side ID handling and postback parsing.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.ClientSideEvents">
+            <summary>
+            Container for client-side event handler names.
+            </summary>
+            <remarks>
+            <p class="body">Client-side events are events that occur in the end user's web browser, such as mouse-related events.  Because the events are local to the browser, they must be implemented in JavaScript. Client-side events do not require a new connection to the server or a refresh of the current page.</p>
+            <p class="body">The other type of events found in the WebNavBar are <i>server-side events.</i> These events require the browser to make a new connection with the server in response to some event that occurs at the control level on the server, such as the addition of a new row of data. Changes made in the client-side event handlers do not become persistent on the server until a new connection with the server synchronizes any modified client-side state with that maintained on the server.</p>
+            <p class="body">When developers implement client-side event handlers in their applications, their JavaScript event handler routines should use the names provided in the <b>ClientSideEvents</b> property.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.CssClass">
+            <summary>
+            Style class from a stylesheet to be applied to the navigation bar.
+            </summary>
+            <remarks>
+            <p class="body">A cascading style sheet (CSS) style class can be used by developers
+            to assign values to multiple properties (even some properties that may not be directly 
+            supported through declarative properties) governing the appearance of the WebNavBar at
+            once.  The class' style rules are defined by the developer in an CSS file that may be
+            linked from a location external to the application, or an inline &lt;STYLE&gt; block 
+            of HTML in the document header.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.Enabled">
+            <summary>
+            Indicates whether the navigation bar can interact with end users.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.Extension">
+            <summary>
+            Core collection of extension buttons that perform extended operations separate from navigation.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.Font">
+            <summary>
+            The recommended font for use when rendering navigation button labels.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.ForeColor">
+            <summary>
+            Foreground color of text labels associated with the buttons.
+            </summary>
+            <remarks>
+            <p class="body">For maximum accessibility and readability of labels, the <b>ForeColor</b>
+            should contrast with any selections of <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.BackColor"/> or <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.BackgroundImage"/>
+            made for the WebNavBar.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.Height">
+            <summary>
+            Recommended height of the navigation bar.
+            </summary>
+            <remarks>
+            <p class="body">For best results, a height equivalent to, or slightly greater than, the height of the button face images is recommended.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.InsertRowLocationDefault">
+            <summary>
+            Default placement where new UltraWebGrid rows should be inserted by the WebNavBar.
+            </summary>
+            <remarks>
+            	<p class="body">Developers can assign a value to this property to affect the default behavior of the <see cref="P:Infragistics.WebUI.WebNavBar.ExtensionButtonCollection.Insert">Insert</see> extension button when placing new rows relative to the currently <see cref="P:Infragistics.WebUI.UltraWebGrid.UltraGridLayout.ActiveRow">ActiveRow</see> through server-side processing.</p>
+            	<p class="body">Developers may also handle the <see cref="E:Infragistics.WebUI.WebNavBar.WebNavBar.BeforeInsertRow"/> event on WebNavBar to achieve greater precision control over the placement of additional
+            rows.</p>
+            	<p class="body">When setting a <b>Child</b> placement for new rows, a first child is customarily inserted. If the application requires the new row to appear elsewhere within the child row collection, it should first reposition the <b>ActiveRow</b> in
+            the child row collection and then use a placement of <b>Before</b> or <b>After</b>.
+            </p>
+            	<p class="body">The <b>InsertRowLocationDefault</b> property is not applicable when adding rows through client-side only processing. Its greater placement precision requires that the insertion be performed server-side. Client-side additions always
+            appear at the end of the grid (or current page of the grid), without regard to the setting of <b>InsertRowLocationDefault</b>.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.Navigation">
+            <summary>
+            Core collection of navigation buttons.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.TabIndex">
+            <summary>
+            An ordinal index at which the Tab key should set focus onto the control, starting with the leftmost button.
+            </summary>
+            <remarks>
+            	<p class="body">Setting the <b>TabIndex</b> on the control applies the same <b>TabIndex</b> to each button, so all buttons have a consistent left-to-right tab sequence in document order.</p>
+            	<p class="body">If an application instead wishes a custom tab sequence, for example right-to-left to accomodate the predominant culture into which the application is being deployed, then developers should leave the control's <b>TabIndex</b> un-set and set the <b>TabIndex</b>
+            of the buttons separately.</p>
+            	<p class="body">Developers have access to that property on individual <see cref="T:Infragistics.WebUI.WebNavBar.NavButton"/>s.
+            This permits custom tailoring of the sequence of focus transitions on a page, but potentially permits individual buttons to separately receive focus before one might expect. Caution must be exercised to ensure the tab indexes assigned to buttons do not collide with the tab indexes assigned to other controls on the web form.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.Align">
+            <summary>
+            Alignment of the navigation buttons when docked inside of UltraWebGrid.
+            </summary>
+            <remarks>
+            <p class="body">This property sets a horizontal alignment for the navigation
+            bar when it appears inside of an <b>UltraWebGrid</b> element, or standing
+            alone when its <b>Width</b> has been set wider than the sum of the widths
+            of its individual buttons.</p>
+            <p class="body">When individual buttons have no <b>Width</b> assigned to
+            them (their <b>Width</b> is said to be <b>Unit</b>.<b>Empty</b>) many
+            browsers render them as proportionately filling what space is available.
+            This creates a conundrum if individual buttons have been hidden, and the
+            <b>Align</b> settings of <i>Center</i> or <i>Justify</i> are applied.
+            These browsers may calculate these alignments by presenting any remaining
+            visible buttons with more spacing between them than intended.  In order
+            to avoid this behavior, Designers should assign an explicit <b>Width</b>
+            to all buttons when <i>Center</i> or <i>Justify</i> alignment is used
+            <u>and</u> the application expects to hide any buttons on the 
+            <b>WebNavBar</b> element.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.Theme">
+            <summary>
+            Theme selection of button images displayed by WebNavBar.
+            </summary>
+            <remarks>
+            	<p class="body">Setting the <b>Theme</b> property initializes the buttons of the navigation bar to use a specially-named folder found under <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.ImageDirectory"/> deployed on the application's web
+            server.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.JavaScriptFileName">
+            <summary>
+            Relative path to the JavaScript file for WebNavBar.
+            </summary>
+            <remarks>
+            	<p class="body">The default JavaScript file is <b>ig_webnavbar.js</b>.  By default, this file is installed in the virtual directory called 
+            /ig_common/WebNavBar<i>N</i>/ where <i>N</i> is the major version number of the WebNavBar control.</p>
+            	<p class="note">Note: The correct version of this JavaScript file is required for the WebNavBar to function properly at run-time.  Failure to set this property to the correct location of the JavaScript file can lead to JavaScript errors such as "Object undefined."  Identifying the wrong version of the JavaScript file can also lead to error messages such as "The object does not support the requested method."</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.JavaScriptFileNameBar">
+            <summary>
+            Relative path to the JavaScript file for UltraWebToolbar.
+            </summary>
+            <remarks>
+            	<p class="body">The default JavaScript file is <b>ig_webtoolbar.js</b>.  By default, this file is installed in the virtual directory called 
+            /ig_common/WebBars<i>N</i>/ where <i>N</i> is the major version number of the WebBars release.</p>
+            	<p class="note">Note: The correct version of this JavaScript file is required for the WebNavBar to function properly at run-time.  Failure to set this property to the correct location where the UltraWebToolbar JavaScript file can be found will lead to JavaScript errors such as "Object undefined."  Identifying the wrong version of the JavaScript file could lead to error messages such as "The object does not support the requested method."</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.JavaScriptFileNameCommon">
+            <summary>
+            Relative path to the Infragistics common object model JavaScript file.
+            </summary>
+            <remarks>
+            	<p class="body">The default common JavaScript file is <b>ig_csom.js</b> and will be installed by default into a virtual directory named /ig_common/scripts.</p>
+            	<p class="note">Note: The common JavaScript file is required for the WebNavBar to function properly at run-time.  Failure to set this property to the correct location where the CSOM JavaScript file can be found may lead to JavaScript errors such as "Object undefined."  Identifying the wrong version
+            of a JavaScript file can also lead to error messages such as "The object does not support the requested method."</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.ImageDirectory">
+            <summary>
+            A directory where images can be found.
+            </summary>
+            <remarks>
+            <p class="body">When this property is set, any image specified for an navigation button will be located by its well-known naming convention relative to this directory.</p>
+            <p class="body">To specify an image in the current web application's directory, use the relative ./ prefix for the image name as in: ./start_up.gif</p>
+            <p class="body">Image filenames for navigation and extension button images must follow a prescribed naming convention to be properly applied.  This naming convention consists of
+            two constituents joined by an underscore, and ending in an image file extension (.gif or .jpg) supported by your application's targeted browser(s).</p>
+            <list>
+            <item>The first part of the filename must always be one of the well-known button names: <b>start</b>, <b>rew</b>, <b>prev</b>, <b>next</b>, <b>ff</b>, <b>end</b>, <b>add</b>, or <b>del</b>.</item>
+            <item>The last part of the filename must always be one of the well-known button states: <b>up</b> (this is the default appearance), <b>hover</b>, <b>down</b> or <b>disabled</b>.</item>
+            </list>
+            <p class="body">Developers must always use forward slashes ('/') in the path specification of this property.  Use of the virgule ('\') in this property
+            may cause a broken image link when the end user interacts with the navigation buttons. </p>
+            <p class="body">Themed navigation bars operate off of the setting of <b>ImageDirectory</b> by looking in well-known subfolders.  If an application is redeployed,
+            but desires support for theming, it is the developers responsibility to see to it the button images of any themes required are copied to the appropriate subfolders
+            underneath the path specified for this property.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.Width">
+            <summary>
+            Recommended width of an undocked navigation bar.
+            </summary>
+            <remarks>
+            	<p class="body">When WebNavBar is docked inside of an UltraWebGrid, it expands to fill the length of a row.  It contracts to the <b>Width</b> recommended by this property, or its minimum width (whichever is greater), when it is in a floating (undocked) state.</p>
+            	<seealso cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.Position">Docking WebNavBar within an UltraWebGrid</seealso>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.Movable">
+            <summary>
+            Indicates whether an undocked navigation bar is draggable by end users on up-level browsers.
+            </summary>
+            <remarks>
+            <p class="body">WebNavBar controls with a <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.Position"/> other than <b>Floating</b>
+            (that is, they are docked) discount this property and are non-movable.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.Position">
+            <summary>
+            Posture of WebNavBar as either a freestanding or docked navigational device.
+            </summary>
+            <remarks>
+            <p class="body">This property controls whether the WebNavBar exists outside
+            of its attached UltraWebGrid, or docked within it.  If docked, the <see cref="T:Infragistics.WebUI.WebNavBar.NavBarPosition"/>
+            enumeration allows the developer to specify whether the navigation bar appears at the
+            top or bottom of the UltraWebGrid.  The navigation bar always appears outside of a
+            pager bar, if any is shown.</p>
+            <p class="body">The <b>Top</b> and <b>Bottom</b> settings of this property
+            have no effect in the WebNavBar is not already associated with an UltraWebGrid.</p>
+            <p class="body">The <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.Movable"/> property should be set to False
+            for this setting to dock a currently floating WebNavBar to the top or
+            bottom edges of its associated UltraWebGrid control (a docked navigation
+            bar is non-movable.)</p>
+            <p class="body">Developers may fine-tune the horizontal positioning of navigation
+            buttons within the WebNavBar when it is docked using the <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.Align"/>
+            property.</p>
+            <seealso cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.GridID">Setting GridID to associate an UltraWebGrid with WebNavBar.</seealso>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.BrowserTarget">
+            <summary>
+            Sophistication of the browser WebNavBar should target.
+            </summary>
+            <remarks>
+            <p class="body">When docked to an UltraWebGrid, the WebNavBar updates itself to use the
+            <b>BrowserTarget</b> of the attached grid.</p>
+            </remarks>
+        </member>
+        <member name="E:Infragistics.WebUI.WebNavBar.WebNavBar.BeforeMoveToStart">
+            <summary>
+            Event fired when the end user clicks a navigation button customarily used for moving to the start of data.
+            </summary>
+            <remarks>
+            	<p class="body">Developers can handle this event and cancel any action based on the logic and requirements of the application, before it occurs.</p>
+            	<p class="body">When the WebNavBar control is attached to a grid, through a valid Control ID of an UltraWebGrid on the same web form having been assigned to its <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.GridID"/> property, a default behavior associated with the event that can be overriden by the developer occurs.  If the WebNavBar control is unattached to a grid, the event fires but there is no default navigation behavior other than what the developer defines in their event handler.</p>
+            	<seealso cref="E:Infragistics.WebUI.WebNavBar.WebNavBar.AfterMoveToStart"/>
+            </remarks>
+        </member>
+        <member name="E:Infragistics.WebUI.WebNavBar.WebNavBar.AfterMoveToStart">
+            <summary>
+            Event fired after the end user has navigated following the click of a navigation button customarily used for moving to the start of data.
+            </summary>
+            <remarks>
+            	<p class="body">If the developer did not cancel this navigation, then the default behavior was to reposition the end user at the location in the UltraWebGrid described by the <see cref="P:Infragistics.WebUI.WebNavBar.NavButtonCollection.Start">Navigation.Start</see> property.</p>
+            	<p class="body">This event fires <i>after</i> the navigation has occured, and various properties of the UltraWebGrid such as <b>CurrentPageIndex</b> or <b>ActiveRow</b> will have changed to reflect this.</p>
+            	<seealso cref="E:Infragistics.WebUI.WebNavBar.WebNavBar.BeforeMoveToStart"/>
+            </remarks>
+        </member>
+        <member name="E:Infragistics.WebUI.WebNavBar.WebNavBar.BeforeMoveToEnd">
+            <summary>
+            Event fired when the end user clicks a navigation button customarily used for moving to the end of data.
+            </summary>
+            <remarks>
+            	<p class="body">Developers can handle this event and cancel any action based on the logic and requirements of the application, before it occurs.</p>
+            	<p class="body">When the WebNavBar control is attached to a grid, through a valid Control ID of an UltraWebGrid on the same web form having been assigned to its <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.GridID"/> property, a default behavior associated with the event that can be overriden by the developer occurs.  If the WebNavBar control is unattached to a grid, the event fires but there is no default navigation behavior other than what the developer defines in their event handler.</p>
+            	<seealso cref="E:Infragistics.WebUI.WebNavBar.WebNavBar.AfterMoveToEnd"/>
+            </remarks>
+        </member>
+        <member name="E:Infragistics.WebUI.WebNavBar.WebNavBar.AfterMoveToEnd">
+            <summary>
+            Event fired after the end user has navigated following the click of a navigation button customarily used for moving to the end of data.
+            </summary>
+            <remarks>
+            	<p class="body">If the developer did not cancel this navigation, then the default behavior was to reposition the end user at the location in the UltraWebGrid described by the <see cref="P:Infragistics.WebUI.WebNavBar.NavButtonCollection.End">Navigation.End</see> property.</p>
+            	<p class="body">This event fires <i>after</i> the navigation has occured, and various properties of the UltraWebGrid such as <b>CurrentPageIndex</b> or <b>ActiveRow</b> will have changed to reflect this.</p>
+            	<seealso cref="E:Infragistics.WebUI.WebNavBar.WebNavBar.BeforeMoveToEnd"/>
+            </remarks>
+        </member>
+        <member name="E:Infragistics.WebUI.WebNavBar.WebNavBar.BeforeMoveNext">
+            <summary>
+            Event fired when the end user clicks a navigation button customarily used for moving to the next item of data.
+            </summary>
+            <remarks>
+            	<p class="body">Developers can handle this event and cancel any action based on the logic and requirements of the application, before it occurs.</p>
+            	<p class="body">When the WebNavBar control is attached to a grid, through a valid Control ID of an UltraWebGrid on the same web form having been assigned to its <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.GridID"/> property, a default behavior associated with the event that can be overriden by the developer occurs.  If the WebNavBar control is unattached to a grid, the event fires but there is no default navigation behavior other
+            than what the developer defines in their event handler.</p>
+            	<seealso cref="E:Infragistics.WebUI.WebNavBar.WebNavBar.AfterMoveNext"/>
+            </remarks>
+        </member>
+        <member name="E:Infragistics.WebUI.WebNavBar.WebNavBar.AfterMoveNext">
+            <summary>
+            Event fired after the end user has navigated following the click of a navigation button customarily used for moving to the next item of data.
+            </summary>
+            <remarks>
+            	<p class="body">If the developer did not cancel this navigation, then the default behavior was to reposition the end user at the location in the UltraWebGrid described by the <see cref="P:Infragistics.WebUI.WebNavBar.NavButtonCollection.Next">Navigation.Next</see> property.</p>
+            	<p class="body">This event fires <i>after</i> the navigation has occured, and various properties of the UltraWebGrid such as the <b>ActiveRow</b> will have changed to reflect this.</p>
+            	<seealso cref="E:Infragistics.WebUI.WebNavBar.WebNavBar.BeforeMoveNext"/>
+            </remarks>
+        </member>
+        <member name="E:Infragistics.WebUI.WebNavBar.WebNavBar.BeforeMovePrev">
+            <summary>
+            Event fired when the end user clicks a navigation button customarily used for moving to the previous item of data.
+            </summary>
+            <remarks>
+            	<p class="body">Developers can handle this event and cancel any action based on the logic and requirements of the application, before it occurs.</p>
+            	<p class="body">When the WebNavBar control is attached to a grid, through a valid Control ID of an UltraWebGrid on the same web form having been assigned to its <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.GridID"/> property, a default behavior associated with the event that can be overriden by the developer occurs.  If the WebNavBar control is unattached to a grid, the event fires but there is no default navigation behavior other than what the developer defines in their event handler.</p>
+            	<seealso cref="E:Infragistics.WebUI.WebNavBar.WebNavBar.AfterMovePrev"/>
+            </remarks>
+        </member>
+        <member name="E:Infragistics.WebUI.WebNavBar.WebNavBar.AfterMovePrev">
+            <summary>
+            Event fired after the end user has navigated following the click of a navigation button customarily used for moving to the previous item of data.
+            </summary>
+            <remarks>
+            	<p class="body">If the developer did not cancel this navigation, then the default behavior was to reposition the end user at the location in the UltraWebGrid described by the <see cref="P:Infragistics.WebUI.WebNavBar.NavButtonCollection.Prev">Navigation.Prev</see> property.</p>
+            	<p class="body">This event fires <i>after</i> the navigation has occured, and various properties of the UltraWebGrid such as the <b>ActiveRow</b> will have changed to reflect this.</p>
+            	<seealso cref="E:Infragistics.WebUI.WebNavBar.WebNavBar.BeforeMovePrev"/>
+            </remarks>
+        </member>
+        <member name="E:Infragistics.WebUI.WebNavBar.WebNavBar.BeforeMoveForward">
+            <summary>
+            Event fired when the end user clicks a navigation button customarily used for moving to the next grouping of data.
+            </summary>
+            <remarks>
+            	<p class="body">Developers can handle this event and cancel any action based on the logic and requirements of the application, before it occurs.</p>
+            	<p class="body">When the WebNavBar control is attached to a grid, through a valid Control ID of an UltraWebGrid on the same web form having been assigned to its <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.GridID"/> property, a default behavior associated with the event that can be overriden by the developer occurs.  If the WebNavBar control is unattached to a grid, the event fires but there is no default navigation behavior other
+            than what the developer defines in their event handler.</p>
+            	<seealso cref="E:Infragistics.WebUI.WebNavBar.WebNavBar.AfterMoveForward"/>
+            </remarks>
+        </member>
+        <member name="E:Infragistics.WebUI.WebNavBar.WebNavBar.AfterMoveForward">
+            <summary>
+            Event fired after the end user has navigated following the click of a navigation button customarily used for moving to the next grouping of data.
+            </summary>
+            <remarks>
+            	<p class="body">If the developer did not cancel this navigation, then the default behavior was to reposition the end user at the location in the UltraWebGrid described by the <see cref="P:Infragistics.WebUI.WebNavBar.NavButtonCollection.FastForward">Navigation.FastForward</see> property.</p>
+            	<p class="body">This event fires <i>after</i> the navigation has occured, and various properties of the UltraWebGrid such as the <b>CurrentPageIndex</b> will have changed to reflect this.</p>
+            	<seealso cref="E:Infragistics.WebUI.WebNavBar.WebNavBar.BeforeMoveForward"/>
+            </remarks>
+        </member>
+        <member name="E:Infragistics.WebUI.WebNavBar.WebNavBar.BeforeMoveBackward">
+            <summary>
+            Event fired when the end user clicks a navigation button customarily used for moving to the prior grouping of data.
+            </summary>
+            <remarks>
+            	<p class="body">Developers can handle this event and cancel any action based on the logic and requirements of the application, before it occurs.</p>
+            	<p class="body">When the WebNavBar control is attached to a grid, through a valid Control ID of an UltraWebGrid on the same web form having been assigned to its <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.GridID"/> property, a default behavior associated with the event that can be overriden by the developer occurs.  If the WebNavBar control is unattached to a grid, the event fires but there is no default navigation behavior other than what the developer defines in their event handler.</p>
+            	<seealso cref="E:Infragistics.WebUI.WebNavBar.WebNavBar.AfterMoveBackward"/>
+            </remarks>
+        </member>
+        <member name="E:Infragistics.WebUI.WebNavBar.WebNavBar.AfterMoveBackward">
+            <summary>
+            Event fired after the end user has navigated following the click of a navigation button customarily used for moving to the prior grouping of data.
+            </summary>
+            <remarks>
+            	<p class="body">If the developer did not cancel this navigation, then the default behavior was to reposition the end user at the location in the UltraWebGrid described by the <see cref="P:Infragistics.WebUI.WebNavBar.NavButtonCollection.Rewind">Navigation.Rewind</see> property.</p>
+            	<p class="body">This event fires <i>after</i> the navigation has occured, and various properties of the UltraWebGrid such as the <b>CurrentPageIndex</b> will have changed to reflect this.</p>
+            	<seealso cref="E:Infragistics.WebUI.WebNavBar.WebNavBar.BeforeMoveBackward"/>
+            </remarks>
+        </member>
+        <member name="E:Infragistics.WebUI.WebNavBar.WebNavBar.BeforeInsertRow">
+            <summary>
+            Event fired when the end user clicks the extension button requesting insertion of a row into the attached UltraWebGrid.
+            </summary>
+            <remarks>
+            	<p class="body">Developers can handle this event and cancel an insertion based on the logic and requirements of their application, before it occurs. It only fires when an UltraWebGrid has been attached by the <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.GridID"/> property and an insertion is processed through the WebNavBar.</p>
+            	<p class="body">This event notification also affords developers with an opportunity to modify the placement where a newly added row will appear within the UltraWebGrid.</p>
+            	<p class="body">By default, the new row is inserted relative to the <b>ActiveRow</b> of the attached UltraWebGrid based on the <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.InsertRowLocationDefault"/> property.</p>
+            	<p class="body">There are certain exception conditions that may arise during event processing of insertions, please refer to <see cref="M:Infragistics.WebUI.WebNavBar.WebNavBar.OnInsert(Infragistics.WebUI.UltraWebToolbar.ButtonEvent)"/> for more information.</p>
+            	<seealso cref="E:Infragistics.WebUI.WebNavBar.WebNavBar.AfterInsertRow"/>
+            </remarks>
+        </member>
+        <member name="E:Infragistics.WebUI.WebNavBar.WebNavBar.AfterInsertRow">
+            <summary>
+            Event fired after a new row has been inserted at the specified location in the attached UltraWebGrid by the end user clicking the Insert extension button.
+            </summary>
+            <remarks>
+            	<p class="body">This event notification affords developers with an opportunity to perform follow-up processing following the insertion of a new row into the UltraWebGrid. It only fires if an UltraWebGrid has been attached by the <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.GridID"/> property and an insertion is processed through the WebNavBar.</p>
+            	<p class="body">There are certain exception conditions that may arise during event processing of insertions, please refer to <see cref="M:Infragistics.WebUI.WebNavBar.WebNavBar.OnInsert(Infragistics.WebUI.UltraWebToolbar.ButtonEvent)"/> for more information.</p>
+            	<seealso cref="E:Infragistics.WebUI.WebNavBar.WebNavBar.BeforeInsertRow"/>
+            </remarks>
+        </member>
+        <member name="E:Infragistics.WebUI.WebNavBar.WebNavBar.BeforeDeleteRow">
+            <summary>
+            Event fired when the end user clicks the extension button requesting deletion of the selected row(s) from an attached UltraWebGrid.
+            </summary>
+            <remarks>
+            	<p class="body">Developers can handle this event and cancel a deletion based on the logic and requirements of their application, before it occurs.  This event only fires when an UltraWebGrid is attached through the <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.GridID"/> property.</p>
+            	<p class="body">This event notification also affords developers with an opportunity to selectively filter out which selected rows should be deleted from within the UltraWebGrid.</p>
+            	<p class="body">By default, the set of rows deleted are all currently selected rows.</p>
+            	<p class="body">There are certain exception conditions that may arise during event processing of deletions, please refer to <see cref="M:Infragistics.WebUI.WebNavBar.WebNavBar.OnDelete(Infragistics.WebUI.UltraWebToolbar.ButtonEvent)"/> for more information.</p>
+            	<seealso cref="E:Infragistics.WebUI.WebNavBar.WebNavBar.AfterDeleteRow"/>
+            </remarks>
+        </member>
+        <member name="E:Infragistics.WebUI.WebNavBar.WebNavBar.AfterDeleteRow">
+            <summary>
+            Event fired after rows have been deleted from the attached UltraWebGrid by the end user clicking the Delete extension button.
+            </summary>
+            <remarks>
+            	<p class="body">This event notification affords developers with an opportunity to perform follow-up processing following the deletion of rows from the attached UltraWebGrid. It only fires if an UltraWebGrid has been attached by the <see cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.GridID"/> property and a deletion is processed through the WebNavBar.</p>
+            	<p class="body">There are certain exception conditions that may arise during event processing of deletions, please refer to <see cref="M:Infragistics.WebUI.WebNavBar.WebNavBar.OnDelete(Infragistics.WebUI.UltraWebToolbar.ButtonEvent)"/> for more information.</p>
+            	<seealso cref="E:Infragistics.WebUI.WebNavBar.WebNavBar.BeforeDeleteRow"/>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.Infragistics#WebUI#UltraWebToolbar#IButtonFactoryPlugIn#HasCache">
+            <summary>
+            Indicates whether the button factory supports caching of previously
+            manufactured button instances.
+            </summary>
+            <value>This property always returns True.</value>
+            <remarks>
+            <p class="body">Caching is supported to allow existing instances of
+            navigational buttons to be retrieved when rehydrating the viewstate
+            of the control.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.Infragistics#WebUI#UltraWebToolbar#IToolbarContainer#IsIconified">
+            <summary>
+            This property supports the Infragistics control infrastructure and is not
+            intended to be called by applications.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.Controls">
+            <summary>
+            Retrieves the collection of child controls belonging to this instance of the WebNavBar.
+            </summary>
+            <remarks>
+            <p class="body">This property is read-only.  It is not recommended that the child controls
+            of the Web Navigation Bar be manipulated through this collection, as it is intended for
+            access by the ASP.NET Framework only.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.Section508Compliant">
+            <summary>
+            Indicates whether additional markup shall be rendered for assistive technology that will make the WebNavBar element more accessible.
+            </summary>
+            <remarks><p class="body">This property will cause the <strong>AlternateText</strong> properties of button graphics to be rendered.</p></remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.Infragistics#WebUI#Shared#IProvideStyleSheet#ParsedStyles">
+            <summary>
+            Contains the <strong>ParsedStyleCollection</strong> consisting of CSS class definitions read from external sources.
+            </summary>
+            <value>The <strong>ParsedStyleCollection</strong> after external CSS class definitions have been parsed, or null (Nothing in Visual Basic .NET) if parsing hasn't been performed yet.</value>
+            <remarks>
+            	<p class="body"></p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.EnableAppStyling">
+            <summary>
+            Enables support on the WebNavBar control for the Application Styling Framework(tm).
+            </summary>
+            <value>
+            <em>True</em> indicates Application Styling is enabled, <em>False</em>
+            indicates Application Styling is disabled, and <em>NotSet</em> indicates
+            support for Application Styling should default to page- or application-level
+            settings.
+            </value>
+            <remarks>
+            <p class="body">Turn on support for Application Styling of this control
+            when using the Application Styling Framework(tm) (ASF) by setting the 
+            EnableAppStyling property to True.</p>
+            <p class="body">When EnableAppStyling has it's default value of NotSet,
+            this control will defer the determination of whether to use Application
+            Styling to settings you make at the page- or application-level.  Place
+            the <strong>WebPageStyler</strong> control on the same Web form as this control
+            to configure ASF support for all controls on that Page.  ASF support can
+            also be turned on application-wide with the <em>enableAppStyling</em>
+            attribute in your "web.config" file.</p>
+            <p class="body">Turn off support for the ASF in this control (even though
+            it may have been enabled at a higher level) by setting the EnableAppStyling
+            property to False.</p>
+            <p class="body">The default value for the <strong>EnableAppStyling</strong>
+            property is NotSet for backward compatibility.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.StyleSetName">
+            <summary>
+            Name of the Application Styling Framework(tm) style set defining the themed appearance for this control.
+            </summary>
+            <value>
+            	<p class="body">The name of the Application Styling Framework(tm) (ASF) style set which has been designed to give this control a consistent appearance with other controls in your application.</p>
+            	<p class="body">This property may return the empty string ("") to imply that the default style set (named "Default") should be used.</p>
+            </value>
+            <remarks>
+            	<p class="body">Web sites can configure a single, consistent, application-wide style set through the <em>styleSetName</em> attribute in their "web.config" file. Alternately, they can define the style set to apply Application Styling to all controls on a Page by placing a <strong>WebPageStyler</strong> control on that Page and setting it's StyleSetName property.</p>
+            	<p class="body">At the control level this property allows an
+            application developer to customize the style set applied to a
+            single instance of a control.</p>
+            	<p class="body">Normally, graphics designers will furnish you with a style set containing one or more style sheet files (one for each type of control) and image files. The name of the style set (with the exception of the "Default" style set) must appear in each Cascading Style Sheet (CSS) class name defined by this control's style sheet file.</p>
+            	<p class="body">The style set name appears within two places in your deployed Web site.  First, the style set name appears as the ending of folder names which contain that style set's associated CSS style sheets and images.  Second, the style set name appears within the CSS classes defined by those CSS style sheets.  For example, in the "Onyx" style set would appear CSS classes named according to the convention, "ignb_OnyxButton."</p>
+            	<p class="body">When setting the StyleSetName property to empty string, the "Default" style set will be applied by application styling, if enabled.</p>
+            </remarks>
+            <seealso cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.StyleSetPath"/>
+        </member>
+        <member name="P:Infragistics.WebUI.WebNavBar.WebNavBar.StyleSetPath">
+            <summary>
+            Path containing the Application Styling Framework(tm) style set files for this type of control.
+            </summary>
+            <remarks>
+            	<p class="body">Web sites can configure the directory path containing their style set files application-wide by using the <em>styleSetPath</em>
+            attribute of their "web.config" file. It is also possible to configure the style set path applicable to all controls on a Page that are subject to Application Styling by placing a <strong>WebPageStyler</strong> control on that Page and setting it's StyleSetPath property.</p>
+            	<p class="body">At the control level this property allows an
+            application developer to customize the location of the style set being applied to a single instance of a control.</p>
+            	<p class="note">Be aware that customizing the style set path at the control level will not allow you to copy a style set's files to this new location, changing a few style property values in them, and then use it successfully with separate instances of the control referencing the original style set of the same name. This is because there would be naming collisions in the Cascading Style Sheet (CSS) class names, which will produce an undefined appearance. You must ensure the CSS class names defined by style sheets in the new style set path are unique from those CSS class names being used by other style sheets that may continue to be referenced. The recommended guidance in this scenario is to create a new style set having a new style set name, that contains your modifications.</p>
+            </remarks>
+            <seealso cref="P:Infragistics.WebUI.WebNavBar.WebNavBar.StyleSetName"/>
+        </member>
+    </members>
+</doc>

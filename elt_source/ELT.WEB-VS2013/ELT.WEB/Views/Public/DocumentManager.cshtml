@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "DocumentManager";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+
+@model ELT.WEB.DataProvider.ELTFileSystemProvider
+
+@using(Html.BeginForm()) {
+    @Html.Partial("FileManager", Model)
+    <br />
+    <p class="Note">
+        <b>Allowed Extensions</b>: .jpg, .jpeg, .gif, .rtf, .txt, .avi, .png, .mp3, .xml, .doc, .pdf
+    </p>
+}
+<style type="text/css">
+    .dxh1 
+    {
+        width: 100%!important;
+    }
+</style>
+
+

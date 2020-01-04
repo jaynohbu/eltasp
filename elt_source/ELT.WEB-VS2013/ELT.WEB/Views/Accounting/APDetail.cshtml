@@ -1,0 +1,56 @@
+﻿@model ELT.WEB.Models.APDetailMasterModel
+@{
+    ViewBag.Title = "A/P Report";
+   
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+@using ELT.WEB.Models
+@using ELT.CDT
+@using ELT.WEB.Controllers
+
+
+<hgroup>
+    <h1 class="pageheader">@ViewBag.Title</h1>
+</hgroup>
+<script src="@Url.Content("~/Scripts/Common.js")" type="text/javascript"></script>
+@using (Html.BeginForm("APDetail", "Accounting", FormMethod.Post, new { Operation = "APDetail" }))
+{
+
+    <table>
+        <tr>
+            <td></td>
+            <td colspan="2" style="text-align:right">
+                @foreach (string typeName in GridViewExportHelper.ExportTypes.Keys)
+                {
+                    <input type="submit" name="@typeName" value="@GridViewExportHelper.ExportTypes[typeName].Title" />
+                    <text>&nbsp;</text>
+                    //http://localhost/Report/AirExport
+                }
+
+                <input type="button" name="ReSelect" value="Go Back to Search" onclick="RedirectParentTo('@Url.Content("~/Accounting/APDetail/parm=apdet")')" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:left">
+                <br />
+                Period: @Model.PeriodBegin ~ @Model.PeriodEnd
+                <br />
+               
+                @if (Model.CompanyName != "")
+                {
+                    <Text>@Model.CompanyName </Text>
+                }
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                @Html.Partial("_APDetail/_APDetailMaster", Model)
+            </td>
+        </tr>
+        <tr><td></td><td></td><td></td></tr>
+    </table>
+      
+    
+}

@@ -1,0 +1,191 @@
+﻿#report_ae_form 
+{
+    border: 1px solid #000000;
+    width: 100%;
+    background-color: #EEEEEE;
+}
+    #report_ae_form table
+    {
+        border: 1px solid #000000;
+        margin: 16px auto;
+        width: 50%;
+        font-family: verdana;
+        font-size: 9px;
+        background-color: #fff;
+    }
+        .report-form td,
+        .report-form th
+        {
+            font-family: verdana;
+            font-size: 9px;
+            font-weight: bold;
+            line-height: 20px;
+            padding: 0 6px;
+            text-align: left;
+        }
+        .report-form th
+        {
+            background-color: #EEE;
+   
+        }
+        .report-form th.main-header
+        {
+            background-color: #F0F0DC;
+   
+        }
+        .report-form td select
+        {
+            font-family: verdana;
+            font-size: 10px;
+            height: 18px;
+            line-height: 10px;
+            margin: 4px 30px 4px 0;
+            padding: 0;
+        }
+        .report-form td input
+        {
+            font-family: verdana;
+            font-size: 10px;
+            height: 16px;
+            line-height: 10px;
+            padding:0;
+            margin: 4px 30px 4px 0;
+        }
+            .report-form input[type=radio]
+            {
+                position: absolute;
+                margin:0;
+            }
+           .report-form label {  
+
+                margin-right: 15px;
+                margin-left: 17px;
+                position: relative;
+                font-weight:normal;
+            } 
+
+        .report-form td.divider
+        {
+            height:4px;
+            background-color:#939259;
+        }
+        .report-form td input.btn-go
+        {
+             background:url('../../../images/button_go.gif') no-repeat;
+             width:31px;
+             height:18px;
+             border:none;
+             cursor:pointer;
+        }
+        
+
+#report_ae_grid 
+{
+    border: 1px solid #000000;
+    width: 100%;
+    background-color: #EEEEEE;
+}
+
+    #report_ae_grid table
+    {
+
+        font-family: verdana;
+        font-size: 9px;
+        background-color: #fff;
+    }
+        #report_ae_grid #grid_DXHeadersRow0,
+        #report_ae_grid  #grid_DXHeadersRow0 td
+        {
+            background-color: #EEE;
+            padding : 0 4px;
+        }
+        
+
+        
+        #report_ae_grid.report-grid .dxgvHeader td
+        {
+            text-align: center;
+        background-color: #EEE;
+        }
+        #report_ae_grid.report-grid  .dxgvDataRow td.dxgv
+        {
+            font-weight: normal;
+            line-height: 12px;
+            padding: 2px 4px;
+        }
+        #report_ae_grid.report-grid  .dxgvDataRow td.dxgv a.dxeHyperlink
+        {
+            font-family: verdana;
+                font-size: 9px;
+                color: blue;
+        }
+#report_ae_grid.report-grid .dxgvDataRow td.numeric 
+{ text-align:right;}
+#report_ae_grid.report-grid  td.numeric
+{ text-align:right;}
+        .report-grid td,
+        .report-grid th
+        {
+            font-family: verdana;
+            font-size: 9px;
+            font-weight: bold;
+            line-height: 20px;
+            padding: 0;
+            text-align: left;
+            border:none;
+        }
+        .report-grid th
+        {
+            background-color: #EEE;
+   
+        }
+        .report-grid th.main-header
+        {
+            background-color: #F0F0DC;
+   
+        }
+        .report-grid td select
+        {
+            font-family: verdana;
+            font-size: 10px;
+            height: 18px;
+            line-height: 10px;
+            margin: 4px 30px 4px 0;
+            padding: 0;
+        }
+        .report-grid td input
+        {
+            font-family: verdana;
+            font-size: 10px;
+            height: 16px;
+            line-height: 10px;
+            padding:0;
+            margin: 4px 30px 4px 0;
+        }
+            .report-grid input[type=radio]
+            {
+                position: absolute;
+                margin:0;
+            }
+           .report-form label {  
+
+                margin-right: 15px;
+                margin-left: 17px;
+                position: relative;
+                font-weight:normal;
+            } 
+
+        .report-grid td.divider
+        {
+            height:4px;
+            background-color:#939259;
+        }
+        .report-grid td input.btn-go
+        {
+             background:url('../../../images/button_go.gif') no-repeat;
+             width:31px;
+             height:18px;
+             border:none;
+             cursor:pointer;
+        }
+       

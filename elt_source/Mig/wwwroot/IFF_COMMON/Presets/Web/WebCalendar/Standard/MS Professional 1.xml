@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="MS Professional 1 " PresetDescription="Infragistics MS Professional Look" PresetType="Appearance" />-->
+<igsch:WebCalendar>
+  <Layout ShowYearDropDown="False" NextPrevFormat="FullMonth" ShowMonthDropDown="False" ShowFooter="False">
+    <SelectedDayStyle ForeColor="White" BackColor="#333399" />
+    <OtherMonthDayStyle ForeColor="#999999" />
+    <NextPrevStyle Font-Size="8pt" Font-Bold="True" ForeColor="#333333" />
+    <CalendarStyle BorderWidth="1px" Font-Size="9pt" Font-Names="Verdana" BorderColor="White" BorderStyle="Solid" ForeColor="Black" BackColor="White" />
+    <TodayDayStyle BackColor="#CCCCCC" />
+    <DayHeaderStyle Font-Size="8pt" Font-Bold="True">
+      <BorderDetails ColorTop="Black" WidthTop="4px" StyleTop="Solid" />
+    </DayHeaderStyle>
+    <TitleStyle Height="25px" Font-Size="12pt" Font-Bold="True" ForeColor="#333399" BackColor="White" />
+  </Layout>
+</igsch:WebCalendar>

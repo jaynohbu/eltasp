@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Office 2003 Explorer Bar (Blue)" PresetDescription="Infragistics Office 2003 Explorer Bar (Blue) Preset.  Sets both Look and Behavior properties." PresetType="All" />-->
+<iglbar:UltraWebListbar BarWidth="100%" BorderStyle="None" MergeStyles="True" ItemIconStyle="SmallWithInsetText" ViewType="ExplorerBar" GroupSpacing="15px" BorderWidth="4px">
+  <DefaultGroupStyle Cursor="Default" BackColor="WhiteSmoke" />
+  <DefaultItemStyle Cursor="Default" Font-Size="8pt" Font-Names="Verdana">
+    <Margin Left="1px" />
+  </DefaultItemStyle>
+  <DefaultItemHoverStyle ForeColor="Blue" />
+  <DefaultGroupHeaderAppearance>
+    <CollapsedAppearance ExpansionIndicatorImage="downarrows_white.gif">
+      <Style />
+    </CollapsedAppearance>
+    <HoverAppearance>
+      <Style BackgroundImage="roundedorangeExplorer.gif" />
+    </HoverAppearance>
+    <ExpandedAppearance ExpansionIndicatorImage="uparrows_white.gif">
+      <Style Width="100%" Cursor="Default" Height="23px" Font-Size="10pt" Font-Names="Verdana" BackgroundImage="roundedblueExplorer.gif">
+        <Padding Left="3px" />
+      </Style>
+    </ExpandedAppearance>
+  </DefaultGroupHeaderAppearance>
+  <DefaultItemSelectedStyle Cursor="Default" BorderWidth="1px" BorderStyle="Inset" />
+</iglbar:UltraWebListbar>

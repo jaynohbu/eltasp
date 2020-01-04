@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<!--========================================================================-->
+<!--=====	    				이력서            엘리먼트 집합 정의         		  =====-->
+<!--========================================================================-->
+<!ELEMENT 학력및경력 (#PCDATA | br)*>
+<!ELEMENT br (#PCDATA)>
+<!ELEMENT 공사명 (#PCDATA)>
+<!ELEMENT 공사번호 (#PCDATA)>
+<!ELEMENT 문서제목 (#PCDATA)>
+<!ELEMENT 성명 (#PCDATA)>
+<!ELEMENT 이력서 (문서제목, 공사번호, 공사명, 성명, 직위, 주소, 주민번호, 자격, 학력및경력)>
+<!ELEMENT 자격 (#PCDATA)>
+<!ELEMENT 주민번호 (#PCDATA)>
+<!ELEMENT 주소 (#PCDATA)>
+<!ELEMENT 직위 (#PCDATA)>

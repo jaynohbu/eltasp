@@ -1,0 +1,136 @@
+﻿@{
+    ViewBag.Title = "PrintCheck";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+    }
+
+    <div id="confirmbox" style="display:none">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="bodycopy">
+            <tr>
+                <td class="formbody" align="right">&nbsp;</td>
+                <td class="formbody"><strong>Did your checks print OK ? </strong></td>
+            </tr>
+            <tr height="10px">
+                <td width="17%" class="formbody">&nbsp;</td>
+                <td width="83%" class="formbody"><div align="left"></div></td>
+            </tr>
+            <tr>
+                <td class="formbody"></td>
+                <td class="formbody">				  </td>
+            </tr>
+            <tr>
+                <td align="center">&nbsp;</td>
+                <td height="22" align="left">
+                    <input name="rb1" type="radio" id="rb1" checked="checked">
+                    Yes, checks <strong><span id="sStart"></span></strong> through <strong><span id="sEnd"></span></strong> printed correctly.
+                </td>
+            </tr>
+            <tr>
+                <td align="left">&nbsp;</td>
+                <td height="22" align="left">
+                    <input name="rb1" type="radio" id="rb2">
+                    No, some checks did not print correctly. First incorrectly printed check :
+                    <select name="lstCheckNo" size="1" class="smallselect" id="lstCheckNo" style="WIDTH: 100px" >
+                       
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="left">&nbsp;</td>
+                <td height="22" align="left">
+                    <input name="rb1" type="radio" id="rb3">
+                    I didn't print any checks.
+                </td>
+            </tr>
+
+            <tr>
+                <td align="left">&nbsp;</td>
+                <td height="14" align="left">&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="left">&nbsp;</td>
+                <td height="22" align="left"><strong>Don't forget to sign your checks! </strong></td>
+            </tr>
+        </table>
+        <div align="center">
+            <input name="OK" type="button" id="OK" value="OK" onclick="OkClick()" style="width:70px">
+        </div>
+    </div>
+    <script type="text/javascript">
+       
+
+        function OkClick() {
+
+            document.getElementById("ContentFrame").contentWindow.DoNext($("#lstCheckNo").val());
+            $("#ModalPlaceHolder").remove();
+            $("#ModalPlaceHolder").dialog('close');
+        }
+
+        function CancelClick() {
+            $("#ModalPlaceHolder").remove();
+            $("#ModalPlaceHolder").dialog('close');
+        }
+    </script>
+
+
+
+<iframe id ="ContentFrame" scrolling="no"   frameborder="0" width="100%" onload="autoResize('ContentFrame');" src="@Url.Content("~/ASP/acct_tasks/print_chk.asp" + ViewBag.Params)"></iframe>
+<script>
+    function ShowInModalBox(url, start, end) {
+
+        $("#ModalPlaceHolder").remove();
+        var content = "<div id='ModalPlaceHolder'></div>";
+        $('body').append(content);
+        $("#ModalPlaceHolder").append($("<iframe frameborder='0' id='modalframe'   scrolling='no' style='width:800px;height:800px;' />").attr("src", url)).dialog(
+
+        {
+            autoOpen: true,
+            modal: true,
+            resizable: "auto",
+            width: "auto",
+            height: "auto",
+            minHeight: "auto",
+            close: function () {
+                ShowConfirmDialog(start, end );
+            }
+           
+        }
+        );
+    }
+    function ShowConfirmDialog(start, end) {
+        $("#sStart").html(start);
+        $("#sEnd").html(end);
+        $('#lstCheckNo').html("");
+        $('#lstCheckNo')
+         .append($("<option></option>")
+         .attr("value", 0)
+         .text("Select One"));
+        for (i = start; i <= end; i++) {
+            $('#lstCheckNo')
+         .append($("<option></option>")
+         .attr("value", i)
+         .text(i));
+        }
+
+        $("#ModalPlaceHolder").remove();
+        var content = "<div id='ModalPlaceHolder'></div>";
+        $('body').append(content);
+        $("#ModalPlaceHolder").append($("#confirmbox").html()).dialog(
+
+        {
+            autoOpen: true,
+            modal: true,
+            resizable: "auto",
+            width: "auto",
+            height: "auto",
+            minHeight: "auto",
+            close: function () {
+             
+            }
+
+        }
+        );
+
+        $("#confirmbox").html("");
+    }
+
+</script>

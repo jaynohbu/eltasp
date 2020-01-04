@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Macintosh" PresetDescription="Infragistics Macintosh Preset. Sets Look properties only. Notes: 1. The 'Reset' box should be checked. 2. Background images are used." PresetType="Appearance" />-->
+<igtxt:WebImageButton UseBrowserDefaults="False">
+	<RoundedCorners MaxHeight="23" ImageUrl="ig_butMac1.gif" MaxWidth="300" HoverImageUrl="ig_butMac2.gif" RenderingType="FileImages" HeightOfBottomEdge="0" PressedImageUrl="ig_butMac4.gif" WidthOfRightEdge="13">
+	</RoundedCorners>
+	<DisabledAppearance ContentShift="NotSet" />
+	<HoverAppearance ContentShift="NotSet" />
+	<PressedAppearance ContentShift="NotSet" />
+	<FocusAppearance ContentShift="NotSet" />
+	<Appearance ContentShift="NotSet" />
+</igtxt:WebImageButton>

@@ -1,0 +1,10 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxtc" Namespace="DevExpress.Web.ASPxTabControl" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %> 
+
+<dxmvc:MVCxPageControl runat="server" CssPostfix="RedWine" CssFilePath="~/App_Themes/RedWine/{0}/styles.css"
+    SpriteCssFilePath="~/App_Themes/RedWine/{0}/sprite.css" TabSpacing="3px">
+    <Paddings Padding="2px" PaddingLeft="5px" PaddingRight="5px" />
+    <LoadingPanelImage Url="~/App_Themes/RedWine/Web/Loading.gif"></LoadingPanelImage>
+</dxmvc:MVCxPageControl>
+

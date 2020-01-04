@@ -1,0 +1,96 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+ <link href="@Url.Content("~/ASP/css/defaultpage.css")" rel="stylesheet" type="text/css" >
+  <style type="text/css">
+ p
+ {
+    text-align:left;
+ }
+ </style>
+<div class="body">
+    <div id="rightnavi">
+        <h2>
+            MASTER DATA
+        </h2>
+        <p>
+            This Tab is where most of the records are created and access that will in turn be
+            used throughout the rest of the system. This data includes information about your
+            clients, carriers, consignees, and agents. It also includes information about your
+            AE rates, Ports, and Schedule B information for AES.</p>
+        <h4>
+            <a href="/ASP/Code/DOMESTIC_PORT_CODE.xls" target="_blank">Domestic Port ID</a></h4>
+        <h4>
+            <a href="/ASP/Code/FOREIGN_PORT_CODE.xls" target="_blank">Foreign Port ID</a></h4>
+        <h4 class="bottommargin">
+            <a href="http://www.census.gov/foreign-trade/schedules/b/index.html" target="_blank">
+                Schedule B</a></h4>
+        <!-- will add functon later
+	<h3 class="bold">Recent Works </h3>
+	<ul class="recentworks">
+	<li><a href="#">File name 1</a></li>
+	<li><a href="#">File name 2</a></li>
+	<li><a href="#">File name 3</a></li>
+	<li><a href="#">File name 4</a></li>
+	</ul>-->
+        <div id="linebreak">
+        </div>
+        <h2>
+            RESOURCES</h2>
+        <h3>
+            User's Handbook</h3>
+        <p>
+            A first time user or want to learn how to use FreightEasy? <a href="/images/freighteasy/images/FreightEasy-Guide.pdf"
+                target="_blank">Download</a> a User's Handbook.
+            <h3>
+                Support Center
+            </h3>
+            <p>
+                We are ready to help you. For technical support, email to <a href="mailto:support@e-logitech.net?subject=Support for FreightEasy-Master Data">
+                    support@e-logitech.net</a> or call us at 1-877-680-EASY(3279).</p>
+    </div>
+    <div id="leftfloat">
+        <div id="announcement">
+            <p>
+                <span class="bold style10"><span class="style12">The Beta </span><a onclick="javascript:if(window.parent.historyStorage) {window.parent.historyStorage.reset()};parent.location.href='/MasterData/ClientPartnerProfile/PostBack=false';return false;"
+                    href="javascript:">Client/Partner Profile </a><span class="style12">is now released.</span></span>
+                <br>
+                Thank you for your interest in Beta Client/Partner Profile. After we reviewed bugs
+                and suggestions, we have implemented it to improve the overall user experience.</p>
+        </div>
+        <div id="md">
+            <p>
+                <span class="bold"><a onclick="javascript:if(window.parent.historyStorage) {window.parent.historyStorage.reset()};parent.location.href='/MasterData/ClientPartnerProfile/PostBack=false';return false;"
+                    href="javascript:">Client/Partner Profile</a></span> - This area is where all
+                contact and business information is kept for all the companies you do business with.
+                This information will be used throughout the system, depending on what business
+                type you assign to each record.</p>
+        </div>
+        <div id="md2">
+            <p>
+                <span class="bold"><a href="/MasterData/RateManager">Rate Manager</a></span>
+                - This area is where you input your rate tables for Air Export. Air Import, IATA,
+                Airline Buying, Customer Selling and Agent Buying rates can all be inputted. These
+                rates will be automatically populated while making a shipment in the appropriate
+                circumstances.</p>
+        </div>
+        <div id="md3">
+            <p>
+                <span class="bold"><a href="/MasterData/Port" target="_parent">Port,</a></span>
+                <span class="bold"><a href="/MasterData/FreightLocation" target="_parent">Freight
+                    Location,</a></span> 
+                <span class="bold"><a href="/MasterData/ScheduleB"
+                        target="_parent">Schedule B</a></span> - This area is where you configure
+                which of these types of information will show up in your system. This helps keep
+                menus throughout the system at a manageable size, and makes sure only the items
+                you need will be in those menus.</p>
+        </div>
+        <div id="mdbottom">
+            <p>
+                <span class="bold"><a href="/MasterData/MasterAWBNo" target="_parent">MAWB No.</a></span>
+                - This area is where you enter new blocks of MAWB numbers for your air carriers.
+                You can also close out MAWB’s that are old so they remain in the system, but do
+                not clutter up your menus.</p>
+        </div>
+    </div>

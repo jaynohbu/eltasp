@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Seamless" PresetDescription="Infragistics Seamless Preset.   Sets both Look and Behavior properties." PresetType="All" />-->
+<iglbar:UltraWebListbar BarWidth="100%" BorderStyle="None" MergeStyles="True" ItemSelectionStyle="IconOnlySelection" BorderWidth="4px">
+  <DefaultGroupStyle Cursor="Default" Height="100%" BackColor="Gainsboro" />
+  <DefaultItemStyle Cursor="Default" Font-Size="10pt" Font-Names="Microsoft Sans Serif" ForeColor="MediumBlue">
+    <Padding Left="5px" />
+    <Margin Left="1px" />
+  </DefaultItemStyle>
+  <DefaultItemHoverStyle Cursor="Default" BorderWidth="1px" BorderStyle="Outset">
+    <Margin Left="0px" />
+  </DefaultItemHoverStyle>
+  <DefaultGroupButtonSelectedStyle Cursor="Default" ForeColor="Black" BackColor="Silver" />
+  <DefaultItemSelectedStyle Cursor="Default" BorderWidth="1px" BorderStyle="Inset">
+    <Margin Left="0px" />
+  </DefaultItemSelectedStyle>
+  <DefaultGroupButtonStyle Cursor="Default" Height="23px" Font-Size="10pt" Font-Names="Microsoft Sans Serif" BorderStyle="None" ForeColor="White" BackColor="RoyalBlue">
+    <Padding Bottom="1px" Left="6px" Top="1px" Right="6px" />
+  </DefaultGroupButtonStyle>
+  <DefaultGroupButtonHoverStyle Cursor="Default" BorderWidth="1px" BorderColor="DeepSkyBlue" BorderStyle="Solid">
+    <Padding Bottom="0px" Left="5px" Top="0px" Right="5px" />
+  </DefaultGroupButtonHoverStyle>
+</iglbar:UltraWebListbar>

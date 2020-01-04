@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<InputMask xmlns="urn:www.infragistics.com">
+	<Item Name="Telephone Number1" Value="(###) ###-####"></Item>
+	<Item Name="Telephone Number2" Value="(###) ###-#### Ext. 99999"></Item>
+	<Item Name="Social Security" Value="###-##-####"></Item>
+	<Item Name="Zip Code" Value="#####"></Item>
+	<Item Name="State" Value=">LL"></Item>
+</InputMask>

@@ -1,0 +1,28 @@
+﻿
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+
+namespace ELT.WEB.Filters
+{
+
+    public class NoCacheAttribute : ActionFilterAttribute
+    {
+        public override void OnResultExecuting(ResultExecutingContext filterContext)
+        {
+            filterContext.HttpContext.Response.Cache.SetExpires(DateTime.UtcNow.AddDays(-1));
+            filterContext.HttpContext.Response.Cache.SetValidUntilExpires(false);
+            filterContext.HttpContext.Response.Cache.SetRevalidation(HttpCacheRevalidation.AllCaches);
+            filterContext.HttpContext.Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            filterContext.HttpContext.Response.Cache.AppendCacheExtension("private");
+            filterContext.HttpContext.Response.Cache.AppendCacheExtension("no-cache=Set-Cookie");
+            filterContext.HttpContext.Response.Cache.SetProxyMaxAge(TimeSpan.Zero);  
+
+            base.OnResultExecuting(filterContext);
+        }
+    }
+
+}

@@ -1,0 +1,3 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="MSCRM" PresetDescription="Infragistics MSCRM Look and feel for WebMaskEdit.  Sets both Look and Behavior properties." PresetType="All" />-->
+<igtxt:WebMaskEdit BorderStyle="Solid" Font-Size="8pt" Font-Names="Tahoma" BorderColor="#7B9EBD" BorderWidth="1px" />

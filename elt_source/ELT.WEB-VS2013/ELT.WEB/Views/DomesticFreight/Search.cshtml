@@ -1,0 +1,7 @@
+﻿@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+
+
+<iframe id ="ContentFrame" scrolling="no"   frameborder="0" width="100%" onload="autoResize('ContentFrame');" src="@Url.Content("~/IFF_MAIN/ASPX/Domestic/Domestic_search.aspx" + ViewBag.Params)"></iframe>

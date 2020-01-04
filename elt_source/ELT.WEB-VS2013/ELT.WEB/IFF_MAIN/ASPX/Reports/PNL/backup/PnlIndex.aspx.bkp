@@ -1,0 +1,318 @@
+<%@ Register TagPrefix="cr" Namespace="CrystalDecisions.Web" Assembly="CrystalDecisions.Web, Version=11.0.3300.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" %>
+<%@ Page language="c#" Inherits="IFF_MAIN.ASPX.Reports.PNL.PnlIndex" trace="false" CodeFile="PnlIndex.aspx.cs" %>
+<%@ Register TagPrefix="uc1" TagName="rdSelectDateControl1" Src="../SelectionControls/rdSelectDateControl1.ascx" %>
+<%@ Register TagPrefix="cc1" Namespace="iMoonComboBox.WebControls" Assembly="iMoonComboBox" %>
+<%@ Register TagPrefix="mbcbb" Namespace="MetaBuilders.WebControls" Assembly="MetaBuilders.WebControls.ComboBox" %>
+<%@ Register TagPrefix="igtxt" Namespace="Infragistics.WebUI.WebDataInput" Assembly="Infragistics2.WebUI.WebDataInput.v6.2, Version=6.2.20062.34, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<%@ Register TagPrefix="igsch" Namespace="Infragistics.WebUI.WebSchedule" Assembly="Infragistics2.WebUI.WebDateChooser.v6.2, Version=6.2.20062.34, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<%@ Register TagPrefix="igtbl" Namespace="Infragistics.WebUI.UltraWebGrid" Assembly="Infragistics2.WebUI.UltraWebGrid.v6.2, Version=6.2.20062.34, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+  <HEAD>
+		<title>PNL Report Selection</title>
+		<META http-equiv=Content-Type content="text/html; charset=en">
+		<meta content=C# name=CODE_LANGUAGE>		
+		<SCRIPT src="/IFF_MAIN/ASPX/jScripts/WebDateSet1.js" type=text/javascript></SCRIPT>
+		<SCRIPT src="/IFF_MAIN/ASPX/jScripts/ig_dropCalendar.js" type=text/javascript></SCRIPT>
+		<SCRIPT src="/IFF_MAIN/ASPX/jScripts/ig_editDrop1.js" type=text/javascript></SCRIPT>
+		<LINK href="/IFF_MAIN/ASPX/CSS/AppStyle.css" type=text/css rel=stylesheet>
+<!--  #INCLUDE FILE="../../include/common.htm" -->
+</HEAD>
+	<BODY onload="dlOrderChange();">
+		<form id=Form1 method=post runat="server">
+			<script language=javascript>
+<!--
+
+function dlOrderChange() {
+var i = document.Form1.dlOrder.value;
+    if (i=='invoice_date') 
+    {                    
+        document.getElementById('lblSumLevel').style.visibility = "visible";
+        document.getElementById('lblSumBy').style.visibility = "visible";
+        document.getElementById('dlSumBy').style.visibility = "visible";
+    }    
+    else
+    {
+        document.getElementById('lblSumLevel').style.visibility = "hidden";
+        document.getElementById('lblSumBy').style.visibility = "hidden";
+        document.getElementById('dlSumBy').style.visibility = "hidden";
+    }   
+}
+
+function CheckDate() {
+
+if( document.Form1.cmbCustomer.value != "") {
+	document.Form1.txtCustomerNum.value = document.Form1.cmbCustomer.selectedIndex;
+}
+
+if( document.Form1.txtRefNum1.value != "") return true;
+if( document.Form1.txtRefNum2.value != "") return true;
+if( document.Form1.txtMAWB.value != "") return true;
+
+var	Wedit1 = igedit_getById('Webdatetimeedit1')
+var    a=Wedit1.getValue();
+		if(!a)  {
+		alert(' Please input the period!');
+		return false;
+		}
+return true;
+}
+//-->
+            </script>
+			<%     string windowName = Request.QueryString["WindowName"];
+          if (Request.UrlReferrer != null && windowName != "PopWin" && windowName != "popupfavorite")
+          { 
+Server.Execute("/ASP/tabs/acct_reports_subs_aspx.htm");
+}%>
+
+			<TABLE id=Table2 style="HEIGHT: 224px" cellSpacing=0 cellPadding=0 width="100%">
+				<TR>
+					<TD style="width: 20px"></TD>
+                    <td>
+                    </td>
+					<TD></TD>
+					<TD></TD>
+				</TR>
+				<TR>
+					<TD style="width: 20px"></TD>
+                    <td>
+                    </td>
+					<TD><asp:label id=Label4 runat="server" DESIGNTIMEDRAGDROP="285" ForeColor="Black" Font-Size="15px"
+							Width="665px" Height="1px" Font-Bold="True">Profit & Loss Report</asp:label></TD>
+					<TD></TD>
+				</TR>
+				<TR>
+					<TD style="width: 20px; height: 13px" bgcolor="#d5e8cb"></TD>
+                    <td bgcolor="#d5e8cb" style="height: 13px" valign="top">
+                    </td>
+					<TD style="HEIGHT: 13px" vAlign=top bgcolor="D5E8CB"></TD>
+					<TD style="height: 13px"></TD>
+				</TR>
+                <tr>
+                    <td style="height: 77px; width: 20px;">
+                    </td>
+                    <td align="left" style="height: 77px">
+                    </td>
+                    <td align="left" style="height: 77px">
+							<TABLE id=Table1 align=left style="WIDTH: 864px; HEIGHT: 176px">
+								<TR>
+									<TD style="WIDTH: 155px"></TD>
+									<TD style="WIDTH: 120px"></TD>
+									<TD style="WIDTH: 200px"></TD>
+									<TD></TD>
+									<TD style="WIDTH: 200px"></TD>
+									<TD style="WIDTH: 120px"></TD>
+								</TR>
+								<TR>
+									<TD align=right style="width: 155px"><asp:label id=Label2 runat="server" DESIGNTIMEDRAGDROP="43" Width="100%" Height="19px">Period :</asp:label></TD>
+									<TD style="WIDTH: 159px" align=right><uc1:rdselectdatecontrol1 id=RdSelectDateControl11 runat="server"></uc1:rdselectdatecontrol1></TD>
+									<TD align=left><igtxt:webdatetimeedit id=Webdatetimeedit1 accessKey=e runat="server" ForeColor="DarkCyan" Width="200px"
+											Fields="" EditModeFormat="MM/dd/yyyy" PromptChar=" ">
+											<ButtonsAppearance CustomButtonDisplay="OnRight"></ButtonsAppearance>
+											<SpinButtons Display="OnLeft" SpinOnReadOnly="True"></SpinButtons>
+										</igtxt:webdatetimeedit></TD>
+									<TD align=right><asp:label id=Label1 runat="server" DESIGNTIMEDRAGDROP="3572" Width="40px" Height="22px">(to) :</asp:label></TD>
+									<TD><igtxt:webdatetimeedit id=Webdatetimeedit2 accessKey=e runat="server" DESIGNTIMEDRAGDROP="142" ForeColor="DarkCyan"
+											Width="200px" Fields="" EditModeFormat="MM/dd/yyyy" PromptChar=" ">
+											<ButtonsAppearance CustomButtonDisplay="OnRight"></ButtonsAppearance>
+											<SpinButtons Display="OnLeft" SpinOnReadOnly="True"></SpinButtons>
+										</igtxt:webdatetimeedit></TD>
+									<TD style="width: 120px"></TD>
+								</TR>
+                                <tr>
+                                    <td align="right" style="width: 155px; height: 3px">
+                                        <asp:label id=Label3 runat="server" Width="100%" Height="19px">Ref No. :</asp:label></td>
+                                    <td align="right" style="width: 159px; height: 3px">
+                                    </td>
+                                    <td align="left" style="height: 3px">
+                                        <asp:textbox id=txtRefNum1 runat="server" Width="200px" BorderWidth="1px" BorderStyle="Inset"></asp:textbox></td>
+                                    <td style="height: 3px">
+                                    </td>
+                                    <td style="height: 3px">
+                                    </td>
+                                    <td style="width: 120px; height: 3px">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right" style="width: 155px; height: 3px">
+                                        <asp:Label ID="Label14" runat="server" Height="19px" Width="100%">File No. :</asp:Label></td>
+                                    <td align="right" style="width: 159px; height: 3px">
+                                    </td>
+                                    <td align="left" style="height: 3px">
+                                        <asp:TextBox ID="txtRefNum2" runat="server" BorderStyle="Inset" BorderWidth="1px"
+                                            Width="200px"></asp:TextBox></td>
+                                    <td style="height: 3px">
+                                    </td>
+                                    <td style="height: 3px">
+                                    </td>
+                                    <td style="width: 120px; height: 3px">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right" style="width: 155px; height: 3px">
+                                        <asp:Label ID="Label13" runat="server" Height="19px" Width="100%">MAWB/MBOL :</asp:Label></td>
+                                    <td align="right" style="width: 159px; height: 3px">
+                                    </td>
+                                    <td align="left" style="height: 3px">
+                                        <asp:TextBox ID="txtMAWB" runat="server" BorderStyle="Inset" BorderWidth="1px" Width="200px"></asp:TextBox></td>
+                                    <td style="height: 3px">
+                                    </td>
+                                    <td style="height: 3px">
+                                    </td>
+                                    <td style="width: 120px; height: 3px">
+                                    </td>
+                                </tr>
+								<TR>
+									<TD style="HEIGHT: 3px; width: 155px;" align=right><asp:label id=Label8 runat="server" Width="100%" Height="19px">Customer/Agent  :</asp:label></TD>
+									<TD style="WIDTH: 159px; HEIGHT: 3px" align=right></TD>
+									<TD align=left style="height: 3px"><cc1:combobox id=cmbCustomer runat="server" Width="180px" Rows="20">
+                                        <asp:ListItem>Unbound</asp:ListItem>
+                                    </cc1:combobox></TD>
+									<TD style="HEIGHT: 3px"></TD>
+									<TD style="HEIGHT: 3px"></TD>
+									<TD style="HEIGHT: 3px; width: 120px;"></TD>
+								</TR>
+								<TR>
+									<TD align=right style="width: 155px"><asp:label id=Label9 runat="server" Width="100%" Height="19px">Import/Export :</asp:label></TD>
+									<TD style="WIDTH: 159px" align=right></TD>
+									<TD align=left><asp:dropdownlist id=DropDownList1 runat="server" Width="200px">
+											<asp:ListItem Value="All">All</asp:ListItem>
+											<asp:ListItem Value="Export">Export</asp:ListItem>
+											<asp:ListItem Value="Import">Import</asp:ListItem>
+										</asp:dropdownlist></TD>
+									<TD></TD>
+									<TD></TD>
+									<TD style="width: 120px"></TD>
+								</TR>
+								<TR>
+									<TD align=right style="width: 155px"><asp:label id=Label10 runat="server" Width="100%" Height="19px"> Air/Ocean :</asp:label></TD>
+									<TD style="WIDTH: 159px" align=right></TD>
+									<TD align=left><asp:dropdownlist id=DropDownList2 runat="server" DESIGNTIMEDRAGDROP="1400" Width="200px">
+											<asp:ListItem Value="All">All</asp:ListItem>
+											<asp:ListItem Value="Air">Air</asp:ListItem>
+											<asp:ListItem Value="Ocean">Ocean</asp:ListItem>
+										</asp:dropdownlist></TD>
+									<TD></TD>
+									<TD></TD>
+									<TD style="width: 120px"></TD>
+								</TR>
+                                <tr>
+                                    <td align="right" style="width: 155px">
+                                        <asp:Label ID="Label5" runat="server" Height="19px" Width="100%">Route  :</asp:Label></td>
+                                    <td align="right" style="width: 159px">
+                                        <asp:Label ID="Label7" runat="server" DESIGNTIMEDRAGDROP="3572" Height="22px" Width="40px">(from) :</asp:Label></td>
+                                    <td align="left">
+                                        <asp:TextBox ID="txtOrigin" runat="server" BorderStyle="Inset" Width="100px"></asp:TextBox></td>
+                                    <td align="right">
+                                        <asp:Label ID="Label6" runat="server" DESIGNTIMEDRAGDROP="3572" Height="22px" Width="40px">(to) :</asp:Label></td>
+                                    <td>
+                                        <asp:TextBox ID="txtDest" runat="server" BorderStyle="Inset" Width="100px"></asp:TextBox></td>
+                                    <td style="width: 120px">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right" style="width: 155px">
+                                        <asp:Label ID="Label11" runat="server" Height="19px" Width="100%">Sort  Option :</asp:Label></td>
+                                    <td align="right" style="width: 159px">
+                                        <asp:Label ID="Label12" runat="server" DESIGNTIMEDRAGDROP="3572" Width="100px">(Order by ) :</asp:Label></td>
+                                    <td align="left">
+                                        <asp:dropdownlist id=dlOrder runat="server" DESIGNTIMEDRAGDROP="1400" Width="200px">
+                                            <asp:ListItem Value="invoice_date">Date</asp:ListItem>
+                                            <asp:ListItem Value="ref_no">Ref.No.</asp:ListItem>
+                                            <asp:ListItem Value="ref_no_our">File No.</asp:ListItem>
+                                            <asp:ListItem Value="mawb">MAWB/MBOL</asp:ListItem>
+                                            <asp:ListItem Value="customer_name">Customer/Agent</asp:ListItem>
+                                            <asp:ListItem Value="import_export">Import/Export</asp:ListItem>
+                                            <asp:ListItem Value="air_ocean">Air/Ocean</asp:ListItem>
+                                            <asp:ListItem Value="route">Route</asp:ListItem>
+                                        </asp:dropdownlist></td>
+                                    <td align="right">
+                                    </td>
+                                    <td>
+                                        </td>
+                                    <td style="width: 120px">
+                                    </td>
+                                </tr>
+								<TR>
+									<TD align=right style="width: 155px">
+                                        <asp:Label ID="lblSumLevel" runat="server" Height="19px" Width="100%">Summary Level  :</asp:Label></TD>
+									<TD style="WIDTH: 159px" align="right">
+                                        <asp:Label ID="lblSumBy" runat="server" DESIGNTIMEDRAGDROP="3572" Width="100px">(Sum by ) :</asp:Label></TD>
+									<TD align=left><asp:dropdownlist id=dlSumBy runat="server" DESIGNTIMEDRAGDROP="1400" Width="200px">
+                                        <asp:ListItem Value="Month">Month</asp:ListItem>
+                                        <asp:ListItem Value="Week">Week</asp:ListItem>
+                                        <asp:ListItem Value="Day">Day</asp:ListItem>
+                                        <asp:ListItem Value="Quater">Quater</asp:ListItem>
+                                        <asp:ListItem Value="Year">Year</asp:ListItem>
+                                    </asp:DropDownList></TD>
+									<TD></TD>
+									<TD></TD>
+									<TD style="width: 120px">
+											</TD>
+								</TR>
+                                <tr>
+                                    <td align="right" style="width: 155px">
+                                        <asp:Label ID="Label15" runat="server" Height="19px" Width="100%">Result Style  :</asp:Label></td>
+                                    <td align="right" style="width: 159px">
+                                    </td>
+                                    <td align="left">
+                                        <asp:dropdownlist id=dlResultType runat="server" DESIGNTIMEDRAGDROP="1400" Width="200px">
+                                            <asp:ListItem Value="s">Summary Only</asp:ListItem>
+                                            <asp:ListItem Value="d">Detail Only</asp:ListItem>
+                                            <asp:ListItem Value="a">Summary & Detail</asp:ListItem>
+                                        </asp:DropDownList></td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td style="width: 120px">
+											<asp:imagebutton id=ImageButton1 runat="server" ImageUrl="../../../images/button_go.gif" OnClick="ImageButton1_Click1"></asp:imagebutton></td>
+                                </tr>
+							</TABLE>
+                    </td>
+                    <td style="width: 2px; height: 77px">
+                    </td>
+                </tr>
+				<TR>
+					<TD style="HEIGHT: 3px; width: 20px;" bgcolor="#d5e8cb"></TD>
+                    <td bgcolor="#d5e8cb" style="height: 10px">
+                    </td>
+					<TD style="HEIGHT: 10px" bgcolor="D5E8CB"></TD>
+					<TD style="WIDTH: 2px; HEIGHT: 3px"></TD>
+				</TR>
+				<TR>
+					<TD style="height: 22px; width: 20px;"></TD>
+                    <td style="height: 22px">
+                    </td>
+					<TD style="height: 22px"></TD>
+					<TD style="WIDTH: 2px; HEIGHT: 22px"></TD>
+				</TR>
+			</TABLE>
+			<P><asp:button id=btnValidate runat="server" Text="for Validation" Visible="False"></asp:button><asp:linkbutton id=LinkButton1 runat="server" Visible="False">LinkButton</asp:linkbutton><asp:textbox id=txtCustomerNum runat="server" Height="1px" Width="1px"></asp:textbox>
+                <!-- end --></P>
+			<igsch:WebCalendar id=CustomDropDownCalendar runat="server" Width="150px">
+				<Layout FooterFormat="Today: {0:d}" TitleFormat="Month" ShowYearDropDown="False" PrevMonthImageUrl="ig_cal_blueP0.gif"
+					ShowMonthDropDown="False" NextMonthImageUrl="ig_cal_blueN0.gif">
+					<DayStyle BackColor="#7AA7E0"></DayStyle>
+					<FooterStyle Height="16pt" Font-Size="8pt" ForeColor="#505080" BackgroundImage="ig_cal_blue2.gif">
+						<BorderDetails ColorTop="LightSteelBlue" WidthTop="1px" StyleTop="Solid"></BorderDetails>
+					</FooterStyle>
+					<SelectedDayStyle BackColor="SteelBlue"></SelectedDayStyle>
+					<OtherMonthDayStyle ForeColor="SlateGray"></OtherMonthDayStyle>
+					<NextPrevStyle BackgroundImage="ig_cal_blue1.gif"></NextPrevStyle>
+					<CalendarStyle Width="150px" BorderWidth="1px" Font-Size="9pt" Font-Names="Verdana" BorderColor="SteelBlue"
+						BorderStyle="Solid" BackColor="#E0EEFF"></CalendarStyle>
+					<TodayDayStyle BackColor="#97B0F0"></TodayDayStyle>
+					<DayHeaderStyle Height="1pt" Font-Size="8pt" Font-Bold="True" ForeColor="#606090" BackColor="#7AA7E0">
+						<BorderDetails StyleBottom="Solid" ColorBottom="LightSteelBlue" WidthBottom="1px"></BorderDetails>
+					</DayHeaderStyle>
+					<TitleStyle Height="18pt" Font-Size="10pt" Font-Bold="True" ForeColor="#505080" BackgroundImage="ig_cal_blue1.gif"
+						BackColor="#CCDDFF"></TitleStyle>
+				</Layout>
+			</igsch:WebCalendar></form>
+		<SCRIPT type=text/javascript>
+			ig_initDropCalendar("CustomDropDownCalendar Webdatetimeedit1 Webdatetimeedit2");
+		</SCRIPT>
+	</BODY>
+<!--  #INCLUDE FILE="../../include/StatusFooter.htm" -->
+</HTML>

@@ -1,0 +1,60 @@
+;INF file for ELTAuth.ocx
+;DestDir can be 10 for Windows directory, 11 for Windows\System(32) directory, or left blank for the Occache directory.
+
+[version]
+signature="$CHICAGO$"
+AdvancedINF=2.0
+[DefaultInstall]
+CopyFiles=install.files
+RegisterOCXs=RegisterFiles
+AddReg=AddToRegistry
+[RInstallApplicationFiles]
+CopyFiles=install.files
+RegisterOCXs=RegisterFiles
+AddReg=AddToRegistry
+[DestinationDirs]
+install.files=11
+[SourceDisksNames]
+1=%DiskName%,ELTAuth.CAB,1
+
+[Add.Code]
+ELTAuth.ocx=ELTAuth.ocx
+IEPrint.ocx=IEPrint.ocx
+[install.files]
+ELTAuth.ocx=ELTAuth.ocx
+IEPrint.ocx=IEPrint.ocx
+[SourceDisksFiles]
+ELTAuth.ocx=1
+IEPrint.ocx=1
+
+[ELTAuth.ocx]
+file-win32-x86=thiscab
+RegisterServer=yes
+clsid={B38256C8-D8AE-42FF-8B14-B6FAB132E440}
+DestDir= 
+FileVersion=2,1,0,0
+
+[IEPrint.ocx]
+file-win32-x86=thiscab
+RegisterServer=yes
+clsid={F290B058-CB26-460E-B3D4-8F36AEEDBE44}
+DestDir=11
+FileVersion=1,0,1,1
+
+[Setup Hooks]
+AddToRegHook=AddToRegHook
+
+[AddToRegHook]
+InfSection=DefaultInstall2
+
+[DefaultInstall2]
+AddReg=AddToRegistry
+
+[AddToRegistry]
+HKLM,"SOFTWARE\Classes\CLSID\{B38256C8-D8AE-42FF-8B14-B6FAB132E440}\Implemented Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}"
+HKLM,"SOFTWARE\Classes\CLSID\{B38256C8-D8AE-42FF-8B14-B6FAB132E440}\Implemented Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}"
+HKCR,"Licenses",,,"Licensing: Copying the keys may be a violation of established copyrights."
+[RegisterFiles]
+%11%\IEPrint.ocx
+%11%\ELTAuth.ocx
+

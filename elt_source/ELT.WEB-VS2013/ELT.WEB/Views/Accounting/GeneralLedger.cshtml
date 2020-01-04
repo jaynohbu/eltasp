@@ -1,0 +1,59 @@
+﻿@model GeneralLedgerReportMasterModel
+@{
+    ViewBag.Title = "General Ledger";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+@using ELT.WEB.Models
+@using ELT.CDT
+@using ELT.WEB.Controllers
+
+
+<hgroup>
+    <h1 class="pageheader">@ViewBag.Title</h1>
+</hgroup>
+
+
+@using (Html.BeginForm("GeneralLedger", "Accounting", FormMethod.Post, new { Operation = "GeneralLedger" }))
+{
+    <table>
+        <tr>
+            <td></td>
+            <td colspan="2" style="text-align:right">
+                @foreach (string typeName in GridViewExportHelper.ExportTypes.Keys)
+                {
+                    <input type="submit" name="@typeName" value="@GridViewExportHelper.ExportTypes[typeName].Title" />
+                    <text>&nbsp;</text>
+                    //http://localhost/Report/AirExport
+                }
+
+                <input type="button" name="ReSelect" value="Go Back to Search" onclick="RedirectParentTo('@Url.Content("~/Accounting/GeneralLedger/parm=genl")')" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:left">
+                <br />
+                Period: @Model.PeriodBegin ~ @Model.PeriodEnd
+               @if (Model.GLFrom != "") {  
+                  <br />
+                <text>  From @Model.GLFrom To @Model.GLTo</text>
+             
+               }
+               @if (Model.TranType != "")
+               {   <br />
+                <text>  Transaction Type: @Model.TranType</text>
+
+               }
+                <br />
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                @Html.Partial("_GeneralLedger/_GeneralLedgerMasterPartial", Model.GeneralLedgerItems)
+            </td>
+        </tr>
+        <tr><td></td><td></td><td></td></tr>
+    </table>
+
+
+   
+}

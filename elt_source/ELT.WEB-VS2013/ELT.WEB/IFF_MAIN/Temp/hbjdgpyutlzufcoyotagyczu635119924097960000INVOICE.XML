@@ -1,0 +1,33 @@
+<INVOICE>
+  <INVOICE>
+    <invoice_no>90963</invoice_no>
+    <Customer_Number>45</Customer_Number>
+    <Customer>LogiGear</Customer>
+    <mawb_num>297-0919 6552</mawb_num>
+    <hawb_num>1X-4843</hawb_num>
+    <invoice_date>2013-08-01T00:00:00-07:00</invoice_date>
+    <invoice_type>I</invoice_type>
+    <import_export>E</import_export>
+    <air_ocean />
+    <Ref_No>CONSOL # 164</Ref_No>
+    <File_No>1X-4843</File_No>
+    <Total_Pieces>2 BOXES</Total_Pieces>
+    <Total_Gross_Weight>25Lb</Total_Gross_Weight>
+    <amount_charged>425.00</amount_charged>
+    <agent_profit>0.00</agent_profit>
+    <sale_tax>0.00</sale_tax>
+    <total_cost>0.00</total_cost>
+    <subtotal>425.00</subtotal>
+    <amount_paid>0.00</amount_paid>
+    <balance>425.00</balance>
+    <pay_status>A</pay_status>
+    <Origin_Dest />
+    <Origin>SAN JOSE, CA</Origin>
+    <Destination>HOCHIMINH/ DA NANG</Destination>
+    <Shipper>LOGIGEAR</Shipper>
+    <Consignee>LOGIGEAR</Consignee>
+    <Carrier>CHINA AIRLINES</Carrier>
+    <Arrival_Dept>7/29/13 - 7/27/13</Arrival_Dept>
+    <Description>PACKING LIST ATTACHED</Description>
+  </INVOICE>
+</INVOICE>

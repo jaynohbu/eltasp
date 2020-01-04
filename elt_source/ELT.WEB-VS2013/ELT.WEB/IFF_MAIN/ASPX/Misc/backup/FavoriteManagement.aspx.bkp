@@ -1,0 +1,417 @@
+<%@ Register TagPrefix="ignav" Namespace="Infragistics.WebUI.UltraWebNavigator" Assembly="Infragistics.WebUI.UltraWebNavigator.v5.1, Version=5.1.20051.1045, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<%@ Page language="c#" Codebehind="FavoriteManagement.aspx.cs" AutoEventWireup="false" Inherits="IFF_MAIN.ASPX.Misc.FavoriteManagement" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+  <HEAD>
+		<title>FavoriteManagement</title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="C#" name="CODE_LANGUAGE">
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<LINK href="../CSS/AppStyle.css" type="text/css" rel="stylesheet">
+		<!--  #INCLUDE FILE="../include/common.htm" -->
+		<SCRIPT type="text/javascript">
+
+		
+		function wtFavorite_Drop(oTree, oNode, oDataTransfer, oEvent){
+			
+			if(oNode.getLevel()>=0)
+			{ 
+				var sourceNode = oDataTransfer.sourceObject;
+						
+				node = oNode.addChild(oDataTransfer.dataTransfer.getData("Text"));
+
+				myAddChild(node, sourceNode);				
+			
+				oNode.setExpanded(true);
+			
+				if(sourceNode) sourceNode.remove();
+			 }
+			 else
+			 {
+				alert("Please create at least one foler.");
+			 }
+			return false;
+		}
+
+		function myAddChild(node, sourceNode){
+
+			var sourceNodesChildren = sourceNode.getChildNodes();
+			var tmpNode=null;
+
+			for (child in sourceNodesChildren)
+			{
+				tmpNode = node.addChild(sourceNodesChildren[child].getText("Text"));
+				
+				if (sourceNodesChildren[child].hasChildren())
+				{
+					myAddChild(tmpNode, sourceNodesChildren[child]);
+				}
+			}
+
+			return true;
+		}
+			
+		
+		function wtStandard_DragStart(oTree, oNode, oDataTransfer, oEvent){
+			oDataTransfer.dataTransfer.setData("Text", oNode.getText());
+			oDataTransfer.dataTransfer.effectAllowed = "move";
+		}
+
+		function NodeClicked(treeName, NodeId) {
+			var node = igtree_getNodeById(NodeId);
+				if(node.WebTree) node.setExpanded(!node.getExpanded());
+			return false;
+		}
+		
+		function DeleteNode() {
+			var tree = igtree_getTreeById("wtFavorite");
+			var node = tree.getSelectedNode();
+			var Snode =	node.getPrevSibling();
+			
+			if(!Snode) Snode = node.getNextSibling();
+			if(!Snode) Snode = node.getParent();
+
+			if(node != null) {
+				node.remove();
+			}
+			if(Snode) Snode.setSelected(true); 	
+			
+		}	
+
+		function SelectNextNode() {
+			var tree = igtree_getTreeById("wtFavorite");
+			var node = tree.getSelectedNode();
+			if(node != null) {
+				node = node.getNextSibling();
+				if(node != null) { 
+				  node.setSelected(true); 	
+				  return true;
+				 }				 
+					node = node.getPrevSibling();				 
+				if(node != null) { 
+				  node.setSelected(true); 	
+				  return true;
+				 } 					
+			}
+		}		
+
+	
+		function RenameNode(node)
+		{
+			var tree = igtree_getTreeById("wtFavorite");
+			var tmpNode = tree.getSelectedNode();
+
+			if(tmpNode.hasChildren() || (!tmpNode.getParent())) {
+				if (node) igtree_beginedit('wtFavorite',node.id );
+			}
+			else {
+				alert("You can change only job group name.");
+			}
+		}
+
+		
+		</SCRIPT>
+</HEAD>
+	<body MS_POSITIONING="FlowLayout">
+		<form id="Form1" method="post" runat="server">
+			<table width="100%" height="12" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td align="center" valign="top"><img src="../images/spacer.gif" width="390" height="6"><img src="../../images/pointer_sa.gif" width="11" height="7"><img src="../../images/spacer.gif" width="27" height="6"></td>
+				</tr>
+			</table>
+			<TABLE id="Table3" height="432" cellSpacing="0" cellPadding="0" bgColor="#ffffff" style="WIDTH: 866px; HEIGHT: 432px">
+				<TR>
+					<TD height="16"></TD>
+					<TD><asp:label id="Label8" runat="server" ForeColor="Navy" Width="344px" DESIGNTIMEDRAGDROP="214"
+							Font-Italic="True" Font-Bold="True" Font-Size="15px" Height="100%">Favorite Manager</asp:label></TD>
+				</TR>
+				<TR>
+					<TD height="4"></TD>
+					<TD bgColorheight="4"></TD>
+				</TR>
+				<TR>
+					<TD height="472" style="HEIGHT: 472px"></TD>
+					<TD vAlign="top" align="left" height="472" style="HEIGHT: 472px">
+						<TABLE id="Table6" style="BORDER-RIGHT: #cdcc9d 1px solid; BACKGROUND-POSITION: 0% 0%; BORDER-TOP: #cdcc9d 1px solid; FONT-SIZE: 9pt; BACKGROUND-ATTACHMENT: scroll; BACKGROUND-IMAGE: none; BORDER-LEFT: #cdcc9d 1px solid; WIDTH: 864px; BORDER-BOTTOM: #cdcc9d 1px solid; BACKGROUND-REPEAT: repeat; HEIGHT: 330px"
+							height="330" cellSpacing="5" cellPadding="0" width="864" align="left" bgColor="#fffff0"
+							border="0">
+							<TR>
+								<TD height="16" style="WIDTH: 3px"></TD>
+								<TD style="WIDTH: 430px"><asp:label id="Label1" runat="server" ForeColor="Navy" Width="100%" DESIGNTIMEDRAGDROP="448"
+										Font-Size="11px" Height="100%">1.Create one or more new folder.</asp:label></TD>
+								<TD height="16"></TD>
+							</TR>
+							<TR>
+								<TD style="WIDTH: 3px"></TD>
+								<TD style="WIDTH: 430px"><asp:label id="Label2" runat="server" ForeColor="Navy" Width="100%" Font-Size="11px" Height="100%">2.Drag any standard item and then drop into new the new folder.</asp:label></TD>
+								<TD></TD>
+							</TR>
+							<TR>
+								<TD style="WIDTH: 3px; HEIGHT: 304px"></TD>
+								<TD style="WIDTH: 430px; HEIGHT: 304px" vAlign=top><ignav:ultrawebtree id="wtFavorite" runat="server" Width="100%" Font-Size="8px" Height="300px" BorderColor="DarkKhaki"
+										DefaultImage="ig_treeFolder.gif" DefaultSelectedImage="ig_treeFolderOpen.gif" AllowDrag="True" CollapseImage="ig_treeMinus.gif" WebTreeTarget="ClassicTree"
+										ImageDirectory="/ig_common/images/" Indentation="20" ExpandImage="ig_treePlus.gif" Cursor="Hand" Font-Names="Verdana" BorderWidth="5px" BorderStyle="Solid"
+										AllowDrop="True">
+										<SelectedNodeStyle Cursor="Default" BorderWidth="1px" BorderStyle="Solid" ForeColor="White" BackColor="Navy">
+											<Padding Bottom="1px" Left="2px" Top="1px" Right="2px"></Padding>
+										</SelectedNodeStyle>
+										<NodeStyle CssClass="ItemClass"></NodeStyle>
+										<NodeEditStyle Font-Size="9pt" Font-Names="Microsoft Sans Serif" BackColor="Yellow"></NodeEditStyle>
+										<Levels>
+											<ignav:Level Index="0" LevelCheckBoxes="False"></ignav:Level>
+											<ignav:Level Index="1" LevelCheckBoxes="False"></ignav:Level>
+											<ignav:Level Index="2" LevelCheckBoxes="False"></ignav:Level>
+											<ignav:Level Index="3"></ignav:Level>
+										</Levels>
+										<Styles>
+											<ignav:Style ForeColor="White" BackColor="Blue" CssClass="Hover"></ignav:Style>
+											<ignav:Style ForeColor="White" BackColor="DodgerBlue" CssClass="Selected">
+												<Padding Bottom="3px" Left="3px" Top="3px" Right="3px"></Padding>
+											</ignav:Style>
+										</Styles>
+										<ClientSideEvents DragStart="wtStandard_DragStart" NodeClick="NodeClicked" Drop="wtFavorite_Drop"></ClientSideEvents>
+									</ignav:ultrawebtree></TD>
+								<TD vAlign="top" align="left" width="50%" bgColor="whitesmoke" style="HEIGHT: 304px"><ignav:ultrawebtree id="wtStandard" runat="server" Width="100%" DESIGNTIMEDRAGDROP="418" Font-Size="8px"
+										Height="300px" DefaultImage="ig_treeFolder.gif" DefaultSelectedImage="ig_treeFolderOpen.gif" AllowDrag="True" CollapseImage="ig_treeMinus.gif" WebTreeTarget="ClassicTree" ImageDirectory="/ig_common/images/"
+										Indentation="20" ExpandImage="ig_treePlus.gif" Cursor="Hand" Font-Names="Verdana" BorderStyle="Inset" Selectable="False" TargetFrame="mainFrame">
+										<Nodes>
+											<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Site Admin">
+												<Nodes>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="User Admin"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Configuration"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Company Message Board"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Favorite Manager"></ignav:Node>
+												</Nodes>
+											</ignav:Node>
+											<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Master Data">
+												<Nodes>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Client Profile"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Rate"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Port"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Freight Location"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Schedule B"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Flight No."></ignav:Node>
+												</Nodes>
+											</ignav:Node>
+											<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Air Export">
+												<Nodes>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="(AE)Shipping Request"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="(AE)Booking"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="(AE)HAWB"></ignav:Node>
+													<ignav:Node Text="(AE)MAWB"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="(AE)SED"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="(AE)Agent Pre-Alert"></ignav:Node>
+													<ignav:Node Text="(AE)Shipping Notice"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="(AE)Shipping Label"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="(AE)AE Search"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="(AE)MAWB No. Inventory"></ignav:Node>
+												</Nodes>
+											</ignav:Node>
+											<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Ocean Export">
+												<Nodes>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="(OE)Shipping Request"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="(OE)HBOL"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="(OE)MBOL"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="(OE)SED"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="(OE)Agent Pre-Alert"></ignav:Node>
+													<ignav:Node Text="(OE)Shipping Notice"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="(OE)Shipping Label"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="(OE)OE Search"></ignav:Node>
+												</Nodes>
+											</ignav:Node>
+											<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Air Import">
+												<Nodes>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="(AI)New Deconsolidation"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="(AI)Edit Deconsolidation"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="(AI)Proof of Delivery"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="(AI)AI Search"></ignav:Node>
+													<ignav:Node Text="(AI)eArrival Notice"></ignav:Node>
+												</Nodes>
+											</ignav:Node>
+											<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Ocean Import">
+												<Nodes>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="(OI)New Deconsolidation"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="(OI)Edit Deconsolidation"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="(OI)Proof of Delivery"></ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="(OI)OI Search"></ignav:Node>
+													<ignav:Node Text="(OI)eArrival Notice"></ignav:Node>
+												</Nodes>
+											</ignav:Node>
+											<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Accounting">
+												<Nodes>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Tasks">
+														<Nodes>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Create Invoice"></ignav:Node>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Search Invoice"></ignav:Node>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Receive Payments"></ignav:Node>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Enter Bills"></ignav:Node>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Pay Bills"></ignav:Node>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Write Checks"></ignav:Node>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Print Checks"></ignav:Node>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Char of Accounts"></ignav:Node>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Edit Charge Items"></ignav:Node>
+															<ignav:Node Text="Edit Cost Items"></ignav:Node>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="General Jounal Entry"></ignav:Node>
+														</Nodes>
+													</ignav:Node>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Reports">
+														<Nodes>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Sales"></ignav:Node>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="A/R Aging Summary"></ignav:Node>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="A/R Aging Detail"></ignav:Node>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="A/R Summary"></ignav:Node>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="A/R Detail"></ignav:Node>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Expenses"></ignav:Node>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="A/P Aging Summary"></ignav:Node>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="A/P Aging Detail"></ignav:Node>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="A/P Summary"></ignav:Node>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="A/P Detail"></ignav:Node>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Trial Balance"></ignav:Node>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Balance Sheet"></ignav:Node>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Imcome Statement"></ignav:Node>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="General Ledger"></ignav:Node>
+															<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Check Register"></ignav:Node>
+														</Nodes>
+													</ignav:Node>
+												</Nodes>
+											</ignav:Node>
+											<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Reports">
+												<Nodes>
+													<ignav:Node Text="Air Export Booking"></ignav:Node>
+													<ignav:Node Text="Air Export HAWB"></ignav:Node>
+													<ignav:Node Text="Air Export MAWB"></ignav:Node>
+													<ignav:Node Text="Ocean Export Booking"></ignav:Node>
+													<ignav:Node Text="Ocean Export HBOL"></ignav:Node>
+													<ignav:Node Text="Ocean Export MBOL"></ignav:Node>
+													<ignav:Node Text="Air Import"></ignav:Node>
+													<ignav:Node Text="Ocean Import"></ignav:Node>
+												</Nodes>
+											</ignav:Node>
+											<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Search">
+												<Nodes>
+													<ignav:Node TargetUrl="" IslandClass="" TagString="" Title="" ImageUrl="" HoverClass="" ToolTip="" 
+ SelectedImageUrl="" TargetFrame="" CssClass="" HiliteClass="" Text="Company Search"></ignav:Node>
+												</Nodes>
+											</ignav:Node>
+											<ignav:Node Text="AMS">
+												<Nodes>
+													<ignav:Node Text="Ocean AMS EDI"></ignav:Node>
+												</Nodes>
+											</ignav:Node>
+										</Nodes>
+										<SelectedNodeStyle Cursor="Default" BorderWidth="1px" BorderStyle="Solid" ForeColor="White" BackColor="Navy">
+											<Padding Bottom="1px" Left="2px" Top="1px" Right="2px"></Padding>
+										</SelectedNodeStyle>
+										<NodeStyle CssClass="ItemClass"></NodeStyle>
+										<NodeEditStyle Font-Size="9pt" Font-Names="Microsoft Sans Serif"></NodeEditStyle>
+										<Levels>
+											<ignav:Level LevelHoverClass="" LevelHiliteClass="" ColumnName="" TargetFrameName="" ImageColumnName="" 
+ LevelClass="" LevelImage="" Index="0" LevelKeyField="" RelationName="" CheckboxColumnName="" 
+ LevelIslandClass="" TargetUrlName="" LevelCheckBoxes="False"></ignav:Level>
+											<ignav:Level LevelHoverClass="" LevelHiliteClass="" ColumnName="" TargetFrameName="" ImageColumnName="" 
+ LevelClass="" LevelImage="" Index="1" LevelKeyField="" RelationName="" CheckboxColumnName="" 
+ LevelIslandClass="" TargetUrlName="" LevelCheckBoxes="False"></ignav:Level>
+											<ignav:Level LevelHoverClass="" LevelHiliteClass="" ColumnName="" TargetFrameName="" ImageColumnName="" 
+ LevelClass="" LevelImage="" Index="2" LevelKeyField="" RelationName="" CheckboxColumnName="" 
+ LevelIslandClass="" TargetUrlName="" LevelCheckBoxes="False"></ignav:Level>
+											<ignav:Level LevelHoverClass="" LevelHiliteClass="" ColumnName="" TargetFrameName="" ImageColumnName="" 
+ LevelClass="" LevelImage="" Index="3" LevelKeyField="" RelationName="" CheckboxColumnName="" 
+ LevelIslandClass="" TargetUrlName=""></ignav:Level>
+										</Levels>
+										<Styles>
+											<ignav:Style ForeColor="White" BackColor="Blue" CssClass="Hover"></ignav:Style>
+											<ignav:Style ForeColor="White" BackColor="DodgerBlue" CssClass="Selected">
+												<Padding Bottom="3px" Left="3px" Top="3px" Right="3px"></Padding>
+											</ignav:Style>
+										</Styles>
+										<ClientSideEvents DragStart="wtStandard_DragStart" NodeClick="NodeClicked"></ClientSideEvents>
+									</ignav:ultrawebtree></TD>
+							</TR>
+							<TR>
+								<TD style="WIDTH: 3px" width=3></TD>
+								<TD style="WIDTH: 430px" width=430>
+									<asp:ImageButton id=btnCreate runat="server" DESIGNTIMEDRAGDROP="68" ImageUrl="../../images/button_newfolder.gif"></asp:ImageButton><FONT face=±¼¸²>&nbsp;&nbsp;&nbsp;&nbsp;<IMG alt="" src="../../images/button_delete_ig.gif" onclick="DeleteNode(igtree_selectedNode('wtFavorite'))">&nbsp;</FONT><FONT face=±¼¸²>&nbsp;</FONT><FONT face=±¼¸²>&nbsp;&nbsp;&nbsp;<IMG alt="" src="../../images/button_rename.gif" onclick="RenameNode(igtree_selectedNode('wtFavorite'))">&nbsp;&nbsp;&nbsp;&nbsp;
+									</FONT>
+									<asp:ImageButton id=btnSave runat="server" DESIGNTIMEDRAGDROP="74" ImageUrl="../../images/button_save.gif"></asp:ImageButton><FONT face=±¼¸²>&nbsp;&nbsp;&nbsp;&nbsp;
+									</FONT>
+									<asp:ImageButton id=btnUndo runat="server" ImageUrl="../../images/button_undo.gif"></asp:ImageButton></TD>
+								<TD width="50%">
+									<asp:ImageButton id=btnStReload runat="server" ImageUrl="../../images/button_reload.gif"></asp:ImageButton></TD>
+							</TR>
+						</TABLE>
+					</TD>
+				</TR>
+			</TABLE>
+<asp:button id=btnStandardSave runat="server" Height="38px" Width="136px" BorderStyle="None" Font-Names="Verdana" BorderColor="White" BackColor="White" Text="aaa" Visible="False"></asp:button></form>
+	</body>
+</HTML>

@@ -1,0 +1,2148 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Infragistics.WebUI.WebSpellChecker</name>
+    </assembly>
+    <members>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.AutoPostBackFlags">
+            <summary>
+            AutoPostBackFlags.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.AutoPostBackFlags.SpellCheckComplete">
+            <summary>
+            Determines if a postback will occur after the SpellCheck has finished. 
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.DialogOptions">
+            <summary>
+            DialogSettings.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.DialogOptions.ToString">
+            <summary>String formatted for visual designer.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.DialogOptions.WindowWidth">
+            <summary>
+            Sets the window width (in pixels).
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.DialogOptions.WindowHeight">
+            <summary>
+            Sets the window height (in pixels).
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.DialogOptions.WindowX">
+            <summary>
+            Sets the window X position (in pixels).
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.DialogOptions.WindowY">
+            <summary>
+            Sets the window Y position (in pixels).
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.DialogOptions.Modal">
+            <summary>Whether the dialog will be modal.  </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.DialogOptions.SpellCheckText">
+            <summary>
+            The text displayed when the dialog is first opened.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.DialogOptions.ShowFinishedMessage">
+            <summary>
+            Whether to show an alert at the end of the spell check.  This alert appears after the dialog closes and only when there were originally errors in the text.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.DialogOptions.ShowNoErrorsMessage">
+            <summary>
+            Whether to show an alert stating there were no spelling errors.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.DialogOptions.AllowMultipleDialogs">
+            <summary>
+            Determines if more than one WebSpellChecker Dialog can be displayed at once.
+            </summary>
+            <remarks>When set to True, a new SpellChecker dialog will open everytime the user calls the client side method to check their spelling.  This allows for multiple dialogs opened up at the same time.  When set to False, only one dialog is allowed to be open at a time.  If the user calls the client side method to check their spelling, the dialog that is currently open, will be replaced by the new call.</remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.DialogOptions.IsEmpty">
+            <summary>
+            Check if an object contains only default values.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.SuggestionsMethod">
+            <summary>
+             The type of Suggestions that will be returned. 
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.SuggestionsMethod.HASHING_SUGGESTIONS">
+            <summary>
+            Suggestions will be determined by hashing the word.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.SuggestionsMethod.PHONETIC_SUGGESTIONS">
+            <summary>
+            Suggestions will be determined phonetically.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.LanguageType">
+            <summary>Enumeration of language types.</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.LanguageType.English">
+            <summary>English.</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.LanguageType.Dutch">
+            <summary>Dutch.</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.LanguageType.French">
+            <summary>French.</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.LanguageType.German">
+            <summary>German.</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.LanguageType.Italian">
+            <summary>Italian.</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.LanguageType.Portuguese">
+            <summary>Portuguese.</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.LanguageType.Spanish">
+            <summary>Spanish.</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.LanguageType.NotSet">
+            <summary>
+            Defaults to English
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.DefaultableBoolean">
+            <summary>
+            Three-state boolean switch.
+            </summary>
+            <remarks>
+            <p class="body">In addition to the <em>True</em> and <em>False</em>
+            states of conventional Boolean algebra, this enumeration supports
+            a third or <em>NotSet</em> state. Leaving a property of this type
+            to <em>NotSet</em> would inherit the setting made by a property
+            at a higher level.</p>
+            </remarks>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.DefaultableBoolean.False">
+            <summary>
+            Turned off.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.DefaultableBoolean.True">
+            <summary>
+            Turned on.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.DefaultableBoolean.NotSet">
+            <summary>
+            Inherit the default setting.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.ShowButton">
+            <summary>
+            How the Add Button on the WebSpellChecker Dialog will be displayed.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.ShowButton.NotSet">
+            <summary>
+            The Add Button will be displayed if the UserDictionaryFile is specified on the WebSpellChecker and that file was created successfully.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.ShowButton.Visible">
+            <summary>
+            The Add Button will always be displayed. 
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.ShowButton.Hidden">
+            <summary>
+            The Button will not be visible, but will still have a place in the UI.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.ShowButton.None">
+            <summary>
+            The Button will not be visible and will have a display of None.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.PerformanceOptions">
+            <summary>
+            PerformanceOptions.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.PerformanceOptions.ToString">
+            <summary>String formatted for visual designer.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.PerformanceOptions.ConsiderationRange">
+            <summary>
+            The size factor for words to consider for suggestions.  Lower values are faster but consider less words for suggestions.  When the property is set to a value less than 0 it will default to 80.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.PerformanceOptions.AllowCapitalizedWords">
+            <summary>
+            Whether to Allow words with all capital letters.  Performance increases marginally if set to true.  When set to "True" words that only have capitalized letters are ignored.  When set to "False", words with 
+            all capitalized letters will be treated as a normal word.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.PerformanceOptions.CheckCompoundWords">
+            <summary>
+            Whether to check for compound words.  Setting this to true is essential for languages such as German which allow for compound words.  For example: if the word is "thesewordsarejoined" when the property is set to "False" the word would be marked as misspelled.  But when set to "True" the word would be marked as spelled correctly.  However, if one of the words inside of the compound word was misspelled, the whole word would be marked as misspelled.
+            </summary>
+            <remarks>
+            	<p>Setting this to true will degrade lookup performance by a maximum of approximately 100[1-1/n] percent (where n is the number of letters in the word) for misspelt words.</p>
+            	<p>There is no performance degredation for correctly spelt words.</p>
+            	<p>On average for texts with mostly correctly spelt words the performance degredation for the Check method is roughly 25%.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.PerformanceOptions.SuggestSplitWords">
+            <summary>
+            Whether to look for connected words in suggestions.  When set to True suggestions may include joined words.  For example: if the misspelled word was helloworld, suggestions would include hello world.  Note: when turned on there will be a slight hit in performance.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.PerformanceOptions.SplitWordThreshold">
+            <summary>
+            The property coincides with SuggestSplitWords.  The value of the property determines the minimum size of each word in order for it to become a suggestion.  For example, myhouse has two words, my and house.  In order for my house to be a suggestion, the SplitWordThreshold must be set to 2 or less.  A lower threshold results in worse performance.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.PerformanceOptions.IsEmpty">
+            <summary>
+            Check if an object contains only default values.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.Settings">
+            <summary>
+            Settings.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.Settings.ResetSpellOptions">
+            <summary>
+            Resets the <b>SpellOptions</b> to its default settings.
+            </summary>
+            <remarks><p class="body">This method supports the design-time Reset command on the context menu within the Properties Editor, and is not intended for use by application developers.</p></remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.Settings.ShouldSerializeSpellOptions">
+            <summary>
+            Check if SpellOptions has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.Settings.ResetDialogOptions">
+            <summary>
+            Resets the <b>DialogOptions</b> to its default settings.
+            </summary>
+            <remarks><p class="body">This method supports the design-time Reset command on the context menu within the Properties Editor, and is not intended for use by application developers.</p></remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.Settings.ShouldSerializeDialogOptions">
+            <summary>
+            Check if DialogOptions has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.Settings.SpellOptions">
+            <summary>
+            Options that pertain to how the WebSpellChecker returns it's results.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.Settings.DialogOptions">
+            <summary>
+            Options that pertain to the dialog that the WebSpellChecker will open.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.FrameWorkSpecific.AdvancedTextBoundary">
+            <summary>Extends SimpleTextBoundary to included more advanced parsing.</summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.FrameWorkSpecific.SimpleTextBoundary">
+            <summary>A simple implementation of Java's word BreakIterator</summary>
+            <note>does not treat punctuation the same, Java's one treats ! and \s differently
+            this treats anything that isnt a letter the same.</note>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.FrameWorkSpecific.SimpleTextBoundary.theText">
+            <summary>The text being parsed.</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.FrameWorkSpecific.SimpleTextBoundary.shw">
+            <summary>Whether to simply treat hyphens as breaking chars.</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.FrameWorkSpecific.SimpleTextBoundary.lp">
+            <summary>Language rules to use when parsing.</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.FrameWorkSpecific.SimpleTextBoundary.ENGLISH">
+            <summary>English text parsing.</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.FrameWorkSpecific.SimpleTextBoundary.FRENCH">
+            <summary>French text parsing.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.FrameWorkSpecific.SimpleTextBoundary.Last">
+            <summary>
+            Return the last boundary.  The iterator's current position is set to the last boundary.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.FrameWorkSpecific.SimpleTextBoundary.SetText(System.String)">
+            <summary>Sets the text to be analysed.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.FrameWorkSpecific.SimpleTextBoundary.Following(System.Int32)">
+            <summary>
+            Return the first boundary after the specified offset.
+            </summary>
+            <param name="offset">the offset to start</param>
+            <returns>The first boundary after offset as an integer.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.FrameWorkSpecific.SimpleTextBoundary.Preceding(System.Int32)">
+            <summary>
+            Return the first boundary before the specified offset.
+            </summary>
+            <param name="offset">the offset to start</param>
+            <returns>Returns the first boundary before the offset as an integer.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.FrameWorkSpecific.SimpleTextBoundary.IsBoundaryRight(System.Int32)">
+            <summary>Whether <c>offset</c> is one place after the last character in a word.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.FrameWorkSpecific.SimpleTextBoundary.IsBoundaryLeft(System.Int32)">
+            <summary>
+            Whether <c>offset</c> is a boundary to the left of text.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.FrameWorkSpecific.SimpleTextBoundary.IsBoundary(System.Int32)">
+            <summary>
+            Determines if a character at the <c>offset</c> is a boundary.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.FrameWorkSpecific.SimpleTextBoundary.isAtNonWhiteSpace(System.Int32)">
+            <summary>
+            Returns whether the character at the position is a whitespace character.  This is contextually relevant.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.FrameWorkSpecific.SimpleTextBoundary.SeparateHyphenWords">
+            <summary>
+            Whether to treat hyphenated (-) words as separate words.  The default is false.
+            </summary>
+            <remarks>For e.g. if this is true, text like "cheap-deals" will be treated as two words, "cheap" and "deals", otherwise this will be treated as one word "cheap-deals".</remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.FrameWorkSpecific.SimpleTextBoundary.LanguageParsing">
+            <summary>The language parsing to be used.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.FrameWorkSpecific.AdvancedTextBoundary.Following(System.Int32)">
+            <summary>
+            This ignores xml tags butted between text.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.FrameWorkSpecific.AdvancedTextBoundary.Preceding(System.Int32)">
+            <summary>
+            This ignores xml tags butted between text.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.FrameWorkSpecific.AdvancedTextBoundary.isAtNonWhiteSpace(System.Int32)">
+            <summary>
+            Whether the character at the position is between a non whitespace character.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.FrameWorkSpecific.AdvancedTextBoundary.AllowXML">
+            <summary>
+            Whether to ignore XML/HTML tags.  This should be set to true for RichTextBox support, but is false by default.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.BadWord">
+            <summary>Represents a mis-spelt word in the text.</summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.WordOccurrence">
+            <summary>Represents a word in the text.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WordOccurrence.GetStartPosition">
+            <summary>Gets the position of the start of this word in the main text.</summary>
+            <returns>Integer position in the text where this word starts.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WordOccurrence.GetEndPosition">
+            <summary>Gets the position of the end of this word in the main text.</summary>
+            <returns>Integer position in the text where this word ends</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WordOccurrence.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>Constructs a BadWord instance.</summary>
+            <param name="word">the word String that is misspelt</param>
+            <param name="caretStart">the position in the original text</param>
+            <param name="caretEnd">the end position in the text</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WordOccurrence.GetWord">
+            <summary>Gets the String of this bad word.</summary>
+            <returns>String in this BadWord.</returns>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WordOccurrence.StartPosition">
+            <summary>Gets the position of the start of this word in the main text.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WordOccurrence.EndPosition">
+            <summary>Gets the position of the end of this word in the main text.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WordOccurrence.Word">
+            <summary>Gets the string of this bad word.</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.BadWord.REASON_SPELLING">
+            <summary>BadWord reason, incorrect spelling.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.BadWord.GetReason">
+            <summary>Gets the reason that this is a bad word.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.BadWord.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>Constructs a BadWord (REASON_SPELLING) instance.</summary>
+            <param name="word">the word String that is misspelt</param>
+            <param name="caretStart">the position in the original text</param>
+            <param name="caretEnd">the end position in the text</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.BadWord.#ctor(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>Constructs a BadWord instance.</summary>
+            <param name="word">the word String that is misspelt</param>
+            <param name="caretStart">the position in the original text</param>
+            <param name="caretEnd">the end position in the text</param>
+            <param name="reason">the reason this is a bad word,  REASON_SPELLING</param>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.BadWord.Reason">
+            <summary>Gets the reason that this is a bad word.</summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.Event.ChangeWordEventArgs">
+            <summary>Holds data for the ChangeWord event.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.Event.ChangeWordEventArgs.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            Creates a new ChangeWordEventArgs.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.Event.ChangeWordEventArgs.OldWord">
+            <summary>
+            The word being replaced.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.Event.ChangeWordEventArgs.NewWord">
+            <summary>
+            The new word.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.Event.ChangeWordEventArgs.Index">
+            <summary>
+            The index of the word in the text.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter">
+            <summary>Abstract base implementation of ICheckerEngine, override chosen members for desired functionality.</summary>
+            <remarks>None of the members contained in this class do anything.</remarks>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.ICheckerEngine">
+            <summary>Defines the interface required for a class to be used as a checker engine</summary>
+            <remarks>This is the interface which any checker engine must have, by implementing this interface any object can be
+            used to parse text and identify 'bad words'.
+            It is not necessary to functionally implement all members, for this reason an abstract empty implementation class is provided (CheckerEngineAdapter) which can be extended and overridden for desired functionality.
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.Check(System.String)">
+            <summary>Checks the text for errors.</summary>
+            <exception cref="T:System.ArgumentNullException">if text parameter is null.</exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.LookUp(System.String)">
+            <summary>
+            Looks up a <c>word</c> in the dictionary and returns true if it is in there.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.NextBadWord">
+            <summary>Gets the next bad word in the list that was identified by Check.</summary>
+            <remarks>Check must be called before this method.</remarks>
+            <returns>The next BadWord object from the text.  This must return null (C#) or nothing (VB.NET) when no more bad words exist.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.FindSuggestions">
+            <summary>Returns an ArrayList of Strings that are suitable suggestions for the current bad word (that is, the one last returned by NextBadWord()).</summary>
+            <remarks>If no suggestions can be found, this should return an empty ArrayList.  This method should be thread safe if operating with RapidSpell Desktop.</remarks>
+            <exception cref="T:Infragistics.WebUI.WebSpellChecker.NoCurrentBadWordException">If NextBadWord() hasn't been run first AND found an erroneous word.</exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.SetIncludeUserDictionaryInSuggestions(System.Boolean)">
+            <summary>Sets whether to include the user dictionary in suggestions taken from this engine.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.SetUserDictionary(Infragistics.WebUI.WebSpellChecker.UserDictionary)">
+            <summary>Sets the UserDictionary object to be used as a user dictionary source.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.SetUserDictionary(System.String)">
+            <summary>Sets the UserDictionary file path to be used as a user dictionary source.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.AddWord(System.String)">
+            <summary>Adds a word to the user dictionary, if it exists.</summary>
+            <remarks>Should return true if the word was added successfully, false otherwise.</remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.RemoveWord(System.String)">
+            <summary>
+            Removes a word from the user dictionary, if it exists.
+            </summary>
+            <remarks>Should return true if the word was successfully removed, false otherise.</remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.SetSuggestionsMethod(Infragistics.WebUI.WebSpellChecker.SuggestionsMethod)">
+            <summary>Sets the suggestions method, where method is an integer identifier.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.SetAllowCapitalizedWords(System.Boolean)">
+            <summary>Sets whether to ignore capitalized words.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.SetConsiderationRange(System.Int32)">
+            <summary>Sets the breadth of the suggestions search.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.SetSeparateHyphenWords(System.Boolean)">
+            <summary>Sets whether to separate words with hyphens in them into separate words.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.SetPosition(System.Int32)">
+            <summary>Sets the pointer position for the <c>NextBadWord</c> iterator.</summary>
+            <remarks>
+            Further calls to <c>NextBadWord</c> will look for the next bad word from position <c>pos</c>.
+            If position &gt; the text length is set to the text length.
+            If position &lt; 0, it is set to zero.
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.GetIncludeUserDictionaryInSuggestions">
+            <summary>
+            Gets whether the user dictionary should be used in finding suggestions for misspelt words.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.GetAllowCapitalizedWords">
+            <summary>
+            Gets whether to ignore words that start with capital letters.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.GetConsiderationRange">
+            <summary>
+            Gets the factor for words to consider for suggestions.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.ChangeBadWord(System.String)">
+            <summary>Changes the current bad word to <c>newWord</c> in the text.</summary>
+            <param name="newWord">replaces the current misspelt word.</param>
+            <returns>void</returns>
+            <exception cref="T:Infragistics.WebUI.WebSpellChecker.NoCurrentBadWordException">if nextBadWord() hasn't been run first AND found an erroneous word.</exception>
+            <exception cref="T:System.ArgumentNullException">if newWord parameter is null.</exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.IgnoreAll(System.String)">
+            <summary>
+            Marks <c>word</c> to be ignored in the rest of the text.
+            </summary>
+            <param name="word">to ignore</param>
+            <returns>void</returns>
+            <exception cref="T:System.ArgumentNullException">if word parameter is null.</exception>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.TextBoundary">
+            <summary>The AdvancedTextBoundary class to use to parse words.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.AllowXML">
+            <summary>Whether to ignore XML tags in the text.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.userDictionary">
+            <summary>The user dictionary, this should be null (C#) or nothing (VB.NET) if no user dictionary is being used.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.DictFile">
+            <summary>
+            The Dictionary to be used.  If none is specified, then the English Dictionary will be used.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.LanguageParser">
+            <summary>The type of language parsing to use.</summary>
+            <remarks>E.g. If the dictionary is set to French, you should use the French parser.</remarks>
+            <returns>This implementation always returns ENGLISH.</returns>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.CheckHyphenatedText">
+            <summary>
+            Whether to 'look into' text with hyphens (-), if the word has hyphens in it and CheckHyphenatedText is set true (default), the parts of the text around the hyphens will be checked individually.
+            </summary>
+            <remarks>E.g. "socio-economic" will be checked as "socio" and "economic".</remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.CheckCompoundWords">
+            <summary>Whether to check for compound words, setting this to true is essential for languages such as German which 
+            allow for compound words.</summary>
+            <remarks>If this=false then LookUp("thesewordsarejoined") = false
+            <p>If this=true then LookUp("thesewordsarejoined") = true</p>
+            <p>If this=false then LookUp("abcdef") = false</p>
+            <p>If this=true then LookUp("abcdef") = false</p>
+            <p>Setting this to true will degrade lookup performance</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.SuggestSplitWords">
+            <summary>Whether to look for connected words in suggestions.</summary>
+            <remarks>if this=true then suggestions may include joined words.
+            <p>Eg; suggestions for "myhouse" will include "my house"</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.AllowWordsWithDigits">
+            <summary>Whether to ignore words with numbers in them (eg. A10 or 7-11).</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.CurrentBadWord">
+            <summary>Gets the current bad word (last returned by NextBadWord).</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.AllowMixedCase">
+            <summary>
+            Whether to allow words spelt with mixed case, e.g. "MIxEd."
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.AllowCaseInsensitiveSuggestions">
+            <summary>Whether to allow suggestions for correctly spelled words with mix case.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.AllowAnyCase">
+            <summary>
+            Whether to allow words spelt with any case, e.g. "africa" instead of "Africa."  This is more relaxed than AllowMixedCase.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.ICheckerEngine.SplitWordThreshold">
+            <summary>
+            The property coincides with SuggestSplitWords.  The value of the property determines the minimum size of each word in order for it to become a suggestion.  For example, "myhouse" has two words "my" and "house" in order for "my house" to be a suggestion, the SplitWordThreshold must be set to 2 or smaller. A lower threshold results in worse performance.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.Check(System.String)">
+            <summary>Checks the text for errors.</summary>
+            <exception cref="T:System.ArgumentNullException">if text parameter is null.</exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.NextBadWord">
+            <summary>Gets the next bad word in the list that was identified by Check.</summary>
+            <remarks>Check must be called before this method.</remarks>
+            <returns>This implementation always returns null.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.FindSuggestions">
+            <summary>Returns an ArrayList of Strings that are suitable suggestions for the current bad word (that is, the one last returned by NextBadWord()).</summary>
+            <remarks>If no suggestions can be found, this should return an empty ArrayList.  This method should be thread safe if operating with RapidSpell Desktop.</remarks>
+            <exception cref="T:Infragistics.WebUI.WebSpellChecker.NoCurrentBadWordException">If NextBadWord() hasn't been run first AND found an erroneous word.</exception>
+            <returns>An empty ArrayList.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.SetIncludeUserDictionaryInSuggestions(System.Boolean)">
+            <summary>Sets whether to include the user dictionary in suggestions taken from this engine.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.SetUserDictionary(Infragistics.WebUI.WebSpellChecker.UserDictionary)">
+            <summary>Sets the UserDictionary object to be used as a user dictionary source.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.SetUserDictionary(System.String)">
+            <summary>Sets the UserDictionary file path to be used as a user dictionary source.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.AddWord(System.String)">
+            <summary>Adds a word to the user dictionary, if it exists.</summary>
+            <remarks>Should return true if the word was added successfully, false otherwise.</remarks>
+            <returns>This implementation always returns false.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.RemoveWord(System.String)">
+            <summary>
+            Removes a word from the user dictionary, if it exists.
+            </summary>
+            <remarks>Should return true if the word was successfully removed, false otherise.</remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.SetSuggestionsMethod(Infragistics.WebUI.WebSpellChecker.SuggestionsMethod)">
+            <summary>Sets the suggestions method, where method is an integer identifier.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.SetAllowCapitalizedWords(System.Boolean)">
+            <summary>Sets whether to ignore capitalized words.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.SetConsiderationRange(System.Int32)">
+            <summary>Sets the breadth of the suggestions search.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.SetSeparateHyphenWords(System.Boolean)">
+            <summary>Sets whether to separate words with hyphens in them into separate words.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.SetPosition(System.Int32)">
+            <summary>Sets the pointer position for the <c>NextBadWord</c> iterator.</summary>
+            <remarks>Further calls to <c>NextBadWord</c> will look for the next bad word from position <c>pos</c>.
+            If position &gt; the text length it is set to the text length.
+            If position &lt; 0, it is set to zero.</remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.GetIncludeUserDictionaryInSuggestions">
+            <summary>
+            Gets whether the user dictionary should be used in finding suggestions for misspelt words.
+            </summary>
+            <returns>This implementation always returns false.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.GetAllowCapitalizedWords">
+            <summary>
+            Gets whether to ignore words that start with capital letters.
+            </summary>
+            <returns>This implementation always returns false.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.GetConsiderationRange">
+            <summary>
+            Gets the factor for words to consider for suggestions.
+            </summary>
+            <returns>This implementation always returns 0.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.ChangeBadWord(System.String)">
+            <summary>Changes the current bad word to <c>newWord</c> in the text.</summary>
+            <param name="newWord">replaces the current misspelt word.</param>
+            <returns>void</returns>
+            <exception cref="T:Infragistics.WebUI.WebSpellChecker.NoCurrentBadWordException">if nextBadWord() hasn't been run first AND found an erroneous word.</exception>
+            <exception cref="T:System.ArgumentNullException">if newWord parameter is null.</exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.IgnoreAll(System.String)">
+            <summary>
+            Marks a <c>word</c> to be ignored in the rest of the text.
+            </summary>
+            <param name="word">to ignore</param>
+            <returns>void</returns>
+            <exception cref="T:System.ArgumentNullException">if word parameter is null.</exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.LookUp(System.String)">
+            <summary>
+            Looks up a <c>word</c> in the dictionary and returns true if it is in there.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.TextBoundary">
+            <summary>The AdvancedTextBoundary class to use to parse words.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.AllowXML">
+            <summary>Whether to ignore XML tags in the text.</summary>
+            <returns>This property is always false.</returns>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.userDictionary">
+            <summary>The user dictionary, this should be null (C#) or nothing (VB.NET) if no user dictionary is being used.</summary>
+            <returns>This implementation always returns null.</returns>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.LanguageParser">
+            <summary>The type of language parsing to use.</summary>
+            <remarks>E.g. If the dictionary is set to French, you should use the French parser.</remarks>
+            <returns>This implementation always returns webSpellChecker.LanguageParserType.ENGLISH.</returns>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.CheckHyphenatedText">
+            <summary>
+            Whether to 'look into' text with hyphens (-), if the word has hyphens in it.  If CheckHyphenatedText is set true (default), the parts of the text around the hyphens will be checked individually.
+            </summary>
+            <remarks>E.g. "socio-economic" will be checked as "socio" and "economic".</remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.CheckCompoundWords">
+            <summary>
+            Whether to check for compound words.  Setting this to true is essential for languages such as German which allow for compound words.
+            </summary>
+            <remarks>
+            If this=false then LookUp("thesewordsarejoined") = false
+            <p>If this=true then LookUp("thesewordsarejoined") = true</p>
+            	<p>If this=false then LookUp("abcdef") = false</p>
+            	<p>If this=true then LookUp("abcdef") = false</p>
+            	<p>Setting this to true will degrade lookup performance.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.SuggestSplitWords">
+            <summary>Whether to look for connected words in suggestions.</summary>
+            <remarks>
+            If this=true then suggestions may include joined words.
+            <p>Eg; suggestions for "myhouse" will include "my house"</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.AllowWordsWithDigits">
+            <summary>Whether to ignore words with numbers in them (eg. A10 or 7-11).</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.CurrentBadWord">
+            <summary>Gets the current bad word (last returned by NextBadWord).</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.AllowMixedCase">
+            <summary>
+            Whether to allow words spelt with mixed case, e.g. "MIxEd"
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.AllowCaseInsensitiveSuggestions">
+            <summary>Whether to allow suggestions for correctly spelled words with mix case.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.AllowAnyCase">
+            <summary>
+            Whether to allow words spelt with any case, e.g. "africa" instead of "Africa".  This is more relaxed than AllowMixedCase.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.CheckerEngineAdapter.SplitWordThreshold">
+            <summary>
+            The property coincides with SuggestSplitWords.  The value of the property determines the minimum size of each word in order for it to become a suggestion.  For example, "myhouse" has two words, "my" and "house."  In order for "my house" to be a suggestion, the SplitWordThreshold must be set to 2 or smaller. A lower threshold results in worse performance.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.CultureText">
+            <summary>Contains the text for the checker in different cultures</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.DictFile.WordList">
+            <summary>WordList or ReverseList</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.DictFile.ReverseList">
+            <summary>WordList or ReverseList</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.DictFile.#ctor(System.String)">
+            <summary>
+            Creates a new DictFile object working on the file in dictFilePath.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.DictFile.ReadList(System.Int32)">
+            <summary>
+            Returns a byte array of the words in the list of the specified type.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.DictFile.GetDecodedFileStream">
+            <summary>
+            Return the decoded file stream.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.DictFile.GetStreamDimensions(System.Int32)">
+            <summary>
+            Gets the start and length of the wordlist.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.NoCurrentBadWordException">
+            <summary>Thrown if <c>NextBadWord</c> has not been run first and found a mis-spelt word.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.NoCurrentBadWordException.#ctor">
+            <summary>
+            Creates a new instance with no message.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.NoCurrentBadWordException.#ctor(System.String)">
+            <summary>
+            Creates a new instance with mesg as a message.
+            </summary>
+            <param name="mesg">Useful text string describing the exception.</param>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.Permuter">
+            <summary>Gets permutations (stores small n=1,2,3,4,5 for quick access), this is used to find anagrams for suggestions</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.Permuter.#ctor(System.Int32)">
+            <summary>Generates all permutations of NN numbers.</summary>
+            <remarks>E.g. if NN = 3 this will generate 123,132,213,231,312,321 (not in typographic order, but transposition order).</remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.Permuter.GetPermutation(System.Int32)">
+            <summary>
+            Returns a permutation of a zero based array at index p.  If p&gt; number of permutations stored this will return the last permutation in the set.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.Permuter.GetNumberOfPermutations">
+            <summary>
+            Gets total number of permutations.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.PhoneticsProcessor">
+            Generates the phonetic (sounds like) code for a word.
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.PhoneticsProcessor.MetaPhone(System.String)">
+            @param txt the word to find the phonetic code for
+            @return String the phonetic code for the txt
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.PhoneticsProcessor.HasSameMetaPhone(System.String,System.String)">
+            @param txt word to check if has same metaphone as
+            @param metaphone the meta phone to compare with
+            @return boolean true if txt has same metaphone
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.SpellChecker">
+             <summary>Spell checker engine, checks a text string for spelling errors and makes suggested corrections.</summary>
+             <remarks>  This is a non-GUI component, suitable for the business/logic layer of your application.
+               You would use this component in web server based applications.
+               This component can be used in 2 different ways.  The most common usage, in an iterative fashion is detailed below, but
+             it may also be used on a query by query basis.
+               To use this component in an iterative way you must first call <c>Check</c> to set the text to check and 
+             then iterate through 
+             <c>NextBadWord()</c> to identify misspelt words.  <c>NextBadWord</c> will return
+             a BadWord object and internally locate the
+             the misspelt word in the text, then you can call <c>FindSuggestions</c>
+             which will return a ArrayList of suggestions as String objects.  You may also call <c>ChangeBadWord(replacement)</c>
+             to replace that current misspelt word in the text.
+              <c>NextBadWord()</c> will return null when the text has been checked. <c>GetAmendedText</c> returns the current
+             state of the text with corrections.
+              
+             Calling <c>ChangeBadWord</c> or <c>FindSuggestions</c> before <c>NextBadWord</c> has been called
+             and returned a BadWord (i.e. not null) will result in a <see cref="T:Infragistics.WebUI.WebSpellChecker.NoCurrentBadWordException"/>.
+            </remarks>
+             <example>
+               Check some text, find suggestions and replace mis-spelt words with "replacement". 
+            	
+              <code>
+            	webSpellChecker c = new webSpellChecker(); 
+            	BadWord badWord; 
+            	ArrayList suggestions; 
+            
+            	 //check some text.  
+            	c.Check("This is sume text."); 
+             
+            	//iterate through all bad words in the text.  
+            	while((badWord = c.NextBadWord())!=null){ 
+             
+            		Console.WriteLine(badWord.GetWord() + "- is not spelt correctly. Suggestions:"); 
+             
+            		try{ 
+            			//get suggestions for the current bad word.  
+            			suggestions = c.FindSuggestions(); 
+             
+            			//display all suggestions.  
+            			for(int i=0; i&lt;suggestions.Count; i++){
+            				Console.WriteLine(suggestions[i]);
+            			}
+             
+            			//change the bad word in the text with "replacement".  
+            			c.ChangeBadWord("replacement"); 
+             
+            		} catch (NoCurrentBadWordException e){ 
+            			Console.WriteLine(e); 
+            		} 
+             
+            	} 
+            	Console.WriteLine(c.GetAmendedText());  
+            	</code>
+               </example>
+            
+            <remarks><para>
+             The second way to use this component is simply to query words yourself using <c>LookUp(word)</c> to check if <c>word</c>
+             is in the lexicon/dictionary and <c>FindSuggestions(word)</c> to find spelling suggestions for <c>word</c>.
+            </para>
+            </remarks>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.SpellChecker.wordStart">
+            <summary>The start index of the current word being checked/parsed.</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.SpellChecker.wordEnd">
+            <summary>The end index of the current word being checked/parsed.</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.SpellChecker.ignoreList">
+            ArrayList of words to be ignored.
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.SpellChecker.badWordList">
+            ArrayList of mis-spelt words in the text.
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.SpellChecker.theText">
+            a copy of the text being checked.
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.SpellChecker.wordIterator">
+            word iterator
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.SpellChecker.userDicList">
+            user dictionary word list
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.SpellChecker.dontSuggest">
+            <summary>Don't suggest words in this array (swear words).</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.SpellChecker._userDictionary">
+             <summary>The UserDictionary being used.</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.SpellChecker.compare">
+            The compare object, used to sort suggestions by closeness to query word 
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.SpellChecker.OPTIMIZE_FOR_SPEED">
+            <summary>Indicator for optimization (OPTIMIZE_FOR_SPEED only works with PHONETIC_SUGGESTIONS method).</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.SpellChecker.OPTIMIZE_FOR_MEMORY">
+            <summary>Indicator for optimization (OPTIMIZE_FOR_SPEED only works with PHONETIC_SUGGESTIONS method).</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.SpellChecker.overrideEval">
+            used by GUI to override the change word disability
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.Finalize">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.Dispose(System.Boolean)">
+            <summary>
+            Disposes of resources.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.Dispose">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.SetSuggestionsMethod(Infragistics.WebUI.WebSpellChecker.SuggestionsMethod)">
+            <summary>
+            Sets the suggestions method to use.  Either PHONETIC_SUGGESTIONS or HASHING_SUGGESTIONS.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.GetSuggestionsMethod">
+            <summary>
+            Gets the suggestions method to use.  Either PHONETIC_SUGGESTIONS or HASHING_SUGGESTIONS.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.SetIncludeUserDictionaryInSuggestions(System.Boolean)">
+            <summary>
+            Sets whether the user dictionary should be used in finding suggestions for misspelt words.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.GetIncludeUserDictionaryInSuggestions">
+            <summary>
+            Gets whether the user dictionary should be used in finding suggestions for misspelt words.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.SetAllowCapitalizedWords(System.Boolean)">
+            <summary>
+            Sets whether to ignore words with capital letters.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.GetAllowCapitalizedWords">
+            <summary>
+            Gets whether to ignore words with capital letters.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.SetConsiderationRange(System.Int32)">
+            <summary>
+            Sets the factor for words to consider for suggestions.  Lower values are faster but consider less words for suggestions.  The default is 80.  If w &lt;= 1 this method won't do anything.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.GetConsiderationRange">
+            <summary>
+            Gets the factor for words to consider for suggestions.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.SetSeparateHyphenWords(System.Boolean)">
+            <summary>
+            Sets whether to treat hyphenated (-) words as separate words.  The default is false.
+            </summary>
+            <remarks>For e.g. if this is true text like "cheap-deals" will be treated as two words, "cheap" and "deals."  Otherwise this will be treated as one word, "cheap-deals".  Also see CheckHyphenatedText.</remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.GetSeparateHyphenWords">
+            <summary>
+            Gets whether to treat hyphenated (-) words as separate words.  The default is false.
+            </summary>
+            <remarks>For e.g. if this is true text like "cheap-deals" will be treated as two words "cheap" and "deals", otherwise this will be treated as one word, "cheap-deals".</remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.ReadWordListStream(System.Collections.ArrayList,System.Int32,Infragistics.WebUI.WebSpellChecker.DictFile,System.String)">
+            <summary>
+            Reads list from the stream.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.AddWord(System.String)">
+            <summary>
+            Adds a <c>word</c> to the user dictionary (if it has been specified).
+            </summary>
+            <param name="word">String to add to user dictionary, if it is being used.</param>
+            <returns>Boolean, true if the word is now in the user dictionary, false if the word could not be added to the user dictionary.</returns>
+            <exception cref="T:System.ArgumentNullException">If word parameter is null.</exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.NextBadWord">
+            <summary>
+            Returns the next mis-spelt word in the text as a BadWord object.
+            </summary>
+            <returns>Keyoti.RapidSpell.BadWord or null if there are no more bad words.</returns>
+            @see Keyoti.rapidSpell.BadWord
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.ChangeBadWord(System.String)">
+            <summary>
+            Changes the current bad word to the <c>newWord</c> in the text.
+            </summary>
+            <param name="newWord">replaces the current misspelt word.</param>
+            <returns>void</returns>
+            <exception cref="T:Infragistics.WebUI.WebSpellChecker.NoCurrentBadWordException">if nextBadWord() hasn't been run first AND found an erroneous word.</exception>
+            <exception cref="T:System.ArgumentNullException">if newWord parameter is null.</exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.Check(System.String,System.Int32)">
+            <summary>
+            Checks text for spelling correctness.  From startPosition in text, mis-spelt words can be accessed through <c>nextBadWord</c>.
+            </summary>
+            <remarks>The property startPosition should be &gt;=0 but if it is &lt; 0 it is set = 0.</remarks>
+            <param name="text">the text to be checked</param>
+            <param name="startPosition">the position in the text to begin checking from</param>
+            <returns>void</returns>
+            <exception cref="T:System.ArgumentNullException">if text parameter is null.</exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.convertHtmlEntities(System.String)">
+            <summary>
+            Converts HTML entity codes to their Unicode characters.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.Check(System.String)">
+            <summary>
+            Checks text for spelling correctness.  From the beginning of text, mis-spelt words can be accessed through <c>nextBadWord</c>.
+            </summary>
+            <param name="text">to spell check.</param>
+            <returns>void</returns>
+            <exception cref="T:System.ArgumentNullException">if text parameter is null.</exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.FindSuggestions">
+            <summary>
+            Gets an enumeration of String suggestions for spellings of the current bad word.
+            </summary>
+            <returns>ArrayList of String suggestions for the current bad word.</returns>
+            <exception cref="T:Infragistics.WebUI.WebSpellChecker.NoCurrentBadWordException">If NextBadWord() hasn't been run first AND found an erroneous word.</exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.FindSuggestions(System.String)">
+            <summary>
+            Gets an enumeration of String suggestions for the word.
+            </summary>
+            <param name="word">the word to check the spelling of.</param>
+            <returns>ArrayList of String suggestions for the word.</returns>
+            <exception cref="T:System.ArgumentNullException">if word parameter is null.</exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.FindSuggestions(System.String,System.Boolean)">
+            <summary>
+            Gets an enumeration of String suggestions for the word.
+            </summary>
+            <param name="word">the word to check the spelling of.</param>
+            <param name="searchLowerCase">whether to return suggestions for word in a lower case form (if it's capitalized).</param>
+            <returns>ArrayList of String suggestions for the word.</returns>
+            <exception cref="T:System.ArgumentNullException">if word parameter is null.</exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.GetAmendedText">
+            <summary>
+            Returns the original text sent to check() but with any alterations made through <c>change</c>.
+            </summary>
+            <returns>String of the text after corrections, null if there is no text.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.IgnoreAll(System.String)">
+            <summary>
+            Marks <c>word</c> to be ignored in the rest of the text.
+            </summary>
+            <param name="word">to ignore</param>
+            <returns>void</returns>
+            <exception cref="T:System.ArgumentNullException">if word parameter is null.</exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.LookUp(System.String)">
+            <summary>
+            Checks if the query is in the main dictionary or user.
+            </summary>
+            <remarks>This method is inconsiderate of the words in IgnoreList.</remarks>
+            <param name="query">the word to check spelling of</param>
+            <returns>True if spelt correctly, false if it is not in the dictionary.</returns>
+            <exception cref="T:System.ArgumentNullException"> if query parameter is null.</exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.FindCompoundWords(System.String,System.Collections.IList)">
+            <summary>
+            Finds the compound words in the <c>text</c> and puts them in <c>subwords</c>.  Set <c>subwords</c> to null/nothing to just find if the <c>text</c> has a compound word formation.
+            </summary>
+            <remarks>
+            Only adds words to the list if all are valid.  In other words, this will not find all words that are part of the <c>text</c>, but only the words that all make up the <c>text</c>.
+            <p>E.g. "catchmentarea" has words "catchment" and "area" but not "cat", "me" etc.</p>
+            The order of the words in the list is the reverse of their order in the <c>text</c>.
+            </remarks>
+            <param name="text">The text to find compound words in</param>
+            <param name="subwords">A list that formative sub-words will be added to, can be null/nothing.</param>
+            <returns>True if the <c>text</c> is entirely formed from compound words, False if not.</returns>
+            <exception cref="T:System.ArgumentNullException">if text is null</exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.FindSplitWords(System.String,System.Collections.IList)">
+            <summary>
+            Finds correctly spelled words in the <c>text</c> and puts them in <c>subwords</c>.  Set <c>subwords</c> to null/nothing to just find if the <c>text</c> has compound word formation.
+            </summary>
+            <remarks>
+            Only adds words to the list if all are valid.  In other words, this will not find all words that are part of the <c>text</c>, but only the words that all make up the <c>text</c>.
+            <p>E.g. "catchmentarea" has words "catchment" and "area" but not "cat", "me" etc.</p>
+            The order of the words in the list is the reverse of their order in the <c>text</c>.
+            </remarks>
+            <param name="text">The text to find compound words in</param>
+            <param name="subwords">A list that formative sub-words will be added to, can be null/nothing.</param>
+            <returns>True if the <c>text</c> is entirely formed from compound words, False if not.</returns>
+            <exception cref="T:System.ArgumentNullException">if text is null</exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.FindAnagrams(System.String,System.Collections.IList)">
+            <summary>Finds anagrams of <c>word</c> and puts them in <c>anagrams</c> if not already present.</summary>
+            <remarks></remarks>
+            <param name="word">The word to find anagrams of</param>
+            <param name="anagrams">A list that anagrams will be added to.</param>
+            <exception cref="T:System.ArgumentNullException">if word is null/nothing</exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.SetUserDictionary(System.String)">
+            <summary>
+            Set the user dictionary to be used.
+            </summary>
+            <remarks>If the userDictionary can not be created/read it will be ignored.</remarks>
+            <param name="userDictionaryFile">a file to be used as a user dictionary</param>
+            <exception cref="T:System.ArgumentNullException">if userDictionaryFile is null</exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.SetUserDictionary(Infragistics.WebUI.WebSpellChecker.UserDictionary)">
+            <summary>
+            Set the user dictionary to be used.
+            </summary>
+            <remarks>If the userDictionary can not be created/read it will be ignored.</remarks>
+            <param name="userDictionary">a UserDictionary object representing a user dictionary</param>
+            <exception cref="T:System.ArgumentNullException">if userDictionary is null.</exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.MakeCap(System.String)">
+            Capitalises first letter of word
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.LookUpMainDictionary(System.String)">
+            <summary>
+            Checks if the query is in the word dictionary.  Returns true if it doesnt start with a letter or apostrophe.
+            </summary>
+            <param name="query">the word to check spelling of</param>
+            <returns>Boolean true if spelt correctly, false if not in the dictionary.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.LookUpUserDictionary(System.String)">
+            Look up the query in the user dictionary if it exists 
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.GetPreviousWord">
+            Returns the previous word in the text, and moves word pointers in process.
+            <returns>String the next word in the text</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.GetNextWord">
+            <summary>Returns the next word in the text.</summary>
+            <returns>String of the next word in the text.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.Flagged(System.String)">
+            Checks if word has been flagged as mis-spelt by the check() method 
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.PreCheck">
+            Scan theText and record all mis-spelt words in badWordList and return the word pointers to the start.
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.SetPosition(System.Int32)">
+            <summary>Sets the pointer position for the <c>NextBadWord</c> iterator.</summary>
+            <remarks>Further calls to <c>NextBadWord</c> will look for the next bad word from position <c>pos</c>.
+            If position &gt; the text length it is set to the text length.
+            If position &lt; 0, it is set to zero.</remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.GeneratePhoneticList">
+            Generate a big array of phonetic codes for the dictionary, this will save reprocessing redundently,
+            at the expense of memory.
+        </member>
+        <member name="E:Infragistics.WebUI.WebSpellChecker.SpellChecker.ChangeWord">
+            <summary>Change word event, fired when a word is changed.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellChecker.SplitWordThreshold">
+            <summary>
+            The property coincides with SuggestSplitWords.  The value of the property determines the minimum size of each word in order for it to become a suggestion.  For example, "myhouse" has two words, "my" and "house."  In order for "my house" to be a suggestion, the SplitWordThreshold must be set to 2 or smaller.  A lower threshold results in worse performance.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellChecker.TextBoundary">
+            <summary>The AdvancedTextBoundary class to use to parse words.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellChecker.CheckCompoundWords">
+            <summary>
+            Whether to check for compound words.  Setting this to true is essential for languages such as German which allow for compound words.
+            </summary>
+            <remarks>
+            If this=false then LookUp("thesewordsarejoined") = false
+            <p>If this=true then LookUp("thesewordsarejoined") = true</p>
+            	<p>If this=false then LookUp("abcdef") = false</p>
+            	<p>If this=true then LookUp("abcdef") = false</p>
+            	<p>Setting this to true will degrade lookup performance by a maximum of approximately 100[1-1/n] percent (where n is the number of letters in the word) for misspelt words.  There is no preformance degredation for correctly spelt words.  On average for texts with mostly correctly spelt words the performance degredation for the Check method is roughly 25%.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellChecker.SuggestSplitWords">
+            <summary>Whether to look for connected words in suggestions.</summary>
+            <remarks>
+            If this=true then suggestions may include joined words.
+            <p>E.g. suggestions for "myhouse" will include "my house"</p>
+            Setting this to true (default) has a slight performance impact.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellChecker.AllowXML">
+            <summary>
+            Whether to ignore XML/HTML tags.  This should be set to true for RichTextBox support, but is false by default.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellChecker.CheckHyphenatedText">
+            <summary>
+            Whether to 'look into' text with hyphens (-).  If the word has hyphens in it and CheckHyphenatedText is set to true (default), the parts of the text around the hyphens will be checked individually.
+            </summary>
+            <remarks>E.g. "socio-economic" will be checked as "socio" and "economic".</remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellChecker.LanguageParser">
+            <summary>The type of language parsing to use.</summary>
+            <remarks>E.g. if the dictionary is set to French, you should use the French parser.</remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellChecker.ShareDictionary">
+            <summary>
+            Whether to share the dictionary in memory across all instances of webSpellChecker (false by default).
+            </summary>
+            <remarks>
+            Setting this to true will lower memory usage if multipe instances of webSpellChecker are in use at once, but will mean that only one dictionary may be used at one time.  This does not affect user dictionaries.
+            <p>Note that all instances with this set to true should use the same dictionary.  This property must be set before any spell checking begins.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellChecker.AllowMixedCase">
+            <summary>
+            Whether to allow words spelt with mixed case, e.g. "MIxEd" - also see AllowAnyCase.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellChecker.AllowCaseInsensitiveSuggestions">
+            <summary>
+            Whether to allow suggestions for correctly spelled words with mixed case.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellChecker.AllowAnyCase">
+            <summary>
+            Whether to allow words spelt with incorrect case, e.g. "africa", instead of "Africa."  This is more relaxed than AllowMixedCase.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellChecker.FindCapitalizedSuggestions">
+            <summary>
+            Whether to look for capitalized suggestions.  Note this will slow FindSuggestions down by about 7 times.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellChecker.userDictionary">
+             <summary>The UserDictionary being used, may be null if no user dictionary is being used.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellChecker.IgnoreList">
+            <summary>
+            The words to ignore.  Note this list is changed by IgnoreAll.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellChecker.AllowWordsWithDigits">
+            <summary>Whether to ignore words with numbers in them (eg. A10 or 7-11).</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellChecker.CurrentBadWord">
+            <summary>Gets the current bad word (last returned by NextBadWord).</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellChecker.IgnoreRtfCodes">
+            <summary>Sets whether this should ignore Rtf (or any escaped) codes in the text.</summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.SpellChecker.ChangeWordEventHandler">
+            <summary>Change word event handler delegate.</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.SpellChecker.CompareL.topWord">
+            The word the would go first on the list 
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.SpellChecker.SizeSorter">
+            Sort by length of string.
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.SpellChecker.ReverseSorter">
+            Sort by length of string.
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.SpellChecker.ResourceDecoder">
+            The resource decoder, which takes the byte array from wordlist and decodes it.
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.ResourceDecoder.DecodeWordList(System.Collections.ArrayList,System.Byte[])">
+            Decode byte array in to list, returns number of words in list, is thread safe
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellChecker.ResourceDecoder.DecodeWordList(System.Collections.ArrayList,System.Byte[],System.String)">
+            Decode byte array in to list, returns number of words in list, is thread safe
+            encoding is either "UTF8" or "Unicode"
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.UserDictionary">
+            <summary>Represents the UserDictionary</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.UserDictionary.dictFile">
+            <summary>
+            The file containing the dictionary.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.UserDictionary.valid">
+            Whether the file is valid 
+        </member>
+        <member name="F:Infragistics.WebUI.WebSpellChecker.UserDictionary.wordList">
+            array holding all lines in dict.
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.UserDictionary.#ctor">
+            <summary>
+            Constructs an invalid UserDictionary.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.UserDictionary.#ctor(System.String)">
+            <param name="userDictionaryFile">the file used for a user dictionary.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.UserDictionary.IsValid">
+            <summary>Returns whether the dictionary file is valid.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.UserDictionary.AddWord(System.String)">
+            <summary>
+            Tries to add <c>word</c> to this dictionary.
+            </summary>
+            <param name="word">String containing the new word</param>
+            <returns>True if added successfully, false otherwise.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.UserDictionary.ReadAll(System.Collections.ArrayList)">
+            <summary>
+            Read the dictionary word list into the <c>list</c>.
+            </summary>
+            <param name="list">the String array that the word list will be read into.</param>
+            <returns>Number of words in the list.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.UserDictionary.RemoveWord(System.String)">
+            <summary>
+            Tries to remove a word from this dictionary.
+            </summary>
+            <param name="word">String contianing the word to remove.</param>
+            <returns>True if the word was removed successfully; False otherwise.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.UserDictionary.ReadDict">
+            <summary>
+            Read dictionary a file.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.UserDictionary.WriteDict">
+            Write dictionary file ////
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.SpellOptions">
+            <summary>
+            SpellOptions.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellOptions.ResetPerformanceOptions">
+            <summary>
+            Resets the <b>PerformanceOptions</b> to its default settings.
+            </summary>
+            <remarks><p class="body">This method supports the design-time Reset command on the context menu within the Properties Editor, and is not intended for use by application developers.</p></remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellOptions.ShouldSerializePerformanceOptions">
+            <summary>
+            Check if PerformanceOptions has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.SpellOptions.ToString">
+            <summary>String formatted for visual designer.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellOptions.AllowMixedCase">
+            <summary>
+            Whether to allow words spelt with mixed case, e.g. "MIxEd."
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellOptions.AllowCaseInsensitiveSuggestions">
+            <summary>
+            Whether to allow suggestions for correctly spelled words with mixed case.  For example: if AllowMixedCase is false and 
+            the word "tHE" is passed to the WebSpellChecker, when set to "True" you will recieve suggestions, when set to "False" you will not.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellOptions.SuggestionsMethod">
+            <summary>
+            The method by which suggestions are determined.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellOptions.SeparateHyphenWords">
+            <summary>
+            When set to "True" the hyphenated text is treated as separate words.  For e.g. if this is true text like "cheap-deals" will be treated as two words "cheap" and "deals".  If one of the words was misspelled only that word would be marked as misspelled.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellOptions.IncludeUserDictionaryInSuggestions">
+            <summary>
+            Whether the user dictionary should be used in finding suggestions for misspelt words.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellOptions.AllowXML">
+            <summary>
+            Whether to Allow XML/HTML tags, false by default.
+            </summary>
+            <remarks>
+            This identifies XML tags as anything in between &lt; and &gt; characters.  Therefore it will cause undesirable effects in text such as &amp;quot; the sign for less than is &lt; and the sign for greater than is &gt; &amp;quot;.  Of course in HTML that should have been written as &amp;quot; the sign for less than is &amp;lt; and the sign for greater than is &amp;gt; &amp;quot;;
+             anyway, which would be fine.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellOptions.CheckHyphenatedText">
+            <summary>
+            When set to True the hyphenated text is checked as separate words.  When set to False the hyphenated text is checked as one word.  If that word is in the dictionary it will be marked as correct.
+            True: The word after-effect would be treated as after and effect.
+            False: The word after-effect would be treated as after-effect.  
+            For both true and false, if misspelled the whole word will be marked as misspelled.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellOptions.AllowWordsWithDigits">
+            <summary>Whether to Allow words with numbers in them (eg. A10 or 7-11).</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellOptions.LanguageParser">
+            <summary>
+            The language parser to use.  This should match the language of the main dictionary where possible.
+            </summary>
+            <remarks>This is used to give hints to the parser about how punctuation is used (e.g. apostrophe is used differently in English and French).</remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellOptions.PerformanceOptions">
+            <summary>
+            SpellOptions that could have an effect on performance.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.SpellOptions.IsEmpty">
+            <summary>
+            Check if an object contains only default values.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.LocalizedCategoryAttribute.GetLocalizedString(System.String)">
+            <summary>
+            Returns the localized category name.
+            </summary>
+            <param name="value">Name of the category to retreive</param>
+            <returns>The localized string value.</returns>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.WebSpellChecker">
+            <summary>
+            A non-visual control that manages the WebSpellChecker Dialog
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.#ctor">
+            <summary>
+            Creates a WebSpellChecker Launcher.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.ResetSpellOptions">
+            <summary>
+            Resets the <b>SpellOptions</b> to its default settings.
+            </summary>
+            <remarks><p class="body">This method supports the design-time Reset command on the context menu within the Properties Editor, and is not intended for use by application developers.</p></remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.ShouldSerializeSpellOptions">
+            <summary>
+            Check if SpellOptions has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.ResetDialogOptions">
+            <summary>
+            Resets the <b>DialogOptions</b> to its default settings.
+            </summary>
+            <remarks><p class="body">This method supports the design-time Reset command on the context menu within the Properties Editor, and is not intended for use by application developers.</p></remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.ShouldSerializeDialogOptions">
+            <summary>
+            Check if DialogOptions has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.ResetAutoPostBack">
+            <summary>
+            Resets the <b>AutoPostBackFlags</b> to its default settings.
+            </summary>
+            <remarks><p class="body">This method supports the design-time Reset command on the context menu within the Properties Editor, and is not intended for use by application developers.</p></remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.IsSupportedComponent(System.Web.UI.Control)">
+            <summary>
+            The method checks whether the passed in component is implementing the Infragistics.Web.UI.ISupportSpellCheck
+            interface.
+            </summary>
+            <param name="component">Component to check for compatibility with the spell checker.</param>
+            <returns>True if the component can be spell checked.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.OnLoadPostStateItem(System.Xml.XmlNode,System.Collections.ArrayList)">
+            <summary>
+            
+            </summary>
+            <param name="xmlNode"></param>
+            <param name="eventList"></param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.OnRaisePostDataChangedEvent(System.Collections.ArrayList)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.CreateRenderer">
+            <summary>
+            Overridden to create a SmartRenderer of the appropriate type for the control.  Called as a result of invoking EnsureRenderer().
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.OnPreRender(System.EventArgs)">
+            <summary>
+            Setup the control before Rendering begins.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Render this control to the writer parameter specified.
+            </summary>
+            <param name="writer"> The HTML writer to write out to </param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.RenderDialog(System.Web.UI.HtmlTextWriter,Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog)">
+            <summary>
+            Renders out an HTML Document that includes the WebSpellCheckerDialog.
+            </summary>
+            <param name="writer">The HTML writer to write out to</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.RenderForDesign(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders this control for the design surface.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.OnInit(System.EventArgs)">
+            <summary>
+            Checks to see if the Response Stream needs to be interrupted.  In order to create a WebSpellCheckerDialog.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.OnSpellCheckComplete(Infragistics.WebUI.WebSpellChecker.FinishedEventArgs)">
+            <summary>
+            Raises the FinishedCheckingSpelling Event.
+            </summary>
+            <param name="e">FinishedEventArgs</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.Dispose">
+            <summary>Dispose control.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.SpellOptions">
+            <summary>
+            Options that pertain to how the WebSpellChecker returns it's results.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.DialogOptions">
+            <summary>
+            Options that pertain to the dialog that the WebSpellChecker will open.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.AutoPostBackFlags">
+            <summary>
+            Properties that determine which events shoudl be posted as they occur on the client.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.UserDictionaryFile">
+            <summary>
+            The user dictionary file on the server for the user.
+            </summary>
+            <remarks>This should be an absolute path.</remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.WebSpellCheckerDialogPage">
+            <summary>
+            The URL of the page holding the WebSpellCheckerDialog control.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.TextComponentId">
+            <summary>
+            The Id of the Text Component that should automatically be checked for spelling when the client-side check spelling method is invoked.
+            </summary>
+            <remarks>
+            	<p>This property supports System.Web.UI.WebControls.TextBox, System.Web.UI.HtmlControls.HtmlInputText, and any control that implements Infragistics.WebUI.Shared.IProvidesEmbeddableEditor or Infragistics.WebUI.Shared.ISupportSpellCheck</p>
+            	<p>If the <see cref="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.TextComponent">TextComponent</see> property is set, it will be used instead.</p>
+            	<p>This property is a Design Time Only property.</p>
+            	<p>This property should not be used when the WebSpellChecker is on a UserControl.  In this scenario, the <see cref="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.TextComponent">TextComponent</see> property should be used at runtime. </p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.TextComponent">
+            <summary>
+            The Text Component that should automatically be checked for spelling when the client-side check spelling method is invoked.
+            </summary>
+            <remarks><p>This property supports System.Web.UI.WebControls.TextBox, System.Web.UI.HtmlControls.HtmlInputText, and any control that implements Infragistics.WebUI.Shared.IProvidesEmbeddableEditor or Infragistics.WebUI.Shared.ISupportSpellCheck</p></remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.JavaScriptDirectory">
+            <summary>
+            Base path for the Javascript files used for client-side processing.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.ButtonId">
+            <summary>
+            The Id of the button that the <see cref="T:Infragistics.WebUI.WebSpellChecker.WebSpellChecker">WebSpellChecker</see> should attach itself to at runtime.  When the button is clicked, the <see cref="T:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog">WebSpellCheckerDialog</see> will be launched.
+            </summary>
+            <remarks>
+            	<p>This property supports the following controls: System.Web.UI.HtmlControls.HtmlButton and System.Web.UI.HtmlControls.HtmlInputButton</p>
+            	<p>The "AddButton" option allows the user to add a System.Web&gt;UI.HtmlControls.HtmlButton to the designer.  This option is not displayed when the <see cref="T:Infragistics.WebUI.WebSpellChecker.WebSpellChecker">WebSpellChecker</see> is displayed in a UserControl</p>
+            	<p>This property is a Design Time Only property.</p>
+            	<p>This property should not be used when the <see cref="T:Infragistics.WebUI.WebSpellChecker.WebSpellChecker">WebSpellChecker</see> is on a UserControl.  In this scenario, the <see cref="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.Button">Button</see> property should be used at runtime.</p>
+            	<p>If the <see cref="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.Button">Button</see> property is set, it will be used instead.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.Button">
+            <summary>
+            The Button that the <see cref="T:Infragistics.WebUI.WebSpellChecker.WebSpellChecker">WebSpellChecker</see> should attach itself to at runtime.  When the button is clicked, the <see cref="T:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog">WebSpellCheckerDialog</see> will be launched.
+            </summary>
+            <remarks>
+            	<p>This property supports the following controls: System.Web.UI.HtmlControls.HtmlButton and System.Web.UI.HtmlControls.HtmlInputButton</p>
+            	<p>This property is a Run Time Only property.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.Dictionary">
+            <summary>
+            The path to the dictionary file to use, as the file exists on the server.  If no Dictionary is set, the English dictionary will be used.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.AccessKey">
+            <summary>
+            Not Implemented for WebSpellChecker.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.BackColor">
+            <summary>
+            Not Implemented for WebSpellChecker.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.BorderColor">
+            <summary>
+            Not Implemented for WebSpellChecker.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.BorderStyle">
+            <summary>
+            Not Implemented for WebSpellChecker.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.BorderWidth">
+            <summary>
+            Not Implemented for WebSpellChecker.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.BrowserTarget">
+            <summary>
+            Not Implemented for WebSpellChecker.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.CssClass">
+            <summary>
+            Not Implemented for WebSpellChecker.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.Enabled">
+            <summary>
+            Not Implemented for WebSpellChecker.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.ForeColor">
+            <summary>
+            Not Implemented for WebSpellChecker.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.Font">
+            <summary>
+            Not Implemented for WebSpellChecker.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.Height">
+            <summary>
+            Not Implemented for WebSpellChecker.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.Width">
+            <summary>
+            Not Implemented for WebSpellChecker.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.TabIndex">
+            <summary>
+            Not Implemented for WebSpellChecker.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.ToolTip">
+            <summary>
+            Not Implemented for WebSpellChecker.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.Visible">
+            <summary>
+            Not Implemented for WebSpellChecker.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.StyleSheetFileName">
+            <summary>
+            Not Implemented for WebSpellChecker.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.JavaScriptFileName">
+            <summary>
+            Not Implemented for WebSpellChecker.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.JavaScriptFileNameCommon">
+            <summary>
+            Not Implemented for WebSpellChecker.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.StyleSheetDirectory">
+            <summary>
+            Not Implemented for WebSpellChecker.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.ClientEvents">
+            <summary>
+            The ClientSideEvents object maintains the names of JavaScript functions that are to be called on the client side in response to various events that can be processed there without the need for a server post-back.
+            </summary>
+        </member>
+        <member name="E:Infragistics.WebUI.WebSpellChecker.WebSpellChecker.SpellCheckComplete">
+            <summary>  
+            Fired after Spell Check is Complete
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerClientEvents">
+            <summary>
+            <p class="body">WebSpellChecker supports client side events that allow developers to provide rich and responsive
+            interfaces with a minimum of post-backs to the server.  </p>
+            <p class="body">The following events can be canceld by setting the oEvent.Cancel property to true. </p>
+            <p class="body">SetText</p>
+            <p class="body">BeforeSpellCheckBegins</p>
+            
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerClientEvents.GetClientEventNameList">
+            <summary>
+            Return a list of names.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerClientEvents.GetText">
+            <summary>
+            Clientside event used to allow the user to retrieve the text that they want to be checked.
+            </summary>
+            <remarks>
+            Parameters:
+            oWebSpellChecker - Reference to the WebSpellChecker object on the client.
+            oEvent - Event reference.
+            uncheckedText - Text from the element specified in TextComponentName.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerClientEvents.SetText">
+            <summary>
+            Clientside event used to allow the user to set the text of their control with the newly checked text.
+            </summary>
+            <remarks>
+            Parameters:
+            oWebSpellChecker - Reference to the WebSpellChecker object on the client.
+            oEvent - Event reference.
+            checkedText - The text that has just been checked.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerClientEvents.SpellCheckComplete">
+            <summary>
+            Clientside event that fires after the spell checking dialog closes.
+            </summary>
+            <remarks>
+            Parameters:
+            oWebSpellChecker - Reference to the WebSpellChecker object on the client.
+            oEvent - Event reference.
+            uncheckedText - The text that was originally passed into the spellchecker.
+            checkedText - The text that has just been checked.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerClientEvents.WordCorrected">
+            <summary>
+            Clientside event that fires after a word is corrected.
+            </summary>
+            <remarks>
+            Parameters:
+            oWebSpellChecker - Reference to the WebSpellChecker object on the client.
+            oEvent - Event reference.
+            uncheckedWord - The word before it was corrected. 
+            checkedWord - The word that it will be replaced with.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerClientEvents.BeforeSpellCheckBegins">
+            <summary>
+            Clientside event that fires before the spell checking begins.
+            </summary>
+            <remarks>
+            Parameters:
+            oWebSpellChecker - Reference to the WebSpellChecker object on the client.
+            oEvent - Event reference.
+            uncheckedText - The text that will be checked.
+            </remarks>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog">
+            <summary>
+            The Dialog displayed by the WebSpellChecker
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.#ctor">
+            <summary>
+            Creates the WebSpellCheckerDialog control.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.ResetBadWordStyle">
+            <summary>
+            Resets the <b>BadWordStyle</b> to its default settings.
+            </summary>
+            <remarks><p class="body">This method supports the design-time Reset command on the context menu within the Properties Editor, and is not intended for use by application developers.</p></remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.ShouldSerializeBadWordStyle">
+            <summary>
+            Determines whether <b>BadWordStyle</b> has changed from it's default settings.
+            </summary>
+            <returns>True when style has changes, otherwise false when it has none.</returns>
+            <remarks><p class="bosy">This method supports the design-time serialization of properties, and is not intended for use by application developers.</p></remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.EnsureRenderer">
+            <summary>
+            Ensures an associated renderer exists before rendering occurs.
+            </summary>
+            <remarks>
+            	<p class="body">If a renderer did not exist before calling
+            this method, it is guaranteed to have been initialized after this call.  The existence of a render usually isn't required until the <b>PreRender</b> event, which is when the control ensures it.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.OnPreRender(System.EventArgs)">
+            <summary>
+            Setup the control before Rendering begins.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Render this control to the writer parameter specified.
+            </summary>
+            <param name="writer"> The HTML writer to write out to </param>
+            
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.CreateChildControls">
+            <summary>
+            Creates or ensures that all child controls for the dialog are found.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.Infragistics#WebUI#Shared#IProvideAppStyling#DesignRefresh(System.Boolean,System.String,System.String)">
+            <summary>
+            Called by AppStyling framework to refresh the control rendering after a change.
+            </summary>
+            <param name="enableAppStyling">The EnableAppStyling setting for the AppStylingManager</param>
+            <param name="styleSetName">The StyleSet setting for the AppStylingManager</param>
+            <param name="styleSetPath">The StyleSetPath setting for the AppStylingManager</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.OnInit(System.EventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.InitializeStyle(System.String,Infragistics.WebUI.Shared.Style)">
+            <summary>
+            Initializes a <b>Style</b> property with default appearance based on an external CSS stylesheet.
+            </summary>
+            <param name="StylePropertyId">The property ID of the Style property sub-object to be initialized. This
+            should be the well-known class name of the Style followed by the suffix, "Style".</param>
+            <param name="styleRef">An empty Style object reference to assign the default CSS class name.</param>
+            <remarks>
+            	<p class="body">This method initializes the <b>Style</b> object to take on the default appearance specified by a CSS class in an external stylesheet.  CSS classes in an external stylesheet maintain a consistent naming convention by which their names are well-known, and can be connected to the appropriate <b>Style</b> properties at init-time by this method.</p>
+            	<p class="body">Name collisions are avoided because <b>InitializeStyle</b> will read the ControlPrefix to produce an appropriately-qualified CSS class name based on <em>StylePropertyId</em> for the initialized <em>styleRef</em>.</p>
+            	<p class="body">Inheritors should call this method immediately after lazily creating an empty <b>Style</b> object reference, but before tracking viewstate on it, for any <b>Style</b> properties added by their subclass.  Failure to call this method when initializing a <b>Style</b> property will cause the <b>Style</b> not to appear as if based upon the style rules in the external stylesheet.  A subclass may assume responsibility for performing their own <b>Style</b> property initializations at this recommended point in time after lazy creation and before tracking viewstate, but should not expect the <b>Style</b> property to function correctly with the default external stylesheet.</p>
+            	<p class="note">The <b>CssClass</b> can be set to
+            work with other external or embedded CSS classes, of course.</p>
+            </remarks>
+            <exception cref="T:System.NullReferenceException">Thrown when the <em>StylePropertyId</em>
+            argument is null (Nothing in VB.NET), or when the <b>SmartWebControl</b> subclass' overridden 
+            ControlPrefix implementation returns null (Nothing in VB.NET)
+            instead of a non-null string prefix.</exception>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.ShouldSerializeStyleSheetFileName">
+            <summary>
+            Indicates whether the <b>StyleSheetFileName</b> property has changed from it's default value and requires serialization.
+            </summary>
+            <returns>True if the <b>StyleSheetFileName</b> has changed from it's default value; otherwise False.</returns>
+            <remarks>
+            	<p class="body">This method supports the design-time serialization of ASP.NET pages.</p>
+            	<p class="body">Inheritors overriding <see cref="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.StyleSheetFileName"/> to change it's default value should replace the base implementation of this
+            method with their own overridden implementation that compares the value of <b>StyleSheetFileName</b> to their own default value.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.ResetStyleSheetFileName">
+            <summary>
+            Reset StyleSheetFileName.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.ShouldSerializeStyleSheetDirectory">
+            <summary>
+            Indicates whether the <b>StyleSheetDirectory</b> property has changed from it's default value and requires serialization.
+            </summary>
+            <returns>True if the <b>StyleSheetDirectory</b> has changed from it's default value; otherwise False.</returns>
+            <remarks>
+            	<p class="body">This method supports the design-time serialization of ASP.NET pages.</p>
+            	<p class="body">Inheritors overriding <see cref="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.StyleSheetDirectory"/> to change it's default value should replace the base implementation of this
+            method with their own overridden implementation that compares the value of <b>StyleSheetDirectory</b> to their own default value.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.ResetStyleSheetDirectory">
+            <summary>
+            Reset StyleSheetFileName.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.CheckForCssStyleSheet">
+            <summary>
+            This method supports the Infragistics control infrastructure and is not intended for application use.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.GetResourceCss(System.String)">
+            <summary>
+            Get embedded css.  If the control supports embedded StyleSheets, then it should override this method.<br></br>
+            If cssStyleSheetName represents embedded css, then the control should return value of the first param in the WebResourceAttribute with which that CSS-file was linked to.  If the control supports multiple embedded css, then besides the empty-string it also should process other values of cssStyleSheetName param.  For multiple CSSes the logic may assume syntax: "[nameOfFileOrPreset]", where "[" flag for embedded resource and "nameOfFileOrPreset" is a short name of an embedded file of a flag for a particular preset.  It also should validate for an explicit path like "Infragistics.WebUI.WebSchedule.CSS.Default.ig_webdayview.css".
+            </summary>
+            <param name="cssStyleSheetName">The value of this.StyleSheetFileName property.</param>
+            <returns>Control must return null if cssStyleSheetName is not an embedded resource.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.GetResourceCssInternal(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="cssStyleSheetName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.Dispose">
+            <summary>Dispose control.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.JavaScriptDirectory">
+            <summary>
+            Base path for the Javascript files used for client-side processing.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.CheckerEngine">
+            <summary>
+            The ICheckerEngine object to be used to check the text.
+            </summary>
+            <remarks>You should implement ICheckerEngine in your own class if you wish to customize parsing.</remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.NoErrorsText">
+            <summary>
+            The text displayed when the spell check finishes with no spelling errors.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.FinishedText">
+            <summary>
+            The text displayed when the spell check finishes.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.NoSuggestionsText">
+            <summary>
+            The text displayed in the suggestions box, when there are no suggestions.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.ShowAddButton">
+            <summary>
+            Determines if the AddButton should be displayed.
+            </summary>
+            <remarks>
+            NotSet  - The Add Button is displayed if a UserDictionaryFile is specified on the WebSpellChecker.
+            Visible - The Add Button is always displayed.
+            Hidden - The Add Button is not visible, but will still take up its place in the UI.
+            None - The Add Button is not visible, and does not take up any space in the UI.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.BadWordStyle">
+            <summary>
+            Style affecting the currently misspelled word in the dialog.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.OverrideDictionary">
+            <summary>
+            An absolute dictionary file path, that should be used instead of the one specified by the WebSpellChecker control. 
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.AccessKey">
+            <summary>
+            Not implemented for WebSpellCheckerDialog.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.ToolTip">
+            <summary>
+            Not implemented for WebSpellCheckerDialog.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.TabIndex">
+            <summary>
+            Not implemented for WebSpellCheckerDialog.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.Enabled">
+            <summary>
+            Not implemented for WebSpellCheckerDialog.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.BrowserTarget">
+            <summary>
+            Not implemented for WebSpellCheckerDialog.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.CssClass">
+            <summary>
+            Not implemented for WebSpellCheckerDialog.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.WebAgent">
+            <summary>
+            Holds a reference to the app style proxy object.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.StyleSetName">
+            <summary>
+            Name of the Application Styling Framework(tm) style set defining the themed appearance for the WebPanel control.
+            </summary>
+            <value>
+            	<p class="body">The name of the Application Styling Framework(tm) (ASF) style set which has been designed to give this control a consistent appearance with other controls in your application.</p>
+            	<p class="body">This property may return the empty string ("") to imply that the default style set (named "Default") should be used.</p>
+            </value>
+            <remarks>
+            	<p class="body">Web sites can configure a single, consistent, application-wide style set through the <em>styleSetName</em> attribute in their "web.config" file.  Alternately, they can define the style set to apply Application Styling to all controls on a Page by placing a <strong>WebPageStyler</strong> control on that Page and setting it's StyleSetName property.</p>
+            	<p class="body">At the control level this property allows an application developer to customize the style set applied to a single instance of a control.</p>
+            	<p class="body">Normally, graphics designers will furnish you
+            with a style set containing one or more style sheet files (one
+            for each type of control) and image files.  The name of the style set (with the exception of the "Default" style set) must appear in each Cascading Style Sheet (CSS) class name defined by this control's style sheet file.  For example, two WebTree controls that each use a different style set, "Aqua" and "Onyx", would expect their CSS class names for the ASF <em>Node</em> role to be "igtr_AquaNode" and "igtr_OnyxNode", respectively.  This allows the uniqueness of CSS class names necessary to distinguish multiple style sets for the same type of control, without there being any naming collisions.</p>
+            </remarks>
+            <seealso cref="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.StyleSetPath"/>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.Infragistics#WebUI#Shared#IProvideAppStyling#StyleSheetFileName">
+            <summary>
+            File name and path to the CSS stylesheet for this <b>WebControl</b>.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.Infragistics#WebUI#Shared#IProvideAppStyling#ParsedStyles">
+            <summary>
+            Contains the <b>ParsedStyleCollection</b> consisting of CSS class definitions read from external sources.
+            </summary>
+            <value>
+            The <b>ParsedStyleCollection</b> after external CSS class
+            definitions have been parsed, or null (Nothing in Visual Basic .NET) if parsing hasn't been performed yet.
+            </value>
+            <remarks><p class="body"></p></remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.EnableAppStyling">
+            <summary>
+            Enables support on WebPanel for the Application Styling Framework(tm).
+            </summary>
+            <value><em>True</em> indicates Application Styling is enabled, <em>False</em> indicates Application Styling is disabled, and <em>NotSet</em> indicates support for Application Styling should default to page- or application-level settings.</value>
+            <remarks>
+            	<p class="body">Turn on support for Application Styling of WebPanel when using the Application Styling Framework(tm) (ASF) by setting the EnableAppStyling property to True.</p>
+            	<p class="body">When EnableAppStyling has it's default value of NotSet, this control will defer the determination of whether to use Application Styling to the settings you make at the page- or application-level.  Place the <strong>WebPageStyler</strong> control on the same Web form as this control to configure ASF support for all controls on that Page.  ASF support can also be turned on application-wide with the <em>enableAppStyling</em> attribute in your "web.config" file.</p>
+            	<p class="body">Turn off support for the ASF in WebPanel (even though it may have been enabled at a higher level) by setting the EnableAppStyling property to False.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.EnableAppStylingResolved">
+            <summary>
+            Indicates if AppStyling is enabled either on the control itself or in the Web Config.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.StyleSetPath">
+            <summary>
+            Path containing the Application Styling Framework(tm) style set files for this type of control.
+            </summary>
+            <remarks>
+            	<p class="body">Web sites can configure the directory path containing their style set files application-wide by using the <em>styleSetPath</em> attribute of their "web.config" file.  It is also possible to configure the style set path applicable to all controls on a Page that are subject to Application Styling by placing a <strong>WebPageStyler</strong> control on that Page and setting it's StyleSetPath property.</p>
+            	<p class="body">At the control level this property allows an
+            application developer to customize the location of the style set being applied to a single instance of a control.</p>
+            	<p class="note">Be aware that customizing the style set path at the control level will not allow you to copy a style set's files to this new location, changing a few style property values in them, and then use it successfully with separate instances of the control referencing the original style set of the same name.  This is because there would be naming collisions in the Cascading Style Sheet (CSS) class names, which will produce an undefined appearance.  You must ensure the CSS class names defined by style sheets in the new style set path are unique from those CSS class names being used by other style sheets that may continue to be referenced.  The recommended guidance in this scenario is to create a new style set having a new style set name, that contains your modifications.</p>
+            </remarks>
+            <seealso cref="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.StyleSetName"/>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.StyleSetNameResolved">
+            <summary>
+            Contains the StyleSetName wether it was set on the control itself or in the Web Config.		
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.Infragistics#WebUI#Shared#IProvideAppStyling#StylePrefix">
+            <summary>
+            Returns a string prefix value that is used within the CSS file to prefix each style class name.  This can be overridden to change the prefix used for this control.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.StyleSheetFileName">
+            <summary>
+            CSS file to be used for the dialog.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.StyleSheetDirectory">
+            <summary>
+            Base path for the Css file specified by the StyleSheetFileName property.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialog.ParsedStyles">
+            <summary>
+            Contains the <b>ParsedStyleCollection</b> consisting of CSS class definitions read from external sources.
+            </summary>
+            <value>
+            The <b>ParsedStyleCollection</b> after external CSS class
+            definitions have been parsed, or null (Nothing in Visual Basic .NET) if parsing hasn't been performed yet.
+            </value>
+            <remarks><p class="body"></p></remarks>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialogRenderer">
+            <summary>
+            WebSpellCheckerDialogRenderer.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerDialogRenderer.RenderClientProperties(System.Text.StringBuilder)">
+            <summary>
+            Responsible for rendering a javascript array of all client properties, events, objects and collections Calls helper methods to render each in turn.  This method is called to render parameters for initialization (constructor) java-script functions.
+            </summary>
+            <param name="buffer">To modify default logic, an extended class should Append its initialization variables to buffer.</param>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.WebSpellCheckerRenderer">
+            <summary>
+            WebSpellCheckerRenderer.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.SpellCheckCompleteEventHandler">
+            <summary>
+            The event handler for the SpellCheckComplete Event.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSpellChecker.FinishedEventArgs">
+            <summary>
+            Event arguments used for the SpellCheckComplete event.  This event is not cancelable.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSpellChecker.FinishedEventArgs.#ctor(Infragistics.WebUI.WebSpellChecker.WebSpellChecker,System.String,System.String)">
+            <summary>
+            Constructs the FinishedEventArgs Object.  This event can not be canceled.
+            </summary>
+            <param name="spellChecker">Reference to the WebSpellChecker</param>
+            <param name="uncheckedText">The text before it was checked.</param>
+            <param name="checkedText">The text after the spellchecker completed</param>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.FinishedEventArgs.WebSpellChecker">
+            <summary>
+            A reference to the WebSpellChecker Object.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.FinishedEventArgs.UncheckedText">
+            <summary>
+            The text before it was checked.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSpellChecker.FinishedEventArgs.CheckedText">
+            <summary>
+            The text after the spellchecker completed.
+            </summary>
+        </member>
+    </members>
+</doc>

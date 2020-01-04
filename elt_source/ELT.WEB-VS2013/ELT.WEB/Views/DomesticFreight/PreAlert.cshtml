@@ -1,0 +1,6 @@
+﻿@{
+    ViewBag.Title = "PreAlert";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+
+<iframe id ="ContentFrame" scrolling="no"   frameborder="0" width="100%" onload="autoResize('ContentFrame');" src="@Url.Content("~/ASP/domestic/agent_pre_alert.asp" + ViewBag.Params)"></iframe>

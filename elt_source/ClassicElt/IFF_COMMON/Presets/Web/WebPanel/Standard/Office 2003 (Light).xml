@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Office 2003 (Light)" PresetDescription="A panel as it would look in Office 2003, using the lighter Gradient in the Header." PresetType="Appearance" />-->
+<igmisc:WebPanel BackColor="White">
+  <PanelStyle BorderWidth="1px" BorderStyle="Solid">
+    <Padding Bottom="5px" Left="5px" Top="5px" Right="5px" />
+    <BorderDetails ColorTop="0, 45, 150" ColorBottom="0, 45, 150" ColorRight="0, 45, 150" ColorLeft="158, 190, 245" />
+  </PanelStyle>
+  <Header TextAlignment="Left">
+    <ExpandedAppearance>
+      <Style BorderWidth="1px" Font-Size="9pt" Font-Names="Times New Roman" BorderStyle="Solid" BackgroundImage="igpnl_office2k3.png">
+        <Padding Bottom="1px" Left="4px" Top="1px" />
+        <BorderDetails ColorTop="158, 190, 245" ColorRight="0, 45, 150" WidthBottom="0px" ColorLeft="158, 190, 245" />
+      </Style>
+    </ExpandedAppearance>
+    <ExpansionIndicator Height="0px" Width="0px" />
+  </Header>
+</igmisc:WebPanel>

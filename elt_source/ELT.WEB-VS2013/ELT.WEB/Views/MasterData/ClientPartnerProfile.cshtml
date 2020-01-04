@@ -1,0 +1,6 @@
+﻿@{
+    ViewBag.Title = "ClientPartnerProfile";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+
+<iframe id ="ContentFrame" scrolling="no"   frameborder="0" width="100%" height="1800" src="@Url.Content("~/ASP/master_data/client_profile_list.asp" + ViewBag.Params)"></iframe>

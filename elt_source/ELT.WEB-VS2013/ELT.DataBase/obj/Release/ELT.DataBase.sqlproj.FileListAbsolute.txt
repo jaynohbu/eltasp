@@ -1,0 +1,9 @@
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.DataBase\bin\Release\ELT.DataBase.dacpac
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.DataBase\bin\Release\ELT.DataBase.dll
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.DataBase\bin\Release\ELT.DataBase.pdb
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.DataBase\obj\Release\Model.xml
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.DataBase\obj\Release\refactor.xml
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.DataBase\obj\Release\postdeploy.sql
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.DataBase\obj\Release\predeploy.sql
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.DataBase\obj\Release\ELT.DataBase.dll
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.DataBase\obj\Release\ELT.DataBase.pdb

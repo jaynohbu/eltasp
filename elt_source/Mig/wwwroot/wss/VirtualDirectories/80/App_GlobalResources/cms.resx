@@ -1,0 +1,3809 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="14.0.4750.1000" _dal="1" -->
+<!-- _LocalBinding -->
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="areacachesettings_blobcacheanonprofile_sectiondescription" xml:space="preserve">
+    <value>By default, a site inherits its page element cache profile from its parent. Assigning a page element cache profile to this site will force all elements (images and other binary objects) that this page contains to use the specified cache profile for anonymous users.</value>
+    
+  </data>
+  <data name="areacachesettings_blobcacheanonprofile_sectionheader" xml:space="preserve">
+    <value>Anonymous Page Element Cache Profile</value>
+    
+  </data>
+  <data name="areacachesettings_blobcacheauthprofile_sectiondescription" xml:space="preserve">
+    <value>By default, a site inherits its page element cache profile from its parent. Assigning a page element cache profile to this site will force contained page elements (images and other binary objects) to use the specified cache profile for authenticated users.</value>
+    
+  </data>
+  <data name="areacachesettings_blobcacheauthprofile_sectionheader" xml:space="preserve">
+    <value>Authenticated Page Element Cache Profile</value>
+    
+  </data>
+  <data name="areacachesettings_inheritcacheprofile_radiotext" xml:space="preserve">
+    <value>Inherit</value>
+    
+  </data>
+  <data name="areacachesettings_overrideanonymousdisabled" xml:space="preserve">
+    <value>Note that sites cannot currently override the inherited anonymous user cache profile.</value>
+    
+  </data>
+  <data name="areacachesettings_overrideauthenticateddisabled" xml:space="preserve">
+    <value>Note that sites cannot currently override the inherited authenticated user cache profile.</value>
+    
+  </data>
+  <data name="areacachesettings_pagecacheanonprofile_sectiondescription" xml:space="preserve">
+    <value>You can specify a cache profile for caching page output for anonymous users, and a cache profile for caching page output for authenticated users. These cache settings will apply only to this site unless you select the &lt;b&gt;Apply this setting to all subsites&lt;/b&gt; check box.</value>
+    
+  </data>
+  <data name="areacachesettings_pagecacheanonprofile_sectionheader" xml:space="preserve">
+    <value>Page Output Cache Profile</value>
+    
+  </data>
+  <data name="areacachesettings_pagedescription" xml:space="preserve">
+    <value>Configure the output cache settings for the publishing site.</value>
+    
+  </data>
+  <data name="areacachesettings_pagedescriptionoutputcachedisabled" xml:space="preserve">
+    <value>Note that the output cache is currently disabled.</value>
+    
+  </data>
+  <data name="areacachesettings_pagetitle" xml:space="preserve">
+    <value>Site Cache Settings</value>
+    
+  </data>
+  <data name="areacachesettings_pagetitleintitlearea" xml:space="preserve">
+    <value>Publishing Site Output Cache Settings</value>
+    
+  </data>
+  <data name="areacachesettings_selectblobcacheprofile_radiotext" xml:space="preserve">
+    <value>Select a page element cache profile</value>
+    
+  </data>
+  <data name="areacachesettings_selectcacheprofile_radiotext" xml:space="preserve">
+    <value>Select a page output cache profile</value>
+    
+  </data>
+  <data name="areachromesettings_areachrome_description" xml:space="preserve">
+    <value>The site master page will be used by all publishing pages. Select the first option to inherit the site master page of the parent site. Select the second option to select a unique master page. Check the box to apply this setting to all subsites.</value>
+  </data>
+  <data name="areachromesettings_areachrome_header" xml:space="preserve">
+    <value>Site Master Page</value>
+  </data>
+  <data name="areachromesettings_inheritchrome_radiotext" xml:space="preserve">
+    <value>Inherit site master page from  parent of this site</value>
+  </data>
+  <data name="areachromesettings_inheritchrome_accesskey" xml:space="preserve">
+    <value>I</value>
+  </data>
+  <data name="areachromesettings_invalid_current_masterurl" xml:space="preserve">
+    <value>The site master page setting currently applied to this site is invalid.  Please select a new master page and apply it</value>
+    
+  </data>
+  <data name="areachromesettings_pagedescription" xml:space="preserve">
+    <value>Use this page to review current settings or to assign a different Site Master Page, System Master Page or Alternate CSS URL for this site.</value>
+  </data>
+  <data name="areachromesettings_pagetitle" xml:space="preserve">
+    <value>Site Master Page Settings</value>
+  </data>
+  <data name="areachromesettings_pagetitleintitlearea" xml:space="preserve">
+    <value>Site Master Page Settings</value>
+  </data>
+  <data name="areachromesettings_selectchrome_radiotext" xml:space="preserve">
+    <value>Specify a master page to be used by this site and all sites that inherit from it:</value>
+  </data>
+  <data name="areachromesettings_selectchrome_accesskey" xml:space="preserve">
+    <value>U</value>
+  </data>
+  <data name="areachromesettings_selectedmasterdescription" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="areachromesettings_selectedmastertext" xml:space="preserve">
+    <value>Currently Selected:</value>
+  </data>
+  <data name="areachromesettings_resetsubsite_checkboxtext" xml:space="preserve">
+    <value>Reset all subsites to inherit this site master page setting</value>
+  </data>
+  <data name="areachromesettings_resetsubsite_accesskey" xml:space="preserve">
+    <value>R</value>
+  </data>
+  <data name="areachromesettings_systemmasterpage_description" xml:space="preserve">
+    <value>Use the system master page for all forms and view pages in this site. Select the first option to inherit the system master page of the parent site. Select the second option to select a unique master page. Check the box to apply this setting to all subsites.</value>
+  </data>
+  <data name="areachromesettings_systemmasterpage_header" xml:space="preserve">
+    <value>System Master Page</value>
+  </data>
+  <data name="areachromesettings_inheritsystemmasterpage_radiotext" xml:space="preserve">
+    <value>Inherit system master page from parent of this site</value>
+  </data>
+  <data name="areachromesettings_invalid_current_systemmasterpage" xml:space="preserve">
+    <value>The system master page setting currently applied to this site is invalid.  Please select a new master page and apply it.</value>
+    
+  </data>
+  <data name="areachromesettings_selectsystemmasterpage_radiotext" xml:space="preserve">
+    <value>Specify a system master page for this site and all sites that inherit from it:</value>
+  </data>
+  <data name="areachromesettings_selectedsystemmasterpagedescription" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="areachromesettings_systemmasterpage_resetsubsite_checkboxtext" xml:space="preserve">
+    <value>Reset all subsites to inherit this system master page setting</value>
+  </data>
+  <data name="areachromesettings_alternatecss_description" xml:space="preserve">
+    <value>Specify the URL of a cascading style sheet (CSS) to apply to this site. The CSS files should contain every class you might reference from any control and from any page in your site. This will help ensure that your site is displayed exactly as you want it to.&lt;br&gt;&lt;br&gt;Select the first option to use the parent CSS URL of this site. Select the second option to use the Microsoft SharePoint Foundation default style. Select the third option to specify your own CSS URL.</value>
+  </data>
+  <data name="areachromesettings_alternatecss_header" xml:space="preserve">
+    <value>Alternate CSS URL</value>
+  </data>
+  <data name="areachromesettings_inheritalternatecss_radiotext" xml:space="preserve">
+    <value>Inherit Alternate CSS URL from parent of this site</value>
+  </data>
+  <data name="areachromesettings_usewsscss_radiotext" xml:space="preserve">
+    <value>Use Microsoft SharePoint Foundation default styles</value>
+  </data>
+  <data name="areachromesettings_selectalternatecss_radiotext" xml:space="preserve">
+    <value>Specify a CSS file to be used by this publishing site and all sites that inherit from it:</value>
+  </data>
+  <data name="areachromesettings_alternatecss_resetsubsite_checkboxtext" xml:space="preserve">
+    <value>Reset all subsites to inherit this alternate CSS URL</value>
+  </data>
+  <data name="areatemplatesettings_alert_pickpagelayout" xml:space="preserve">
+    <value>Select at least one page layout.</value>
+  </data>
+  <data name="areatemplatesettings_alert_picksitetemplate" xml:space="preserve">
+    <value>Select at least one site template.</value>
+  </data>
+  <data name="areatemplatesettings_pagedescription" xml:space="preserve">
+    <value>Use this page to set the preferred site templates and page layouts that users will see when they create subsites and pages.</value>
+  </data>
+  <data name="areatemplatesettings_pagelayoutpicker_candidateslabel" xml:space="preserve">
+    <value>Available page layouts:</value>
+  </data>
+  <data name="areatemplatesettings_pagelayoutpicker_resultslabel" xml:space="preserve">
+    <value>Preferred page layouts:</value>
+  </data>
+  <data name="areatemplatesettings_pagelayouts_description" xml:space="preserve">
+    <value>Specify the page layouts preferred for new pages in this site.</value>
+  </data>
+  <data name="areatemplatesettings_pagelayouts_header" xml:space="preserve">
+    <value>Page Layouts</value>
+  </data>
+  <data name="areatemplatesettings_pagelayoutsall_radiotext" xml:space="preserve">
+    <value>Pages in this site can use any layout</value>
+  </data>
+  <data name="areatemplatesettings_pagelayoutscustom_radiotext" xml:space="preserve">
+    <value>Pages in this site can only use the following layouts:</value>
+  </data>
+  <data name="areatemplatesettings_pagelayoutsinherit_radiotext" xml:space="preserve">
+    <value>Pages inherit preferred layouts from parent site</value>
+  </data>
+  <data name="areatemplatesettings_pagelayoutsresetsubsites_checkboxtext" xml:space="preserve">
+    <value>Reset all subsites to inherit these preferred page layout settings</value>
+  </data>
+  <data name="areatemplatesettings_pagetitle" xml:space="preserve">
+    <value>Page Layout and Site Template Settings</value>
+    
+  </data>
+  <data name="areatemplatesettings_picker_addbuttonlabel" xml:space="preserve">
+    <value>Add &gt;</value>
+  </data>
+  <data name="areatemplatesettings_picker_removebuttonlabel" xml:space="preserve">
+    <value>&lt; Remove</value>
+  </data>
+  <data name="areatemplatesettings_sitetemplatepicker_candidateslabel" xml:space="preserve">
+    <value>Available site templates:</value>
+  </data>
+  <data name="areatemplatesettings_sitetemplatepicker_resultslabel" xml:space="preserve">
+    <value>Preferred site templates:</value>
+  </data>
+  <data name="areatemplatesettings_sitetemplates_description" xml:space="preserve">
+    <value>Specify the preferred templates for the subsite. </value>
+  </data>
+  <data name="areatemplatesettings_sitetemplates_header" xml:space="preserve">
+    <value>Subsite Templates</value>
+  </data>
+  <data name="areatemplatesettings_sitetemplatesall_radiotext" xml:space="preserve">
+    <value>Subsites can use any site template</value>
+  </data>
+  <data name="areatemplatesettings_sitetemplatescustom_radiotext" xml:space="preserve">
+    <value>Subsites can only use the following site templates:</value>
+  </data>
+  <data name="areatemplatesettings_sitetemplatesinherit_radiotext" xml:space="preserve">
+    <value>Subsites inherit site templates from parent site</value>
+  </data>
+  <data name="areatemplatesettings_sitetemplatesresetsubsites_checkboxtext" xml:space="preserve">
+    <value>Reset all subsites to inherit these preferred subsite template settings</value>
+  </data>
+  <data name="areatemplatesettings_newpage_sectionheader" xml:space="preserve">
+    <value>New Page Default Settings</value>
+  </data>
+  <data name="areatemplatesettings_newpage_sectiondescription" xml:space="preserve">
+    <value>Specify the default page layout and page URL to use when creating a new page. New pages will have a page URL name specified followed by a number. Setting the page title on the new page will change the page URL name when the page is first saved.</value>
+  </data>
+  <data name="areatemplatesettings_defaultpagelayoutinherit_radiotext" xml:space="preserve">
+    <value>Inherit default page layout from parent site</value>
+  </data>
+  <data name="areatemplatesettings_defaultpagelayoutselect_radiotext" xml:space="preserve">
+    <value>Select the default page layout:</value>
+  </data>
+  <data name="areatemplatesettings_newpageurlinherit_radiotext" xml:space="preserve">
+    <value>Inherit new page URL from parent site</value>
+  </data>
+  <data name="areatemplatesettings_newpageurlselect_radiotext" xml:space="preserve">
+    <value>Specify new page URL:</value>
+  </data>
+  <data name="areatemplatesettings_newpageurl_textboxlabel" xml:space="preserve">
+    <value>URL name:</value>
+  </data>
+  <data name="areatemplatesettings_newpage_resetsubsitescheckboxtext" xml:space="preserve">
+    <value>Reset all subsites to inherit these new page settings</value>
+  </data>
+  <data name="areatemplatesettings_newpage_avoidSpacesInPageName" xml:space="preserve">
+    <value>Convert blank spaces in the page name to '-'</value>
+  </data>
+  <data name="areawelcomepage_history_label" xml:space="preserve">
+    <value>Details of the current welcome page</value>
+  </data>
+  <data name="areawelcomepage_historycreatedby_label" xml:space="preserve">
+    <value>Created by:</value>
+  </data>
+  <data name="areawelcomepage_historycreateddate_label" xml:space="preserve">
+    <value>Created date:</value>
+  </data>
+  <data name="areawelcomepage_historylastmodifiedby_label" xml:space="preserve">
+    <value>Last modified by:</value>
+  </data>
+  <data name="areawelcomepage_historylastmodifieddate_label" xml:space="preserve">
+    <value>Last modified date:</value>
+  </data>
+  <data name="areawelcomepage_pagedescription" xml:space="preserve">
+    <value>Use this page to select a new welcome page.</value>
+  </data>
+  <data name="areawelcomepage_pagetitle" xml:space="preserve">
+    <value>Select Site Welcome Page</value>
+  </data>
+  <data name="areawelcomepage_pagetitleintitlearea" xml:space="preserve">
+    <value>Site Welcome Page</value>
+  </data>
+  <data name="areawelcomepage_welcomepage_description" xml:space="preserve">
+    <value>Select the page to be used as the welcome page for this site.</value>
+  </data>
+  <data name="areawelcomepage_welcomepage_header" xml:space="preserve">
+    <value>Welcome Page</value>
+  </data>
+  <data name="areawelcomepage_welcomepage_label" xml:space="preserve">
+    <value>Welcome Page:</value>
+  </data>
+  <data name="assetedithyperlink_bookmark_sectionlabel" xml:space="preserve">
+    <value>Bookmark</value>
+  </data>
+  <data name="assetedithyperlink_bookmark_textbox_label" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="assetedithyperlink_bookmark_textbox_tooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="assetedithyperlink_bookmarkorselectedurl_required" xml:space="preserve">
+    <value>You must specify a hyperlink URL and/or a bookmark name.</value>
+  </data>
+  <data name="assetedithyperlink_displayicon_checkbox_tooltip" xml:space="preserve">
+    <value>Display link with icon</value>
+    
+  </data>
+  <data name="assetedithyperlink_displayicon_examplefilename" xml:space="preserve">
+    <value>filename.doc</value>
+    
+  </data>
+  <data name="assetedithyperlink_displayicon_label" xml:space="preserve">
+    <value>Display link with icon</value>
+    
+  </data>
+  <data name="assetedithyperlink_displaytext_label" xml:space="preserve">
+    <value>Display Text</value>
+    
+  </data>
+  <data name="assetedithyperlink_displaytext_textbox_tooltip" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="assetedithyperlink_openlinkintarget_newwindow" xml:space="preserve">
+    <value>Open Link In New Window</value>
+    
+  </data>
+  <data name="assetedithyperlink_pagetitle" xml:space="preserve">
+    <value>Edit Hyperlink Properties</value>
+    
+  </data>
+  <data name="assetedithyperlink_selectedurl_label" xml:space="preserve">
+    <value>Selected URL</value>
+    
+  </data>
+  <data name="assetedithyperlink_selectedurl_required" xml:space="preserve">
+    <value>You must specify a hyperlink URL.</value>
+  </data>
+  <data name="assetedithyperlink_selectedurl_textbox_tooltip" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="assetedithyperlink_tooltip_label" xml:space="preserve">
+    <value>Tooltip</value>
+    
+  </data>
+  <data name="assetedithyperlink_tooltip_textbox_tooltip" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="asseteditimage_alignment_dropdownlistitem_absbottom" xml:space="preserve">
+    <value>Bottom of text</value>
+    
+  </data>
+  <data name="asseteditimage_alignment_dropdownlistitem_absmiddle" xml:space="preserve">
+    <value>Middle of text</value>
+    
+  </data>
+  <data name="asseteditimage_alignment_dropdownlistitem_bottom" xml:space="preserve">
+    <value>Bottom</value>
+    
+  </data>
+  <data name="asseteditimage_alignment_dropdownlistitem_default" xml:space="preserve">
+    <value>Default</value>
+    
+  </data>
+  <data name="asseteditimage_alignment_dropdownlistitem_left" xml:space="preserve">
+    <value>Left</value>
+    
+  </data>
+  <data name="asseteditimage_alignment_dropdownlistitem_middle" xml:space="preserve">
+    <value>Middle</value>
+    
+  </data>
+  <data name="asseteditimage_alignment_dropdownlistitem_right" xml:space="preserve">
+    <value>Right</value>
+    
+  </data>
+  <data name="asseteditimage_alignment_dropdownlistitem_texttop" xml:space="preserve">
+    <value>Top of text</value>
+    
+  </data>
+  <data name="asseteditimage_alignment_dropdownlistitem_top" xml:space="preserve">
+    <value>Top</value>
+    
+  </data>
+  <data name="asseteditimage_alignment_label" xml:space="preserve">
+    <value>Alignment</value>
+    
+  </data>
+  <data name="asseteditimage_alternatetext_label" xml:space="preserve">
+    <value>Alternate Text</value>
+    
+  </data>
+  <data name="asseteditimage_alternatetext_textbox_tooltip" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="asseteditimage_border_label" xml:space="preserve">
+    <value>Border thickness (pixels)</value>
+    
+  </data>
+  <data name="asseteditimage_border_textbox_tooltip" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="asseteditimage_horizontalspacing_label" xml:space="preserve">
+    <value>Horizontal Spacing (pixels)</value>
+    
+  </data>
+  <data name="asseteditimage_hyperlink_label" xml:space="preserve">
+    <value>Hyperlink</value>
+    
+  </data>
+  <data name="asseteditimage_horizontalspacing_textbox_tooltip" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="asseteditimage_imageheight_label" xml:space="preserve">
+    <value>Height (pixels)</value>
+    
+  </data>
+  <data name="asseteditimage_imageheight_textbox_tooltip" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="asseteditimage_imagewidth_label" xml:space="preserve">
+    <value>Width (pixels)</value>
+    
+  </data>
+  <data name="asseteditimage_imagewidth_textbox_tooltip" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="asseteditimage_pagetitle" xml:space="preserve">
+    <value>Edit Image Properties</value>
+    
+  </data>
+  <data name="asseteditimage_sectionlabel_general" xml:space="preserve">
+    <value>General</value>
+    
+  </data>
+  <data name="asseteditimage_sectionlabel_layout" xml:space="preserve">
+    <value>Layout</value>
+    
+  </data>
+  <data name="asseteditimage_sectionlabel_size" xml:space="preserve">
+    <value>Size</value>
+    
+  </data>
+  <data name="asseteditimage_selectedimage_label" xml:space="preserve">
+    <value>Selected Image</value>
+    
+  </data>
+  <data name="asseteditimage_selectedimage_textbox_tooltip" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="asseteditimage_selectedimage_required" xml:space="preserve">
+    <value>You must specify an image URL.</value>
+  </data>
+  <data name="asseteditimage_sizeradiobutton_specifysize_text" xml:space="preserve">
+    <value>Specify Size</value>
+    
+  </data>
+  <data name="asseteditimage_sizeradiobutton_specifysize_tooltip" xml:space="preserve">
+    <value>Use a specific height and/or width when displaying the image</value>
+    
+  </data>
+  <data name="asseteditimage_sizeradiobutton_usedefault_text" xml:space="preserve">
+    <value>Use default image size</value>
+    
+  </data>
+  <data name="asseteditimage_sizeradiobutton_usedefault_tooltip" xml:space="preserve">
+    <value>Allow the image to display using its default size</value>
+    
+  </data>
+  <data name="asseteditimage_sizerespectaspectratio" xml:space="preserve">
+    <value>Maintain aspect ratio</value>
+  </data>
+  <data name="asseteditimage_sizerespectaspectratioinstructions" xml:space="preserve">
+    <value>(enter width or height)</value>
+  </data>
+  <data name="asseteditimage_sizeunitstext_pixels" xml:space="preserve">
+    <value>pixels</value>
+    
+  </data>
+  <data name="asseteditimage_validation_lessthantenthousand" xml:space="preserve">
+    <value>Please enter a number between 0 and 10000.</value>
+    
+  </data>
+  <data name="asseteditimage_validation_lessthanonethousand" xml:space="preserve">
+    <value>Please enter a number between 0 and 999.</value>
+    
+  </data>
+  <data name="asseteditimage_verticalspacing_label" xml:space="preserve">
+    <value>Vertical Spacing (pixels)</value>
+    
+  </data>
+  <data name="asseteditimage_verticalspacing_textbox_tooltip" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="assetpickerdialog_locationurl_label" xml:space="preserve">
+    <value>Location (URL):</value>
+    
+  </data>
+  <data name="assetpickerdialog_menu_openlocation_text" xml:space="preserve">
+    <value>Open this Location</value>
+  </data>
+  <data name="assetpickerdialog_menu_openlocation_description" xml:space="preserve">
+    <value>Open a new browser window to view the items in this list, library or site.</value>
+  </data>
+  <data name="assetpickerdialog_menu_viewitem_text" xml:space="preserve">
+    <value>View Item</value>
+  </data>
+  <data name="assetpickerdialog_menu_viewitem_description" xml:space="preserve">
+    <value>Open the selected item in a new browser window or its default viewing application.</value>
+  </data>
+  <data name="assetpickerdialog_menu_viewprops_text" xml:space="preserve">
+    <value>View Properties</value>
+  </data>
+  <data name="assetpickerdialog_menu_viewprops_description" xml:space="preserve">
+    <value>View the properties of the selected item in a new browser window.</value>
+  </data>
+  <data name="cancelbutton_accesskey" xml:space="preserve">
+    <value>c</value>
+    
+  </data>
+  <data name="cmsslwpaddeditgroup_instructions_label" xml:space="preserve">
+    <value>Create a new group to organize links on the page. The group header name typically appears above a group of links.</value>
+    
+  </data>
+  <data name="cmsslwpaddeditlink_description_label" xml:space="preserve">
+    <value>Description</value>
+    
+  </data>
+  <data name="cmsslwpaddeditlink_group_label" xml:space="preserve">
+    <value>Group</value>
+    
+  </data>
+  <data name="cmsslwpaddeditlink_imagealttext_label" xml:space="preserve">
+    <value>Image description</value>
+    
+  </data>
+  <data name="cmsslwpaddeditlink_imageurl_label" xml:space="preserve">
+    <value>Image URL</value>
+    
+  </data>
+  <data name="cmsslwpaddeditlink_instructions_label" xml:space="preserve">
+    <value>Specify the information for this summary link. The title is the link text displayed for the link URL. The information that the summary link displays depends on the style you choose.</value>
+    
+  </data>
+  <data name="cmsslwpaddeditlink_linkurl_label" xml:space="preserve">
+    <value>Link URL</value>
+    
+  </data>
+  <data name="cmsslwpaddeditlink_style_label" xml:space="preserve">
+    <value>Style</value>
+    
+  </data>
+  <data name="cmsslwpaddeditlink_openinnewwindow_label" xml:space="preserve">
+    <value>Open link in new window</value>
+    
+  </data>
+  <data name="cmsslwpaddeditlink_title_label" xml:space="preserve">
+    <value>Title</value>
+    
+  </data>
+  <data name="cmsslwpaddeditlink_linkurltooltip_label" xml:space="preserve">
+    <value>Tooltip</value>
+    
+  </data>
+  <data name="cmsslwpeditview_columns_label" xml:space="preserve">
+    <value>Number of columns for groups</value>
+    
+  </data>
+  <data name="cmsslwpeditview_headerstyle_label" xml:space="preserve">
+    <value>Set group headers to use this style</value>
+    
+  </data>
+  <data name="cmsslwpeditview_instructions_label" xml:space="preserve">
+    <value>Choose the number of columns in which to display links and groups. The link style and group style you choose will apply to all links and groups.</value>
+    
+  </data>
+  <data name="cmsslwpeditview_linkstyle_label" xml:space="preserve">
+    <value>Default style for new links</value>
+    
+  </data>
+  <data name="cmsslwpeditview_updatelinks_label" xml:space="preserve">
+    <value>Change existing links to use this style</value>
+    
+  </data>
+  <data name="console_addwebparts" xml:space="preserve">
+    <value>Add Web Parts</value>
+    
+  </data>
+  <data name="console_approve" xml:space="preserve">
+    <value>Approve</value>
+    
+  </data>
+  <data name="console_approveworkflow" xml:space="preserve">
+    <value>Approve/Reject...</value>
+    
+  </data>
+  <data name="console_browsetoolpane" xml:space="preserve">
+    <value>Browse</value>
+    
+  </data>
+  <data name="console_cancelapprovalrequest" xml:space="preserve">
+    <value>Cancel Approval</value>
+    
+  </data>
+  <data name="console_cancelscheduling" xml:space="preserve">
+    <value>Cancel Scheduling</value>
+    
+  </data>
+  <data name="console_checkbrokenlinks" xml:space="preserve">
+    <value>Check for Unpublished Items</value>
+    
+  </data>
+  <data name="console_checkin" xml:space="preserve">
+    <value>Check In</value>
+    
+  </data>
+  <data name="console_checkout" xml:space="preserve">
+    <value>Check Out</value>
+    
+  </data>
+  <data name="console_checkspelling" xml:space="preserve">
+    <value>Spelling...</value>
+    
+  </data>
+  <data name="console_closemenu" xml:space="preserve">
+    <value>Hide Page Status</value>
+    
+  </data>
+  <data name="console_createpage" xml:space="preserve">
+    <value>Create Page...</value>
+    
+  </data>
+  <data name="console_declineworkflow" xml:space="preserve">
+    <value>Reject</value>
+    
+  </data>
+  <data name="console_delegateworkflow" xml:space="preserve">
+    <value>Delegate</value>
+    
+  </data>
+  <data name="console_deletepage" xml:space="preserve">
+    <value>Delete Page</value>
+    
+  </data>
+  <data name="console_designthispage" xml:space="preserve">
+    <value>Design This Page</value>
+    
+  </data>
+  <data name="console_editcontent" xml:space="preserve">
+    <value>Edit Page</value>
+    
+  </data>
+  <data name="console_editmode" xml:space="preserve">
+    <value>Edit Mode</value>
+    
+  </data>
+  <data name="console_editpage" xml:space="preserve">
+    <value>Edit Page</value>
+    
+  </data>
+  <data name="console_editproperties" xml:space="preserve">
+    <value>Page Settings and Schedule...</value>
+    
+  </data>
+  <data name="console_editsubmenushared" xml:space="preserve">
+    <value>Edit Shared Page</value>
+    
+  </data>
+  <data name="console_editsubmenu" xml:space="preserve">
+    <value>Edit</value>
+    
+  </data>
+  <data name="console_editsubmenupersonal" xml:space="preserve">
+    <value>Edit My Page</value>
+    
+  </data>
+  <data name="console_filesubmenu" xml:space="preserve">
+    <value>File</value>
+    
+  </data>
+  <data name="console_importtoolpane" xml:space="preserve">
+    <value>Import</value>
+    
+  </data>
+  <data name="console_initiateworkflow" xml:space="preserve">
+    <value>Start Workflow...</value>
+    
+  </data>
+  <data name="console_modifymypage" xml:space="preserve">
+    <value>Edit My Page</value>
+    
+  </data>
+  <data name="console_modifysharedpage" xml:space="preserve">
+    <value>Edit Shared Page</value>
+    
+  </data>
+  <data name="console_modifywebparts" xml:space="preserve">
+    <value>Modify Web Parts</value>
+    
+  </data>
+  <data name="console_overridecheckout" xml:space="preserve">
+    <value>Override Check Out</value>
+    
+  </data>
+  <data name="console_personalview" xml:space="preserve">
+    <value>Show Personal View</value>
+    
+  </data>
+  <data name="console_previewpage" xml:space="preserve">
+    <value>Preview in New Window</value>
+    
+  </data>
+  <data name="console_publish" xml:space="preserve">
+    <value>Publish</value>
+    
+  </data>
+  <data name="console_reviewmode" xml:space="preserve">
+    <value>Save and Stop Editing</value>
+    
+  </data>
+  <data name="console_quickdeploypage" xml:space="preserve">
+    <value>Quick Deploy</value>
+    
+  </data>
+  <data name="console_revisionhistory" xml:space="preserve">
+    <value>Revision History...</value>
+    
+  </data>
+  <data name="console_saveandexit" xml:space="preserve">
+    <value>Save and Close Session</value>
+    
+  </data>
+  <data name="console_savechanges" xml:space="preserve">
+    <value>Save</value>
+    
+  </data>
+  <data name="console_searchtoolpane" xml:space="preserve">
+    <value>Search</value>
+    
+  </data>
+  <data name="console_sharedview" xml:space="preserve">
+    <value>Show Shared View</value>
+    
+  </data>
+  <data name="console_toolssubmenu" xml:space="preserve">
+    <value>Tools</value>
+    
+  </data>
+  <data name="console_unapprovedresources_backgroundimages" xml:space="preserve">
+    <value>Background Images</value>
+    
+  </data>
+  <data name="console_unapprovedresources_reusablecontent" xml:space="preserve">
+    <value>Reusable Content</value>
+    
+  </data>
+  <data name="console_unapprovedresources_nodraftitems" xml:space="preserve">
+    <value>No draft items found in this site collection.</value>
+    
+  </data>
+  <data name="console_unapprovedresources_filenotfound" xml:space="preserve">
+    <value>Not Found</value>
+    
+  </data>
+  <data name="console_unapprovedresources_foottext" xml:space="preserve">
+    <value>Note: Only links and images referencing unpublished items in this site collection are shown.</value>
+    
+  </data>
+  <data name="console_unapprovedresources_headtext" xml:space="preserve">
+    <value>The following unpublished items are found in the page:</value>
+    
+  </data>
+  <data name="console_unapprovedresources_images" xml:space="preserve">
+    <value>Images</value>
+    
+  </data>
+  <data name="console_unapprovedresources_issuetype" xml:space="preserve">
+    <value>Issue Type</value>
+    
+  </data>
+  <data name="console_unapprovedresources_links" xml:space="preserve">
+    <value>Links</value>
+    
+  </data>
+  <data name="console_unapprovedresources_notapproved" xml:space="preserve">
+    <value>Not Approved</value>
+    
+  </data>
+  <data name="console_unapprovedresources_obsoleteversion" xml:space="preserve">
+    <value>Old Version</value>
+    
+  </data>
+  <data name="console_unapprovedresources_tooltip" xml:space="preserve">
+    <value>Show Issue Description</value>
+    
+  </data>
+  <data name="console_unapprovedresources_unpublishedresourcereport" xml:space="preserve">
+    <value>Unpublished Items Report</value>
+    
+  </data>
+  <data name="console_unapprovedresources_url" xml:space="preserve">
+    <value>URL</value>
+    
+  </data>
+  <data name="console_undocheckout" xml:space="preserve">
+    <value>Discard Check Out</value>
+    
+  </data>
+  <data name="console_unpublish" xml:space="preserve">
+    <value>Unpublish</value>
+    
+  </data>
+  <data name="console_updatevariations" xml:space="preserve">
+    <value>Update Variations</value>
+    
+  </data>
+  <data name="console_versioninfo" xml:space="preserve">
+    <value>View Page Status</value>
+    
+  </data>
+  <data name="console_viewpage" xml:space="preserve">
+    <value>View Page</value>
+    
+  </data>
+  <data name="console_viewsubmenu" xml:space="preserve">
+    <value>View</value>
+    
+  </data>
+  <data name="console_workflowstatustracking" xml:space="preserve">
+    <value>View Workflow Status...</value>
+    
+  </data>
+  <data name="console_workflowstart" xml:space="preserve">
+    <value>Start a Workflow...</value>
+    
+  </data>
+  <data name="console_workflowsubmenu" xml:space="preserve">
+    <value>Workflow</value>
+    
+  </data>
+  <data name="convertersettings_asynchronouscreation_radiotext" xml:space="preserve">
+    <value>Create pages in the background, and take users back to the document library</value>
+    
+  </data>
+  <data name="convertersettings_browsebutton" xml:space="preserve">
+    <value>Browse...</value>
+    
+  </data>
+  <data name="convertersettings_configuredlocation_radiotext" xml:space="preserve">
+    <value>Set a default site for creating pages</value>
+    
+  </data>
+  <data name="convertersettings_defineuniquesettings_radiotext" xml:space="preserve">
+    <value>Define unique settings for this content type</value>
+    
+  </data>
+  <data name="convertersettings_error_htmlfieldrequired" xml:space="preserve">
+    <value>You must select a page layout that includes at least one HTML field.</value>
+    
+  </data>
+  <data name="convertersettings_forcelocationconfiguration_checkboxtext" xml:space="preserve">
+    <value>Do not allow users to change this setting when they create pages</value>
+    
+  </data>
+  <data name="convertersettings_forceprocessingconfiguration_checkboxtext" xml:space="preserve">
+    <value>Do not allow users to change this setting when they create pages</value>
+    
+  </data>
+  <data name="convertersettings_inheritance_label" xml:space="preserve">
+    <value>Settings inheritance:</value>
+    
+  </data>
+  <data name="convertersettings_inheritance_sectiondescription" xml:space="preserve">
+    <value>Choose whether to inherit settings from the parent content type or to define unique settings for this content type. </value>
+    
+  </data>
+  <data name="convertersettings_inheritance_sectionheader" xml:space="preserve">
+    <value>Inheritance</value>
+    
+  </data>
+  <data name="convertersettings_inheritfromparent_radiotext" xml:space="preserve">
+    <value>Inherit settings from parent content type ({0})</value>
+    
+  </data>
+  <data name="convertersettings_locallocation_radiotext" xml:space="preserve">
+    <value>Create pages in the same site as the document</value>
+    
+  </data>
+  <data name="convertersettings_location_sectiondescription" xml:space="preserve">
+    <value>Choose whether to create pages in the same site as the document or to create pages in a specific site.</value>
+    
+  </data>
+  <data name="convertersettings_location_sectionheader" xml:space="preserve">
+    <value>Location</value>
+    
+  </data>
+  <data name="convertersettings_pagecontent_label" xml:space="preserve">
+    <value>CSS styles:</value>
+    
+  </data>
+  <data name="convertersettings_pagecontent_sectiondescription" xml:space="preserve">
+    <value>Select the first option to create page content that includes cascading style sheet (CSS) styles from the converted document. Select the second option to create page content that has CSS styles removed from the converted document. The second option allows the page layout you select to define the CSS classes for the converted document.</value>
+    
+  </data>
+  <data name="convertersettings_pagecontent_sectionheader" xml:space="preserve">
+    <value>HTML Styles</value>
+    
+  </data>
+  <data name="convertersettings_pagecontentnotstyled_radiotext" xml:space="preserve">
+    <value>Remove CSS styles from converted document</value>
+    
+  </data>
+  <data name="convertersettings_pagecontentstylematchesdocument_radiotext" xml:space="preserve">
+    <value>Include CSS styles from converted document</value>
+    
+  </data>
+  <data name="convertersettings_pagedescription" xml:space="preserve">
+    <value>Use this page to configure how documents of this content type will be converted into pages.  List content types that inherit from this site content type will automatically inherit these settings.</value>
+    
+  </data>
+  <data name="convertersettings_pagelayout_pagefieldlabel" xml:space="preserve">
+    <value>Field for converted document contents:</value>
+    
+  </data>
+  <data name="convertersettings_pagelayout_sectiondescription" xml:space="preserve">
+    <value>Select a page layout to use for new pages created from documents of this type, and then select a field for the contents of the converted document and a field for HTML styles from the document.  These settings will apply to new pages created from documents of this content type, and will not affect existing pages.</value>
+    
+  </data>
+  <data name="convertersettings_pagelayout_sectionheader" xml:space="preserve">
+    <value>Page Layout</value>
+    
+  </data>
+  <data name="convertersettings_pagetitle" xml:space="preserve">
+    <value>Configure Document Conversion Settings on {0}</value>
+    
+  </data>
+  <data name="convertersettings_pagetitleintitlearea" xml:space="preserve">
+    <value>Configure Document Conversion Settings</value>
+    
+  </data>
+  <data name="convertersettings_pagetitleinbreadcrumb" xml:space="preserve">
+    <value>Configure settings</value>
+    
+  </data>
+  <data name="ctconvertersettings_pagetitleinbreadcrumb" xml:space="preserve">
+    <value>Manage Document Conversion</value>
+    
+  </data>
+  <data name="convertersettings_processing_sectiondescription" xml:space="preserve">
+    <value>Select the first option to allow users to work on the converted page as soon as the conversion process is complete. Select the second option to allow users to continue to work during the conversion process.</value>
+    
+  </data>
+  <data name="convertersettings_processing_sectionheader" xml:space="preserve">
+    <value>Processing</value>
+    
+  </data>
+  <data name="convertersettings_synchronouscreation_radiotext" xml:space="preserve">
+    <value>Create pages one at a time, and take users to the page once it is created</value>
+    
+  </data>
+  <data name="createpageandpagesettings_description_label" xml:space="preserve">
+    <value>Description:</value>
+    
+  </data>
+  <data name="createpageandpagesettings_title_label" xml:space="preserve">
+    <value>Title:</value>
+    
+  </data>
+  <data name="createpageandpagesettings_urlname_label" xml:space="preserve">
+    <value>URL Name:</value>
+    
+  </data>
+  <data name="createpage_alert_maxurlnamelengthexceeded" xml:space="preserve">
+    <value>The URL name specified must contain fewer than 128 characters, including the .aspx extension.</value>
+    
+  </data>
+  <data name="createpage_alert_urlnamerequired" xml:space="preserve">
+    <value>You must specify a page URL name.</value>
+    
+  </data>
+  <data name="createpage_createbutton" xml:space="preserve">
+    <value>Create</value>
+    
+  </data>
+  <data name="createpage_dateunit_days_label" xml:space="preserve">
+    <value>Day(s)</value>
+    
+  </data>
+  <data name="createpage_dateunit_weeks_label" xml:space="preserve">
+    <value>Week(s)</value>
+    
+  </data>
+  <data name="createpage_dateunit_months_label" xml:space="preserve">
+    <value>Month(s)</value>
+    
+  </data>
+  <data name="createpage_dateunit_years_label" xml:space="preserve">
+    <value>Years(s)</value>
+    
+  </data>
+  <data name="createpage_description_textboxdefault" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="createpage_emailnames_label" xml:space="preserve">
+    <value>Users:</value>
+    
+  </data>
+  <data name="createpage_every_label" xml:space="preserve">
+    <value>every</value>
+    
+  </data>
+  <data name="createpage_expirenever_radiotext" xml:space="preserve">
+    <value>Never</value>
+    
+  </data>
+  <data name="createpage_expireonfollowing_radiotext" xml:space="preserve">
+    <value>On the following date:</value>
+    
+  </data>
+  <data name="createpage_expirydate_label" xml:space="preserve">
+    <value>End Date:</value>
+    
+  </data>
+  <data name="createpage_layouttemplate_label" xml:space="preserve">
+    <value>Page Layout:</value>
+    
+  </data>
+  <data name="createpage_pagedescription" xml:space="preserve">
+    <value>Create a new page in this area.</value>
+    
+  </data>
+  <data name="createpage_pagetitle" xml:space="preserve">
+    <value>Create Page</value>
+    
+  </data>
+  <data name="createpage_pagetitleintitlearea" xml:space="preserve">
+    <value>Create Page</value>
+    
+  </data>
+  <data name="createpage_pagetype_label" xml:space="preserve">
+    <value>Page Type:</value>
+    
+  </data>
+  <data name="createpageandpagesettings_pagelayout_sectiondescription" xml:space="preserve">
+    <value>Select a page layout to control how the page will be displayed.</value>
+    
+  </data>
+  <data name="createpageandpagesettings_pagelayout_sectionheader" xml:space="preserve">
+    <value>Page Layout</value>
+    
+  </data>
+  <data name="createpage_processing_sectiondescription" xml:space="preserve">
+    <value>Select the first option to create this page now. Select the second option to create this page in the background. Check the box to send email to a set of recipients when the page is created.</value>
+    
+  </data>
+  <data name="createpage_processing_sectionheader" xml:space="preserve">
+    <value>Processing</value>
+    
+  </data>
+  <data name="createpage_processingasync_radiotext" xml:space="preserve">
+    <value>Create this page for me in the background, and take me back to the document library.</value>
+    
+  </data>
+  <data name="createpage_processingsync_radiotext" xml:space="preserve">
+    <value>Create this page for me now, and take me to the page when it is created.</value>
+    
+  </data>
+  <data name="createpage_priorenddate_right_label" xml:space="preserve">
+    <value>prior to the end date.</value>
+    
+  </data>
+  <data name="createpage_priorenddate_textboxlabel" xml:space="preserve">
+    <value>Amount of time to notify before the end date</value>
+    
+  </data>
+  <data name="createpage_schedule_sectiondescription" xml:space="preserve">
+    <value>Specify when you want this page to appear and expire.</value>
+    
+  </data>
+  <data name="createpage_schedule_sectionheader" xml:space="preserve">
+    <value>Schedule</value>
+    
+  </data>
+  <data name="createpage_sendemail_label" xml:space="preserve">
+    <value>Send e-mail to the following users when the page is created:</value>
+    
+  </data>
+  <data name="createpage_sendmailto_examplelabel" xml:space="preserve">
+    <value>Example: someone@example.com, noone@example.com</value>
+    
+  </data>
+  <data name="createpage_sendmailto_textboxdefault" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="createpage_sendcontentreviewrequest" xml:space="preserve">
+    <value>Send a content review request mail to the Page Contact</value>
+    
+  </data>
+  <data name="createpage_sendcontentreviewrequestinterval_label" xml:space="preserve">
+    <value>Content review interval</value>
+    
+  </data>
+  <data name="createpage_timeunits_label" xml:space="preserve">
+    <value>Units for time</value>
+    
+  </data>
+  <data name="createpage_startdate_label" xml:space="preserve">
+    <value>Start Date:</value>
+    
+  </data>
+  <data name="createpage_startimmediate_radiotext" xml:space="preserve">
+    <value>Immediately</value>
+    
+  </data>
+  <data name="createpage_startonfollowing_radiotext" xml:space="preserve">
+    <value>On the following date:</value>
+    
+  </data>
+  <data name="createpage_title_textboxdefault" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="createpageandpagesettings_titleanddescription_sectiondescription" xml:space="preserve">
+    <value>Enter a URL name, title, and description for this page.</value>
+    
+  </data>
+  <data name="createpageandpagesettings_titleanddescription_sectionheader" xml:space="preserve">
+    <value>Page Title and Description</value>
+    
+  </data>
+  <data name="createpage_urlname_textboxdefault" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="createpage_variationlabel_label" xml:space="preserve">
+    <value>Variation Labels:</value>
+    
+  </data>
+  <data name="createpage_variationlabel_sectiondescription" xml:space="preserve">
+    <value>Choose a variation label for this new page.</value>
+    
+  </data>
+  <data name="createpage_variationlabel_sectionheader" xml:space="preserve">
+    <value>Variations</value>
+    
+  </data>
+  <data name="createpage_newpage">
+    <value>New Page</value>
+  </data>
+  <data name="createpage_nameadjustmentlabel">
+    <value>Blank spaces in the page name will be converted to '-'.</value>
+  </data>
+  <data name="createpagelayout_create_contenttype" xml:space="preserve">
+    <value>Create a new site content type</value>
+    
+  </data>
+  <data name="createpagelayout_title_create_contenttype" xml:space="preserve">
+    <value>Open a new window to create a new site content type</value>
+    
+  </data>
+  <data name="createpagelayout_errormessage_duplicatename" xml:space="preserve">
+    <value>An existing page layout with the same name already exists. Choose a different name.</value>
+    
+  </data>
+  <data name="createpagelayout_errormessage_namerequired" xml:space="preserve">
+    <value>Name of the page layout is required</value>
+    
+  </data>
+  <data name="createpagelayout_name_textboxdefault" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="createpagelayout_pagetitle" xml:space="preserve">
+    <value>New Page Layout</value>
+    
+  </data>
+  <data name="createpagelayout_pagetitleintitlearea" xml:space="preserve">
+    <value>New Page Layout</value>
+    
+  </data>
+  <data name="createpagelayout_pickcontenttype_sectiondescription" xml:space="preserve">
+    <value>Choose a content type to associate with this page layout. A page layout can only be associated with one content type.</value>
+    
+  </data>
+  <data name="createpagelayout_pickcontenttype_sectionheader" xml:space="preserve">
+    <value>Associated Content Type</value>
+    
+  </data>
+  <data name="createpagelayout_pickcontentype_description" xml:space="preserve">
+    <value>Description:</value>
+    
+  </data>
+  <data name="createpagelayout_pickcontentype_label" xml:space="preserve">
+    <value>Content Type Name</value>
+    
+  </data>
+  <data name="createpagelayout_pickcontentype_accesskey" xml:space="preserve">
+    <value>M</value>
+    
+  </data>
+  <data name="createpagelayout_pickcontentypegroup_label" xml:space="preserve">
+    <value>Content Type Group</value>
+    
+  </data>
+  <data name="createpagelayout_pickcontentypegroup_accesskey" xml:space="preserve">
+    <value>G</value>
+    
+  </data>
+  <data name="createpagelayout_refresh" xml:space="preserve">
+    <value>Refresh</value>
+    
+  </data>
+  <data name="createpagelayout_titleanddescription_sectiondescription" xml:space="preserve">
+    <value>Enter a URL name, title, and description for this page layout. </value>
+    
+  </data>
+  <data name="createpagelayout_titleanddescription_sectionheader" xml:space="preserve">
+    <value>Page Layout Title and Description </value>
+    
+  </data>
+  <data name="createpagelayout_name_accesskey" xml:space="preserve">
+    <value>N</value>
+    
+  </data>
+  <data name="createpagelayout_title_accesskey" xml:space="preserve">
+    <value>T</value>
+    
+  </data>
+  <data name="createpagelayout_description_accesskey" xml:space="preserve">
+    <value>s</value>
+    
+  </data>
+  <data name="createpagelayout_variationlabels_candidateslabel" xml:space="preserve">
+    <value>Available Labels</value>
+    
+  </data>
+  <data name="createpagelayout_variationlabels_resultslabel" xml:space="preserve">
+    <value>Labels for Layout</value>
+    
+  </data>
+  <data name="createpagelayout_variationlabels_label" xml:space="preserve">
+    <value>Variation Labels</value>
+    
+  </data>
+  <data name="createpagelayout_variationlabels_sectiondescription" xml:space="preserve">
+    <value>Select the variation labels for which this layout is intended.</value>
+    
+  </data>
+  <data name="createpagelayout_variationlabels_sectionheader" xml:space="preserve">
+    <value>Variation Labels</value>
+    
+  </data>
+  <data name="pagesettingslayout_audience_sectionheader" xml:space="preserve">
+    <value>Audience Targeting</value>
+    
+  </data>
+  <data name="pagesettingslayout_audience_sectiondescription" xml:space="preserve">
+    <value>Choose audiences if you want this page to be audience targeted.</value>
+    
+  </data>
+  <data name="ctconvertersettings_allowedconverters_label" xml:space="preserve">
+    <value>Allowed converters for this content type:</value>
+    
+  </data>
+  <data name="ctconvertersettings_allowedconverters_sectiondescription" xml:space="preserve">
+    <value>Select the converters you want to use for this content type. Click &lt;b&gt;Apply&lt;/b&gt; to save the settings and then click &lt;b&gt;Configure&lt;/b&gt; to change the settings for a converter. </value>
+    
+  </data>
+  <data name="ctconvertersettings_allowedconverters_sectionheader" xml:space="preserve">
+    <value>Converters</value>
+    
+  </data>
+  <data name="ctconvertersettings_applywarning" xml:space="preserve">
+    <value>Click &lt;b&gt;Apply&lt;/b&gt; to enable the selected converters and then click &lt;b&gt;Configure&lt;/b&gt; to change the settings for a specific converter.</value>
+    
+  </data>
+  <data name="ctconvertersettings_pagedescription" xml:space="preserve">
+    <value>Use this page to configure which converters are available for documents of this content type.  List content types that inherit from this site content type will automatically inherit these settings.</value>
+    
+  </data>
+  <data name="ctconvertersettings_pagetitle" xml:space="preserve">
+    <value>Manage Document Conversion for {0}</value>
+    
+  </data>
+  <data name="ctconvertersettings_pagetitleintitlearea" xml:space="preserve">
+    <value>Manage Document Conversion</value>
+    
+  </data>
+  <data name="multipages_applybutton_text" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="multipages_cancelbutton_text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="MultPages_MoreInfo_LinkText" xml:space="preserve">
+    <value>Show me more information.</value>
+  </data>
+  <data name="new_variation_page_radio_button_reference_resource" xml:space="preserve">
+    <value>Reference from the location of the original page</value>
+  </data>
+  <data name="new_variation_page_radio_button_copy_resource" xml:space="preserve">
+    <value>Copy to the location of the new page</value>
+  </data>
+  <data name="newsitevariation_description_fieldlabel" xml:space="preserve">
+    <value>Description:</value>
+    
+  </data>
+  <data name="newsitevariation_description_fieldtitle" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="newsitevariation_pagetitle" xml:space="preserve">
+    <value>New Site Variation</value>
+    
+  </data>
+  <data name="newsitevariation_pagetitleintitlearea" xml:space="preserve">
+    <value>New Variation Site</value>
+    
+  </data>
+  <data name="newsitevariation_image" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="newsitevariation_pagedescription" xml:space="preserve">
+    <value>Create a new site variation for a specific label.</value>
+    
+  </data>
+  <data name="newsitevariation_notinsourcehierarchy_error" xml:space="preserve">
+    <value>A site variation cannot be created for a site that is not in the variation source hierarchy.</value>
+    
+  </data>
+  <data name="newsitevariation_variationlabel_sectionheader" xml:space="preserve">
+    <value>Variations</value>
+    
+  </data>
+  <data name="newsitevariation_variationlabel_sectiondescription" xml:space="preserve">
+    <value>Please select the label of the variation you would like to create.  Labels will not appear in the list if the target variation already exists or the target site does not exist.</value>
+    
+  </data>
+  <data name="newsitevariation_VariationLabels" xml:space="preserve">
+    <value>Variation Labels:</value>
+    
+  </data>
+  <data name="newsitevariation_nameanddescription_sectionheader" xml:space="preserve">
+    <value>Title and Description</value>
+    
+  </data>
+  <data name="newsitevariation_nameanddescription_sectiondescription" xml:space="preserve">
+    <value>Type a title and description for your new site. The title will be displayed on each page in the site.</value>
+    
+  </data>
+  <data name="newsitevariation_url_sectionheader" xml:space="preserve">
+    <value>Web Site Address</value>
+    
+  </data>
+  <data name="newsitevariation_url_sectiondescription" xml:space="preserve">
+    <value>Users can navigate to your site by typing the Web site address (URL) into their browser. You can enter the last part of the address. You should keep it short and easy to remember. &lt;br&gt;&lt;br&gt;For example, http://[Server Name]/testsite/sitename</value>
+    
+  </data>
+  <data name="newsitevariation_url_fieldlabel" xml:space="preserve">
+    <value>URL name:</value>
+    
+  </data>
+  <data name="newsitevariation_url_fieldtitle" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="newsitevariation_name_fieldlabel" xml:space="preserve">
+    <value>Title:</value>
+    
+  </data>
+  <data name="newsitevariation_name_fieldtitle" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="newsitevariationsite_nolabels" xml:space="preserve">
+    <value>All existing labels have already have a spawned variation for this site.</value>
+    
+  </data>
+  <data name="newsitevariationsite_notsource" xml:space="preserve">
+    <value>The current site is not in the variation source hierarchy.</value>
+    
+  </data>
+  <data name="objectcachesettings_alert_numobjectspositive" xml:space="preserve">
+    <value>The number of objects must be greater than 0.</value>
+  </data>
+  <data name="objectcachesettings_forcecacheflush_checkboxtext" xml:space="preserve">
+    <value>Object Cache Flush</value>
+  </data>
+  <data name="objectcachesettings_cachesize_validator" xml:space="preserve">
+    <value>&lt;br&gt; The size must be a number between 1 and 10000000.</value>
+  </data>
+  <data name="objectcachesettings_forcecacheflush_description" xml:space="preserve">
+    <value>When you select this check box, all entries in the object cache will be flushed immediately when you click &lt;b&gt;OK&lt;/b&gt;. If this check box is not selected, the cache will manage the expiration of items based on when they time out or are changed in the site.</value>
+  </data>
+  <data name="objectcachesettings_forcecacheflush_header" xml:space="preserve">
+    <value>Object Cache Reset</value>
+  </data>
+  <data name="objectcachesettings_forceFarmcacheflush_checkboxtext" xml:space="preserve">
+    <value>Force all servers in the farm to flush their object caches</value>
+  </data>
+  <data name="objectcachesettings_numobjects_label" xml:space="preserve">
+    <value>Max. Cache Size (MB):</value>
+    
+  </data>
+  <data name="objectcachesettings_objectcachesize_description" xml:space="preserve">
+    <value>The object cache is used internally to optimize page rendering by storing properties of sites, page layouts, and pages.  Adjust this value to specify the maximum size of the memory that can be used in the object cache.</value>
+  </data>
+  <data name="objectcachesettings_objectcachesize_header" xml:space="preserve">
+    <value>Object Cache Size</value>
+  </data>
+  <data name="objectcachesettings_pagedescription" xml:space="preserve">
+    <value>Configure settings for the object cache.</value>
+  </data>
+  <data name="objectcachesettings_pagetitle" xml:space="preserve">
+    <value>Object Cache Settings</value>
+  </data>
+  <data name="objectcachesettings_pagetitleintitlearea" xml:space="preserve">
+    <value>Object cache settings</value>
+  </data>
+  <data name="pagesettings_contact_sectiondescription" xml:space="preserve">
+    <value>Identify a person or group to be the main contact for this page.</value>
+    
+  </data>
+  <data name="pagesettings_contact_sectionheader" xml:space="preserve">
+    <value>Page Contact</value>
+    
+  </data>
+  <data name="pagesettings_contactname_label" xml:space="preserve">
+    <value>Contact Name:</value>
+    
+  </data>
+  <data name="pagesettings_createdby_label" xml:space="preserve">
+    <value>Created By:</value>
+    
+  </data>
+  <data name="pagesettings_createddate_label" xml:space="preserve">
+    <value>Created Date:</value>
+    
+  </data>
+  <data name="pagesettings_description_textboxdefault" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="pagesettings_enterlocalcontact_radiotext" xml:space="preserve">
+    <value>Enter contact information</value>
+    
+  </data>
+  <data name="pagesettings_expirenever_radiotext" xml:space="preserve">
+    <value>Never</value>
+    
+  </data>
+  <data name="pagesettings_expireonfollowing_radiotext" xml:space="preserve">
+    <value>On the following date:</value>
+    
+  </data>
+  <data name="pagesettings_expirydate_label" xml:space="preserve">
+    <value>End Date:</value>
+    
+  </data>
+  <data name="pagesettings_historicaldetail_sectiondescription" xml:space="preserve">
+    <value>Historical data about this page cannot be modified.</value>
+    
+  </data>
+  <data name="pagesettings_historicaldetail_sectionheader" xml:space="preserve">
+    <value>Historical Detail</value>
+    
+  </data>
+  <data name="pagesettings_localcontactemail_label" xml:space="preserve">
+    <value>Contact E-Mail Address:</value>
+    
+  </data>
+  <data name="pagesettings_layouttemplate_label" xml:space="preserve">
+    <value>Layout Template:</value>
+    
+  </data>
+  <data name="pagesettings_localcontactemail_textboxdefault" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="pagesettings_localcontactname_label" xml:space="preserve">
+    <value>Contact Name:</value>
+    
+  </data>
+  <data name="pagesettings_localcontactname_textboxdefault" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="pagesettings_localcontactpicture_label" xml:space="preserve">
+    <value>Contact Picture:</value>
+    
+  </data>
+  <data name="pagesettings_localcontactpicture_textboxdefault" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="pagesettings_modifiedby_label" xml:space="preserve">
+    <value>Last Modified By:</value>
+    
+  </data>
+  <data name="pagesettings_modifieddate_label" xml:space="preserve">
+    <value>Last Modified Date:</value>
+    
+  </data>
+  <data name="pagesettings_notify_rangevalidator" xml:space="preserve">
+    <value>Please enter a number between 1 and 99.</value>
+    
+  </data>
+  <data name="pagesettings_notifypagecontact_checkbox" xml:space="preserve">
+    <value>Notify Page Contact</value>
+    
+  </data>
+  <data name="pagesettings_pagedescription" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="pagesettings_pagetitle" xml:space="preserve">
+    <value>Page Settings</value>
+    
+  </data>
+  <data name="pagesettings_pagetitleintitlearea" xml:space="preserve">
+    <value>Page Settings</value>
+    
+  </data>
+  <data name="pagesettings_pagetype_label" xml:space="preserve">
+    <value>Page Type:</value>
+    
+  </data>
+  <data name="pagesettings_schedule_sectiondescription" xml:space="preserve">
+    <value>Specify when you want this page to appear and end. &lt;br&gt;&lt;br&gt;Note: In environments with separate authoring and production sites, pages must also be deployed to go live on the production site.</value>
+    
+  </data>
+  <data name="pagesettings_schedule_sectionheader" xml:space="preserve">
+    <value>Schedule</value>
+    
+  </data>
+  <data name="pagesettings_selectcontact_radiotext" xml:space="preserve">
+    <value>Select Contact</value>
+    
+  </data>
+  <data name="pagesettings_startdate_label" xml:space="preserve">
+    <value>Start Date:</value>
+    
+  </data>
+  <data name="pagesettings_startimmediate_radiotext" xml:space="preserve">
+    <value>Immediately</value>
+    
+  </data>
+  <data name="pagesettings_startonfollowing_radiotext" xml:space="preserve">
+    <value>On the following date:</value>
+    
+  </data>
+  <data name="pagesettings_title_textboxdefault" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="pagesettings_urlname_textboxdefault" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="pageversioninfo_image_alttext" xml:space="preserve">
+    <value>Page Status Information</value>
+  </data>
+  <data name="pageversioninfo_title_label" xml:space="preserve">
+    <value>Page Status Information</value>
+  </data>
+  <data name="PublishingSiteSettings_AreaWelcomePage_Title" xml:space="preserve">
+    <value>Welcome Page</value>
+  </data>
+  <data name="RegionalSettingsExtensions_Pushdown_AccessKey" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="RegionalSettingsExtensions_Pushdown_Title" xml:space="preserve">
+    <value>Subsite Settings</value>
+  </data>
+  <data name="RegionalSettingsExtensions_Pushdown_Description" xml:space="preserve">
+    <value>Check the checkbox to have all sub-sites inherit these Regional Settings.</value>
+  </data>
+  <data name="RegionalSettingsExtensions_Pushdown_Label" xml:space="preserve">
+    <value>All sub-sites inherit these Regional Settings.</value>
+  </data>
+  <data name="RegionalSettingsPushdown_pagetitle" xml:space="preserve">
+    <value>Regional Settings</value>
+  </data>
+  <data name="RegionalSettingsPushdown_pagetitleintitlearea" xml:space="preserve">
+    <value>Regional Settings</value>
+  </data>
+  <data name="RegionalSettingsPushdown_pagedescription" xml:space="preserve">
+    <value>Regional Settings page description</value>
+  </data>
+  <data name="RegionalSettingsPushdown_sectionheader" xml:space="preserve">
+    <value>Regional Settings</value>
+  </data>
+  <data name="RegionalSettingsPushdown_sectiondescription" xml:space="preserve">
+    <value>Select OK to set the regional settings to this site. Check the checkbox to have all subsites inherit these Regional Settings.</value>
+  </data>
+  <data name="RegionalSettingsPushdown_Label" xml:space="preserve">
+    <value>Regional Settings</value>
+  </data>
+  <data name="RegionalSettingsPushdown_CheckBox_FieldLabel" xml:space="preserve">
+    <value>Reset all subsites to inherit these Regional Settings.</value>
+  </data>
+  <data name="resourcesection_header" xml:space="preserve">
+    <value>Images and Attachments</value>
+  </data>
+  <data name="resource_radi_button2_title" xml:space="preserve">
+    <value>Copy resources to the location of the new page.</value>
+  </data>
+  <data name="resource_radio_button1_title" xml:space="preserve">
+    <value>Reference the same resources as the original page.</value>
+  </data>
+  <data name="resourcesection_description" xml:space="preserve">
+    <value>When a variation of this page is created, any dependent files, images, or other resources need to be copied to the location of the new variation, or the new variation needs to reference the same resources as the original page.</value>
+  </data>
+  <data name="resourcesection_title" xml:space="preserve">
+    <value>Images and attached files:</value>
+  </data>
+  <data name="rte2etable_apply_special_formats" xml:space="preserve">
+    <value>Apply special formats to:</value>
+    
+  </data>
+  <data name="rte2etable_columns" xml:space="preserve">
+    <value>Columns:</value>
+    
+  </data>
+  <data name="rte2etable_edit_table_title" xml:space="preserve">
+    <value>Edit Table Properties</value>
+    
+  </data>
+  <data name="rte2etable_error_numcolumns_nan" xml:space="preserve">
+    <value>The number of columns must be a number from 1 through 100.</value>
+    
+  </data>
+  <data name="rte2etable_error_numcolumns_range" xml:space="preserve">
+    <value>The number of columns must be a number from 1 through 100.</value>
+    
+  </data>
+  <data name="rte2etable_error_numrows_nan" xml:space="preserve">
+    <value>The number of rows must be a number from 1 through 100.</value>
+    
+  </data>
+  <data name="rte2etable_error_numrows_range" xml:space="preserve">
+    <value>The number of rows must be an number from 1 through 100.</value>
+    
+  </data>
+  <data name="rte2etable_error_tableheight_nan" xml:space="preserve">
+    <value>The table height must be a positive number.</value>
+    
+  </data>
+  <data name="rte2etable_error_tableheight_minrange" xml:space="preserve">
+    <value>The table height must be a positive number.</value>
+    
+  </data>
+  <data name="rte2etable_error_tableheight_maxpercrange" xml:space="preserve">
+    <value>The table height must be a positive number between 1 and 10,000 percent. </value>
+    
+  </data>
+  <data name="rte2etable_error_tableheight_maxpixelrange" xml:space="preserve">
+    <value>The table height must be a positive number between 1 and 100,000 pixels. </value>
+    
+  </data>
+  <data name="rte2etable_error_tablewidth_nan" xml:space="preserve">
+    <value>The table width must be a positive number. </value>
+    
+  </data>
+  <data name="rte2etable_error_tablewidth_minrange" xml:space="preserve">
+    <value>The table width must be a positive number. </value>
+    
+  </data>
+  <data name="rte2etable_error_tablewidth_maxpercrange" xml:space="preserve">
+    <value>The table width must be a positive number between 1 and 10,000 percent. </value>
+    
+  </data>
+  <data name="rte2etable_error_tablewidth_maxpixelrange" xml:space="preserve">
+    <value>The table width must be a positive number between 1 and 100,000 pixels. </value>
+    
+  </data>
+  <data name="rte2etable_first_column" xml:space="preserve">
+    <value>First Column</value>
+    
+  </data>
+  <data name="rte2etable_format_section_title" xml:space="preserve">
+    <value>Format</value>
+    
+  </data>
+  <data name="rte2etable_heading_row" xml:space="preserve">
+    <value>Heading Row</value>
+    
+  </data>
+  <data name="rte2etable_insert_table_title" xml:space="preserve">
+    <value>Insert Table</value>
+    
+  </data>
+  <data name="rte2etable_last_column" xml:space="preserve">
+    <value>Last Column</value>
+    
+  </data>
+  <data name="rte2etable_last_row" xml:space="preserve">
+    <value>Last Row</value>
+    
+  </data>
+  <data name="rte2etable_no_styles_found" xml:space="preserve">
+    <value>[no predefined table styles found]</value>
+    
+  </data>
+  <data name="rte2etable_preview" xml:space="preserve">
+    <value>Preview</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Feb" xml:space="preserve">
+    <value>Feb</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Jan" xml:space="preserve">
+    <value>Jan</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Mar" xml:space="preserve">
+    <value>Mar</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Total" xml:space="preserve">
+    <value>Total</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Row2Col1" xml:space="preserve">
+    <value>East</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Row2Col2" xml:space="preserve">
+    <value>7</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Row2Col3" xml:space="preserve">
+    <value>7</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Row2Col4" xml:space="preserve">
+    <value>5</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Row2Col5" xml:space="preserve">
+    <value>19</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Row3Col1" xml:space="preserve">
+    <value>West</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Row3Col2" xml:space="preserve">
+    <value>6</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Row3Col3" xml:space="preserve">
+    <value>4</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Row3Col4" xml:space="preserve">
+    <value>7</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Row3Col5" xml:space="preserve">
+    <value>17</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Row4Col1" xml:space="preserve">
+    <value>South</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Row4Col2" xml:space="preserve">
+    <value>8</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Row4Col3" xml:space="preserve">
+    <value>7</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Row4Col4" xml:space="preserve">
+    <value>9</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Row4Col5" xml:space="preserve">
+    <value>24</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Row5Col1" xml:space="preserve">
+    <value>Total</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Row5Col2" xml:space="preserve">
+    <value>21</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Row5Col3" xml:space="preserve">
+    <value>18</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Row5Col4" xml:space="preserve">
+    <value>21</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_Row5Col5" xml:space="preserve">
+    <value>60</value>
+    
+  </data>
+  <data name="rte2etable_rows" xml:space="preserve">
+    <value>Rows:</value>
+    
+  </data>
+  <data name="rte2etable_size_section_title" xml:space="preserve">
+    <value>Size</value>
+    
+  </data>
+  <data name="rte2etable_specify_dimensions" xml:space="preserve">
+    <value>Specify Dimensions</value>
+    
+  </data>
+  <data name="rte2etable_table_format" xml:space="preserve">
+    <value>Table Format #</value>
+    
+  </data>
+  <data name="rte2etable_table_height" xml:space="preserve">
+    <value>Height</value>
+    
+  </data>
+  <data name="rte2etable_table_width" xml:space="preserve">
+    <value>Width</value>
+    
+  </data>
+  <data name="rte2etable_use_predefined_format" xml:space="preserve">
+    <value>Use Predefined Table Format</value>
+    
+  </data>
+  <data name="rte2pueditor_discard_changes" xml:space="preserve">
+    <value>The HTML has been modified in the View Source mode. These changes will be not be saved if the dialog box is closed.</value>
+    
+  </data>
+  <data name="rte2pueditor_keep_changes" xml:space="preserve">
+    <value>The content has changed from the original content. Click OK to keep these changes. Click Cancel to discard these changes.</value>
+    
+  </data>
+  <data name="rte2pueditor_title" xml:space="preserve">
+    <value>HTML Editor</value>
+    
+  </data>
+  <data name="rte2pueditor_unsaved_changes" xml:space="preserve">
+    <value>You have not saved your changes. If you close this dialog box now, you will lose your changes.</value>
+    
+  </data>
+  <data name="sitecachesettings_allowareaoverride_checkboxtext" xml:space="preserve">
+    <value>Publishing sites can use a different page output cache profile</value>
+  </data>
+  <data name="sitecachesettings_allowlayoutoverride_checkboxtext" xml:space="preserve">
+    <value>Page layouts can use a different page output cache profile</value>
+  </data>
+  <data name="sitecachesettings_areabloboverride_label" xml:space="preserve">
+    <value>Sites can use a different page element cache profile from the profile used in the site collection</value>
+  </data>
+  <data name="sitecachesettings_areapageoverride_label" xml:space="preserve">
+    <value>Publishing Sites:</value>
+  </data>
+  <data name="sitecachesettings_blobcacheanonprofile_sectiondescription" xml:space="preserve">
+    <value>Assign the cache profile you want to apply to all page elements (images and other binary objects) in your site for anonymous users.</value>
+  </data>
+  <data name="sitecachesettings_blobcacheanonprofile_sectionheader" xml:space="preserve">
+    <value>Anonymous Page Element Cache Profile</value>
+  </data>
+  <data name="sitecachesettings_blobcacheauthprofile_sectiondescription" xml:space="preserve">
+    <value>Assign the cache profile you want to apply to all page elements (images and other binary objects) in your site for authenticated users.</value>
+  </data>
+  <data name="sitecachesettings_blobcacheauthprofile_sectionheader" xml:space="preserve">
+    <value>Authenticated Page Element Cache Profile</value>
+  </data>
+  <data name="sitecachesettings_blobcachepolicy_sectiondescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="sitecachesettings_blobcachepolicy_sectionheader" xml:space="preserve">
+    <value>Page Element Cache Override Policy</value>
+  </data>
+  <data name="sitecachesettings_blobcacheprofile_label" xml:space="preserve">
+    <value>Select a default page element cache profile</value>
+  </data>
+  <data name="sitecachesettings_cache_description" xml:space="preserve">
+    <value>Select the &lt;b&gt;Enable output cache&lt;/b&gt; check box to enable output caching in this site collection.</value>
+  </data>
+  <data name="sitecachesettings_cache_header" xml:space="preserve">
+    <value>Output Cache</value>
+  </data>
+  <data name="sitecachesettings_cachedebug_sectiondescription" xml:space="preserve">
+    <value>Select the check box to enable the display of additional cache information on pages in this site collection. This includes the date and time that page contents were last rendered.</value>
+  </data>
+  <data name="sitecachesettings_cachedebug_sectionheader" xml:space="preserve">
+    <value>Debug Cache Information</value>
+  </data>
+  <data name="sitecachesettings_disable_radiotext" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="sitecachesettings_disallowoverride_radiotext" xml:space="preserve">
+    <value>Disallow</value>
+  </data>
+  <data name="sitecachesettings_enable_checkboxtext" xml:space="preserve">
+    <value>Enable output cache</value>
+  </data>
+  <data name="sitecachesettings_enable_debugging_checkboxtext" xml:space="preserve">
+    <value>Enable debug cache information on pages</value>
+  </data>
+  <data name="sitecachesettings_layoutpageoverride_label" xml:space="preserve">
+    <value>Page Layouts:</value>
+  </data>
+  <data name="sitecachesettings_objectcache_header" xml:space="preserve">
+    <value>Object Cache</value>
+  </data>
+  <data name="sitecachesettings_pagecacheanonprofile_sectiondescription" xml:space="preserve">
+    <value>A cache profile specifies how long items should be held in the cache. It also describes to the caching system how to determine whether a cached page element is in fact valid for other requests for the same element from different users.&lt;br&gt;You can specify different cache profiles to use for anonymous and authenticated users. This optimizes the use of the cache based on the authentication methods allowed on the site.&lt;br&gt;Page output cache profiles specifically affect portal publishing pages.</value>
+    
+  </data>
+  <data name="sitecachesettings_pagecacheanonprofile_sectionheader" xml:space="preserve">
+    <value>Default Page Output Cache Profile</value>
+  </data>
+  <data name="sitecachesettings_pagecacheauthprofile_sectiondescription" xml:space="preserve">
+    <value>A cache profile specifies how long items should be held in the cache. It also describes to the caching system how to determine whether a cached page element is in fact valid for other requests for the same element from different users.&lt;br&gt;You can specify different cache profiles to use for anonymous and authenticated users. This optimizes the use of the cache based on the authentication methods allowed on the site.&lt;br&gt;Page output cache profiles specifically affect portal publishing pages.</value>
+    
+  </data>
+  <data name="sitecachesettings_pagecacheauthprofile_sectionheader" xml:space="preserve">
+    <value>Authenticated Page Output Cache Profile</value>
+  </data>
+  <data name="sitecachesettings_pagecachepolicy_sectiondescription" xml:space="preserve">
+    <value>You can allow administrators and page layout designers to choose a different page output cache profile from the profile specified above.</value>
+  </data>
+  <data name="sitecachesettings_pagecachepolicy_sectionheader" xml:space="preserve">
+    <value>Page Output Cache Policy</value>
+  </data>
+  <data name="sitecachesettings_anonymouspagecacheprofile_label" xml:space="preserve">
+    <value>Anonymous Cache Profile</value>
+  </data>
+  <data name="sitecachesettings_authenticatedpagecacheprofile_label" xml:space="preserve">
+    <value>Authenticated Cache Profile</value>
+  </data>
+  <data name="sitecachesettings_pagedescription" xml:space="preserve">
+    <value>Configure site-wide cache settings.</value>
+  </data>
+  <data name="sitecachesettings_pagetitle" xml:space="preserve">
+    <value>Site Collection Output Cache Settings</value>
+  </data>
+  <data name="sitecachesettings_pagetitleintitlearea" xml:space="preserve">
+    <value>Output Cache Settings</value>
+  </data>
+  <data name="sitemanager_searchButton" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="sitemanager_viewrelatedButton" xml:space="preserve">
+    <value>ViewRelated</value>
+  </data>
+  <data name="sitenavigationmanagement_pagetitle" xml:space="preserve">
+    <value>Navigation Settings</value>
+  </data>
+  <data name="sitenavigationmanagement_pagedescription" xml:space="preserve">
+    <value>Configure site-wide navigation settings.</value>
+  </data>
+  <data name="sitenavigationmanagement_navigationenabled_header" xml:space="preserve">
+    <value>Navigation Enabled</value>
+  </data>
+  <data name="sitenavigationmanagement_navigationenabled_description" xml:space="preserve">
+    <value>This setting determines whether navigation links are shown across the top or on the sides of pages.  Disabling navigation will hide any navigation bars on pages in this site collection.</value>
+  </data>
+  <data name="sitenavigationmanagement_navigationenabled" xml:space="preserve">
+    <value>Enable navigation</value>
+  </data>
+  <data name="sitenavigationmanagement_securitytrimming_header" xml:space="preserve">
+    <value>Security Trimming</value>
+  </data>
+  <data name="sitenavigationmanagement_securitytrimming_description" xml:space="preserve">
+    <value>This setting determines whether navigation links are hidden if the user does not have access to the desintation of the link.</value>
+  </data>
+  <data name="sitenavigationmanagement_securitytrimming" xml:space="preserve">
+    <value>Enable security trimming</value>
+  </data>
+  <data name="sitenavigationmanagement_audiencetargeting_header" xml:space="preserve">
+    <value>Audience Targeting</value>
+  </data>
+  <data name="sitenavigationmanagement_audiencetargeting_description" xml:space="preserve">
+    <value>This setting determines whether navigation links are hidden if the user is not in the audience specified for the link.</value>
+  </data>
+  <data name="sitenavigationmanagement_audiencetargeting" xml:space="preserve">
+    <value>Enable audience targeting</value>
+  </data>
+  <data name="areanavigationmanagement_pagetitle" xml:space="preserve">
+    <value>Site Navigation Settings</value>
+  </data>
+  <data name="areanavigationmanagement_pagetitleintitlearea" xml:space="preserve">
+    <value>Navigation Settings</value>
+  </data>
+  <data name="areanavigationmanagement_pagedescription" xml:space="preserve">
+    <value>Use this page to specify the navigation items that you want to display in the navigation link bars of this site. Items in sublevels and flyouts can be modified only in the navigation of the subsite that contains these items.</value>
+  </data>
+  <data name="sitenavigationmanagement_showsubsitespages_header" xml:space="preserve">
+    <value>Subsites and Pages</value>
+  </data>
+  <data name="sitenavigationmanagement_showsubsitespages_description" xml:space="preserve">
+    <value>Specify whether this site should display subsites and publishing pages in navigation. If you select to show these items, newly created subsites and pages will automatically be added, and can be individually hidden in the bottommost section of this page.</value>
+  </data>
+  <data name="sitenavigationmanagement_showsubsites" xml:space="preserve">
+    <value>Show subsites</value>
+  </data>
+  <data name="sitenavigationmanagement_showpages" xml:space="preserve">
+    <value>Show pages</value>
+  </data>
+  <data name="sitenavigationmanagement_dynamicchildlimit" xml:space="preserve">
+    <value>Maximum number of dynamic items to show within this level of navigation:</value>
+  </data>
+  <data name="sitenavigationmanagement_sorting_header" xml:space="preserve">
+    <value>Sorting</value>
+  </data>
+  <data name="sitenavigationmanagement_sorting_description" xml:space="preserve">
+    <value>Specify how subsites, pages, headings and navigation links should be sorted when displayed in navigation.</value>
+  </data>
+  <data name="sitenavigationmanagement_automaticsorting" xml:space="preserve">
+    <value>Sort automatically</value>
+  </data>
+  <data name="sitenavigationmanagement_manualsorting" xml:space="preserve">
+    <value>Sort manually</value>
+  </data>
+  <data name="sitenavigationmanagement_mixedsorting" xml:space="preserve">
+    <value>Sort pages automatically</value>
+  </data>
+  <data name="sitenavigationmanagement_automaticsorting_header" xml:space="preserve">
+    <value>Automatic Sorting</value>
+  </data>
+  <data name="sitenavigationmanagement_automaticsorting_description" xml:space="preserve">
+    <value>Automatically sort the navigation items by title, creation date, or publication date.</value>
+  </data>
+  <data name="sitenavigationmanagement_sortby" xml:space="preserve">
+    <value>Sort by:</value>
+  </data>
+  <data name="sitenavigationmanagement_ascending_radiotext" xml:space="preserve">
+    <value>in ascending order (A,B,C or 1,2,3)</value>
+  </data>
+  <data name="sitenavigationmanagement_descending_radiotext" xml:space="preserve">
+    <value>in descending order (C,B,A or 3,2,1)</value>
+  </data>
+  <data name="sitenavigationmanagement_topbarinheritance_header" xml:space="preserve">
+    <value>Global Navigation</value>
+  </data>
+  <data name="sitenavigationmanagement_topbarinheritance_description" xml:space="preserve">
+    <value>Specify the navigation items to display in global navigation for this Web site. This navigation is shown at the top of the page in most Web sites.</value>
+  </data>
+  <data name="sitenavigationmanagement_topbarinheritance_MoreInfo_LinkText" xml:space="preserve">
+    <value>Learn more about site navigation.</value>
+    
+  </data>
+  <data name="sitenavigationmanagement_topbar_inherit" xml:space="preserve">
+    <value>Display the same navigation items as the parent site</value>
+  </data>
+  <data name="sitenavigationmanagement_topbar_unique" xml:space="preserve">
+    <value>Display the navigation items below the current site</value>
+  </data>
+  <data name="sitenavigationmanagement_leftbarinheritance_header" xml:space="preserve">
+    <value>Current Navigation</value>
+  </data>
+  <data name="sitenavigationmanagement_leftbarinheritance_description" xml:space="preserve">
+    <value>Specify the navigation items to display in current navigation for this Web site. This navigation is shown on the side of the page in most Web sites.</value>
+  </data>
+  <data name="sitenavigationmanagement_leftbar_inherit" xml:space="preserve">
+    <value>Display the same navigation items as the parent site</value>
+  </data>
+  <data name="sitenavigationmanagement_leftbar_showsiblings" xml:space="preserve">
+    <value>Display the current site, the navigation items below the current site, and the current site's siblings</value>
+  </data>
+  <data name="sitenavigationmanagement_leftbar_unique" xml:space="preserve">
+    <value>Display only the navigation items below the current site</value>
+  </data>
+  <data name="sitenavigationmanagement_manualsorting_header" xml:space="preserve">
+    <value>Navigation Editing and Sorting</value>
+  </data>
+  <data name="sitenavigationmanagement_manualsorting_description" xml:space="preserve">
+    <value>Use this section to reorder and modify the navigation items under this site. You can create, delete and edit navigation links and headings. You can also move navigation items under headings and choose to display or hide pages and subsites.</value>
+  </data>
+  <data name="yesnoradiobutton_option_yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="yesnoradiobutton_option_no" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="sitenavigationmanagement_displayshowhideribbonaction_header" xml:space="preserve">
+    <value>Show and Hide Ribbon</value>
+  </data>
+  <data name="sitenavigationmanagement_displayshowhideribbonaction_description" xml:space="preserve">
+      <value>Specify whether the user has access to the "Show Ribbon" and "Hide Ribbon" commands on the Site Actions menu.</value>
+  </data>
+  <data name="sitenavigationmanagement_displayshowhideribbonaction_title" xml:space="preserve">
+    <value>Make "Show Ribbon" and "Hide Ribbon" commands available</value>
+  </data>
+  <data name="smallconsole_createothers" xml:space="preserve">
+    <value>List or Library...</value>
+  </data>
+  <data name="smallconsole_createpage" xml:space="preserve">
+    <value>Page...</value>
+  </data>
+  <data name="console_createpagevariation" xml:space="preserve">
+    <value>Submit a Variation...</value>
+    
+  </data>
+  <data name="smallconsole_createsitevariation" xml:space="preserve">
+    <value>Site Variation...</value>
+  </data>
+  <data name="smallconsole_createsubmenu" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="smallconsole_editpage" xml:space="preserve">
+    <value>Edit Page</value>
+  </data>
+  <data name="smallconsole_editpagesubmenu" xml:space="preserve">
+    <value>Edit Page</value>
+  </data>
+  <data name="smallconsole_managesite" xml:space="preserve">
+    <value>Manage Site...</value>
+  </data>
+  <data name="smallconsole_modifycontent" xml:space="preserve">
+    <value>Modify Content</value>
+  </data>
+  <data name="smallconsole_modifysettings" xml:space="preserve">
+    <value>Modify Settings...</value>
+  </data>
+  <data name="smallconsole_reviewcontent" xml:space="preserve">
+    <value>Show Page Status</value>
+  </data>
+  <data name="smallconsole_sitesettingssubmenu" xml:space="preserve">
+    <value>Site Settings</value>
+  </data>
+  <data name="SmtAll" xml:space="preserve">
+    <value>All</value>
+    
+  </data>
+  <data name="spellchecker_pagetitle" xml:space="preserve">
+    <value>Spell Checker</value>
+    
+  </data>
+  <data name="stylepicker_pagetitle" xml:space="preserve">
+    <value>Style Picker</value>
+  </data>
+  <data name="SmtCopy" xml:space="preserve">
+    <value>Copy...</value>
+    
+  </data>
+  <data name="SmtDelete" xml:space="preserve">
+    <value>Delete</value>
+    
+  </data>
+  <data name="SmtDisplayProperties" xml:space="preserve">
+    <value>View Properties</value>
+    
+  </data>
+  <data name="smtool_title" xml:space="preserve">
+    <value>Site Content and Structure</value>
+    
+  </data>
+  <data name="SmtExport" xml:space="preserve">
+    <value>Export Variation</value>
+    
+  </data>
+  <data name="SmtImport" xml:space="preserve">
+    <value>Import Variation</value>
+    
+  </data>
+  <data name="SmtSiteVariation" xml:space="preserve">
+    <value>Site Variation</value>
+    
+  </data>
+  <data name="spellchecker_changeall" xml:space="preserve">
+    <value>Change All</value>
+    
+  </data>
+  <data name="SmtEditProperties" xml:space="preserve">
+    <value>Edit Properties</value>
+    
+  </data>
+  <data name="spellchecker_changeonce" xml:space="preserve">
+    <value>Change Once</value>
+    
+  </data>
+  <data name="SmtList" xml:space="preserve">
+    <value>List</value>
+    
+  </data>
+  <data name="spellchecker_changeto" xml:space="preserve">
+    <value>Change to:</value>
+    
+  </data>
+  <data name="SmtMove" xml:space="preserve">
+    <value>Move...</value>
+    
+  </data>
+  <data name="SmtPageVariation" xml:space="preserve">
+    <value>New Page Variation</value>
+    
+  </data>
+  <data name="spellchecker_close" xml:space="preserve">
+    <value>Close</value>
+    
+  </data>
+  <data name="SmtNew" xml:space="preserve">
+    <value>New</value>
+    
+  </data>
+  <data name="spellchecker_dictionarylanguage" xml:space="preserve">
+    <value>Dictionary language:</value>
+    
+  </data>
+  <data name="spellchecker_fieldname" xml:space="preserve">
+    <value>Field name: </value>
+    
+  </data>
+  <data name="SmtOpen" xml:space="preserve">
+    <value>Open Link in New Window</value>
+    
+  </data>
+  <data name="spellchecker_ignore" xml:space="preserve">
+    <value>Ignore</value>
+    
+  </data>
+  <data name="SmtPage" xml:space="preserve">
+    <value>Page</value>
+    
+  </data>
+  <data name="spellchecker_ignoreall" xml:space="preserve">
+    <value>Ignore All</value>
+    
+  </data>
+  <data name="SmtPeople" xml:space="preserve">
+    <value>People and Groups</value>
+    
+  </data>
+  <data name="spellchecker_nextfield" xml:space="preserve">
+    <value>Next Field</value>
+    
+  </data>
+  <data name="SmtPermissions" xml:space="preserve">
+    <value>Advanced Permissions</value>
+    
+  </data>
+  <data name="spellchecker_notindictionary" xml:space="preserve">
+    <value>Not in dictionary</value>
+    
+  </data>
+  <data name="SmtPublishingProperties" xml:space="preserve">
+    <value>Publishing Properties</value>
+    
+  </data>
+  <data name="spellchecker_spellcheckcompleted" xml:space="preserve">
+    <value>The spelling check is complete.</value>
+    
+  </data>
+  <data name="SmtRecycleBin" xml:space="preserve">
+    <value>View Recycle Bin</value>
+    
+  </data>
+  <data name="spellchecker_spellcheckinprogress" xml:space="preserve">
+    <value>The spelling is being checked. Please wait...</value>
+    
+  </data>
+  <data name="SmtRefreshLink" xml:space="preserve">
+    <value>Refresh selected item</value>
+    
+  </data>
+  <data name="SmtShow" xml:space="preserve">
+    <value>Show</value>
+    
+  </data>
+  <data name="SmtSite" xml:space="preserve">
+    <value>Site</value>
+    
+  </data>
+  <data name="SmtSitesettings" xml:space="preserve">
+    <value>Site Settings</value>
+    
+  </data>
+  <data name="SmtTitle_Desc" xml:space="preserve">
+    <value>General Settings</value>
+    
+  </data>
+  <data name="variationImportButton" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="statusindicator_version_label" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="statusindicator_status_label" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="statusindicator_publicationstartdate_label" xml:space="preserve">
+    <value>Publication Start Date</value>
+  </data>
+  <data name="VariationImport_PageTitle" xml:space="preserve">
+    <value>Variation Import</value>
+  </data>
+  <data name="VariationImport_SectionHeader" xml:space="preserve">
+    <value>Package Import</value>
+  </data>
+  <data name="VariationImport_SectionDescription1" xml:space="preserve">
+    <value>Select the Package you would like to import into your site.</value>
+  </data>
+  <data name="VariationImport_SectionDescription2" xml:space="preserve">
+    <value>Note: the package must be a Variation compatible .cmp file.</value>
+  </data>
+  <data name="VariationImport_FieldLabel" xml:space="preserve">
+    <value>Import:</value>
+  </data>
+  <data name="VariationLabelAddEdit_Locale_FieldLabel" xml:space="preserve">
+    <value>Locale:</value>
+  </data>
+  <data name="VariationLabelAddEdit_Locale_SectionDescription" xml:space="preserve">
+    <value>Select the locale you want for this variation.</value>
+  </data>
+  <data name="VariationLabelAddEdit_Locale_SectionHeader" xml:space="preserve">
+    <value>Locale</value>
+  </data>
+  <data name="VariationLabelAddEdit_HierarchyCreation_FieldLabel" xml:space="preserve">
+    <value>Hierarchy Creation:</value>
+  </data>
+  <data name="VariationLabelAddEdit_HierarchyCreation_SectionDescription" xml:space="preserve">
+    <value>This label's structure will be built based on the source hierarchy during Hierarchy Creation.  Select the portion of the source hierarchy you would like copied.</value>
+  </data>
+  <data name="VariationLabelAddEdit_HierarchyCreation_SectionHeader" xml:space="preserve">
+    <value>Hierarchy Creation</value>
+  </data>
+  <data name="VariationLabelAddEdit_LabelAndDescription_Description_FieldLabel" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="VariationLabelAddEdit_LabelAndDescription_Label_FieldTitle" xml:space="preserve">
+    <value>Label</value>
+  </data>
+  <data name="VariationLabelAddEdit_LabelAndDescription_Description_FieldTitle" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="VariationLabelAddEdit_LabelAndDescription_DisplayName_FieldLabel" xml:space="preserve">
+    <value>Display Name:</value>
+  </data>
+  <data name="VariationLabelAddEdit_LabelAndDescription_DisplayName_FieldTitle" xml:space="preserve">
+    <value>Display Name</value>
+  </data>
+  <data name="VariationLabelAddEdit_LabelAndDescription_Label_FieldLabel" xml:space="preserve">
+    <value>Label Name:</value>
+  </data>
+  <data name="VariationLabelAddEdit_LabelAndDescription_SectionDescription" xml:space="preserve">
+    <value>Type the name and description for this variation label.</value>
+  </data>
+  <data name="VariationLabelAddEdit_LabelAndDescription_SectionHeader" xml:space="preserve">
+    <value>Label and Description</value>
+  </data>
+  <data name="VariationLabelAddEdit_DisplayName_SectionDescription" xml:space="preserve">
+    <value>Select a display name for this label.  Most often display names are localized versions or user friendly versions of the label.</value>
+  </data>
+  <data name="VariationLabelAddEdit_DisplayName_SectionHeader" xml:space="preserve">
+    <value>Display Name</value>
+  </data>
+  <data name="VariationLabelAddEdit_Language_FieldLabel" xml:space="preserve">
+    <value>Site Template Language:</value>
+  </data>
+  <data name="VariationLabelAddEdit_Language_SectionDescription1" xml:space="preserve">
+    <value>Select a language pack from the list. This setting determines the application UI language for this variation.</value>
+  </data>
+  <data name="VariationLabelAddEdit_Language_SectionDescription2" xml:space="preserve">
+    <value>More than one variation label can reference the same language pack.</value>
+  </data>
+  <data name="VariationLabelAddEdit_Language_SectionHeader" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="VariationLabelAddEdit_PageDescription" xml:space="preserve">
+    <value>Use this page to create a new variation label.</value>
+  </data>
+  <data name="VariationLabelAddEdit_PageTitle" xml:space="preserve">
+    <value>Create Variation Label</value>
+  </data>
+  <data name="VariationLabel_SiteMapPageTitle" xml:space="preserve">
+    <value>Variation Label</value>
+  </data>
+  <data name="VariationLabelAddEdit_SourceVariation_SectionDescription" xml:space="preserve">
+    <value>Select the check box to select this variation label as the source variation, and then select a Publishing site template to use for provisioning the source variation site.</value>
+  </data>
+  <data name="VariationLabelAddEdit_SourceVariation_SectionHeader" xml:space="preserve">
+    <value>Source Variation</value>
+  </data>
+  <data name="VariationLabelAddEdit_SourceVariation_SourceHierarchy_CheckBox_FieldLabel" xml:space="preserve">
+    <value>Set this variation to be the source variation.</value>
+  </data>
+  <data name="VariationLabelAddEdit_SourceVariation_SourceHierarchy_FieldLabel" xml:space="preserve">
+    <value>Source Hierarchy:</value>
+  </data>
+  <data name="VariationLabelAddEdit_SourceVariation_SourceHierarchy_PublishingSite_FieldLabel" xml:space="preserve">
+    <value>Select the Publishing site template you want to use:</value>
+  </data>
+  <data name="VariationLabelAddEdit_SourceVariation_SourceHierarchy_WarningMessage" xml:space="preserve">
+    <value>This setting cannot be modified after variation hierarchies have been created.</value>
+  </data>
+  <data name="VariationLabelAddEdit_SourceVariation_PublishingSiteTemplate" xml:space="preserve">
+    <value>Source Variation Publishing Site Template</value>
+  </data>
+  <data name="VariationLabelAddEdit_PublishingSiteTemplateDropdown_RequiredFieldValidatorErrorText" xml:space="preserve">
+    <value>&lt;br&gt;You must choose a Publishing Site Template</value>
+  </data>
+  <data name="VariationLabels_PageTitle" xml:space="preserve">
+    <value>Variation Labels</value>
+  </data>
+  <data name="VariationLabels_ToolBar_New_Label" xml:space="preserve">
+    <value>New Label</value>
+  </data>
+  <data name="VariationLabels_ToolBar_CreateHierarchies_Label" xml:space="preserve">
+    <value>Create Hierarchies</value>
+  </data>
+  <data name="VariationLabels_PageDescription" xml:space="preserve">
+    <value>Use this page to configure variation labels.</value>
+  </data>
+  <data name="VariationLabels_ListHeading" xml:space="preserve">
+    <value>Variation Labels</value>
+  </data>
+  <data name="VariationLabelsNewLabelButtonDescription" xml:space="preserve">
+    <value>New Label</value>
+  </data>
+  <data name="VariationLabelsCreateHierarchiesButtonDescription" xml:space="preserve">
+    <value>Create Hierarchies</value>
+  </data>
+  <data name="VariationLabels_List_Label_ColumnHeading" xml:space="preserve">
+    <value>Label</value>
+  </data>
+  <data name="VariationLabels_List_Language_ColumnHeading" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="VariationLabels_List_DisplayName_ColumnHeading" xml:space="preserve">
+    <value>Display Name</value>
+  </data>
+  <data name="VariationLabels_List_Locale_ColumnHeading" xml:space="preserve">
+    <value>Locale</value>
+  </data>
+  <data name="VariationLabels_List_IsSource_ColumnHeading" xml:space="preserve">
+    <value>Is Source</value>
+  </data>
+  <data name="VariationLabels_List_Description_ColumnHeading" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="VariationLabels_List_HierarchyIsCreated_ColumnHeading" xml:space="preserve">
+    <value>Hierarchy Is Created</value>
+  </data>
+  <data name="VariationLabels_Menu_View_Label" xml:space="preserve">
+    <value>View Item</value>
+  </data>
+  <data name="VariationLabels_Menu_Edit_Label" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="VariationLabels_Menu_Delete_Label" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="VariationLabels_Menu_Delete_Prompt" xml:space="preserve">
+    <value>If you delete this variation label, the variation will no longer reflect any changes or additions you make to the source site. Do you want to continue?</value>
+  </data>
+  <data name="VariationLogs_PageTitle" xml:space="preserve">
+    <value>Variation Logs</value>
+  </data>
+  <data name="VariationLogs_PageDescription" xml:space="preserve">
+    <value>This is the Variation operation logs.</value>
+  </data>
+  <data name="VariationLogs_LogEntry_ColumnHeading" xml:space="preserve">
+    <value>Log Entry</value>
+  </data>
+  <data name="VariationLogs_TimeStarted_ColumnHeading" xml:space="preserve">
+    <value>Time Started</value>
+  </data>
+  <data name="VariationLogs_TimeLastUpdated_ColumnHeading" xml:space="preserve">
+    <value>Time Last Updated</value>
+  </data>
+  <data name="VariationLogs_Successes_ColumnHeading" xml:space="preserve">
+    <value>Successes</value>
+  </data>
+  <data name="VariationLogs_Failures_ColumnHeading" xml:space="preserve">
+    <value>Failures</value>
+  </data>
+  <data name="VariationLogs_Menu_Delete_Prompt" xml:space="preserve">
+    <value>This will permanently delete this Variation Log entry. Are you sure?</value>
+  </data>
+  <data name="VariationSettings_InvalidRootArea" xml:space="preserve">
+    <value>Variation root must be a Publishing site.</value>
+  </data>
+  <data name="VariationSettings_InvalidRootWebUrl" xml:space="preserve">
+    <value>The URL is not valid. Type another URL.</value>
+  </data>
+  <data name="VariationSettings_Notification_SectionHeader" xml:space="preserve">
+    <value>Notification</value>
+  </data>
+  <data name="VariationSettings_Notification_SectionDescription" xml:space="preserve">
+    <value>Select the checkbox to have e-mail sent to the contact person of the welcome page of the target site when a new subsite or page is created, or the contact person of a page when a target page is updated with revisions from the source variation.</value>
+  </data>
+  <data name="VariationSettings_Notification_LabelText" xml:space="preserve">
+    <value>Send e-mail notification to site and page contacts when a new site or page is created or a page is updated by the variation system.</value>
+  </data>
+  <data name="variationsettings_pagetitle" xml:space="preserve">
+    <value>Variation Settings</value>
+  </data>
+  <data name="variationsettings_pagetitleintitlearea" xml:space="preserve">
+    <value>Variation Settings</value>
+  </data>
+  <data name="variationsettings_image" xml:space="preserve">
+    <value />
+  </data>
+  <data name="variationsettings_pagedescription" xml:space="preserve">
+    <value>Set and configure variations for this site collection.</value>
+  </data>
+  <data name="variationsettings_variationhome_sectionheader" xml:space="preserve">
+    <value>Variation Home</value>
+  </data>
+  <data name="variationsettings_variationhome_sectiondescription" xml:space="preserve">
+    <value>Type the starting location where variations of this site will be created. Variations of this site will include the site and all subsites.</value>
+  </data>
+  <data name="variationsettings_rootweblocation_label" xml:space="preserve">
+    <value>Location:</value>
+  </data>
+  <data name="VariationSettings_RootWebReadOnly" xml:space="preserve">
+    <value>The variation root site cannot be modified, because variation hierarchies have been created.</value>
+  </data>
+  <data name="VariationSettings_RootWebInstruction1" xml:space="preserve">
+    <value>Note:</value>
+  </data>
+  <data name="VariationSettings_RootWebInstruction2" xml:space="preserve">
+    <value>To indicate the top-level Web site of the site collection, type a slash (/).</value>
+  </data>
+  <data name="VariationSettings_RootWeb_TextBox" xml:space="preserve">
+    <value>Variation Home</value>
+  </data>
+  <data name="variationsettings_automaticcreation_sectionheader" xml:space="preserve">
+    <value>Automatic Creation</value>
+  </data>
+  <data name="variationsettings_automaticcreation_sectiondescription" xml:space="preserve">
+    <value>Choose whether you want to automatically create corresponding variations when a site is created or a new page is published, or not to create variations automatically.</value>
+  </data>
+  <data name="variationsettings_automaticcreation_yes_radiotext" xml:space="preserve">
+    <value>Automatically create site and page variations</value>
+  </data>
+  <data name="variationsettings_automaticcreation_no_radiotext" xml:space="preserve">
+    <value>Do not automatically create site and page variations</value>
+  </data>
+  <data name="variationsettings_browse_rootweb" xml:space="preserve">
+    <value>Browse...</value>
+  </data>
+  <data name="variationsettings_recreate_sectionheader" xml:space="preserve">
+    <value>Recreate Deleted Target Page</value>
+  </data>
+  <data name="variationsettings_recreate_sectiondescription" xml:space="preserve">
+    <value>Choose whether a new target page should be recreated when the source page is republished if the previous target page has been deleted.</value>
+  </data>
+  <data name="variationsettings_recreate_no_radiotext" xml:space="preserve">
+    <value>Do not recreate a new target page when the source page is republished.</value>
+  </data>
+  <data name="variationsettings_recreate_yes_radiotext" xml:space="preserve">
+    <value>Recreate a new target page when the source page is republished.</value>
+  </data>
+  <data name="variationsettings_updatewebparts_sectionheader" xml:space="preserve">
+    <value>Update Target Page Web Parts</value>
+  </data>
+  <data name="variationsettings_updatewebparts_sectiondescription" xml:space="preserve">
+    <value>Choose whether Web Part changes from source page should be updated to existing target pages. Note that Web Parts personalization will be lost when update is made.</value>
+  </data>
+  <data name="variationsettings_updatewebparts_yes_radiotext" xml:space="preserve">
+    <value>Update Web Part changes to target pages when variation source page update is propagated.</value>
+  </data>
+  <data name="variationsettings_updatewebparts_no_radiotext" xml:space="preserve">
+    <value>Do not update Web Part changes to target pages when variation source page update is propagated.</value>
+  </data>
+  <data name="variationsettings_resources_sectionheader" xml:space="preserve">
+    <value>Resources</value>
+  </data>
+  <data name="variationsettings_resources_sectiondescription" xml:space="preserve">
+    <value>Choose whether to have new page variations use the same resources as the original page or to use copies of these resources created in the location of the new page.</value>
+  </data>
+  <data name="variationsettings_resourcescopy_no_radiotext" xml:space="preserve">
+    <value>Reference existing resources</value>
+  </data>
+  <data name="variationsettings_resourcescopy_yes_radiotext" xml:space="preserve">
+    <value>Copy resources</value>
+  </data>
+  <data name="variationsettings_createhierarchy_button" xml:space="preserve">
+    <value>Create Hierarchies</value>
+  </data>
+  <data name="SmtViewRelated" xml:space="preserve">
+    <value>View Related Resources</value>
+    
+  </data>
+  <data name="SmtViews" xml:space="preserve">
+    <value>View/Report</value>
+    
+  </data>
+  <data name="stylepicker_selectstyle_label" xml:space="preserve">
+    <value>Select a style for this item</value>
+  </data>
+  <data name="stylepicker_title_label" xml:space="preserve">
+    <value>Style Picker</value>
+  </data>
+  <data name="SmtFolder" xml:space="preserve">
+    <value>Folder</value>
+    
+  </data>
+  <data name="SmtItem" xml:space="preserve">
+    <value>Item</value>
+    
+  </data>
+  <data name="areacachesettings_anonymouspagecacheprofile_label" xml:space="preserve">
+    <value>Anonymous Cache Profile:</value>
+    
+  </data>
+  <data name="areacachesettings_authenticatedpagecacheprofile_label" xml:space="preserve">
+    <value>Authenticated Cache Profile:</value>
+    
+  </data>
+  <data name="areacachesettings_forcechildinherit_checkboxtext" xml:space="preserve">
+    <value>Apply these settings to all sub-sites</value>
+    
+  </data>
+  <data name="addnavigationlinkdialog_pagetitle" xml:space="preserve">
+    <value>Navigation Link</value>
+  </data>
+  <data name="addnavigationlinkdialog_pageheader" xml:space="preserve">
+    <value>Edit the title, URL, and description of the navigation item.</value>
+  </data>
+  <data name="addnavigationlinkdialog_browse" xml:space="preserve">
+    <value>Browse...</value>
+  </data>
+  <data name="addnavigationlinkdialog_description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="addnavigationlinkdialog_audience" xml:space="preserve">
+    <value>Audience</value>
+  </data>
+  <data name="addnavigationlinkdialog_title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="addnavigationlinkdialog_url" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="console_unapprovedresources_noversionavailable" xml:space="preserve">
+    <value>This item has no approved version. The link to this item will be broken if the current page is published.</value>
+    
+  </data>
+  <data name="console_unapprovedresources_noversionfilenotfound" xml:space="preserve">
+    <value>The item was not found or inaccessible. The link to this item will be broken if the current page is published.</value>
+    
+  </data>
+  <data name="console_unapprovedresources_oldversionavailable" xml:space="preserve">
+    <value>The most recent version of this item has not been approved. Viewers will see the existing, published version of the item if the current page is published.</value>
+    
+  </data>
+  <data name="createpage_existingpageurl_label" xml:space="preserve">
+    <value>Page URL:</value>
+    
+  </data>
+  <data name="createpage_errormessage_pagename_already_exists" xml:space="preserve">
+    <value>The specified name is already in use.</value>
+  </data>
+  <data name="createpage_updateexisting_sectiondescription" xml:space="preserve">
+    <value>Select the check box to update the page that was last created from this document.</value>
+    
+  </data>
+  <data name="createpage_updateexisting_sectionheader" xml:space="preserve">
+    <value>Existing page</value>
+    
+  </data>
+  <data name="createpage_updatepreviouslycreatedpage_label" xml:space="preserve">
+    <value>Update existing page</value>
+    
+  </data>
+  <data name="ReusableTextPicker_ListNameInHeader_Label" xml:space="preserve">
+    <value>Reusable Content</value>
+    
+  </data>
+  <data name="ReusableTextPicker_ViewSelector_Label" xml:space="preserve">
+    <value>Views:</value>
+    
+  </data>
+  <data name="ReusableTextPicker_PageTitle_Label" xml:space="preserve">
+    <value>Select Reusable Content</value>
+    
+  </data>
+  <data name="ReusableTextPicker_TitleInTitleArea_Label" xml:space="preserve">
+    <value>Reusable Content Selection</value>
+    
+  </data>
+  <data name="ReusableTextPicker_PageDescription_Label" xml:space="preserve">
+    <value>Choose an item to insert into the web page. An item with automatic update will be inserted as a read-only reference to the original item and will be automatically updated whenever a new version of the original item is published. An item without automatic updates is inserted as a copy which you can then modify.</value>
+    
+  </data>
+  <data name="ReusableTextPicker_OpenListToolBarButton_Label" xml:space="preserve">
+    <value>Open List</value>
+    
+  </data>
+  <data name="ReusableTextPicker_OpenListToolBarButton_ToolTip" xml:space="preserve">
+    <value>Opens the list in a new window</value>
+    
+  </data>
+  <data name="ReusableTextPicker_MoveUpOneFolderToolBarButton_Label" xml:space="preserve">
+    <value>Up</value>
+    
+  </data>
+  <data name="ReusableTextPicker_MoveUpOneFolderToolBarButton_ToolTip" xml:space="preserve">
+    <value>Move up to the parent folder</value>
+    
+  </data>
+  <data name="ReusableTextPicker_RefreshToolBarButton_Label" xml:space="preserve">
+    <value>Refresh</value>
+    
+  </data>
+  <data name="ReusableTextPicker_RefreshToolBarButton_ToolTip" xml:space="preserve">
+    <value>Refresh the list</value>
+    
+  </data>
+  <data name="console_pagesubmenu" xml:space="preserve">
+    <value>Page</value>
+    
+  </data>
+  <data name="siteactions_createlistorlibrary_description" xml:space="preserve">
+    <value>Add a new list, library, or other item to this site.</value>
+    
+  </data>
+  <data name="siteactions_createlistorlibrary_displaytext" xml:space="preserve">
+    <value>Create List or Library</value>
+    
+  </data>
+  <data name="siteactions_createsite_description" xml:space="preserve">
+    <value>Add a new site under this site.</value>
+    
+  </data>
+  <data name="siteactions_createsite_displaytext" xml:space="preserve">
+    <value>Create Site</value>
+    
+  </data>
+  <data name="siteactions_createsitevariation_description" xml:space="preserve">
+    <value>Create a variation site.</value>
+    
+  </data>
+  <data name="siteactions_createsitevariation_displaytext" xml:space="preserve">
+    <value>Create Variation Site</value>
+    
+  </data>
+  <data name="siteactions_editpage_description" xml:space="preserve">
+    <value>Change the content and Web Parts on this page.</value>
+    
+  </data>
+  <data name="siteactions_editpage_displaytext" xml:space="preserve">
+    <value>Edit Page</value>
+    
+  </data>
+  <data name="siteactions_hideeditingmenu_description" xml:space="preserve">
+    <value>Hide the page status and editing options for this page.</value>
+    
+  </data>
+  <data name="siteactions_hideeditingmenu_displaytext" xml:space="preserve">
+    <value>Hide Page Editing Toolbar</value>
+    
+  </data>
+  <data name="siteactions_managecontentandstructure_description" xml:space="preserve">
+    <value>Reorganize content and structure in this site collection.</value>
+    
+  </data>
+  <data name="siteactions_managecontentandstructure_displaytext" xml:space="preserve">
+    <value>Manage Content and Structure</value>
+    
+  </data>
+  <data name="siteactions_brokenlinkschecker_description" xml:space="preserve">
+    <value>Check for broken links in the Sites list.</value>
+    
+  </data>
+  <data name="siteactions_brokenlinkschecker_displaytext" xml:space="preserve">
+    <value>Scan for Broken Links</value>
+    
+  </data>
+  <data name="siteactions_modifynavigation_description" xml:space="preserve">
+    <value>Change the navigation links in this site.</value>
+    
+  </data>
+  <data name="siteactions_modifynavigation_displaytext" xml:space="preserve">
+    <value>Modify Navigation</value>
+    
+  </data>
+  <data name="siteactions_modifysitesettings_description" xml:space="preserve">
+    <value>Change all site settings in this site.</value>
+    
+  </data>
+  <data name="siteactions_modifysitesettings_displaytext" xml:space="preserve">
+    <value>Modify All Site Settings</value>
+    
+  </data>
+  <data name="siteactions_showeditingmenu_description" xml:space="preserve">
+    <value>Display the page status and editing options for this page.</value>
+    
+  </data>
+  <data name="siteactions_showeditingmenu_displaytext" xml:space="preserve">
+    <value>Show Page Editing Toolbar</value>
+    
+  </data>
+  <data name="spellchecker_suggestion" xml:space="preserve">
+    <value>Suggestion:</value>
+  </data>
+  <data name="convertersettings_pagelayout_stylesfieldlabel" xml:space="preserve">
+    <value>Field for CSS styles:</value>
+    
+  </data>
+  <data name="location_textbox_label" xml:space="preserve">
+    <value>Site:</value>
+    
+  </data>
+  <data name="rte2ecell_cell_height" xml:space="preserve">
+    <value>Cell Height</value>
+    
+  </data>
+  <data name="multipages_unit_percent" xml:space="preserve">
+    <value>percent</value>
+  </data>
+  <data name="multipages_unit_pixel" xml:space="preserve">
+    <value>pixel</value>
+  </data>
+  <data name="rte2etable_accessibility_table_heightunit" xml:space="preserve">
+    <value>Table Height Unit Type</value>
+    
+  </data>
+  <data name="rte2etable_accessibility_table_widthunit" xml:space="preserve">
+    <value>Table Width Unit Type</value>
+    
+  </data>
+  <data name="rte2erowcol_col_width" xml:space="preserve">
+    <value>Column Width:</value>
+    
+  </data>
+  <data name="rte2erowcol_error_rowheight_nan" xml:space="preserve">
+    <value>The row height must be a positive number.</value>
+    
+  </data>
+  <data name="rte2erowcol_error_rowheight_minrange" xml:space="preserve">
+    <value>The row height must be a positive number.</value>
+    
+  </data>
+  <data name="rte2erowcol_error_rowheight_maxpercrange" xml:space="preserve">
+    <value>The row height must be a positive number between 1 and 10,000 percent. </value>
+    
+  </data>
+  <data name="rte2erowcol_error_rowheight_maxpixelrange" xml:space="preserve">
+    <value>The row height must be a positive number between 1 and 100,000 pixels. </value>
+    
+  </data>
+  <data name="rte2erowcol_error_colwidth_nan" xml:space="preserve">
+    <value>The column width must be a positive number. </value>
+    
+  </data>
+  <data name="rte2erowcol_error_colwidth_minrange" xml:space="preserve">
+    <value>The column width must be a positive number. </value>
+    
+  </data>
+  <data name="rte2erowcol_error_colwidth_maxpercrange" xml:space="preserve">
+    <value>The column width must be a positive number between 1 and 10,000 percent. </value>
+    
+  </data>
+  <data name="rte2erowcol_error_colwidth_maxpixelrange" xml:space="preserve">
+    <value>The column width must be a positive number between 1 and 100,000 pixels. </value>
+    
+  </data>
+  <data name="rte2erowcol_information" xml:space="preserve">
+    <value>Enter Row Height and Column Width for the selected table row and column</value>
+    
+  </data>
+  <data name="rte2erowcol_row_height" xml:space="preserve">
+    <value>Row Height:</value>
+    
+  </data>
+  <data name="rte2erowcol_title" xml:space="preserve">
+    <value>Row Height and Column Width</value>
+    
+  </data>
+  <data name="rte2etable_warning_clearstyles" xml:space="preserve">
+    <value>You are about to apply a pre-defined table format to the selected table. This action will override and remove any existing formatting in the table and the containing text, and it cannot be undone without canceling all editing changes. Do you want to continue?</value>
+    
+  </data>
+  <data name="objectcachesettings_forceblobcacheflush_checkboxtext" xml:space="preserve">
+    <value>Force this server to reset its disk based cache.</value>
+  </data>
+  <data name="objectcachesettings_forceblobcacheflush_description" xml:space="preserve">
+    <value>If selected, all entries in the disk cache will be flushed immediately upon clicking OK. Otherwise, the disk cache will be left as is and expiration of items will be managed with items being removed as they are changed in the site or the disk size is exceeded. </value>
+  </data>
+  <data name="objectcachesettings_forceblobcacheflush_header" xml:space="preserve">
+    <value>Disk Based Cache Reset</value>
+  </data>
+  <data name="objectcachesettings_forceFarmblobcacheflush_checkboxtext" xml:space="preserve">
+    <value>Force all servers in the farm to reset their disk based cache</value>
+  </data>
+  <data name="objectcachesettings_contentquerycachechanges_header" xml:space="preserve">
+    <value>Cross List Query Cache Changes</value>
+  </data>
+  <data name="objectcachesettings_contentquerycachechanges_description" xml:space="preserve">
+    <value>Cross list queries initiated by the Content Query Web Part or other custom implementations can use up server resources. Specifying an amount of time to cache the results of a cross list query can positively impact cross-list query performance but may display results that do not reflect the most recent changes to the items returned by the query. Checking the server each time cross list query runs will produce the most accurate results at the possible cost of slower performance across the site.</value>
+  </data>
+  <data name="objectcachesettings_contentquerycachechanges_onserverchange_radiotext" xml:space="preserve">
+    <value>Check the server for changes every time a cross list query runs </value>
+    
+  </data>
+  <data name="objectcachesettings_contentquerycachechanges_timeinseconds_radiotext" xml:space="preserve">
+    <value>Use the cached result of a cross list query for this many seconds: </value>
+    
+  </data>
+  <data name="objectcachesettings_contentquerycachechanges_timeinseconds_label" xml:space="preserve">
+    <value>The number of seconds to cache the query results</value>
+  </data>
+  <data name="objectcachesettings_querytime_validator" xml:space="preserve">
+    <value>&lt;br&gt; The time must be a number between 1 and 1000000.</value>
+  </data>
+  <data name="objectcachesettings_contentqueryresultsmultiplier_header" xml:space="preserve">
+    <value>Cross List Query Results Multiplier</value>
+    
+  </data>
+  <data name="objectcachesettings_contentqueryresultsmultiplier_description" xml:space="preserve">
+    <value>Each cross list query might retrieve results for a variety of users. To ensure after security trimming that all users will see a valid set of results, the cross list query cache must pull more results than originally requested. Specifying a larger number will retrieve more data from the server and is ideal for site collections that have unique security applied on many lists and sites. Specifying a smaller number will consume less memory per cross list query and is ideally suited for site collections that do not have unique security on each list or site. </value>
+  </data>
+  <data name="objectcachesettings_contentqueryresultsmultiplier_label" xml:space="preserve">
+    <value>Cross list query multipler: </value>
+  </data>
+  <data name="objectcachesettings_contentqueryresultsmultiplier_validator" xml:space="preserve">
+    <value>&lt;br&gt; The value must be a number between 1 and 100.</value>
+  </data>
+  <data name="areacachesettings_anonymouspagecacheprofile_dropdowntitle" xml:space="preserve">
+    <value>Selected Anonymous Cache Profile</value>
+    
+  </data>
+  <data name="areacachesettings_authenticatedpagecacheprofile_dropdownlabel" xml:space="preserve">
+    <value>Selected Authenticated Cache Profile</value>
+    
+  </data>
+  <data name="cmsslwpaddeditlink_browseresources_button" xml:space="preserve">
+    <value>Browse...</value>
+    
+  </data>
+  <data name="SmtApprove" xml:space="preserve">
+    <value>Approve</value>
+    
+  </data>
+  <data name="SmtCheckIn" xml:space="preserve">
+    <value>Check In</value>
+    
+  </data>
+  <data name="SmtCheckOut" xml:space="preserve">
+    <value>Check Out</value>
+    
+  </data>
+  <data name="SmtPublish" xml:space="preserve">
+    <value>Publish</value>
+    
+  </data>
+  <data name="SmtUndoCheckOut" xml:space="preserve">
+    <value>Discard Check Out</value>
+    
+  </data>
+  <data name="SmtSubmitApproval" xml:space="preserve">
+    <value>Submit for Approval</value>
+    
+  </data>
+  <data name="SmtUnpublish" xml:space="preserve">
+    <value>Unpublish this version</value>
+    
+  </data>
+  <data name="SmtUnpublishComment" xml:space="preserve">
+    <value>Unpublished by '(0}' using the Site Content and Structure tool</value>
+    
+  </data>
+  <data name="SmtDeleteConfirmationDialog" xml:space="preserve">
+    <value>Are you sure you want to delete or recycle the selected item(s)?</value>
+    
+  </data>
+  <data name="SmtUnknownobjectError" xml:space="preserve">
+    <value>Invalid Operation: Selected object is unknown</value>
+    
+  </data>
+  <data name="SmtWebDeleteConfirmationDialog" xml:space="preserve">
+    <value>Deleting selected site(s) will permanently destroy all content and user information and all sub-sites contained in this site will also be permanently lost.&lt;br/&gt;Do you wish to continue?</value>
+    
+  </data>
+  <data name="console_smtmorereports" xml:space="preserve">
+    <value>More Reports...</value>
+    
+  </data>
+  <data name="console_smtmycheckedoutitems" xml:space="preserve">
+    <value>My Checked-out Documents and Pages</value>
+    
+  </data>
+  <data name="console_smtmydrafts" xml:space="preserve">
+    <value>All Drafts Documents and Pages</value>
+    
+  </data>
+  <data name="console_smtmyitemswaitingforapproval" xml:space="preserve">
+    <value>My Documents and Pages Waiting for Approval</value>
+    
+  </data>
+  <data name="rte2erowcol_accessibility_row_heightunit" xml:space="preserve">
+    <value>Row Height Unit Type</value>
+    
+  </data>
+  <data name="rte2erowcol_accessibility_col_widthunit" xml:space="preserve">
+    <value>Column Width Unit Type</value>
+    
+  </data>
+  <data name="rte2etable_accessibility_table_format" xml:space="preserve">
+    <value>Pre-defined Table Formats</value>
+    
+  </data>
+  <data name="siteactions_createnewslink_displaytext" xml:space="preserve">
+    <value>Create External Link</value>
+    
+  </data>
+  <data name="siteactions_createnewsLink_description" xml:space="preserve">
+    <value>Create an external link page in this site.</value>
+    
+  </data>
+  <data name="assetedithyperlink_description" xml:space="preserve">
+    <value>Enter a URL and its display properties.</value>
+    
+  </data>
+  <data name="asseteditimage_description" xml:space="preserve">
+    <value>Enter the URL of the selected image and its display properties.</value>
+    
+  </data>
+  <data name="pageversioninfo_description" xml:space="preserve">
+    <value>Shows the page version information</value>
+    
+  </data>
+  <data name="spellchecker_pagedescription_single_field" xml:space="preserve">
+    <value>One or more spelling mistakes are found. You may ignore or correct the misspellings one at a time.</value>
+    
+  </data>
+  <data name="savebeforenavigate_bodytext" xml:space="preserve">
+    <value>Saving page content automatically...</value>
+    
+  </data>
+  <data name="savebeforenavigate_titletext" xml:space="preserve">
+    <value>Saving Page</value>
+    
+  </data>
+  <data name="rte2pueditor_loading" xml:space="preserve">
+    <value>Please wait while processing data...</value>
+    
+  </data>
+  <data name="rte2pueditor_saving" xml:space="preserve">
+    <value>Please wait while saving data...</value>
+    
+  </data>
+  <data name="rte2pueditor_error_callback" xml:space="preserve">
+    <value>Cannot validate and save the data in the editor. Try again at a later time. If this problem persists, report the problem to your administrator.</value>
+    
+  </data>
+  <data name="convertersettings_pagelayout_layoutpickerlabel" xml:space="preserve">
+    <value>Page layout:</value>
+  </data>
+  <data name="convertersettings_configuredlocation_siteurl" xml:space="preserve">
+    <value>Site URL:</value>
+  </data>
+  <data name="createbutton_accesskey" xml:space="preserve">
+    <value>r</value>
+    
+  </data>
+  <data name="pagesettings_invalidcontactemail" xml:space="preserve">
+    <value>The e-mail address for the contact is invalid. It should be of the form someone@example.com</value>
+  </data>
+  <data name="rte2etable_insert_description" xml:space="preserve">
+    <value>Enter the table properties below, and click OK to insert a new table.</value>
+    
+  </data>
+  <data name="rte2etable_edit_description" xml:space="preserve">
+    <value>Edit the table properties below, and click OK to accept the changes.</value>
+    
+  </data>
+  <data name="convertersettings_removestyles_radiotext" xml:space="preserve">
+    <value>Remove CSS &lt;styles&gt; section from the converted HTML</value>
+  </data>
+  <data name="convertersettings_storestylesinfield_radiotext" xml:space="preserve">
+    <value>Store CSS &lt;styles&gt; section from the converted HTML in the following field:</value>
+  </data>
+  <data name="cmsslwpaddeditlink_imagealttextdescription_label" xml:space="preserve">
+    <value>Used as alternative text for the image</value>
+    
+  </data>
+  <data name="cmsslwpaddeditlink_requiredfield_label" xml:space="preserve">
+    <value>You must specify a value for this required field</value>
+    
+  </data>
+  <data name="createpage_rcalocation_sectiondescription" xml:space="preserve">
+    <value>Choose a site in which to create this page.</value>
+    
+  </data>
+  <data name="cmsslwpaddeditlink_person_label" xml:space="preserve">
+    <value>Person</value>
+    
+  </data>
+  <data name="cmsslwpaddeditlink_createitemlink_radiotext" xml:space="preserve">
+    <value>Create a link to an item</value>
+    
+  </data>
+  <data name="cmsslwpaddeditlink_createpersonlink_radiotext" xml:space="preserve">
+    <value>Create a link to a person</value>
+    
+  </data>
+  <data name="cmsslwpaddeditlink_populatepeoplefields_buttontext" xml:space="preserve">
+    <value>Copy Profile Information</value>
+    
+  </data>
+  <data name="cmsslwpaddeditgroup_group_label" xml:space="preserve">
+    <value>Group Header Name</value>
+    
+  </data>
+  <data name="xslapplicator_selectxsl_label" xml:space="preserve">
+    <value>XSL Style Sheet:</value>
+    
+  </data>
+  <data name="xslapplicator_validationerror_extensionincorrect" xml:space="preserve">
+    <value>The file extension must be .xsl.</value>
+    
+  </data>
+  <data name="xslapplicatorsettings_pagecontent_sectiondescription" xml:space="preserve">
+    <value>Select an XSL style sheet file to use to convert XML documents of this content type.</value>
+    
+  </data>
+  <data name="xslapplicatorsettings_pagecontent_sectionheader" xml:space="preserve">
+    <value>XSL Style Sheet</value>
+    
+  </data>
+  <data name="ippageconvertersettings_view_label" xml:space="preserve">
+    <value>View:</value>
+  </data>
+  <data name="areatemplatesettings_confirm_propertypagelayouts" xml:space="preserve">
+    <value>Available Page Layouts</value>
+    
+  </data>
+  <data name="areatemplatesettings_confirm_propertysitetemplates" xml:space="preserve">
+    <value>Available Site Templates</value>
+    
+  </data>
+  <data name="areatemplatesettings_confirm_resetnewpagedefaultsettings" xml:space="preserve">
+    <value>This will reset all subsites to inherit the New Page Default settings, removing any explicitly defined settings on subsites.
+    
+Do you wish to continue?</value>
+    
+  </data>
+  <data name="areatemplatesettings_confirm_resetvaluesinsubsites" xml:space="preserve">
+    <value>This will reset all subsites to inherit the {0} setting, removing any explicitly defined {0} setting on subsites.
+
+Do you wish to continue?</value>
+    
+  </data>
+  <data name="manageitemscheduling_confirm_disablescheduling" xml:space="preserve">
+    <value>Any item that has been approved and is scheduled will now become a major version which is viewable by others.
+    
+Do you wish to continue?</value>
+    
+  </data>
+  <data name="manageitemscheduling_enablescheduling_checkboxtext" xml:space="preserve">
+    <value>Enable scheduling of items in this list</value>
+    
+  </data>
+  <data name="manageitemscheduling_enablescheduling_description" xml:space="preserve">
+    <value>Select the checkbox to allow scheduling of items in this document library which have content types that include start and end dates.  Removing the checkmark will disable scheduling for all items in this document library.</value>
+    
+  </data>
+  <data name="manageitemscheduling_enablescheduling_header" xml:space="preserve">
+    <value>Enable Item Scheduling</value>
+    
+  </data>
+  <data name="manageitemscheduling_pagedescription" xml:space="preserve">
+    <value>Use this page to enable or disable scheduling in this document library.</value>
+    
+  </data>
+  <data name="manageitemscheduling_pagetitleintitlearea" xml:space="preserve">
+    <value>Manage Item Scheduling</value>
+    
+  </data>
+  <data name="WebPartZoneTitle_BottomLeft" xml:space="preserve">
+    <value>Bottom Left Zone</value>
+    
+  </data>
+  <data name="WebPartZoneTitle_BottomRight" xml:space="preserve">
+    <value>Bottom Right Zone</value>
+    
+  </data>
+  <data name="WebPartZoneTitle_LeftColumn" xml:space="preserve">
+    <value>Left Column</value>
+    
+  </data>
+  <data name="WebPartZoneTitle_RightColumn" xml:space="preserve">
+    <value>Right Column</value>
+    
+  </data>
+  <data name="WebPartZoneTitle_Top" xml:space="preserve">
+    <value>Top</value>
+    
+  </data>
+  <data name="WebPartZoneTitle_MiddleLeft" xml:space="preserve">
+    <value>Middle Left Zone</value>
+    
+  </data>
+  <data name="WebPartZoneTitle_MiddleRight" xml:space="preserve">
+    <value>Middle Right Zone</value>
+    
+  </data>
+  <data name="WebPartZoneTitle_Bottom" xml:space="preserve">
+    <value>Bottom Zone</value>
+    
+  </data>
+  <data name="console_warningmessage_alttag" xml:space="preserve">
+    <value>Warning Message</value>
+    
+  </data>
+  <data name="console_informationalmessage_alttag" xml:space="preserve">
+    <value>Informational Message</value>
+    
+  </data>
+  <data name="areacachesettings_cachedisabledwarningalt" xml:space="preserve">
+    <value>Cache Disabled</value>
+    
+  </data>
+  <data name="IPPT_MasterPage_Login" xml:space="preserve">
+    <value>Login</value>
+    
+  </data>
+  <data name="IPPT_MasterPage_Logout" xml:space="preserve">
+    <value>Logout</value>
+    
+  </data>
+  <data name="rte2etable_summary" xml:space="preserve">
+    <value>Summary</value>
+    
+  </data>
+  <data name="console_checkspelling_title" xml:space="preserve">
+    <value>Open a new window to check spelling on HTML fields</value>
+    
+  </data>
+  <data name="console_versioninfo_title" xml:space="preserve">
+    <value>Open a new window to view the page status</value>
+    
+  </data>
+  <data name="console_copypage" xml:space="preserve">
+    <value>Copy...</value>
+    
+  </data>
+  <data name="console_movepage" xml:space="preserve">
+    <value>Move...</value>
+    
+  </data>
+  <data name="masterpages_companyname_toplinktext" xml:space="preserve">
+    <value>Adventure</value>
+    
+  </data>
+  <data name="masterpages_companyname_bottomlinktext" xml:space="preserve">
+    <value>Works</value>
+    
+  </data>
+  <data name="masterpages_companyname_linktext" xml:space="preserve">
+    <value>Adventure Works</value>
+    
+  </data>
+  <data name="masterpages_companyaddress_linktext" xml:space="preserve">
+    <value>4567 Main St., Buffalo, NY 98052</value>
+    
+  </data>
+  <data name="masterpages_companyphone_linktext" xml:space="preserve">
+    <value>telephone: (206) 555-0149</value>
+    
+  </data>
+  <data name="masterpages_companyfax_linktext" xml:space="preserve">
+    <value>fax: (206) 555-0142</value>
+    
+  </data>
+  <data name="masterpages_companyemail_linktext" xml:space="preserve">
+    <value>email: contact@adventure-works.com</value>
+    
+  </data>
+  <data name="masterpages_logincontrol_label" xml:space="preserve">
+    <value>Login</value>
+    
+  </data>
+  <data name="masterpages_logoutcontrol_label" xml:space="preserve">
+    <value>Logout</value>
+    
+  </data>
+  <data name="masterpages_searchbox_label" xml:space="preserve">
+    <value>Search</value>
+    
+  </data>
+  <data name="masterpages_skiplinktext" xml:space="preserve">
+    <value>Skip navigation links</value>
+    
+  </data>
+  <data name="WebPartImportError" xml:space="preserve">
+    <value>Cannot import this Web Part.</value>
+    
+  </data>
+  <data name="cmsslwpaddeditlink_checkspellingbutton_text" xml:space="preserve">
+    <value>Check Spelling</value>
+    
+  </data>
+  <data name="console_viewrecyclebin" xml:space="preserve">
+    <value>View Recycle Bin</value>
+    
+  </data>
+  <data name="siteactions_viewallsitecontent_description" xml:space="preserve">
+    <value>View all libraries and lists in this site.</value>
+    
+  </data>
+  <data name="siteactions_viewallsitecontent_displaytext" xml:space="preserve">
+    <value>View All Site Content</value>
+    
+  </data>
+  <data name="SmtDeny" xml:space="preserve">
+    <value>Reject</value>
+    
+  </data>
+  <data name="warning_image_alttext" xml:space="preserve">
+    <value>Warning</value>
+    
+  </data>
+  <data name="spellchecker_ok_text" xml:space="preserve">
+    <value>OK</value>
+    
+  </data>
+  <data name="siteactions_modifypageslibrarysettings_description" xml:space="preserve">
+    <value>Change settings such as versioning and workflow for Web pages in this site.</value>
+    
+  </data>
+  <data name="siteactions_modifypageslibrarysettings_displaytext" xml:space="preserve">
+    <value>Modify Pages Library Settings</value>
+    
+  </data>
+  <data name="siteactions_peopleandgroups_description" xml:space="preserve">
+    <value>Manage the users and groups in this site.</value>
+    
+  </data>
+  <data name="siteactions_peopleandgroups_displaytext" xml:space="preserve">
+    <value>People And Groups</value>
+    
+  </data>
+  <data name="siteactions_sitesettingssubmenu_description" xml:space="preserve">
+    <value>Manage site settings on this site.</value>
+    
+  </data>
+  <data name="siteactions_sitesettingssubmenu_displaytext" xml:space="preserve">
+    <value>Site Settings</value>
+    
+  </data>
+  <data name="xslapplicator_validationerror_novalidfile" xml:space="preserve">
+    <value>Enter a valid file name.</value>
+    
+  </data>
+  <data name="SmtManagePerms" xml:space="preserve">
+    <value>Manage Permissions</value>
+    
+  </data>
+  <data name="SmtVersionHistory" xml:space="preserve">
+    <value>Version History</value>
+    
+  </data>
+  <data name="cmsslwpsort_instructions_label" xml:space="preserve">
+    <value>Sort the summary links and group headers.</value>
+    
+  </data>
+  <data name="createpagelayout_pagedescription" xml:space="preserve">
+    <value>Each page layout is associated with a content type which defines the columns available for field controls in that page layout. If the variations feature is active on your site collection you can also associate a set of variation labels with your page layout. Use this new page layout form to create a new page layout and associate it with a content type and optionally with a set of variation labels.
+    </value>
+    
+  </data>
+  <data name="console_unapprovedresources_notanalyzed" xml:space="preserve">
+    <value>Not Analyzed</value>
+    
+  </data>
+  <data name="SmtPageSettings" xml:space="preserve">
+    <value>Edit Page Settings</value>
+    
+  </data>
+  <data name="SmtFavoritesTitle" xml:space="preserve">
+    <value>Add to Favorites</value>
+    
+  </data>
+  <data name="SmtListSettings" xml:space="preserve">
+    <value>List Settings</value>
+    
+  </data>
+  <data name="SmtFavoritesDescription" xml:space="preserve">
+    <value>Add this location to your Web browser favorites</value>
+    
+  </data>
+  <data name="SmtListSettingsDescription" xml:space="preserve">
+    <value>Manage settings such as permissions, columns, views, and policy</value>
+    
+  </data>
+  <data name="console_unapprovedresources_notpublished" xml:space="preserve">
+    <value>Not Published</value>
+    
+  </data>
+  <data name="console_unapprovedresources_notanalyzed_accessdenied" xml:space="preserve">
+    <value>You do not have sufficient rights to analyze this element.</value>
+    
+  </data>
+  <data name="console_unapprovedresources_notanalyzed_notinterpreted" xml:space="preserve">
+    <value>The URL for this element could not be interpreted by the analyzer.</value>
+    
+  </data>
+  <data name="generic_previewimage_alttext" xml:space="preserve">
+    <value>Preview Image</value>
+    
+  </data>
+  <data name="console_comparetextualchanges" xml:space="preserve">
+    <value>Compare Text Changes</value>
+    
+  </data>
+  <data name="console_comparetextualchanges_title" xml:space="preserve">
+    <value>Show textual changes on this Web page against the last published version.</value>
+    
+  </data>
+  <data name="translatablesettings_column" xml:space="preserve">
+    <value>Column Name</value>
+    
+  </data>
+  <data name="translatablesettings_translt" xml:space="preserve">
+    <value>Translatable</value>
+    
+  </data>
+  <data name="translatecol_description" xml:space="preserve">
+    <value>Select column to set it as translatable</value>
+  </data>
+  <data name="translatecol_pagedescription" xml:space="preserve">
+    <value>Select columns that need to be translated for variations. When variations site content is exported for translation, these columns will be flagged as requiring translation. Columns that are not checked will not be flagged as requiring translation.</value>
+  </data>
+  <data name="translatecol_pagetitle" xml:space="preserve">
+    <value>Translatable Column Settings</value>
+  </data>
+  <data name="translatecol_sectionheader" xml:space="preserve">
+    <value>Translatable Columns</value>
+  </data>
+  <data name="nocrawlsettings_column" xml:space="preserve">
+    <value>Column Name</value>
+    
+  </data>
+  <data name="nocrawlsettings_translt" xml:space="preserve">
+    <value>Excluded</value>
+    
+  </data>
+  <data name="nocrawlsettings_group" xml:space="preserve">
+    <value>Group Name</value>
+    
+  </data>
+  <data name="nocrawlcol_description" xml:space="preserve">
+    <value>Select columns that will be excluded from search indexing. Values in these columns will not be processed by the search service when items are indexed.</value>
+  </data>
+  <data name="nocrawlcol_pagetitle" xml:space="preserve">
+    <value>Searchable Columns</value>
+  </data>
+  <data name="nocrawlcol_sectionheader" xml:space="preserve">
+    <value>Excluded Columns from Search Indexing</value>
+  </data>
+  <data name="Article_rollup_image_text" xml:space="preserve">
+    <value>This image will appear only in Content Query Web Part views that include summaries of this page. Image properties such as height and width will not be reflected in the Web Part.</value>
+    
+  </data>
+  <data name="SmtShowLinkTitle" xml:space="preserve">
+    <value>Show Link to this Location</value>
+    
+  </data>
+  <data name="console_unapprovedresources_notyetlive" xml:space="preserve">
+    <value>The item is approved, but it is scheduled to be published in the future.</value>
+    
+  </data>
+  <data name="cmsslwpaddeditlink_clicktotest_label" xml:space="preserve">
+    <value>Test link</value>
+    
+  </data>
+  <data name="rte2etable_previewTable_East" xml:space="preserve">
+    <value>East</value>
+  </data>
+  <data name="rte2etable_previewTable_South" xml:space="preserve">
+    <value>South</value>
+  </data>
+  <data name="rte2etable_previewTable_West" xml:space="preserve">
+    <value>West</value>
+  </data>
+  <data name="spellchecker_pagedescription_multiple_fields" xml:space="preserve">
+    <value>Spelling mistakes are found on multiple fields. Click "Next Field" to ignore the misspellings in the current field and see the rest in the next field.</value>
+    
+  </data>
+  <data name="pagesettings_invalid_current_pagelayout" xml:space="preserve">
+    <value>Current page layout is not valid. Please select a valid page layout from the drop down list and apply it.</value>
+  </data>
+  <data name="spellchecker_languagenotavailable" xml:space="preserve">
+    <value>Spell checking is not available for the default language. Choose one of the following languages and click OK to continue spelling, or click Cancel to stop.</value>
+    
+  </data>
+  <data name="WebPartZoneTitle_Header" xml:space="preserve">
+    <value>Header</value>
+    
+  </data>
+  <data name="WebPartZoneTitle_Footer" xml:space="preserve">
+    <value>Footer</value>
+    
+  </data>
+  <data name="WebPartZoneTitle_TopLeft" xml:space="preserve">
+    <value>Top Left</value>
+    
+  </data>
+  <data name="WebPartZoneTitle_TopRight" xml:space="preserve">
+    <value>Top Right</value>
+    
+  </data>
+  <data name="WebPartZoneTitle_CenterLeft" xml:space="preserve">
+    <value>Center Left</value>
+    
+  </data>
+  <data name="WebPartZoneTitle_Center" xml:space="preserve">
+    <value>Center</value>
+    
+  </data>
+  <data name="WebPartZoneTitle_CenterRight" xml:space="preserve">
+    <value>Center Right</value>
+    
+  </data>
+  <data name="WebPartZoneTitle_Right" xml:space="preserve">
+    <value>Right</value>
+    
+  </data>
+  <data name="spellchecker_spellcheckcompleted_nowebparts" xml:space="preserve">
+    <value>Spelling check is complete on HTML fields. You can check spelling in some Web Parts while editing content.</value>
+    
+  </data>
+  <data name="assetpickerdialog_menu_largeimage_text" xml:space="preserve">
+    <value>Large Tiles</value>
+    
+  </data>
+  <data name="assetpickerdialog_menu_list_text" xml:space="preserve">
+    <value>List</value>
+    
+  </data>
+  <data name="assetpickerdialog_menu_mediumimage_text" xml:space="preserve">
+    <value>Medium Tiles</value>
+    
+  </data>
+  <data name="assetpickerdialog_menu_smallimage_text" xml:space="preserve">
+    <value>Small Tiles</value>
+    
+  </data>
+  <data name="enhancedtheming_inherittheme_title" xml:space="preserve">
+    <value>Inherit Theme</value>
+    
+  </data>
+  <data name="enhancedtheming_inherittheme_description" xml:space="preserve">
+    <value>Specify whether this site uses the same theme as its parent or if it uses its own theme.</value>
+    
+  </data>
+  <data name="enhancedtheming_inherittheme_inherit" xml:space="preserve">
+    <value>Inherit theme from the parent of this site</value>
+    
+  </data>
+  <data name="enhancedtheming_inherittheme_select" xml:space="preserve">
+    <value>Specify a theme to be used by this site and all sites that inherit from it:</value>
+    
+  </data>
+  <data name="enhancedtheming_customizetheme_title" xml:space="preserve">
+    <value>Customize Theme</value>
+    
+  </data>
+  <data name="enhancedtheming_customizetheme_description" xml:space="preserve">
+    <value>Fully customize a theme by selecting individual colors and fonts.</value>
+    
+  </data>
+  <data name="enhancedtheming_customizetheme_customtheme" xml:space="preserve">
+    <value>Custom</value>
+    
+  </data>
+  <data name="enhancedtheming_customizetheme_selectcolor" xml:space="preserve">
+    <value>Select a color...</value>
+    
+  </data>
+  <data name="enhancedtheming_customizetheme_selectcolortip" xml:space="preserve">
+    <value>Open a new window to select different color</value>
+    
+  </data>
+  <data name="enhancedtheming_customizetheme_font1" xml:space="preserve">
+    <value>Heading Font:</value>
+    
+  </data>
+  <data name="enhancedtheming_customizetheme_font2" xml:space="preserve">
+    <value>Body Font:</value>
+    
+  </data>
+  <data name="enhancedtheming_customizetheme_warning" xml:space="preserve">
+    <value>You have modified the custom theme. These changes will be commited when you apply.</value>
+    
+  </data>
+  <data name="enhancedtheming_previewtheme_title" xml:space="preserve">
+    <value>Preview Theme</value>
+    
+  </data>
+  <data name="enhancedtheming_previewtheme_description" xml:space="preserve">
+    <value>Click the button to open a new window and preview the selected theme applied to this site.</value>
+    
+  </data>
+  <data name="enhancedtheming_previewtheme_buttontext" xml:space="preserve">
+    <value>Preview</value>
+    
+  </data>
+  <data name="enhancedtheming_applytheme_title" xml:space="preserve">
+    <value>Apply Theme</value>
+    
+  </data>
+  <data name="enhancedtheming_applytheme_description" xml:space="preserve">
+    <value>Specify whether to apply the selected theme to this site only or to all its subsites. Applying this theme to all subsites will override any individual theme settings on those sites.</value>
+    
+  </data>
+  <data name="enhancedtheming_applytheme_onlythis" xml:space="preserve">
+    <value>Apply the selected theme to this site only</value>
+    
+  </data>
+  <data name="enhancedtheming_applytheme_thisandbelow" xml:space="preserve">
+    <value>Apply the selected theme to this site and reset all subsites to inherit this setting</value>
+    
+  </data>
+  <data name="MetadataNavKeyFiltersControlControlHeading" xml:space="preserve">
+    <value>Key Filters</value>
+  </data>
+  <data name="VariationLogs_MenuItem_Delete" xml:space="preserve">
+    <value>Delete</value>
+    
+  </data>
+  <data name="AssetPickerDialogNA" xml:space="preserve">
+    <value>n/a</value>
+    
+  </data>
+  <data name="TA_ManageContentDeployment_Title" xml:space="preserve">
+    <value>Manage Content Deployment</value>
+    
+  </data>
+  <data name="TA_ManageContentDeployment_Description" xml:space="preserve">
+    <value>Use this page to control whether your site collections are deployed using content deployment.</value>
+    
+  </data>
+  <data name="TA_ManageContentDeployment_SiteCollection_ColumnHeader" xml:space="preserve">
+    <value>Site Collection</value>
+    
+  </data>
+  <data name="Categories_PageTitle" xml:space="preserve">
+    <value>Wiki Categories</value>
+    
+  </data>
+  <data name="enterwiki_pagerating" xml:space="preserve">
+    <value>Page Rating</value>
+    
+  </data>
+  <data name="enterwiki_categories" xml:space="preserve">
+    <value>Categories</value>
+    
+  </data>
+  <data name="enterwiki_nocategories_assigned" xml:space="preserve">
+    <value>No categories were selected</value>
+    
+  </data>
+  <data name="enterwiki_editpage" xml:space="preserve">
+    <value>[Edit this page]</value>
+    
+  </data>
+  <data name="submitvariations_messagetitle" xml:space="preserve">
+    <value>Operation Completed Successfully</value>
+    
+  </data>
+  <data name="submitvariations_pagetitle" xml:space="preserve">
+    <value>Submit Variations</value>
+    
+  </data>
+  <data name="CSH_WCMSourceVariation" xml:space="preserve">
+    <value>Learn more about variations.</value>
+    
+  </data>
+  <data name="CSH_WCMVariationLabels" xml:space="preserve">
+    <value>Learn more about variation labels.</value>
+    
+  </data>
+  <data name="projectpage_webpage_field_label" xml:space="preserve">
+    <value>Web Page</value>
+    
+  </data>
+  <data name="projectpage_contact_field_label" xml:space="preserve">
+    <value>Contact</value>
+    
+  </data>
+  <data name="projectpage_taskstatus_field_label" xml:space="preserve">
+    <value>Status</value>
+    
+  </data>
+  <data name="CSH_WCMOutputCacheProfiles" xml:space="preserve">
+    <value>Learn more about the default page output cache profile.</value>
+    
+  </data>
+  <data name="CSH_WCMObjectCacheSettings" xml:space="preserve">
+    <value>Learn more about the object cache.</value>
+    
+  </data>
+</root>

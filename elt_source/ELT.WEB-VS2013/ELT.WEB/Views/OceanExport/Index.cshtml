@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+<link href="@Url.Content("~/ASP/css/defaultpage.css")" rel="stylesheet" type="text/css" >
+ <style type="text/css">
+ p
+ {
+    text-align:left;
+ }
+ </style>
+<div class="body">
+    <div id="rightnavi">
+        <h2>
+            Ocean Export
+        </h2>
+        <p>
+            This Tab is where all Ocean Export functions are performed. Booking information
+            can be entered, House and Master Bills of Lading can be created, and Consolidations
+            done. In addition, all export documents can be printed from here and emails for
+            notices sent. OE Search will help you find past shipments.</p>
+        <h4>
+            <a href="http://www.aesdirect.gov" target="_blank">AES Direct Home Page</a></h4>
+        <h4>
+            <a href="/ASP/Code/export_code.htm" target="_blank">Export Code</a></h4>
+        <h4 class="bottommargin">
+            <a href="/ASP/Code/type_code.html" target="_blank">License Type</a></h4>
+        <!-- will add function later
+	<h3 class="bold">Recent Works </h3>
+	<ul class="recentworks">
+	<li><a href="#">File name 1</a></li>
+	<li><a href="#">File name 2</a></li>
+	<li><a href="#">File name 3</a></li>
+	<li><a href="#">File name 4</a></li>
+	</ul>-->
+        <div id="linebreak">
+        </div>
+        <h2>
+            Getting Started
+        </h2>
+        <h3>
+            User's Handbook</h3>
+        <p>
+            A first time user or want to learn how to use FreightEasy? <a href="/images/freighteasy/images/FreightEasy-Guide.pdf"
+                target="_blank">Download</a> a User's Handbook.
+            <h3>
+                Support Center
+            </h3>
+            <p>
+                We are ready to help you. For technical support, email to <a href="mailto:support@e-logitech.net?subject=Support for FreightEasy-Ocean Export">
+                    support@e-logitech.net</a> or call us at 1-877-680-EASY(3279).</p>
+    </div>
+    <div id="leftfloat">
+        <div id="chart">
+            <img src="/ASP/Images/chart_oe.gif"></div>
+    </div>
+</div>

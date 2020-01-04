@@ -1,0 +1,11 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxFormLayout" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxFormLayout runat="server" CssFilePath="~/App_Themes/Office2010Silver/{0}/styles.css" CssPostfix="Office2010Silver">
+    <Styles>
+        <LayoutGroupBox>
+            <Caption ForeColor="#A5ACB5" Font-Bold="true" />
+        </LayoutGroupBox>
+    </Styles>
+</dx:ASPxFormLayout>
+

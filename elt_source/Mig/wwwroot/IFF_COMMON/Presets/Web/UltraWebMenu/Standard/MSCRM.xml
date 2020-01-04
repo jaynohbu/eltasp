@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="MSCRM WebMenu" PresetDescription="Infragistics MSCRM Look and feel. Sets both LOOK and BEHAVIOR." PresetType="All" />-->
+<ignav:UltraWebMenu SeparatorClass="" ScrollImageBottom="ig_menu_scrolldown.gif" FileUrl="" TopSelectedClass="" DisabledClass="" ScrollImageTopDisabled="ig_menu_scrollup_disabled.gif" DefaultIslandClass="" ItemPaddingSubMenus="5" TargetUrl="" ScrollImageBottomDisabled="ig_menu_scrolldown_disabled.gif" Cursor="Default" XPSpacerImage="ig_menuCRMspacer1.gif" ForeColor="White" HoverClass="" WebMenuStyle="XPClient" DefaultItemClass="" BackColor="#7288AC" TargetFrame="" ScrollImageTop="ig_menu_scrollup.gif">
+  <ItemStyle Font-Size="8pt" Font-Names="Arial" />
+  <Styles>
+    <ignav:Style Font-Size="8pt" Font-Names="Arial" BorderColor="Blue" BorderStyle="Solid" BackColor="#64799C" CssClass="TopLevelHover">
+      <BorderDetails WidthLeft="1px" WidthTop="1px" WidthRight="1px" WidthBottom="1px" />
+    </ignav:Style>
+    <ignav:Style Font-Size="8pt" Font-Names="Arial" BorderColor="#7288AC" BorderStyle="Solid" CssClass="TopLevelStyle">
+      <BorderDetails WidthLeft="1px" WidthTop="1px" WidthRight="1px" WidthBottom="1px" />
+    </ignav:Style>
+  </Styles>
+  <DisabledStyle BorderStyle="Solid" ForeColor="LightGray">
+    <BorderDetails WidthLeft="1px" WidthTop="1px" WidthRight="1px" WidthBottom="1px" />
+  </DisabledStyle>
+  <HoverItemStyle Cursor="Default" ForeColor="Black" BackColor="#ABC0E7" />
+  <IslandStyle Cursor="Default" BorderWidth="1px" Font-Size="8pt" Font-Names="MS Sans Serif" BorderStyle="Outset" ForeColor="Black" BackColor="White" />
+  <ExpandEffects ShadowColor="LightGray" />
+  <TopSelectedStyle BorderColor="Blue" BackColor="#889DC2">
+    <BorderDetails WidthLeft="1px" WidthTop="1px" WidthRight="1px" WidthBottom="1px" />
+  </TopSelectedStyle>
+  <SeparatorStyle BackgroundImage="ig_menuSep.gif" CssClass="SeparatorClass" CustomRules="background-repeat:repeat-x; " />
+  <Levels>    
+  </Levels>
+</ignav:UltraWebMenu>

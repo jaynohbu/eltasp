@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Office 2003 - Silver Theme" PresetDescription="Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<igtbar:UltraWebToolbar ImageDirectory="/ig_common/images/" BorderStyle="None" MovableImage="ig_tb_move03.gif" BackColor="White" BackgroundImage="ig_tb_back03.gif" Font-Size="8pt" Font-Names="Arial" ItemWidthDefault="80px" Movable="True" ItemSpacing="0" Height="22px" ItemPadding="0" ForeColor="Black" >
+  <HoverStyle Cursor="Default" BorderWidth="1px" BorderColor="#4B4B6F" BorderStyle="Solid" BackgroundImage="OrangeExplorer.gif" Font-Size="8pt" Font-Names="Arial" Font-Bold="False" BackColor="#FFE0A8" ForeColor="Black" />
+  <SelectedStyle Cursor="Default" BorderWidth="1px" BorderColor="#4B4B6F" BorderStyle="Solid" BackgroundImage="OrangeExplorer2.gif" Font-Size="8pt" Font-Names="Arial" Font-Bold="False" BackColor="#FFB860" ForeColor="Black" />
+  <DefaultStyle BorderWidth="0px" BorderStyle="None" BackgroundImage="ig_tb_back03.gif" Font-Size="8pt" Font-Names="Arial" Font-Bold="False" ForeColor="Black" />
+</igtbar:UltraWebToolbar>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Aero" PresetDescription="Property values that give WebMonthView an Aero theme." PresetType="All" />-->
+<ig_sched:WebMonthView 
+StyleSheetFileName="/ig_common/20053/styles/aero/ig_webmonthview.css" />

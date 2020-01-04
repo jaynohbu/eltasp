@@ -1,0 +1,15 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxTreeView" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxmvc:MVCxTreeView runat="server" ShowTreeLines="False">
+    <Images SpriteCssFilePath="~/App_Themes/Moderno/{0}/sprite.css">
+        <NodeLoadingPanel Url="Web/tvNodeLoading.gif"></NodeLoadingPanel>
+        <LoadingPanel Url="Web/Loading.gif"></LoadingPanel>
+    </Images>
+
+    <Styles CssPostfix="Moderno" CssFilePath="~/App_Themes/Moderno/{0}/styles.css">
+        <LoadingPanel ImageSpacing="9px"></LoadingPanel>
+    </Styles>
+</dxmvc:MVCxTreeView>
+

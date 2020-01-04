@@ -1,0 +1,21 @@
+/* for ie6 hack */
+img, div { 
+}
+.rightDiv {
+	margin:0 0 0 -3px;
+}
+.leftDiv {
+	margin: 0 257px 0 0;
+}
+.middleLeft  {
+	margin: 0 257px 0 0;
+}
+.middleRight {
+	margin: 0 0 0 -3px;
+}
+#moduleSelect {
+	margin: 0 0 0 -3px;
+}
+#logoHolder {
+	margin: 0 257px 0 0;
+}

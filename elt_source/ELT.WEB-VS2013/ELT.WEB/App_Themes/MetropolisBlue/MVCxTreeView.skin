@@ -1,0 +1,12 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxTreeView" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxmvc:MVCxTreeView runat="server" ShowTreeLines="False">
+    <Images SpriteCssFilePath="~/App_Themes/MetropolisBlue/{0}/sprite.css">
+        <NodeLoadingPanel Url="~/App_Themes/MetropolisBlue/Web/tvNodeLoading.gif" />
+        <LoadingPanel Url="~/App_Themes/MetropolisBlue/Web/Loading.gif" />
+    </Images>
+    <Styles CssPostfix="MetropolisBlue" CssFilePath="~/App_Themes/MetropolisBlue/{0}/styles.css" />
+</dxmvc:MVCxTreeView>
+

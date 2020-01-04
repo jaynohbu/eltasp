@@ -1,0 +1,13 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxImageGallery" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxImageGallery runat="server" PagerPanelSpacing="1" ItemSpacing="1">
+    <Images SpriteCssFilePath="~/App_Themes/iOS/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/iOS/Web/Loading.gif" />
+    </Images>
+    <Styles CssPostfix="iOS" CssFilePath="~/App_Themes/iOS/{0}/styles.css">
+        <LoadingPanel ImageSpacing="5" />
+    </Styles>
+    <PagerSettings CurrentPageNumberFormat="{0}">
+    </PagerSettings>
+</dx:ASPxImageGallery>

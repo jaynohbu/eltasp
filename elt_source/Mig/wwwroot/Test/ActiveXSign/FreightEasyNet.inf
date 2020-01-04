@@ -1,0 +1,12 @@
+[version]
+signature="$CHICAGO$"
+AdvancedINF=2.0
+
+[Add.Code]
+FreightEasyNet.ocx=FreightEasyNet.ocx
+
+[FreightEasyNet.ocx]
+file-win32-x86=thiscab
+FileVersion=1,0,0,1
+CLSID={34FD3126-734C-4F94-B006-8E1B23E149C8}
+RegisterServer=yes

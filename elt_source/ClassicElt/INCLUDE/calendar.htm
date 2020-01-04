@@ -1,0 +1,83 @@
+  <tr>
+    <td width="100%" align="center" colspan="3">From&nbsp;<Input id=FromDate type=text name="txtFromDate" Value="<%= FromDate %>" OnKeyPress="key()"><img border="0" src="/elt/image/calendar_image.gif" OnClick="ShowCal1()" >&nbsp;&nbsp;To&nbsp;<input id="ToDate" type=text name="txtToDate" Value="<%= ToDate %>" OnKeyPress="key()"><img border="0" src="/elt/image/calendar_image.gif" OnClick="ShowCal2()" ></font></b></td>
+<p>
+<object name="oCal1" classid="clsid:8E27C92B-1264-101C-8A2F-040224009C02" id="oCal1" style="position: 'absolute'; left:'348'; top:'38'; width:'200'; height:'150'; visibility: 'hidden';" OnBlur="GetDate()">
+  <param name="_Version" value="524288">
+  <param name="_ExtentX" value="6456">
+  <param name="_ExtentY" value="3784">
+  <param name="_StockProps" value="1">
+  <param name="BackColor" value="-2147483642">
+  <param name="Year" value="<%= Year(Date) %>">
+  <param name="Month" value="<%= Month(Date) %>">
+  <param name="Day" value="1">
+  <param name="DayLength" value="1">
+  <param name="MonthLength" value="2">
+  <param name="DayFontColor" value="0">
+  <param name="FirstDay" value="1">
+  <param name="GridCellEffect" value="1">
+  <param name="GridFontColor" value="65280">
+  <param name="GridLinesColor" value="-2147483634">
+  <param name="ShowDateSelectors" value="-1">
+  <param name="ShowDays" value="-1">
+  <param name="ShowHorizontalGrid" value="-1">
+  <param name="ShowTitle" value="0">
+  <param name="ShowVerticalGrid" value="-1">
+  <param name="TitleFontColor" value="16776960">
+  <param name="ValueIsNull" value="0">
+</object>
+</p>
+<p>
+<object name="oCal2" classid="clsid:8E27C92B-1264-101C-8A2F-040224009C02" id="oCal2" style="position: 'absolute'; left:'534'; top:'38'; width:'200'; height:'150'; visibility: 'hidden';" OnBlur="GetDate()">
+  <param name="_Version" value="524288">
+  <param name="_ExtentX" value="6456">
+  <param name="_ExtentY" value="3784">
+  <param name="_StockProps" value="1">
+  <param name="BackColor" value="-2147483642">
+  <param name="Year" value="<%= Year(Date) %>">
+  <param name="Month" value="<%= Month(Date) %>">
+  <param name="Day" value="Day(Date)">
+  <param name="DayLength" value="1">
+  <param name="MonthLength" value="2">
+  <param name="DayFontColor" value="0">
+  <param name="FirstDay" value="1">
+  <param name="GridCellEffect" value="1">
+  <param name="GridFontColor" value="65280">
+  <param name="GridLinesColor" value="-2147483634">
+  <param name="ShowDateSelectors" value="-1">
+  <param name="ShowDays" value="-1">
+  <param name="ShowHorizontalGrid" value="-1">
+  <param name="ShowTitle" value="0">
+  <param name="ShowVerticalGrid" value="-1">
+  <param name="TitleFontColor" value="16776960">
+  <param name="ValueIsNull" value="0">
+</object>
+</p>
+  </tr>
+<SCRIPT LANGUAGE="vbscript">
+<!---
+Sub GetDate()
+document.all("oCal1").style.visibility="hidden"
+document.all("FromDate").Value=document.all("oCal1").Value
+document.all("oCal2").style.visibility="hidden"
+document.all("ToDate").Value=document.all("oCal2").Value
+End Sub
+Sub ShowCal1()
+if document.all("oCal1").style.visibility="hidden" then
+	document.all("oCal1").style.visibility="visible"
+else
+	document.all("oCal1").style.visibility="hidden"
+end if
+document.all("FromDate").Value=document.all("oCal1").Value
+	'document.all("oCal1").focus
+End Sub
+Sub ShowCal2()
+if document.all("oCal2").style.visibility="hidden" then
+	document.all("oCal2").style.visibility="visible"
+else
+	document.all("oCal2").style.visibility="hidden"
+end if
+document.all("ToDate").Value=document.all("oCal2").Value
+	'document.all("oCal2").focus
+End Sub
+--->
+</SCRIPT>

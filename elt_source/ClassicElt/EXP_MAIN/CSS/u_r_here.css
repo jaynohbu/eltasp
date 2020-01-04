@@ -1,0 +1,79 @@
+/*
+.ai1 {
+	color: #999900;
+}
+.ai1 a:hover {
+	color: #CC0000;
+}
+.ai1 a {
+	color: #660000;
+}
+.ai2 {
+	color: #999900;
+}
+.ai2 a:hover {
+	color: #CC0000;
+}
+.ai2 a {
+	color: #660000;
+}
+.ai4 {
+	color: #999900;
+}
+.ai4 a:hover {
+	color: #CC0000;
+}
+.ai4 a {
+	color: #660000;
+}
+.ai5 {
+	color: #999900;
+}
+.ai5 a:hover {
+	color: #CC0000;
+}
+.ai5 a {
+	color: #660000;
+}
+*/
+body#aisearch a#aisearchnav,
+body#earrival a#earrivalnav,
+body#editdecon a#editdeconnav,
+body#decon a#deconnav,
+body#editdecon a#editdeconnav {
+	font-weight: bold;
+	background-color: #FFFFFF;
+	padding-right: 15px;
+	padding-left: 30px;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+ul#navlist {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	border-bottom: 1px dashed #999;
+}
+ul#navlist li {
+	display: inline;
+}
+
+#navlist a {
+	font-size: 0.8em;
+	text-transform: uppercase;
+	color: #000;
+	text-decoration: none;
+	border: 1px dashed #999;
+	padding: 7px 5px;
+	background-color: #e7e7e7;
+	border-bottom: none;
+	padding: 7px 5px 7px 30px;
+	background-color: #e7e7e7;
+}
+#navlist a:hover {
+	font-weight: bold;
+	background: #bef511
+	

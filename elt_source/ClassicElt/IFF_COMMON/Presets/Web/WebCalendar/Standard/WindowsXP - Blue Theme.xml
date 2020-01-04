@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="WindowsXP - Blue Theme" PresetDescription="Infragistics Windows XP Blue Preset.  Sets both Look and Behavior properties." PresetType="All" />-->
+<igsch:WebCalendar>
+  <Layout DayNameFormat="FirstLetter" FooterFormat="" ShowTitle="False" ShowFooter="False" ShowNextPrevMonth="False" >
+    <DayStyle Font-Size="9pt" Font-Names="Arial" BackColor="White" />
+    <SelectedDayStyle BackColor="#0054E3" />
+    <OtherMonthDayStyle ForeColor="White" />
+    <DayHeaderStyle Font-Size="9pt" Font-Names="Tahoma" ForeColor="White" BackColor="#7A96DF" />
+    <TitleStyle BackColor="White" />
+  </Layout>
+</igsch:WebCalendar>

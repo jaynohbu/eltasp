@@ -1,0 +1,30 @@
+﻿@model ELT.WEB.Models.EmailNotificationFormModel
+
+
+@using (Ajax.BeginForm("_BillSelectionBox", null, new AjaxOptions { UpdateTargetId = "BillSlectionBox", InsertionMode = InsertionMode.Replace }, new { @id = "FormBillSelectionBox" }))
+{
+    <table>
+        <tr>
+            <td>
+                @Html.HiddenFor(m => m.BillType, new { id = "hBillType" })@Html.DropDownListFor(m => m.BillType, Model.GetBillTypes(), new { id = "BillTypes" })
+            </td>
+            <td>
+                <div class="ComboBoxDiv">
+                    @Html.Partial("_SelectBill")
+                </div>
+            </td>
+        </tr>
+    </table>     
+    
+}
+
+ <script type="text/javascript">
+     $(document).ready(function () {
+         $("#BillTypes").change(function () {
+             $("#hBillType").val($("#BillTypes").val());
+            
+             $("#FormBillSelectionBox").submit();
+         });
+     });
+    
+ </script>

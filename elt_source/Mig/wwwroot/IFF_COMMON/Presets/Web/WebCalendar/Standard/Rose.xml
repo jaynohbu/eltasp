@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Rose" PresetDescription="Infragistics Rose Look" PresetType="Appearance" />-->
+<igsch:WebCalendar ID="WebCalendar1">
+  <Layout TitleFormat="Month" ShowYearDropDown="False" PrevMonthImageUrl="ig_cal_roseP0.gif" ShowMonthDropDown="False" NextMonthImageUrl="ig_cal_roseN0.gif">
+    <FooterStyle Height="16pt" Font-Size="8pt" BackgroundImage="ig_cal_rose2.gif">
+      <BorderDetails ColorTop="#A898A1" WidthTop="1px" StyleTop="Solid" />
+    </FooterStyle>
+    <SelectedDayStyle ForeColor="White" BackColor="#A08085" />
+    <OtherMonthDayStyle ForeColor="#A09098" />
+    <NextPrevStyle BackgroundImage="ig_cal_rose1.gif" />
+    <CalendarStyle BorderWidth="1px" Font-Size="9pt" Font-Names="Verdana" BorderColor="#706068" BorderStyle="Solid" ForeColor="#706068" BackColor="#FFF8FB" />
+    <TodayDayStyle ForeColor="Black" BackColor="#E8E0E4" />
+    <DayHeaderStyle Height="1pt" Font-Size="8pt" Font-Bold="True" BackColor="#EFDEE1">
+      <BorderDetails StyleBottom="Solid" ColorBottom="#A09098" WidthBottom="1px" />
+    </DayHeaderStyle>
+    <TitleStyle Height="18pt" Font-Size="10pt" Font-Bold="True" BackgroundImage="ig_cal_rose1.gif" BackColor="#EFDEE1" />
+  </Layout>
+</igsch:WebCalendar>

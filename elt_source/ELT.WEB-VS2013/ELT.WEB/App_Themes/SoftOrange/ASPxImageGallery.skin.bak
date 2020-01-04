@@ -1,0 +1,10 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxImageGallery" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxImageGallery runat="server" LoadingPanelImagePosition="Top" PagerPanelSpacing="0">
+    <Images SpriteCssFilePath="~/App_Themes/SoftOrange/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/SoftOrange/Web/Loading.gif" />
+    </Images>
+    <Styles CssPostfix="SoftOrange" CssFilePath="~/App_Themes/SoftOrange/{0}/styles.css" />
+    <PagerSettings CurrentPageNumberFormat="{0}" />
+</dx:ASPxImageGallery>

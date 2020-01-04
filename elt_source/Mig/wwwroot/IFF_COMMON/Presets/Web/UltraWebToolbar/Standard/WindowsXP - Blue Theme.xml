@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Windows XP - Blue Theme" PresetDescription="Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<igtbar:UltraWebToolbar ImageDirectory="/ig_common/images/" Movable="True" BorderStyle="Solid" BorderWidth="1px" BorderColor="Beige" BackColor="BlanchedAlmond" BackgroundImage="none" Font-Size="9pt" Font-Names="Arial" ItemWidthDefault="80px" MovableImage="ig_tb_move00.gif" ForeColor="Black" ItemSpacing="0" ItemPadding="0" >
+  <HoverStyle Cursor="Default" BorderWidth="1px" BorderColor="Navy" BorderStyle="Solid" BackgroundImage="none" BackColor="LightBlue" Font-Size="9pt" Font-Names="Arial" ForeColor="Black" />
+  <SelectedStyle Cursor="Default" BorderWidth="1px" BorderColor="Navy" BorderStyle="Solid" BackgroundImage="none" BackColor="Gainsboro" Font-Size="9pt" Font-Names="Arial" ForeColor="Black" />
+  <DefaultStyle BorderWidth="1px" BackColor="BlanchedAlmond" BorderColor="BlanchedAlmond" BorderStyle="Solid" Font-Size="9pt" Font-Names="Arial" ForeColor="Black" />
+</igtbar:UltraWebToolbar>

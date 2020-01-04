@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Light Gray with Borders" PresetDescription="Infragistics Light Gray with Borders Preset" PresetType="Appearance" />-->
+<igsch:WebDateChooser >
+  <ClientSideEvents />
+  <CalendarLayout TitleFormat="Month" CellSpacing="1" ShowYearDropDown="False" PrevMonthImageUrl="ig_cal_grayP.gif" ShowMonthDropDown="False" NextMonthImageUrl="ig_cal_grayN.gif">
+    <DayStyle BorderWidth="1px" BorderColor="White" BorderStyle="Solid" BackColor="#D0D0D0" />
+    <FooterStyle Height="16pt" BorderWidth="1px" Font-Size="8pt" BorderColor="#D8D8D8" BorderStyle="Solid" ForeColor="#303030" BackColor="#B0B0B0">
+      <BorderDetails ColorBottom="#606060" ColorRight="#606060" />
+    </FooterStyle>
+    <SelectedDayStyle Font-Bold="True" ForeColor="White" BackColor="#606060" />
+    <OtherMonthDayStyle ForeColor="Gray" />
+    <NextPrevStyle Width="12px" BorderWidth="1px" BorderColor="#D8D8D8" BorderStyle="Solid" BackColor="#B0B0B0">
+      <BorderDetails ColorBottom="#707070" ColorRight="#707070" WidthBottom="2px" />
+    </NextPrevStyle>
+    <CalendarStyle BorderWidth="1px" Font-Size="9pt" Font-Names="Verdana" BorderColor="#505050" BorderStyle="Solid" ForeColor="Black" BackColor="#B0B0B0" />
+    <WeekendDayStyle ForeColor="#505050" />
+    <TodayDayStyle Font-Bold="True" BackColor="Silver" />
+    <DayHeaderStyle Height="1pt" Font-Size="8pt" Font-Italic="True" BorderStyle="None" BackColor="#B0B0B0" />
+    <TitleStyle Height="24px" Font-Size="10pt" Font-Bold="True" ForeColor="White" BackColor="#909090">
+      <BorderDetails StyleBottom="Solid" ColorBottom="#808080" WidthBottom="1px" />
+    </TitleStyle>
+  </CalendarLayout>
+  <DropButton>
+    <HoverStyle />
+    <Style />
+  </DropButton>
+  <ExpandEffects ShadowColor="LightGray" />
+</igsch:WebDateChooser>

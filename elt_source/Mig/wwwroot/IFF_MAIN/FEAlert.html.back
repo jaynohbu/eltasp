@@ -1,0 +1,119 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Proof of Delivery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+        .bodycopy{
+			margin:8px 5px 8px 5px;
+			font-family: Verdana, Arial, Helvetica, sans-serif;
+	        font-size: 11px;
+		}
+		
+    </style>
+</head>
+<body>
+    <table class="bodycopy" cellpadding="3" cellspacing="0" style="border: solid 1px #888888">
+        <tr>
+            <td colspan="2" style="background-color: #cdcdcd">
+                <b>Update Note (08/01/2008)</b></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height: 5px">
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                1.</td>
+            <td>
+                International character support has been implemented (except Accounting module).
+                <!--All international PDF documents can be printed by enabling "international PDF support"
+                on company information page.--></td>
+        </tr>
+        <tr style="background-color: #eeeeee">
+            <td valign="top">
+                2.</td>
+            <td>
+                Emailing module has been updated - file uploading and attaching have become separate
+                processes. This applies to Air/Ocean Export (Agent Pre-Alert, Shipping Notice) and
+                Air/Ocean Import (Proof of Delivery, eArrival Notice).
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                3.</td>
+            <td>
+                Print Shipping Label has been updated on Air Export, and it is added to Ocean Export.</td>
+        </tr>
+        <tr style="background-color: #eeeeee">
+            <td valign="top">
+                4.</td>
+            <td>
+                Default UOM on company information page has been modified to preset shipment unit
+                in addition to default weight and dimension.</td>
+        </tr>
+        <tr>
+            <td valign="top">
+                5.</td>
+            <td>
+                Performance tuning on Ocean Export and Air/Ocean Import module has improved overall
+                response time.</td>
+        </tr>
+        <tr style="background-color: #eeeeee">
+            <td valign="top">
+                6.</td>
+            <td>
+                Bug Tracking module has been added to provide precise and efficient support.</td>
+        </tr>
+        <tr>
+            <td valign="top">
+                7.</td>
+            <td>
+                All PDF documents have options to be either downloaded or viewed.</td>
+        </tr>
+        <tr style="background-color: #eeeeee">
+            <td valign="top">
+                8.</td>
+            <td>
+                Pickup Order requires prefix setup. This can be done at Site Admin > Prefix Manager.</td>
+        </tr>
+        <tr>
+            <td valign="top">
+                9.</td>
+            <td>
+                Cost and charges items can be created without specifying GL-account relations. However,
+                the relations are mandatory for accessing accounting module.</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height: 5px">
+            </td>
+        </tr>
+        <tr style="background-color: #eeeeee">
+            <td valign="top">
+                10.</td>
+            <td>
+                Country and currency setting has been added on company information. It defaults
+                House and Master AWB to a selected curreny. It can also be overriden when creating
+                individual AWB.</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height: 5px">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <b>If you have any further questions, please contact us to <a href="mailto:support@e-logitech.net">
+                    support@e-logitech.net</a></b></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height: 5px">
+            </td>
+        </tr>
+    </table>
+    <div style="text-align: center">
+        <input type="button" value="Close Window" class="bodycopy" onclick="javascript:window.close()" /></div>
+</body>
+</html>

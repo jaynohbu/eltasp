@@ -1,0 +1,81 @@
+﻿
+@model List<ELT.CDT.SalesTransactionalItem>
+
+@Html.DevExpress().GridView(
+    settings =>
+    {
+       
+        settings.Name = "detailGrid_" + ViewData["CustomerNumber"];
+        settings.SettingsDetail.MasterGridName = "grid";
+        settings.CallbackRouteValues = new { Controller = "Accounting", Action = "_SalesDetailPartial", customer_number = Model.Count != 0 ? Model[0].Customer_Number : "0" };
+        settings.Width = Unit.Percentage(100);
+        settings.SettingsPager.PageSize = 200;
+        settings.KeyFieldName = "Num";
+        settings.Columns.Add("Date");       
+        settings.Columns.Add("Type");
+        settings.Columns.Add(c =>
+        {
+            c.Caption = "No.";
+            c.FieldName = "Num";
+            c.SetDataItemTemplateContent(a =>
+            {
+                if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Num"))))
+                {
+                    string url = DataBinder.Eval(a.DataItem, "Link").ToString();
+                    url = "\"" + url + "\"";
+                    ViewContext.Writer.Write(
+                        "<a href='javascript:void(0)' onclick = 'viewPop(" + url + ")'>" + a.Text + "</a>");
+                }
+            });
+
+            c.CellStyle.CssClass = "numeric";
+            
+        });     
+     
+
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Amount";
+
+            column.SetDataItemTemplateContent(a =>
+            {
+                if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Amount"))))
+                {
+                    string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                    if (a.Text == "0") val = "0";
+                    ViewContext.Writer.Write(val
+                       );
+                }
+            });
+
+        });
+        
+        
+        
+         decimal detail_total = 0;
+         settings.Columns.Add(column => {
+            column.FieldName = "Accumulation";
+            column.UnboundType = DevExpress.Data.UnboundColumnType.String;         
+            column.Width = 80;
+            column.CellStyle.CssClass = "numeric";
+        });
+
+         settings.CustomUnboundColumnData = (sender, e) =>
+         {
+             if (e.Column.FieldName == "Accumulation" )
+             {
+                 if (e.ListSourceRowIndex == 0) detail_total = 0;
+                 if (e.GetListSourceFieldValue(e.ListSourceRowIndex, "Amount") != null && e.GetListSourceFieldValue(e.ListSourceRowIndex, "Amount") != "")
+                 {
+                     decimal Amount = Convert.ToDecimal(e.GetListSourceFieldValue(e.ListSourceRowIndex, "Amount"));
+                     detail_total += Amount;
+                 }
+                 string s_detail_total = "0";
+                 if (detail_total > 0)                 
+                  s_detail_total = string.Format("{0:###,###,###.00}", Convert.ToDecimal(detail_total));
+                 e.Value = s_detail_total;
+             }
+         };
+              
+
+    }).Bind(Model).GetHtml()

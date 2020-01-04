@@ -1,0 +1,6 @@
+﻿@{
+    ViewBag.Title = "BillPay";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+
+<iframe id ="ContentFrame" scrolling="no"   frameborder="0" width="100%" onload="autoResize('ContentFrame');" src="@Url.Content("~/ASP/acct_tasks/pay_bills.asp" + ViewBag.Params)"></iframe>

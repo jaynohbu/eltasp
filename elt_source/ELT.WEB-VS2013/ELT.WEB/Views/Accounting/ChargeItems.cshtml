@@ -1,0 +1,6 @@
+﻿@{
+    ViewBag.Title = "ChargeItems";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+
+<iframe id ="ContentFrame" scrolling="no"   frameborder="0" width="100%" onload="autoResize('ContentFrame');" src="@Url.Content("~/ASP/acct_tasks/edit_ch_items.asp" + ViewBag.Params)"></iframe>

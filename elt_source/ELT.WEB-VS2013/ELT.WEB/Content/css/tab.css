@@ -1,0 +1,455 @@
+﻿<!--
+	* {
+		list-style:none;
+		text-decoration:none;
+	}
+	body {
+		margin: 0;
+		padding: 0;
+		min-width: 990px;	
+	}
+	/* for PNG transparancy for IE 6 */
+	img, div { 
+		behavior: url(/css/iepngfix.htc);
+	}
+	/***********************************************/
+	/* DIV STYLES
+	/* Div id must be same as tab displaying text without space and ...Div 
+	/* i.e. Site Admin --> SiteAdminDiv             
+	/***********************************************/	
+	#logoHolder { 
+		background:url(/Images/mainnav_corner.gif) right top no-repeat ;
+		margin: 0 283px 0 0;
+		padding:0;
+		height: 58px;
+	}
+	#logoHolder img {
+		margin: 0;
+		padding: 0 0 0 14px;			
+	}
+	.moduleText {
+		font: normal 12px Arial, Helvetica, sans-serif;
+	}		
+	#moduleSelect { 
+		float:right;
+		width: 283px;
+		height: 58px;
+		background:url(/Images/mainnav_back.gif) left top repeat-x;
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+		text-align: right;
+	}
+	/*
+	#moduleSelect img {
+		padding: 5px 0 0 0;
+		margin: 0 6px 0 6px;
+		vertical-align: middle;
+	}
+	*/	
+	.middleLeft {
+		background:url(/Images/mainnav_back2_left.gif) left top repeat-x ;
+		margin: 0 283px 0 0;
+		padding: 0;
+		height: 19px;
+	}		
+	.middleRight {
+		float:right;
+		width:283px;
+		background:url(/Images/mainnav_back2_right.gif) left top repeat-x ;
+		margin: 0 0 0 0px;
+		padding: 0;
+		height: 19px;
+	}
+	/***********************************************/
+	/* MAIN TABS                                   */
+	/***********************************************/
+	#tabs {
+		width: 100%;
+		height: 25px;
+		font: bold 0.7em Verdana;
+		line-height: normal;
+		background: url(/Images/navtab_back.gif) repeat-x bottom;
+	}
+	.rightDiv {
+		float:right;
+		width: 283px;
+		margin: 0 0 0 0;
+		padding:0 0 0 0;
+		text-align: right;
+		height: 25px;
+	}.leftDiv {
+		margin: 0 297px 0 0;
+		height: 25px;
+	}
+	#tabs ul {
+		margin: 0;
+		padding: 0 0 0 32px;
+		list-style: none;
+	}
+	#tabs li {
+		display: inline;
+		margin: 0;
+		padding: 0;
+	}
+	#tabs a {
+		float:left;
+		background:url(/Images/navtabs_left.gif) no-repeat left top;
+		margin:0;
+		/* right padding for between tabs & left padding for left sliding door width */
+		padding:0 0 0 4px; 
+		text-decoration:none;
+	}
+	#tabs a span {
+		float:left;
+		display:block;
+		background:url(/Images/navtabs_right.gif) no-repeat right top;
+		/* bottom padding to show bottom border line bottom border of tabs */
+		padding:7px 10px 5px 5px; 
+		color:#828282;
+	}
+	/* Commented Backslash Hack hides rule from IE5-Mac */
+	#tabs a span {
+		float:none;
+	}
+	/* End IE5-Mac hack */
+	#tabs a:hover span {
+		color:#333333;
+	}
+	#tabs a:hover {
+		background-position:0% -42px;
+	}
+	#tabs a:hover span {
+		background-position:100% -42px;
+	}	
+	/***********************************************/
+	/* MAIN TABS CURRENT STATUS                    */
+	/***********************************************/
+	
+	
+
+
+            
+	/***********************************************/
+	/* SUBTABS                                    */
+	/***********************************************/
+	/* subtab Sit Admin */
+	#SiteAdminDiv {
+		float: left;
+		font: 0.7em Verdana;
+		line-height: normal;
+		width: 100%;
+		background: url(/Images/navtab_back_sa.gif) repeat-x bottom;
+		min-height: 26px;
+		background-color: #e1e1ee;
+	}	
+
+	#SiteAdminDiv a span {
+		margin: 10px 0 10px 0;
+		padding: 0 8px 0 8px;
+		border-right: #c0bfda solid 1px; /* right devider between sub tabs */
+		border-left: #e1e1ee solid 1px; /* left devider between sub tabs */
+	}
+	#SiteAdminDiv a:hover,
+	ul#SiteAdminUL a.selected {
+		background: url(/Images/navtab_back_sa_over.gif) repeat-x bottom;
+	}
+	/* subtab Master Data */
+	#MasterDataDiv {
+		float: left;
+		font: 0.7em Verdana;
+		line-height: normal;
+		width: 100%;
+		background: url(/Images/navtab_back_md.gif) repeat-x bottom;
+		min-height: 26px;
+		background-color: #d4e8ea;
+	}	
+	#MasterDataDiv a span {
+		margin: 10px 0 10px 0;
+		padding: 0 8px 0 8px;
+		border-right: #a4cfd2 solid 1px; /* right devider between sub tabs */
+		border-left: #d4e8ea solid 1px; /* left devider between sub tabs */
+	}
+	#MasterDataDiv a:hover,
+	ul#MasterDataUL a.selected {
+		background: url(/Images/navtab_back_md_over.gif) repeat-x bottom;
+	}	
+	/* subtab Preshipment */
+	#Pre-shipmentDiv {
+		float: left;
+		font: 0.7em Verdana;
+		line-height: normal;
+		width: 100%;
+		background: url(/Images/navtab_back_ps.gif) repeat-x bottom;
+		min-height: 26px;
+		background-color: #efdfd3;
+	}	
+	#Pre-shipmentDiv a span {
+		margin: 10px 0 10px 0;
+		padding: 0 8px 0 8px;
+		border-right: #debaa2 solid 1px; /* right devider between sub tabs */
+		border-left: #efdfd3 solid 1px; /* left devider between sub tabs */
+	}
+	#Pre-shipmentDiv a:hover,
+	ul#Pre-shipmentUL a.selected {
+		background: url(/Images/navtab_back_ps_over.gif) repeat-x bottom;
+	}	
+	/* subtab Domestic Freight */
+	#DomesticFreightDiv {
+		float: left;
+		font: 0.7em Verdana;
+		line-height: normal;
+		width: 100%;
+		background: url(/Images/navtab_back_df.gif) repeat-x bottom;
+		min-height: 26px;
+		background-color: #efdfd3;
+	}
+	#DomesticFreightDiv Div {
+		float: left;
+		font: 0.7em Verdana;
+		line-height: normal;
+		background: url(/Images/navtab_back_df.gif) repeat-x bottom;
+		min-height: 26px;
+		text-align:center;
+	}
+	#DomesticFreightDiv a span {
+		margin: 10px 0 10px 0;
+		padding: 0 8px 0 8px;
+		border-right: #debaa2 solid 1px; /* right devider between sub tabs */
+		border-left: #efdfd3 solid 1px; /* left devider between sub tabs */
+	}
+	#DomesticFreightDiv  a:hover,
+	ul#DomesticFreightUL a.selected {
+		background: url(/Images/navtab_back_df_over.gif) repeat-x bottom;
+	}
+	
+	/* subtab Publi*/
+	
+	
+	#PublicDiv {
+		float: left;
+		font: 0.7em Verdana;
+		line-height: normal;
+		width: 100%;
+		background: url(/Images/navtab_back_df.gif) repeat-x bottom;
+		min-height: 26px;
+		background-color: #efdfd3;
+	}
+	#PublicDiv Div {
+		float: left;
+		font: 0.7em Verdana;
+		line-height: normal;
+		background: url(/Images/navtab_back_df.gif) repeat-x bottom;
+		min-height: 26px;
+		text-align:center;
+	}
+	#PublicDiv a span {
+		margin: 10px 0 10px 0;
+		padding: 0 8px 0 8px;
+		border-right: #debaa2 solid 1px; /* right devider between sub tabs */
+		border-left: #efdfd3 solid 1px; /* left devider between sub tabs */
+	}
+	#PublicDiv  a:hover,
+	ul#PublicUL a.selected {
+		background: url(/Images/navtab_back_df_over.gif) repeat-x bottom;
+	}
+	
+	
+	
+	
+	/* subtab Reports */
+	#ReportDiv {
+		float: left;
+		font: 0.7em Verdana;
+		line-height: normal;
+		width: 100%;
+		background: url(/Images/navtab_back_rp.gif) repeat-x bottom;
+		min-height: 26px;
+		background-color: #e5e5cf;
+	}	
+	#ReportDiv a span {
+		margin: 10px 0 10px 0;
+		padding: 0 8px 0 8px;
+	 /* disabled for single tab */
+	  border-right: #c8c798 solid 1px;  
+	  border-left: #e5e5cf solid 1px; 
+	}
+	#ReportDiv a:hover,
+	ul#ReportUL a.selected {
+		background: url(/Images/navtab_back_rp_over.gif) repeat-x bottom;
+	}
+	/* subtab Domestic Reports */
+	#DomesticReportDiv {
+		float: left;
+		font: 0.7em Verdana;
+		line-height: normal;
+		width: 100%;
+		background: url(/Images/navtab_back_rp.gif) repeat-x bottom;
+		min-height: 26px;
+		background-color: #e5e5cf;
+	}	
+	#DomesticReportDiv a span {
+		margin: 10px 0 10px 0;
+		padding: 0 8px 0 8px;
+	 /* disabled for single tab */
+	  border-right: #c8c798 solid 1px;  
+	  border-left: #e5e5cf solid 1px; 
+	}
+	#DomesticReportDiv a:hover,
+	ul#DomesticReportUL a.selected {
+		background: url(/Images/navtab_back_rp_over.gif) repeat-x bottom;
+	}
+		#DomesticReportDiv {
+		float: left;
+		font: 0.7em Verdana;
+		line-height: normal;
+		width: 100%;
+		background: url(/Images/navtab_back_rp.gif) repeat-x bottom;
+		min-height: 26px;
+		background-color: #e5e5cf;
+	}	
+	#DomesticReportDiv a span {
+		margin: 10px 0 10px 0;
+		padding: 0 8px 0 8px;
+	 /* disabled for single tab */
+	  border-right: #c8c798 solid 1px;  
+	  border-left: #e5e5cf solid 1px; 
+	}
+	#DomesticReportDiv a:hover,
+	ul#OperatonReport a.selected {
+		background: url(/Images/navtab_back_rp_over.gif) repeat-x bottom;
+	}
+	/* subtab Air Export */
+	#AirExportDiv {
+		float: left;
+		font: 0.7em Verdana;
+		line-height: normal;
+		width: 100%;
+		background: url(/Images/navtab_back_ae.gif) repeat-x bottom;
+		min-height: 26px;
+		background-color: #e9dee7;
+	}	
+	#AirExportDiv a span {
+		margin: 10px 0 10px 0;
+		padding: 0 8px 0 8px;
+		border-right: #d0b9cd solid 1px; /* right devider between sub tabs */
+		border-left: #e9dee7 solid 1px; /* left devider between sub tabs */
+	}
+	#AirExportDiv a:hover,
+	ul#AirExportUL a.selected {
+		background: url(/ASP/Images/navtab_back_ae_over.gif) repeat-x bottom;
+	}	
+	/* subtab Ocean Export */
+	#OceanExportDiv {
+		float: left;
+		font: 0.7em Verdana;
+		line-height: normal;
+		width: 100%;
+		background: url(/Images/navtab_back_oe.gif) repeat-x bottom;
+		min-height: 26px;
+		background-color: #dce6e2;
+	}	
+	#OceanExportDiv a span {
+		margin: 10px 0 10px 0;
+		padding: 0 8px 0 8px;
+		border-right: #b5c9c1 solid 1px; /* right devider between sub tabs */
+		border-left: #dce6e2 solid 1px; /* left devider between sub tabs */
+	}
+	#OceanExportDiv a:hover,
+	ul#OceanExportUL a.selected {
+		background: url(/Images/navtab_back_oe_over.gif) repeat-x bottom;
+	}
+	/* subtab Air Import */
+	#AirImportDiv {
+		float: left;
+		font: 0.7em Verdana;
+		line-height: normal;
+		width: 100%;
+		background: url(/Images/navtab_back_ai.gif) repeat-x bottom;
+		min-height: 26px;
+		background-color: #efddda;
+	}	
+	#AirImportDiv a span {
+		margin: 10px 0 10px 0;
+		padding: 0 8px 0 8px;
+		border-right: #ddb7b1 solid 1px; /* right devider between sub tabs */
+		border-left: #efddda solid 1px; /* left devider between sub tabs */
+	}
+	#AirImportDiv a:hover,
+	ul#AirImportUL a.selected {
+		background: url(/Images/navtab_back_ai_over.gif) repeat-x bottom;
+	}
+	/* subtab Ocean Import */
+	#OceanImportDiv {
+		float: left;
+		font: 0.7em Verdana;
+		line-height: normal;
+		width: 100%;
+		background: url(/Images/navtab_back_oi.gif) repeat-x bottom;
+		min-height: 26px;
+		background-color: #dfe3e9;
+	}	
+	#OceanImportDiv a span {
+		margin: 10px 0 10px 0;
+		padding: 0 8px 0 8px;
+		border-right: #b5c9c1 solid 1px; /* right devider between sub tabs */
+		border-left: #dfe3e9 solid 1px; /* left devider between sub tabs */
+	}
+	#OceanImportDiv a:hover,
+	ul#OceanImportUL a.selected {
+		background: url(/Images/navtab_back_oi_over.gif) repeat-x bottom;
+	}
+	/* subtab Accounting GeneralDiv, Account Receivable,...(all subtabs) */
+	#GeneralDiv, #AccountReceivableDiv, #AccountPayableDiv, #BankDiv, #AccountReportDiv, #FinancialDiv, #TasksDiv, #ReportsDiv {
+		float: left;
+		font: 0.7em Verdana;
+		line-height: normal;
+		width: 100%;
+		background: url(/Images/navtab_back_acc.gif) repeat-x bottom;
+		min-height: 26px;
+		background-color: #dbe8d5;
+	}	
+	#GeneralDiv a span, #AccountReceivableDiv a span, #AccountPayableDiv a span, #BankDiv a span, #AccountReportDiv a span, #FinancialDiv a span, #TasksDiv a span, #ReportsDiv a span {
+		margin: 10px 0 10px 0;
+		padding: 0 8px 0 8px;
+		border-right: #b3cfa5 solid 1px; /* right devider between sub tabs */
+		border-left: #dbe8d5 solid 1px; /* left devider between sub tabs */
+	}
+	#GeneralDiv a:hover, #AccountReceivableDiv a:hover, #AccountPayableDiv a:hover, #BankDiv a:hover, #AccountReportDiv a:hover, #FinancialDiv a:hover, #TasksDiv a:hover, #ReportsDiv a:hover,
+	#GeneralDivSelected, #AccountReceivableDivSelected, #AccountPayableDivSelected, #BankDivSelected, #AccountReportDivSelected, #FinancialDivSelected, #TasksDivSelected, #ReportsDivSelected,
+	ul#GeneralUL a.selected,
+	ul#AccountReceivableUL a.selected,
+	ul#AccountPayableUL a.selected,
+	ul#BankUL a.selected,
+	ul#AccountReportUL a.selected,
+	ul#FinancialUL a.selected
+	 {
+		background: url(/Images/navtab_back_acc_over.gif) repeat-x bottom;
+	}
+	/* shared style for all subtabs */		
+	#SiteAdminDiv ul, #MasterDataDiv ul, #Pre-shipmentDiv ul, #DomesticFreightDiv ul, #ReportDiv ul, #AirExportDiv ul, #OceanExportDiv ul, #AirImportDiv ul, #OceanImportDiv ul, #GeneralDiv ul, #AccountReceivableDiv ul, #AccountPayableDiv ul, #BankDiv ul, #AccountReportDiv ul, #FinancialDiv ul, #TasksDiv ul, #ReportsDiv ul, #PublicDiv ul {
+		margin: 0;
+		padding: 0 0 0 90px;		
+	}
+	#SiteAdminDiv li, #MasterDataDiv li, #Pre-shipmentDiv li, #DomesticFreightDiv li, #ReportDiv li, #AirExportDiv li, #OceanExportDiv li, #AirImportDiv li, #OceanImportDiv li, #GeneralDiv li, #AccountReceivableDiv li, #AccountPayableDiv li, #BankDiv li, #AccountReportDiv li, #FinancialDiv li, #TasksDiv li, #ReportsDiv ul, #PublicDiv  li {
+		display: inline;
+		margin: 0;
+		padding: 0;		
+	}
+	#SiteAdminDiv a, #MasterDataDiv a, #Pre-shipmentDiv a, #DomesticFreightDiv a, #ReportDiv a, #AirExportDiv a, #OceanExportDiv a, #AirImportDiv a, #OceanImportDiv a, #GeneralDiv a, #AccountReceivableDiv a, #AccountPayableDiv a, #BankDiv a, #AccountReportDiv a, #FinancialDiv a, #TasksDiv a, #ReportsDiv a , #PublicDiv  a{
+		color: #000000;
+		float: left;
+		margin: 0;
+		padding: 6px 0 10px 0;		
+	}
+	#SiteAdminDiv a.noRight span, #MasterDataDiv a.noRight span, #Pre-shipmentDiv a.noRight span, #DomesticFreightDiv a.noRight span, #AirExportDiv a.noRight span, #OceanExportDiv a.noRight span, #AirImportDiv a.noRight span, #OceanImportDiv a.noRight span, #GeneralDiv a.noRight span, #AccountReceivableDiv a.noRight span, #AccountPayableDiv a.noRight span, #BankDiv a.noRight span, #AccountReportDiv a.noRight span, #FinancialDiv a.noRight span, #TasksDiv a.noRight span, #ReportDiv a.noRight span , #PublicDiv  a.noRight span {
+		border-right: none; /* remove right devider between sub tabs */
+	}
+	#SiteAdminDiv a.noLeft span, #MasterDataDiv a.noLeft span, #Pre-shipmentDiv a.noLeft span, #DomesticFreightDiv a.noLeft span, #AirExportDiv a.noLeft span, #OceanExportDiv a.noLeft span, #AirImportDiv a.noLeft span, #OceanImportDiv a.noLeft span, #GeneralDiv a.noLeft span, #AccountReceivableDiv a.noLeft span, #AccountPayableDiv a.noLeft span, #BankDiv a.noLeft span, #AccountReportDiv a.noLeft span, #FinancialDiv a.noLeft span, #TasksDiv a.noLeft span, #ReportDiv a.noLeft span,  #PublicDiv a.noLeft span  {
+		border-left: none; /* remove left devider between sub tabs */
+	}
+-->
+
+#EltClient {
+width: 1px;
+height: 1px;
+}

@@ -1,0 +1,56 @@
+﻿<link href="@Url.Content("~/Content/css/tab_accounting_account_receivable.css")" rel="stylesheet" type="text/css" />
+<div id="AccountReceivableDiv" style="overflow: hidden; height: 28px; position: relative;
+    left: 0px; width: 100%">
+   <div id="divMore" style="cursor: pointer; height: 28px; position: absolute; z-index: 1;
+        width: 20px">
+    <ul id="AccountReceivableUL" style="position: absolute; margin-left: -57px; left: 0px;
+        width: 4000px">
+        <li id="InvoiceQueue"><a class="noLeft" 
+            href="@Url.Content("~/Accounting/InvoiceQueue")" >
+            <span>Invoice Queue </span></a></li>
+        <li id="AddInvoice"><a class="noLeft" 
+            href="@Url.Content("~/Accounting/AddInvoice")" >
+            <span>Add Invoice </span></a>
+        </li>
+        <li id="CreditNote"><a class="noLeft" 
+            href="@Url.Content("~/Accounting/CreditNote")" >
+            <span>Credit Note </span></a>
+        </li>
+        <li id="SearchInvoice"><a class="noLeft" 
+            href="@Url.Content("~/Accounting/SearchInvoice")" >
+            <span>Search Invoice
+            </span></a></li>
+       <li id="ReceivePayment"><a class="noLeft" 
+            href="@Url.Content("~/Accounting/ReceivePayment")" >
+            <span>Receive Payment </span></a>
+        </li>
+        <li id="ARAging"><a class="noLeft" 
+            href="@Url.Content("~/Accounting/ARAging")" >
+            <span>A/R Aging </span>
+        </a></li>
+        <li id="ARDetail"><a class="noLeft" 
+            href="@Url.Content("~/Accounting/ARDetail/parm=ardet")" >
+            <span>A/R Detail
+            </span></a></li>
+    </ul>
+    </div>
+</div>
+ <script type="text/javascript">
+     $(document).ready(function () {
+         //reset menu
+         var submenues = $("#AccountReceivableUL>li");
+         submenues.each(function (index) {
+             $(this).removeClass("selected");
+
+         });
+
+         //detect the name of view
+         var currUrl = $(location).attr('href');
+         var parts = currUrl.split("/");
+         var currView = parts[4];
+         if(currView !="")
+            $("#" + currView + ">a").addClass("selected");
+
+         // $(".CurAirExportDiv").attr("id", "CurAirExportDiv");
+     });
+</script>

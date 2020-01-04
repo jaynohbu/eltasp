@@ -1,0 +1,132 @@
+<SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+<a1:ObjectStreamer id="ref-1" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Infragistics.Shared.Serialization/Infragistics.Shared.v3.2">
+<TargetTypeName id="ref-3">UltraGridBase</TargetTypeName>
+<DisplayLayout href="#ref-4"/>
+<PresetDescription id="ref-5">Emulates the look and feel of WindowsXP - Blue Theme</PresetDescription>
+<PresetType>1</PresetType>
+<PresetName id="ref-6">WindowsXP - Blue Theme</PresetName>
+</a1:ObjectStreamer>
+<a1:ObjectStreamer id="ref-4" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Infragistics.Shared.Serialization/Infragistics.Shared.v3.2">
+<TargetTypeName id="ref-9">UltraGridLayout</TargetTypeName>
+<InterBandSpacing>10</InterBandSpacing>
+<Override href="#ref-10"/>
+<RowConnectorColor xsi:type="a2:Color" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/System.Drawing/System.Drawing">
+<value>4278273232</value>
+<knownColor>0</knownColor>
+<state>2</state>
+<name xsi:null="1"/>
+</RowConnectorColor>
+<PresetType>1</PresetType>
+<Appearance href="#ref-11"/>
+<RowConnectorStyle>4</RowConnectorStyle>
+</a1:ObjectStreamer>
+<a1:ObjectStreamer id="ref-10" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Infragistics.Shared.Serialization/Infragistics.Shared.v3.2">
+<TargetTypeName id="ref-12">UltraGridOverride</TargetTypeName>
+<RowAppearance href="#ref-13"/>
+<CardAreaAppearance href="#ref-14"/>
+<SelectedRowAppearance href="#ref-15"/>
+<HeaderAppearance href="#ref-16"/>
+<RowSelectorAppearance href="#ref-17"/>
+<PresetType>1</PresetType>
+<RowSpacingBefore>2</RowSpacingBefore>
+<RowSelectorWidth>12</RowSelectorWidth>
+</a1:ObjectStreamer>
+<a3:Appearance id="ref-11" xmlns:a3="http://schemas.microsoft.com/clr/nsassem/Infragistics.Win/Infragistics.Win.v3.2">
+<BackColor xsi:type="a2:Color" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/System.Drawing/System.Drawing">
+<value>0</value>
+<knownColor>164</knownColor>
+<state>1</state>
+<name xsi:null="1"/>
+</BackColor>
+<BackColor2 xsi:type="a2:Color" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/System.Drawing/System.Drawing">
+<value>4282226175</value>
+<knownColor>0</knownColor>
+<state>2</state>
+<name xsi:null="1"/>
+</BackColor2>
+<BackGradientStyle>5</BackGradientStyle>
+<Id>0</Id>
+</a3:Appearance>
+<a3:Appearance id="ref-13" xmlns:a3="http://schemas.microsoft.com/clr/nsassem/Infragistics.Win/Infragistics.Win.v3.2">
+<BorderColor xsi:type="a2:Color" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/System.Drawing/System.Drawing">
+<value>4278273232</value>
+<knownColor>0</knownColor>
+<state>2</state>
+<name xsi:null="1"/>
+</BorderColor>
+<Id>0</Id>
+</a3:Appearance>
+<a3:Appearance id="ref-14" xmlns:a3="http://schemas.microsoft.com/clr/nsassem/Infragistics.Win/Infragistics.Win.v3.2">
+<BackColor xsi:type="a2:Color" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/System.Drawing/System.Drawing">
+<value>0</value>
+<knownColor>27</knownColor>
+<state>1</state>
+<name xsi:null="1"/>
+</BackColor>
+<Id>0</Id>
+</a3:Appearance>
+<a3:Appearance id="ref-15" xmlns:a3="http://schemas.microsoft.com/clr/nsassem/Infragistics.Win/Infragistics.Win.v3.2">
+<BackColor xsi:type="a2:Color" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/System.Drawing/System.Drawing">
+<value>4286687714</value>
+<knownColor>0</knownColor>
+<state>2</state>
+<name xsi:null="1"/>
+</BackColor>
+<BackColor2 xsi:type="a2:Color" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/System.Drawing/System.Drawing">
+<value>4292733950</value>
+<knownColor>0</knownColor>
+<state>2</state>
+<name xsi:null="1"/>
+</BackColor2>
+<BackGradientStyle>2</BackGradientStyle>
+<ForeColor xsi:type="a2:Color" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/System.Drawing/System.Drawing">
+<value>0</value>
+<knownColor>35</knownColor>
+<state>1</state>
+<name xsi:null="1"/>
+</ForeColor>
+<Id>0</Id>
+</a3:Appearance>
+<a3:Appearance id="ref-16" xmlns:a3="http://schemas.microsoft.com/clr/nsassem/Infragistics.Win/Infragistics.Win.v3.2">
+<BackColor xsi:type="a2:Color" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/System.Drawing/System.Drawing">
+<value>4282226175</value>
+<knownColor>0</knownColor>
+<state>2</state>
+<name xsi:null="1"/>
+</BackColor>
+<BackColor2 xsi:type="a2:Color" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/System.Drawing/System.Drawing">
+<value>4278273232</value>
+<knownColor>0</knownColor>
+<state>2</state>
+<name xsi:null="1"/>
+</BackColor2>
+<BackGradientStyle>2</BackGradientStyle>
+<ForeColor xsi:type="a2:Color" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/System.Drawing/System.Drawing">
+<value>0</value>
+<knownColor>164</knownColor>
+<state>1</state>
+<name xsi:null="1"/>
+</ForeColor>
+<TextHAlign>1</TextHAlign>
+<ThemedElementAlpha>3</ThemedElementAlpha>
+<Id>0</Id>
+</a3:Appearance>
+<a3:Appearance id="ref-17" xmlns:a3="http://schemas.microsoft.com/clr/nsassem/Infragistics.Win/Infragistics.Win.v3.2">
+<BackColor xsi:type="a2:Color" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/System.Drawing/System.Drawing">
+<value>4282226175</value>
+<knownColor>0</knownColor>
+<state>2</state>
+<name xsi:null="1"/>
+</BackColor>
+<BackColor2 xsi:type="a2:Color" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/System.Drawing/System.Drawing">
+<value>4278273232</value>
+<knownColor>0</knownColor>
+<state>2</state>
+<name xsi:null="1"/>
+</BackColor2>
+<BackGradientStyle>2</BackGradientStyle>
+<Id>0</Id>
+</a3:Appearance>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

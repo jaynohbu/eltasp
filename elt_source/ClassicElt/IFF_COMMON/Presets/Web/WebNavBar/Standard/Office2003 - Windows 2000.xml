@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Office2003 - Windows 2000 Theme" PresetDescription="Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<ignavbar:WebNavBar BorderStyle="None" BackgroundImage="/ig_common/images/ig_tb_back03.gif" Movable="True" BackColor="LightGray" Font-Size="9pt" Font-Names="Arial" Theme="CorporateSilver">
+  <Navigation>
+    <End Tag="" DisabledImage="CorporateSilver/end_disabled.gif" Key="end" StepUnit="Last" TabIndex="0" HoverImage="CorporateSilver/end_hover.gif" Image="CorporateSilver/end_up.gif" DepthFirst="True" SelectedImage="CorporateSilver/end_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="2147483647" ToolTip="End">
+      <HoverStyle BorderStyle="None" />
+      <SelectedStyle BorderStyle="None" />
+      <DefaultStyle BorderStyle="None" />
+    </End>
+    <Start Tag="" DisabledImage="CorporateSilver/start_disabled.gif" Key="start" StepUnit="First" TabIndex="0" HoverImage="CorporateSilver/start_hover.gif" Image="CorporateSilver/start_up.gif" DepthFirst="True" SelectedImage="CorporateSilver/start_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="-2147483648" ToolTip="Start">
+      <HoverStyle BorderStyle="None" />
+      <SelectedStyle BorderStyle="None" />
+      <DefaultStyle BorderStyle="None" />
+    </Start>
+    <Next Tag="" DisabledImage="CorporateSilver/next_disabled.gif" Key="next" StepUnit="Row" TabIndex="0" HoverImage="CorporateSilver/next_hover.gif" Image="CorporateSilver/next_up.gif" DepthFirst="False" SelectedImage="CorporateSilver/next_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="1" ToolTip="Next">
+      <HoverStyle BorderStyle="None" />
+      <SelectedStyle BorderStyle="None" />
+      <DefaultStyle BorderStyle="None" />
+    </Next>
+    <Rewind Tag="" DisabledImage="CorporateSilver/rew_disabled.gif" Key="rew" StepUnit="Page" TabIndex="0" HoverImage="CorporateSilver/rew_hover.gif" Image="CorporateSilver/rew_up.gif" DepthFirst="False" SelectedImage="CorporateSilver/rew_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="-1" ToolTip="Reverse">
+      <HoverStyle BorderStyle="None" />
+      <SelectedStyle BorderStyle="None" />
+      <DefaultStyle BorderStyle="None" />
+    </Rewind>
+    <FastForward Tag="" DisabledImage="CorporateSilver/ff_disabled.gif" Key="ff" StepUnit="Page" TabIndex="0" HoverImage="CorporateSilver/ff_hover.gif" Image="CorporateSilver/ff_up.gif" DepthFirst="False" SelectedImage="CorporateSilver/ff_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="1" ToolTip="Forward">
+      <HoverStyle BorderStyle="None" />
+      <SelectedStyle BorderStyle="None" />
+      <DefaultStyle BorderStyle="None" />
+    </FastForward>
+    <Prev Tag="" DisabledImage="CorporateSilver/prev_disabled.gif" Key="prev" StepUnit="Row" TabIndex="0" HoverImage="CorporateSilver/prev_hover.gif" Image="CorporateSilver/prev_up.gif" DepthFirst="False" SelectedImage="CorporateSilver/prev_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="-1" ToolTip="Previous">
+      <HoverStyle BorderStyle="None" />
+      <SelectedStyle BorderStyle="None" />
+      <DefaultStyle BorderStyle="None" />
+    </Prev>
+  </Navigation>
+  <Extension>
+    <Submit Tag="" Key="submit" TabIndex="0" HoverImage="CorporateSilver/submit_hover.gif" ToolTip="Submit" SelectedImage="CorporateSilver/submit_down.gif" TargetURL="" DisabledImage="CorporateSilver/submit_disabled.gif" TargetFrame="" Image="CorporateSilver/submit_up.gif">
+      <HoverStyle BorderStyle="None" />
+      <SelectedStyle BorderStyle="None" />
+      <DefaultStyle BorderStyle="None" />
+    </Submit>
+    <Delete Tag="" Key="del" TabIndex="0" HoverImage="CorporateSilver/del_hover.gif" ToolTip="Delete" SelectedImage="CorporateSilver/del_down.gif" TargetURL="" DisabledImage="CorporateSilver/del_disabled.gif" TargetFrame="" Image="CorporateSilver/del_up.gif">
+      <HoverStyle BorderStyle="None" />
+      <SelectedStyle BorderStyle="None" />
+      <DefaultStyle BorderStyle="None" />
+    </Delete>
+    <Insert Tag="" Key="add" TabIndex="0" HoverImage="CorporateSilver/add_hover.gif" ToolTip="Insert" SelectedImage="CorporateSilver/add_down.gif" TargetURL="" DisabledImage="CorporateSilver/add_disabled.gif" TargetFrame="" Image="CorporateSilver/add_up.gif">
+      <HoverStyle BorderStyle="None" />
+      <SelectedStyle BorderStyle="None" />
+      <DefaultStyle BorderStyle="None" />
+    </Insert>
+  </Extension>
+</ignavbar:WebNavBar>

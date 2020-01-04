@@ -1,0 +1,27 @@
+﻿
+@model ELT.WEB.DataProvider.ELTFileSystemProvider
+
+@Html.DevExpress().FileManager(
+    settings => {
+        settings.Name = "fileManager";
+        settings.CallbackRouteValues = new { Controller = "Public", Action = "FileManager"};
+        settings.Width = Unit.Percentage(100);
+
+        settings.Settings.AllowedFileExtensions = ELT.COMMON.AppConstants.AllowedFileExtensions;
+        settings.Settings.InitialFolder = ViewBag.InitialFolder;
+        settings.Settings.ThumbnailFolder = Url.Content("~/Content/FileManager/Thumbnails");
+        settings.SettingsFileList.DetailsViewSettings.ShowHeaderFilterButton = true;
+        settings.SettingsFileList.ThumbnailsViewSettings.ThumbnailSize = 100; 
+        
+        settings.SettingsEditing.AllowCreate = true;
+        settings.SettingsEditing.AllowDelete = true;
+        settings.SettingsEditing.AllowMove = true;
+        settings.SettingsEditing.AllowRename = true;
+    }
+).BindToFileSystemProvider(Model).GetHtml()
+
+
+<script>
+    $(document).ready(function () {  alert("@ViewBag.ItemID") });
+
+</script>

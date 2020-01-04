@@ -1,0 +1,67 @@
+﻿@Html.DevExpress().GridView(
+    settings =>
+    {
+        settings.DataBound = (sender, e) =>
+        {
+            MVCxGridView gv = sender as MVCxGridView;
+            gv.ExpandAll();
+
+        };
+        settings.Name = "gvLiability";
+        //settings.CallbackRouteValues = new { Controller = "Accounting", Action = "BalanceSheetPartial_Liability" };
+      //  settings.CustomActionRouteValues = new { Cotroller = "Accounting", Action = "IncomeStatementPartial" };
+        settings.Width = Unit.Pixel(500);
+        settings.SettingsPager.PageSize = 100;
+        settings.Settings.ShowColumnHeaders = false;
+      
+        settings.SettingsBehavior.AllowSort = false;
+        settings.SettingsPager.Mode = GridViewPagerMode.ShowAllRecords;
+        var cat = settings.Columns.Add("Type", " ");
+        cat.GroupIndex = 0;
+        cat.SortOrder = DevExpress.Data.ColumnSortOrder.Descending;
+
+        var subcat = settings.Columns.Add("Category", "  ");
+        subcat.GroupIndex = 1;
+        subcat.SortOrder = DevExpress.Data.ColumnSortOrder.Descending;
+
+        var subsubcat = settings.Columns.Add("GLAccountName", "  ");
+        subsubcat.GroupIndex = 2;
+        subsubcat.SortOrder = DevExpress.Data.ColumnSortOrder.Descending;
+        
+        settings.Columns.Add("GlAccountNumber").Width = 100; ;
+        settings.Columns.Add("GLAccountName");
+
+        settings.Columns.Add(c =>
+        {
+            c.FieldName = "Amount ";
+            c.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            c.Width = 120;
+            c.CellStyle.CssClass = "numeric";
+            c.PropertiesEdit.DisplayFormatString = "c";
+        });
+
+        settings.CustomUnboundColumnData = (sender, e) =>
+        {
+            decimal amount = Convert.ToDecimal(e.GetListSourceFieldValue("Amount"));
+           
+            if (e.Column.FieldName == "Amount ")
+            {
+                e.Value = amount;
+            }
+
+        };
+        
+
+        settings.Settings.ShowFooter = true;
+        settings.Settings.ShowGroupPanel = true;
+        
+
+        settings.GroupSummary.Add(DevExpress.Data.SummaryItemType.Sum, "Amount ").DisplayFormat = "c";
+        
+        var balSum = settings.TotalSummary.Add(DevExpress.Data.SummaryItemType.Sum, "Amount");
+
+
+        balSum.DisplayFormat = "NET INCOME : {0:c2}";
+        balSum.ShowInColumn = "Amount ";
+        
+    }).Bind(Model).GetHtml()

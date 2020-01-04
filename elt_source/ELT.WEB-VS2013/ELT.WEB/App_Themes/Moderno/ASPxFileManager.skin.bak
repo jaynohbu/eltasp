@@ -1,0 +1,23 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxFileManager" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxFileManager runat="server" CssFilePath="~/App_Themes/Moderno/{0}/styles.css" CssPostfix="Moderno">
+    <Styles CssPostfix="Moderno" CssFilePath="~/App_Themes/Moderno/{0}/styles.css">
+        <Toolbar Height="46px"></Toolbar>
+        <UploadPanel Height="50px"></UploadPanel>
+        <LoadingPanel ImageSpacing="9px"></LoadingPanel>
+    </Styles>
+    <StylesDetailsView>
+        <CommandColumn Width="46px"></CommandColumn>
+    </StylesDetailsView>
+    <SettingsFileList>
+        <DetailsViewSettings ThumbnailSize="24px">
+        </DetailsViewSettings>
+    </SettingsFileList>
+
+    <Images SpriteCssFilePath="~/App_Themes/Moderno/{0}/sprite.css">
+        <FolderContainerNodeLoadingPanel Url="Web/tvNodeLoading.gif"></FolderContainerNodeLoadingPanel>
+        <LoadingPanel Url="Web/Loading.gif"></LoadingPanel>
+    </Images>
+</dx:ASPxFileManager>
+

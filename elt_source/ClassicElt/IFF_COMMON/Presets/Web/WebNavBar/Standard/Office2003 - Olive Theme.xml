@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Office2003 - Olive Theme" PresetDescription="Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<ignavbar:WebNavBar BorderStyle="Solid" BackgroundImage="/ig_common/images/OliveExplorer.gif" Movable="True" BorderWidth="1px" BorderColor="Gainsboro" BackColor="#ECE9D8" Font-Size="9pt" Font-Names="Arial" Theme="XpOlive">
+  <Navigation>
+    <End Tag="" DisabledImage="XpOlive/end_disabled.gif" Key="end" StepUnit="Last" TabIndex="0" HoverImage="XpOlive/end_hover.gif" Image="XpOlive/end_up.gif" DepthFirst="True" SelectedImage="XpOlive/end_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="2147483647" ToolTip="End">
+      <HoverStyle BackColor="white" BorderStyle="Solid" BorderColor="#8F9E69" BorderWidth="1px" />
+      <SelectedStyle BackColor="white" BorderStyle="Solid" BorderColor="#B7C691" BorderWidth="1px" />
+      <DefaultStyle BackColor="white" BorderStyle="Solid" BorderColor="#B7C691" BorderWidth="1px" />
+    </End>
+    <Start Tag="" DisabledImage="XpOlive/start_disabled.gif" Key="start" StepUnit="First" TabIndex="0" HoverImage="XpOlive/start_hover.gif" Image="XpOlive/start_up.gif" DepthFirst="True" SelectedImage="XpOlive/start_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="-2147483648" ToolTip="Start">
+      <HoverStyle BackColor="white" BorderStyle="Solid" BorderColor="#8F9E69" BorderWidth="1px" />
+      <SelectedStyle BackColor="white" BorderStyle="Solid" BorderColor="#B7C691" BorderWidth="1px" />
+      <DefaultStyle BackColor="white" BorderStyle="Solid" BorderColor="#B7C691" BorderWidth="1px" />
+    </Start>
+    <Next Tag="" DisabledImage="XpOlive/next_disabled.gif" Key="next" StepUnit="Row" TabIndex="0" HoverImage="XpOlive/next_hover.gif" Image="XpOlive/next_up.gif" DepthFirst="False" SelectedImage="XpOlive/next_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="1" ToolTip="Next">
+      <HoverStyle BackColor="white" BorderStyle="Solid" BorderColor="#8F9E69" BorderWidth="1px" />
+      <SelectedStyle BackColor="white" BorderStyle="Solid" BorderColor="#B7C691" BorderWidth="1px" />
+      <DefaultStyle BackColor="white" BorderStyle="Solid" BorderColor="#B7C691" BorderWidth="1px" />
+    </Next>
+    <Rewind Tag="" DisabledImage="XpOlive/rew_disabled.gif" Key="rew" StepUnit="Page" TabIndex="0" HoverImage="XpOlive/rew_hover.gif" Image="XpOlive/rew_up.gif" DepthFirst="False" SelectedImage="XpOlive/rew_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="-1" ToolTip="Reverse">
+      <HoverStyle BackColor="white" BorderStyle="Solid" BorderColor="#8F9E69" BorderWidth="1px" />
+      <SelectedStyle BackColor="white" BorderStyle="Solid" BorderColor="#B7C691" BorderWidth="1px" />
+      <DefaultStyle BackColor="white" BorderStyle="Solid" BorderColor="#B7C691" BorderWidth="1px" />
+    </Rewind>
+    <FastForward Tag="" DisabledImage="XpOlive/ff_disabled.gif" Key="ff" StepUnit="Page" TabIndex="0" HoverImage="XpOlive/ff_hover.gif" Image="XpOlive/ff_up.gif" DepthFirst="False" SelectedImage="XpOlive/ff_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="1" ToolTip="Forward">
+      <HoverStyle BackColor="white" BorderStyle="Solid" BorderColor="#8F9E69" BorderWidth="1px" />
+      <SelectedStyle BackColor="white" BorderStyle="Solid" BorderColor="#B7C691" BorderWidth="1px" />
+      <DefaultStyle BackColor="white" BorderStyle="Solid" BorderColor="#B7C691" BorderWidth="1px" />
+    </FastForward>
+    <Prev Tag="" DisabledImage="XpOlive/prev_disabled.gif" Key="prev" StepUnit="Row" TabIndex="0" HoverImage="XpOlive/prev_hover.gif" Image="XpOlive/prev_up.gif" DepthFirst="False" SelectedImage="XpOlive/prev_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="-1" ToolTip="Previous">
+      <HoverStyle BackColor="white" BorderStyle="Solid" BorderColor="#8F9E69" BorderWidth="1px" />
+      <SelectedStyle BackColor="white" BorderStyle="Solid" BorderColor="#B7C691" BorderWidth="1px" />
+      <DefaultStyle BackColor="white" BorderStyle="Solid" BorderColor="#B7C691" BorderWidth="1px" />
+    </Prev>
+  </Navigation>
+  <Extension>
+    <Submit Tag="" Key="submit" TabIndex="0" HoverImage="XpOlive/submit_hover.gif" ToolTip="Submit" SelectedImage="XpOlive/submit_down.gif" TargetURL="" DisabledImage="XpOlive/submit_disabled.gif" TargetFrame="" Image="XpOlive/submit_up.gif">
+      <HoverStyle BackColor="white" BorderStyle="Solid" BorderColor="#8F9E69" BorderWidth="1px" />
+      <SelectedStyle BackColor="white" BorderStyle="Solid" BorderColor="#B7C691" BorderWidth="1px" />
+      <DefaultStyle BackColor="white" BorderStyle="Solid" BorderColor="#B7C691" BorderWidth="1px" />
+    </Submit>
+    <Delete Tag="" Key="del" TabIndex="0" HoverImage="XpOlive/del_hover.gif" ToolTip="Delete" SelectedImage="XpOlive/del_down.gif" TargetURL="" DisabledImage="XpOlive/del_disabled.gif" TargetFrame="" Image="XpOlive/del_up.gif">
+      <HoverStyle BackColor="white" BorderStyle="Solid" BorderColor="#8F9E69" BorderWidth="1px" />
+      <SelectedStyle BackColor="white" BorderStyle="Solid" BorderColor="#B7C691" BorderWidth="1px" />
+      <DefaultStyle BackColor="white" BorderStyle="Solid" BorderColor="#B7C691" BorderWidth="1px" />
+    </Delete>
+    <Insert Tag="" Key="add" TabIndex="0" HoverImage="XpOlive/add_hover.gif" ToolTip="Insert" SelectedImage="XpOlive/add_down.gif" TargetURL="" DisabledImage="XpOlive/add_disabled.gif" TargetFrame="" Image="XpOlive/add_up.gif">
+      <HoverStyle BackColor="white" BorderStyle="Solid" BorderColor="#8F9E69" BorderWidth="1px" />
+      <SelectedStyle BackColor="white" BorderStyle="Solid" BorderColor="#B7C691" BorderWidth="1px" />
+      <DefaultStyle BackColor="white" BorderStyle="Solid" BorderColor="#B7C691" BorderWidth="1px" />
+    </Insert>
+  </Extension>
+</ignavbar:WebNavBar>

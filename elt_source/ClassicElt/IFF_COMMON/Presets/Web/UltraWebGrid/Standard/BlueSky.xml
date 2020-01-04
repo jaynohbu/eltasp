@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetDescription="Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<igtbl:UltraWebGrid >
+  <DisplayLayout SelectTypeRowDefault="Single" >
+    <AddNewBox>
+      <Style />
+      <ButtonStyle />
+    </AddNewBox>
+    <Pager>
+      <Style />
+    </Pager>
+    <HeaderStyleDefault BorderColor="#000000" BorderStyle="Solid" ForeColor="#FFFFFF" BackColor="#2B64A7">
+      <BorderDetails ColorTop="#FFFFFF" WidthLeft="1px" WidthTop="1px" ColorLeft="#FFFFFF" />
+    </HeaderStyleDefault>
+    <GroupByRowStyleDefault />
+    <RowSelectorStyleDefault />
+    <FrameStyle Cursor="Default" BorderWidth="3px" BorderColor="#999999" BorderStyle="None" />
+    <FooterStyleDefault />
+    <ActivationObject BorderStyle="Dotted" BorderColor="#000000" />
+    <GroupByBox>
+      <Style />
+      <BandLabelStyle />
+    </GroupByBox>
+    <RowExpAreaStyleDefault />
+    <SelectedHeaderStyleDefault />
+    <EditCellStyleDefault />
+    <SelectedGroupByRowStyleDefault />
+    <SelectedRowStyleDefault ForeColor="#FFFFFF" BackColor="#0A75F0" />
+    <RowAlternateStyleDefault BackColor="#E9E9F7" />
+    <RowStyleDefault BorderWidth="1px" BorderColor="#808080" BorderStyle="Solid" BackColor="#C7D5E8">
+      <BorderDetails ColorTop="Gray" WidthLeft="0px" WidthTop="0px" ColorLeft="Gray" />
+    </RowStyleDefault>
+    <ImageUrls />
+    <Strings />
+  </DisplayLayout>
+</igtbl:UltraWebGrid>

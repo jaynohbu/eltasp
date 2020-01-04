@@ -1,0 +1,30 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxGridLookup" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxmvc:MVCxGridLookup runat="server" Spacing="0" SpriteCssFilePath="~/App_Themes/Metropolis/{0}/sprite.css" CssPostfix="Metropolis" CssFilePath="~/App_Themes/Metropolis/{0}/styles.css">
+    <GridViewProperties>
+        <SettingsPager CurrentPageNumberFormat="{0}">
+            <PageSizeItemSettings ShowPopupShadow="False">
+            </PageSizeItemSettings>
+        </SettingsPager>
+        <SettingsPopup>
+            <EditForm Width="300px" />
+            <CustomizationWindow Width="250px" />
+        </SettingsPopup>
+    </GridViewProperties>
+    <GridViewImages>
+        <LoadingPanelOnStatusBar Url="~/App_Themes/Metropolis/GridView/gvLoadingOnStatusBar.gif" />
+        <LoadingPanel Url="~/App_Themes/Metropolis/GridView/Loading.gif" />
+    </GridViewImages>
+    <GridViewStylesPager>
+        <Pager ItemSpacing="0px" Spacing="0px" />
+    </GridViewStylesPager>
+    <GridViewStylesEditors>
+        <Calendar>
+            <Border BorderColor="Silver" BorderStyle="Solid" BorderWidth="1px" />
+        </Calendar>
+    </GridViewStylesEditors>
+</dxmvc:MVCxGridLookup>
+

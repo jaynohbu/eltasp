@@ -1,0 +1,9 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Charts" Assembly="DevExpress.Charts.v13.2.Core, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxcharts" namespace="DevExpress.XtraCharts" assembly="DevExpress.XtraCharts.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxchartsui" namespace="DevExpress.XtraCharts.Web" assembly="DevExpress.XtraCharts.v13.2.Web, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxchartsui:WebChartControl runat="server" CssFilePath="~/App_Themes/iOS/{0}/styles.css" CssPostfix="iOS" LoadingPanelImagePosition="Top">
+    <LoadingPanelImage Url="~/App_Themes/iOS/Chart/Loading.gif" />
+</dxchartsui:WebChartControl>
+

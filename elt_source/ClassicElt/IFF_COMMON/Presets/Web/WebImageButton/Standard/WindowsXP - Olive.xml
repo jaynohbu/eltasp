@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="WindowsXP - Olive Theme" PresetDescription="Infragistics WindowsXP Blue Preset. Sets Look properties only. Notes: 1. The 'Reset' box should be checked. 2. The background images are used." PresetType="Appearance" />-->
+<igtxt:WebImageButton UseBrowserDefaults="False">
+	<RoundedCorners HeightOfBottomEdge="3" WidthOfRightEdge="3" ImageUrl="ig_butXP1o.gif" MaxHeight="80" MaxWidth="400" HoverImageUrl="ig_butXP2o.gif" RenderingType="FileImages" PressedImageUrl="ig_butXP4o.gif" DisabledImageUrl="ig_butXP5o.gif" FocusImageUrl="ig_butXP3o.gif">
+	</RoundedCorners>
+	<HoverAppearance ContentShift="NotSet" />
+	<PressedAppearance ContentShift="NotSet" />
+	<FocusAppearance ContentShift="NotSet" />
+	<Appearance ContentShift="NotSet" />
+	<DisabledAppearance ContentShift="NotSet" />
+</igtxt:WebImageButton>

@@ -1,0 +1,2462 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Infragistics.WebUI.WebDateChooser</name>
+    </assembly>
+    <members>
+        <member name="T:Infragistics.WebUI.WebSchedule.WebCalendar">
+            <summary>
+            Control that renders one month calendar.
+            </summary>
+            <remarks>
+            Only Gregorian calendar is supported.
+            </remarks>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.CalendarBase">
+            <summary>
+            Base class for WebCalendar.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.ICalendar">
+            <summary>
+            Summary description for ICalendar.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.ICalendar.SelectedDate">
+            <summary>
+            Selected date in the calendar.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarBase.SelectedDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.WebCalendar.filterDoc">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.SavePreset(System.String,System.String,System.String,Infragistics.WebUI.PresetType)">
+            <summary>
+            Saves the properties of a control to a file, so that they can be used by another control via the LoadPreset method. 
+            </summary>
+            <param name="filePath">The absolute path in which to save the Preset File.</param>
+            <param name="name">The name the preset will have.</param>
+            <param name="desc">A description of the preset.</param>
+            <param name="presetType">The type of properties (Appearance, Behavior, or Both) which should be saved in this preset.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.SavePreset(System.IO.TextWriter,System.String,System.String,Infragistics.WebUI.PresetType)">
+            <summary>
+            Saves the properties of a control to a file, so that they can be used by another control via the LoadPreset method. 
+            </summary>
+            <param name="textWriter">The Text writer in which to write the Preset File. The writer will not be closed at the end of the call, and should be closed afterwards.</param>
+            <param name="name">The name the preset will have.</param>
+            <param name="desc">A description of the preset.</param>
+            <param name="presetType">The type of properties (Appearance, Behavior, or Both) which should be saved in this preset.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.SavePreset(System.IO.Stream,System.String,System.String,Infragistics.WebUI.PresetType)">
+            <summary>
+            Saves the properties of a control to a file, so that they can be used by another control via the LoadPreset method. 
+            </summary>
+            <param name="stream">The stream in which to write Preset File. The stream will not be closed at the end of the call, and should be closed afterwards.</param>
+            <param name="name">The name the preset will have.</param>
+            <param name="desc">A description of the preset.</param>
+            <param name="presetType">The type of properties (Appearance, Behavior, or Both) which should be saved in this preset.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.LoadPreset(System.String,System.Boolean)">
+            <summary>
+            Sets properties on the control that effect Appearance, Behavior, or Both, based on the information in the predefined Preset File. 
+            </summary>
+            <param name="filePath">The aboslute path of the Preset File.</param>
+            <param name="reset">Whether to reset all properties on the control before applying the preset.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.LoadPreset(System.IO.Stream,System.Boolean)">
+            <summary>
+            Sets properties on the control that effect Appearance, Behavior, or Both, based on the information in the predefined Preset File. 
+            </summary>
+            <param name="stream">A Stream that references a Preset File. The stream will not be closed at the end of the call, and should be closed afterwards.</param>
+            <param name="reset">Whether to reset all properties on the control before applying the preset.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.LoadPreset(System.IO.TextReader,System.Boolean)">
+            <summary>
+            Sets properties on the control that effect Appearance, Behavior, or Both, based on the information in the predefined Preset File. 
+            </summary>
+            <param name="reader">A Text Reader that references a Preset File. The reader will not be closed at the end of the call, and should be closed afterwards.</param>
+            <param name="reset">Whether to reset all properties on the control before applying the preset.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.CreateControlStyle">
+            <summary>
+            Create a style for the control.
+            </summary>
+            <returns>Instance of Infragistics.WebUI.Design.Style object</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.ShouldSerializeLayout">
+            <summary>
+            Check if Layout has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.ResetLayout">
+            <summary>
+            Clears the Layout.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.ShouldSerializeClientSideEvents">
+            <summary>
+            Check if ClientSideEvents has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.ResetClientSideEvents">
+            <summary>
+            Clears the ClientSideEvents.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.ShouldSerializeAutoPostBack">
+            <summary>
+            Check if AutoPostBack has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.ResetAutoPostBack">
+            <summary>
+            Clears the AutoPostBack.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.LoadViewState(System.Object)">
+            <summary></summary>
+            <param name="savedState"></param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.SaveViewState">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.TrackViewState">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Render the calendar to html.
+            </summary>
+            <param name="output"></param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.OnPreRender(System.EventArgs)">
+            <summary>Prepares the WebCalendar control for rendering.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.OnInit(System.EventArgs)">
+            <summary>Enable ControlState.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.LoadControlState(System.Object)">
+            <summary>Load saved state.</summary>
+            <param name="savedState">Saved state.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.SaveControlState">
+            <summary>Save state when ViewState is disabled.</summary>
+            <returns>Saved state.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.System#Web#UI#IPostBackEventHandler#RaisePostBackEvent(System.String)">
+            <summary>Process an event when the form is posted to the server.</summary>
+            <param name="eventArgument">A String that represents an optional event argument to be passed to the event handler.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.System#Web#UI#IPostBackDataHandler#LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>Process post-back data from a server control.</summary>
+            <param name="key">The key identifier for the control.</param>
+            <param name="names">The collection of all incoming name values.</param>
+            <returns>The value of false.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.System#Web#UI#IPostBackDataHandler#RaisePostDataChangedEvent">
+            <summary>The OnVisibleMonthChanged and/or OnValueChanged methods are invoked.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.OnValueChanged">
+            <summary>
+            Method that is called on the selected date change.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.OnVisibleMonthChanged">
+            <summary>
+            Method that is called on visible month change.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.CreateChildControls">
+            <summary>
+            Create controls from the template, fill ContentPanes and add them to the Controls collection.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.DataBind">
+            <summary>
+            Create child controls.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.OnDataBinding(System.EventArgs)">
+            <summary>
+            Ensure child controls.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.FindControl(System.String)">
+            <summary>
+            Get a reference to a child aspx-control located within the Layout.FooterTemplate.
+            </summary>
+            <param name="id">The id of child control.</param>
+            <returns>Reference to <tt>Control</tt> or <tt>null</tt>.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebCalendar.SetStylePresets(Infragistics.WebUI.WebSchedule.CalendarStylePreset,Infragistics.WebUI.WebSchedule.CalendarPresetNextPrevFormat,System.Boolean)">
+            <summary>
+            Configure appearance related properties of the calendar using predefined values.
+            </summary>
+            <remarks>
+            <p class="note">If the ViewState is enabled, then a call to this method will result in significant increase of the hidden-view-state-field size passed to the client.</p>
+            <p class="note">To avoid increased size of the view-state,- the desired style-preset should be set at visual design.</p>
+            </remarks>
+            <param name="preset">Preset style. It includes colors, fonts, borders, images, etc.</param>
+            <param name="nextPrevMonthFormat">Format of the buttons that perform navigation to the next-previous months. To keep old values, the "CalendarPresetNextPrevFormat.NoChange" value should be used.</param>
+            <param name="reset">An option to reset old appearance-related properties.</param>
+        </member>
+        <member name="E:Infragistics.WebUI.WebSchedule.WebCalendar.ValueChanged">
+            <summary>
+            Event that is fired when the selected date was changed.
+            </summary>
+        </member>
+        <member name="E:Infragistics.WebUI.WebSchedule.WebCalendar.VisibleMonthChanged">
+            <summary>
+            Event that is fired when the visible month was changed.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.Font">
+            <summary>
+            Font of control.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.BackColor">
+            <summary>
+            Background color of control.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.ForeColor">
+            <summary>
+            Foreground color of control.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.BorderColor">
+            <summary>
+            Border color of control.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.BorderWidth">
+            <summary>
+            Border width of control.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.BorderStyle">
+            <summary>
+            Border style of control.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.CssClass">
+            <summary>
+            CssClass of control.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.Width">
+            <summary>
+            Width of control.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.Height">
+            <summary>
+            Height of control.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.About">
+            <summary>
+            Display the about dialog.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.BrowserTarget">
+            <summary>Type of browser the html should be created for.</summary>
+            <remarks>
+            <p class="body">Permitted values are DownLevel, UpLevel, and Auto.</p>
+            <p class="body">The default value for this property is Auto which will detect the client browser and renders the output deemed appropriate for that browser.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.JavaScriptFileName">
+            <summary>Name of the file that contains the external JavaScript for client-side functionality on up-level browsers such as IE5, Netscape6.</summary>
+            <remarks>
+            <p class="body">Use this property to change the name of the external JavaScript file.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.JavaScriptFileNameCommon">
+            <summary>Name of the file that contains the external JavaScript with common methods for client-side functionality on up-level browsers such as IE5, Netscape6.</summary>
+            <remarks>
+            <p class="body">Use this property to change the name of the common external JavaScript file.</p>
+            <p class="body">If application uses any other instance of any Infragistics Web control, then values of that property in all controls should match, otherwise, client-side functionality in all controls may fail.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.ImageDirectory">
+            <summary>Directory in which the images used for the tabs are stored.</summary>
+            <remarks>
+            <p class="body">The string specified as the ImageDirectory will be prefixed onto the image related properties.</p>
+            <p class="note">Note that is a particular file-image-name starts with the ".", "/", "\\" character or contains the ":" character, then that file-name will be used as it is without the ImageDirectory prefix.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.Layout">
+            <summary>
+            Collection of properties related to apperance and some aspects of behavior.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.ClientSideEvents">
+            <summary>
+            List of client side events that will be processed by the application.
+            </summary>
+            <remarks>
+            	<p class="body">Every member property can contain the name of implemented function or explicit javascript statement(s).
+            If the name of a function (only name: no parenthesis or parameters) is used, then actual implementation on client may contain parameters: please see documentation for Client-Side Object Model.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.AutoPostBack">
+            <summary>
+            List of events that will trigger automatic post back.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.SelectedDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.EnableKeyboardNavigation">
+            <summary>
+            Enables the user to utilize the keyboard to navigate the Calendar control.
+            </summary>		
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.PostData">
+            <summary>
+            Internal use only.  Process post data string.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.Controls">
+            <summary>
+            Ensure child controls.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.Client">
+            <summary>
+            Information about the browser on the client machine
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.Section508Compliant">
+            <summary>
+            <p class="body">Set or gets a value that determines whether Section 508 compliant HTML will be emitted.</p>
+            </summary>
+            <remarks>
+            <p class="body">Section 508 compliance provides for support of assistive technologies that make HTML pages accessible for users that require it.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.EnableAppStyling">
+            <summary>
+            Enables support on WebCalendar for the Application Styling Framework(tm).
+            </summary>
+            <value>
+            <em>True</em> indicates Application Styling is enabled, <em>False</em>
+            indicates Application Styling is disabled, and <em>NotSet</em> indicates
+            support for Application Styling should default to page- or application-level
+            settings.
+            </value>
+            <remarks>
+            <p class="body">Turn on support for Application Styling of WebCalendar
+            when using the Application Styling Framework(tm) (ASF) by setting the 
+            EnableAppStyling property to True.</p>
+            <p class="body">When EnableAppStyling has it's default value of NotSet,
+            this control will defer the determination of whether to use Application
+            Styling to settings you make at the page- or application-level.  Place
+            the <strong>WebPage</strong> control on the same Web form as this control
+            to configure ASF support for all controls on that Page.  ASF support can
+            also be turned on application-wide with the <em>enableAppStyling</em>
+            attribute in your "web.config" file.</p>
+            <p class="body">Turn off support for the ASF in WebCalendar (even though
+            it may have been enabled at a higher level) by setting the EnableAppStyling
+            property to False.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.StyleSetName">
+            <summary>
+            Name of the Application Styling Framework(tm) style set defining the  themed appearance for this WebCalendar control.
+            </summary>
+            <value>
+            	<p class="body">The name of the Application Styling Framework(tm) (ASF) style set which has been designed to give this WebCalendar control a consistent appearance with other controls in your application.</p>
+            	<p class="body">This property may return the empty string ("") to imply that the default style set (named "Default") should be used.</p>
+            </value>
+            <remarks>
+            	<p class="body">Web sites can configure a single, consistent,
+            application-wide style set through the <em>styleSetName</em> attribute in their "web.config" file. Alternately, they can define the style set to apply Application Styling to all controls on a Page by placing a <strong>WebPage</strong> control on that Page and setting it's StyleSetName property.</p>
+            	<p class="body">At the control level this property allows an
+            application developer to customize the style set applied to a
+            single instance of a control.</p>
+            	<p class="body">Normally, graphics designers will furnish you
+            with a style set containing one or more style sheet files (one
+            for each type of control) and image files.  The name of the style
+            set (with the exception of the "Default" style set) must appear
+            in each Cascading Style Sheet (CSS) class name defined by this
+            control's style sheet file.  For example, two WebTree controls
+            that each use a different style set, "Aqua" and "Onyx", would
+            expect their CSS class names for the ASF <em>Node</em> role to be "igtr_AquaNode" and "igtr_OnyxNode", respectively. This allows the uniqueness of CSS class names necessary to distinguish multiple style sets for the same type of control, without there being any naming collisions.</p>
+            </remarks>
+            <seealso cref="P:Infragistics.WebUI.WebSchedule.WebCalendar.StyleSetPath"/>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebCalendar.StyleSetPath">
+            <summary>
+            Path containing the Application Styling Framework(tm) style set files for this type of control.
+            </summary>
+            <remarks>
+            	<p class="body">Web sites can configure the directory path containing their style set files application-wide by using the <em>styleSetPath</em> attribute of their "web.config" file.  It is also possible to configure the style set path applicable to all controls on a Page that are subject to Application Styling by placing a <strong>WebPage</strong> control on that Page and setting it's StyleSetPath property.</p>
+            	<p class="body">At the control level this property allows an
+            application developer to customize the location of the style set
+            being applied to a single instance of a control.</p>
+            	<p class="note">Be aware that customizing the style set path at the control level will not allow you to copy a style set's files to this new location, changing a few style property values in them, and then use it successfully with separate instances of the control referencing the original style set of the same name. This is because there would be naming collisions in the Cascading Style Sheet (CSS) class names, which will produce an undefined appearance.  You must ensure the CSS class names defined by style sheets in the new style set path are unique from those CSS class names being used by other style sheets that may continue to be referenced.  The recommended guidance in this scenario is to create a new style set having a new style set name, that contains your modifications.</p>
+            </remarks>
+            <seealso cref="P:Infragistics.WebUI.WebSchedule.WebCalendar.StyleSetName"/>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.CalendarClientSideEvents">
+            <summary>
+            Manages the names of custom event handler functions called by Javascript on the client-side.
+            </summary>
+            <remarks>
+            <p class="body">Because of the stateless nature of web connections, and the 
+            typical delays involved in retrieving information from a server, WebSchedule 
+            implements both client-side events and server-side events. Applications can
+            choose whether they would like to respond to client-side events, which must
+            be written in Javascript.</p>
+            <p class="body">The CalendarClientSideEvents object maintains a list of event handlers that are implemented on the client and called in response to events as they occur in the browser.
+            Each event is a string that represents JavaScript function name. The named function must be implemented by the developer in JavaScript code.</p>
+            <p class="body">Most Javascript event handler functions will receive three arguments (the <em>InitializeCalendar</em> event receives only one argument.)
+            The first parameter contains a reference to the Javascript object representing 
+            the Calendar CSOM object. The second parameter typically contains a Javascript 
+            Date object. The third parameter contains a reference to the CSOM object 
+            representing the event. See the events' descriptions for more details.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarClientSideEvents.#ctor">
+            <summary>Default public constructor for the <strong>CalendarClientSideEvents</strong> object.</summary>
+            <remarks>
+            <p class="body">The ASP.NET Framework requires this constructor when it must deserialize
+            compound properties on starting up an ASP.NET page request. Application developers
+            should not need to create their own instance of this class.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarClientSideEvents.ToString">
+            <summary>String formatted for visual designer.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarClientSideEvents.Reset">
+            <summary>
+            Reset all properties to their defaults.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarClientSideEvents.Copy(Infragistics.WebUI.WebSchedule.CalendarClientSideEvents)">
+            <summary>
+            Copies properties from the source.
+            </summary>
+            <param name="evts">Source</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarClientSideEvents.IsDataPossible(Infragistics.WebUI.WebSchedule.CalendarClientSideEvents)">
+            <summary>
+            Public shortcut to check if an object may have data.
+            </summary>
+            <param name="evts">CalendarClientSideEvents or null.</param>
+            <returns>True: ViewState.Count &gt; 0</returns>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarClientSideEvents.InitializeCalendar">
+            <summary>
+            Event fired after Calendar was initialized.
+            </summary>
+            <remarks>
+            <p class="body">It can be the name of implemented function or explicit javascript statement(s). If the name of function is used, then that event handler may contain 1 parameter.</p>
+            <br></br>1st parameter: reference to the WebCalendar object.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarClientSideEvents.DateClicked">
+            <summary>
+            Event fired when the selected date was clicked.
+            </summary>
+            <remarks>
+            <p class="body">It can be the name of implemented function or explicit javascript statement(s). If the name of function is used, then that event handler may contain 3 parameters.</p>
+            <br></br>1st parameter: reference to the WebCalendar object.
+            <br></br>2nd parameter: clicked Date.
+            <br></br>3rd parameter: reference to the ig_EventObject.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarClientSideEvents.MonthChanged">
+            <summary>
+            Event fired after the visible month was changed.
+            </summary>
+            <remarks>
+            <p class="body">It can be the name of implemented function or explicit javascript statement(s). If the name of function is used, then that event handler may contain 3 parameters.</p>
+            <br></br>1st parameter: reference to the WebCalendar object.
+            <br></br>2nd parameter: visible Date.
+            <br></br>3rd parameter: reference to the ig_EventObject.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarClientSideEvents.MonthChanging">
+            <summary>
+            Event fired before the visible month is changed.  This event can be canceled.
+            </summary>
+            <remarks>
+            	<p class="body">It can be the name of implemented function or explicit javascript statement(s). If the name of function is used, then that event handler may contain 3 parameters.</p>
+            	<br></br>1st parameter: reference to the WebCalendar object.
+            <br></br>2nd parameter: visible Date.
+            <br></br>3rd parameter: reference to the ig_EventObject. To cancel event the cancel member should be used. Following example will prevent viewing any month of 2008 year.<br></br>
+              if(oDate.getFullYear() == 2008) oEvent.cancel = true;
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarClientSideEvents.ValueChanged">
+            <summary>
+            Event fired when the selected date was changed.
+            </summary>
+            <remarks>
+            <p class="body">It can be the name of implemented function or explicit javascript statement(s). If the name of function is used, then that event handler may contain 3 parameters.</p>
+            <br></br>1st parameter: reference to the WebCalendar object.
+            <br></br>2nd parameter: selected Date.
+            <br></br>3rd parameter: reference to the ig_EventObject.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarClientSideEvents.ValueChanging">
+            <summary>
+            Event fired before the selected date was changed.  This event can be canceled.
+            </summary>
+            <remarks>
+            	<p class="body">It can be the name of implemented function or explicit javascript statement(s). If the name of function is used, then that event handler may contain 3 parameters.</p>
+            	<br></br>1st parameter: reference to the WebCalendar object.
+            <br></br>2nd parameter: selected Date.
+            <br></br>3rd parameter: reference to the ig_EventObject. To cancel this event the cancel member should be used. Following example will prevent selecting 10th day in any month.<br></br>
+              if(oDate.getDate() == 10) oEvent.cancel = true;
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarClientSideEvents.RenderDay">
+            <summary>
+            Event fired before the day is rendered.  This event can be used to customize day painting.
+            </summary>
+            <remarks>
+            <p class="body">It can be the name of implemented function or explicit javascript statement(s). If the name of function is used, then that event handler may contain 3 parameters.
+            <br></br>1st parameter: reference to the WebCalendar object.
+            <br></br>2nd parameter: reference to the painted day. That parameter contains following member variables:</p>
+                <ul>
+                  <li>year - number: painted year.</li>
+                  <li>month - number: painted month.</li>
+                  <li>day - number: painted day of the month.</li>
+                  <li>selected - boolean: true if painted day was selected.</li>
+                  <li>dow - number: day of the week (0..6) of the painted day.</li>
+                  <li>index - number: index of painted day within calendar &lt;table&gt;.</li>
+                  <li>text - string: text to paint in the day, usually the <em>day</em> (this value can be modified.)</li>
+                  <li>css - string: name of CSS class used for painting (this value can be modified by appending a custom CSS class separated by a space.)</li>
+                  <li>element - object: reference to the &lt;td&gt; HTML element containing this painted day.</li>
+                 </ul>
+            	Following example will replace text in the first days of all months by the "1st" string:<br></br>
+            	if(oDay.day == 1) oDay.text = oDay.text + 'st';<br></br>
+            	Following example will paint all Saturdays by italic font:<br></br>
+            	if(oDay.dow == 6) oDay.element.style.fontStyle = 'italic';<br></br>
+            	Following example will paint January 1st of any year by red background:<br></br>
+            	oDay.element.bgColor = (oDay.day == 1 &amp;&amp; oDay.month == 1) ? 'red' : '';
+            <br></br>3rd parameter: reference to the ig_EventObject.
+            </remarks>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.ValueChangedHandler">
+            <summary>Handler for selected day change events.</summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.VisibleMonthChangedHandler">
+            <summary>Handler for day rendering events.</summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.ValueChangedEventArgs">
+            <summary>VisibleMonthChangedHandler object is used to notify listener about the change of visible month.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.ValueChangedEventArgs.Calendar">
+            <summary>The WebCalendar object associated with the event.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.ValueChangedEventArgs.OldValue">
+            <summary>Old date.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.ValueChangedEventArgs.Value">
+            <summary>New date.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.ValueChangedEventArgs.Cancel">
+            <summary>Cancel change.</summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.VisibleMonthChangedEventArgs">
+            <summary>VisibleMonthChangedHandler object is used to notify listener about the change of visible month.</summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.CalendarAutoPostBack">
+            <summary>
+            Object that keeps the list of events that trigger post back.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarAutoPostBack.#ctor(Infragistics.WebUI.WebSchedule.WebCalendar)">
+            <summary>The constructor for the ClientSideEvents object.</summary>
+            <param name="owner">Owner of this object.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarAutoPostBack.ToString">
+            <summary>String formatted for visual designer.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarAutoPostBack.Reset">
+            <summary>
+            Reset all properties to their defaults.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarAutoPostBack.ValueChanged">
+            <summary>
+            Automatically post back to the server when the selected date was changed.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarAutoPostBack.VisibleMonthChanged">
+            <summary>
+            Automatically post back to the server when the displayed month was changed.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.CalendarLayout">
+            <summary>
+            Collection of properties used by WebCalendar.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ShouldSerializeFooterFormat">
+            <summary>
+            Check if FooterFormat has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ResetFooterFormat">
+            <summary>
+            Clears the FooterFormat.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ShouldSerializeCalendarStyle">
+            <summary>
+            Check if CalendarStyle has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ResetCalendarStyle">
+            <summary>
+            Clears the CalendarStyle.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ShouldSerializeDayHeaderStyle">
+            <summary>
+            Check if DayHeaderStyle has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ResetDayHeaderStyle">
+            <summary>
+            Clears the DayHeaderStyle.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ShouldSerializeDayStyle">
+            <summary>
+            Check if DayStyle has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ResetDayStyle">
+            <summary>
+            Clears the DayStyle.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ShouldSerializeNextPrevStyle">
+            <summary>
+            Check if NextPrevStyle has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ResetNextPrevStyle">
+            <summary>
+            Clears the NextPrevStyle.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ShouldSerializeOtherMonthDayStyle">
+            <summary>
+            Check if OtherMonthDayStyle has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ResetOtherMonthDayStyle">
+            <summary>
+            Clears the OtherMonthDayStyle.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ShouldSerializeSelectedDayStyle">
+            <summary>
+            Check if SelectedDayStyle has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ResetSelectedDayStyle">
+            <summary>
+            Clears the SelectedDayStyle.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ShouldSerializeTitleStyle">
+            <summary>
+            Check if TitleStyle has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ResetTitleStyle">
+            <summary>
+            Clears the TitleStyle.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ShouldSerializeTodayDayStyle">
+            <summary>
+            Check if TodayDayStyle has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ResetTodayDayStyle">
+            <summary>
+            Clears the TodayDayStyle.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ShouldSerializeWeekendDayStyle">
+            <summary>
+            Check if WeekendDayStyle has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ResetWeekendDayStyle">
+            <summary>
+            Clears the WeekendDayStyle.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ShouldSerializeFooterStyle">
+            <summary>
+            Check if FooterStyle has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ResetFooterStyle">
+            <summary>
+            Clears the FooterStyle.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ShouldSerializeDropDownStyle">
+            <summary>
+            Check if DropDownStyle has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ResetDropDownStyle">
+            <summary>
+            Clears the DropDownStyle.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ShouldSerializeWeekNumberStyle">
+            <summary>
+            Check if WeekNumberStyle has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ResetWeekNumberStyle">
+            <summary>
+            Clears the WeekNumberStyle.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ShouldSerializeCulture">
+            <summary>
+            Check if Culture should be serialized.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ResetCulture">
+            <summary>
+            Reset Culture.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ToString">
+            <summary>String formatted for visual designer.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.Reset">
+            <summary>
+            Reset all properties besides the FooterTemplate to thier defaults.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarLayout.ResetAppearance">
+            <summary>
+            Reset only properties that are used by CalendarStylePresets class.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.Calendar">
+            <summary>
+            Reference to the WebCalendar.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.FooterTemplate">
+            <summary>
+            The template property used to fill the footer at design time.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.SelectedDate">
+            <summary>
+            Selected date in the calendar.<br></br>
+            Note: if the calendar is used as a drop-down of WebDateChooser, then this property has no effect.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.MaxDate">
+            <summary>
+            Maximum date that can be selected in the calendar.<br></br>
+            Note: if the calendar is used as drop-down of WebDateChooser, then this property has no effect.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.MinDate">
+            <summary>
+            Minimum date that can be selected in the calendar.<br></br>
+            Note: if the calendar is used as drop-down of WebDateChooser, then this property has no effect.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.VisibleMonth">
+            <summary>
+            Currently displayed month and year in the calendar.<br></br>
+            Note: if the calendar is used as a drop-down of WebDateChooser, then this property has no effect.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.CellSpacing">
+            <summary>
+            Spacing between cells of days in the calendar.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.CellPadding">
+            <summary>
+            Padding of day cells in the calendar.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.DropDownYearsNumber">
+            <summary>
+            Number of items in the drop-down list of years.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.NextMonthText">
+            <summary>
+            Text that appears on the active area in the calendar that allows you to increment the displayed month.
+            </summary>
+            <remarks>
+            	<p class="note">If NextMonthImageUrl is not set and that property has its default value, then in some browsers a triangle is painted by the NextPrevStyle.ForeColor color.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.NextMonthImageUrl">
+            <summary>
+            Image that appears on the active area in the calendar that allows you to increment the displayed month.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.PrevMonthText">
+            <summary>
+            Text that appears on the active area in the calendar that allows you to decrement the displayed month.
+            </summary>
+            <remarks>
+            	<p class="note">If PrevMonthImageUrl is not set and that property has its default value, then in some browsers a triangle is painted by the NextPrevStyle.ForeColor color.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.PrevMonthImageUrl">
+            <summary>
+            Image that appears on the active area in the calendar that allows you to decrement the displayed month.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.FooterFormat">
+            <summary>
+            Format of the string that appears on the footer of the calendar.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.NextMonthAlternateText">
+            <summary>
+            	<p class="body">Value of the alt attribute for the html element which represents the next month button.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.PrevMonthAlternateText">
+            <summary>
+            	<p class="body">Value of the alt attribute for the html element which represents the previous month button.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.ShowNextPrevMonth">
+            <summary>
+            Visibility of the active areas in the calendar that allow you to increment and decrement the displayed month.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.ShowTitle">
+            <summary>
+            Visibility of the text string in the calendar that shows the displayed month and year.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.ShowMonthDropDown">
+            <summary>
+            Visibility of the selector with the drop-down list of months that allows you to change the visible month in the calendar.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.ShowYearDropDown">
+            <summary>
+            Visibility of the selector with a drop-down list of years that allows you to change the visible year in the calendar.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.ShowFooter">
+            <summary>
+            Visibility of the footer area in the calendar which may display the current-date-button or a template.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.ReadOnly">
+            <summary>
+            Ability to change the selected date in the calendar.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.AllowNull">
+            <summary>
+            Ability to unselect a date in the calendar.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.ChangeMonthToDateClicked">
+            <summary>
+            Automatically change the displayed month when a day located on the next or previous month was selected.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.WeekendStylePriority">
+            <summary>
+            Priority of the WeekendDayStyle over the OtherMonthDayStyle.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.HideOtherMonthDays">
+            <summary>
+            Hide day numbers in day-cells that belong to previous and next months.
+            </summary>
+            <remarks>
+            <p class="note">If that property is enabled, then the ChangeMonthToDateClicked and WeekendStylePriority have no effect.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.EnableWeekNumbers">
+            <summary>
+            Gets sets an option to show week numbers.
+            </summary>
+            <remarks>
+            <p class="note">If that property is enabled, then week rule is defined by WeekRule property.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.DayNameFormat">
+            <summary>
+            Format of text strings that represent days of the week: full, short, 2 letters, 1 letter.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.VisibleDayNames">
+            <summary>
+            Visibility of the text strings that represent days of the week: all, only week-days, none.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.FirstDayOfWeek">
+            <summary>
+            First day of the week used by the calendar: Sunday, Monday, etc.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.NextPrevFormat">
+            <summary>
+            Format of text strings that appear on the active areas of the calendar that allow you to increment and decrement the displayed month.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.ShowGridLines">
+            <summary>
+            Visibility of horizontal and vertical grid lines between days in the calendar.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.TitleFormat">
+            <summary>
+            Format of the text string in the calendar that shows the displayed month and year.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.WeekRule">
+            <summary>
+            Gets sets rule for week numbers.
+            </summary>
+            <remarks>
+            <p class="note">If the EnableWeekNumbers is disabled, then that property has no effect.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.GridLineColor">
+            <summary>
+            Color of horizontal and vertical grid lines between days in the calendar.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.MonthSelectorWidth">
+            <summary>
+            Width of the drop-down month selector.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.YearSelectorWidth">
+            <summary>
+            Width of the drop-down year selector.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.CalendarStyle">
+            <summary>
+            Style that is applied to the html-element that renders the calendar.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.DayHeaderStyle">
+            <summary>
+            Style that is applied to the html-elements that render the names of days of the week in the calendar.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.DayStyle">
+            <summary>
+            Style that is applied to the html-elements that render days of the month.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.NextPrevStyle">
+            <summary>
+            Style that is applied to the html-elements that render active aeras in the calendar used to increment and decrement the displayed month.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.OtherMonthDayStyle">
+            <summary>
+            Style that is applied to the html-elements that render days of the next and previous months.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.SelectedDayStyle">
+            <summary>
+            Style that is applied to the html-element that renders the selected day.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.TitleStyle">
+            <summary>
+            Style that is applied to the html-element that renders the title area of the calendar.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.TodayDayStyle">
+            <summary>
+            Style that is applied to the html-element that renders the today day.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.WeekendDayStyle">
+            <summary>
+            Style that is applied to the html-elements that render days of the weekends.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.FooterStyle">
+            <summary>
+            Style that is applied to the html-element that renders the footer area of the calendar.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.DropDownStyle">
+            <summary>
+            Style that is applied to the html-elements that render month and year selectors with drop-down lists.
+            </summary>
+            <remarks>
+            <p class="note">Note that the SELECT elements are used, and, therefore, some properties may have no effect. For example, BackgroundImage.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.WeekNumberStyle">
+            <summary>
+            Style that is applied to the html-elements that render the week numbers in the calendar.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.Culture">
+            <summary>
+            The <see cref="P:System.Globalization.CultureInfo.DateTimeFormat"/> property of the <see cref="T:System.Globalization.CultureInfo"/> object is used by the control.
+            </summary>
+            <remarks>
+            	<p class="body">The <tt>Culture</tt> property allows you to customize all aspects of the format that is applied to a <tt>DateTime</tt> object while converting it to a string.
+            Those format properties include field separators, date/time patterns, names of months, etc.<br></br>
+            If the value is not set, then the <see cref="!:System.Threading.Thread.CurrentThread.CurrentCulture.DateTimeFormat"/> object is used.</p>
+            	<p class="note">That property also affects the WebDateChooser.  Abbriviated month names in edit mode are not supported and months are converted to digits.  Only the Gregorian calendar is supported.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.CalendarLayout.ViewState">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarRendererBase.RenderControl(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="o"></param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarRendererBase.AppendStyles(System.Text.StringBuilder)">
+            <summary></summary>
+            <param name="str"></param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarRendererBase.VisitObjects(System.Web.UI.HtmlTextWriter)">
+            <summary></summary>
+            <param name="o"></param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarRendererBase.AppendInitScript(System.Text.StringBuilder)">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarRenderDownLevel.#ctor(Infragistics.WebUI.WebSchedule.WebCalendar)">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarRenderDownLevel.RenderControl(System.Web.UI.HtmlTextWriter)">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarRenderUpLevel.#ctor(Infragistics.WebUI.WebSchedule.WebCalendar)">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarRenderUpLevel.AppendInitScript(System.Text.StringBuilder)">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarRenderUpLevel.AppendStyles(System.Text.StringBuilder)">
+            <summary></summary>
+            <param name="str"></param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarRenderUpLevel.RenderControl(System.Web.UI.HtmlTextWriter)">
+            <summary></summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.CalendarPresetNextPrevFormat">
+            <summary>
+            Format of the text/image that appears on the next/previous month buttons that can be set by CalendarStylePreset class.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarPresetNextPrevFormat.NoChange">
+            <summary>
+            Keep old (current) format values.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarPresetNextPrevFormat.CustomText">
+            <summary>
+            Custom text.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarPresetNextPrevFormat.ShortMonth">
+            <summary>
+            Short month.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarPresetNextPrevFormat.FullMonth">
+            <summary>
+            Full month.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarPresetNextPrevFormat.SmallTriangle">
+            <summary>
+            Small triangle image.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarPresetNextPrevFormat.Triangle">
+            <summary>
+            Triangle image.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.CalendarStylePreset">
+            <summary>
+            Calendar preset styles.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarStylePreset.NoChange">
+            <summary>
+            Keep old (current) style values.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarStylePreset.Default">
+            <summary>
+            Default appearance.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarStylePreset.Simple">
+            <summary>
+            Microsoft style Simple appearance.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarStylePreset.Professional1">
+            <summary>
+            Microsoft style Professional 1 appearance.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarStylePreset.Professional2">
+            <summary>
+            Microsoft style Professional 2 appearance.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarStylePreset.Classic">
+            <summary>
+            Microsoft style Classic appearance.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarStylePreset.Colorful1">
+            <summary>
+            Microsoft style Colorful 1 appearance.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarStylePreset.Colorful2">
+            <summary>
+            Microsoft style Colorful 2 appearance.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarStylePreset.Blue1">
+            <summary>
+            Blue colors and images.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarStylePreset.Blue2">
+            <summary>
+            Blue colors and images.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarStylePreset.Blue3">
+            <summary>
+            Blue colors and images.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarStylePreset.Rose">
+            <summary>
+            Rose colors and images.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarStylePreset.Silver">
+            <summary>
+            Silver colors and images.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarStylePreset.Metal">
+            <summary>
+            Metallic colors and images.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarStylePreset.LightGray1">
+            <summary>
+            Light gray colors and images.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarStylePreset.LightGray2">
+            <summary>
+            Light gray colors and images.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarStylePreset.LightGray3">
+            <summary>
+            Light gray colors and images.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarStylePreset.LightGrayWithBorders">
+            <summary>
+            Calendar with borders and light gray colors.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarStylePreset.BlueWithBorders">
+            <summary>
+            Calendar with borders and blue colors.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.CalendarStylePreset.Black">
+            <summary>
+            Black background.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.CalendarStylePresets">
+            <summary>
+            Summary description for CalendarStylePresets.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.CalendarStylePresets.Preset(Infragistics.WebUI.WebSchedule.WebCalendar,Infragistics.WebUI.WebSchedule.CalendarStylePreset,Infragistics.WebUI.WebSchedule.CalendarPresetNextPrevFormat,System.Boolean)">
+            <summary>
+            Configure properties of the target according to a predifined style.
+            <p class="note">Note: all properties of the target related to the appearance will be reset.<br></br>
+             If this method is called at run time, then the size of the hidden ViewState field passed to the client will be significantly increased.</p>
+            </summary>
+            <param name="target">Instance of the WebCalendar, which properties will be modified.</param>
+            <param name="style">Preset style.</param>
+            <param name="nextPrevFormat">Format for next/previous month buttons.</param>
+            <param name="reset">True: reset old properties related to appearance.</param>
+        </member>
+        <member name="T:Infragistics.WebUI.WebDropDown.ClientSideEvents">
+            <summary>
+            <p class="body">The ClientSideEvents object contains string properties that allow client-side JavaScript function names to be specified for handling a variety of events that occur on the client.  The JavaScript function with the same name must then be defined somewhere within the page in order for the event to be fired.</p>
+            <p class="body">The JavaScript can be written directly into the aspx page or it can be added in the code-behind file using the Page.RegisterClientScriptBlock function.</p>
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebDropDown.ClientSideEvents.Reset">
+            <summary>
+            Reset all properties to their defaults.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebDropDown.ClientSideEvents.IsDataPossible(Infragistics.WebUI.WebDropDown.ClientSideEvents)">
+            <summary>
+            Public shortcut to check if an object may have data.
+            </summary>
+            <param name="evts">CalendarClientSideEvents or null.</param>
+            <returns>True: ViewState.Count &gt; 0</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebDropDown.ClientSideEvents.LoadViewState(System.Object)">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebDropDown.ClientSideEvents.SaveViewState">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebDropDown.ClientSideEvents.TrackViewState">
+            <summary></summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.ClientSideEvents.ValueChanged">
+            <summary>
+            	<p class="body">The ValueChanged event will fire when the value of the dropdown is changed.  If the textbox is changed directly, this event will not fire until the control loses focus.</p>
+            </summary>
+            <remarks>
+            	<p class="body">It can be the name of an implemented function or explicit javascript statement(s).  If the name of the function is used, then that event handler may contain 3 parameters.</p>
+            	<br></br>1st parameter: reference to the WebDateChooser object.
+            <br></br>2nd parameter: new value.
+            <br></br>3rd parameter: reference to the ig_EventObject.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.ClientSideEvents.TextChanged">
+            <summary>
+            	<p class="body">The TextChanged event will fire when the textbox portion of the control is directly edited.</p>
+            </summary>
+            <remarks>
+            	<p class="body">It can be the name of an implemented function or explicit javascript statement(s).  If the name of the function is used, then that event handler may contain 3 parameters.</p>
+            	<br></br>1st parameter: reference to the WebDateChooser object.
+            <br></br>2nd parameter: new text.
+            <br></br>3rd parameter: reference to the ig_EventObject.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.ClientSideEvents.BeforeDropDown">
+            <summary>
+            	<p class="body">The BeforeDropDown event will fire before the dropdown is made visible.  This event can be used to cancel the dropdown action.</p>
+            </summary>
+            <remarks>
+            	<p class="body">It can be the name of an implemented function or explicit javascript statement(s).  If the name of the function is used, then that event handler may contain 3 parameters.</p>
+            	<br></br>1st parameter: reference to the WebDateChooser object.
+            <br></br>2nd parameter: reference to the drop-down panel which contains the calendar.
+            <br></br>3rd parameter: reference to the ig_EventObject.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.ClientSideEvents.AfterDropDown">
+            <summary>
+            <p class="body">This event will fire after the control has droped down.  You can use this event to customize the position of the dropdown.</p>
+            </summary>
+            <remarks>
+            <p class="body">It can be the name of implemented function or explicit javascript statement(s). If the name of function is used, then that event handler may contain 3 parameters.</p>
+            <br></br>1st parameter: reference to the WebDateChooser object.
+            <br></br>2nd parameter: reference to the drop-down panel which contains calendar.
+            <br></br>3rd parameter: reference to the ig_EventObject.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.ClientSideEvents.EditKeyDown">
+            <summary>
+            	<p class="body">This event will fire for every keydown, while the edit portion of the control has focus.</p>
+            </summary>
+            <remarks>
+            	<p class="body">It can be the name of an implemented function or explicit javascript statement(s).  If the name of the function is used, then that event handler may contain 3 parameters.</p>
+            	<br></br>1st parameter: reference to the WebDateChooser object.
+            <br></br>2nd parameter: the value of the keyCode of the browser event.
+            <br></br>3rd parameter: reference to the ig_EventObject.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.ClientSideEvents.EditKeyUp">
+            <summary>
+            	<p class="body">This event will fire for every keyup, while the edit portion of the control has focus.</p>
+            </summary>
+            <remarks>
+            	<p class="body">It can be the name of an implemented function or explicit javascript statement(s).  If the name of the function is used, then that event handler may contain 3 parameters.</p>
+            	<br></br>1st parameter: reference to the WebDateChooser object.
+            <br></br>2nd parameter: the value of the keyCode of the browser event.
+            <br></br>3rd parameter: reference to the ig_EventObject.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.ClientSideEvents.BeforeCloseUp">
+            <summary>
+            	<p class="body">This event will fire before the dropdown portion of the control is closed.  You can use this event to keep the dropdown from closing.</p>
+            </summary>
+            <remarks>
+            	<p class="body">It can be the name of the implemented function or explicit javascript statement(s).  If the name of the function is used, then that event handler may contain 3 parameters.</p>
+            	<br></br>1st parameter: reference to the WebDateChooser object.
+            <br></br>2nd parameter: reference to the drop-down panel which contains the calendar.
+            <br></br>3rd parameter: reference to the ig_EventObject.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.ClientSideEvents.AfterCloseUp">
+            <summary>
+            <p class="body">This event will fire after the dropdown has been closed.</p>
+            </summary>
+            <remarks>
+            <p class="body">It can be the name of implemented function or explicit javascript statement(s). If the name of function is used, then that event handler may contain 3 parameters.</p>
+            <br></br>1st parameter: reference to the WebDateChooser object.
+            <br></br>2nd parameter: reference to the drop-down panel which contains calendar.
+            <br></br>3rd parameter: reference to the ig_EventObject.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.ClientSideEvents.ViewState">
+            <summary></summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.Util.ClientStateXmlParser">
+            <summary>
+            Summary description for ClientStateXmlParser.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebDropDown.DropButton">
+            <summary>
+            The DropButton represents the button on the control, used to open and close the dropdown.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebDropDown.DropButton.#ctor">
+            <summary>
+            <p class="body">Creates a new DropButton object.</p>
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebDropDown.DropButton.ShouldSerializeStyle">
+            <summary>
+            Check if Style has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebDropDown.DropButton.ResetStyle">
+            <summary>
+            Clears the Style.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebDropDown.DropButton.ShouldSerializeHoverStyle">
+            <summary>
+            Check if HoverStyle has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebDropDown.DropButton.ResetHoverStyle">
+            <summary>
+            Clears the HoverStyle.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebDropDown.DropButton.ToString">
+            <summary>String formatted for visual designer.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebDropDown.DropButton.Reset">
+            <summary>
+            Reset all properties to their default values.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.DropButton.AlternateText">
+            <summary>
+            	<p class="body">Value of the alt attribute for the html element which represents the image displayed on the button.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.DropButton.ImageUrl1">
+            <summary>
+            <p class="body">The relative path to the image used to represent this button, in it's natural state.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.DropButton.ImageUrl2">
+            <summary>
+            <p class="body">The relative path to the image used to represent this button, in it's depressed state.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.DropButton.ImageUrlHover">
+            <summary>
+            	<p class="body">The path to the image used to represent this button, when the mouse is moved over the button.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.DropButton.ImageUrlDisabled">
+            <summary>
+            	<p class="body">The path to the image used to represent this button, when the control is in a disabled state.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.DropButton.Style">
+            <summary>
+            <p class="body">The style applied to this button.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.DropButton.HoverStyle">
+            <summary>
+            The style applied to this button, when moused over.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebDropDown.WebDropDown">
+            <summary>
+            <p class="body">The WebDropDown control is a multi-column, editable drop-down selection control.  It allows users to choose values from a displayed list of items that is shown when the arrow in the control is clicked.</p>
+            <p class="body">The drop-down area of WebDropDown is based on the WebGrid control and supports many of the features of it.  Column and row sizing, sorting, row selectors are supported within the drop-down.</p>
+            <p class="body">If values in addition to the list are possible for the field, the WebDropDown can be set to Editable so that values can be directly typed in to the top value of the control. </p>
+            <p class="body">WebDropDown can also be used from within WebGrid to display valuelists inside of grid cells. </p>
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebDropDown.WebDropDown.#ctor">
+            <summary>
+            Constructor for the WebDropDown control.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebDropDown.WebDropDown.CreateControlStyle">
+            <summary>
+            Creates the Style object for the control.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.WebDropDown.Editable">
+            <summary>
+            Determines if the Combo control allows values to be typed in.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.WebDropDown.CompactRendering">
+            <summary>
+            	<p class="body">Returns or sets a boolean value that determines whether or not the HTML is rendered in a compact format that is less readable but which the optimizes page download time.</p>
+            	<p class="body">When this property is set to true, extra spaces, tabs and line feed characters are not used in the rendered html.</p>
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.WebDropDown.DropDownAlignment">
+            <summary>
+            The image used to indicate that the WebDropDown drop down is being displayed.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.WebDropDown.JavaScriptFileName">
+            <summary>
+            The path and name for the JavaScript file used for client-side dropdown behavior.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.WebDropDown.JavaScriptFileNameCommon">
+            <summary>
+            The path to the Infragistics shared JavaScript file, ig_common.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.WebDropDown.ExpandEffects">
+            <summary>
+            <p class="body">Returns the ExpandEffects object that determines the type of filters and transitions that will be used when displaying sub menus under IE 5 and above.</p>
+            </summary>
+            <remarks>
+            <p class="body"></p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.WebDropDown.ClientSideEvents">
+            <summary>
+            <p class="body">The ClientSideEvents object maintains the names of JavaScript functions that are to be called on the client side in response to various events that can be processed without the need for a server post-back.</p>
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.WebDropDown.HideDropDowns">
+            <summary>
+            <p class="body">Returns or sets a boolean value that determines whether or not Select dropdown controls will be automatically hidden when submenus are being displayed.</p>
+            <p class="body">When this property is set to true, all select controls in the page document are hidden until the popup menus are dismissed.</p>
+            </summary>
+            <remarks>
+            <p class="body">This functionality is necessary due to the problematic way that Internet Explorer implements the Select DropDown control.  Netscape 6+ handles this situation properly and the hiding of dropdowns is not necessary.</p>
+            </remarks>
+        </member>
+        <member name="T:Infragistics.WebUI.WebDropDown.ExpandEffects">
+            <summary>
+            <p class="body">This object encapsulates the Internet Explorer Transitions functionality that WebDropDown exposes.</p>
+            </summary>
+            
+        </member>
+        <member name="M:Infragistics.WebUI.WebDropDown.ExpandEffects.#ctor">
+            <summary>
+            Encapsulates an Internet Explorer Transition object that will be applied to the WebDropDown.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebDropDown.ExpandEffects.ToString">
+            <summary>
+            Returns a string representation of the ExpandEffects object.
+            </summary>
+            <remarks>
+            <p class="body">Some objects do not have values that can be converted to a string. In these cases, an empty string is returned.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebDropDown.ExpandEffects.Reset">
+            <summary>
+            Reset all properties to their default values.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.ExpandEffects.Type">
+            <summary>
+            Sets or retrieves the type of transition.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.ExpandEffects.Duration">
+            <summary>
+            Sets or retrieves the number of milliseconds the transition of a particular Type takes to complete.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.ExpandEffects.Opacity">
+            <summary>
+            Gets or sets the opacity level for the Internet Explorer Transition that is being applied to the dropdown window.  If the value is negative then no opacity is applied.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.ExpandEffects.ShadowColor">
+            <summary>
+            Gets or sets the color that will display as a shadow effect on the drop down.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.ExpandEffects.ShadowWidth">
+            <summary>
+            Gets or sets the size of the area that will act as a shadow for the drop down.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebDropDown.DropDownPanel">
+            <summary>
+            Summary description for DropdownPanel.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebDropDown.DropDownPanel.Style">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebDropDown.ComboRendererBase.RenderSpecificJavaScript">
+            <summary>
+            Abstract method.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebDropDown.ComboRendererBase.writeStyles(System.Web.UI.WebControls.Style)">
+            <summary>
+            Returns a string representing the CSS styles of the Styles collection.
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebDropDown.ComboRendererBase.ImagePath(System.String)">
+            <summary>
+            Format the url of an image.
+            Note: This method is overriden by datechooser and it should be never reached.  Otherwise, an image directory other than the default will fail.
+            </summary>
+            <param name="img"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.VisibleDays">
+            <summary>
+            Visibility of the text strings that represent names of the days of the week.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.VisibleDays.AllDays">
+            <summary>
+            Show all days.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.VisibleDays.WeekDays">
+            <summary>
+            Do not show weekends.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.VisibleDays.None">
+            <summary>
+            Hide all days.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.DateFormat">
+            <summary>
+            Date format
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.DateFormat.Short">
+            <summary>
+            Date in short format.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.DateFormat.Long">
+            <summary>
+            Date in long format.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.GridLinesType">
+            <summary>
+            Visibility of the grid lines.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.GridLinesType.None">
+            <summary>
+            No grid lines.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.GridLinesType.Vertical">
+            <summary>
+            Show only vertical grid lines.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.GridLinesType.Horizontal">
+            <summary>
+            Show only horizontal grid lines.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.GridLinesType.Both">
+            <summary>
+            Show vertical and horizontal grid lines.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.BrowserTarget">
+            <summary>
+            Type of browser the html should be created for
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.BrowserTarget.UpLevel">
+            <summary>
+            Browser similar to IE5/6 or Netscape6/7.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.BrowserTarget.DownLevel">
+            <summary>
+            Browser similar to IE3/4 or Netscape4/5.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.BrowserTarget.Auto">
+            <summary>
+            Browser is detected automatically at run time.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.NullValueRepresentation">
+            <summary>
+            Object returned by the Value property, when value is null.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.NullValueRepresentation.NotSet">
+            <summary>
+            The DBNull is returned.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.NullValueRepresentation.DBNull">
+            <summary>
+            The DBNull is returned.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.NullValueRepresentation.Null">
+            <summary>
+            The null is returned.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.NullValueRepresentation.DateTime_MinValue">
+            <summary>
+            The DateTime.MinValue is returned.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.NullDateException">
+            <summary>
+            The NullDateException is used when a null Date is detected in a situation where the Date should be populated
+            Most likely this is will be seen when trying to access the .Value of the control when the .AllowNull is set to 
+            False but the .Value is null.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.NullDateException.#ctor">
+            <summary>
+            Default constructor for the NullDateException.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.NullDateException.#ctor(System.String)">
+            <summary>
+            Overload of the NullDateTimeException and will present the message to the user for the error.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.NullDateException.Message">
+            <summary>
+            Public property that shows the error message.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.RenderUpLevelDateChooser">
+            <summary>
+            Summary description for RenderUpLevel.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.RenderUpLevelDateChooser.#ctor(Infragistics.WebUI.WebSchedule.WebDateChooser)">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.RenderUpLevelDateChooser.VisitObjects(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders all nodes using the Visitor pattern.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.RenderUpLevelDateChooser.ImagePath(System.String)">
+            <summary>
+            Format url of an image.
+            </summary>
+            <param name="img"></param>
+            <returns>Image adjusted for ImageDirectory and resources</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.RenderDownLevelDateChooser.#ctor(Infragistics.WebUI.WebSchedule.WebDateChooser)">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.RenderDownLevelDateChooser.VisitObjects(System.Web.UI.HtmlTextWriter)">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.RenderDownLevelDateChooser.ImagePath(System.String)">
+            <summary>
+            Format url of an image.
+            </summary>
+            <param name="img"></param>
+            <returns>Image adjusted for ImageDirectory and resources</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.Design.LocalizedCategoryAttribute.GetLocalizedString(System.String)">
+            <summary>
+            Returns the localized category name.
+            </summary>
+            <param name="value">Name of the category to retreive</param>
+            <returns>The localized string value</returns>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.TagConverter">
+            <summary>
+            Summary description for TagConverter.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.WebDateChooser">
+            <summary>
+            The DateChooser is an editable DropDown control, which can be used to enter dates textually, or by using a graphical Calendar.
+            </summary>
+            <remarks>
+            Only Gregorian calendar is supported.
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.#ctor">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.WebDateChooser.filterDoc">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.SavePreset(System.String,System.String,System.String,Infragistics.WebUI.PresetType)">
+            <summary>
+            Saves the properties of a control to a file, so that they can be used by another control via the LoadPreset method. 
+            </summary>
+            <param name="filePath">The absolute path in which to save the Preset File.</param>
+            <param name="name">The name the preset will have.</param>
+            <param name="desc">A description of the preset.</param>
+            <param name="presetType">The type of properties (Appearance, Behavior, or Both) which should be saved in this preset.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.SavePreset(System.IO.TextWriter,System.String,System.String,Infragistics.WebUI.PresetType)">
+            <summary>
+            Saves the properties of a control to a file, so that they can be used by another control via the LoadPreset method. 
+            </summary>
+            <param name="textWriter">The Text writer in which to write the Preset File. The writer will not be closed at the end of the call, and should be closed afterwards.</param>
+            <param name="name">The name the preset will have.</param>
+            <param name="desc">A description of the preset.</param>
+            <param name="presetType">The type of properties (Appearance, Behavior, or Both) which should be saved in this preset.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.SavePreset(System.IO.Stream,System.String,System.String,Infragistics.WebUI.PresetType)">
+            <summary>
+            Saves the properties of a control to a file, so that they can be used by another control via the LoadPreset method. 
+            </summary>
+            <param name="stream">The stream in which to write Preset File. The stream will not be closed at the end of the call, and should be closed afterwards.</param>
+            <param name="name">The name the preset will have.</param>
+            <param name="desc">A description of the preset.</param>
+            <param name="presetType">The type of properties (Appearance, Behavior, or Both) which should be saved in this preset.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.LoadPreset(System.String,System.Boolean)">
+            <summary>
+            Sets properties on the control that effect Appearance, Behavior, or Both, based on the information in the predefined Preset File. 
+            </summary>
+            <param name="filePath">The aboslute path of the Preset File.</param>
+            <param name="reset">Whether to reset all properties on the control before applying the preset.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.LoadPreset(System.IO.Stream,System.Boolean)">
+            <summary>
+            Sets properties on the control that effect Appearance, Behavior, or Both, based on the information in the predefined Preset File. 
+            </summary>
+            <param name="stream">A Stream that references a Preset File. The stream will not be closed at the end of the call, and should be closed afterwards.</param>
+            <param name="reset">Whether to reset all properties on the control before applying the preset.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.LoadPreset(System.IO.TextReader,System.Boolean)">
+            <summary>
+            Sets properties on the control that effect Appearance, Behavior, or Both, based on the information in the predefined Preset File. 
+            </summary>
+            <param name="reader">A Text Reader that references a Preset File. The reader will not be closed at the end of the call, and should be closed afterwards.</param>
+            <param name="reset">Whether to reset all properties on the control before applying the preset.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.CreateChildControls">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.ShouldSerializeExpandEffects">
+            <summary>
+            Check if ExpandEffects has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.ResetExpandEffects">
+            <summary>
+            Clears the ExpandEffects.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.ShouldSerializeDropButton">
+            <summary>
+            Check if DropButton has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.ResetDropButton">
+            <summary>
+            Clears the DropButton.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.Focus">
+            <summary>
+            Set focus to a control on the initialization of the page.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.DataBind">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.ShouldSerializeClientSideEvents">
+            <summary>
+            Check if ClientSideEvents has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.ResetClientSideEvents">
+            <summary>
+            Clears the ClientSideEvents.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.ShouldSerializeCalendarLayout">
+            <summary>
+            Check if CalendarLayout has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.ResetCalendarLayout">
+            <summary>
+            Clears the CalendarLayout.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.ShouldSerializeDropDownStyle">
+            <summary>
+            Check if DropDownStyle has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.ResetDropDownStyle">
+            <summary>
+            Clears the DropDownStyle.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.ShouldSerializeEditStyle">
+            <summary>
+            Check if EditStyle has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.ResetEditStyle">
+            <summary>
+            Clears the EditStyle.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.ShouldSerializeAutoPostBack">
+            <summary>
+            Check if AutoPostBack has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.ResetAutoPostBack">
+            <summary>
+            Clears the AutoPostBack.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Render this control to the output parameter specified.
+            </summary>
+            <param name="output"> The HTML writer to write out to </param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.OnPreRender(System.EventArgs)">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.System#Web#UI#IPostBackEventHandler#RaisePostBackEvent(System.String)">
+            <summary>
+            Used by control authors. Overridden method of WebDropDown that is used to handle event postbacks from the client.
+            </summary>
+            <param name="eventArgument"></param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.System#Web#UI#IPostBackDataHandler#LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            <p class="body">Not for use; implemented exclusively for the control and the .NET framework.</p>
+            </summary>
+            <remarks>
+            <p class="body">This method should not be used.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.System#Web#UI#IPostBackDataHandler#RaisePostDataChangedEvent">
+            <summary>
+            <p class="body">Not for use; implemented exclusively for the control and the .NET framework.</p>
+            </summary>
+            <remarks>
+            <p class="body">This method should not be used.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.OnInvalidDateValue(System.Object,Infragistics.WebUI.WebSchedule.WebDateChooser.InvalidDate)">
+            <summary>
+            This event is fired when the Date of the control is invalid.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.OnValueChanged(System.Object,System.Object)">
+            <summary>
+            This event is fired when the Value for the control is changed.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.TrackViewState">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.SaveViewState">
+            <summary>
+            Called by the framework to load round-trip data from the listbar into the html ViewState variable.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.LoadViewState(System.Object)">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.OnInit(System.EventArgs)">
+            <summary>Enable ControlState.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.LoadControlState(System.Object)">
+            <summary>Load saved state.</summary>
+            <param name="savedState">Saved state.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.SaveControlState">
+            <summary>Save state when ViewState is disabled.</summary>
+            <returns>Saved state.</returns>
+        </member>
+        <member name="E:Infragistics.WebUI.WebSchedule.WebDateChooser.ValueChanged">
+            <summary>
+            The ValueChanged event will fire each time the DateChooser's value is changed.  You can control whether this event will generate a postback automatically by setting the respective <see cref="P:Infragistics.WebUI.WebSchedule.WebDateChooser.AutoPostBack"/> property.
+            </summary>
+        </member>
+        <member name="E:Infragistics.WebUI.WebSchedule.WebDateChooser.InvalidDateEntered">
+            <summary>
+            This event is fired when the DateChooser encounters an invalid date.  This event can be fired after a postback, or during the Page_Load.
+            </summary>
+            <remarks>You can use this event to handle invalid date entries made. <seealso cref="T:Infragistics.WebUI.WebSchedule.WebDateChooser.InvalidDate"/></remarks>
+        </member>
+        <member name="E:Infragistics.WebUI.WebSchedule.WebDateChooser.CalendarVisibleMonthChanged">
+            <summary>
+            The CalendarVisibleMonthChanged event will fire each time the Calendar's month is changed.  You can control whether this event will generate a postback automatically by setting the respective <see cref="P:Infragistics.WebUI.WebSchedule.WebDateChooser.AutoPostBack"/> property.
+            </summary>
+            <remarks>Note: This event WILL be fired if the year is changed, but the month name remains the same.</remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.About">
+            <summary>
+            Display the about dialog.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.Infragistics#WebUI#Shared#IUltraLicensedComponent#License">
+            <summary>
+            Return the license we cached inside the constructor
+            </summary>		
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.BrowserTarget">
+            <summary>
+            <p class="body">The BrowserTarget can be set to force all clients to use the same renderer, regardless of Browser Capabilities.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.AllowNull">
+            <summary>
+            <p class="body">Determines if the edit portion will accept a blank as a valid value.</p>
+            </summary>
+            <remarks>If AllowNull is set to <code>false</code> and the Value of the Control is null, the date of the switch will be placed into the Value of the control.</remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.ShowDropDown">
+            <summary>
+            <p class="body">Sets whether the dropdown portion of the control will initially be visible when the page is loaded.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.AutoCloseUp">
+            <summary>
+            <p class="body">Determines whether the dropdown will automatically close after a date has been selected from the calendar.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.DropDownAlignment">
+            <summary>
+            <p class="body">Determines the alignment of the dropdown with the edit portion of the control: left, center, right.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.ExpandEffects">
+             <summary>
+            <p class="body">Returns the ExpandEffects object, which controls any special effects used when dropping down the control.</p>
+             </summary>
+             <remarks><p class="notes">The ExpandEffects reqire the browser to support Transitions and Filters which are only available in IE5 and up.</p></remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.DropButton">
+            <summary>
+            <p class="body">Returns the set of properties which control the Button portion of the control.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.Editable">
+            <summary>
+            	<p class="body">Determines if the user can directly edit the value by typing into the edit portion of the control.  When this property is false, the value may still be changed by selecting days from the dropdown, or using arrow keys.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.ReadOnly">
+            <summary>
+            	<p class="body">Determines if the user can change the selected date.  When ReadOnly is true, the date chooser is not editable, and you will not be able to dropdown the calendar, making it impossible to change the value of the control.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.Format">
+            <summary>
+            <p class="body">Determines the format used when converting the DateTime value, into its textual representation.</p>
+            <p class="note">Note: abbriviated month names in edit mode are not supported and months are converted to digits.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.HideDropDowns">
+            <summary>
+            <p class="body">Determines whether other dropdowns on the page should be hidden, to prevent them from displaying over the calendar dropdown.</p>
+            </summary>
+            <remarks><p class="body">If a dropdown (Html Select element) is located in the same screen area where the Calendar will be displayed, it is possible for the Html Select element, to be drawn on top of the Calendar.  In order to fix this drawing problem, this property should be set to true.</p></remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.MaxDate">
+            <summary>
+            <p class="body">Determines the upper date limit that can be entered.</p>
+            </summary>
+            <remarks><p class="body">When a date is entered that is past the MaxDate, a DateOutOfRangeException is thrown at design time.  At runtime, an InvalidDateEnteredEvent is fired. </p></remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.MinDate">
+            <summary>
+            <p class="body">Determines the lower date limit that can be entered.</p>
+            </summary>
+            <remarks><p class="body">When a date is entered that is lower than the MinDate, a DateOutOfRangeException is thrown at design time.  At runtime, an InvalidDateEnteredEvent is fired. </p></remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.NullDateLabel">
+            <summary>
+            <p class="body">The text displayed in the edit portion of the control, when the <see cref="P:Infragistics.WebUI.WebSchedule.WebDateChooser.Value"/> is null.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.ImageDirectory">
+            <summary>
+            	<p class="body">Defines the location of the images.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.CalendarJavaScriptFileName">
+            <summary>
+            <p class="body">The relative path to the JavaScript file used by the Calendar.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.JavaScriptFileName">
+            <summary>
+            <p class="body">The relative path to the JavaScript file used by the DateChooser.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.JavaScriptFileNameCommon">
+            <summary>
+            <p class="body">The relative path to the common javascript file, shared by all Infragistics Web Controls.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.Text">
+            <summary>
+            <p class="body">The text representation of the DateTime <see cref="P:Infragistics.WebUI.WebSchedule.WebDateChooser.Value"/>.</p>
+            </summary>
+            <remarks><p class="body">This property is read-only and is created dynamically according to <see cref="P:Infragistics.WebUI.WebSchedule.WebDateChooser.Format"/>.</p></remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.NullValueRepresentation">
+            <summary>
+            	<p class="body">Determines the object returned by the Value property, then the value is null.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.Section508Compliant">
+            <summary>
+            <p class="body">Set or gets a value that determines whether Section 508 compliant html will be emitted.</p>
+            </summary>
+            <remarks>
+            <p class="body">Section 508 compliance provides for support of assistive technologies that make html pages accessible for users that require it.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.FocusOnInitialization">
+            <summary>
+            Attempts to set input focus to the control on the initialization of a page.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.Value">
+            <summary>
+            <p class="body">The DateTime value of this input control.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.ClientSideEvents">
+            <summary>
+            <p class="body">Used to specify client side event handlers.</p>
+            </summary>
+            <remarks>
+            <p class="body">Every member property can contain the name of implemented function or explicit javascript statement(s).
+            If the name of a function (only name: no parenthesis or parameters) is used, then actual implementation on client may contain parameters: please see documentation for Client-Side Object Model.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.CustomCalendar">
+            <summary>
+            <p class="body">The CustomCalendar can be used to customize the calendar that is dropped down.</p>
+            </summary>
+            <remarks><p class="body">The value specified here must implement the ICalendar Interface and have a base class of System.Web.UI.Control.</p></remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.CalendarLayout">
+            <summary>
+            <p class="body">The collection of properties for the Calendar portion of this control.</p>
+            </summary>
+            <remarks>
+            <p class="note">Note that properties SelectedDate and VisibleMonth have no effect. The MaxDate, MinDate and some others can be overridden by similar properties of WebDateChooser.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.DropDownStyle">
+            <summary>
+            <p class="body">The style applied to the Calendar's container, when dropped down.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.EditStyle">
+            <summary>
+            <p class="body">The style applied to the input portion of the control.  This style can be used to customize the text color, font, etc.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.AutoPostBack">
+             <summary>
+             <p class="body">This property controls the postback behavior of each ServerSide Event.</p>
+             </summary>
+             <remarks><p class="body">Setting the individual memebers to true, will force a postback to occur as soon as the corresponding event occurs on the client.</p>
+            <p class="body">Setting the member to false will prevent postbacks from occuring when the event occurs.  Instead, the event will only be fired after a postback is generated by some other means, such as a clicking a "submit" button.</p></remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.EnableKeyboardNavigation">
+            <summary>
+            Enables the user to utilize the keyboard to navigate the Calendar control.
+            </summary>		
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.EnableAppStyling">
+            <summary>
+            Enables support on WebDateChooser for the Application Styling Framework(tm).
+            </summary>
+            <value>
+            <em>True</em> indicates Application Styling is enabled, <em>False</em>
+            indicates Application Styling is disabled, and <em>NotSet</em> indicates
+            support for Application Styling should default to page- or application-level
+            settings.
+            </value>
+            <remarks>
+            <p class="body">Turn on support for Application Styling of WebDateChooser
+            when using the Application Styling Framework(tm) (ASF) by setting the 
+            EnableAppStyling property to True.</p>
+            <p class="body">When EnableAppStyling has it's default value of NotSet,
+            this control will defer the determination of whether to use Application
+            Styling to settings you make at the page- or application-level.  Place
+            the <strong>WebPage</strong> control on the same Web form as this control
+            to configure ASF support for all controls on that Page.  ASF support can
+            also be turned on application-wide with the <em>enableAppStyling</em>
+            attribute in your "web.config" file.</p>
+            <p class="body">Turn off support for the ASF in WebDateChooser (even though
+            it may have been enabled at a higher level) by setting the EnableAppStyling
+            property to False.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.StyleSetName">
+            <summary>
+            Name of the Application Styling Framework(tm) style set defining the themed appearance for this WebDateChooser control.
+            </summary>
+            <value>
+            	<p class="body">The name of the Application Styling Framework(tm) (ASF) style set which has been designed to give this WebDateChooser control a consistent appearance with other controls in your application.</p>
+            	<p class="body">This property may return the empty string ("") to imply that the default style set (named "Default") should be used.</p>
+            </value>
+            <remarks>
+            	<p class="body">Web sites can configure a single, consistent, application-wide style set through the <em>styleSetName</em> attribute in their "web.config" file. Alternately, they can define the style set to apply Application Styling to all controls on a Page by placing a <strong>WebPage</strong>
+            control on that Page and setting it's StyleSetName property.</p>
+            	<p class="body">At the control level this property allows an application developer to customize the style set applied to a single instance of a control.</p>
+            	<p class="body">Normally, graphics designers will furnish you with a style set containing one or more style sheet files (one for each type of control) and image files.  The name of the style set (with the exception of the "Default" style set) must appear in each Cascading Style Sheet (CSS) class name defined by this control's style sheet file.  For example, two WebTree controls that each use a different style set, "Aqua" and "Onyx", would expect their CSS class names for the ASF <em>Node</em> role to be "igtr_AquaNode" and "igtr_OnyxNode", respectively.  This allows the uniqueness of CSS class names necessary to distinguish multiple style sets for the same type of control, without there being any naming collisions.</p>
+            </remarks>
+            <seealso cref="P:Infragistics.WebUI.WebSchedule.WebDateChooser.StyleSetPath"/>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.StyleSetPath">
+            <summary>
+            Path containing the Application Styling Framework(tm) style set files for this type of control.
+            </summary>
+            <remarks>
+            	<p class="body">Web sites can configure the directory path containing their style set files application-wide by using the <em>styleSetPath</em> attribute of their "web.config" file.  It is also possible to configure the style set path applicable to all controls on a Page that are subject to Application Styling by placing a <strong>WebPage</strong> control on that Page and setting it's StyleSetPath property.</p>
+            	<p class="body">At the control level this property allows an
+            application developer to customize the location of the style set
+            being applied to a single instance of a control.</p>
+            	<p class="note">Be aware that customizing the style set path at the control level will not allow you to copy a style set's files to this new location, changing a few style property values in them, and then use it successfully with separate instances of the control referencing the original style set of the same name.  This is because there would be naming collisions in the
+            Cascading Style Sheet (CSS) class names, which will produce an undefined appearance.  You must ensure the CSS class names defined by style sheets in the new style set path are unique from those CSS class names being used by other style sheets that may continue to be referenced.  The recommended guidance in this scenario is to create a new style set having a new style set name, that contains your modifications.</p>
+            </remarks>
+            <seealso cref="P:Infragistics.WebUI.WebSchedule.WebDateChooser.StyleSetName"/>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.WebDateChooser.InvalidDate">
+            <summary>
+            The InvalidDate enum describes why a date value could not be set.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.WebDateChooser.InvalidDate.DateOutOfRange">
+            <summary>
+            The date value was not between the control's min and max dates.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.WebDateChooser.InvalidDate.NullValue">
+            <summary>
+            A null value was specified, but AllowNull is set to false.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.WebSchedule.WebDateChooser.InvalidDate.ImproperDateFormat">
+            <summary>
+            The string could not be converted into a valid date.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.WebDateChooser.InvalidDateEventArgs">
+            <summary>
+            InvalidDateEventArgs holds information about a date that could not be set, including the reason why.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooser.InvalidDateEventArgs.#ctor(Infragistics.WebUI.WebSchedule.WebDateChooser.InvalidDate,System.String,System.Object)">
+            <summary>
+            <p class="body">This constructor is used to create a new InvalidDateEventArgs, when the InvalidDateEvent is fired.</p>
+            </summary>
+            <param name="reason">The code specifying why the date was invalid.</param>
+            <param name="text">If the <see cref="P:Infragistics.WebUI.WebSchedule.WebDateChooser.InvalidDateEventArgs.Reason"/> was ImproperDateFormat, this will be the original date string, otherwise it will be null.</param>
+            <param name="date">If the <see cref="P:Infragistics.WebUI.WebSchedule.WebDateChooser.InvalidDateEventArgs.Reason"/> was DateOutOfRange or NullValue, this will be the original DateTime, otherwise it will be null.</param>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.InvalidDateEventArgs.Text">
+            <summary>
+            <p class="body">If the <see cref="P:Infragistics.WebUI.WebSchedule.WebDateChooser.InvalidDateEventArgs.Reason"/> was ImproperDateFormat, this will be the original date string, otherwise it will be null.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.InvalidDateEventArgs.Value">
+            <summary>
+            <p class="body">If the <see cref="P:Infragistics.WebUI.WebSchedule.WebDateChooser.InvalidDateEventArgs.Reason"/> was DateOutOfRange or NullValue, this will be the original DateTime, otherwise it will be null.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooser.InvalidDateEventArgs.Reason">
+            <summary>
+            <p class="body">The code specifying why the date was invalid.</p>
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.WebDateChooser.WebDateChooserEventArgs">
+            <summary>Event argument object for WebDateChooser Events</summary>		
+        </member>
+        <member name="T:Infragistics.WebUI.WebSchedule.WebDateChooserClientSideEvents">
+            <summary>
+            <p class="body">The ClientSideEvents object contains string properties that allow client-side JavaScript function names to be specified for handling a variety of events that occur on the client.  The JavaScript function with the same name must then be defined somewhere within the page in order for the event to be fired.</p>
+            <p class="body">The JavaScript can be written directly into the aspx page or it can be added in the code-behind file using the Page.RegisterClientScriptBlock function.</p>
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooserClientSideEvents.#ctor(Infragistics.WebUI.WebSchedule.WebDateChooser)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="dateChooser">Reference to the WebDateChooser</param>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooserClientSideEvents.ToString">
+            <summary>String formatted for visual designer.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooserClientSideEvents.LoadViewState(System.Object)">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooserClientSideEvents.SaveViewState">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooserClientSideEvents.TrackViewState">
+            <summary></summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooserClientSideEvents.InitializeDateChooser">
+            <summary>
+            Event fired after WebDateChooser was initialized.
+            </summary>
+            <remarks>
+            <p class="body">It can be the name of implemented function or explicit javascript statement(s). If the name of function is used, then that event handler may contain 1 parameter.</p>
+            <br></br>1st parameter: reference to the WebDateChooser object.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooserClientSideEvents.OnBlur">
+            <summary>
+            <p class="body">Occurs when the control is losing focus.  This event can be used to get the value of the DateChooser, after user input has stopped.</p>
+            </summary>
+            <remarks>
+            <p class="body">It can be the name of implemented function or explicit javascript statement(s). If the name of function is used, then that event handler may contain 3 parameters.</p>
+            <br></br>1st parameter: reference to the WebDateChooser object.
+            <br></br>2nd parameter: is not used.
+            <br></br>3rd parameter: reference to the ig_EventObject.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooserClientSideEvents.InvalidDateEntered">
+            <summary>
+            <p class="body">This event is fired when an invalid value has been entered into the DateChooser.</p>
+            </summary>
+            <remarks>
+            <p class="body">This event will be fired for 3 distinct cases.  The first case would be a date entered that is non in the range of MinDate - MaxDate values set for the control.  The second case would be when a null value is entered, but AllowNull is set to false.  The last case would be an improperly formatted date string.  This could occur of the month "13" was entered, etc.</p>
+            <p class="body">It can be the name of implemented function or explicit javascript statement(s). If the name of function is used, then that event handler may contain 3 parameters.</p>
+            <br></br>1st parameter: reference to the WebDateChooser object.
+            <br></br>2nd parameter: reference to object that contains properties related to invalid event.
+            <br></br>3rd parameter: reference to the ig_EventObject.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooserClientSideEvents.CalendarDateClicked">
+            <summary>
+            Event fired when the selected date in the calendar was clicked.
+            </summary>
+            <remarks>
+            	<p class="body">It can be the name of implemented function or explicit javascript statement(s). If the name of function is used, then that event handler may contain 3 parameters.</p>
+            	<br></br>1st parameter: reference to the WebCalendar object.
+            <br></br>2nd parameter: clicked Date.
+            <br></br>3rd parameter: reference to the ig_EventObject.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooserClientSideEvents.CalendarMonthChanged">
+            <summary>
+            Event fired after the visible month in the calendar was changed.
+            </summary>
+            <remarks>
+            	<p class="body">It can be the name of implemented function or explicit javascript statement(s). If the name of function is used, then that event handler may contain 3 parameters.</p>
+            	<br></br>1st parameter: reference to the WebCalendar object.
+            <br></br>2nd parameter: visible Date.
+            <br></br>3rd parameter: reference to the ig_EventObject.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooserClientSideEvents.CalendarMonthChanging">
+            <summary>
+            Event fired before the visible month in the calendar is changed. This event can be canceled.
+            </summary>
+            <remarks>
+            	<p class="body">It can be the name of an implemented function or explicit javascript statement(s).  If the name of the function is used, then that event handler may contain 3 parameters.</p>
+            	<br></br>1st parameter: reference to the WebCalendar object.
+            <br></br>2nd parameter: visible Date.
+            <br></br>3rd parameter: reference to the ig_EventObject.  To cancel an event the cancel member should be used.  The following example will prevent viewing any month of the year 2008.<br></br>
+              if(oDate.getFullYear() == 2008) oEvent.cancel = true;
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooserClientSideEvents.CalendarValueChanged">
+            <summary>
+            Event fired when the selected date in the calendar was changed.
+            </summary>
+            <remarks>
+            	<p class="body">It can be the name of implemented function or explicit javascript statement(s). If the name of function is used, then that event handler may contain 3 parameters.</p>
+            	<br></br>1st parameter: reference to the WebCalendar object.
+            <br></br>2nd parameter: selected Date.
+            <br></br>3rd parameter: reference to the ig_EventObject.
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooserClientSideEvents.CalendarValueChanging">
+            <summary>
+            Event fired before the selected date in the calendar was changed. This event can be canceled.
+            </summary>
+            <remarks>
+            	<p class="body">It can be the name of implemented function or explicit javascript statement(s). If the name of function is used, then that event handler may contain 3 parameters.</p>
+            	<br></br>1st parameter: reference to the WebCalendar object.
+            <br></br>2nd parameter: selected Date.
+            <br></br>3rd parameter: reference to the ig_EventObject. To cancel this event the cancel member should be used. Following example will prevent selecting 10th day in any month.<br></br>
+              if(oDate.getDate() == 10) oEvent.cancel = true;
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooserClientSideEvents.CalendarRenderDay">
+            <summary>
+            Event fired before day in calendar is rendered. This event can be used to customize day painting.
+            </summary>
+            <remarks>
+            <p class="body">It can be the name of implemented function or explicit javascript statement(s). If the name of function is used, then that event handler may contain 3 parameters.
+            <br></br>1st parameter: reference to the WebCalendar object.
+            <br></br>2nd parameter: reference to the painted day. That parameter contains following member variables:</p>
+                <ul>
+                  <li>year - number: painted year.</li>
+                  <li>month - number: painted month.</li>
+                  <li>day - number: painted day of the month.</li>
+                  <li>selected - boolean: true if painted day was selected.</li>
+                  <li>dow - number: day of the week (0..6) of the painted day.</li>
+                  <li>index - number: index of painted day within calendar &lt;table&gt;.</li>
+                  <li>text - string: text to paint in the day, usually the <em>day</em> (this value can be modified.)</li>
+                  <li>css - string: name of CSS class used for painting (this value can be modified by appending a custom CSS class separated by a space.)</li>
+                  <li>element - object: reference to the &lt;td&gt; HTML element containing this painted day.</li>
+                 </ul>
+            	Following example will replace text in the first days of all months by the "1st" string:<br></br>
+            	if(oDay.day == 1) oDay.text = oDay.text + 'st';<br></br>
+            	Following example will paint all Saturdays by italic font:<br></br>
+            	if(oDay.dow == 6) oDay.element.style.fontStyle = 'italic';<br></br>
+            	Following example will paint January 1st of any year by red background:<br></br>
+            	oDay.element.bgColor = (oDay.day == 1 &amp;&amp; oDay.month == 1) ? 'red' : '';
+            <br></br>3rd parameter: reference to the ig_EventObject.
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.WebSchedule.WebDateChooserAutoPostBack.ToString">
+            <summary>String formatted for visual designer.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooserAutoPostBack.ValueChanged">
+            <summary>
+            <p class="body">Setting this property to <code>true</code> will cause a postback to occur, each time the DateChooser's value is changed on the client.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.WebSchedule.WebDateChooserAutoPostBack.CalendarMonthChanged">
+            <summary>
+            <p class="body">Setting this property to <code>true</code> will cause a postback to occur each time the Calendar's month is changed on the client.</p>
+            </summary>
+        </member>
+    </members>
+</doc>

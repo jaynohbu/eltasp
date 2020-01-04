@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Light 3 " PresetDescription="Infragistics Light 3 Preset" PresetType="Appearance" />-->
+<igsch:WebDateChooser >
+  <ClientSideEvents />
+  <CalendarLayout TitleFormat="Month" ShowYearDropDown="False" PrevMonthImageUrl="ig_cal_grayP0.gif" ShowMonthDropDown="False" NextMonthImageUrl="ig_cal_grayN0.gif">
+    <DayStyle BorderWidth="1px" BorderColor="#909090" BorderStyle="Solid" BackgroundImage="ig_cal_light3.gif" />
+    <FooterStyle Height="16pt" Font-Size="8pt" ForeColor="#707070" BackgroundImage="ig_cal_light2.gif" />
+    <SelectedDayStyle ForeColor="Black" BackgroundImage="ig_cal_light2.gif" />
+    <OtherMonthDayStyle ForeColor="#909090" />
+    <NextPrevStyle BackgroundImage="ig_cal_light1.gif" />
+    <CalendarStyle BorderWidth="1px" Font-Size="9pt" Font-Names="Verdana" BorderColor="Gray" BorderStyle="Solid" ForeColor="#505050" BackColor="Silver" />
+    <TodayDayStyle ForeColor="Black" BackgroundImage="ig_cal_light1.gif" />
+    <DayHeaderStyle Height="1pt" Font-Size="8pt" Font-Bold="True" ForeColor="#606060" BackgroundImage="ig_cal_light2.gif" BackColor="Silver" />
+    <TitleStyle Height="18pt" Font-Size="10pt" Font-Bold="True" ForeColor="#606060" BackgroundImage="ig_cal_light1.gif" BackColor="#E0E0E0" />
+  </CalendarLayout>
+  <DropButton>
+    <HoverStyle />
+    <Style />
+  </DropButton>
+  <ExpandEffects ShadowColor="LightGray" />
+</igsch:WebDateChooser>

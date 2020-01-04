@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="14.0.4753.1000" _dal="1" -->
+<!-- _LocalBinding -->
+<root>
+  <!-- 
+    Microsoft Word Automation Services 2010
+    14.0.4753.1000
+
+    Central Admin UI ResX
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DatabaseTitle" xml:space="preserve">
+    <value>Database</value>
+    
+  </data>
+  <data name="docFile" xml:space="preserve">
+    <value>Word 97-2003 Document (.doc, .dot)</value>
+    
+  </data>
+  <data name="docxFile" xml:space="preserve">
+    <value>Open XML Document (.docx, .docm, .dotx, .dotm)</value>
+    
+  </data>
+  <data name="EmbeddedFontSupportDescription" xml:space="preserve">
+    <value>To preserve visual fidelity across different machines, a user can choose to embed fonts within the document. Use this setting to determine whether or not embedded fonts are used when converting documents.</value>
+    
+  </data>
+  <data name="EmbeddedFontSupportLabel" xml:space="preserve">
+    <value>Disable embedded fonts?</value>
+    
+  </data>
+  <data name="EmbeddedFontSupportTitle" xml:space="preserve">
+    <value>Embedded Font Support</value>
+    
+  </data>
+  <data name="FileFormatSupportDescription" xml:space="preserve">
+    <value>Specify which file formats can be opened by the service application. If a file type is unchecked, users of this service will receive an error when attempting to open files of that type.</value>
+    
+  </data>
+  <data name="FileFormatSupportTitle" xml:space="preserve">
+    <value>Supported File Formats</value>
+    
+  </data>
+  <data name="FileTypesLabel" xml:space="preserve">
+    <value>Supported File Formats:</value>
+    
+  </data>
+  <data name="htmlFile" xml:space="preserve">
+    <value>Web Page (.htm, .html, .mht, .mhtml)</value>
+    
+  </data>
+  <data name="JobTimeoutTitle" xml:space="preserve">
+    <value>Job Monitoring</value>
+    
+  </data>
+  <data name="MaximumMemoryUsageDescription" xml:space="preserve">
+    <value>Specify the maximum percentage of system memory made available to the service application, as a percentage of overall system memory.</value>
+    
+  </data>
+  <data name="MaximumMemoryUsageLabel" xml:space="preserve">
+    <value>Percentage of memory:</value>
+    
+  </data>
+  <data name="MaximumMemoryUsageTitle" xml:space="preserve">
+    <value>Maximum Memory Usage</value>
+    
+  </data>
+  <data name="MissingFieldMessage" xml:space="preserve">
+    <value>Field cannot be blank.</value>
+    
+  </data>
+  <data name="NoLabel" xml:space="preserve">
+    <value>No</value>
+    
+  </data>
+  <data name="RecycleThresholdDescription" xml:space="preserve">
+    <value>Specify the number of documents converted by a conversion process before it is restarted.</value>
+    
+  </data>
+  <data name="RecycleThresholdLabel" xml:space="preserve">
+    <value>Recycle threshold:</value>
+    
+  </data>
+  <data name="RecycleThresholdTitle" xml:space="preserve">
+    <value>Recycle Threshold</value>
+    
+  </data>
+  <data name="rtfFile" xml:space="preserve">
+    <value>Rich Text Format (.rtf)</value>
+    
+  </data>
+  <data name="TotalActiveProcessesDescription" xml:space="preserve">
+    <value>Specify the number of conversion processes created on each server available to the service application. The number of conversion processes is equivalent to the number of conversions that can be performed simultaneously.</value>
+    
+  </data>
+  <data name="TotalActiveProcessesLabel" xml:space="preserve">
+    <value>Conversion processes:</value>
+    
+  </data>
+  <data name="TotalActiveProcessesTitle" xml:space="preserve">
+    <value>Conversion Processes</value>
+    
+  </data>
+  <data name="WordServices_PageDescription" xml:space="preserve">
+    <value>Word Automation Services</value>
+    
+  </data>
+  <data name="xmlFile" xml:space="preserve">
+    <value>Word 2003 XML Document (.xml)</value>
+    
+  </data>
+  <data name="YesLabel" xml:space="preserve">
+    <value>Yes</value>
+    
+  </data>
+  <data name="JobThroughputDescription" xml:space="preserve">
+    <value>Specify the frequency with which groups of conversions are started, and the number of conversions within each group. Setting these values too high or too low can affect performance.</value>
+    
+  </data>
+  <data name="JobThroughputTitle" xml:space="preserve">
+    <value>Conversion Throughput</value>
+    
+  </data>
+  <data name="MaxJobsPerWorkerLabel" xml:space="preserve">
+    <value>Number of conversions to start (per conversion process):</value>
+    
+  </data>
+  <data name="JobTimeoutDescription" xml:space="preserve">
+    <value>Specify the length of time before conversions are monitored and, if necessary, restarted.</value>
+    
+  </data>
+  <data name="JobTimeoutLabel" xml:space="preserve">
+    <value>Length of time before conversion status is monitored (minutes):</value>
+    
+  </data>
+  <data name="RequestTimerLabel" xml:space="preserve">
+    <value>Frequency with which to start conversions (minutes):</value>
+    
+  </data>
+  <data name="ApplicationPoolLabel" xml:space="preserve">
+    <value>Application Pool</value>
+    
+  </data>
+  <data name="AutoAssociateWebAppLabel" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="AutoAssociateWebAppText" xml:space="preserve">
+    <value>Add this service application's proxy to the farm's default proxy list.</value>
+    
+  </data>
+  <data name="CreateWsAppDescription" xml:space="preserve">
+    <value>Specify the name, application pool, and database information for the service application.  The settings you specify here can be changed later using the 'Manage' and 'Properties' buttons on the Manage Service Application page.</value>
+    
+  </data>
+  <data name="CreateWsAppDialogTitle" xml:space="preserve">
+    <value>Create New Word Automation Services Application</value>
+    
+  </data>
+  <data name="NameLabel" xml:space="preserve">
+    <value>Name</value>
+    
+  </data>
+  <data name="RunInPartitionedModeLabel" xml:space="preserve">
+    <value>Partition</value>
+    
+  </data>
+  <data name="RunInPartitionedModeText" xml:space="preserve">
+    <value>Run in partitioned mode</value>
+    
+  </data>
+  <data name="AutoAssociateWebAppDescription" xml:space="preserve">
+    <value>Specify if this service application's proxy should be added to the default proxy list.</value>
+    
+  </data>
+  <data name="AutoAssociateWebAppTitle" xml:space="preserve">
+    <value>Add to Default Proxy List</value>
+    
+  </data>
+  <data name="RunInPartitionedModeDescription" xml:space="preserve">
+    <value>Specify if the service application should run in partitioned mode.</value>
+    
+  </data>
+  <data name="RunInPartitionedModeTitle" xml:space="preserve">
+    <value>Partitioned Mode</value>
+    
+  </data>
+  <data name="WsAppNameDescription" xml:space="preserve">
+    <value>The name for the new service application.</value>
+    
+  </data>
+  <data name="WsAppNameTitle" xml:space="preserve">
+    <value>Name</value>
+    
+  </data>
+  <data name="MaximumConversionAttemptsDescription" xml:space="preserve">
+    <value>Specify the maximum number of times a conversion is attempted before its status is set to Failed.</value>
+    
+  </data>
+  <data name="MaximumConversionAttemptsLabel" xml:space="preserve">
+    <value>Maximum conversion attempts:</value>
+    
+  </data>
+  <data name="MaximumConversionAttemptsTitle" xml:space="preserve">
+    <value>Maximum Conversion Attempts</value>
+    
+  </data>
+  <data name="DisableBinaryFileScanDescription" xml:space="preserve">
+    <value>To provide added security when loading Word 97-2003 documents, extra checks are performed before those documents are opened.  These checks can have an impact on overall service performance.&lt;br/&gt;&lt;br/&gt;Only disable this setting if you trust ALL documents loaded by the service application.</value>
+    
+  </data>
+  <data name="DisableBinaryFileScanLabel" xml:space="preserve">
+    <value>Disable Word 97-2003 Document scanning?</value>
+    
+  </data>
+  <data name="DisableBinaryFileScanTitle" xml:space="preserve">
+    <value>Word 97-2003 Document Scanning</value>
+    
+  </data>
+  <data name="WsAppPropertiesDialogTitle" xml:space="preserve">
+	<value>Edit Word Automation Services Application</value>
+	
+  </data>
+  <data name="WsAppPropertiesDialogDescription" xml:space="preserve">
+	<value>Edit the application pool and database information for the service application.</value>
+	
+  </data>
+</root>

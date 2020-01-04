@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<igtbl:UltraWebGrid ID="UltraWebGrid1" runat="server" Height="430px" OnInitializeLayout="UltraWebGrid1_InitializeLayout1"
+                        OnInitializeRow="UltraWebGrid1_InitializeRow1" OnPageIndexChanged="UltraWebGrid1_PageIndexChanged1"
+                        Width="100%">
+  <DisplayLayout AllowColSizingDefault="Free" BorderCollapseDefault="Separate" ColWidthDefault="80px"
+      HeaderClickActionDefault="NotSet" Name="UltraWebGrid1" RowHeightDefault="18px"
+      TableLayout="Fixed" Version="4.00" ViewType="Hierarchical">
+    <AddNewBox ButtonConnectorColor="Silver" ButtonConnectorStyle="Solid">
+      <Style BackColor="LightGray" BorderStyle="Solid" BorderWidth="1px">
+
+        <BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White">
+        </BorderDetails>
+
+      </Style>
+      <ButtonStyle BackColor="Gray" BorderColor="White" BorderStyle="Outset" BorderWidth="1px"
+          Cursor="Hand">
+      </ButtonStyle>
+    </AddNewBox>
+    <Pager Alignment="Center" PagerAppearance="Both" PageSize="20">
+      <Style BackColor="LightGray" BorderStyle="Solid" BorderWidth="1px">
+
+        <BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White">
+        </BorderDetails>
+
+      </Style>
+    </Pager>
+    <HeaderStyleDefault BackColor="#CBD6A6" BorderStyle="Solid" BorderWidth="1px" Font-Names="Tahoma"
+        Font-Size="8pt" ForeColor="Black" HorizontalAlign="Left">
+      <BorderDetails ColorLeft="White" ColorTop="White" WidthLeft="1px" WidthTop="1px" />
+      <Padding Left="5px" Right="5px" />
+    </HeaderStyleDefault>
+    <FrameStyle BackColor="#FAFCF1" BorderStyle="Solid" BorderWidth="1px" Cursor="Hand"
+        Font-Names="Tahoma" Font-Size="8pt" Height="430px" Width="100%">
+    </FrameStyle>
+    <FooterStyleDefault BackColor="LightGray" BorderStyle="Solid" BorderWidth="1px">
+      <BorderDetails ColorLeft="White" ColorTop="White" WidthLeft="1px" WidthTop="1px" />
+    </FooterStyleDefault>
+    <ClientSideEvents AfterCellUpdateHandler="acuh" BeforeCellUpdateHandler="bcuh" />
+    <GroupByBox ButtonConnectorColor="Silver" ButtonConnectorStyle="Solid">
+      <BandLabelStyle BackColor="Gray" BorderColor="White" BorderStyle="Outset" BorderWidth="1px"
+          Cursor="Default">
+      </BandLabelStyle>
+      <Style BackColor="DarkGray" BorderColor="White" BorderStyle="Outset" BorderWidth="1px"></Style>
+    </GroupByBox>
+    <EditCellStyleDefault BorderStyle="None" BorderWidth="0px" Font-Names="Tahoma" Font-Size="8pt"
+        HorizontalAlign="Left" VerticalAlign="Middle">
+    </EditCellStyleDefault>
+    <RowStyleDefault BackColor="White" BorderColor="#AAB883" BorderStyle="Solid" BorderWidth="1px"
+        Font-Names="Tahoma" Font-Size="8pt" ForeColor="#333333" HorizontalAlign="Left"
+        VerticalAlign="Middle">
+      <Padding Left="7px" Right="7px" />
+      <BorderDetails WidthLeft="0px" WidthTop="0px" />
+    </RowStyleDefault>
+    <GroupByRowStyleDefault BackColor="DarkGray" BorderColor="White" BorderStyle="Outset"
+        BorderWidth="1px">
+    </GroupByRowStyleDefault>
+    <ActivationObject BorderColor="170, 184, 131">
+    </ActivationObject>
+    <RowExpAreaStyleDefault BackColor="WhiteSmoke">
+    </RowExpAreaStyleDefault>
+    <SelectedGroupByRowStyleDefault BackColor="#CF5F5B" BorderColor="White" BorderStyle="Outset"
+        BorderWidth="1px" ForeColor="White">
+    </SelectedGroupByRowStyleDefault>
+    <ImageUrls CollapseImage="" CurrentEditRowImage="images/arrow_brown2_beveled.gif"
+        CurrentRowImage="images/arrow_brown2_beveled.gif" ExpandImage="images/ig_treeXPPlus.GIF" />
+    <RowSelectorStyleDefault BackColor="White" BorderStyle="None" BorderWidth="1px">
+    </RowSelectorStyleDefault>
+    <SelectedRowStyleDefault BackColor="#BECA98" ForeColor="White">
+    </SelectedRowStyleDefault>
+    <RowAlternateStyleDefault BackColor="#E0E0E0">
+    </RowAlternateStyleDefault>
+    <FilterOptionsDefault AllString="(All)" EmptyString="(Empty)" NonEmptyString="(NonEmpty)">
+      <FilterDropDownStyle BackColor="White" BorderColor="Silver" BorderStyle="Solid" BorderWidth="1px"
+          CustomRules="overflow:auto;" Font-Names="Verdana,Arial,Helvetica,sans-serif"
+          Font-Size="11px" Width="200px">
+        <Padding Left="2px" />
+      </FilterDropDownStyle>
+      <FilterHighlightRowStyle BackColor="#151C55" ForeColor="White">
+      </FilterHighlightRowStyle>
+    </FilterOptionsDefault>
+  </DisplayLayout>
+  <Bands>
+    <igtbl:UltraGridBand>
+      <AddNewRow View="NotSet" Visible="NotSet">
+      </AddNewRow>
+      <FilterOptions AllString="" EmptyString="" NonEmptyString="">
+        <FilterDropDownStyle BackColor="White" BorderColor="Silver" BorderStyle="Solid" BorderWidth="1px"
+            CustomRules="overflow:auto;" Font-Names="Verdana,Arial,Helvetica,sans-serif"
+            Font-Size="11px" Width="200px">
+          <Padding Left="2px" />
+        </FilterDropDownStyle>
+        <FilterHighlightRowStyle BackColor="#151C55" ForeColor="White">
+        </FilterHighlightRowStyle>
+      </FilterOptions>
+    </igtbl:UltraGridBand>
+  </Bands>
+</igtbl:UltraWebGrid>

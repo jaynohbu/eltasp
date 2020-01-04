@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Light 1" PresetDescription="Infragistics Light 1 Preset" PresetType="Appearance" />-->
+<igsch:WebCalendar ID="WebCalendar1">
+  <Layout ShowYearDropDown="False" PrevMonthImageUrl="ig_cal_grayP0.gif" ShowMonthDropDown="False" NextMonthImageUrl="ig_cal_grayN0.gif">
+    <FooterStyle Height="16pt" Font-Size="8pt" ForeColor="#707070" BackgroundImage="ig_cal_light1.gif">
+      <BorderDetails ColorTop="#B0B0B0" WidthTop="1px" StyleTop="Solid" />
+    </FooterStyle>
+    <SelectedDayStyle ForeColor="White" BackColor="#909090" />
+    <OtherMonthDayStyle ForeColor="#909090" />
+    <NextPrevStyle BackgroundImage="ig_cal_light2.gif" />
+    <CalendarStyle BorderWidth="1px" Font-Size="9pt" Font-Names="Verdana" BorderColor="Gray" BorderStyle="Solid" ForeColor="#505050" BackColor="#FBFBFB" />
+    <TodayDayStyle ForeColor="Black" BackColor="#E8E8E8" />
+    <DayHeaderStyle Height="1pt" Font-Size="8pt" Font-Bold="True" ForeColor="Gray" BackColor="#F7F7F7">
+      <BorderDetails StyleBottom="Solid" ColorBottom="#B0B0B0" WidthBottom="1px" />
+    </DayHeaderStyle>
+    <TitleStyle Height="18pt" Font-Size="10pt" Font-Bold="True" ForeColor="Gray" BackgroundImage="ig_cal_light2.gif" BackColor="#E0E0E0" />
+  </Layout>
+</igsch:WebCalendar>

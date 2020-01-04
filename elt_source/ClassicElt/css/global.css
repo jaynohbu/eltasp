@@ -1,0 +1,73 @@
+body {
+	color: #606060;
+	background-color: white;
+	font-size: 74%;
+	margin: 0;
+	padding: 0;
+	line-height: 1.4em;
+}
+p {
+	line-height: 1.4em;
+	margin: 0px;
+	padding-top: -0.3em;
+	padding-bottom: 1.2em;
+}
+h1{
+	font-size: 1.2em;
+	color: #1783c7;
+	font-weight: bold;
+	padding-top: 0px;
+	margin: 0px;
+	line-height: 1.3em;
+	padding-bottom: 0.8em;
+}
+#frame{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #a4a3a7;
+}
+#content{
+	float:left;
+	width: 62%;
+	margin: 0;
+	padding-bottom: 0;
+	line-height: 1.4em;
+	padding-top: 2.2em;
+	padding-left: 2em;
+}
+#sidebody{
+	background-color: #edf2f8;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 68%;
+	padding-right: 6.5em;
+	padding-bottom: 1.5em;
+	padding-left: 1.8em;
+	padding-top: 1em;
+}
+#highlightbox {
+	width: 260px;
+	margin: 8px 10px 5px 10px;
+}
+#siteinfo a {
+	width: 100%;
+	margin: 0px;
+	padding-right: 0.15em;
+	padding-left: 0.15em;
+	color: #6b6b6b;
+}
+#siteinfo a:hover {
+	width: 100%;
+	margin: 0px;
+	color: #b83423;
+	text-decoration: underline;
+}
+#siteinfo a:visited {
+	width: 100%;
+	margin: 0px;
+	color: #6b6b6b;
+}
+	

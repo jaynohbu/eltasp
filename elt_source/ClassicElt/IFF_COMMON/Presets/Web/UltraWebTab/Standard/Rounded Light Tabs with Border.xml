@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Rounded Light Tabs with Border" PresetDescription="Rounded Light Tabs with Border Preset.  Sets both Look and Behavior properties." PresetType="All" />-->
+<igtab:UltraWebTab BorderColor="Gray" BorderStyle="Solid" ThreeDEffect="False" BorderWidth="1px">
+  <DisabledTabStyle />
+  <DefaultTabStyle Height="20px" BackColor="WhiteSmoke" />
+  <RoundedImage SelectedImage="ig_tab_lightb2.gif" NormalImage="ig_tab_lightb1.gif" FillStyle="LeftMergedWithCenter" />
+  <DefaultTabSeparatorStyle />
+  <SelectedTabStyle />
+</igtab:UltraWebTab>

@@ -1,0 +1,60 @@
+﻿<link href="@Url.Content("~/Content/css/tab_oceanimport.css")" rel="stylesheet" type="text/css" />
+<div id="OceanImportDiv" style="overflow: hidden; height: 28px; position: relative;
+    left: 0px; width: 100%">
+    <div id="divMore" style="cursor: pointer; height: 28px; position: absolute; z-index: 1;
+        visibility: hidden; width: 20px" onmouseover="bevelThis(this)" onmouseout="unbevelThis(this)"
+        onclick="MoveSubMenu()">
+        &gt;&gt;
+    </div>
+    <ul id="OceanImportUL" style="position: absolute; margin-left: -57px; left: 0px;
+        width: 4000px">
+        <li id="DeconsolidationQueue"><a class="noLeft" id="AirExportDivSelected" 
+            href="@Url.Content("~/OceanImport/DeconsolidationQueue")" >
+            <span>Deconsolidation Queue </span>
+        </a></li>
+         <li id="Deconsolidation"><a class="noLeft" 
+            href="@Url.Content("~/OceanImport/Deconsolidation")" >
+            <span>Deconsolidation </span></a>
+        </li>
+        <li id="ArrivalNotice"><a class="noLeft" 
+            href="@Url.Content("~/OceanImport/ArrivalNotice")" >
+            <span>Arrival Notice </span></a>
+        </li>
+        <li id="DeliveryOrder"><a class="noLeft" 
+            href="@Url.Content("~/OceanImport/DeliveryOrder")" >
+            <span>Delivery Order </span></a>
+        </li>
+        <li id="ProofOfDelivery"><a class="noLeft" 
+            href="@Url.Content("~/OceanImport/ProofOfDelivery")" >
+            <span>Proof of Delivery
+            </span></a></li>
+        <li id="EArrivalNotice"><a class="noLeft" 
+            href="@Url.Content("~/OceanImport/EArrivalNotice")" >
+            <span>eArrival Notice </span>
+        </a></li>
+        <li id="OISearch"><a class="noLeft" 
+            href="@Url.Content("~/OceanImport/OISearch")" >
+            <span>OI Search </span></a>
+        </li>
+    </ul>
+</div>
+  <script type="text/javascript">
+      $(document).ready(function () {
+          //reset menu
+          var submenues = $("#OceanImportUL>li");
+          submenues.each(function (index) {
+              $(this).removeClass("selected");
+
+          });
+
+          //detect the name of view
+          var currUrl = $(location).attr('href');
+          var parts = currUrl.split("/");
+          var currView = parts[4];
+
+          if (currView != "")
+              $("#" + currView + ">a").addClass("selected");
+
+          // $(".CurAirExportDiv").attr("id", "CurAirExportDiv");
+      });
+</script>

@@ -1,0 +1,10 @@
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.BL\bin\Release\ELT.BL.dll.config
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.BL\bin\Release\ELT.BL.dll
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.BL\bin\Release\ELT.BL.pdb
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.BL\bin\Release\ELT.CDT.dll
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.BL\bin\Release\ELT.DA.dll
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.BL\bin\Release\ELT.CDT.pdb
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.BL\bin\Release\ELT.DA.pdb
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.BL\obj\Release\ELT.BL.csprojResolveAssemblyReference.cache
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.BL\obj\Release\ELT.BL.dll
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.BL\obj\Release\ELT.BL.pdb

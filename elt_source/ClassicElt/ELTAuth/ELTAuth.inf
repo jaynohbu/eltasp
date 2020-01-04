@@ -1,0 +1,55 @@
+;[version]
+;signature="$CHICAGO$"
+;AdvancedINF=2.0
+;
+;[DefaultInstall]
+;CopyFiles=install.files
+;RegisterOCXs=RegisterFiles
+;AddReg=AddToRegistry
+;
+;[RInstallApplicationFiles]
+;CopyFiles=install.files
+;RegisterOCXs=RegisterFiles
+;AddReg=AddToRegistry
+;
+;[DestinationDirs]
+;install.files=11
+;
+;[SourceDisksNames]
+;1=%DiskName%,ELTAuth.CAB,1
+
+[Add.Code]
+ClientTrack.ocx=ClientTrack.ocx
+ELTAuth.inf=ELTAuth.inf
+
+[install.files]
+ClientTrack.ocx=ClientTrack.ocx
+
+[SourceDisksFiles]
+ClientTrack.ocx=1
+
+[ClientTrack.ocx]
+file=thiscab
+clsid={794834BD-2C77-4D7E-9189-68AA99DC426B}
+RegisterServer=yes
+FileVersion=1,0,0,1
+
+[ELTAuth.inf]
+file=thiscab
+
+;[Setup Hooks]
+;AddToRegHook=AddToRegHook
+
+;[AddToRegHook]
+;InfSection=DefaultInstall2
+
+;[DefaultInstall2]
+;AddReg=AddToRegistry
+
+;[AddToRegistry]
+;HKLM,"SOFTWARE\Classes\CLSID\{B38256C8-D8AE-42FF-8B14-B6FAB132E440}\Implemented Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}"
+;HKLM,"SOFTWARE\Classes\CLSID\{B38256C8-D8AE-42FF-8B14-B6FAB132E440}\Implemented Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}"
+;HKCR,"Licenses",,,"Licensing: Copying the keys may be a violation of established copyrights."
+
+;[RegisterFiles]
+;%11%\ClientTrack.ocx

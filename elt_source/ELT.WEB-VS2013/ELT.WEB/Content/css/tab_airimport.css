@@ -1,0 +1,11 @@
+﻿
+	/* Air Import */        
+	#tabs .CurAirImportDiv a {
+		background: url(/Images/navtab_cur_ailf.gif) no-repeat left top;
+	}
+	#tabs .CurAirImportDiv a span {
+		background: url(/Images/navtab_cur_airt.gif) no-repeat right top;
+		color: #2c2322;
+		/* bottom padding to hide bottom border line bottom border of tabs 5px+1px(for 1px bottom border)=6px */
+		padding-bottom:6px; 
+	}

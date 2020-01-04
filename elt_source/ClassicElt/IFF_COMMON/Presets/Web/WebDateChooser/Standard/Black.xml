@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Black" PresetDescription="Infragistics Black Preset" PresetType="Appearance" />-->
+<igsch:WebDateChooser>
+  <ClientSideEvents />
+  <CalendarLayout TitleFormat="Month" ShowYearDropDown="False" PrevMonthImageUrl="ig_cal_grayP.gif" ShowMonthDropDown="False" NextMonthImageUrl="ig_cal_grayN.gif">
+    <FooterStyle BorderWidth="1px" BorderColor="#606060" BorderStyle="Solid" ForeColor="#E0E0E0" BackColor="#404040" />
+    <SelectedDayStyle ForeColor="Black" BackColor="Silver" />
+    <OtherMonthDayStyle ForeColor="Gray" />
+    <CalendarStyle Font-Size="9pt" Font-Names="Verdana" ForeColor="White" BackColor="Black" />
+    <TodayDayStyle BackColor="#404040" />
+    <DayHeaderStyle Height="1pt" Font-Size="8pt" ForeColor="#E0E0E0" BackColor="#404040">
+      <BorderDetails StyleBottom="Solid" ColorBottom="Gray" WidthBottom="1px" />
+    </DayHeaderStyle>
+    <TitleStyle Height="18pt" Font-Bold="True" ForeColor="#E0E0E0" BackColor="Black" />
+  </CalendarLayout>
+  <DropButton>
+    <HoverStyle />
+    <Style />
+  </DropButton>
+  <ExpandEffects ShadowColor="LightGray" />
+</igsch:WebDateChooser>

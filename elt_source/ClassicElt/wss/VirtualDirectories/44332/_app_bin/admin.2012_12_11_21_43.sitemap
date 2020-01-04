@@ -1,0 +1,306 @@
+<siteMap enableLocalization="true">
+  <siteMapNode title="" url="/">
+    <siteMapNode title="$Resources:spadmin,applications_pagetitle" url="applications.aspx">
+      <siteMapNode title="$Resources:spadmin,application_associations_pagetitle" url="/_admin/applicationassociations.aspx" />
+      <siteMapNode title="$Resources:spadmin,sitemap_ApplicationManagement_ManageContentDatabases_Title" url="/_admin/CNTDBADM.aspx">
+        <siteMapNode title="$Resources:spadmin,newcntdb_pagetitle" url="/_admin/newcntdb.aspx" />
+        <siteMapNode title="$Resources:spadmin,oldcntdb_pagetitle" url="/_admin/oldcntdb.aspx" />
+      </siteMapNode>
+      <siteMapNode title="$Resources:spadmin,sitemap_ApplicationManagement_CreateSite_Title" url="/_admin/createsite.aspx">
+        <siteMapNode title="$Resources:spadmin,SiteCreated_PageTitle" url="/_admin/SiteCreated.aspx" />
+      </siteMapNode>
+      <siteMapNode title="$Resources:spadmin,sitemap_Operations_DefaultDatabase_Title" url="/_admin/defaultcontentdb.aspx" />
+      <siteMapNode title="$Resources:spadmin,sitemap_ApplicationManagement_SiteUse_Title" url="/_admin/DeleteSiteConfig.aspx" />
+      <siteMapNode title="$Resources:spadmin,deletewebapp_pagetitle" url="/_admin/DeleteWebApplication.aspx" />
+      <siteMapNode title="$Resources:spadmin,DeleteSite_PageTitle" url="/_admin/delsite.aspx" />
+      <siteMapNode title="$Resources:spadmin,sitemap_Operations_DataRetrieval_Title" url="/_admin/DspSettings.aspx" />
+      <siteMapNode title="$Resources:spadmin,extendvsoption_pagetitle" url="/_admin/extendvsoption.aspx">
+        <siteMapNode title="$Resources:spadmin,extendvs_PageTitle" url="/_admin/extendvs.aspx">
+          <siteMapNode title="$Resources:spadmin,applicationcreated_pagetitle" url="/_admin/applicationcreated.aspx" />
+        </siteMapNode>
+        <siteMapNode title="$Resources:spadmin,extendwebfarm_PageTitle" url="/_admin/extendwebfarm.aspx" />
+      </siteMapNode>
+      <siteMapNode title="$Resources:spadmin,sitemap_ApplicationManagement_QuotaDefinition_Title" url="/_admin/ManageQuotaTemplate.aspx" />
+      <siteMapNode title="$Resources:spadmin,ManageWebAppFeatures_pagetitle" url="/_admin/ManageWebAppFeatures.aspx" />
+      <siteMapNode title="$Resources:spadmin,sitemap_ApplicationManagement_SiteAdministrators_Title" url="/_admin/owners.aspx" />
+      <siteMapNode title="$Resources:spadmin,scprefix_pagetitle" url="/_admin/scprefix.aspx" />
+      <siteMapNode title="$Resources:spadmin,svcappsadm_pagetitle" url="/_admin/ServiceApplications.aspx">
+        <siteMapNode title="$Resources:spadmin,BDC_Applications" url="/_admin/bdc/BDCApplications.aspx" requiredParameters="AppId">
+          <siteMapNode title="$Resources:spadmin,BDC_AddApplication" url="/_admin/bdc/AddBDCApplication.aspx" />
+          <siteMapNode title="$Resources:spadmin,BDC_ExportApplication" url="/_admin/bdc/ExportBDCApplication.aspx" />
+          <siteMapNode title="$Resources:spadmin,BDC_ViewEntities" url="/_admin/bdc/ViewBDCApplication.aspx" requiredParameters="AppId,ModelName,LobName">
+            <siteMapNode title="$Resources:spadmin,BDC_ViewEntity" url="/_admin/bdc/ViewBDCEntity.aspx" requiredParameters="Name,Namespace,AppId,ModelName,LobName">
+              <siteMapNode title="$Resources:spadmin,BDC_AddAction_Title" url="/_admin/bdc/AddBDCAction.aspx" />
+              <siteMapNode title="$Resources:spadmin,BDC_EditAction_Title" url="/_admin/bdc/EditBDCAction.aspx" />
+            </siteMapNode>
+          </siteMapNode>
+          <siteMapNode title="$Resources:spadmin,BDC_ViewLOBSystems" url="/_admin/bdc/ViewBDCLobSystems.aspx" requiredParameters="AppId">
+            <siteMapNode title="$Resources:spadmin,BDC_ViewLOBSystemInstances" url="/_admin/bdc/ViewBDCLobSystemInstances.aspx" requiredParameters="AppId,LobName">
+              <siteMapNode title="$Resources:spadmin,BDC_LobSystemInstanceSettingPageTitle" url="/_admin/bdc/BDCLobSettings.aspx" />;
+            </siteMapNode>
+          </siteMapNode>
+        </siteMapNode>
+        <siteMapNode url="/_admin/AccessServerSettingsPage.aspx" title="$Resources:accsrvadmin,AccessServicesAdmin_SiteMap_PageTitle" requiredParameters="Id" parentUrl="/_admin/ServiceApplications.aspx" />
+        <siteMapNode title="$Resources:ObaUI,SSSAdmin_ManageSSSvcPageTitle" url="/_admin/sssvc/ManageSSSvcApplication.aspx" parentUrl="/_admin/ServiceApplications.aspx" requiredParameters="appid">
+          <siteMapNode title="$Resources:ObaUI,SSSAdmin_SSSvcTargetAppPageTitle" url="/_admin/sssvc/ManageTargetApplicationInstance.aspx" />
+          <siteMapNode title="$Resources:ObaUI,SSSAdmin_SSSvcTargetAppFieldPageTitle" url="/_admin/sssvc/ManageTargetApplicationFields.aspx" />
+          <siteMapNode title="$Resources:ObaUI,SSSAdmin_SSSvcTargetAppMembershipPageTitle" url="/_admin/sssvc/ManageTargetApplicationClaims.aspx" />
+          <siteMapNode title="$Resources:ObaUI,SSSAdmin_SSSvcTargetAppStateInfoPageTitle" url="/_admin/sssvc/ManageTargetApplicationStateInfo.aspx" />
+        </siteMapNode>
+        <siteMapNode url="/_admin/ManagePpsBiService.aspx" title="$Resources:PpsAdminUIStrings, ManagePerformancePointServicesBreadcrumTitle" requiredParameters="appid" parentUrl="/_admin/ServiceApplications.aspx">
+          <siteMapNode url="/_admin/EditPpsBiServiceSettings.aspx" title="$Resources:PpsAdminUIStrings, PerformancePointServicesSettingBreadcrumTitle" requiredParameters="appid" />
+          <siteMapNode url="/_admin/ListPpsTrustedDataSourceLocations.aspx" title="$Resources:PpsAdminUIStrings, TrustedDataSourcesTitle" requiredParameters="appid" />
+          <siteMapNode url="/_admin/ListPpsTrustedContentLocations.aspx" title="$Resources:PpsAdminUIStrings, TrustedWorkspacesTitle" requiredParameters="appid" />
+        </siteMapNode>
+        <siteMapNode url="/_admin/VisioServiceLanding.aspx" title="$Resources:vsrv, LandingPageTitle" requiredParameters="appid" parentUrl="/_admin/ServiceApplications.aspx">
+          <siteMapNode url="/_admin/VisioEditServiceSettings.aspx" title="$Resources:vsrv, EditServiceSettingsPageTitle" requiredParameters="appid" />
+          <siteMapNode url="/_admin/VisioDataProviders.aspx" title="$Resources:vsrv, ListDataProvidersPageTitle" requiredParameters="appid">
+            <siteMapNode url="/_admin/VisioAddDataProvider.aspx" title="$Resources:vsrv, AddDataProviderPageTitle" />
+            <siteMapNode url="/_admin/VisioEditDataProvider.aspx" title="$Resources:vsrv, EditDataProviderPageTitle" />
+          </siteMapNode>
+        </siteMapNode>
+        <siteMapNode url="/_admin/VisioServiceProxySettings.aspx" title="$Resources:vsrv, VisioServiceProxySettingsPageTitle" requiredParameters="proxyid" parentUrl="/_admin/ServiceApplications.aspx" />
+        <siteMapNode url="/_admin/WordServerManage.aspx" parentUrl="/_admin/ServiceApplications.aspx" title="$Resources:WordAdmin,WordServices_PageDescription" />
+        <siteMapNode url="/_admin/ExcelServicesAdmin.aspx" title="$Resources:xlsrv,ExcelServicesAdmin_SiteMap_PageTitle" requiredParameters="Id" parentUrl="/_admin/ServiceApplications.aspx">
+          <siteMapNode url="/_admin/ExcelServerSettings.aspx" title="$Resources:xlsrv,ExcelServerSettings_SiteMap_PageTitle" requiredParameters="Id" />
+          <siteMapNode url="/_admin/ExcelServerTrustedLocations.aspx" title="$Resources:xlsrv,ExcelServerTrustedLocations_SiteMap_PageTitle" requiredParameters="Id">
+            <siteMapNode url="/_admin/ExcelServerTrustedLocation.aspx" title="$Resources:xlsrv,ExcelServerTrustedLocation_SiteMap_PageTitle" />
+          </siteMapNode>
+          <siteMapNode url="/_admin/ExcelServerTrustedDcls.aspx" title="$Resources:xlsrv,ExcelServerTrustedDcls_SiteMap_PageTitle" requiredParameters="Id">
+            <siteMapNode url="/_admin/ExcelServerTrustedDcl.aspx" title="$Resources:xlsrv,ExcelServerTrustedDcl_SiteMap_PageTitle" />
+          </siteMapNode>
+          <siteMapNode url="/_admin/ExcelServerSafeDataProviders.aspx" title="$Resources:xlsrv,ExcelServerSafeDataProviders_SiteMap_PageTitle" requiredParameters="Id">
+            <siteMapNode url="/_admin/ExcelServerSafeDataProvider.aspx" title="$Resources:xlsrv,ExcelServerSafeDataProvider_SiteMap_PageTitle" />
+          </siteMapNode>
+          <siteMapNode url="/_admin/ExcelServerUserDefinedFunctions.aspx" title="$Resources:xlsrv,ExcelServerUserDefinedFunctions_SiteMap_PageTitle" requiredParameters="Id">
+            <siteMapNode url="/_admin/ExcelServerUserDefinedFunction.aspx" title="$Resources:xlsrv,ExcelServerUserDefinedFunction_SiteMap_PageTitle" />
+          </siteMapNode>
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode title="$Resources:spadmin,sitecollections_pagetitle" url="/_admin/sitecollections.aspx" />
+      <siteMapNode title="$Resources:spadmin,sitequota_pagetitle" url="/_admin/sitequota.aspx" />
+      <siteMapNode title="$Resources:spadmin,sitemap_ApplicationManagement_Unextend_Title" url="/_admin/unextendvs.aspx" />
+      <siteMapNode title="$Resources:spadmin,vsemail_pageTitle" url="/_admin/VSEmail.aspx" />
+      <siteMapNode title="$Resources:spadmin,sitemap_ApplicationManagement_GeneralSettings_Title" url="/_admin/vsgeneralsettings.aspx" />
+      <siteMapNode title="$Resources:spadmin,vsmask_PageTitle" url="/_admin/vsmask.aspx" />
+      <siteMapNode title="$Resources:spadmin,vsxms_pageTitle" url="/_admin/VSXms.aspx" />
+      <siteMapNode title="$Resources:spadmin,webapplications_pageTitle" url="/_admin/webapplications.aspx" />
+      <siteMapNode title="$Resources:spadmin,webapplications_pageTitle" url="/_admin/WebApplicationList.aspx" />
+      <siteMapNode title="$Resources:officeserveradmin,ManageSspPageTitle" url="/_admin/managessp.aspx" parentUrl="applications.aspx">
+        <siteMapNode title="$Resources:officeserveradmin,ChangeDefaultSspPageTitle" url="/_admin/changedefaultssp.aspx" />
+        <siteMapNode title="$Resources:officeserveradmin,ChangeWebAppAssociationPageTitle" url="/_admin/changewebappassociation.aspx" />
+        <siteMapNode title="$Resources:officeserveradmin,DeleteSspPageTitle" url="/_admin/deletessp.aspx" />
+        <siteMapNode title="$Resources:officeserveradmin,restoressp_PageTitle" url="/_admin/restoressp.aspx" />
+        <siteMapNode title="$Resources:officeserveradmin,SspDetailsPageTitle" url="/_admin/sspdetails.aspx" />
+      </siteMapNode>
+      <siteMapNode title="$Resources:officeserveradmin,ManageInterFarmServicesPageTitle" url="/_admin/manageinterfarmservices.aspx" parentUrl="applications.aspx" />
+      <siteMapNode category="Dashboard" title="$SatelliteResources:Microsoft.Office.Server.Search,Dashboard_SearchAdminBreadcrumb" url="/searchadministration.aspx" description="$SatelliteResources:Microsoft.Office.Server.Search,S2LeftNav_SearchAdministration_ToolTipText" parentUrl="applications.aspx" Id="S2LeftNav_SearchAdministration">
+        <siteMapNode category="CrawlContent" title="$SatelliteResources:Microsoft.Office.Server.Search,ManageContentSource_SearchAdminBreadcrumb" url="/_admin/search/listcontentsources.aspx" description="$SatelliteResources:Microsoft.Office.Server.Search,S2LeftNav_ManageContentSource_ToolTipText" Id="S2LeftNav_ListContentSources">
+          <siteMapNode category="CrawlContent" title="$SatelliteResources:Microsoft.Office.Server.Search,AddContentSource_SearchAdminBreadcrumb" url="/_admin/search/addcontentsource.aspx" Id="S2LeftNav_AddContentSource" />
+          <siteMapNode category="CrawlContent" title="$SatelliteResources:Microsoft.Office.Server.Search,EditContentSource_SearchAdminBreadcrumb" url="/_admin/search/editcontentsource.aspx" Id="S2LeftNav_EditContentSource" />
+        </siteMapNode>
+        <siteMapNode category="CrawlContent" title="$SatelliteResources:Microsoft.Office.Server.Search,ManageCrawlRules_SearchAdminBreadcrumb" url="/_admin/search/managecrawlrules.aspx" description="$SatelliteResources:Microsoft.Office.Server.Search,S2LeftNav_ManageCrawlRules_ToolTipText" Id="S2LeftNav_ManageCrawlRules">
+          <siteMapNode category="CrawlContent" title="$SatelliteResources:Microsoft.Office.Server.Search,EditCrawlRule_SearchAdminBreadcrumb" url="/_admin/search/editcrawlrule.aspx" Id="S2LeftNav_EditCrawlRule" />
+        </siteMapNode>
+        <siteMapNode category="CrawlContent" title="$SatelliteResources:Microsoft.Office.Server.Search,CrawlLog_pagetitle" url="/_admin/search/LogContentSources.aspx" description="$SatelliteResources:Microsoft.Office.Server.Search,S2LeftNav_CrawlLog_ToolTipText" Id="S2LeftNav_LogContentSources">
+          <siteMapNode category="CrawlContent" title="$SatelliteResources:Microsoft.Office.Server.Search,LogSummary_pagetitle" url="/_admin/search/LogSummary.aspx" Id="S2LeftNav_LogSummary" />
+          <siteMapNode category="CrawlContent" title="$SatelliteResources:Microsoft.Office.Server.Search,LogViewer_pagetitle" url="/_admin/search/LogViewer.aspx" Id="S2LeftNav_LogViewer" />
+        </siteMapNode>
+        <siteMapNode category="Queries" showInExtendedSSA="false" title="$SatelliteResources:Microsoft.Office.Server.Search,EditRelevance_SearchAdminBreadcrumb" url="/_admin/search/editrelevancesettings.aspx" description="$SatelliteResources:Microsoft.Office.Server.Search,S2LeftNav_EditRelevance_ToolTipText" Id="S2LeftNav_EditRelevanceSettings" />
+        <siteMapNode category="Queries" showInExtendedSSA="false" title="$SatelliteResources:Microsoft.Office.Server.Search,ManageFederatedLocations_SearchAdminBreadcrumb" url="/_admin/search/managefederatedlocations.aspx" description="$SatelliteResources:Microsoft.Office.Server.Search,S2LeftNav_ManageFederatedLocations_ToolTipText" Id="S2LeftNav_ManageFederatedLocations">
+          <siteMapNode category="Queries" title="$SatelliteResources:Microsoft.Office.Server.Search,AddFederatedLocation_SearchAdminBreadcrumb" url="/_admin/search/addfederatedlocation.aspx" Id="S2LeftNav_AddFederatedLocation" />
+          <siteMapNode category="Queries" title="$SatelliteResources:Microsoft.Office.Server.Search,CopyFederatedLocation_SearchAdminBreadcrumb" url="/_admin/search/copyfederatedlocation.aspx" Id="S2LeftNav_CopyFederatedLocation" />
+          <siteMapNode category="Queries" title="$SatelliteResources:Microsoft.Office.Server.Search,EditFederatedLocation_SearchAdminBreadcrumb" url="/_admin/search/editfederatedlocation.aspx" Id="S2LeftNav_EditFederatedLocation" />
+          <siteMapNode category="Queries" title="$SatelliteResources:Microsoft.Office.Server.Search,ImportFederatedLocation_SearchAdminBreadcrumb" url="/_admin/search/importfederatedlocation.aspx" Id="S2LeftNav_ImportFederatedLocation" />
+        </siteMapNode>
+        <siteMapNode category="Queries" showInExtendedSSA="false" title="$SatelliteResources:Microsoft.Office.Server.Search,Schema_SearchAdminBreadcrumb" url="/_admin/search/listmanagedproperties.aspx" description="$SatelliteResources:Microsoft.Office.Server.Search,S2LeftNav_Metadata_ToolTipText" Id="S2LeftNav_Schema">
+          <siteMapNode showInExtendedSSA="false" title="$SatelliteResources:Microsoft.Office.Server.Search,EditManagedProperty_SearchAdminBreadcrumb" url="/_admin/search/managedproperty.aspx" Id="Nav_EditManagedProperty" />
+        </siteMapNode>
+        <siteMapNode showInExtendedSSA="false" title="$SatelliteResources:Microsoft.Office.Server.Search,CrawledPropertyCategories_SearchAdminBreadcrumb" url="/_admin/search/listcategories.aspx" Id="Nav_Categories">
+          <siteMapNode showInExtendedSSA="false" title="$SatelliteResources:Microsoft.Office.Server.Search,CrawledProperties_SearchAdminBreadcrumb" url="/_admin/search/listcrawledproperties.aspx" Id="Nav_CrawledProperties">
+            <siteMapNode showInExtendedSSA="false" title="$SatelliteResources:Microsoft.Office.Server.Search,EditCrawledProperty_SearchAdminBreadcrumb" url="/_admin/search/crawledproperty.aspx" Id="Nav_EditCrawledProperty" />
+          </siteMapNode>
+          <siteMapNode showInExtendedSSA="false" title="$SatelliteResources:Microsoft.Office.Server.Search,EditCategory_SearchAdminBreadcrumb" url="/_admin/search/category.aspx" Id="Nav_EditCrawledPropertyCategory" />
+        </siteMapNode>
+        <siteMapNode category="Queries" showInExtendedSSA="false" title="$SatelliteResources:Microsoft.Office.Server.Search,Scopes_SearchAdminBreadcrumb" url="/_admin/search/viewscopes.aspx" description="$SatelliteResources:Microsoft.Office.Server.Search,S2LeftNav_Scopes_ToolTipText" Id="S2LeftNav_ViewScopes">
+          <siteMapNode title="$SatelliteResources:Microsoft.Office.Server.Search,ScopeProperties_SearchAdminBreadcrumb" url="/_admin/search/viewscopesettings.aspx" Id="S2LeftNav_ViewScopeSettings">
+            <siteMapNode title="$SatelliteResources:Microsoft.Office.Server.Search,EditScope_SearchAdminBreadcrumb" url="/_admin/search/scope.aspx" Id="S2LeftNav_EditScope" />
+            <siteMapNode title="$SatelliteResources:Microsoft.Office.Server.Search,EditScopeRule_SearchAdminBreadcrumb" url="/_admin/search/matchingrule.aspx" Id="S2LeftNav_MatchingRule" />
+          </siteMapNode>
+        </siteMapNode>
+        <siteMapNode category="CrawlContent" title="$SatelliteResources:Microsoft.Office.Server.Search,ServerNameMappings_SearchAdminBreadcrumb" url="/_admin/search/listservernamemappings.aspx" description="$SatelliteResources:Microsoft.Office.Server.Search,S2LeftNav_ServerNameMappings_ToolTipText" Id="S2LeftNav_ListServerNameMappings">
+          <siteMapNode category="CrawlContent" title="$SatelliteResources:Microsoft.Office.Server.Search,EditServerNameMapping_SearchAdminBreadcrumb" url="/_admin/search/addservernamemappings.aspx" Id="S2LeftNav_AddServerNameMappings" />
+        </siteMapNode>
+        <siteMapNode category="Queries" showInExtendedSSA="false" title="$SatelliteResources:Microsoft.Office.Server.Search,SearchResultRemoval_SearchAdminBreadcrumb" url="/_admin/search/searchresultremoval.aspx" description="$SatelliteResources:Microsoft.Office.Server.Search,S2LeftNav_SearchResultRemoval_ToolTipText" Id="S2LeftNav_SearchResultRemoval" />
+        <siteMapNode category="CrawlContent" title="$SatelliteResources:Microsoft.Office.Server.Search,RedistHosts_SearchAdminBreadcrumb" url="/_admin/search/managehostdistrules.aspx" description="$SatelliteResources:Microsoft.Office.Server.Search,LeftNav_HostDistRules_ToolTipText" Id="S2LeftNav_ManageHostDistRules">
+          <siteMapNode category="CrawlContent" title="$SatelliteResources:Microsoft.Office.Server.Search,ddEditRedistHostRule_SearchAdminBreadcrumb" url="/_admin/search/edithostdistrule.aspx" Id="S2LeftNav_EditHostDistRule" />
+        </siteMapNode>
+        <siteMapNode category="CrawlContent" title="$SatelliteResources:Microsoft.Office.Server.Search,ManageFileTypes_SearchAdminBreadcrumb" url="/_admin/search/managefiletypes.aspx" description="$SatelliteResources:Microsoft.Office.Server.Search,S2LeftNav_ManageFileTypes_ToolTipText" Id="S2LeftNav_ManageFileTypes">
+          <siteMapNode category="CrawlContent" title="$SatelliteResources:Microsoft.Office.Server.Search,AddFileType_SearchAdminBreadcrumb" url="/_admin/search/addfiletype.aspx" Id="S2LeftNav_AddFileType" />
+        </siteMapNode>
+        <siteMapNode category="CrawlContent" title="$SatelliteResources:Microsoft.Office.Server.Search,Reset_SearchAdminBreadcrumb" url="/_admin/search/searchreset.aspx" description="$SatelliteResources:Microsoft.Office.Server.Search,S2LeftNav_Reset_ToolTipText" Id="S2LeftNav_SearchReset" />
+        <siteMapNode category="CrawlContent" title="$SatelliteResources:Microsoft.Office.Server.Search,S2LeftNav_CrawlerImpactRules" url="/_admin/search/managesitehitrules.aspx" description="$SatelliteResources:Microsoft.Office.Server.Search,S2LeftNav_CrawlerImpactRules_ToolTipText" Id="S2LeftNav_CrawlerImpactRules" />
+        <siteMapNode category="AdminReports" title="$SatelliteResources:Microsoft.Office.Server.Search,AdminReports_SearchAdminBreadcrumb" url="/AdminReports/Forms/AllItems.aspx" description="$SatelliteResources:Microsoft.Office.Server.Search,LeftNav_AdminReports_ToolTipText" Id="LeftNav_AdminReports" />
+        <siteMapNode category="AdminReports" showInExtendedSSA="false" title="$SatelliteResources:Microsoft.Office.Server.Search,S2LeftNavCategory_UsageReports" url="/_layouts/WebAnalytics/Report.aspx?t=SummaryReport&amp;l=sa" description="$SatelliteResources:Microsoft.Office.Server.Search, S2LeftNav_QueriesReport_ToolTipText" Id="LeftNav_UsageReports" />
+        <siteMapNode category="Help" sku="MSS,MSSx" title="$SatelliteResources:Microsoft.Office.Server.Search,AddNewContent_HelpLinkText" url="javascript:HelpWindowKey(&quot;MSSCentralAdmin_NewContent&quot;)" description="$SatelliteResources:Microsoft.Office.Server.Search,AddNewContent_ToolTipText" Id="S2Nav_AddNewContent_HelpLinkText" />
+        <siteMapNode category="Help" sku="MOSS" title="$SatelliteResources:Microsoft.Office.Server.Search,AddNewContent_HelpLinkText" url="javascript:HelpWindowKey(&quot;WSSCentralAdmin_NewContent&quot;)" description="$SatelliteResources:Microsoft.Office.Server.Search,AddNewContent_ToolTipText" Id="S2Nav_AddNewContent_HelpLinkText" />
+        <siteMapNode category="Help" sku="MSS,MSSx" title="$SatelliteResources:Microsoft.Office.Server.Search,Federate_HelpLinkText" url="javascript:HelpWindowKey(&quot;MSSCentralAdmin_Federate&quot;)" description="$SatelliteResources:Microsoft.Office.Server.Search,Federate_ToolTipText" Id="S2Nav_Federate_HelpLinkText" />
+        <siteMapNode category="Help" sku="MOSS" title="$SatelliteResources:Microsoft.Office.Server.Search,Federate_HelpLinkText" url="javascript:HelpWindowKey(&quot;WSSCentralAdmin_Federate&quot;)" description="$SatelliteResources:Microsoft.Office.Server.Search,Federate_ToolTipText" Id="S2Nav_Federate_HelpLinkText" />
+        <siteMapNode category="Help" sku="MSS,MSSx" title="$SatelliteResources:Microsoft.Office.Server.Search,AddUsers_HelpLinkText" url="javascript:HelpWindowKey(&quot;MSSCentralAdmin_AddUsers&quot;)" description="$SatelliteResources:Microsoft.Office.Server.Search,AddUsers_ToolTipText" Id="S2Nav_AddUsers_HelpLinkText" />
+        <siteMapNode category="Help" sku="MOSS" title="$SatelliteResources:Microsoft.Office.Server.Search,AddUsers_HelpLinkText" url="javascript:HelpWindowKey(&quot;WSSEndUser_AddUsers&quot;)" description="$SatelliteResources:Microsoft.Office.Server.Search,AddUsers_ToolTipText" Id="S2Nav_AddUsers_HelpLinkText" />
+        <siteMapNode category="Help" sku="MSS,MSSx" title="$SatelliteResources:Microsoft.Office.Server.Search,CustomizeSearchCenter_HelpLinkText" url="javascript:HelpWindowKey(&quot;MSSCentralAdmin_CustomizeSearchCenter&quot;)" description="$SatelliteResources:Microsoft.Office.Server.Search,CustomizeSearchCenter_ToolTipText" Id="S2Nav_CustomizeSearchCenter_HelpLinkText" />
+        <siteMapNode category="Help" sku="MOSS" title="$SatelliteResources:Microsoft.Office.Server.Search,CustomizeSearchCenter_HelpLinkText" url="javascript:HelpWindowKey(&quot;WSSEndUser_CustomizeSearchCenter&quot;)" description="$SatelliteResources:Microsoft.Office.Server.Search,CustomizeSearchCenter_ToolTipText" Id="S2Nav_CustomizeSearchCenter_HelpLinkText" />
+        <siteMapNode category="Help" sku="MSS,MSSx" title="$SatelliteResources:Microsoft.Office.Server.Search,SecureSearchSystem_HelpLinkText" url="javascript:HelpWindowKey(&quot;MSSCentralAdmin_SecureSearchSystem&quot;)" description="$SatelliteResources:Microsoft.Office.Server.Search,SecureSearchSystem_ToolTipText" Id="S2Nav_SecureSearchSystem_HelpLinkText" />
+        <siteMapNode category="Help" sku="MOSS" title="$SatelliteResources:Microsoft.Office.Server.Search,SecureSearchSystem_HelpLinkText" url="javascript:HelpWindowKey(&quot;WSSCentralAdmin_SecureSearchSystem&quot;)" description="$SatelliteResources:Microsoft.Office.Server.Search,SecureSearchSystem_ToolTipText" Id="S2Nav_SecureSearchSystem_HelpLinkText" />
+        <siteMapNode category="Help" sku="MSS,MSSx" title="$SatelliteResources:Microsoft.Office.Server.Search,EnhanceUserExperience_HelpLinkText" url="javascript:HelpWindowKey(&quot;MSSCentralAdmin_EnhanceUserExperience&quot;)" description="$SatelliteResources:Microsoft.Office.Server.Search,EnhanceUserExperience_ToolTipText" Id="S2Nav_EnhanceUserExperience_HelpLinkText" />
+        <siteMapNode category="Help" sku="MOSS" title="$SatelliteResources:Microsoft.Office.Server.Search,EnhanceUserExperience_HelpLinkText" url="javascript:HelpWindowKey(&quot;WSSEndUser_EnhanceUserExperience&quot;)" description="$SatelliteResources:Microsoft.Office.Server.Search,EnhanceUserExperience_ToolTipText" Id="S2Nav_EnhanceUserExperience_HelpLinkText" />
+        <siteMapNode category="Help" sku="MSS,MSSx" title="$SatelliteResources:Microsoft.Office.Server.Search,LearnMoreAboutTopology_HelpLinkText" url="javascript:HelpWindowKey(&quot;MSSCentralAdmin_SearchTopology&quot;)" description="$SatelliteResources:Microsoft.Office.Server.Search,LearnMoreAboutTopology_ToolTipText" Id="S2Nav_LearnMoreAboutTopology_HelpLinkText" />
+        <siteMapNode category="Help" sku="MOSS" title="$SatelliteResources:Microsoft.Office.Server.Search,LearnMoreAboutTopology_HelpLinkText" url="javascript:HelpWindowKey(&quot;WSSCentralAdmin_SearchTopology&quot;)" description="$SatelliteResources:Microsoft.Office.Server.Search,LearnMoreAboutTopology_ToolTipText" Id="S2Nav_LearnMoreAboutTopology_HelpLinkText" />
+        <siteMapNode category="Help" sku="MSS,MSSx" title="$SatelliteResources:Microsoft.Office.Server.Search,S2RightNav_OnlineDocumentation" url="javascript:void window.open(&quot;http://go.microsoft.com/fwlink/?LinkID=167882&quot;)" description="$SatelliteResources:Microsoft.Office.Server.Search,S2RightNav_OnlineDocumentation_ToolTipText" Id="S2Nav_OnlineDocumentation_HelpLinkText" />
+        <siteMapNode category="Help" sku="MOSS" title="$SatelliteResources:Microsoft.Office.Server.Search,S2RightNav_OnlineDocumentation" url="javascript:void window.open(&quot;http://go.microsoft.com/fwlink/?LinkID=169440&quot;)" description="$SatelliteResources:Microsoft.Office.Server.Search,S2RightNav_OnlineDocumentation_ToolTipText" Id="S2Nav_OnlineDocumentation_HelpLinkText" />
+      </siteMapNode>
+      <siteMapNode title="$SatelliteResources:Microsoft.Office.Server.Search,SearchConfigWizard_TopologyConfigCrumb" url="/_admin/search/SearchConfigWizardTopologyConfig.aspx" parentUrl="applications.aspx" Id="Nav_SearchConfigWizardTopologyConfig." />
+      <siteMapNode title="$SatelliteResources:Microsoft.Office.Server.Search,SearchConfigWizard_FinishCrumb" url="/_admin/search/searchconfigwizardFinish.aspx" parentUrl="applications.aspx" Id="Nav_SearchConfigWizardFinish" />
+    </siteMapNode>
+    <siteMapNode title="$Resources:spadmin,configurationwizards_pagetitle" url="configurationwizards.aspx">
+    </siteMapNode>
+    <siteMapNode title="$Resources:spadmin,generalapplicationsettings_pagetitle" url="generalapplicationsettings.aspx">
+      <siteMapNode title="$Resources:spadmin,doctransadmin_pagetitle" url="/_admin/DocTransAdmin.aspx" />
+      <siteMapNode title="$Resources:spadmin,sitemap_ApplicationManagement_HtmlViewer_Title" url="/_admin/HtmlTransAdmin.aspx" />
+      <siteMapNode title="$Resources:spadmin,officialfileadmin_pagetitle" url="/_admin/OfficialFileAdmin.aspx" />
+      <siteMapNode title="$Resources:spadmin,sharepointdesigner_title" url="/_admin/SharePointDesignerAdmin.aspx" />
+      <siteMapNode title="$Resources:spadmin,workflowadmin_pageTitle" url="/_admin/workflowAdmin.aspx" />
+      <siteMapNode url="/_admin/ipfsconfig.aspx" parentUrl="generalapplicationsettings.aspx" title="$Resources:ipfsadminpages,AdminBreadCrumbs_ipfsconfig" />
+      <siteMapNode url="/_admin/manageformsserviceproxy.aspx" parentUrl="generalapplicationsettings.aspx" title="$Resources:ipfsadminpages,AdminBreadCrumbs_manageformsserviceproxy" />
+      <siteMapNode url="/_admin/manageformtemplates.aspx" parentUrl="generalapplicationsettings.aspx" title="$Resources:ipfsadminpages,AdminBreadCrumbs_manageformtemplates">
+        <siteMapNode url="/_admin/uploadformtemplate.aspx" title="$Resources:ipfsadminpages,AdminBreadCrumbs_uploadformtemplate" />
+        <siteMapNode url="/_admin/formtemplateproperties.aspx" title="$Resources:ipfsadminpages,AdminBreadCrumbs_formtemplateproperties" />
+        <siteMapNode url="/_admin/activateformtemplate.aspx" title="$Resources:ipfsadminpages,AdminBreadCrumbs_activateformtemplate" />
+        <siteMapNode url="/_admin/deactivateformtemplate.aspx" title="$Resources:ipfsadminpages,AdminBreadCrumbs_deactivateformtemplate" />
+        <siteMapNode url="/_admin/removeformtemplate.aspx" title="$Resources:ipfsadminpages,AdminBreadCrumbs_removeformtemplate" />
+        <siteMapNode url="/_admin/quiesceformtemplate.aspx" title="$Resources:ipfsadminpages,AdminBreadCrumbs_quiesceformtemplate" />
+      </siteMapNode>
+      <siteMapNode url="/_admin/managedataconnectionfiles.aspx" parentUrl="generalapplicationsettings.aspx" title="$Resources:ipfsadminpages,AdminBreadCrumbs_managedataconnectionfiles">
+        <siteMapNode url="/_admin/adddataconnectionfile.aspx" title="$Resources:ipfsadminpages,AdminBreadCrumbs_adddataconnectionfile" />
+        <siteMapNode url="/_admin/editdataconnectionfile.aspx" title="$Resources:ipfsadminpages,AdminBreadCrumbs_editdataconnectionfile" />
+        <siteMapNode url="/_admin/removedataconnectionfile.aspx" title="$Resources:ipfsadminpages,AdminBreadCrumbs_removedataconnectionfile" />
+      </siteMapNode>
+      <siteMapNode url="/_admin/deploymentsettings.aspx" title="$Resources:cmsadmin,DeploySet_PageTitle" parentUrl="generalapplicationsettings.aspx" />
+      <siteMapNode url="/_admin/deployment.aspx" title="$Resources:cmsadmin,DeployManagePathsAndJobs_pagetitle" parentUrl="generalapplicationsettings.aspx">
+        <siteMapNode url="/_admin/deploymentPath.aspx" title="$Resources:cmsadmin,deploypath_pagetitle" parentUrl="/_admin/deployment.aspx" />
+        <siteMapNode url="/_admin/deploymentJob.aspx" title="$Resources:cmsadmin,deployjob_pagetitle" parentUrl="/_admin/deployment.aspx" />
+        <siteMapNode url="/_admin/deploymentReport.aspx" title="$Resources:cmsadmin,deployreport_pagetitle" parentUrl="/_admin/deployment.aspx" />
+        <siteMapNode url="/_admin/deploymentJobHistory.aspx" title="$Resources:cmsadmin,deployjobhistory_pagetitle" parentUrl="/_admin/deployment.aspx" />
+        <siteMapNode url="/_admin/deploymentEventDetails.aspx" title="$Resources:cmsadmin,deployeventdetails_pagetitle" parentUrl="/_admin/deployment.aspx" />
+      </siteMapNode>
+      <siteMapNode url="/_admin/DeploymentStatus.aspx" title="$Resources:cmsadmin,DeployStatus_PageTitle" parentUrl="generalapplicationsettings.aspx" />
+      <siteMapNode title="$Resources:sps,SiteDirSettings_Title" url="/_admin/SiteDirectorySettings.aspx" parentUrl="generalapplicationsettings.aspx" />
+      <siteMapNode title="$Resources:sps,LinksCheckerJobSettings_PageTitle" url="/_admin/LinksCheckerJobSettings.aspx" parentUrl="generalapplicationsettings.aspx" />
+    </siteMapNode>
+    <siteMapNode title="$Resources:spadmin,backups_pagetitle" url="backups.aspx">
+      <siteMapNode title="$Resources:spadmin,sitemap_Operations_Backup_Title" url="/_admin/Backup.aspx">
+        <siteMapNode title="$Resources:spadmin,startbackup_PageTitle" url="/_admin/StartBackup.aspx" />
+      </siteMapNode>
+      <siteMapNode title="$Resources:spadmin,backuphistory_PageTitle" url="/_admin/BackupHistory.aspx">
+        <siteMapNode title="$Resources:spadmin,sitemap_Operations_Restore_Title" url="/_admin/Restore.aspx" />
+        <siteMapNode title="$Resources:spadmin,sitemap_Operations_Restore_Title" url="/_admin/RestoreStep3.aspx" />
+      </siteMapNode>
+      <siteMapNode title="$Resources:spadmin,backup_settings_PageTitle" url="/_admin/BackupSettings.aspx" />
+      <siteMapNode title="$Resources:spadmin,sitemap_Operations_BackupStatus_Title" url="/_admin/BackupStatus.aspx" />
+      <siteMapNode title="$Resources:spadmin,unattachedcontentdb_PageTitle" url="/_admin/UnattachedDbSelect.aspx" />
+      <siteMapNode title="$Resources:spadmin,SCBackupExportStatus_PageTitle" url="/_admin/SiteBackupOrExportStatus.aspx" />
+    </siteMapNode>
+    <siteMapNode title="$Resources:spadmin,monitoring_pagetitle" url="monitoring.aspx">
+      <siteMapNode title="$Resources:spadmin,sitemap_Operations_UsageAnalysis_Title" url="/_admin/LogUsage.aspx" />
+      <siteMapNode title="$Resources:spadmin,sitemap_Operations_HealthReport_Title" url="/_admin/HealthReport.aspx" />
+      <siteMapNode title="$Resources:spadmin,sitemap_Operations_DiagnosticLogging_Title" url="/_admin/metrics.aspx" />
+      <siteMapNode title="$Resources:spadmin,sitemap_Operations_PolicyRptConfiguration_Title" url="/_admin/policyRptConfig.aspx" />
+      <siteMapNode title="$Resources:spadmin,ServiceJobDefinitions_PageTitle" url="/_admin/ServiceJobDefinitions.aspx">
+        <siteMapNode title="$Resources:spadmin,JobEdit_PageTitle" url="/_admin/JobEdit.aspx" />
+      </siteMapNode>
+      <siteMapNode title="$Resources:spadmin,Timer_PageTitle" url="/_admin/Timer.aspx">
+        <siteMapNode title="$Resources:spadmin,ScheduledJobs_PageTitle" url="/_admin/ScheduledTimerJobs.aspx" />
+        <siteMapNode title="$Resources:spadmin,ServiceRunningJobs_PageTitle" url="/_admin/ServiceRunningJobs.aspx" />
+        <siteMapNode title="$Resources:spadmin,JobHistory_PageTitle" url="/_admin/TimerJobHistory.aspx" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="$Resources:spadmin,security_pagetitle" url="security.aspx">
+      <siteMapNode title="$Resources:spadmin,managedaccounts_pagetitle" url="/_admin/ManagedAccounts.aspx">
+        <siteMapNode title="$Resources:spadmin,registeraccount_pagetitle" url="/_admin/RegisterAccount.aspx" />
+        <siteMapNode title="$Resources:spadmin,manageaccount_pagetitle" url="/_admin/EditAccount.aspx" />
+        <siteMapNode title="$Resources:spadmin,removeaccount_pagetitle" url="/_admin/RemoveAccount.aspx" />
+      </siteMapNode>
+      <siteMapNode title="$Resources:spadmin,sitemap_Operations_ServiceAccount_Title" url="/_admin/FarmCredentialManagement.aspx" />
+      <siteMapNode title="$Resources:spadmin,passwordsettings_pagetitle" url="/_admin/PasswordSettings.aspx" />
+      <siteMapNode title="$Resources:spadmin,sitemap_ApplicationManagement_AuthenticationProviders_Title" url="/_admin/authenticationproviders.aspx">
+        <siteMapNode title="$Resources:spadmin,authentication_pagetitle" url="/_admin/Authentication.aspx" />
+      </siteMapNode>
+      <siteMapNode title="$Resources:spadmin,avadmin_pagetitle" url="/_admin/AVAdmin.aspx" />
+      <siteMapNode title="$Resources:spadmin,blockedfiletype_pagetitle" url="/_admin/BlockedFileType.aspx" />
+      <siteMapNode title="$Resources:spadmin,sitemap_ApplicationManagement_SelfService_Title" url="/_admin/ConfigSSC.aspx" />
+      <siteMapNode title="$Resources:spadmin,sitemap_Operations_IRM_Title" url="/_admin/IrmAdmin.aspx" />
+      <siteMapNode title="$Resources:spadmin,sitemap_Security_ManageTrust_Title" url="/_admin/ManageTrust.aspx" />
+      <siteMapNode title="$Resources:spadmin,sitemap_Operations_AdministrationRoles_Title" url="/_admin/people.aspx" />
+      <siteMapNode title="$Resources:spadmin,sitemap_ApplicationManagement_ManagePolicy_Title" url="/_admin/policy.aspx">
+        <siteMapNode title="$Resources:spadmin,policyuser_PageTitle" url="/_admin/policyuser.aspx" />
+        <siteMapNode title="$Resources:spadmin,policyuseredit_PageTitle" url="/_admin/policyuseredit.aspx" />
+        <siteMapNode title="$Resources:spadmin,policyanon_PageTitle" url="/_admin/policyanon.aspx" />
+        <siteMapNode title="$Resources:spadmin,policyroles_PageTitle" url="/_admin/policyroles.aspx">
+          <siteMapNode title="$Resources:spadmin,policyrole_PageTitle" url="/_admin/policyrole.aspx" />
+          <siteMapNode title="$Resources:spadmin,policyroleedit_PageTitle" url="/_admin/policyroleedit.aspx" />
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode title="$Resources:spadmin,sitemap_Operations_PolicyFeaturesConfig_Title" url="/_admin/policyfeatures.aspx" />
+      <siteMapNode title="$Resources:spadmin,sitemap_ApplicationManagement_WebPartSecurity_Title" url="/_admin/SPSecuritySettings.aspx" />
+      <siteMapNode title="$Resources:sps,sitemap_sso_ManageSSO" url="/_admin/sso/ManageSSO.aspx" parentUrl="security.aspx">
+        <siteMapNode title="$Resources:sps,sitemap_sso_ManageServer" url="/_admin/sso/ManageServer.aspx" />
+        <siteMapNode title="$Resources:sps,sitemap_sso_ManageKey" url="/_admin/sso/ManageKey.aspx">
+          <siteMapNode title="$Resources:sps,sitemap_sso_Reencrypt" url="/_admin/sso/Reencrypt.aspx" />
+        </siteMapNode>
+        <siteMapNode title="$Resources:sps,sitemap_sso_ManageApps" url="/_admin/sso/ManageApps.aspx">
+          <siteMapNode title="$Resources:sps,sitemap_sso_ManageApp" url="/_admin/sso/ManageApp.aspx" />
+        </siteMapNode>
+        <siteMapNode title="$Resources:sps,sitemap_sso_ManageAccounts" url="/_admin/sso/ManageAccounts.aspx">
+          <siteMapNode title="$Resources:sps,sitemap_sso_SSOLogon" url="/_admin/sso/SSOLogon.aspx" />
+        </siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="$Resources:spadmin,systemsettings_pagetitle" url="systemsettings.aspx">
+      <siteMapNode title="$Resources:spadmin,AlternateUrlCollections_PageTitle" url="/_admin/AlternateUrlCollections.aspx">
+        <siteMapNode title="$Resources:spadmin,AlternateUrlCollections_AddIncomingPageTitle" url="/_admin/AddIncomingUrl.aspx" />
+        <siteMapNode title="$Resources:spadmin,AlternateUrlCollections_CreateExternalPageTitle" url="/_admin/CreateExternalUrl.aspx" />
+        <siteMapNode title="$Resources:spadmin,AlternateUrlCollections_EditIncomingPageTitle" url="/_admin/EditIncomingUrl.aspx" />
+        <siteMapNode title="$Resources:spadmin,AlternateUrlCollections_EditOutboundPageTitle" url="/_admin/EditOutboundUrls.aspx" />
+      </siteMapNode>
+      <siteMapNode title="$Resources:spadmin,FarmServers_PageTitle" url="/_admin/FarmServers.aspx" />
+      <siteMapNode title="$Resources:spadmin,sitemap_Operations_EmailConfiguration_Title" url="/_admin/globalemailconfig.aspx" />
+      <siteMapNode title="$Resources:spadmin,sitemap_Operations_XmsConfiguration_Title" url="/_admin/globalxmsconfig.aspx" />
+      <siteMapNode title="$Resources:spadmin,sitemap_Operations_IncomingEmailServer_Title" url="/_admin/IncomingEmail.aspx" />
+      <siteMapNode title="$Resources:spadmin,ManageFarmFeatures_pagetitle" url="/_admin/ManageFarmFeatures.aspx" />
+      <siteMapNode title="$Resources:spadmin,server_pagetitle" url="/_admin/Server.aspx">
+        <siteMapNode title="$Resources:spadmin,workflowtimer_pagetitle" url="/_admin/workflowtimer.aspx" />
+        <siteMapNode url="/_admin/DocConvLauncher.aspx" parentUrl="/_admin/Server.aspx" title="$Resources:dlcdm,docconvlauncherprovision_page_title" />
+        <siteMapNode url="/_admin/DocConvLoadBalancer.aspx" parentUrl="/_admin/Server.aspx" title="$Resources:dlcdm,docconvloadbalancerprovision_page_title" />
+        <siteMapNode title="$SatelliteResources:Microsoft.SharePoint.Search,SPSearchServiceInstanceSettings_SearchAdminBreadcrumb" url="/_admin/spsearchserviceinstancesettings.aspx" parentUrl="/_admin/Server.aspx" />
+      </siteMapNode>
+      <siteMapNode title="$Resources:spadmin,Solutions_PageTitle" url="/_admin/Solutions.aspx">
+        <siteMapNode title="$Resources:spadmin,solutionStatus_PageTitle" url="/_admin/SolutionStatus.aspx" requiredParameters="ItemName,Lcid">
+          <siteMapNode title="$Resources:spadmin,solution_DeploySolutionTitle" url="/_admin/DeploySolution.aspx" />
+          <siteMapNode title="$Resources:spadmin,solution_RetractSolutionTitle" url="/_admin/RetractSolution.aspx" />
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode title="$Resources:spadmin,userSolutions_pagetitle" url="/_admin/userSolutions.aspx" />
+      <siteMapNode title="$Resources:spadmin,privacyoptions_pagetitle" url="/_admin/privacy.aspx" />
+    </siteMapNode>
+    <siteMapNode title="$Resources:spadmin,upgradeandmigration_pagetitle" url="upgradeandmigration.aspx">
+      <siteMapNode title="$Resources:spadmin,patchstatus_pagetitle" url="/_admin/PatchStatus.aspx" />
+      <siteMapNode title="$Resources:spadmin,UpgradeStatus_PageTitle" url="/_admin/UpgradeStatus.aspx" />
+      <siteMapNode title="$Resources:spadmin,databasestatus_pagetitle" url="/_admin/DatabaseStatus.aspx" />
+      <siteMapNode title="$Resources:officeserveradmin,Conversion_PageTitle" url="/_admin/conversion.aspx" parentUrl="upgradeandmigration.aspx" />
+      <siteMapNode title="$Resources:sps,AdminFeaturePushdown_PageTitle" url="/_admin/enablefeatures.aspx" parentUrl="upgradeandmigration.aspx" />
+      <siteMapNode title="$Resources:sps,AdminEnablingFeatures_PageTitle" url="/_admin/enablingfeatures.aspx" parentUrl="upgradeandmigration.aspx" />
+      <siteMapNode title="$Resources:sps,AdminSkuUpgrade_PageTitle" url="/_admin/SkuUpgrade.aspx" parentUrl="upgradeandmigration.aspx" />
+    </siteMapNode>
+    <siteMapNode title="$Resources:officeserveradmin,SuccessPageTitle" url="/_admin/success.aspx" parentUrl="default.aspx" />
+  </siteMapNode>
+</siteMap>

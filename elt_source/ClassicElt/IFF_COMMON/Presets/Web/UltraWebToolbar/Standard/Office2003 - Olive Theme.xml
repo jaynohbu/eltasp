@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Office 2003 - Olive Theme" PresetDescription="Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<igtbar:UltraWebToolbar ImageDirectory="/ig_common/images/"  BorderStyle="None" MovableImage="ig_tb_move03.gif" BackColor="OliveDrab" BackgroundImage="OliveExplorer.gif" Font-Size="8pt" Font-Names="Arial" Font-Bold="False" ItemWidthDefault="80px" Movable="True" ItemSpacing="0" Height="22px" ItemPadding="0" ForeColor="Black">
+  <HoverStyle Cursor="Default" BorderWidth="1px" BorderColor="#B7C691" BorderStyle="Solid" BackgroundImage="none" BackColor="Bisque" Font-Size="8pt" Font-Names="Arial" Font-Bold="False" ForeColor="Black" />
+  <SelectedStyle Cursor="Default" BorderWidth="1px" BorderColor="#8F9E69" BorderStyle="Solid" BackgroundImage="OrangeExplorer.gif" BackColor="Orange" Font-Size="8pt" Font-Names="Arial" Font-Bold="False" ForeColor="Black" />
+  <DefaultStyle BorderWidth="0px" BorderColor="Menu" BorderStyle="None" Font-Size="8pt" BackgroundImage="oliveexplorer.gif" Font-Names="Arial" Font-Bold="False" ForeColor="Black" />
+</igtbar:UltraWebToolbar>

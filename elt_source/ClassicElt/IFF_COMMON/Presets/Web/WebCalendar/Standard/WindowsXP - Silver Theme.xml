@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="WindowsXP - Silver Theme" PresetDescription="Infragistics Windows XP Silver Theme.  Sets both Look and Behavior properties." PresetType="All" />-->
+<igsch:WebCalendar>
+  <Layout DayNameFormat="FirstLetter" FooterFormat="" ShowNextPrevMonth="False" ShowTitle="False" ShowFooter="False">
+    <DayStyle Font-Size="9pt" Font-Names="Arial" BackColor="White" />
+    <SelectedDayStyle ForeColor="Black" BackColor="Silver" />
+    <OtherMonthDayStyle ForeColor="White" />
+    <DayHeaderStyle Font-Size="9pt" Font-Names="Tahoma" ForeColor="#A2A1A1" BackColor="White" />
+    <TitleStyle BackColor="White" />
+  </Layout>
+</igsch:WebCalendar>

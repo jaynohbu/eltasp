@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Office2003 Toolbar Button" PresetDescription="Infragistics Office2003 Toolbar Button Preset. Sets Look properties only. Notes: 1. The 'Reset' box should be checked. 2. Background and borders appear on mouse move and press." PresetType="Appearance" />-->
+<igtxt:WebImageButton UseBrowserDefaults="False">
+	<FocusAppearance>
+		<Style BackColor="#FCE6AB">
+		</Style>
+		<InnerBorder ColorTop="#211B60" WidthLeft="1px" StyleBottom="Solid" ColorBottom="#211B60" WidthTop="1px" ColorRight="#211B60" WidthRight="1px" StyleTop="Solid" StyleRight="Solid" WidthBottom="1px" StyleLeft="Solid" ColorLeft="#211B60">
+		</InnerBorder>
+	</FocusAppearance>
+	<PressedAppearance ContentShift="None">
+		<Style BackColor="#F79646">
+		</Style>
+		<InnerBorder ColorTop="#211B60" WidthLeft="1px" StyleBottom="Solid" ColorBottom="#211B60" WidthTop="1px" ColorRight="#211B60" WidthRight="1px" StyleTop="Solid" StyleRight="Solid" WidthBottom="1px" StyleLeft="Solid" ColorLeft="#211B60">
+		</InnerBorder>
+	</PressedAppearance>
+	<HoverAppearance>
+		<Style BackColor="#F9DA9B">
+		</Style>
+		<InnerBorder ColorTop="#211B60" WidthLeft="1px" StyleBottom="Solid" ColorBottom="#211B60" WidthTop="1px" ColorRight="#211B60" WidthRight="1px" StyleTop="Solid" StyleRight="Solid" WidthBottom="1px" StyleLeft="Solid" ColorLeft="#211B60">
+		</InnerBorder>
+	</HoverAppearance>
+	<DisabledAppearance ContentShift="NotSet" />
+	<RoundedCorners RenderingType="Disabled">
+	</RoundedCorners>
+	<Appearance ContentShift="NotSet" />
+</igtxt:WebImageButton>

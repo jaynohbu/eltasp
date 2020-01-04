@@ -1,0 +1,16 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxNewsControl" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxNewsControl runat="server" SpriteCssFilePath="~/App_Themes/Metropolis/{0}/sprite.css" CssPostfix="Metropolis" CssFilePath="~/App_Themes/Metropolis/{0}/styles.css">
+    <ItemSettings DateVerticalPosition="Header" DateHorizontalPosition="Right" TailPosition="NewLine">
+        <TailImage Url="~/App_Themes/Metropolis/Web/ncTail.png" />
+    </ItemSettings>
+    <BackToTopImage Url="~/App_Themes/Metropolis/Web/ncGotoBack.png" />
+    <PagerSettings CurrentPageNumberFormat="{0}">
+        <PageSizeItemSettings ShowPopupShadow="False">
+        </PageSizeItemSettings>
+    </PagerSettings>
+    <LoadingPanelImage Url="~/App_Themes/Metropolis/Web/Loading.gif" />
+    <PagerStyle ItemSpacing="0px" Spacing="0px" />
+</dx:ASPxNewsControl>
+

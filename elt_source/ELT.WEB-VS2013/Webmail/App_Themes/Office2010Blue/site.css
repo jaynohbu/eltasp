@@ -1,0 +1,31 @@
+﻿#LayoutSplitter .HeadPane,
+#PrintLayoutSplitter .HeadPane
+{
+	background: #d3e4f6;
+}
+
+.DateNavigatorContainer
+{
+	background: #cfddee;
+}
+
+.HeadPane .ActionToolbar .Spacer b
+{
+    background: #849dbd;
+}
+
+.HeadPane .NavigationToolbar .NavigationMenu,
+.HeadPane .NavigationToolbar .SubMenu .dxm-content a.dx
+{
+    color: #7287a2;
+}
+#LayoutSplitter .HeadPane .NavigationToolbar .NavigationMenu .dxm-item .dxm-content,
+#LayoutSplitter .HeadPane .NavigationToolbar .NavigationMenu .dxm-item.dxm-hovered .dxm-content
+{
+    color: #6c7f97;
+}
+
+.HeadPane .ActionToolbar .SearchBox
+{
+    margin-top: 1px;
+}

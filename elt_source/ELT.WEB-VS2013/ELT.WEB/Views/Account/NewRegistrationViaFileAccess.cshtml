@@ -1,0 +1,55 @@
+﻿@model ELT.WEB.Models.FileRequestModel
+ @{
+     Layout = "~/Views/Shared/_LayoutPopUp.cshtml";
+     }
+     @Styles.Render("~/Content/css/Form.css")
+    <div class="PopupContent">
+        <span>You have reqeusted the file,[FileName].</span> <span>In order to access your file
+            storage please <a href='javascript:void(0)' onclick="FowardToRegister()">register.</a></span>
+        <p>
+            By registring, you get benifit below.
+            <ul>
+                <li>keep track of your files. </li>
+                <li>Keep track of your communicaion with your business partners. </li>
+                <li></li>
+            </ul>
+        </p>
+        <p>
+            No thanks, please let me download the file <a href="javascript:void(0)" onclick="RejectOffer();">
+                without registraion. </a>
+        </p>
+    </div>
+
+    <script type="text/javascript">
+
+        function FowardToRegister() {
+            var URL = '@Url.Content("~/Account/Register?NewRegFromFileAccess=yes")';
+            $("#ModalPlaceHolder").dialog("close");
+            window.top.location.href = URL;
+        }
+        function RejectOffer() {
+            var URL = '@Url.Content("~/FileManagement/RejectOffer")';
+            var RedirectUrl = "@Model.FileAccessUrl";
+            $.ajax({
+                url: URL,
+                type: "GET",
+                success: function (data, textStatus, jqXHR) {
+                  
+                    if (data.Status == "Success") {
+                        $("#ModalPlaceHolder").dialog("close");
+                        document.location.href = RedirectUrl;
+                    } else {
+                      
+                        $(".PopupContent").html("<div><h2>Error</h2><span style='color:red'>" + data.ErrorMsg + "</span><div>");
+                        AjustModalSize() ;
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    alert(errorThrown);
+                }
+            });
+
+
+           
+        }
+    </script>

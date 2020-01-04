@@ -1,0 +1,13 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxFileManager" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxmvc:MVCxFileManager runat="server">
+    <Styles CssFilePath="~/App_Themes/Aqua/{0}/styles.css" CssPostfix="Aqua"></Styles>
+    <Images SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" LoadingPanel-Url="~/App_Themes/Aqua/Web/Loading.gif" 
+            FolderContainerNodeLoadingPanel-Url="~/App_Themes/Aqua/Web/tvNodeLoading.gif"></Images>    
+    <ImagesDetailsView>
+        <HeaderActiveFilter SpriteProperties-CssClass="dxWeb_fmGvHeaderFilterActive_Aqua"></HeaderActiveFilter>
+        <HeaderFilter SpriteProperties-CssClass="dxWeb_fmGvHeaderFilter_Aqua"></HeaderFilter>
+    </ImagesDetailsView>
+</dxmvc:MVCxFileManager>

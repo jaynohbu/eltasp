@@ -1,0 +1,12 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxdv" Namespace="DevExpress.Web.ASPxDataView" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxmvc:MVCxDataView runat="server" CssFilePath="~/App_Themes/SoftOrange/{0}/styles.css" LoadingPanelImagePosition="Top" PagerPanelSpacing="0" 
+    CssPostfix="SoftOrange" SpriteCssFilePath="~/App_Themes/SoftOrange/{0}/sprite.css">
+    <LoadingPanelImage Url="~/App_Themes/SoftOrange/Web/Loading.gif"></LoadingPanelImage>
+    
+    <PagerSettings CurrentPageNumberFormat="{0}">
+    </PagerSettings>
+</dxmvc:MVCxDataView>
+

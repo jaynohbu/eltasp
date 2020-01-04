@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Rounded Blue Tabs" PresetDescription="Rounded Blue Tabs Samples.   Sets both Look and Behavior properties." PresetType="All" />-->
+<igtab:UltraWebTab ThreeDEffect="False">
+  <DisabledTabStyle />
+  <DefaultTabStyle Height="20px" BackColor="#E1EDFF" />
+  <RoundedImage SelectedImage="ig_tab_blue2.gif" NormalImage="ig_tab_blue1.gif" FillStyle="LeftMergedWithCenter" />
+  <DefaultTabSeparatorStyle />
+  <SelectedTabStyle />
+</igtab:UltraWebTab>

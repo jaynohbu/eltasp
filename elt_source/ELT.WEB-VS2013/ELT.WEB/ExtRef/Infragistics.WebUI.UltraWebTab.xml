@@ -1,0 +1,2654 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Infragistics.WebUI.UltraWebTab</name>
+    </assembly>
+    <members>
+        <member name="T:Infragistics.WebUI.UltraWebTab.ClientSideEvents">
+            <summary>
+            Object that keeps the list of names for event function handlers used by JavaScript on client side.
+            </summary>
+            <remarks>
+            <p class="body">Because of the stateless nature of web connections, and the typical delays involved in returning information from the server, WebMenu implements both client-side events and server-side events. 
+            You can choose whether you would like to respond to client-side events, which must be implemented through JavaScript.</p>
+            The ClientSideEvent object maintains a list of event handlers that are implemented on the client and called in response to events as they occur in the browser.
+            Each event is a string that represents JavaScript function name. The named function must be implemented by the developer in JavaScript code.<br></br>
+            Every event function handler should have 3 parameters (the <tt>InitializeTabs</tt> has only 1 parameter).
+            The first parameter contains reference to the JavaScript object that represents UltraWebTab.<br></br>
+            The second parameter contains reference to the JavaScript object that represents Tab.<br></br>
+            The third parameter contains reference to the JavaScript object that represents Event.<br></br>
+            Look at the events description for details.
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ClientSideEvents.#ctor">
+            <summary>The default public constructor for the ClientSideEvents object.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ClientSideEvents.ToString">
+            <summary>String formatted for visual designer.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ClientSideEvents.Reset">
+            <summary>
+            Reset all properties to their defaults.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ClientSideEvents.CopyFrom(Infragistics.WebUI.UltraWebTab.ClientSideEvents)">
+            <summary>
+            Copies the ClientSideEvents object.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ClientSideEvents.InitializeTabs">
+            <summary>
+            Event fired after UltraWebTab and its tabs were initialized.
+            </summary>
+            <remarks><p class="body">It can be the name of an implemented function or an explicit javascript statement(s).  If the name of a function is used, then that event handler may contain 1 parameter.  That parameter is the reference to the JavaScript object that represents UltraWebTab.  Also see WebForm1.aspx in HTML mode of the ClientSideEvents C# and VB sample applications.</p></remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ClientSideEvents.AfterSelectedTabChange">
+            <summary>
+            Event fired after the selected tab was changed.
+            </summary>
+            <remarks>
+            	<p class="body">It can be the name of an implemented function or an explicit javascript statement(s).  If the name of the function is used, then that event handler may contain 3 parameters.
+            <OL>
+            			<LI>The reference to the JavaScript object that represents UltraWebTab.</LI>
+            			<LI>The reference to the JavaScript object that represents the Tab involved in the event.</LI>
+            			<LI>The reference to the ig_EventObject object.</LI>
+            		</OL>
+            Also see WebForm1.aspx in HTML mode of the ClientSideEvents C# and VB sample applications.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ClientSideEvents.BeforeSelectedTabChange">
+            <summary>
+            Event fired before the selected tab is changed.
+            <p class="note">This event can be canceled and in this case a new tab will not be selected. While processing this event,- the postBack can be canceled or triggered.</p>
+            </summary>
+            <remarks>
+            	<p class="body">It can be the name of an implemented function or an explicit javascript statement(s).  If the name of the function is used, then that event handler may contain 3 parameters.
+            <OL>
+            			<LI>The reference to the JavaScript object that represents UltraWebTab.</LI>
+            			<LI>The reference to the JavaScript object that represents Tab involved in event.</LI>
+            			<LI>The reference to the ig_EventObject object.</LI>
+            		</OL>
+            Also see WebForm1.aspx in HTML mode of the ClientSideEvents C# and VB sample applications.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ClientSideEvents.MouseOver">
+            <summary>
+            Event fired when the mouse was moved over (entered) a tab and before any action related to that event occured.
+            </summary>
+            <remarks>
+            	<p class="body">It can be the name of an implemented function or an explicit javascript statement(s).  If the name of the function is used, then that event handler may contain 3 parameters.
+            <OL>
+            			<LI>The reference to the JavaScript object that represents UltraWebTab.</LI>
+            			<LI>The reference to the JavaScript object that represents the Tab involved in an event.</LI>
+            			<LI>The reference to the ig_EventObject object.</LI>
+            		</OL>
+            Also see WebForm1.aspx in HTML mode of the ClientSideEvents C# and VB sample applications.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ClientSideEvents.MouseOut">
+            <summary>
+            Event fired when the mouse was moved out of a tab and before any action related to that event occured.
+            </summary>
+            <remarks>
+            	<p class="body">It can be the name of an implemented function or an explicit javascript statement(s).  If the name of the function is used, then that event handler may contain 3 parameters.
+            <OL>
+            			<LI>The reference to the JavaScript object that represents UltraWebTab.</LI>
+            			<LI>The reference to the JavaScript object that represents Tab involved in event.</LI>
+            			<LI>The reference to the ig_EventObject object.</LI>
+            		</OL>
+            Also see WebForm1.aspx in HTML mode of the ClientSideEvents C# and VB sample applications.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ClientSideEvents.Click">
+            <summary>
+            Event fired when the mouse was clicked on a tab and before any action related to that event occured.
+            </summary>
+            <remarks>
+            	<p class="body">It can be the name of implemented function or explicit javascript statement(s).  If the name of a function is used, then that event handler may contain 3 parameters.
+            <OL>
+            			<LI>The reference to the JavaScript object that represents UltraWebTab.</LI>
+            			<LI>The reference to the JavaScript object that represents Tab involved in event.</LI>
+            			<LI>The reference to the ig_EventObject object.</LI>
+            		</OL>
+            Also see WebForm1.aspx in HTML mode of the ClientSideEvents C# and VB sample applications.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ClientSideEvents.BeforeAsyncSubmit">
+            <summary>
+            Event fired before a page is submitted from a hidden asynchronous post back.
+            </summary>
+            <remarks>
+            	<p class="body">It can be the name of an implemented function or an explicit javascript statement(s).  If the name of the function is used, then that event handler may contain 4 parameters.
+            <OL>
+            			<LI>oWebTab - reference to the JavaScript object that represents UltraWebTab.</LI>
+            			<LI>notUsed - parameter is not used.</LI>
+            			<LI>oEvent - reference to the ig_EventObject object.</LI>
+            			<LI>id - the id of html element which raised submit.</LI>
+            		</OL>
+            	</p>
+            	<p class="note">Notes:
+            <OL>
+            			<LI>Submit can be canceled by <b>oEvent.cancel=true;</b></LI>
+            			<LI>Response can be canceled by <b>oEvent.cancelResponse=true;</b></LI>
+            			<LI>Full postback can be triggered by <b>oEvent.fullPostBack=true;</b></LI>
+            		</OL></p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ClientSideEvents.BeforeAsyncResponse">
+            <summary>
+            Event fired before the html is modified due to a response from hidden asynchronous post back.
+            </summary>
+            <remarks>
+            	<p class="body">It can be the name of an implemented function or an explicit javascript statement(s).  If the name of the function is used, then that event handler may contain 3 parameters.
+            <OL>
+            			<LI>The reference to the JavaScript object that represents UltraWebTab.</LI>
+            			<LI>Not used.</LI>
+            			<LI>The reference to the ig_EventObject object.</LI>
+            		</OL>
+            That event can be canceled by <b>oEvent.cancel=true;</b></p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ClientSideEvents.AfterAsyncResponse">
+            <summary>
+            Event fired after the html was modified due to a response from hidden asynchronous post back.
+            </summary>
+            <remarks>
+            	<p class="body">It can be the name of an implemented function or an explicit javascript statement(s).  If the name of function is used, then that event handler may contain 3 parameters.
+            <OL>
+            			<LI>The reference to the JavaScript object that represents UltraWebTab.</LI>
+            			<LI>Not used.</LI>
+            			<LI>The reference to the ig_EventObject object.</LI>
+            		</OL>
+            This event can not be canceled.</p>
+            </remarks>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.ContentPane">
+            <summary>
+            The ContentPane object handles context displayed in the UltraWebTab
+            when a particular <see cref="T:Infragistics.WebUI.UltraWebTab.Tab"/> object is selected.
+            </summary>
+            <remarks>
+            <p class="note"><i>Notes:</i>
+            <ul>
+            <li>It can display the <see cref="P:Infragistics.WebUI.UltraWebTab.ContentPane.TargetUrl"/> which is rendered
+            as the <tt>&lt;IFRAME&gt;</tt> html element, or it may have explicit child controls that are placed within the
+            <tt>&lt;DIV&gt;</tt> html element and are rendered using the standard logic of the .NET.</li>
+            <li>Child controls can be constructed and added to the <see cref="P:Infragistics.WebUI.UltraWebTab.ContentPane.Children"/>
+            or to the <tt>Controls</tt> from code at run time, or they can be built at design time using the templates: right-mouse-click
+            on the UltraWebTab and select "Edit Template" option.</li>
+            <li>If the TargetUrl is not set, then the child controls are rendered automatically.</li>
+            <li>The background color of the ContentPane is defined by the <b>BackColor</b> of the <see cref="P:Infragistics.WebUI.UltraWebTab.Tab.SelectedStyle"/>.</li>
+            <li>The ContentPane may have optional border. If none of properties related to border is set and ContentPane has TargetUrl, then'
+            the default border of the <tt>&lt;IFRAME&gt;</tt> html element is used.
+            Border properties are applied for both modes: TargetUrl and child controls.</li>
+            <li>The <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.CustomRules"/> property can be used to apply more custom
+            html styles while rendering.<br></br>
+            <i>Examples:</i><br></br>
+            <p class="code">
+            UltraWebTab1.CustomRules = "background-image:url(./myImage.gif); background-repeat:no-repeat;";<br></br>
+            UltraWebTab1.CustomRules = "padding:10";<br></br>
+            UltraWebTab1.CustomRules = "cursor:default; padding-left:10; padding-right:20";
+            </p>
+            </li>
+            </ul>
+            </p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ContentPane.#ctor">
+            <summary>Constructor.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ContentPane.HasControls">
+            <summary>
+            Do not expose the literal control filled by new lines, tabs, spaces, etc.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ContentPane.ToString">
+            <summary>String representation of this class.</summary>
+            <returns>
+            If TargetUrl is set then that url is returned.
+            If child controls were added, then the "(Has Controls)" is returned.
+            If any other property has a not default value, then "(Has Data)" is returned.
+            </returns>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ContentPane.ID">
+            <summary>
+            The ID of the control.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ContentPane.TargetUrl">
+            <summary>Returns or sets the URL to be displayed within the <see cref="T:Infragistics.WebUI.UltraWebTab.ContentPane"/>.</summary>
+            <remarks>In browsers that support IFRAMEs, this property can be used to specify a web page to be displayed in the ContentPane of the UltraWebTab control.</remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ContentPane.UserControlUrl">
+            <summary>Returns or sets the URL of a UserControl to be displayed within the <see cref="T:Infragistics.WebUI.UltraWebTab.ContentPane"/>.</summary>
+            <remarks>This property has priority over possible child controls, but not over TargetUrl property.</remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ContentPane.UserControl">
+            <summary>Get reference to the first <tt>UserControl</tt> found among <tt>Controls</tt> of this <tt>ContentPane</tt>.</summary>
+            <remarks>This property can be used to get reference to the control which was created by the <tt>UserControlUrl</tt> property.</remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ContentPane.Visible">
+            <summary>Visibility of tab content.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ContentPane.BorderColor">
+            <summary>Border color of target url.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ContentPane.BorderWidth">
+            <summary>Border width of target url.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ContentPane.BorderStyle">
+            <summary>Border style of target url.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ContentPane.Scrollable">
+            <summary>Behavior of scroll bars that are used for the container of child controls.</summary>
+            <remarks>
+            <p class="note">Notes:
+            <ul>
+            <li>If scrollbars are enabled, then they work better when <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.FixedLayout"/> is enabled.</li>
+            <li>If <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.FixedLayout"/> is disabled, then the size of UltraWebTab may depend on the size of ContentPane and there can be nothing to scroll.</li>
+            <li>That property is used to set the value of the OVERFLOW attribute of the DIV html element that represents the ContentPane.</li>
+            <li>The value of Visible is the browser-default for the OVERFLOW and ContentPane should be fully visible (depends on a particular browser).</li>
+            </ul>
+            </p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ContentPane.FrameTitle">
+            <summary>
+            Returns or sets the title of the iframe used by TargetUrl.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ContentPane.EnableRelativeLayout">
+            <summary>
+            Gets or sets the request render relative position for ContentPane.
+            </summary>
+            <remarks>
+            <p class="note">Notes:
+            That property is designed to get around differences in behavior of different browsers,
+            when child elements of ContentPane have relative or absolute positions.
+            It is recommended to enable that property when child controls or parts of html
+            generated by them use position:relative or position:absolute.
+            For example, UltraWebGrid uses position:relative style attribute, and therefore,
+            it may fail to be scrolled in IE or it may go out of tab bounds in other browsers.
+            </p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ContentPane.IsAsyncPostBack">
+            <summary>
+            Internal use only.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ContentPane.Children">
+            <summary>
+            	<p class="body">Returns the collection of child controls that will be displayed within the <see cref="T:Infragistics.WebUI.UltraWebTab.ContentPane"/>.</p>
+            </summary>
+            <remarks>
+            	<p class="note">The Children collection contains all of the child controls that will be displayed when a particular tab is selected.  There are currently two ways in which child controls can be added to the Children collection, at Design-Time using Template Editor and at Run-Time from code.</p>
+            	<p class="note">To add controls at run-time:
+            Add the UltraWebTab control to an aspx page.
+            Add code similar to the following to create and add your control to the ContentPane of a Tab object.</p>
+            	<p class="code">TextBox txtInput = new TextBox();<br></br>
+            txtInput.Width = Unit.Pixel(190);<br></br>
+            UltraWebTab1.Tabs.GetTab(0).ContentPane.Children.Add(txtInput);</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ContentPane.Controls">
+            <summary>
+            Gets a ControlCollection object that represents the child controls for a specified server control in the UI hierarchy.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.DhtmlRenderer">
+            <summary>Renderer of the UltraWebTab control on uplevel browsers.</summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.RendererBase">
+            <summary>
+            Summary description for RendererBase.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.RendererBase.#ctor(Infragistics.WebUI.UltraWebTab.RenderProps)">
+            <summary>Initializes a new instance of the TabRendererBase class.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.RendererBase.RenderControl">
+            <summary>RenderControl.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.RendererBase.RenderTab(System.Text.StringBuilder,Infragistics.WebUI.UltraWebTab.Tab,System.Int32)">
+            <summary>RenderTab.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.RendererBase.RenderSeparator(System.Text.StringBuilder,Infragistics.WebUI.UltraWebTab.TabItem)">
+            <summary>Render Separator.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.RendererBase.InitStyles">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.RendererBase.VisitObjects(System.Web.UI.HtmlTextWriter)">
+            <summary>Initiates rendering of the UltraWebTab control.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.DhtmlRenderer.#ctor(Infragistics.WebUI.UltraWebTab.RenderProps)">
+            <summary>Constructor.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.DhtmlRenderer.InitStyles">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.DhtmlRenderer.RenderControl">
+            <summary>The RenderControl method renders the HTML tags that comprise the UltraWebTab control at run-time.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.DhtmlRenderer.RenderSeparator(System.Text.StringBuilder,Infragistics.WebUI.UltraWebTab.TabItem)">
+            <summary>
+            RenderSeparator.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.DhtmlRenderer.RenderTab(System.Text.StringBuilder,Infragistics.WebUI.UltraWebTab.Tab,System.Int32)">
+            <summary>RenderTab.</summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.DownLevelRenderer">
+            <summary>Renderer of the UltraWebTab control on uplevel browsers.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.DownLevelRenderer.#ctor(Infragistics.WebUI.UltraWebTab.RenderProps)">
+            <summary>Constructor.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.DownLevelRenderer.RenderSeparator(System.Text.StringBuilder,Infragistics.WebUI.UltraWebTab.TabItem)">
+            <summary>
+            RenderSeparator.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.DownLevelRenderer.RenderTab(System.Text.StringBuilder,Infragistics.WebUI.UltraWebTab.Tab,System.Int32)">
+            <summary>RenderTab.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.DownLevelRenderer.RenderControl">
+            <summary>The RenderControl method renders the HTML tags that comprise the UltraWebTab control at run-time.</summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.TabOrientation">
+            <summary>
+            Used with the TabOrientation property of the UltraWebTab object.
+            </summary>
+            <remarks>
+            <p class="body">The TabOrientation enumerations are comprised of the tab orientation and the alignment of the tabs, respectively. Eg. The enum TopLeft will render the tab objects to render along the top of the content area and aligned to the left side of the control.</p>
+            </remarks>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.TabOrientation.TopLeft">
+            <summary>
+            <p class="body">Tabs are rendered across the top of the control, aligned to the left side.</p>
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.TabOrientation.TopRight">
+            <summary>
+            <p class="body">Tabs are rendered across the top of the control, aligned to the right side.</p>
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.TabOrientation.BottomLeft">
+            <summary>
+            <p class="body">Tabs are rendered across the bottom of the control, aligned to the left side.</p>
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.TabOrientation.BottomRight">
+            <summary>
+            <p class="body">Tabs are rendered across the bottom of the control, aligned to the right side.</p>
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.TabOrientation.LeftTop">
+            <summary>
+            <p class="body">Tabs are rendered down the left side of the control, aligned to the top.</p>
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.TabOrientation.LeftBottom">
+            <summary>
+            <p class="body">Tabs are rendered down the left side of the control, aligned to the bottom.</p>
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.TabOrientation.RightTop">
+            <summary>
+            <p class="body">Tabs are rendered down the right side of the control, aligned to the top.</p>
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.TabOrientation.RightBottom">
+            <summary>
+            <p class="body">Tabs are rendered down the right side of the control, aligned to the bottom.</p>
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.TextOrientation">
+            <summary>
+            Specifies the alignment of text rendered in the tab objects.
+            </summary>
+            <remarks>
+            <p class="note">Permitted values are Horizontal and Vertical.</p>
+            <p class="note">In all Netscape browsers and browsers prior to version 6.0 Vertical text indicates that the text will be rendered such that each letter is on a new line from top to bottom.  On IE6 the text will be rotated 90 degrees clockwise.</p>
+            </remarks>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.TextOrientation.Horizontal">
+            <summary>
+            Text is rendered horizontally.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.TextOrientation.Vertical">
+            <summary>
+            Text is rendered vertically.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.BrowserTarget">
+            <summary>
+            Specifies the target rendering for different browsers.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.BrowserTarget.Auto">
+            <summary>
+            Default.  Automatically detects client browser and uses best renderer.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.BrowserTarget.DownLevel">
+            <summary>
+            Render for downlevel browsers.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.BrowserTarget.UpLevel">
+            <summary>
+            Render for uplevel browsers.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.RoundedImageStyle">
+            <summary>
+            <p class="body">Specifies the style to render RoundedImage.</p>
+            <p class="note">Image can not be stretched and it is used as it is.
+            While rendering, a tab is subdivided on 2-3 parts and every part is painted
+            separately using different parts of provided image.</p>
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.RoundedImageStyle.None">
+            <summary>
+            Rounded images are not used.<br></br>
+            Tabs are painted using the BackColor and border related subproperties of the Tab's Style properties.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.RoundedImageStyle.LeftRightOnly">
+            <summary>
+            The border is not painted and the background of the center part of tab is filled by the BackColor of Style properties.<br></br>
+            Tab is devided on 3 parts. To render the left side of tab,- the left part of image is used.
+            To render the right side of tab,- the right part of image is used.
+            Image is not used to fill center part of tab, and an application should provide the background color(s)
+            within the DefaultTabStyle (and  HoverTabStyle, SelectedTabStyle and DisabledTabStyle in case of different images)
+            property of UltraWebTab.
+            <p class="note"><i>Notes:</i><ul>
+            <li>The values of BackColor in Style properties of tabs should match with the background color of images that are used to draw rounded edges.</li>
+            <li>This style allows to uses image(s) with the smallest possible size(s), because the only edges of image are used, however, the center parts of tabs are painted flat.</li>
+            </ul></p>
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.RoundedImageStyle.LeftMergedWithCenter">
+            <summary>
+            The border and background are not painted.<br></br>
+            Tab is devided on 2 parts. To render the left side of tab and its center,- the left part of image is used.
+            To render the right side of tab,- the right part of image is used. The background color is not used.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.RoundedImageStyle.RightMergedWithCenter">
+            <summary>
+            The border and background are not painted.<br></br>
+            Tab is devided on 2 parts. To render the right side of tab and its center,- the right part of image is used.
+            To render the left side of tab,- the left part of image is used. The background color is not used.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.ScrollButtonsVisibility">
+            <summary>The location of scrollbar buttons and "more-tabs" scrollbar buttons.</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.ScrollButtonsVisibility.None">
+            <summary>
+            Scrollbar buttons are not displayed.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.ScrollButtonsVisibility.OnLeft">
+            <summary>
+            Scrollbar buttons are displayed on the left side of tabs. In case of "more-tabs" buttons,- only one button on the left can be displayed.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.ScrollButtonsVisibility.OnRight">
+            <summary>
+            Scrollbar buttons are displayed on the right side of tabs. In case of "more-tabs" buttons,- only one button on the right can be displayed.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.ScrollButtonsVisibility.OnBothSides">
+            <summary>
+            One button is displayed on the left side of tabs, the other button - on the right side of tabs.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.DisplayMode">
+            <summary>
+            The appearance of tabs such as SingleRow/MultiRow/Scrollable for tabs with top or bottom orientations.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.DisplayMode.SingleRow">
+            <summary>
+            Tabs are painted in a single row without scroll bar.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.DisplayMode.MultiRow">
+            <summary>
+            Tabs are painted in multiple rows. Rows are defined by the <see cref="P:Infragistics.WebUI.UltraWebTab.TabItem.NextRow"/>.
+            <p class="note">Note: Tabs in a row are stretched to the width of UltraWebTab and properties <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DynamicTabs"/> and <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.SpaceOnRight"/> have effect.</p>
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.DisplayMode.Scrollable">
+            <summary>
+            Tabs are painted in a single row with enabled scrollable features.  Scroll buttons and more-tabs buttons appear according to their Visibility.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.OverflowType">
+            <summary>
+            The type of overflow child controls in ContentPane.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.OverflowType.Visible">
+            <summary>
+            The child controls are visible: no automatic scrollbars.  If <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.FixedLayout"/> is enabled, then it may lead to partial visibility of ContentPane.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.OverflowType.Scroll">
+            <summary>
+            The scrollbars are always displayed.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.OverflowType.Hidden">
+            <summary>
+            The scrollbars are never displayed.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.OverflowType.Auto">
+            <summary>
+            The scrollbars are displayed automatically if they are needed.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.StylePreset">
+            <summary>
+            The style of preset.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.StylePreset.NoChange">
+            <summary>
+            All properties remain the same.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.StylePreset.Default">
+            <summary>
+            Default apperance.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.StylePreset.DefaultRounded">
+            <summary>
+            Default rounded.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.StylePreset.Windows2000">
+            <summary>
+            The Windows 2000.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.StylePreset.WindowsXP">
+            <summary>
+            The Windows XP blue.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.AsyncTabOption">
+            <summary>
+            The options related to hidden asynchronous post back for a particular Tab.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.AsyncTabOption.NotSet">
+            <summary>
+            The asynchronous post back behavior is defined by the UltraWebTab.AsyncOptions property.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.AsyncTabOption.LoadOnDemand">
+            <summary>
+            Load the ContentPane of the Tab only when Tab becomes selected and when UltraWebTab.AsyncOptions.IncludeSelectedTab is enabled too.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.AsyncTabOption.Excluded">
+            <summary>
+            The ContentPane of the Tab is excluded from the hidden asynchronous post back architecture.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.AsyncRequestContext">
+            <summary>
+            The options related to request while hidden asynchronous post back.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.AsyncRequestContext.IncludeFormData">
+            <summary>
+            Pass to the server data of all controls on the page.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.AsyncRequestContext.IncludePreviousSelectedTab">
+            <summary>
+            Pass to the server only data of the child controls located on the previously unselected tab.
+            </summary>
+            <remarks>
+            	<p class="note">Notes: That option may slow down performance on client, but speed up performance on server.
+            If a child control located on the ContentPane of unselected tab renders its data field outside of the DIV element of ContentPane, then data of that control will be lost.</p>
+            </remarks>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.AsyncRequestContext.IncludeAllTabs">
+            <summary>
+            Pass to the server only data of child controls located on tabs.
+            </summary>
+            <remarks>
+            	<p class="note">Notes: That option may slow down performance on client, but speed up performance on server.
+            If a child control located on the ContentPane of a tab renders its data field outside of the DIV element of ContentPane, then data of that control will be lost.</p>
+            </remarks>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.AsyncRequestContext.Default">
+            <summary>
+            Default value which is equal to IncludeFormData.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.AsyncResponseContext">
+            <summary>
+            The options related to response while hidden asynchronous post back.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.AsyncResponseContext.IncludePreviousSelectedTab">
+            <summary>
+            Refresh the ContentPane of the previously selected tab after hidden asynchronous post back.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.AsyncResponseContext.IncludeSelectedTab">
+            <summary>
+            Refresh the ContentPane of the new selected tab after hidden asynchronous post back.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.AsyncResponseContext.IncludeAllTabs">
+            <summary>
+            Refresh the ContentPanes of all tabs after hidden asynchronous post back.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.AsyncResponseContext.Default">
+            <summary>
+            Default value which is equal to IncludePreviousSelectedTab | IncludeSelectedTab.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.AsyncTriggers">
+            <summary>
+            The options related to actions that may trigger hidden asynchronous post back.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.AsyncTriggers.SelectedTabChanged">
+            <summary>
+            Trigger hidden asynchronous post back when the selected tab was changed.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.AsyncTriggers.ContentInitiatedPostback">
+            <summary>
+            Cancel the submit triggered by a child control located on the ContentPane of a tab and replace it by a hidden asynchronous post back.
+            </summary>
+            <remarks>
+            	<p class="note">That option may work only for child controls that follow standards of dot-net related to postback and submit: provide UniqueID for those event handlers and render an html element with corresponding ClientID.</p>
+            </remarks>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.AsyncTriggers.Default">
+            <summary>
+            Default value which is equal to SelectedTabChanged | ContentInitiatedPostback.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.AsyncMode">
+            <summary>
+            Disable or enable hidden asynchronous post back.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.AsyncMode.NotSet">
+            <summary>
+            Disable hidden asynchronous post backs.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.AsyncMode.On">
+            <summary>
+            Enable hidden asynchronous post backs.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.AsyncMode.Off">
+            <summary>
+            Disable hidden asynchronous post backs.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.RenderProps">
+            <summary></summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.RenderProps.ViewState">
+            <summary>
+            Private instance of StateBag.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.RoundedImage">
+            <summary>
+            Container of properties that define rounded shape for UltraWebTab tabs.
+            </summary>
+            <remarks>
+            <p class="note"><i>Notes:</i>
+            <ul>
+            <li>To enable rounded images the <see cref="P:Infragistics.WebUI.UltraWebTab.RoundedImage.FillStyle"/> property should be used.</li>
+            <li>When rounded images are enabled, then outter border around tabs is not painted
+            and background is not filled by the BackColor. However, the BackColor is used to fill background of ContentPane.</li>
+            <li>If the <see cref="P:Infragistics.WebUI.UltraWebTab.RoundedImage.NormalImage"/> property is not set, then default images are used.</li>
+            <li>The width/height of images should be larger than the width/height of the largest tab.</li>
+            <li>The UltraWebTab may use a single (custom) image for all <see cref="P:Infragistics.WebUI.UltraWebTab.RoundedImage.FillStyle"/> styles.
+            To customize rounded images for other states of tab such as mouse-over, selected and disabled, corresponding image-properties should be set as well.</li>
+            <li>Not all configurations of TabOrientation and TextOrientation are supported
+            for a particular browser,- due to limitation of browsers to properly align background image.
+            In this case,- normal borders and background colors will be used automatically instead of rounded images.</li>
+            <li>To support down level browsers such as Netscape 4/5:
+              <ul>
+              <li>In addition to the Normal/Selected image properties, the <see cref="P:Infragistics.WebUI.UltraWebTab.RoundedImage.DownLevelNormalRightImage"/>
+              and/or <see cref="P:Infragistics.WebUI.UltraWebTab.RoundedImage.DownLevelSelectedRightImage"/> should be set as well.</li>
+              <li>In case of the bottom (or right) tab orientation,- the height (width) of images should match with the height (width) of tabs.</li>
+              </ul>
+            </li>
+            </ul></p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.RoundedImage.#ctor">
+            <summary>The default public constructor.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.RoundedImage.ToString">
+            <summary>String formatted for visual designer.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.RoundedImage.Reset">
+            <summary>
+            Reset all properties to their defaults.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.RoundedImage.CopyFrom(Infragistics.WebUI.UltraWebTab.RoundedImage)">
+            <summary>
+            Copies the RoundedImage object.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.RoundedImage.NormalImage">
+            <summary>
+            The name of the file that contains the background image used for a tab in the normal state.
+            <p class="note">If that property is not set, then the default image is used.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.RoundedImage.HoverImage">
+            <summary>
+            The name of the file that contains the background image used for a tab in the "mouse-over" state.
+            <p class="note">If that property is not set, then the NormalImage is used.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.RoundedImage.SelectedImage">
+            <summary>
+            The name of the file that contains the background image used for a tab in the selected state.
+            <p class="note">If that property is not set, then the NormalImage is used.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.RoundedImage.DisabledImage">
+            <summary>
+            The name of the file that contains the background image used for a tab in the disabled state.
+            <p class="note">If that property is not set, then the NormalImage is used.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.RoundedImage.DownLevelNormalRightImage">
+            <summary>
+            The name of the file that contains the right edge of a rounded image which is used for a tab in the normal state.
+            <p class="note">That property is used only for a down level browser such as Netscape 4/5.</p>
+            <p class="note">If that property is not set, then the default file-image is used.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.RoundedImage.DownLevelSelectedRightImage">
+            <summary>
+            The name of the file that contains the right edge of a rounded image which is used for a tab in the selected state.
+            <p class="note">This property is used only for a down level browser such as Netscape 4/5.<br></br>If that property is not set, then the default file-image is used.</p>
+            	<p class="note">If that property is not set, then the DownLevelNormalRightImage is used.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.RoundedImage.LeftSideWidth">
+            <summary>
+            The width in pixels of the part of the rounded image displayed on the left side of the tab.  The default value is set to 5 pixels.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.RoundedImage.RightSideWidth">
+            <summary>
+            The width in pixels of the part of the rounded image displayed on the right side of the tab.  The default value is set to 5 pixels.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.RoundedImage.ShiftOfImages">
+            <summary>
+            The shift in pixels of all rounded images besides the image for the selected state.  The default value is set to 0 pixels.
+            <p class="note">This property has effect only if all of the following conditions are true:
+            <UL>
+            			<LI>Browser is up-level</LI>
+            			<LI>UltraWebTab has top or left tab orientation</LI>
+            			<LI>The value of the <b>FillStyle</b> property is <b>LeftMergedWithCenter</b> or <b>RightMergedWithCenter</b></LI>
+            		</UL>
+            In case of the top-tab orientations,- the images are shifted down, in case of the left-tab orientations,- the images are shifted to the right.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.RoundedImage.FillStyle">
+            <summary>
+            Sets gets value that determines how the rounded image(s) should be rendered.
+            <p class="note">Image can not be stretched and it is used as it is.</p>
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.RoundedImage.DefaultImages">
+            <summary>
+            The names of the file that contains the background image used for a tab when the NormalImage is not set.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.ScrollButtons">
+            <summary>
+            Container of properties that defines appearance and behavior of buttons used to scroll tabs.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ScrollButtons.ShouldSerializeStyle">
+            <summary>
+            Check if Style has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ScrollButtons.ResetStyle">
+            <summary>
+            Clears the Style.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ScrollButtons.ShouldSerializeHoverStyle">
+            <summary>
+            Check if HoverStyle has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ScrollButtons.ResetHoverStyle">
+            <summary>
+            Clears the HoverStyle.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ScrollButtons.ShouldSerializePressedStyle">
+            <summary>
+            Check if PressedStyle has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ScrollButtons.ResetPressedStyle">
+            <summary>
+            Clears the PressedStyle.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ScrollButtons.ShouldSerializeDisabledStyle">
+            <summary>
+            Check if DisabledStyle has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ScrollButtons.ResetDisabledStyle">
+            <summary>
+            Clears the DisabledStyle.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ScrollButtons.ShouldSerializeLeftButton">
+            <summary>
+            Check if LeftButton has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ScrollButtons.ResetLeftButton">
+            <summary>
+            Clears the LeftButton.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ScrollButtons.ShouldSerializeRightButton">
+            <summary>
+            Check if RightButton has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ScrollButtons.ResetRightButton">
+            <summary>
+            Clears the RightButton.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ScrollButtons.ShouldSerializeMoreTabs">
+            <summary>
+            Check if MoreTabs has data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ScrollButtons.ResetMoreTabs">
+            <summary>
+            Clears the MoreTabs.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ScrollButtons.ToString">
+            <summary>String formatted for visual designer.</summary>
+            <returns>The value of the Visibility.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ScrollButtons.Reset">
+            <summary>
+            Reset all properties to their defaults.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ScrollButtons.CopyFrom(Infragistics.WebUI.UltraWebTab.ScrollButtons)">
+            <summary>
+            Copies all properties from the ScrollButtons object. No merging.
+            </summary>
+            <param name="source">Source of new values.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ScrollButtons.IsEmpty">
+            <summary>
+            Checks if ScrollButtons has any property with a non default value.
+            </summary>
+            <returns>True: all properties have default values.</returns>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ScrollButtons.Style">
+            <summary>
+            Style that is applied to the HTML elements that render buttons in normal states.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ScrollButtons.HoverStyle">
+            <summary>
+            Style that is applied to the HTML elements that render buttons when a mouse pointer is moved over them.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ScrollButtons.PressedStyle">
+            <summary>
+            Style that is applied to the HTML elements that render buttons in pressed states.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ScrollButtons.DisabledStyle">
+            <summary>
+            Style that is applied to the HTML elements that render buttons in a disabled state.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ScrollButtons.LeftButton">
+            <summary>
+            Image or text that is displayed on the left button.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ScrollButtons.RightButton">
+            <summary>
+            Image or text that is displayed on the right button.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ScrollButtons.MoreTabs">
+            <summary>
+            Images that are displayed on the more-tabs buttons and their locations.
+            </summary>
+            <p class="note">To draw "more-tabs" buttons, the <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DefaultTabSeparatorStyle"/> and cursor of type "hand" are used.</p>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ScrollButtons.UseBrowserDefaults">
+            <summary>
+            Automatically adjust the appearance of buttons to match with the appearance of button elements used by a particular browser on the client.
+            </summary>
+            <remarks>
+            	<p class="body">Default value is true.</p>
+            	<p class="note">Note: If any appearance related property is set, then those values are not affected and they have priority over corresponding "automatic" defaults.<br></br>
+            At the time the ScrollButtons support only 3 types of predifined styles:
+            <ul>
+            			<li>Internet Explorer under WindowsXP blue.</li>
+            			<li>Internet Explorer under Windows2000.</li>
+            			<li>Netscape Navigator.</li>
+            		</ul></p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ScrollButtons.Delay">
+            <summary>
+            The delay in milliseconds between scroll events while the button is pressed.
+            </summary>
+            <remarks>
+            	<p class="body">Default value is set to 300.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ScrollButtons.Visibility">
+            <summary>
+            The location of scroll buttons.
+            </summary>
+            <remarks>
+            <p class="note">If that property is set to the value other than None, then scroll buttons appear regardless of the number of tabs.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ScrollButtons.VerticalAlign">
+            <summary>
+            The vertical alignment of scroll buttons.
+            </summary>
+            <remarks>
+            	<p class="note">That property gives visual effect, when the Height of the <see cref="P:Infragistics.WebUI.UltraWebTab.ScrollButtons.Style"/> property is set.</p>
+            	<p class="note">If the Height is not set, then 100% is used.  However, Netscape Navigator may fail to render the button the whole height of the tabs and, therefore, it is recommended to set a particular value to the Height.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ScrollButtons.ShowPartialTabs">
+            <summary>
+            Show or hide partially visible tabs that appear on the right side of UltraWebTab.
+            </summary>
+            <remarks>
+            <p class="note">Note: If a particular browser does not allow to process resizing events, then the value of false for that property may lead to misbehavior.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ScrollButtons.AllowScrollToLastTab">
+            <summary>
+            Allow scrolling to the very last tab on the right.
+            </summary>
+            <remarks>
+            <p class="body">Default value is false.</p>
+            <p class="note">Note: If a particular browser does not allow to process resizing events, then the value of false for that property may lead to misbehavior.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ScrollButtons.OuterBorderColor">
+            <summary>
+            Color of the outer border around a scroll button.
+            </summary>
+            <remarks>
+            <p class="note">Border is solid and 1 pixel wide. If color is empty, then no outer border is rendered.</p>
+            </remarks>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.ScrollButton">
+            <summary>
+            Container of images and text that appear on a scroll button.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ScrollButton.ToString">
+            <summary>String formatted for visual designer.</summary>
+            <returns>Empty string or "HasData".</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ScrollButton.Reset">
+            <summary>
+            Reset all properties to their defaults.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ScrollButton.CopyFrom(Infragistics.WebUI.UltraWebTab.ScrollButton)">
+            <summary>
+            Copies all properties from the ScrollButton object.  No merging.
+            </summary>
+            <param name="source">Source of new values.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.ScrollButton.IsEmpty">
+            <summary>
+            Checks if ScrollButton has any property with non default values.
+            </summary>
+            <returns>True: all properties have default values.</returns>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ScrollButton.Image">
+            <summary>
+            The name of the url that contains the image used for a button in the normal state.
+            </summary>
+            <remarks>
+            	<p class="note">Notes:
+            <ul>
+            			<li>If the string is empty and <see cref="P:Infragistics.WebUI.UltraWebTab.ScrollButtons.UseBrowserDefaults"/> is true, then the default images are used.</li>
+            			<li>If the length of the string is less than 5, or it does not contain the "." character surrounded by letters or digits, then that property is rendered as an explicit text string, rather than as an image.</li>
+            			<li>If this property is not set, then the &lt; character is used as text that appears on the left button, and the &gt; character is used for the right button.</li>
+            			<li>In order to disable that automatic text,- the " " (empty space character) or the "&amp;nbsp;" should be used.</li>
+            		</ul></p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ScrollButton.HoverImage">
+            <summary>
+            The name of the url that contains the image used for a button in the "mouse-over" state.
+            </summary>
+            <remarks>
+            	<p class="note">Notes:
+            <ul>
+            			<li>If the Image property is not set to an image, then this property has no effect.</li>
+            			<li>If that property is not set, then the Image property is used.</li>
+            		</ul>
+            	</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ScrollButton.PressedImage">
+            <summary>
+            The name of the url that contains the image used for a button in the selected state.
+            </summary>
+            <remarks>
+            	<p class="note">Notes:
+            <ul>
+            			<li>If the Image property is not set to an image, then this property has no effect.</li>
+            			<li>If that property is not set, then the Image property is used.</li>
+            		</ul></p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ScrollButton.DisabledImage">
+            <summary>
+            The name of the url that contains the image used for a button in the disabled state.
+            </summary>
+            <remarks>
+            	<p class="note">Notes:
+            <ul>
+            			<li>If the Image property is not set to an image, then this property has no effect.</li>
+            			<li>If that property is not set, then the Image property is used.</li>
+            		</ul>
+            	</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.ScrollButton.Stretch">
+            <summary>
+            Stretch the image to the size of the button or keep the original size of the image.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.MoreTabs">
+            <summary>
+            Container of images that appear on a more-tabs button and their locations.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.MoreTabs.ToString">
+            <summary>String formatted for visual designer.</summary>
+            <returns>The value of the Visibility.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.MoreTabs.Reset">
+            <summary>
+            Reset all properties to their defaults.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.MoreTabs.CopyFrom(Infragistics.WebUI.UltraWebTab.MoreTabs)">
+            <summary>
+            Copies all properties from the MoreTabs object.  No merging.
+            </summary>
+            <param name="source">Source of new values.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.MoreTabs.IsEmpty">
+            <summary>
+            Checks if MoreTabs has any property with a value other than the default value.
+            </summary>
+            <returns>True: all properties have default values.</returns>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.MoreTabs.ImageOnRight">
+            <summary>
+            Name of the url that contains an image rendered on the "more-tabs-on-the-right" button.
+            </summary>
+            <remarks>
+            	<p class="body">That button appears dynamically when UltraWebTab has hidden tabs on the right side.</p>
+            	<p class="note">Note: If the length of a string is less than 5, or it does not contain the "." character surrounded by letters or digits, then that property is rendered as explicit text string, rather than as an image.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.MoreTabs.ImageOnLeft">
+            <summary>
+            Name of the url that contains an image rendered on the "more-tabs-on-the-left" button.
+            </summary>
+            <remarks>
+            	<p class="body">That button appears dynamically when UltraWebTab has hidden tabs on the left side.</p>
+            	<p class="note">Note: If the length of a string is less than 5, or it does not contain the "." character surrounded by letters or digits, then that property is rendered as explicit text string, rather than as an image.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.MoreTabs.Visibility">
+            <summary>
+            The locations where the more-tabs buttons can appear.
+            </summary>
+            <remarks>
+            	<p class="note">If this property is set to a value other than None, then the "more-tabs" buttons at run time appear dynamically and only they are needed.</p>
+            	<p class="note">The "more-tabs" buttons process mouse-down events and scroll tabs.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.LocalizedCategoryAttribute.GetLocalizedString(System.String)">
+            <summary>
+            Returns the localized category name.
+            </summary>
+            <param name="value">Name of the category to retreive</param>
+            <returns>The localized string value</returns>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.StyleHelper">
+            <summary>
+            Set of static methods that helps to get/set property of an object that
+            uses ViewState (has a reference to the StateBag)
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.StyleHelper.GetProp(System.Web.UI.StateBag,System.String,System.String)">
+            <summary>
+            Get string-type property value from the "bag" with the key "id".
+            </summary>
+            <param name="bag">Instance of StateBag. If it is null, then "memberValue" if returned.</param>
+            <param name="id">Unique key-id of a property</param>
+            <param name="memberValue">Member value of the property which is used if the "bag"
+            is null or propery value was never set. In most cases it is the default value.</param>
+            <returns>Current value of a property.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.StyleHelper.GetProp(System.Web.UI.StateBag,System.String,System.Web.UI.WebControls.Unit)">
+            <summary>
+            Get Unit-type property value from the "bag" with the key "id".
+            </summary>
+            <param name="bag">Instance of StateBag. If it is null, then "memberValue" if returned.</param>
+            <param name="id">Unique key-id of a property</param>
+            <param name="memberValue">Member value of the property which is used if the "bag"
+            is null or propery value was never set. In most cases it is the default value.</param>
+            <returns>Current value of a property.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.StyleHelper.GetProp(System.Web.UI.StateBag,System.String,System.Web.UI.WebControls.ImageAlign)">
+            <summary>
+            Get Unit-type property value from the "bag" with the key "id".
+            </summary>
+            <param name="bag">Instance of StateBag. If it is null, then "memberValue" if returned.</param>
+            <param name="id">Unique key-id of a property</param>
+            <param name="memberValue">Member value of the property which is used if the "bag"
+            is null or propery value was never set. In most cases it is the default value.</param>
+            <returns>Current value of a property.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.StyleHelper.GetProp(System.Web.UI.StateBag,System.String,System.Boolean)">
+            <summary>
+            Get bool-type property value from the "bag" with the key "id".
+            </summary>
+            <param name="bag">Instance of StateBag. If it is null, then "memberValue" if returned.</param>
+            <param name="id">Unique key-id of a property</param>
+            <param name="memberValue">Member value of the property which is used if the "bag"
+            is null or propery value was never set. In most cases it is the default value.</param>
+            <returns>Current value of a property.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.StyleHelper.GetProp(System.Web.UI.StateBag,System.String,System.Int32)">
+            <summary>
+            Get int-type property value from the "bag" with the key "id".
+            </summary>
+            <param name="bag">Instance of StateBag. If it is null, then "memberValue" if returned.</param>
+            <param name="id">Unique key-id of a property</param>
+            <param name="memberValue">Member value of the property which is used if the "bag"
+            is null or propery value was never set. In most cases it is the default value.</param>
+            <returns>Current value of a property.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.StyleHelper.GetProp(System.Web.UI.StateBag,System.String,System.Drawing.Color)">
+            <summary>
+            Get Color-type property value from the "bag" with the key "id".
+            </summary>
+            <param name="bag">Instance of StateBag. If it is null, then "memberValue" if returned.</param>
+            <param name="id">Unique key-id of a property</param>
+            <param name="memberValue">Member value of the property which is used if the "bag"
+            is null or propery value was never set. In most cases it is the default value.</param>
+            <returns>Current value of a property.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.StyleHelper.GetProp(Infragistics.WebUI.Shared.Style,System.Boolean)">
+            <summary>
+            Ensure that Style-type property is not null.
+            </summary>
+            <param name="oldValue">Old value of a property</param>
+            <param name="isTrackState">Option to set TrackViewState if property is null</param>
+            <returns>Not null Style</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.StyleHelper.SetProp(System.Web.UI.StateBag,System.String,System.Web.UI.WebControls.Unit,System.Web.UI.WebControls.Unit)">
+            <summary>
+            Set Unit-type property value to the "bag" with the key "id".
+            </summary>
+            <param name="bag">Instance of StateBag. If it is null, then "newValue" is returned</param>
+            <param name="id">Unique key-id of a property</param>
+            <param name="newValue">New value for the property.
+            If it is null or equal to the "defValue", then property is removed from the "bag".
+            Otherwise it is written to the "bag"
+            </param>
+            <param name="defValue">Default value of the property.</param>
+            <returns>The "newValue". It most cases it is never used, but if a class has besides "bag" another member variable for this property, then that member can be updated by return.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.StyleHelper.SetProp(System.Web.UI.StateBag,System.String,System.String,System.String)">
+            <summary>
+            Set string-type property value to the "bag" with the key "id".
+            </summary>
+            <param name="bag">Instance of StateBag. If it is null, then "newValue" is returned</param>
+            <param name="id">Unique key-id of a property</param>
+            <param name="newValue">New value for the property.
+            If it is null or equal to the "defValue", then property is removed from the "bag".
+            Otherwise it is written to the "bag"
+            </param>
+            <param name="defValue">Default value of the property.</param>
+            <returns>The "newValue". It most cases it is never used, but if a class has besides "bag" another member variable for this property, then that member can be updated by return.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.StyleHelper.SetProp(System.Web.UI.StateBag,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Set bool-type property value to the "bag" with the key "id".
+            </summary>
+            <param name="bag">Instance of StateBag. If it is null, then "newValue" is returned</param>
+            <param name="id">Unique key-id of a property</param>
+            <param name="newValue">New value for the property.
+            If it is null or equal to the "defValue", then property is removed from the "bag".
+            Otherwise it is written to the "bag"
+            </param>
+            <param name="defValue">Default value of the property.</param>
+            <returns>The "newValue".  In most cases it is never used, but if a class has besides "bag" another member variable for this property, then that member can be updated by return.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.StyleHelper.SetProp(System.Web.UI.StateBag,System.String,System.Int32,System.Int32)">
+            <summary>
+            Set int-type property value to the "bag" with the key "id".  This method can be used to set enum-type properties.  For example, TabOrientation-enum:<br></br>
+            StyleHelper.SetProp(ViewState, Tab_Orientation, (int)value, (int)TabOrientation.TopLeft).
+            </summary>
+            <param name="bag">Instance of StateBag. If it is null, then "newValue" is returned</param>
+            <param name="id">Unique key-id of a property</param>
+            <param name="newValue">New value for the property.
+             If it is null or equal to the "defValue", then property is removed from the "bag".
+             Otherwise it is written to the "bag"
+             </param>
+            <param name="defValue">Default value of the property.</param>
+            <returns>The "newValue".  In most cases it is never used, but if a class has besides  "bag" another member variable for this property, then that member can be updated by return.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.StyleHelper.SetProp(System.Web.UI.StateBag,System.String,System.Object,System.Object)">
+            <summary>
+            Set object-type property value to the "bag" with the key "id".
+            </summary>
+            <param name="bag">Instance of StateBag. If it is null, then "newValue" is returned</param>
+            <param name="id">Unique key-id of a property</param>
+            <param name="newValue">New value for the property.
+            If it is null or equal to the "defValue", then property is removed from the "bag".
+            Otherwise it is written to the "bag"
+            </param>
+            <param name="defValue">Default value of the property.</param>
+            <returns>The "newValue".  In most cases it is never used, but if a class has besides "bag" another member variable for this property, then that member can be updated by return.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.StyleHelper.SetProp(Infragistics.WebUI.Shared.Style,Infragistics.WebUI.Shared.Style)">
+            <summary>
+            Set Style-type property.  This method copies members from the "newValue" to the "oldValue".
+            </summary>
+            <param name="oldValue">Old value.</param>
+            <param name="newValue">New value.</param>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.Tab">
+            <summary>The Tab object represents a selectable item in the Tab control that will change the contents displayed depending on the settings of the ContentPane object.</summary>
+            <remarks>
+            <p class="note"><i>Notes:</i>
+            <ul>
+            <li>The Tab may be painted by 4 different styles depending on the instant state of a tab: normal, mouse-over, selected, disabled.</li>
+            <li>Every state of tab may have different image.</li>
+            <li>The <see cref="P:Infragistics.WebUI.UltraWebTab.Tab.ContentPane"/> of a tab may have
+            the <see cref="P:Infragistics.WebUI.UltraWebTab.ContentPane.TargetUrl"/> which is rendered
+            as the <tt>&lt;IFRAME&gt;</tt> html element. Or it may have explicit child controls that are placed within the
+            <tt>&lt;DIV&gt;</tt> html element and are rendered using the standard logic of the .NET.<br></br>
+            If the TargetUrl is not set, then the child controls are rendered automatically.</li>
+            <li>Some of the Tab properties can be modified on the client using the JavaScript functionality and persist values between sessions.</li> 
+            <li>The subproperties of the <see cref="P:Infragistics.WebUI.UltraWebTab.TabItem.Style"/>
+            are merged with the <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DefaultTabStyle"/> and the <b>UltraWebTab.ControlStyle</b>.
+            </li>
+            <li>The subproperties of the <see cref="P:Infragistics.WebUI.UltraWebTab.Tab.HoverStyle"/>
+            are merged with the <see cref="P:Infragistics.WebUI.UltraWebTab.TabItem.Style"/>,
+            <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.HoverTabStyle"/>,
+            <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DefaultTabStyle"/>,
+            and <b>UltraWebTab.ControlStyle</b></li>
+            <li>The subproperties of the <see cref="P:Infragistics.WebUI.UltraWebTab.Tab.SelectedStyle"/>
+            are merged with the <see cref="P:Infragistics.WebUI.UltraWebTab.TabItem.Style"/>,
+            <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.SelectedTabStyle"/>,
+            <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DefaultTabStyle"/>,
+            and <b>UltraWebTab.ControlStyle</b></li>
+            <li>The subproperties of the <see cref="P:Infragistics.WebUI.UltraWebTab.Tab.DisabledStyle"/>
+            are merged with the <see cref="P:Infragistics.WebUI.UltraWebTab.TabItem.Style"/>,
+            <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DisabledTabStyle"/>,
+            <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DefaultTabStyle"/>,
+            and <b>UltraWebTab.ControlStyle</b>.<br></br>
+            If <b>ForeColor</b> is not set, then the Gray color is used automatically.</li>
+            <li>The background of the <see cref="P:Infragistics.WebUI.UltraWebTab.Tab.ContentPane"/>
+            is painted by the <b>SelectedStyle.BackColor</b> color.<br></br>
+            In order to paint the background of a tab by different color than the background of the ContentPane,-
+            the <b>CustomRules</b> can be used.</li>
+            </ul></p>
+            </remarks>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.TabItem">
+            <summary>Tab and TabSeparator class both inherit from this class and contains common properties.</summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.TabItem.style">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.TabItem.#ctor">
+            <summary>Initializes a new instance of the TabItem class.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.TabItem.#ctor(System.String,System.Boolean)">
+            <summary>Initializes a new instance of the TabItem class.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.TabItem.ToString">
+            <summary>Returns a string representation of a <b>TabItem</b> object.</summary>
+            <returns>Text for designer</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.TabItem.CopyFrom(Infragistics.WebUI.UltraWebTab.TabItem)">
+            <summary>This method is designed for internal use only.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.TabItem.SetDirty">
+            <summary>
+            Enable TrackViewState and set dirty ViewState.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.TabItem.SaveViewState">
+            <summary>
+            Build object to be saved in view state.
+            </summary>
+            <returns>null or array</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.TabItem.LoadViewState(System.Object)">
+            <summary>
+            Load properties from view state.
+            </summary>
+            <param name="savedState">view state</param>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.TabItem.TrackViewState">
+            <summary>
+            Notify objects about tracking view state.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.TabItem.DefaultImage">
+            <summary>
+            The name of the file that contains the image displayed to the left side of the text.
+            </summary>
+            <remarks>
+            	<p class="note">If that property was not set, then the <see cref="P:Infragistics.WebUI.UltraWebTab.TabItem.DefaultImage"/> is used.</p>
+            	<p class="note">If value does not contain the ':' character or does not start with the '.' or '/' character,
+            then the <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.ImageDirectory"/> property value will be prefixed onto the value of this property when rendering.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.TabItem.Style">
+            <summary>
+            Style object used to paint TabSeparator or Tab when it is in normal state (enabled, not selected and has no mouse).
+            </summary>
+            <remarks>
+            	<p class="note">This property is merged with the <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DefaultTabStyle"/> if this is an instance of the <see cref="T:Infragistics.WebUI.UltraWebTab.Tab"/> class or with the <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DefaultTabSeparatorStyle"/> when this is an instance of the <see cref="T:Infragistics.WebUI.UltraWebTab.TabSeparator"/> class.</p>
+            	<p class="note">When this property is set, then the reference to the original Style object remains the same, and Style-subproperties are copied using the <tt>Style.CopyFrom(...)</tt> method.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.TabItem.Tag">
+            <summary>An object to be associated with a <see cref="T:Infragistics.WebUI.UltraWebTab.Tab"/><b></b> or <see cref="T:Infragistics.WebUI.UltraWebTab.TabSeparator"/> object.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.TabItem.Key">
+            <summary>The key string used to access this item in the Tabs collection.</summary>
+            <remarks><p class="note">If value of that property is not unique within item of the <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.Tabs"/>, then the method <see cref="M:Infragistics.WebUI.UltraWebTab.Tabs.FromKey(System.String)"/> will return first found item.</p></remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.TabItem.Text">
+            <summary>String of text that is displayed by the object.</summary>
+            <remarks>
+            <p class="note">If string contains the ' ' characters and the RoundedImages (<see cref="P:Infragistics.WebUI.UltraWebTab.RoundedImage.FillStyle"/>) are enabled,
+            then to prevent possible increased height due to soft-line breaks, those characters should be
+            replaced by the <tt>"&amp;nbsp;"</tt>.<br></br>
+            In order to ensure multi-lined text, the <tt>"&lt;BR&gt;"</tt> tag can be used.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.TabItem.ImageAlign">
+            <summary>Alignment of image relative to text.</summary>
+            <remarks>
+            <p class="note">Not all browsers may support that property.</p>
+            <p class="note">Any value valid for <tt>"&lt;IMG align&gt;"</tt> property can be used.<br></br>
+            For example,<tt><ul>
+            <li>absbottom</li>
+            <li>absmiddle</li>
+            <li>baseline</li>
+            <li>bottom</li>
+            <li>left</li>
+            <li>middle</li>
+            <li>right</li>
+            <li>texttop</li>
+            <li>top</li>
+            </ul></tt>
+            Default value is <tt>left</tt></p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.TabItem.Visible">
+            <summary>Show or hide this tab item.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.TabItem.NextRow">
+            <summary>Flag to move this TabItem and all following items in the <see cref="T:Infragistics.WebUI.UltraWebTab.Tabs"/> collection to the next row.</summary>
+            <remarks>
+            	<p class="note">Notes:
+            <ul>
+            			<li>This property has effect only if <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DisplayMode"/> is set to the MultiRow and the orientation of tabs is horizontal.</li>
+            			<li>If the BackColor property of UltraWebTab is set, then its value is used as the background color behind all tabs except tabs in the last (outer) row.</li>
+            			<li>If this property is set to true for this TabItem and this is an instance of TabSeparator, then the next TabItem will be located on the same row regardless of the value of its NextRow property.</li>
+            		</ul></p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.TabItem.Owner">
+            <summary>
+            Get a reference to the UltraWebTab which owns this item.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.TabItem.ViewState">
+            <summary>
+            Private instance of StateBag.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tab.#ctor">
+            <summary>Contstructor.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tab.#ctor(System.String)">
+            <summary>Contstructor.</summary>
+            <param name="text">Label displayed on tab.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tab.#ctor(System.String,System.Boolean)">
+            <summary>Initializes a new instance of the TabItem class.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tab.FindControl(System.String)">
+            <summary>
+            Get a reference to a child aspx-control located within the ContentPane of this tab by its id.
+            </summary>
+            <remarks>
+            	<p class="body">This method will recursively search the child controls of each child control, until either a match is found, or all controls have been searched.</p>
+            	<p class="note">This method can not be used to get a reference to a child control located within TargetUrl.  In case of controls located within the Page of TargetUrl,- a reference to the <tt>document</tt> and html elements can be obtain using JavaScript functionality on the client.</p>
+            </remarks>
+            <param name="id">The id of child control.</param>
+            <returns>Reference to <tt>Control</tt> or <tt>null</tt>.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tab.CopyFrom(Infragistics.WebUI.UltraWebTab.TabItem)">
+            <summary>This method is designed for internal use only.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tab.SaveViewState">
+            <summary>
+            Build object to be saved in view state.
+            </summary>
+            <returns>null or array</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tab.LoadViewState(System.Object)">
+            <summary>
+            Load properties from view state.
+            </summary>
+            <param name="savedState">view state</param>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tab.TrackViewState">
+            <summary>
+            Notify objects about tracking view state.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tab.SetDirty">
+            <summary>
+            Enable TrackViewState and set dirty ViewState.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.Tab.SelectedStyle">
+            <summary>
+            Style object used to paint this tab when it is selected.
+            </summary>
+            <remarks>
+            	<p class="note">This property is merged with the <see cref="P:Infragistics.WebUI.UltraWebTab.TabItem.Style"/> and with the <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.SelectedTabStyle"/> properties.</p>
+            	<p class="note">When this property is set, then the reference to the original Style object remains the same, and Style-subproperties are copied using the <tt>Style.CopyFrom(...)</tt> method.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.Tab.HoverStyle">
+            <summary>
+            Style object used to paint the tab when the mouse is over it.
+            </summary>
+            <remarks>
+            	<p class="note">This property is merged with the <see cref="P:Infragistics.WebUI.UltraWebTab.TabItem.Style"/> and with the <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.HoverTabStyle"/> properties.</p>
+            	<p class="note">When this property is set, then the reference to the original Style object remains the same, and Style-subproperties are copied using the <tt>Style.CopyFrom(...)</tt> method.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.Tab.DisabledStyle">
+            <summary>
+            Style object used to paint a tab when it is disabled.
+            </summary>
+            <remarks>
+            	<p class="note">This property is merged with the <see cref="P:Infragistics.WebUI.UltraWebTab.TabItem.Style"/> and with the <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DisabledTabStyle"/> properties.</p>
+            	<p class="note">When this property is set, then the reference to the original Style object remains the same, and Style-subproperties are copied using the <tt>Style.CopyFrom(...)</tt> method.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.Tab.HoverImage">
+            <summary>
+            The name of the file that contains the image displayed to the left side of the text when the mouse is moved over the tab.
+            </summary>
+            <remarks>
+            	<p class="note">If that property was not set, then the <see cref="P:Infragistics.WebUI.UltraWebTab.TabItem.DefaultImage"/> is used.</p>
+            	<p class="note">If value does not contain the ':' character or does not start with the '.' or '/' character, then the <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.ImageDirectory"/> property value will be prefixed onto the value of this property when rendering.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.Tab.SelectedImage">
+            <summary>The name of the file that contains the image displayed to the left side of the text when the tab is selected.</summary>
+            <remarks>
+            	<p class="note">If this property was not set, then the <see cref="P:Infragistics.WebUI.UltraWebTab.TabItem.DefaultImage"/> is used.</p>
+            	<p class="note">If the value does not contain the ':' character or does not start with the '.' or '/' character,
+            then the <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.ImageDirectory"/> property value will be prefixed onto the value of this property when rendering.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.Tab.DisabledImage">
+            <summary>
+            The name of the file that contains the image displayed to the left side of the text when the tab is disabled.
+            </summary>
+            <remarks>
+            	<p class="note">If that property was not set, then the <see cref="P:Infragistics.WebUI.UltraWebTab.TabItem.DefaultImage"/> is used.</p>
+            	<p class="note">If the value does not contain the ':' character or does not start with the '.' or '/' character, then the <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.ImageDirectory"/> property value will be prefixed onto the value of this property when rendering.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.Tab.Enabled">
+            <summary>Whether the tab can be selected at run time.</summary>
+            <remarks><p class="note">This property does not effect the initial state and selected Tab of the UltraWebTab.</p></remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.Tab.Tooltip">
+            <summary>The text for tooltip.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.Tab.ID">
+            <summary>Persistance for the ID of ContentPane.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.Tab.AccessKey">
+            <summary>
+            The keyboard shortcut to select this tab.
+            </summary>
+            <remarks>
+            <p class="note">The access-key is the feature of a browser, which is triggered by the keyboard entry of Alt+key.</p>
+            <p class="note">That property is supported only for InternetExplorer, which allows to set focus to the &lt;TD&gt; html element.</p>
+            <p class="note">If the &lt;u&gt; string is not found in the Text of this tab and the value of AccessKey is set as the UPPER-case-letter, then the first found access-character in the Text is rendered with underscore.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.Tab.AsyncOption">
+            <summary>Custom behavior when AsyncMode of UltraWebTab is enabled.</summary>
+            <remarks>
+            <p class="note">Note: In case of LoadOnDemand the states of fields (like TextBox)
+            located on unselected tabs can not persist between postbacks, therefore,
+            if application needs up-to-date values of those fields, then that option can not be used.</p>
+            <p class="note">Warning: LoadOnDemand may trigger full post backs and
+            lead to errors, exceptions and other side effects.
+            Therefore, application should test all possible scenarious.
+            If error happens, then this property should be disabled.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.Tab.ContentPane">
+            <summary>Returns or sets the <see cref="T:Infragistics.WebUI.UltraWebTab.ContentPane"/> object to be displayed when the tab is selected.</summary>
+            <remarks><p class="note">The <see cref="T:Infragistics.WebUI.UltraWebTab.ContentPane"/> object of each Tab object contains the information related to the contents of the UltraWebTab control that will be displayed when a particular Tab is selected.</p></remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.Tab.TargetUrl">
+            <summary>
+            Persistance for ContentPane.TargetUrl.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.Tab.UserControlUrl">
+            <summary>
+            Persistance for ContentPane.UserControlUrl.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.Tab.ContentTemplate">
+            <summary>
+            The template property used to fill children of ContentPane at design time.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.TagConverter">
+            <summary>
+            Summary description for TagConverter.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.TagConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.TagConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.TagConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.TagConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary></summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.Tabs">
+            <summary>The Tabs collection holds all Tab and TabSeparator objects that will be displayed in the UltraWebTab control.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tabs.#ctor">
+            <summary>Initializes a new instance of the Tabs class.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tabs.GetTab(System.Int32)">
+            <summary>
+            Get a reference to a Tab from the index within items of the <b>Tab</b> class.
+            </summary>
+            <param name="index">Index of Tab. Separators are skipped. For example, if there is a separator between 1st and 2nd tabs, then GetTab(1) will return 2nd Tab.</param>
+            <returns>Reference to the <b>Tab</b> or null.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tabs.GetTabIndex(Infragistics.WebUI.UltraWebTab.Tab)">
+            <summary>
+            Get the index of a Tab from its reference within items of the <b>Tab</b> class.
+            </summary>
+            <param name="tab">Reference to the <b>Tab</b> or null.Index of Tab.</param>
+            <returns>Index of Tab or -1.  Separators are skipped.  For example, if there is a separator between 1st and 2nd tabs, then GetTab(secondTab) will return 1.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tabs.ConvertTabIndexToCollectionIndex(System.Int32)">
+            <summary>
+            Convert the index of an item within instances of the <b>Tab</b> class to the index of that item within the whole collection.
+            </summary>
+            <remarks>
+            	<p class="body">Below is an example of usage.<br></br>
+            Assume that an application has 6 TabItems which include: TabSeparator, Tab ("Tab1"), Tab ("Tab2"), TabSeparator, TabSeparator, Tab ("Tab3").<br></br>
+            Within instances of the Tab objects (skipping separators), the index of the Tab with Text equal to "Tab2" is 1, but the index of that Tab within all TabItems is 2.<br></br>
+            So, UltraWebTab1.Tabs.ConvertTabIndexToCollectionIndex(1) will return the value of 2.  Similar, for the Tab with Text equal to "Text3", the UltraWebTab1.Tabs.ConvertTabIndexToCollectionIndex(2) will return the value of 5.</p>
+            </remarks>
+            <param name="tabIndex">Index of an item within items of the <b>Tab</b> class (skipping separators).</param>
+            <returns>Index of a Tab item within all items in the collection or the value -1.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tabs.Add(Infragistics.WebUI.UltraWebTab.TabItem)">
+            <summary>
+            <p class="body">Adds a <see cref="T:Infragistics.WebUI.UltraWebTab.TabItem"/> object (<see cref="T:Infragistics.WebUI.UltraWebTab.Tab"/> or <see cref="T:Infragistics.WebUI.UltraWebTab.TabSeparator"/>) to the Tabs collection.</p>
+            </summary>
+            <param name="tabItem">A TabItem object.</param>
+            <returns>The TabItem added.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tabs.Insert(System.Int32,Infragistics.WebUI.UltraWebTab.TabItem)">
+            <summary>
+            <p class="body">Adds a <see cref="T:Infragistics.WebUI.UltraWebTab.TabItem"/> object (<see cref="T:Infragistics.WebUI.UltraWebTab.Tab"/> or <see cref="T:Infragistics.WebUI.UltraWebTab.TabSeparator"/>) to the Tabs collection at the specified index.</p>
+            </summary>
+            <param name="index">The index at which the new <see cref="T:Infragistics.WebUI.UltraWebTab.TabItem"/> should be inserted into the collection.</param>
+            <param name="tabItem">A <see cref="T:Infragistics.WebUI.UltraWebTab.TabItem"/> object.</param>
+            <returns>The <see cref="T:Infragistics.WebUI.UltraWebTab.TabItem"/> inserted.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tabs.Remove(Infragistics.WebUI.UltraWebTab.TabItem)">
+            <summary>
+            Remove tab item.
+            </summary>
+            <param name="tab">Instance of tab item</param>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tabs.FromKey(System.String)">
+            <summary>
+            	<p class="body">Get a reference to the TabItem from the key.</p>
+            </summary>
+            <param name="key">The identifier which was set by <see cref="P:Infragistics.WebUI.UltraWebTab.TabItem.Key"/> property.</param>
+            <returns>The first found <tt>TabItem</tt> which has <tt>key</tt> or <tt>null</tt>.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tabs.FromKeyTab(System.String)">
+            <summary>
+            	<p class="body">Get a reference to the Tab from the key.</p>
+            </summary>
+            <param name="key">The identifier which was set by <see cref="P:Infragistics.WebUI.UltraWebTab.TabItem.Key"/> property.</param>
+            <returns>The first found <tt>Tab</tt> which has <tt>key</tt> or <tt>null</tt>.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tabs.CopyTo(Infragistics.WebUI.UltraWebTab.TabItem[],System.Int32)">
+            <summary>
+            Copy tabs.
+            </summary>
+            <param name="tabs">Tab items</param>
+            <param name="index">Index to copy</param>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tabs.Contains(Infragistics.WebUI.UltraWebTab.TabItem)">
+            <summary>
+            Check if tabs have a tab item.
+            </summary>
+            <param name="tab">Tab item</param>
+            <returns>True: contains</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tabs.IndexOf(Infragistics.WebUI.UltraWebTab.TabItem)">
+            <summary>
+            Get index of a tab item.
+            </summary>
+            <param name="tab">Tab item</param>
+            <returns>Index of the tab item.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tabs.OnClear">
+            <summary>Clear actions.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tabs.OnInsertComplete(System.Int32,System.Object)">
+            <summary>Write insert action.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.Tabs.OnRemoveComplete(System.Int32,System.Object)">
+            <summary>Write remove action.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.Tabs.Item(System.Int32)">
+            <summary>The Item property allows for access to the <see cref="T:Infragistics.WebUI.UltraWebTab.TabItem"/><b></b> objects contained in the collection.</summary>
+            <remarks>
+            <p class="body">A <see cref="T:Infragistics.WebUI.UltraWebTab.TabItem"/> can be either of type <see cref="T:Infragistics.WebUI.UltraWebTab.Tab"/> or <see cref="T:Infragistics.WebUI.UltraWebTab.TabSeparator"/>.  When working with <see cref="T:Infragistics.WebUI.UltraWebTab.TabItem"/> objects you should make sure you have the right type.</p>
+            <p class="code">
+            Infragistics.WebUI.UltraWebTab.Tab t;<br></br>
+            Infragistics.WebUI.UltraWebTab.TabSeparator ts;<br></br>
+            if (UltraWebTab1.Tabs[0].GetType().Equals(typeof(Infragistics.WebUI.UltraWebTab.Tab)))
+              <UL><LI>t = (Infragistics.WebUI.UltraWebTab.Tab)UltraWebTab1.Tabs[0];</LI></UL>
+            else
+              <UL><LI>ts = (Infragistics.WebUI.UltraWebTab.TabSeparator)UltraWebTab1.Tabs[0];</LI></UL>
+            </p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.Tabs.Owner">
+            <summary>
+            Get a reference to the UltraWebTab which owns this collection.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.TabsEditor">
+            <summary>
+            <p class="body">A custom Type Editor for the nodes collection.  This Editor invokes a dialog for editing Tabs and TabSeparator objects.</p>
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.TabsEditor.#ctor">
+            <summary>
+            <p class="body">Initializes a new instance of the TabsEditor class.</p>
+            </summary>
+            <remarks>
+            <p class="body">The default constructor initializes any fields to their default values.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.TabsEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            <p class="body">This is an override from UITypeEditor.  The property grid will call this when it wants to display the editor for the given value.</p>
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.TabsEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            <p class="body">This is an override from UITypeEditor.  The editor style indicates what type of editor we are providing:  we can either display a dialog or a drop-down box.  Our editor always shows a drop-down box.</p>
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.TabsEditor.GetPaintValueSupported(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            <p class="body">This is an override from UITypeEditor and indicates if we support painting a small representation of our value in the property grid.</p>
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.TabsEditorForm">
+            <summary>
+            Summary description for TabsEditor.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.TabsEditorForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.TabsEditorForm.#ctor(System.Object)">
+            <summary></summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.TabsEditorForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.TabsEditorForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.TabSeparator">
+            <summary>TabSeparator object represents a space between items in the Tab control.</summary>
+            <remarks>
+            <p class="note"><i>Notes:</i>
+            <ul>
+            <li>The background and outter borders are not painted.
+            However, if these properties are set within the <b>Style.CustomRules</b>, then they will have effect.</li>
+            <li>The TabSeparator does not have a mouse-over or selected styles</li>
+            <li>The subproperties of the <see cref="P:Infragistics.WebUI.UltraWebTab.TabItem.Style"/>
+            are merged with the <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DefaultTabSeparatorStyle"/>.
+            </li>
+            </ul></p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.TabSeparator.#ctor">
+            <summary>Constructor.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.TabSeparator.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="text">Label displayed on tab separator.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.TabSeparator.#ctor(System.String,System.Boolean)">
+            <summary>Initializes a new instance of the TabItem class.</summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.TabClickEventHandler">
+            <summary>Handler of events that are fired when selected tab was changed.</summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.UltraWebTab">
+            <summary>
+            The web control that renders tabs and displays child controls or TargerUrl associated with the selected tab.
+            In case of level browsers it is able to use javascript and navigate through tabs without post back to server.
+            </summary>
+        </member>
+        <member name="F:Infragistics.WebUI.UltraWebTab.UltraWebTab.filterDoc">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.SavePreset(System.String,System.String,System.String,Infragistics.WebUI.PresetType)">
+            <summary>
+            Saves the properties of a control to a file, so that they can be used by another control via the LoadPreset method. 
+            </summary>
+            <param name="filePath">The absolute path in which to save the Preset File.</param>
+            <param name="name">The name the preset will have.</param>
+            <param name="desc">A description of the preset.</param>
+            <param name="presetType">The type of properties (Appearance, Behavior, or Both) which should be saved in this preset.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.SavePreset(System.IO.TextWriter,System.String,System.String,Infragistics.WebUI.PresetType)">
+            <summary>
+            Saves the properties of a control to a file, so that they can be used by another control via the LoadPreset method. 
+            </summary>
+            <param name="textWriter">The Text writer in which to write the Preset File. The writer will not be closed at the end of the call, and should be closed afterwards.</param>
+            <param name="name">The name the preset will have.</param>
+            <param name="desc">A description of the preset.</param>
+            <param name="presetType">The type of properties (Appearance, Behavior, or Both) which should be saved in this preset.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.SavePreset(System.IO.Stream,System.String,System.String,Infragistics.WebUI.PresetType)">
+            <summary>
+            Saves the properties of a control to a file, so that they can be used by another control via the LoadPreset method. 
+            </summary>
+            <param name="stream">The stream in which to write Preset File. The stream will not be closed at the end of the call, and should be closed afterwards.</param>
+            <param name="name">The name the preset will have.</param>
+            <param name="desc">A description of the preset.</param>
+            <param name="presetType">The type of properties (Appearance, Behavior, or Both) which should be saved in this preset.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.LoadPreset(System.String,System.Boolean)">
+            <summary>
+            Sets properties on the control that effect Appearance, Behavior, or Both, based on the information in the predefined Preset File.
+            </summary>
+            <param name="filePath">The aboslute path of the Preset File.</param>
+            <param name="reset">Whether to reset all properties on the control before applying the preset.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.LoadPreset(System.IO.Stream,System.Boolean)">
+            <summary>
+            Sets properties on the control that effect Appearance, Behavior, or Both, based on the information in the predefined Preset File.
+            </summary>
+            <param name="stream">A Stream that references a Preset File. The stream will not be closed at the end of the call, and should be closed afterwards.</param>
+            <param name="reset">Whether to reset all properties on the control before applying the preset.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.LoadPreset(System.IO.TextReader,System.Boolean)">
+            <summary>
+            Sets properties on the control that effect Appearance, Behavior, or Both, based on the information in the predefined Preset File.
+            </summary>
+            <param name="reader">A Text Reader that references a Preset File. The reader will not be closed at the end of the call, and should be closed afterwards.</param>
+            <param name="reset">Whether to reset all properties on the control before applying the preset.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.#ctor">
+            <summary>Constructor.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.CreateControlStyle">
+            <summary>
+            Create style for control.
+            </summary>
+            <returns>Instance of Infragistics.WebUI.Shared.Style object</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.ShouldSerializeDefaultTabStyle">
+            <summary>
+            Returns true if any property of DefaultTabStyle has a non default value.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.ResetDefaultTabStyle">
+            <summary>
+            Clears the DefaultTabStyle.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.ShouldSerializeHoverTabStyle">
+            <summary>
+            Returns true if any property of HoverTabStyle has a non default value.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.ResetHoverTabStyle">
+            <summary>
+            Clears the HoverTabStyle.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.ShouldSerializeSelectedTabStyle">
+            <summary>
+            Returns true if any property of SelectedTabStyle has a non default value.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.ResetSelectedTabStyle">
+            <summary>
+            Clears the SelectedTabStyle.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.ShouldSerializeDisabledTabStyle">
+            <summary>
+            Returns true if any property of DisabledTabStyle has a non default value.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.ResetDisabledTabStyle">
+            <summary>
+            Clears the DisabledTabStyle.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.ShouldSerializeDefaultTabSeparatorStyle">
+            <summary>
+            Returns true if any property of DefaultTabSeparatorStyle has a non default value.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.ResetDefaultTabSeparatorStyle">
+            <summary>
+            Clears the DefaultTabSeparatorStyle.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.ShouldSerializeTabs">
+            <summary>Returns true if any property of Tabs has at least one tab item.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.ResetTabs">
+            <summary>
+            Clears the Tabs collection.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.ShouldSerializeClientSideEvents">
+            <summary>
+            Returns true if any property of ClientSideEvents has a non default value.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.ResetClientSideEvents">
+            <summary>
+            Clears the ClientSideEvents.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.ShouldSerializeRoundedImage">
+            <summary>
+            Returns true if any property of RoundedImage has a non default value.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.ResetRoundedImage">
+            <summary>
+            Clears the RoundedImage.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.ShouldSerializeBorderDetails">
+            <summary>
+            Returns true if any property of BorderDetails has a non default value.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.ResetBorderDetails">
+            <summary>
+            Clears the RoundedImage.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.ShouldSerializeScrollButtons">
+            <summary>
+            Returns true if any property of ScrollButtons has a non default value.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.ResetScrollButtons">
+            <summary>
+            Clears the ScrollButtons.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.ShouldSerializeAsyncOptions">
+            <summary>
+            Returns true if any property of AsyncOptions has a non default value.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.ResetAsyncOptions">
+            <summary>
+            Clears the AsyncOptions.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.CreateChildControls">
+            <summary>
+            Creates controls from the template, fill ContentPanes and add them to the Controls collection.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.DataBind">
+            <summary>
+            Create child controls.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.OnDataBinding(System.EventArgs)">
+            <summary>
+            Ensure child controls.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.EnsureChildControls">
+            <summary>
+            Ensure that all templates were created.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.RecreateChildControls">
+            <summary>Unconditionally recreate child controls for all tabs.</summary>
+            <remarks>
+            <p class="note">Call to this method may result in lost ViewState.</p>
+            <p class="note">In order to recreate only new controls which were set at run time
+            by Template or by UserControlUrl without rebuilding contols in other tabs,-
+            the DataBind() method should be used.</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.GetSelectedTabReference">
+            <summary>Get reference to selected tab.</summary>
+            <returns>Selected tab or null.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.SetSelectedTabReference(Infragistics.WebUI.UltraWebTab.Tab)">
+            <summary>Select tab.</summary>
+            <param name="tab">Tab to be selected</param>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.GetTab(System.Int32)">
+            <summary>
+            Get reference to a Tab from the index within the Tab's.
+            </summary>
+            <param name="index">Index of Tab. Separators are skipped. For example, if there is a separator between 1st and 2nd tabs, then GetTab(1) will return 2nd Tab.</param>
+            <returns>Get reference to a tab at particular index.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.FindControl(System.String)">
+            <summary>
+            Get a reference to a child aspx-control located within the ContentPane of any Tab by its id.
+            </summary>
+            <remarks>
+            	<p class="note">This method will browse through all tabs and call the <see cref="M:Infragistics.WebUI.UltraWebTab.Tab.FindControl(System.String)"/> for every tab until the control is found or all children have been searched.</p>
+            	<p class="note">This method can not be used to get a reference to a child control located within TargetUrl.  In case of controls located within the Page of TargetUrl,- a reference to the <tt>document</tt> and html elements can be obtain using JavaScript functionality on client.</p>
+            </remarks>
+            <param name="id">The id of child control.</param>
+            <returns>Reference to <tt>Control</tt> or <tt>null</tt>.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.RaisePostBackEvent(System.String)">
+            <summary>Process an event when the form is posted to the server.</summary>
+            <param name="eventArgument">A String that represents an optional event argument to be passed to the event handler.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>Process post-back data from a server control.</summary>
+            <param name="key">The key identifier for the control.</param>
+            <param name="names">The collection of all incoming name values.</param>
+            <returns>The value of false.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.RaisePostDataChangedEvent">
+            <summary>
+            The OnTabClick method with reference to the selected tab invoked.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.OnTabClick(Infragistics.WebUI.UltraWebTab.Tab)">
+            <summary>
+            Method that is called on tab clicks.  References to the current tab can be obtained using SelectedTab and Tabs properties.
+            </summary>
+            <param name="tab">New selected tab.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.OnInit(System.EventArgs)">
+            <summary>
+            Validate if the control was created dynamically or at design time.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.LoadControlState(System.Object)">
+            <summary>Load saved state.</summary>
+            <param name="savedState">Saved state.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.SaveControlState">
+            <summary>Save state if ViewState is disabled.</summary>
+            <returns>Saved state.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.OnLoad(System.EventArgs)">
+            <summary>Prepares the UltraWebTab control for rendering and revalidates templated child controls.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.TrackViewState">
+            <summary>
+            Track ViewState.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.SaveViewState">
+            <summary>Save selected index or all properties depending on the the value of viewStateBias.</summary>
+            <returns>Object to be saved.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.LoadViewState(System.Object)">
+            <summary>Load properties.</summary>
+            <param name="savedState">Saved object.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>Render this control to the output parameter.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.OnPreRender(System.EventArgs)">
+            <summary>Prepares the UltraWebTab control for rendering.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.Dispose">
+            <summary>Dispose control.</summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.Preset(Infragistics.WebUI.UltraWebTab.StylePreset,System.Boolean)">
+            <summary>
+            Configure properties of UltraWebTab according to a predefined style.
+            </summary>
+            <param name="style">Style of preset.</param>
+            <param name="reset">If true, then reset existing style related properties.</param>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.UltraWebTab.Infragistics#WebUI#Shared#ICallBackResponseRenderer#RenderHtmlAtIndex(System.Web.UI.HtmlTextWriter,System.Int32)">
+            <summary>
+            Write ContentPane of a Tab to the writer.  If this.callBackTabs is null, then before processing, that member is filled by indexes of TabItems that write its ContentPanes to response.  This method is called by CallBackManager in an endless loop until the null is returned.
+            </summary>
+            <param name="writer">Stream to write</param>
+            <param name="index">Index of item to write. It is used to get index of Tab from this.callBackTabs array.</param>
+            <returns>It returns the index of the Tab which writes its ContentPane to a stream, or null when all tabs were already rendered.  In case of an error it also may return "".  This should not happen and needs to be fixed.</returns>
+        </member>
+        <member name="E:Infragistics.WebUI.UltraWebTab.UltraWebTab.TabClick">
+            <summary>
+            Event that is fired when the selected Tab was changed.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DefaultTabStyle">
+            <summary>
+            Style object used to paint a tab when it is in a normal state (enabled, not selected and has no mouse). <see cref="T:Infragistics.WebUI.UltraWebTab.Tab"/>
+            </summary>
+            <remarks>
+            	<p class="note">The <see cref="P:Infragistics.WebUI.UltraWebTab.TabItem.Style"/> property of a particular tab has priority over that property.</p>
+            	<p class="note">This property is merged with the <tt>this.ControlStyle</tt>.  It means that if the <tt>BackColor, ForeColor, Font,</tt> or sub-properties related to the border are not set, then values of corresponding properties of the <tt>this.ControlStyle</tt> are used.</p>
+            	<p class="note">When this property is set, then the reference to the original Style object remains the same, and Style-subproperties are copied using the <tt>Style.CopyFrom(...)</tt> method.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.HoverTabStyle">
+            <summary>
+            Style object used to paint a tab when the mouse is over it .<see cref="T:Infragistics.WebUI.UltraWebTab.Tab"/>
+            </summary>
+            <remarks>
+            	<p class="note">The <see cref="P:Infragistics.WebUI.UltraWebTab.Tab.HoverStyle"/> property of a particular tab has priority over that property.</p>
+            	<p class="note">This property is merged with the <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DefaultTabStyle"/> property.</p>
+            	<p class="note">When this property is set, then the reference to the original Style object remains the same, and Style-subproperties are copied using the <tt>Style.CopyFrom(...)</tt> method.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.SelectedTabStyle">
+            <summary>
+            Style object used to paint a tab when it is selected.  <see cref="T:Infragistics.WebUI.UltraWebTab.Tab"/>
+            </summary>
+            <remarks>
+            	<p class="note">The <see cref="P:Infragistics.WebUI.UltraWebTab.Tab.SelectedStyle"/> property of a particular tab has priority over that property.</p>
+            	<p class="note">This property is merged with the <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DefaultTabStyle"/> property.</p>
+            	<p class="note">When this property is set, then the reference to the original Style object remains the same, and Style-subproperties are copied using the <tt>Style.CopyFrom(...)</tt> method.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DisabledTabStyle">
+            <summary>
+            Style object used to paint a tab when it is disabled. <see cref="T:Infragistics.WebUI.UltraWebTab.Tab"/>
+            </summary>
+            <remarks>
+            	<p class="note">The <see cref="P:Infragistics.WebUI.UltraWebTab.Tab.DisabledStyle"/> property of a particular tab has priority over that property.</p>
+            	<p class="note">This property is merged with the <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DefaultTabStyle"/> property.</p>
+            	<p class="note">When this property is set, then the reference to the original Style object remains the same, and Style-subproperties are copied using the <tt>Style.CopyFrom(...)</tt> method.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DefaultTabSeparatorStyle">
+            <summary>
+            Style object used to paint tab separators. <see cref="T:Infragistics.WebUI.UltraWebTab.TabSeparator"/>
+            </summary>
+            <remarks>
+            	<p class="note">The <see cref="P:Infragistics.WebUI.UltraWebTab.TabItem.Style"/> property of a particular separator has priority over that property.</p>
+            	<p class="note">When this property is set, then the reference to the original Style object remains the same, and Style-subproperties are copied using the <tt>Style.CopyFrom(...)</tt> method.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.Tabs">
+            <summary>Reference to the <see cref="T:Infragistics.WebUI.UltraWebTab.Tabs"/><b></b> collection.</summary>
+            <remarks>
+            <p class="note">This property can be used to retrieve any <see cref="T:Infragistics.WebUI.UltraWebTab.TabItem"/> object in the collection.</p>
+            <p class="note">The <see cref="T:Infragistics.WebUI.UltraWebTab.TabItem"/> object returned can be of type
+            <see cref="T:Infragistics.WebUI.UltraWebTab.Tab"/> or <see cref="T:Infragistics.WebUI.UltraWebTab.TabSeparator"/>.
+            Each language in .Net has its own method of determining the type of an object, for example, the keyword <tt><b>is</b></tt> can be used in C#.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.ClientSideEvents">
+            <summary>
+            The ClientSideEvents object maintains the names of JavaScript functions that are to be called on the client side in response to various events that can be processed there without the need for a server post-back.
+            </summary>
+            <remarks>
+            	<p class="body">Every member property can contain the name of an implemented function or explicit javascript statement(s).  If the name of a function (only name: no parenthesis or parameters) is used, then actual implementation on the client may contain parameters: please see documentation for Client-Side Object Model.</p>
+            	<p class="note">When this property is set, then the reference to the original ClientSideEvents object remains the same, and ClientSideEvents-subproperties are copied using the "ClientSideEvents.CopyFrom(...)" method.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.RoundedImage">
+            <summary>
+            The RoundedImage object maintains properties related to the rounded shape of tabs.
+            </summary>
+            <remarks>
+            	<p class="note"><i>Notes:</i><ul>
+            			<li>To enable rounded images, the <see cref="P:Infragistics.WebUI.UltraWebTab.RoundedImage.FillStyle"/> should be
+            set to a value other than <tt>None</tt>.</li>
+            			<li>To customize images the image related properties should be set, such as the <see cref="P:Infragistics.WebUI.UltraWebTab.RoundedImage.NormalImage"/></li>
+            			<li>To customize images it is also possible to modify default images that are located at the<br></br>
+            C:\Inetpub\wwwroot\aspnet_client\Infragistics\WebBars2\Images<br></br>
+            Names of default images for a particular configuration of TabOrientation and TextOrientation appear within the
+            <see cref="P:Infragistics.WebUI.UltraWebTab.RoundedImage.DefaultImages"/> property.</li>
+            			<li>When this property is set, then the reference to the original RoundedImage object remains the same, and RoundedImage-subproperties are copied using the "RoundedImage.CopyFrom(...)" method.</li>
+            		</ul></p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.BorderDetails">
+            <summary>
+            Returns or sets colors, widths and styles for each side of the border.
+            </summary>
+            <remarks>
+            <p class="note">When this property is set, then the reference to the original BorderDetails object remains the same, and BorderDetails-subproperties are copied using the "BorderDetails.CopyFrom(...)" method.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.ScrollButtons">
+            <summary>
+            Appearance and behavior of buttons used to scroll tabs.
+            </summary>
+            <remarks>
+            <p class="note">That property has effect only when <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DisplayMode"/> is set to the Scrollable and orientation of tabs is horizontal. See <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.TabOrientation"/>.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.AsyncMode">
+            <summary>
+            Disable or enable hidden asynchronous post backs.
+            </summary>
+            <remarks>
+            <p class="note">That property has effect only for Tabs which ContentPanes have child controls.</p>
+            <p class="note">Warning: If error or exception happens on server or on client and that property is enabled, then full post backs can be triggered. In case of errors or other misbehavior,- that property should be disabled.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.AsyncOptions">
+            <summary>
+            Options related to hidden asynchronous post backs.
+            </summary>
+            <remarks>
+            <p class="note">That property has effect only if AsyncMode is On and only for Tabs which ContentPanes have child controls.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.About">
+            <summary>
+            Display the about dialog.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.Infragistics#WebUI#Shared#IUltraLicensedComponent#License">
+            <summary>
+            Return the license we cached inside the contructor.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.ThreeDEffect">
+            <summary>
+            <p class="body">Returns or sets a value to determine whether a three-d border will be rendered around the tabs.</p>
+            </summary>
+            <remarks>
+            <p class="body">The ThreeD borders may not render in down-level browsers.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.BarHeight">
+            <summary>Height of the bar rendered between the tabs and the ContentPane.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.ImageDirectory">
+            <summary>Directory in which the images used for the tabs are stored.</summary>
+            <remarks>
+            <p class="body">The string specified as the ImageDirectory will be prefixed onto the <see cref="P:Infragistics.WebUI.UltraWebTab.TabItem.DefaultImage"/>, <see cref="P:Infragistics.WebUI.UltraWebTab.Tab.SelectedImage"/>, and <see cref="P:Infragistics.WebUI.UltraWebTab.Tab.HoverImage"/> properties of the <see cref="T:Infragistics.WebUI.UltraWebTab.Tab"/> object.</p>
+            <p class="note">Note that is a particular file-image-name starts with the ".", "/", "\\" character or contains the ":" character, then that file-name will be used as it is without the ImageDirectory prefix.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.TabOrientation">
+            <summary>Location and alignment of the tabs relative to the <see cref="T:Infragistics.WebUI.UltraWebTab.ContentPane"/>.</summary>
+            <remarks>
+            	<p class="note">Permitted values are: TopLeft, TopRight, BottomLeft, BottomRight, LeftTop, LeftBottom, RightTop, RightBottom</p>
+            	<p class="note">Each TabOrientation constant specifies the orientation and the alignment of the Tab objects when rendered.  E.g., TopLeft indicates the Tabs will be oriented on the Tab of the control and aligned to the left.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.TextOrientation">
+            <summary>
+            <p class="body">Returns or sets the Orientation of the text within the <see cref="T:Infragistics.WebUI.UltraWebTab.Tab"/></p>
+            </summary>
+            <remarks>
+            <p class="note">Permitted values are Horizontal and Vertical.</p>
+            <p class="note">In all Netscape browsers and browsers prior to version 6.0 Vertical text indicates that the text will be rendered such that each letter is on a new line from top to bottom.  On IE6 the text will be rotated 90 degrees clockwise.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.JavaScriptFileName">
+            <summary>Name of the file that contains the external JavaScript for client-side functionality on up-level browsers such as IE5, Netscape6.</summary>
+            <remarks>
+            	<p class="body">Use this property to change the name of the external JavaScript file.</p>
+            	<p class="note">If the value of this property is set to the empty string, then the default value is used.</p>
+            	<p class="note">If the value is 1-3 characters long, then dynamic client functionality becomes disabled, however, the page is posted back on tab-click events.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.JavaScriptFileNameCommon">
+            <summary>Name of the file that contains the external JavaScript with common methods for client-side functionality on up-level browsers such as IE5, Netscape6.</summary>
+            <remarks>
+            	<p class="body">Use this property to change the name of the common external JavaScript file.</p>
+            	<p class="body">If the application uses any other instance of any Infragistics Web control, then the values of that property in all controls should match, otherwise, client-side functionality in all controls may fail.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.BrowserTarget">
+            <summary>Type of browser the html should be created for.</summary>
+            <remarks>
+            <p class="body">Permitted values are DownLevel, UpLevel, and Auto.</p>
+            <p class="body">The default value for this property is Auto which will detect the client browser and renders the output deemed appropriate for that browser.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.AutoPostBack">
+            <summary>
+            Trigger a post back event when the selected tab is changed (on tab click).
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.ViewStateBias">
+            <summary>This property is deprecated and has no effect.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.SelectedTab">
+            <summary>Index of the currently selected tab.</summary>
+            <remarks>
+            <p class="note"><i>Note:</i> Separators are skipped. Only tabs are considered.
+            For example, if there is a separator between 1st and 2nd tabs and 2nd tab is selected,
+            then this property will return value 1, but index of that TabItem within Tabs collection is equal to 2.
+            </p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.SelectedTabIndex">
+            <summary>Index of the currently selected tab within TabItems.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.SelectedTabObject">
+            <summary>Reference to the currently selected tab.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.LoadAllTargetUrls">
+            <summary>
+            Load all TargetUrls assigned to tabs at the time when the page is loaded or keep loaded only one TargetUrl for the active/selected tab.
+            </summary>
+            <remarks>
+            	<p class="note">In case of value <tt>true</tt>, all TargetUrls assigned to tabs are loaded and while dynamic navigation between tabs is used, the fields on tabs will keep old values.  It means that if the TargetUrl on one tab was modified and submitted to a server, then fields on another tab will not reflect those changes and contain old initial values.<br></br>
+            In case of the value <tt>false</tt>, only one TargetUrl which is assigned to the active tab is loaded.
+            If while navigating between tabs the previous TargetUrl was not submitted, then changes in fields
+            on that TargetUrl become lost.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.CustomRules">
+            <summary>
+            Returns or sets a string of text that determines additional CSS rules to apply to the ContentPane of the tabs.
+            </summary>
+            <p class="note">This is available only for up-level browsers and the tag of html element to which rules are applied is <tt>&lt;TD&gt;</tt>.</p>
+            <remarks>
+            	<i>Examples:</i><br></br>
+            	<p class="code">
+            UltraWebTab1.CustomRules = "background-image:url(./myImage.gif); background-repeat:no-repeat;";<br></br>
+            UltraWebTab1.CustomRules = "padding:10";<br></br>
+            UltraWebTab1.CustomRules = "cursor:default; padding-left:10; padding-right:20";</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DummyTargetUrl">
+            <summary>Name of the dummy url that is used as the <tt>src</tt> for the <tt>IFRAME</tt> object when the <tt>TargetUrl</tt> of a <tt>Tab</tt> is not set.</summary>
+            <remarks>
+            	<p class="body">Default value is set to the <tt>"dummy.htm"</tt>.</p>
+            	<p class="note">If the value is set to the empty string, then <tt>&lt;IFRAME&gt;</tt> elements are not written to html for tabs with an empty <tt>TargetUrl</tt>. In this situation the client side function <tt>setTargetUrl</tt> is not available for those tabs.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DynamicTabs">
+            <summary>
+            Keep a row with the selected tab closest to the ContentPane.
+            </summary>
+            <remarks>
+            	<p class="note">This property has effect only when tabs are located in multiple rows.
+            See <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DisplayMode"/> and <see cref="P:Infragistics.WebUI.UltraWebTab.TabItem.NextRow"/>.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DisplayMode">
+            <summary>
+            The appearance of tabs such as SingleRow/MultiRow/Scrollable for tabs with horizontal orientation.  See <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.TabOrientation"/>.
+            </summary>
+            <remarks>
+            	<p class="note">Notes:
+            <ul>
+            			<li> Multi-row tabs are available only for horizontal orientation of tabs and they are not automatic: the <see cref="P:Infragistics.WebUI.UltraWebTab.TabItem.NextRow"/> property should be used.</li>
+            			<li> Scrollable tabs are available only for horizontal orientation of tabs.</li>
+            		</ul></p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.SpaceOnRight">
+            <summary>Space between the right side of UltraWebTab and the right edge of the last Tab.</summary>
+            <remarks>
+            <p class="note">Notes:<ul>
+            <li>This property has effect only for TopRight, BottomRight, LeftBottom and RightBottom orientations of tabs. See <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.TabOrientation"/>.</li>
+            <li>This property has effect also when <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DisplayMode"/> is set to the MultiRow and orientation of tabs is horizontal.</li>
+            <li>This property has no effect if the last TabItem (right edge) is instance of TabSeparator.</li>
+            </ul>
+            </p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.SpaceOnLeft">
+            <summary>Space between the left side of UltraWebTab and the left edge of the first Tab.</summary>
+            <remarks>
+            <p class="note">Notes:<ul>
+            <li>This property has effect only for TopLeft, BottomLeft, LeftTop and RightTop orientations of tabs. See <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.TabOrientation"/>.</li>
+            <li>This property has no effect if the 1st TabItem (left edge) is instance of TabSeparator.</li>
+            </ul>
+            </p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.FixedLayout">
+            <summary>
+            Fixed or automatic layout of a html-table that represents the UltraWebTab control.
+            </summary>
+            <remarks>
+            	<p class="note">Notes for the value of true:
+            <ul>
+            			<li>The width of control is defined by the value of the Width property, and tabs on the right can become inaccessible until the <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DisplayMode"/> is set to Scrollable.</li>
+            			<li>Painting problems are possible if the Height of <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.DefaultTabStyle"/> is not set or has too small value.</li>
+            			<li>The scrollable behavior of every individual <see cref="P:Infragistics.WebUI.UltraWebTab.Tab.ContentPane"/> can be customized by the <see cref="P:Infragistics.WebUI.UltraWebTab.ContentPane.Scrollable"/> property.</li>
+            		</ul>
+            	</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.Section508Compliant">
+            <summary>
+            <p class="body">Set or gets a value that determines whether Section 508 compliant html will be emitted.</p>
+            </summary>
+            <remarks>
+            <p class="body">Section 508 compliance provides for support of assistive technologies that make html pages accessible for users that require it.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.TabIndex">
+            <summary>
+            	<p class="body">The tab order of control.</p>
+            </summary>
+            <remarks>
+            	<p class="note">This property is supported only for InternetExplorer, which allows the setting of focus to the &lt;TD&gt; html element.</p>
+            	<p class="note">When tab-order is enabled, then left/right arrows, Home and End keys become enabled as well.</p>
+            	<p class="note">When that property has its default value of 0, then the <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.Section508Compliant"/> property will enable or disable tab-order features.</p>
+            	<p class="note">If the property is set to a negative value, then tab-order functionality is disabled regardless of the <see cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.Section508Compliant"/> property.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.AccessKey">
+            <summary>
+            Keyboard shortcut used by the control.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.StylePreset">
+            <summary>
+            Configure appearance related properties using predefined values.
+            </summary>
+            <remarks>
+            <p class="note">Note: The value of this property is not written to the ViewState and, therefore, it is not persistant between sessions.
+            However, that property modifies many other (appearance related) properties, which are persistant between sessions if the ViewState is enabled.
+            It means that if this property is set at run time, then it will result in significant increase of the size of the hidden-view-state-field which is passed to the client.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.Controls">
+            <summary>
+            Ensure child controls.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.Client">
+            <summary>
+            Information about the browser on the client's machine.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.IsAsyncPostBack">
+            <summary>
+            Check if it is an asynchronous post back and if it was triggered and processed by this control.
+            </summary>
+            <remarks><p class="body">If a value of true is returned, then it means that the postback was triggered by a child control of ContentPane of a Tab, or by a selected tab change event.</p></remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.EnableAppStyling">
+            <summary>
+            Enables support on WebTab for the Application Styling Framework(tm).
+            </summary>
+            <value>
+            <em>True</em> indicates Application Styling is enabled, <em>False</em>
+            indicates Application Styling is disabled, and <em>NotSet</em> indicates
+            support for Application Styling should default to page- or application-level
+            settings.
+            </value>
+            <remarks>
+            <p class="body">Turn on support for Application Styling of WebTab
+            when using the Application Styling Framework(tm) (ASF) by setting the 
+            EnableAppStyling property to True.</p>
+            <p class="body">When EnableAppStyling has it's default value of NotSet,
+            this control will defer the determination of whether to use Application
+            Styling to settings you make at the page- or application-level.  Place
+            the <strong>WebPageStyler</strong> control on the same Web form as this control
+            to configure ASF support for all controls on that Page.  ASF support can
+            also be turned on application-wide with the <em>enableAppStyling</em>
+            attribute in your "web.config" file.</p>
+            <p class="body">Turn off support for the ASF in WebTab (even though
+            it may have been enabled at a higher level) by setting the EnableAppStyling
+            property to False.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.StyleSetName">
+            <summary>
+            Name of the Application Styling Framework(tm) style set defining the themed appearance for this WebTab control.
+            </summary>
+            <value>
+            	<p class="body">The name of the Application Styling Framework(tm) (ASF) style set which has been designed to give this control a consistent appearance with other controls in your application.</p>
+            	<p class="body">This property may return the empty string ("") to
+            imply that the default style set (named "Default") should be used.</p>
+            </value>
+            <remarks>
+            	<p class="body">Web sites can configure a single, consistent,
+            application-wide style set through the <em>styleSetName</em>
+            attribute in their "web.config" file.  Alternately, they can
+            define the style set to apply Application Styling to all
+            controls on a Page by placing a <strong>WebPageStyler</strong>
+            control on that Page and setting it's StyleSetName property.</p>
+            	<p class="body">At the control level this property allows an
+            application developer to customize the style set applied to a
+            single instance of a control.</p>
+            	<p class="body">Normally, graphics designers will furnish you
+            with a style set containing one or more style sheet files (one
+            for each type of control) and image files.  The name of the style
+            set (with the exception of the "Default" style set) must appear
+            in each Cascading Style Sheet (CSS) class name defined by this
+            control's style sheet file.  For example, two WebTree controls
+            that each use a different style set, "Aqua" and "Onyx", would
+            expect their CSS class names for the ASF <em>Node</em> role to
+            be "igtr_AquaNode" and "igtr_OnyxNode", respectively.  This
+            allows the uniqueness of CSS class names necessary to distinguish
+            multiple style sets for the same type of control, without there
+            being any naming collisions.</p>
+            </remarks>
+            <seealso cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.StyleSetPath"/>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.StyleSetPath">
+            <summary>
+            Path containing the Application Styling Framework(tm) style set files for this type of control.
+            </summary>
+            <remarks>
+            	<p class="body">Web sites can configure the directory path containing their style set files application-wide by using the <em>styleSetPath</em> attribute of their "web.config" file.  It is also possible to configure the style set path applicable to all controls on a Page that are subject to Application Styling by placing a <strong>WebPageStyler</strong> control on that Page and setting it's StyleSetPath property.</p>
+            	<p class="body">At the control level this property allows an
+            application developer to customize the location of the style set
+            being applied to a single instance of a control.</p>
+            	<p class="note">Be aware that customizing the style set path at the control level will not allow you to copy a style set's files to this new location, changing a few style property values in them, and then use it successfully with separate instances of the control referencing the original style set of the same name.  This is because there would be naming collisions in the Cascading Style Sheet (CSS) class names, which will produce an undefined appearance.  You must ensure the CSS class names defined by style sheets in the new style set path are unique from those CSS class names being used by other style sheets that may continue to be referenced.  The recommended guidance in this scenario is to create a new style set having a new style set name, that contains your modifications.</p>
+            </remarks>
+            <seealso cref="P:Infragistics.WebUI.UltraWebTab.UltraWebTab.StyleSetName"/>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.WebTabEvent">
+            <summary>WebTabEvent object is used to store event data.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.WebTabEvent.Tab">
+            <summary>
+            The Tab object which has been selected.  It can be null.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.WebTabEvent.PreviousSelectedTab">
+            <summary>
+            The Tab object which was selected in the previous session.  It can be null.
+            </summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.WebTabEvent.Data">
+            <summary>
+            Data object associated with the event.  The value of the <b>Tab.Tag</b> is returned.
+            </summary>
+        </member>
+        <member name="T:Infragistics.WebUI.UltraWebTab.AsyncOptions">
+            <summary>
+            Options related to hidden asynchronous post back of tabs which ContentPanes contain child controls.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.AsyncOptions.IsEmpty">
+            <summary>
+            Check if any property is set.
+            </summary>
+            <returns>True if any property is set.</returns>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.AsyncOptions.Reset">
+            <summary>
+            Reset all properties.
+            </summary>
+        </member>
+        <member name="M:Infragistics.WebUI.UltraWebTab.AsyncOptions.ToString">
+            <summary>String formatted for visual designer.</summary>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.AsyncOptions.RequestContext">
+            <summary>
+            The options related to requests from a hidden asynchronous post back.
+            </summary>
+            <remarks>
+            	<p class="note">Notes for IncludePreviousSelectedTab and IncludeAllTabs: it may slow down performance on the client and slightly speed up performance on the server.
+            If a child control located on the ContentPane of tab renders its data field outside of the DIV element of ContentPane, then data of that control will be lost.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.AsyncOptions.ResponseContext">
+            <summary>
+            The options related to a response from a hidden asynchronous post back.
+            </summary>
+            <remarks>
+            	<p class="note">Note: IncludePreviousSelectedTab and IncludeSelectedTab have effect only if the asynchronous post back was triggered by the selected tab change action.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.AsyncOptions.Triggers">
+            <summary>
+            The options related to actions that may trigger a hidden asynchronous post back.
+            </summary>
+            <remarks><p class="note">Note: the ContentInitiatedPostback may work only for child controls that follow standards of dot-net related to postback and submit.  The child should provide a UniqueID for those event handlers and it should render an html element with an id equal to the ClientID and it should be located inside of its container.</p></remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.AsyncOptions.EnableLoadOnDemand">
+            <summary>
+            Enable the loading of ContentPanes of only the selected and last unselected tabs.
+            </summary>
+            <remarks>
+            	<p class="body">On initial load or after a full post back,-  only the ContentPane of the selected tab is rendered.</p>
+            	<p class="note">Note: The states of fields (like TextBox)
+            located on unselected tabs can not persist between  postbacks, therefore, if an application needs up-to-date values of those fields, then that option can not be used.</p>
+            	<p class="note">Warning: That property may trigger full post backs and lead to errors, exceptions and other side effects.  Therefore, application should test all possible scenarios.  If an error happens, then this property should be disabled.</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.WebUI.UltraWebTab.AsyncOptions.EnableProgressIndicator">
+            <summary>
+            Enable progress indicator.
+            </summary>
+            <remarks>
+            	<p class="note">Note: To customize progress indicator, an application may use ClientSideEvents.InitializeTabs
+            and set oWebTab.getProgressIndicator().setTemplate(innerHtml) or oWebTab.getProgressIndicator().setImageUrl(fileName).  The location of indicator relative to tab-label can be set by oWebTab.getProgressIndicator().setLocation(ig_Location.aMemberConstantOrObjectWith_x_y)</p>
+            </remarks>
+        </member>
+    </members>
+</doc>

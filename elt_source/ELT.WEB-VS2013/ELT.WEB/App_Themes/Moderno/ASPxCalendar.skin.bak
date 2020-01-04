@@ -1,0 +1,17 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
+
+<dx:ASPxCalendar runat="server" SpriteCssFilePath="~/App_Themes/Moderno/{0}/sprite.css" CssPostfix="Moderno" CssFilePath="~/App_Themes/Moderno/{0}/styles.css">
+    <LoadingPanelImage Url="Editors/Loading.gif"></LoadingPanelImage>
+
+    <HeaderStyle Spacing="1px"></HeaderStyle>
+    <FooterStyle Spacing="10px"></FooterStyle>
+    <LoadingPanelStyle ImageSpacing="8px"></LoadingPanelStyle>
+
+    <ValidationSettings>
+        <ErrorFrameStyle ImageSpacing="4px">
+            <ErrorTextPaddings PaddingLeft="4px"></ErrorTextPaddings>
+        </ErrorFrameStyle>
+    </ValidationSettings>
+</dx:ASPxCalendar>
+

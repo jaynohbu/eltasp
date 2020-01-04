@@ -1,0 +1,589 @@
+<!--  #INCLUDE FILE="../include/transaction.txt" -->
+<!--  #INCLUDE FILE="../include/connection.asp" -->
+<html>
+<head>
+<title>MBOL VIEW</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link href="../css/elt_css.css" rel="stylesheet" type="text/css">
+</head>
+<!--  #INCLUDE FILE="../include/header.asp" -->
+<%
+Dim rs,SQL
+Set rs = Server.CreateObject("ADODB.Recordset")
+
+Dim vHBOL,vMBOL,vBookingNum,vAgentName,vAgentInfo,vAgentAcct
+Dim vShipperName,vShipperInfo,vShipperAcct
+Dim vConsigneeName,vConsigneeInfo,vConsigneeAcct
+Dim vExportRef,vOriginCountry,vExportInstr,vLandingPier,vMoveType
+Dim vConYes,vPreCarriage,vPreReceiptPlace
+Dim vExportCarrier,vLandingPort,vUnloadingPort,vDepartureDate
+Dim vDeliveryPlace,vDesc1,vDesc2,vDesc3,vPieces,vGrossWeight
+Dim vMeasurement
+Dim sHBOL(32),sExporter(32),sConsignee(32),sPieces(32),sGrossWeight(32),sMeasurement(32)
+Dim TotalPieces,TotalGrossWeight,TotalMeasurement
+Dim vNotifyName,vNotifyInfo,vNotifyAcct,nIndex
+
+vHBOL=Request.QueryString("HBOL")
+vMBOL=Request.QueryString("MBOL")
+vBookingNum=Request.QueryString("BookingNum")
+
+if not vBookingNum="" then
+
+	SQL= "select * from mbol_master where elt_account_number = " & elt_account_number & " and booking_num='" & vBookingNum & "'"
+	rs.Open SQL, eltConn, , , adCmdText
+	vConYes="Y"
+	vDate=Now
+	if Not rs.EOF then
+		vMBOL=rs("mbol_num")
+		vShipperName=rs("shipper_name")
+		vShipperInfo=rs("shipper_info")
+		vShipperAcct=cLng(rs("shipper_acct_num"))
+		vConsigneeName=rs("consignee_name")
+		vConsigneeInfo=rs("consignee_info")
+		vConsigneeAcct=cLng(rs("consignee_acct_num"))
+
+		vNotifyName=rs("notify_name")
+		vNotifyInfo=rs("notify_info")
+		if (Not rs("notify_acct_num") = "0") then
+		vNotifyAcct=cLng(rs("notify_acct_num"))
+		else
+		vNotifyAcct = "0"
+		end if
+		
+		vExportRef=rs("export_ref")
+		vAgentInfo=rs("agent_info")
+		vOriginCountry=rs("origin_country")
+		vExportInstr=rs("export_instr")
+		vLoadingPier=rs("loading_pier")
+		vMoveType=rs("move_type")
+		vConYes=rs("containerized")
+		vPreCarriage=rs("pre_carriage")
+		vPreReceiptPlace=rs("pre_receipt_place")
+		vExportCarrier=rs("export_carrier")
+		vLoadingPort=rs("loading_port")
+		vUnloadingPort=rs("unloading_port")
+		vDeliveryPlace=rs("delivery_place")
+		vDepartureDate=rs("departure_date")
+		vPieces=rs("pieces")
+		vGrossWeight=rs("gross_weight")
+		vMeasurement=rs("measurement")
+		vDesc1=rs("desc1")
+		vDesc2=rs("desc2")
+		vDesc3=rs("desc3")
+		vDesc4=rs("desc4")
+		vDesc5=rs("desc5")		
+	end if
+	rs.Close
+end if
+'get Selected HBOL info
+If Not vBookingNum="" then
+	SQL= "select * from hbol_master where elt_account_number = " & elt_account_number & " and booking_num='" & vBookingNum & "' order by hbol_num"
+	rs.Open SQL, eltConn, , , adCmdText
+	seIndex=0
+	TotalPieces=0
+	TotalGrossWeight=0
+	TotalMeasurement=0
+	Do While Not rs.EOF
+		sHBOL(seIndex)=rs("hbol_num")
+		sExporter(seIndex)=rs("shipper_name")
+		sConsignee(seIndex)=rs("consignee_name")
+		sPieces(seIndex)=cLng(rs("pieces"))
+		sGrossWeight(seIndex)=cDbl(rs("gross_weight"))
+		sMeasurement(seIndex)=cDbl(rs("measurement"))
+		TotalPieces=TotalPieces+sPieces(seIndex)
+		TotalGrossWeight=TotalGrossWeight+sGrossWeight(seIndex)
+		TotalMeasurement=TotalMeasurement+sMeasurement(seIndex)
+		rs.MoveNext
+		seIndex=seIndex+1
+	Loop
+	vDesc4=TotalGrossWeight & " KG" & "  " & TotalMeasurement & " CBM"
+	rs.Close
+end if
+
+Set rs=Nothing
+%>
+
+<body link="336699" vlink="336699" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" >
+<table width="95%" border="0" align="center" cellpadding="2" cellspacing="0">
+  <tr> 
+    <td height="32" align="left" valign="middle" class="pageheader">MBOL VIEW</td>
+  </tr>
+</table>
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#6D8C80"  bgcolor="#6D8C80" class="border1px">
+  <tr> 
+    <td>
+       <form method="post" name="form1">
+	  <input type=hidden Name="hBookingNum" Value="<%= vBookingNum %>">
+	  <input type="hidden" name="hAgentName" value="<%= vAgentName %>">
+	  <input type="hidden" name="hDepartureDate" value="<%= vDepartureDate %>">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="bodycopy">
+          <tr> 
+          <td colspan="2" height="8" align="left" valign="top" bgcolor="BFD0C9" class="bodyheader"></td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="1" bgcolor="#6D8C80"></td>
+        </tr>
+        <tr> 
+          <td colspan="2"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="bodycopy">
+                <tr align="left" valign="middle" bgcolor="BFD0C9"> 
+                  <td height="20"> <table width="100%" border="0" cellpadding="0" cellspacing="0" class="bodycopy">
+                      <tr> 
+                        <td height="20" align="left" valign="middle">&nbsp; </td>
+                        <td align="right" valign="middle"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                          &nbsp;&nbsp;&nbsp;&nbsp; </td>
+                      </tr>
+					  <tr>
+					    <td colspan="2" height="1" bgcolor="6D8C80"></td>
+					  </tr>
+                    </table></td>
+                </tr>
+				     <tr>
+				       <td>
+					   <table width="100%" border="0" cellpadding="1" cellspacing="2" class="bodycopy">
+                      <tr> 
+                        <td height="20" colspan="2" bgcolor="E0EDE8"><strong>2. 
+                          Exporter</strong> (Principal or Seller-Licensee and 
+                          Address Include ZIP Code)</td>
+                        <td width="15%" bgcolor="E0EDE8"><strong>5. Document Number</strong></td>
+                        <td width="16%" bgcolor="E0EDE8">&nbsp;</td>
+                        <td width="28%" bgcolor="E0EDE8"><strong>5a. MBOL</strong></td>
+                      </tr>
+                      <tr align="left" valign="middle"> 
+                        <td colspan="2" valign="top">&nbsp;</td>
+                        <td valign="top"> 
+						  <input name="lstBookingNum" style="WIDTH: 120px" class="shorttextfield" Value="<%= vBookingNum %>" size="22" Readonly>						
+                          &nbsp;&nbsp;&nbsp;&nbsp; </td>
+                        <td valign="top"><code><kbd><sup> 
+                          <input type=hidden name="txtHBOL" ReadOnly size="13" Value="<%= vHBOL %>">
+                          </sup></kbd></code> </td>
+                        <td valign="top"> <code><kbd><sup> 
+                          <input name="txtMBOL" class="shorttextfield" Value="<%= vMBOL %>" size="32" Readonly>
+                          </sup></kbd></code></td>
+                      </tr>
+                      <tr align="left" valign="middle"> 
+                        <td colspan="2" valign="top"> <TEXTAREA name="txtShipperInfo" cols=45 rows=4 class="multilinetextfield" readonly><%= vShipperInfo %></TEXTAREA> 
+                        </td>
+                        <td colspan="3" valign="top"><table width="100%" border="0" cellspacing="0" class="bodycopy">
+                            <tr> 
+                              <td height="20" bgcolor="E0EDE8"><strong>6. Export 
+                                Reference</strong></td>
+                            </tr>
+                            <tr> 
+                              <td> <TEXTAREA name="txtExportRef" cols=60 rows=3 class="multilinetextfield" readonly><%= vExportRef %></TEXTAREA> 
+                              </td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                      <tr align="left" valign="middle" bgcolor="E0EDE8"> 
+                        <td height="20" colspan="2" bgcolor="E0EDE8"><strong>3. 
+                          Consigned To</strong></td>
+                        <td colspan="3" bgcolor="E0EDE8"><strong>7. Forwarding 
+                          Agent</strong> (Name and Address - References)</td>
+                      </tr>
+                      <tr align="left" valign="middle"> 
+                        <td colspan="2" valign="top"><textarea name="txtConsigneeInfo" cols=45 rows=4 class="multilinetextfield" readonly><%= vShipperInfo %></textarea> 
+                        </td><td colspan="3" valign="top"> <table width="100%" border="0" cellpadding="0" cellspacing="2" class="bodycopy">
+                            <tr> 
+                              <td> <TEXTAREA name="txtAgentInfo" cols=60 rows=3 class="multilinetextfield" readonly><%= vAgentInfo %></TEXTAREA> 
+                              </td>
+                            </tr>
+                            <tr> 
+                              <td height="20" bgcolor="E0EDE8"><strong>8. Point 
+                                (State) of Origin or FTZ Number</strong></td>
+                            </tr>
+                            <tr> 
+                              <td> <input name="txtOriginCountry" class="shorttextfield" Value="<%= vOriginCountry %>" readonly=""> 
+                              </td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                      <tr align="left" valign="middle" bgcolor="E0EDE8"> 
+                        <td height="20" colspan="2" bgcolor="E0EDE8"><strong>4.Notify 
+                          Party/Intermediate Consignee</strong> (Name and Address)</td>
+                        <td colspan="3"><strong>9. Domestic Routing/Export Instructions</strong></td>
+                      </tr>
+                      <tr align="left" valign="middle"> 
+                        <td colspan="2" valign="top"><table width="100%" border="0" cellpadding="1" cellspacing="2" class="bodycopy">
+                          </table>
+                          <textarea name="txtNotifyInfo" cols=45 rows=4 class="multilinetextfield" readonly><%= vNotifyInfo %></textarea></td>
+                        <td colspan="3" valign="top"> <TEXTAREA name="txtExportInstr" cols=60 rows=5 class="multilinetextfield" readonly><%= vExportInstr %></TEXTAREA> 
+                        </td>
+                      </tr>
+                      <tr align="left" valign="middle"> 
+                        <td width="17%" height="20" bgcolor="E0EDE8"><strong>12. Pre-Carriage 
+                          By </strong></td>
+                        <td width="24%" bgcolor="E0EDE8"><strong>13. Place of Receipt By Pre-Carrier</strong></td>
+                        <td colspan="3" bgcolor="#FFFFFF">&nbsp;</td>
+                      </tr>
+                      <tr align="left" valign="middle"> 
+                        <td bgcolor="#FFFFFF"> <input name="txtPreCarriage" class="shorttextfield" Value="<%= vPreCarriage %>" readonly> 
+                        </td>
+                        <td bgcolor="#FFFFFF"> <input name="txtPreReceiptPlace" class="shorttextfield" Value="<%= vPreReceiptPlace %>" readonly> 
+                        </td>
+                        <td colspan="3" bgcolor="#FFFFFF">&nbsp;</td>
+                      </tr>
+                      <tr align="left" valign="middle"> 
+                        <td height="20" bgcolor="E0EDE8"><strong>14. Exporting 
+                          Carrier</strong></td>
+                        <td bgcolor="E0EDE8"><strong>15. Port of Loading/Export</strong></td>
+                        <td colspan="3" bgcolor="E0EDE8"><strong>10. Loading Pier/Terminal</strong></td>
+                      </tr>
+                      <tr align="left" valign="middle"> 
+                        <td> <input name="txtExportCarrier" type=text class="shorttextfield" Value="<%= vExportCarrier %>" readonly> 
+                        </td>
+                        <td> <input name="txtLoadingPort" type=text class="shorttextfield" Value="<%= vLoadingPort %>" readonly> 
+                        </td>
+                        <td> <input name="txtLoadingPier" class="shorttextfield" Value="<%= vLoadingPier %>" readonly> 
+                        </td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr align="left" valign="middle" bgcolor="E0EDE8"> 
+                        <td height="20" valign="top" bgcolor="E0EDE8"><strong>16. 
+                          Foreign Port of Unloading</strong> <br>
+                          (Vessel And Air Only)</td>
+                        <td valign="top"><strong>17. Place of Delivery By On-Carrier</strong></td>
+                        <td valign="top"><strong>11. Type of Move</strong></td>
+                        <td colspan="2" valign="top"><strong>11a. Containerized</strong> 
+                          (Vessel Only)</td>
+                      </tr>
+                      <tr align="left" valign="middle"> 
+                        <td> <input name="txtUnloadingPort" type=text class="shorttextfield" Value="<%= vUnloadingPort %>" readonly> 
+                        </td>
+                        <td> <input name="txtDeliveryPlace" class="shorttextfield" Value="<%= vDeliveryPlace %>" readonly> 
+                        </td>
+                        <td> <input name="lstMoveType" type=text class="shorttextfield" value="<%= vMoveType %>" readonly> 
+                        </td>
+                        <td> <input type="checkbox" name="cConYes" value="Y" OnClick="ConYes()" <% if vConYes="Y" then response.write("checked") %>  disabled="disabled"> 
+                          &nbsp; Yes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox" name="cConNo" value="Y" <% if not vConYes="Y" then response.write("checked") %>  OnClick="ConNo()"  disabled="disabled"> 
+                          &nbsp; No</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                    </table>
+					   </td>
+				     </tr>
+					 <tr>
+					 <td>
+					 <table width="100%" border="0" cellpadding="1" cellspacing="0" class="bodycopy">
+                      <tr> 
+                        <td colspan="8" height="2" bgcolor="#6D8C80"></td>
+                      </tr>
+                      <tr> 
+                        <td colspan="8" height="1" bgcolor="#6D8C80"></td>
+                      </tr>
+                      <tr align="center" valign="middle" bgcolor="BFD0C9"> 
+                        <td height="22" colspan="8"><strong>SELECTED HBOL</strong></td>
+                      </tr>
+                      <tr> 
+                        <td colspan="8" height="1" bgcolor="#FFFFFF"></td>
+                      </tr>
+                      <tr align="left" valign="middle" bgcolor="E0EDE8"> 
+                        <td height="20"><strong>HBOL</strong></td>
+                        <td><strong>Exporter</strong></td>
+                        <td><strong>Consignee</strong></td>
+                        <td><strong>Pieces</strong></td>
+                        <td><strong>Gross Weight (KG)</strong></td>
+                        <td><strong>Measure (CBM)</strong></td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+					  <input type=hidden id="dHBOL">
+<% for i=0 to seIndex-1 %>                      
+					  <tr align="left" valign="middle" bgcolor="#FFFFFF"> 
+                        <td height="20">
+                          <input name="txtsHBOL<%= i %>" type="text" class="shorttextfield" id="dHBOL" value="<%= sHBOL(i) %>" size="18" readonly>
+                          </td>
+                        <td><input name="txtsExporter<%= i %>" type="text" class="shorttextfield" Value="<%= sExporter(i) %>" size="22" readonly></td>
+                        <td><input name="txtsConsignee<%= i %>" type="text" class="shorttextfield" Value="<%= sConsignee(i) %>" size="22" readonly></td>
+                        <td><input name="txtsPieces<%= i %>" type="text" class="shorttextfield" value="<%= sPieces(i) %>" size="18" readonly></td>
+                        <td><input name="txtsGrossWeight<%= i %>" type="text" class="shorttextfield" Value="<%= sGrossWeight(i) %>" size="18" readonly></td>
+                        <td><input name="txtsMeasurement<%= i %>" type="text" class="shorttextfield" value="<%= sMeasurement(i) %>" size="18" readonly></td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+<% next %>
+                      <tr align="left" valign="middle" bgcolor="#FFFFFF"> 
+                        <td height="20">&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td><strong>TOTAL</strong></td>
+                        <td><input name="txtTotalPieces" type="text" class="shorttextfield" Value="<%= TotalPieces %>" size="18" readonly></td>
+                        <td><input name="txtTotalGrossWeight" type="text" class="shorttextfield" Value="<%= TotalGrossWeight %>" size="18" readonly></td>
+                        <td><input name="txtTotalMeasurement" type="text" class="shorttextfield" Value="<%= TotalMeasurement %>" size="18" readonly></td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr align="left" valign="middle" bgcolor="#F3f3f3"> 
+                        <td height="20">&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                    </table>
+
+					 </td>
+					 </tr>
+					 <tr>
+					 <td>
+					 <table width="100%" border="0" cellpadding="1" cellspacing="2" class="bodycopy">
+                      <tr align="left" valign="middle" bgcolor="E0EDE8"> 
+                        <td height="21"><strong>18. Marks and Numbers</strong></td>
+                        <td><strong>19. Number of Packages</strong></td>
+                        <td><strong>20. Description of Commodities</strong> in 
+                          Schedule B Detail</td>
+                        <td bgcolor="E0EDE8"><strong>21. Gross Weight</strong> 
+                          (KG) <strong> &nbsp;&nbsp;&nbsp;&nbsp;22.Measurement</strong> 
+                          (CBM)</td>
+                      </tr>
+                      <tr align="left" valign="top"> 
+                        <td rowspan="3"> <TEXTAREA name="txtDesc1" cols="24" rows=17 WRAP=VIRTUAL class="multilinetextfield" readonly><%= vDesc1 %></TEXTAREA></td>
+                        <td rowspan="3"> <textarea name="txtDesc2" cols="24" rows="17" WRAP=VIRTUAL class="multilinetextfield" readonly><%= vDesc2 %></textarea></td>
+                        <td rowspan="3"> <textarea name="txtDesc3" cols="40" rows="17" wrap=VIRTUAL class="multilinetextfield" readonly><%= vDesc3 %></textarea></td>
+                        <td> <textarea name="txtDesc4" cols="50" rows="9" class="multilinetextfield" readonly><%= vDesc4 %></textarea> 
+                        </td>
+                      </tr>
+                      <tr align="left" valign="top"> 
+                        <td height="20" valign="middle" bgcolor="E0EDE8" class="bodyheader">Menifest 
+                          Description</td>
+                      </tr>
+                      <tr align="left" valign="top">
+                        <td><textarea name="txtDesc5" cols="50" rows="4" class="multilinetextfield" readonly><%= vDesc5 %></textarea></td>
+                      </tr>
+                    </table>
+					 </td>
+					 </tr>
+					 <tr>
+					 <td>
+					 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="50%" align="left" valign="top">&nbsp; </td>
+                        <td align="left" valign="top">&nbsp;</td>
+  </tr>
+  
+</table>
+
+					 </td>
+					 </tr>
+              </table></td>
+        </tr>
+        <tr> 
+          <td colspan="2" height="1" bgcolor="6D8C80"></td>
+        </tr>
+		<tr> 
+            <td height="24" colspan="2" align="center" valign="middle" bgcolor="#BFD0C9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+        </tr>
+      </table>
+	  </form>
+      </td>
+        </tr>
+</table>
+<br>
+</body>
+<SCRIPT LANGUAGE="vbscript">
+<!---
+Sub ShipperChange()
+Dim sindex,ShipperInfo,ShipperName
+sindex=Document.form1.lstShipper.Selectedindex
+ShipperInfo=Document.form1.lstShipper.item(sindex).value
+ShipperName=Document.form1.lstShipper.item(sindex).Text
+pos=Instr(shipperInfo,"-")
+if pos>0 then
+	ShipperAcct=Left(ShipperInfo,pos-1)
+	ShipperInfo=Mid(ShipperInfo,pos+1,200)
+end if
+document.form1.hShipper.Value=ShipperName
+document.form1.txtShipperInfo.Value=ShipperInfo
+document.form1.hShipperAcct.Value=ShipperAcct
+'document.frmHAWB.txtSignature.Value="AS AGENT" & chr(10) & "FOR " & ShipperName
+End Sub
+Sub ConsigneeChange()
+Dim sindex,ShipperInfo,ShipperName
+sindex=Document.form1.lstConsignee.Selectedindex
+ConsigneeInfo=Document.form1.lstConsignee.item(sindex).value
+ConsigneeName=Document.form1.lstConsignee.item(sindex).Text
+pos=Instr(ConsigneeInfo,"-")
+if pos>0 then
+	ConsigneeAcct=Left(ConsigneeInfo,pos-1)
+	ConsigneeInfo=Mid(ConsigneeInfo,pos+1,200)
+end if
+document.form1.hConsignee.Value=ConsigneeName
+document.form1.txtConsigneeInfo.Value=ConsigneeInfo
+document.form1.hConsigneeAcct.Value=ConsigneeAcct
+End Sub
+Sub NotifyChange()
+Dim sindex,ShipperInfo,ShipperName
+sindex=Document.form1.lstNotify.Selectedindex
+NotifyInfo=Document.form1.lstNotify.item(sindex).value
+pos=Instr(NotifyInfo,"-")
+if pos>0 then
+	NotifyInfo=Mid(NotifyInfo,pos+1,200)
+end if
+document.form1.txtNotifyInfo.Value=NotifyInfo
+End Sub
+Sub SaveClick()
+'if document.form1.lstShipper.Value="" then
+	'MsgBox "Please select an exporter!"
+if document.form1.lstConsignee.Value="" then
+	MsgBox "Please select a consignee!"
+elseif document.form1.lstBookingNum.Value="" then
+	MsgBox "Please select a Booking Number!"
+else
+	document.form1.target = "_self"
+	document.form1.action="new_edit_mbol.asp?Save=yes"
+	document.form1.method="POST"
+	form1.submit()
+end if
+End Sub
+
+Sub NextClick()
+sIndex=document.form1.lstBookingNum.selectedindex
+BookingNum=document.form1.lstBookingNum.item(sindex).Text
+document.form1.action="bol_instruction.asp?BookingNum=" & BookingNum
+document.form1.method="POST"
+form1.submit()
+End Sub
+
+Sub AddItem(k)
+ItemNo=k
+HBOL=document.all("aHBOL").item(k+1).Value
+if document.form1.hBookingNum.Value="" then
+	MsgBox "Please select a booking number!"
+else
+	document.form1.action="new_edit_mbol.asp?Add=yes&HBOL=" & HBOL
+	document.form1.method="POST"
+	form1.submit()
+end if
+End Sub
+
+Sub DeleteItem(k)
+ItemNo=k
+HBOL=document.all("dHBOL").item(k+1).Value
+document.form1.action="new_edit_mbol.asp?Delete=yes&HBOL=" & HBOL
+document.form1.method="POST"
+form1.submit()
+End Sub
+
+Sub ConYes()
+if document.form1.cConYes.Checked=True then
+	document.form1.cConNo.Checked=False
+else
+	document.form1.cConNo.Checked=True
+end if
+End Sub
+Sub ConNo()
+if document.form1.cConNo.Checked=True then
+	document.form1.cConYes.Checked=False
+else
+	document.form1.cConYes.Checked=True
+end if
+End Sub
+
+Sub BookingChange()
+sIndex=document.form1.lstBookingNum.selectedindex
+BookingNum=document.form1.lstBookingNum.item(sindex).Text
+document.form1.hBookingNum.Value=BookingNum
+bInfo=document.form1.lstBookingNum.value
+pos=0
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	DepartureDate=Mid(bInfo,1,pos-1)
+	bInfo=Mid(bInfo,pos+1,200)
+end if
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	LoadingPort=Mid(bInfo,1,pos-1)
+	bInfo=Mid(bInfo,pos+1,200)
+end if
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	unLoadingPort=Mid(bInfo,1,pos-1)
+	bInfo=Mid(bInfo,pos+1,200)
+end if
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	ExportCarrier=Mid(bInfo,1,pos-1)
+	bInfo=Mid(bInfo,pos+1,200)
+end if
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	Country=Mid(bInfo,1,pos-1)
+	bInfo=Mid(bInfo,pos+1,200)
+end if
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	MBOLNum=Mid(bInfo,1,pos-1)
+	bInfo=Mid(bInfo,pos+1,200)
+end if
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	MoveType=Mid(bInfo,1,pos-1)
+	bInfo=Mid(bInfo,pos+1,200)
+end if
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	ReceiptPlace=Mid(bInfo,1,pos-1)
+	bInfo=Mid(bInfo,pos+1,200)
+end if
+pos=instr(bInfo,chr(10))
+if pos>0 then
+	DeliveryPlace=Mid(bInfo,1,pos-1)
+	FileNo=Mid(bInfo,pos+1,200)
+end if
+document.form1.txtLoadingPort.Value=LoadingPort
+document.form1.txtUnLoadingPort.Value=unLoadingPort
+document.form1.txtExportCarrier.Value=ExportCarrier
+document.form1.txtDeliveryPlace.Value=DeliveryPlace
+document.form1.txtOriginCountry.Value=Country
+document.form1.hDepartureDate.Value=DepartureDate
+document.form1.txtMBOL.value=MBOLNum
+document.form1.lstMoveType.value=MoveType
+document.form1.txtPreReceiptPlace.Value=ReceiptPlace
+document.form1.txtDeliveryPlace.Value=DeliveryPlace
+document.form1.txtExportInstr.Value=FileNo
+Desc5="LADEN ON BOARD:" & chr(13) & DepartureDate & chr(13) & ExportCarrier & chr(13) & LoadingPort
+document.form1.txtDesc5.Value=Desc5
+document.form1.action="new_edit_mbol.asp?ChangeBookingNum=yes&BookingNum=" & BookingNum
+document.form1.method="POST"
+form1.submit()
+End Sub
+
+Sub DeleteMBOL()
+MBOL=document.form1.txtMBOL.Value
+if not MBOL="" then
+	ok=MsgBox ("Do you really want to delete MBOL " & MBOL & "?" & chr(13) & "Continue?",36,"Message")
+	if ok=6 then	
+		document.form1.action="new_edit_mbol.asp?DeleteMBOL=yes&MBOL=" & MBOL
+		document.form1.method="POST"
+		form1.submit()
+	end if
+else
+	MsgBox "The MBOL number is not assigned!"
+end if
+End Sub
+
+Sub EditMBOL(HBOL)
+if not HBOL="" then
+	window.open "new_edit_hbol.asp?HBOL=" & HBOL ,"PopupNew", "<%=StrWindow %>"
+end if
+End Sub
+Sub Manifest()
+sIndex=document.form1.lstBookingNum.selectedindex
+BookingNum=document.form1.lstBookingNum.item(sindex).Text
+'mbol=document.form1.txtMBOL.value
+window.open "manifest_pdf.asp?mbol=" & BookingNum ,"PopupNew", "<%=StrWindow %>"
+End Sub
+Sub MenuMouseOver()
+End Sub
+Sub MenuMouseOut()
+End Sub
+--->
+</SCRIPT>
+
+<!--  #INCLUDE FILE="../include/StatusFooter.asp" -->
+</html>

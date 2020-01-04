@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="14.0.4758.1000" _dal="1" -->
+<!-- _LocalBinding -->
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BulkWrkTaskHandler_PageTitle">
+    <value>Bulk Task Selection</value>
+  </data>
+  <data name="BulkWrkTaskHandler_PageTitleInTitleArea">
+    <value>Complete Tasks in Bulk</value>
+  </data>
+  <data name="BulkWrkTaskHandler_PageDesc1">
+    <value>Your view included the following task type(s).</value>
+  </data>
+  <data name="BulkWrkTaskHandler_PageDesc2">
+    <value>Select one type of task to edit in bulk. </value>
+  </data>
+  <data name="BulkWrkTaskHandler_TaskName">
+    <value>Task Name</value>
+  </data>
+  <data name="BulkWrkTaskHandler_ItemCount">
+    <value>Items</value>
+  </data>
+  <data name="BulkWrkTaskHandler_Field">
+    <value>Field</value>
+  </data>
+  <data name="BulkWrkTaskHandler_Value">
+    <value>Value</value>
+  </data>
+  <data name="BulkWrkTaskHandler_TaskInfo">
+    <value>Task Information</value>
+  </data>
+  <data name="BulkWrkTaskHandler_TaskInfoDesc">
+    <value>These tasks are in the following list and view: </value>
+  </data>
+  <data name="BulkWrkTaskHandler_NoAdHocFilter">
+    <value>Ad-hoc filters were not used.</value>
+  </data>
+  <data name="BulkWrkTaskHandler_NoBulkActionableTasks">
+    <value>There are no bulk actionable tasks in the current view. Not all workflow tasks can be acted on in bulk.</value>
+  </data>
+  <data name="BulkWrkTaskIP_PageTitle">
+    <value>Bulk Workflow Task</value>
+  </data>
+  <data name="BulkWrkTaskIP_PageDesc">
+    <value>Complete workflow tasks in bulk</value>
+  </data>
+  <data name="BulkWrkTaskIP_TaskNotBulkActionable">
+    <value>The selected workflow task does not support bulk action</value>
+  </data>
+  <data name="BulkWrkTaskIP_Success">
+    <value>The selected tasks have been scheduled for processing. You will receive an e-mail confirmation when the tasks have been processed.</value>
+  </data>
+  <data name="BulkWrk_ButtonName">
+    <value>Process all tasks</value>
+  </data>
+  <data name="BulkWrk_ButtonDescription">
+    <value>Process workflow tasks in bulk.</value>
+  </data>
+  <data name="ListPage_InvalidURL">
+    <value>The page you selected contains a list that does not exist.  It may have been deleted by another user.</value>
+  </data>
+  <data name="CstWrkfl_PageTitleGeneric">
+    <value>Change a Workflow</value>
+  </data>
+  <data name="CstWrkfl_PageTitleSpecific">
+    <value>Customize Workflow: {0}</value>
+  </data>
+  <data name="CstWrkfl_PageDescription">
+    <value>To finish associating the workflow, use the submit button in the form below.</value>
+  </data>
+  <data name="IniWrkfl_PageTitleGeneric">
+    <value>Start Workflow</value>
+  </data>
+  <data name="IniWrkfl_PageTitleSpecific">
+    <value>Start "{0}"</value>
+  </data>
+  <data name="IniWrkfl_PageDescription">
+    <value>To start the workflow, use the submit button in the form below.</value>
+  </data>
+  <data name="IniWrkfl_MissingAssociationError">
+    <value>The requested workflow could not be found.</value>
+  </data>
+  <data name="MultiPages_Yes">
+    <value>Yes</value>
+  </data>
+  <data name="MultiPages_NoFormURNError">
+    <value>The workflow template has specified no FormURN for this page.</value>
+  </data>
+  <data name="MultiPages_LinkInNewWindow">
+    <value>{0} (Opens in new window)</value>
+  </data>
+  <data name="WrkTask_PageTitle">
+    <value>Workflow Task</value>
+  </data>
+  <data name="WrkTask_PreGears">
+    <value>Please wait while your task is updated...</value>
+  </data>
+  <data name="WrkTask_PostGears">
+    <value>You will be redirected &lt;a href="{0}"&gt;to the previous page&lt;/a&gt; after the update is complete.</value>
+  </data>
+  <data name="WrkTask_RollbackMessage">
+    <value>Task update was not accepted. To edit a task associated with a workflow task process, you must be the person to whom the task is currently assigned.</value>
+  </data>
+  <data name="WrkTask_MissingListError">
+    <value>The list referenced by this task is missing or has been deleted.</value>
+  </data>
+  <data name="WrkTask_MissingParentItemError">
+    <value>You cannot complete this workflow task because the item that the workflow is running on has been deleted. If the item is in your Recycle Bin, restore it, and then try again.</value>
+  </data>
+  <data name="WrkTask_PageDescription">
+    <value>This workflow task applies to {0}.</value>
+  </data>
+  <data name="ModWrkfl_PageTitleGeneric">
+    <value>Modify Workflow</value>
+  </data>
+  <data name="ModWrkfl_PageTitleSpecific">
+    <value>Modify Workflow: {0}</value>
+  </data>
+  <data name="ModWrkfl_WorkflowBadState">
+    <value>This workflow cannot be modified. It may have been completed or deleted.</value>
+  </data>
+  <data name="ModWrkfl_PreGears">
+    <value>Please wait while we make the requested changes...</value>
+  </data>
+  <data name="XlateWfAssocPage_Title">
+    <value>Customize Translation Management Workflow</value>
+  </data>
+  <data name="XlateWfAssocPage_XlatorsTitle">
+    <value>List of Languages and Translators</value>
+  </data>
+  <data name="XlateWfAssocPage_XlatorsDesc">
+    <value>Specify the list of languages for which you want the workflow to create copies of a source document and translation tasks. You can also specify a translator for each language. If there are multiple translators for a specific language, create a unique entry in your list for each translator.</value>
+  </data>
+  <data name="XlateWfAssocPage_XlateListExisting">
+    <value>Use an existing list of languages and translators from the site:</value>
+  </data>
+  <data name="XlateWfAssocPage_XlateListNew">
+    <value>Create a new list of languages and translators for this workflow</value>
+  </data>
+  <data name="XlateWfAssocPage_XlatorsListName">
+    <value>List name:</value>
+  </data>
+  <data name="XlateWfAssocPage_XlatorsListTooltip">
+    <value>Type a name for the new list of languages and translators</value>
+  </data>
+  <data name="XlateWfAssocPage_XlateListDefaultName">
+    <value>Translators</value>
+  </data>
+  <data name="XlateWfAssocPage_XlateListAlreadyExists">
+    <value>The specified name is already in use.</value>
+  </data>
+  <data name="XlateWfAssocPage_XlateListInvalidName">
+    <value>Please choose a valid list name.</value>
+  </data>
+  <data name="XlateWfAssocPage_XlateListOpenTList">
+    <value>Open the new translators list in a separate window.</value>
+  </data>
+  <data name="XlateWfAssocPage_XlateListNewDescription">
+    <value>This list was created by the Translation Management workflow to store the list of people who will translate documents.</value>
+  </data>
+  <data name="XlateWfAssocPage_DueDateTitle">
+    <value>Due Date</value>
+  </data>
+  <data name="XlateWfAssocPage_DueDateDesc">
+    <value>Set a due date to be used if this workflow is started automatically.</value>
+  </data>
+  <data name="XlateWfAssocPage_DueDateSet">
+    <value>Translation workflow started automatically, should be completed within the following number of days:</value>
+  </data>
+  <data name="XlateWfAssocPage_DueDateDaysTooltip">
+    <value>Type the the number of days translations are to be completed within</value>
+  </data>
+  <data name="XlateWfAssocPage_DueDateInvalidNumDays">
+    <value>Please enter a time range between 1 and 999 days.</value>
+  </data>
+  <data name="XlateWfAssocPage_StopWorkflowTitle">
+    <value>Complete the Workflow</value>
+  </data>
+  <data name="XlateWfAssocPage_StopWorkflowDesc">
+    <value>Specify when you want the workflow to be completed. If you do not select any options, the workflow will be completed when all tasks are finished.</value>
+  </data>
+  <data name="XlateWfAssocPage_StopWorkflowStopWhen">
+    <value>The workflow is complete when all tasks are finished or:</value>
+  </data>
+  <data name="XlateWfAssocPage_StopWorkflowBaseDocChanged">
+    <value>When the source document is changed</value>
+  </data>
+</root>

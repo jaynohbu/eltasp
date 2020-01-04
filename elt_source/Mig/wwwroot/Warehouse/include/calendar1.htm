@@ -1,0 +1,118 @@
+<link href="../css/elt_css.css" rel="stylesheet" type="text/css">   
+<tr>  
+  <td class=bodycopy width="100%" align="right" colspan="3"><strong>Dates</strong>&nbsp; 
+    <select Name="lstDates" size="1" class="smallselect" style="WIDTH: 120px;">
+      <option >Today</option>
+      <option <% if vDates="Month to Date" then response.write("selected") %>>Month 
+      to Date</option>
+      <option <% if vDates="Quarter to Date" then response.write("selected") %>>Quarter 
+      to Date</option>
+      <option <% if vDates="Year to Date" then response.write("selected") %>>Year 
+      to Date</option>
+      <option <% if vDates="This Month" then response.write("selected") %>>This 
+      Month</option>
+      <option <% if vDates="This Quarter" then response.write("selected") %>>This 
+      Quarter</option>
+      <option <% if vDatese="This Year" then response.write("selected") %>>This 
+      Year</option>
+      <option <% if vDates="Last Month" then response.write("selected") %>>Last 
+      Month</option>
+      <option <% if vDates="Last Quarter" then response.write("selected") %>>Last 
+      Quarter</option>
+      <option <% if vDates="Last Year" then response.write("selected") %>>Last 
+      Year</option>
+      <option <% if vDates="Custom" then response.write("selected") %>>Custom</option>
+    </select>
+    <strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;From</strong>&nbsp; 
+    <Input name="txtFromDate" type=text class="shorttextfield" id=FromDate OnKeyPress="key()" Value="<%= FromDate %>">
+    <img src="../images/calendar_image.gif" width="18" height="18" border="0" align="absmiddle" OnClick="ShowCal1()" >&nbsp;<strong>&nbsp;&nbsp; 
+    To</strong>&nbsp; 
+    <input name="txtToDate" type=text class="shorttextfield" id="ToDate" OnKeyPress="key()" Value="<%= ToDate %>">
+    <img src="../images/calendar_image.gif" width="18" height="18" border="0" align="absmiddle" OnClick="ShowCal2()" ></font></b> 
+  </td>
+<p>
+<object name="oCal1" classid="clsid:8E27C92B-1264-101C-8A2F-040224009C02" id="oCal1" style="position: 'absolute'; left:'807'; top:'38'; width:'200'; height:'150'; visibility: 'hidden';" OnBlur="GetDate()">
+  <param name="_Version" value="524288">
+  <param name="_ExtentX" value="6456">
+  <param name="_ExtentY" value="3784">
+  <param name="_StockProps" value="1">
+  <param name="BackColor" value="-2147483642">
+  <param name="Year" value="<%= Year(Date) %>">
+  <param name="Month" value="<%= Month(Date) %>">
+  <param name="Day" value="1">
+  <param name="DayLength" value="1">
+  <param name="MonthLength" value="2">
+  <param name="DayFontColor" value="0">
+  <param name="FirstDay" value="1">
+  <param name="GridCellEffect" value="1">
+  <param name="GridFontColor" value="65280">
+  <param name="GridLinesColor" value="-2147483634">
+  <param name="ShowDateSelectors" value="-1">
+  <param name="ShowDays" value="-1">
+  <param name="ShowHorizontalGrid" value="-1">
+  <param name="ShowTitle" value="0">
+  <param name="ShowVerticalGrid" value="-1">
+  <param name="TitleFontColor" value="16776960">
+  <param name="ValueIsNull" value="0">
+</object>
+</p>
+<p>
+<object name="oCal2" classid="clsid:8E27C92B-1264-101C-8A2F-040224009C02" id="oCal2" style="position: 'absolute'; left:'534'; top:'38'; width:'200'; height:'150'; visibility: 'hidden';" OnBlur="GetDate()">
+  <param name="_Version" value="524288">
+  <param name="_ExtentX" value="6456">
+  <param name="_ExtentY" value="3784">
+  <param name="_StockProps" value="1">
+  <param name="BackColor" value="-2147483642">
+  <param name="Year" value="<%= Year(Date) %>">
+  <param name="Month" value="<%= Month(Date) %>">
+  <param name="Day" value="Day(Date)">
+  <param name="DayLength" value="1">
+  <param name="MonthLength" value="2">
+  <param name="DayFontColor" value="0">
+  <param name="FirstDay" value="1">
+  <param name="GridCellEffect" value="1">
+  <param name="GridFontColor" value="65280">
+  <param name="GridLinesColor" value="-2147483634">
+  <param name="ShowDateSelectors" value="-1">
+  <param name="ShowDays" value="-1">
+  <param name="ShowHorizontalGrid" value="-1">
+  <param name="ShowTitle" value="0">
+  <param name="ShowVerticalGrid" value="-1">
+  <param name="TitleFontColor" value="16776960">
+  <param name="ValueIsNull" value="0">
+</object>
+</p>
+  </tr>
+<SCRIPT LANGUAGE="vbscript">
+<!---
+Sub GetDate()
+document.all("oCal1").style.visibility="hidden"
+document.all("FromDate").Value=document.all("oCal1").Value
+document.all("oCal2").style.visibility="hidden"
+document.all("ToDate").Value=document.all("oCal2").Value
+End Sub
+
+Sub ShowCal1()
+if document.all("oCal1").style.visibility="hidden" Then
+	document.all("oCal1").style.left = ( window.event.clientX - document.all("oCal1").offsetWidth )
+	document.all("oCal1").style.top = window.event.clientY + 10
+	document.all("oCal1").style.visibility="visible"
+else
+	document.all("oCal1").style.visibility="hidden"
+end if
+document.all("FromDate").Value=document.all("oCal1").Value
+	'document.all("oCal1").focus
+End Sub
+Sub ShowCal2()
+if document.all("oCal2").style.visibility="hidden" Then
+	document.all("oCal2").style.left = ( window.event.clientX - document.all("oCal2").offsetWidth )
+	document.all("oCal2").style.top = window.event.clientY + 10
+	document.all("oCal2").style.visibility="visible"
+else
+	document.all("oCal2").style.visibility="hidden"
+end if
+document.all("ToDate").Value=document.all("oCal2").Value
+	'document.all("oCal2").focus
+End Sub
+--->
+</SCRIPT>

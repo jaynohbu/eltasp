@@ -1,0 +1,9 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxCaptcha runat="server" SpriteCssFilePath="~/App_Themes/MetropolisBlue/{0}/sprite.css" CssPostfix="MetropolisBlue" CssFilePath="~/App_Themes/MetropolisBlue/{0}/styles.css">
+    <LoadingPanelImage Url="~/App_Themes/MetropolisBlue/Editors/Loading.gif" />
+    <RefreshButtonStyle Font-Italic="False" Font-Size="0pt" ForeColor="White" />
+    <ChallengeImage BorderWidth="0" ForegroundColor="White" BackgroundColor="#0072C6" BorderColor="" />
+</dx:ASPxCaptcha>
+

@@ -1,0 +1,104 @@
+<%@ Page language="c#" Codebehind="Recent.aspx.cs" AutoEventWireup="false" Inherits="IFF_MAIN.ASPX.Misc.Recent" EnableSessionState="False" enableViewState="False"%>
+<%@ Register TagPrefix="igtbl" Namespace="Infragistics.WebUI.UltraWebGrid" Assembly="Infragistics.WebUI.UltraWebGrid.v5.1, Version=5.1.20051.1045, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+  <HEAD>
+		<title>Recent</title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name=GENERATOR>
+		<meta content=C# name=CODE_LANGUAGE>
+		<meta content=JavaScript name=vs_defaultClientScript>
+		<meta content=http://schemas.microsoft.com/intellisense/ie5 name=vs_targetSchema>
+		<LINK href="../CSS/AppStyle.css" type=text/css rel=stylesheet>
+		<script language=javascript>
+
+function cch(gridName,cellId,button) {
+var row=igtbl_getRowById(cellId);
+var cell=igtbl_getCellById(cellId);
+var oCell = igtbl_getCellById(cellId);
+
+			if(cell.Column.Key=="Name") {
+				eval(row.getCellFromKey("1").getValue());
+			}
+}
+
+function MenuLinkForTab(url) {
+ parent.frames['topFrame'].location = "../../ASP/tabs/" + url + ".htm";
+}		
+
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments;
+  document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) 	{
+			if(args[i].indexOf("topFrame") >= 0)	{
+				MenuLinkForTab(args[i+1]);
+			}
+			else
+			{
+				var ind = args[i+1].lastIndexOf("/")
+				var title = args[i+1].substr(ind+1,args[i+1].length);
+				var strTitle = parent.TabMenuLink(args[i+1],title);
+				parent.goTabUrl(args[i+1],strTitle) ;
+			}			
+	}		
+}
+		</script>
+</HEAD>
+	<body MS_POSITIONING="FlowLayout">
+		<form id=Form1 method=post runat="server">
+			<FONT face=±¼¸²>
+				<asp:datalist id=dlList runat="server" Width="568px" BorderColor="Tan" BackColor="LightGoldenrodYellow" CellPadding="2"
+					BorderWidth="1px" ForeColor="Black">
+<SelectedItemStyle ForeColor="GhostWhite" BackColor="DarkSlateBlue">
+</SelectedItemStyle>
+
+<HeaderTemplate>
+						<TABLE cellSpacing=0 cellPadding=2 width=700 border=0>
+							<TR>
+								<TD bgColor=#cccccc colSpan=10 height=1></TD>
+							</TR>
+							<TR align=center>
+								<TD width=41>Date/Time</TD>
+								<TD width=100>Job Name</TD>
+								<TD width=30>Remark</TD>
+							</TR>
+							<TR>
+								<TD bgColor=#88a4b3 colSpan=10 height=3></TD>
+							</TR>
+						</TABLE>
+					
+</HeaderTemplate>
+
+<AlternatingItemStyle BackColor="PaleGoldenrod">
+</AlternatingItemStyle>
+
+<FooterStyle BackColor="Tan">
+</FooterStyle>
+
+<ItemTemplate>
+						<TABLE cellSpacing=0 cellPadding=2 width=700 border=0>
+							<TR onmouseover="this.style.backgroundColor='#EEEEEE'" onmouseout="this.style.backgroundColor='#FFFFFF'"
+								bgColor=#ffffff>
+								<TD align=left width=200>
+									<asp:Label id=lblRegDate runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Date_Time", "{0:yyyy-MM-dd}") %>' DESIGNTIMEDRAGDROP="82">
+									</asp:Label></TD>
+								<TD></TD>
+								<TD align=left width=200>
+									<asp:HyperLink id=hlSubject Runat="Server">
+										<%# DataBinder.Eval(Container,"DataItem.Name") %>
+									</asp:HyperLink></TD>
+								<TD align=left width=300>
+									<asp:Label id=lblRemark runat="server" Text='<%# DataBinder.Eval(Container,"DataItem.Remark") %>'>
+									</asp:Label></TD>
+							</TR>
+							<TR>
+								<TD bgColor=#cccccc colSpan=10 height=1></TD>
+							</TR>
+						</TABLE>
+					
+</ItemTemplate>
+
+<HeaderStyle Font-Bold="True" BackColor="Tan">
+</HeaderStyle>
+				</asp:datalist></FONT></form>
+	</body>
+</HTML>

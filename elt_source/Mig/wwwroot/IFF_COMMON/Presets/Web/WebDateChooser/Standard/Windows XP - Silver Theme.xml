@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Windows XP - Silver Theme" PresetDescription="Infragistics Windows XP Theme.  Sets both Look and Behavior properties." PresetType="All" />-->
+<igsch:WebDateChooser >
+  <ClientSideEvents />
+  <CalendarLayout DayNameFormat="FirstLetter" FooterFormat="" ShowNextPrevMonth="False" ShowTitle="False" ShowFooter="False">
+    <DayStyle Font-Size="9pt" Font-Names="Arial" BackColor="White" />
+    <SelectedDayStyle ForeColor="Black" BackColor="Silver" />
+    <OtherMonthDayStyle ForeColor="White" />
+    <DayHeaderStyle ForeColor="#A2A1A1" BackColor="White" />
+    <TitleStyle BackColor="White" />
+  </CalendarLayout>
+  <DropButton ImageUrl2="/ig_common/images/igsch_dropdown_down_o2003silver.gif" ImageUrl1="/ig_common/images/igsch_dropdown_up_o2003silver.gif">
+    <HoverStyle />
+    <Style />
+  </DropButton>
+  <ExpandEffects ShadowColor="LightGray" />
+</igsch:WebDateChooser>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Resources>
+  <ResourceGroup Text="Work">
+    <Resource ID="1" Name="Development" />
+    <Resource ID="2" Name="Webinars" />
+  </ResourceGroup>
+  <ResourceGroup Text="Personal">
+    <Resource ID="4" Name="Family" />
+    <Resource ID="3" Name="Birthdays" />
+  </ResourceGroup>
+</Resources>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Office 2000 Listbar" PresetDescription="Office 2000 looking Listbar.  Sets both Look and Behavior properties." PresetType="All" />-->
+<iglbar:UltraWebListbar BarWidth="100%" BorderStyle="Groove" BorderWidth="2px">
+  <DefaultGroupStyle Height="100%" BorderWidth="1px" BorderColor="DarkGray" BorderStyle="Inset" BackColor="Gray" />
+  <DefaultItemStyle Cursor="Default" BorderWidth="1px" BorderColor="Gray" BorderStyle="Solid" />
+  <DefaultItemHoverStyle Cursor="Default" BorderWidth="1px" BorderStyle="Outset" />
+  <DefaultGroupButtonSelectedStyle Cursor="Default" BorderWidth="1px" BorderStyle="Inset" BackColor="Silver" />
+  <DefaultItemSelectedStyle Cursor="Default" BorderWidth="1px" BorderStyle="Inset" />
+  <DefaultGroupButtonStyle Cursor="Default" BorderWidth="1px" BorderStyle="Outset" BackColor="Silver" />
+  <DefaultGroupButtonHoverStyle Cursor="Default" BorderWidth="1px" BorderColor="Control" BorderStyle="Outset" BackColor="Silver" />
+</iglbar:UltraWebListbar>

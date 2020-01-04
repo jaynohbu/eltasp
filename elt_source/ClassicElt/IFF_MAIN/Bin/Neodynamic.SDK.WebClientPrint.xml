@@ -1,0 +1,328 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Neodynamic.SDK.WebClientPrint</name>
+    </assembly>
+    <members>
+        <member name="T:Neodynamic.SDK.Web.WebClientPrint">
+            <summary>
+            Provides methods for registering the WebClientPrint script code in ASP.NET web pages.
+            </summary>
+        </member>
+        <member name="M:Neodynamic.SDK.Web.WebClientPrint.CreateScript">
+            <summary>
+            Returns a [script] tag linking to the WebClientPrint script code.
+            </summary>
+            <returns>
+            A [script] tage linking to the WebClientPrint script code.
+            </returns>
+        </member>
+        <member name="M:Neodynamic.SDK.Web.WebClientPrint.CreateScript(System.String)">
+            <summary>
+            Returns a [script] tag linking to the WebClientPrint script code by using the specified URL for the client print job generation.
+            </summary>
+            <param name="clientPrintJobUrl">
+            The URL for the client print job generation.
+            </param>
+            <returns>
+            A [script] tag linking to the WebClientPrint script code by using the specified URL for the client print job generation.
+            </returns>
+        </member>
+        <member name="M:Neodynamic.SDK.Web.WebClientPrint.ProcessPrintJob(System.Web.HttpRequest)">
+            <summary>
+            Returns true if the specified HttpRequest is requesting the processing of a client print job; otherwise it returns false.
+            </summary>
+            <param name="request">
+            A HttpRequest object.
+            </param>
+            <returns>
+            true if the specified HttpRequest is requesting the processing of a client print job; otherwise it returns false.
+            </returns>
+        </member>
+        <member name="M:Neodynamic.SDK.Web.WebClientPrint.UserHasWcpp(System.String)">
+            <summary>
+            Returns true if the specified user's session ID has WCPP installed; otherwise false.
+            </summary>
+            <param name="sessionId">
+            The user's session ID.
+            </param>
+            <returns>
+            true if the specified user's session ID has WCPP installed; otherwise false.
+            </returns>
+        </member>
+        <member name="M:Neodynamic.SDK.Web.WebClientPrint.CreateWcppDetectionScript">
+            <summary>
+            Returns a [script] tag linking to the WCPP-detection script code.
+            </summary>
+            <returns>
+            A [script] tag linking to the WCPP-detection script code.
+            </returns>
+            <remarks>
+            <para>The WCPP-detection script code ends with a 'success' or 'failure' status.</para>
+            <para>You can handle both situation by creating two javascript functions which names must be wcppDetectOnSuccess() and wcppDetectOnFailure(). These two functions will be automatically invoked by the WCPP-detection script code.</para>
+            <para>For non-IE browsers, the WCPP-detection script uses a delay time variable which by default is 10000 ms (10 sec). You can change it by creating a javascript global variable which name must be wcppPingDelay_ms. For example, to use 5 sec instead of 10, you should add this to your script: 
+            <code>
+            var wcppPingDelay_ms = 5000;
+            </code>
+            </para>
+            </remarks>
+        </member>
+        <member name="M:Neodynamic.SDK.Web.WebClientPrint.GetWcppDetectionMetaTag">
+            <summary>
+            Returns a string containing a HTML meta tag for the WCPP-detection procedure. 
+            </summary>
+            <returns>
+            A string containing a HTML meta tag for the WCPP-detection procedure.
+            </returns>
+            <remarks>
+            The meta tag X-UA-Compatible is generated for Internet Explorer (IE) 10 to emulate IE9. If this meta tag is not generated, then IE10 will display some unwanted dialog box to the user when the WCPP-detection script is executed.
+            </remarks>
+        </member>
+        <member name="T:Neodynamic.SDK.Web.ClientPrinter">
+            <summary>
+            The base class for all kind of printers supported at the client side.
+            </summary>
+        </member>
+        <member name="T:Neodynamic.SDK.Web.DefaultPrinter">
+            <summary>
+            It represents the default printer installed in the client machine.
+            </summary>
+        </member>
+        <member name="T:Neodynamic.SDK.Web.WindowsDriverPrinter">
+            <summary>
+            It represents a printer installed in the client machine with an associated Windows driver.
+            </summary>
+        </member>
+        <member name="M:Neodynamic.SDK.Web.WindowsDriverPrinter.#ctor">
+            <summary>
+            Creates an instance of the WindowsDriverPrinter class.
+            </summary>
+        </member>
+        <member name="M:Neodynamic.SDK.Web.WindowsDriverPrinter.#ctor(System.String)">
+            <summary>
+            Creates an instance of the WindowsDriverPrinter class with the specified printer name.
+            </summary>
+            <param name="printerName">
+            The name of the printer installed in the client machine.
+            </param>
+        </member>
+        <member name="P:Neodynamic.SDK.Web.WindowsDriverPrinter.PrinterName">
+            <summary>
+            Gets or sets the name of the printer installed in the client machine. Default value is an empty string.
+            </summary>
+        </member>
+        <member name="T:Neodynamic.SDK.Web.ParallelPortPrinter">
+            <summary>
+            It represents a printer which is connected through a parallel port in the client machine.
+            </summary>
+        </member>
+        <member name="M:Neodynamic.SDK.Web.ParallelPortPrinter.#ctor">
+            <summary>
+            Creates an instance of the ParallelPortPrinter class.
+            </summary>
+        </member>
+        <member name="M:Neodynamic.SDK.Web.ParallelPortPrinter.#ctor(System.String)">
+            <summary>
+            Creates an instance of the ParallelPortPrinter class with the specified port name.
+            </summary>
+            <param name="portName">
+            The parallel port name, for example LPT1.
+            </param>
+        </member>
+        <member name="P:Neodynamic.SDK.Web.ParallelPortPrinter.PortName">
+            <summary>
+            Gets or sets the parallel port name, for example LPT1. Default value is "LPT1"
+            </summary>
+        </member>
+        <member name="T:Neodynamic.SDK.Web.SerialPortPrinter">
+            <summary>
+            It represents a printer which is connected through a serial port in the client machine.
+            </summary>
+        </member>
+        <member name="M:Neodynamic.SDK.Web.SerialPortPrinter.#ctor">
+            <summary>
+            Creates an instance of the SerialPortPrinter class.
+            </summary>
+        </member>
+        <member name="M:Neodynamic.SDK.Web.SerialPortPrinter.#ctor(System.String,System.Int32,System.IO.Ports.Parity,System.IO.Ports.StopBits,System.Int32,System.IO.Ports.Handshake)">
+            <summary>
+            Creates an instance of the SerialPortPrinter class wiht the specified information.
+            </summary>
+            <param name="portName">
+            The serial port name, for example COM1.
+            </param>
+            <param name="baudRate">
+            The serial port baud rate in bits per second.
+            </param>
+            <param name="parity">
+            The serial port parity-checking protocol.
+            </param>
+            <param name="stopBits">
+            The serial port standard number of stopbits per byte.
+            </param>
+            <param name="dataBits">
+            The serial port standard length of data bits per byte.
+            </param>
+            <param name="flowControl">
+            The handshaking protocol for serial port transmission of data.
+            </param>
+        </member>
+        <member name="P:Neodynamic.SDK.Web.SerialPortPrinter.PortName">
+            <summary>
+            Gets or sets the serial port name, for example COM1. Default value is "COM1"
+            </summary>
+        </member>
+        <member name="P:Neodynamic.SDK.Web.SerialPortPrinter.BaudRate">
+            <summary>
+            Gets or sets the serial port baud rate in bits per second. Default value is 9600
+            </summary>
+        </member>
+        <member name="P:Neodynamic.SDK.Web.SerialPortPrinter.Parity">
+            <summary>
+            Gets or sets the serial port parity-checking protocol. Default value is None
+            </summary>
+        </member>
+        <member name="P:Neodynamic.SDK.Web.SerialPortPrinter.StopBits">
+            <summary>
+            Gets or sets the serial port standard number of stopbits per byte. Default value is One
+            </summary>
+        </member>
+        <member name="P:Neodynamic.SDK.Web.SerialPortPrinter.DataBits">
+            <summary>
+            Gets or sets the serial port standard length of data bits per byte. Default value is 8
+            </summary>
+        </member>
+        <member name="P:Neodynamic.SDK.Web.SerialPortPrinter.FlowControl">
+            <summary>
+            Gets or sets the handshaking protocol for serial port transmission of data. Default value is XOnXOff
+            </summary>
+        </member>
+        <member name="T:Neodynamic.SDK.Web.NetworkPrinter">
+            <summary>
+            It represents a Network IP/Ethernet printer which can be reached from the client machine.
+            </summary>
+        </member>
+        <member name="M:Neodynamic.SDK.Web.NetworkPrinter.#ctor">
+            <summary>
+            Creates an instance of the NetworkPrinter class.
+            </summary>
+        </member>
+        <member name="M:Neodynamic.SDK.Web.NetworkPrinter.#ctor(System.Net.IPAddress,System.Int32)">
+            <summary>
+            Creates an instance of the NetworkPrinter class with the specified IP Address and port number.
+            </summary>
+            <param name="ipAddress">
+            The Internet Protocol (IP) address assigned to the printer.
+            </param>
+            <param name="port">
+            The port number assigned to the printer.
+            </param>
+        </member>
+        <member name="M:Neodynamic.SDK.Web.NetworkPrinter.#ctor(System.String,System.Int32)">
+            <summary>
+            Creates an instance of the NetworkPrinter class with the specified DNS name and port number.
+            </summary>
+            <param name="dnsName">
+            The DNS name assigned to the printer.
+            </param>
+            <param name="port">
+            The port number assigned to the printer.
+            </param>
+        </member>
+        <member name="P:Neodynamic.SDK.Web.NetworkPrinter.DnsName">
+            <summary>
+            Gets or sets the DNS name assigned to the printer. Default is an empty string
+            </summary>
+        </member>
+        <member name="P:Neodynamic.SDK.Web.NetworkPrinter.IPAddress">
+            <summary>
+            Gets or sets the Internet Protocol (IP) address assigned to the printer. Default value is null (Nothing)
+            </summary>        
+        </member>
+        <member name="P:Neodynamic.SDK.Web.NetworkPrinter.Port">
+            <summary>
+            Gets or sets the port number assigned to the printer. Default value is 0
+            </summary>
+        </member>
+        <member name="T:Neodynamic.SDK.Web.UserSelectedPrinter">
+            <summary>
+            It represents a printer which will be selected by the user in the client machine. The user will be prompted with a print dialog.
+            </summary>
+        </member>
+        <member name="T:Neodynamic.SDK.Web.ClientPrintJob">
+            <summary>
+            Specifies information about the print job to be processed at the client side.
+            </summary>
+        </member>
+        <member name="M:Neodynamic.SDK.Web.ClientPrintJob.SendToClient(System.Web.HttpResponse)">
+            <summary>
+            Sends this ClientPrintJob to the client for further processing.
+            </summary>
+            <param name="response">
+            A HttpResponse object.
+            </param>
+        </member>
+        <member name="M:Neodynamic.SDK.Web.ClientPrintJob.GetBuffer">
+            <summary>
+            Gets a byte array representing this ClientPrintJob object.
+            </summary>
+            <returns>
+            A byte array representing this ClientPrintJob object.
+            </returns>
+        </member>
+        <member name="P:Neodynamic.SDK.Web.ClientPrintJob.EncodingCodePage">
+            <summary>
+            Gets or sets the encoding code page to process the printer's commands. Default is 850 (IBM850/MS-DOS Latin 1).
+            </summary>
+            <remarks>
+            The encoding code page is needed to convert the specified printer's commands in text plain format to bytes.
+            If you are using the BinaryPrinterCommands property instead of PrinterCommands, then the encoding code page is not taken into account.
+            </remarks>
+        </member>
+        <member name="P:Neodynamic.SDK.Web.ClientPrintJob.PrinterCommands">
+            <summary>
+            Gets or sets the printer's commands in text plain format. Default is an empty string.
+            </summary>
+        </member>
+        <member name="P:Neodynamic.SDK.Web.ClientPrintJob.BinaryPrinterCommands">
+            <summary>
+            Gets or sets the printer's commands in binary format. Default is null (nothing).
+            </summary>
+        </member>
+        <member name="P:Neodynamic.SDK.Web.ClientPrintJob.FormatHexValues">
+            <summary>
+            Gets or sets whether the printer commands have chars expressed in VB or C# hexadecimal notation. Default is false.
+            </summary>
+            <remarks>
+            The string set to the PrinterCommands property can contain chars expressed in VB or C# hexadecimal notation. 
+            Many printer languages have commands which are represented by non-printable chars and to express these commands in a string could require many concatenations and hence be not so readable.
+            By using hex notation in your preferred language (VB or C#) you can make it simple and elegant. Here is an example: if you need to encode ASCII 27 (escape), then you can represent it as &amp;H27 or 0x27 (VB and C# hex notation respectively).        
+            </remarks>
+        </member>
+        <member name="P:Neodynamic.SDK.Web.ClientPrintJob.ClientPrinter">
+            <summary>
+            Gets or sets the ClientPrinter object. Default is null (nothing).
+            </summary>
+            <remarks>
+            The ClientPrinter object refers to the kind of printer that the client machine has attached or can reach.
+            <list type="bullet">
+            <item>
+            <description>Use a DefaultPrinter object for using the default printer installed in the client machine.</description>
+            </item>
+            <item>
+            <description>Use a WindowsDriverPrinter object for using a printer installed in the client machine with an associated Windows driver.</description>
+            </item>
+            <item>
+            <description>Use a ParallelPortPrinter object for using a printer which is connected through a parallel port in the client machine.</description>
+            </item>
+            <item>
+            <description>Use a SerialPortPrinter object for using a printer which is connected through a serial port in the client machine.</description>
+            </item>
+            <item>
+            <description>Use a NetworkPrinter object for using a Network IP/Ethernet printer which can be reached from the client machine.</description>
+            </item>
+            </list>
+            </remarks>
+        </member>
+    </members>
+</doc>

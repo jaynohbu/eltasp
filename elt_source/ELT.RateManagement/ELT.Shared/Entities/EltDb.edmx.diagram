@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="afe72faf0dd946e6bfa1b3820b505657" Name="Diagram1">
+        <EntityTypeShape EntityType="PRDDBModel.aes_master" Width="1.5" PointX="7.75" PointY="9.75" />
+        <EntityTypeShape EntityType="PRDDBModel.all_code" Width="1.5" PointX="9.75" PointY="9.75" />
+        <EntityTypeShape EntityType="PRDDBModel.AspNetRole" Width="1.5" PointX="0.75" PointY="2.5" />
+        <EntityTypeShape EntityType="PRDDBModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="PRDDBModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="3.75" />
+        <EntityTypeShape EntityType="PRDDBModel.AspNetUser" Width="1.5" PointX="3" PointY="1.875" />
+        <EntityTypeShape EntityType="PRDDBModel.booking_confirm" Width="1.5" PointX="2.75" PointY="10.75" />
+        <EntityTypeShape EntityType="PRDDBModel.Country" Width="1.5" PointX="4.75" PointY="10.75" />
+        <EntityTypeShape EntityType="PRDDBModel.customer_credits" Width="1.5" PointX="11.75" PointY="9.75" />
+        <EntityTypeShape EntityType="PRDDBModel.dtproperty" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PRDDBModel.email_history" Width="1.5" PointX="9.75" PointY="12.75" />
+        <EntityTypeShape EntityType="PRDDBModel.gl" Width="1.5" PointX="12.75" PointY="4.75" />
+        <EntityTypeShape EntityType="PRDDBModel.invoice" Width="1.5" PointX="11.75" PointY="12.75" />
+        <EntityTypeShape EntityType="PRDDBModel.invoice_queue" Width="1.5" PointX="4.75" PointY="13.75" />
+        <EntityTypeShape EntityType="PRDDBModel.MAWB_NUMBER" Width="1.5" PointX="13.75" PointY="9.75" />
+        <EntityTypeShape EntityType="PRDDBModel.NewAccountRequest" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PRDDBModel.organization" Width="1.5" PointX="15.75" PointY="7.75" />
+        <EntityTypeShape EntityType="PRDDBModel.port" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PRDDBModel.rate_table" Width="1.5" PointX="7.75" PointY="1.5" />
+        <EntityTypeShape EntityType="PRDDBModel.RateBlockDefinition" Width="1.5" PointX="5.25" PointY="7.625" />
+        <EntityTypeShape EntityType="PRDDBModel.RateEntryRow" Width="1.5" PointX="3" PointY="7.625" />
+        <EntityTypeShape EntityType="PRDDBModel.RateRoute" Width="1.5" PointX="0.75" PointY="7" />
+        <EntityTypeShape EntityType="PRDDBModel.Recent_Work" Width="1.5" PointX="17.75" PointY="4.75" />
+        <EntityTypeShape EntityType="PRDDBModel.reconcile" Width="1.5" PointX="6.75" PointY="17.75" />
+        <EntityTypeShape EntityType="PRDDBModel.USCounty" Width="1.5" PointX="17.75" PointY="8.75" />
+        <EntityTypeShape EntityType="PRDDBModel.UserProfile" Width="1.5" PointX="10" PointY="6.875" />
+        <EntityTypeShape EntityType="PRDDBModel.user" Width="1.5" PointX="17.75" PointY="11.75" />
+        <EntityTypeShape EntityType="PRDDBModel.webpages_Membership" Width="1.5" PointX="18.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PRDDBModel.webpages_OAuthMembership" Width="1.5" PointX="19.75" PointY="4.75" />
+        <EntityTypeShape EntityType="PRDDBModel.webpages_Roles" Width="1.5" PointX="7.75" PointY="7" />
+        <EntityTypeShape EntityType="PRDDBModel.account_payable_journal" Width="1.5" PointX="19.75" PointY="7.75" />
+        <EntityTypeShape EntityType="PRDDBModel.account_receivable_journal" Width="1.5" PointX="8.75" PointY="19.75" />
+        <EntityTypeShape EntityType="PRDDBModel.account_request" Width="1.5" PointX="19.75" PointY="12.75" />
+        <EntityTypeShape EntityType="PRDDBModel.aes_detail" Width="1.5" PointX="19.75" PointY="19.75" />
+        <EntityTypeShape EntityType="PRDDBModel.agent" Width="1.5" PointX="0.75" PointY="20.75" />
+        <EntityTypeShape EntityType="PRDDBModel.all_accounts_journal" Width="1.5" PointX="2.75" PointY="20.75" />
+        <EntityTypeShape EntityType="PRDDBModel.all_currency_code" Width="1.5" PointX="20.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PRDDBModel.all_rate_table" Width="1.5" PointX="10" PointY="1.125" />
+        <EntityTypeShape EntityType="PRDDBModel.application" Width="1.5" PointX="21.75" PointY="3.75" />
+        <EntityTypeShape EntityType="PRDDBModel.bill" Width="1.5" PointX="21.75" PointY="13.75" />
+        <EntityTypeShape EntityType="PRDDBModel.bill_detail" Width="1.5" PointX="21.75" PointY="19.75" />
+        <EntityTypeShape EntityType="PRDDBModel.bug_master" Width="1.5" PointX="23.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PRDDBModel.carrier_master" Width="1.5" PointX="4.75" PointY="23.75" />
+        <EntityTypeShape EntityType="PRDDBModel.certificate_origin_air" Width="1.5" PointX="23.75" PointY="5.75" />
+        <EntityTypeShape EntityType="PRDDBModel.certificate_origin_air_items" Width="1.5" PointX="23.75" PointY="16.75" />
+        <EntityTypeShape EntityType="PRDDBModel.certificate_origin_ocean" Width="1.5" PointX="23.75" PointY="20.75" />
+        <EntityTypeShape EntityType="PRDDBModel.certificate_origin_ocean_items" Width="1.5" PointX="6.75" PointY="24.75" />
+        <EntityTypeShape EntityType="PRDDBModel.charge_item" Width="1.5" PointX="8.75" PointY="24.75" />
+        <EntityTypeShape EntityType="PRDDBModel.check_detail" Width="1.5" PointX="10.75" PointY="24.75" />
+        <EntityTypeShape EntityType="PRDDBModel.check_queue" Width="1.5" PointX="12.75" PointY="24.75" />
+        <EntityTypeShape EntityType="PRDDBModel.City" Width="1.5" PointX="25.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PRDDBModel.customer_credit_info" Width="1.5" PointX="25.75" PointY="3.75" />
+        <EntityTypeShape EntityType="PRDDBModel.customer_payment" Width="1.5" PointX="25.75" PointY="7.75" />
+        <EntityTypeShape EntityType="PRDDBModel.customer_payment_detail" Width="1.5" PointX="25.75" PointY="13.75" />
+        <EntityTypeShape EntityType="PRDDBModel.delivery_order" Width="1.5" PointX="25.75" PointY="17.75" />
+        <EntityTypeShape EntityType="PRDDBModel.eli_back" Width="1.5" PointX="17.75" PointY="25.75" />
+        <EntityTypeShape EntityType="PRDDBModel.ELT_NOTIFICATION" Width="1.5" PointX="19.75" PointY="25.75" />
+        <EntityTypeShape EntityType="PRDDBModel.email_report" Width="1.5" PointX="27.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PRDDBModel.export_code" Width="1.5" PointX="27.75" PointY="4.75" />
+        <EntityTypeShape EntityType="PRDDBModel.gl_reference" Width="1.5" PointX="27.75" PointY="7.75" />
+        <EntityTypeShape EntityType="PRDDBModel.greetMessage" Width="1.5" PointX="27.75" PointY="10.75" />
+        <EntityTypeShape EntityType="PRDDBModel.HAWB_master" Width="1.5" PointX="27.75" PointY="13.75" />
+        <EntityTypeShape EntityType="PRDDBModel.HAWB_master_add" Width="1.5" PointX="2.75" PointY="28.75" />
+        <EntityTypeShape EntityType="PRDDBModel.HAWB_master_drivers" Width="1.5" PointX="4.75" PointY="28.75" />
+        <EntityTypeShape EntityType="PRDDBModel.hawb_milestones" Width="1.5" PointX="6.75" PointY="28.75" />
+        <EntityTypeShape EntityType="PRDDBModel.hawb_Other_Charge" Width="1.5" PointX="19.75" PointY="28.75" />
+        <EntityTypeShape EntityType="PRDDBModel.hawb_other_cost" Width="1.5" PointX="29.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PRDDBModel.hawb_weight_charge" Width="1.5" PointX="29.75" PointY="4.75" />
+        <EntityTypeShape EntityType="PRDDBModel.hbol_master" Width="1.5" PointX="8.75" PointY="29.75" />
+        <EntityTypeShape EntityType="PRDDBModel.hbol_other_charge" Width="1.5" PointX="29.75" PointY="11.75" />
+        <EntityTypeShape EntityType="PRDDBModel.hbol_other_cost" Width="1.5" PointX="29.75" PointY="15.75" />
+        <EntityTypeShape EntityType="PRDDBModel.ig_ocean_ams_edi_header" Width="1.5" PointX="29.75" PointY="19.75" />
+        <EntityTypeShape EntityType="PRDDBModel.ig_ocean_ams_edi_item" Width="1.5" PointX="10.75" PointY="30.75" />
+        <EntityTypeShape EntityType="PRDDBModel.ig_ocean_ams_que" Width="1.5" PointX="12.75" PointY="30.75" />
+        <EntityTypeShape EntityType="PRDDBModel.ig_org_comments" Width="1.5" PointX="31.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PRDDBModel.ig_org_comments_tmp" Width="1.5" PointX="31.75" PointY="4.75" />
+        <EntityTypeShape EntityType="PRDDBModel.ig_org_contact" Width="1.5" PointX="31.75" PointY="8.75" />
+        <EntityTypeShape EntityType="PRDDBModel.ig_org_que" Width="1.5" PointX="31.75" PointY="13.75" />
+        <EntityTypeShape EntityType="PRDDBModel.ig_schedule_b" Width="1.5" PointX="31.75" PointY="16.75" />
+        <EntityTypeShape EntityType="PRDDBModel.ig_schedule_b_old" Width="1.5" PointX="31.75" PointY="20.75" />
+        <EntityTypeShape EntityType="PRDDBModel.iHAWB_master" Width="1.5" PointX="21.75" PointY="31.75" />
+        <EntityTypeShape EntityType="PRDDBModel.ihawb_Other_Charge" Width="1.5" PointX="23.75" PointY="31.75" />
+        <EntityTypeShape EntityType="PRDDBModel.ihawb_weight_charge" Width="1.5" PointX="31.75" PointY="24.75" />
+        <EntityTypeShape EntityType="PRDDBModel.iMAWB_MASTER" Width="1.5" PointX="31.75" PointY="30.75" />
+        <EntityTypeShape EntityType="PRDDBModel.iMAWB_NUMBER" Width="1.5" PointX="33.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PRDDBModel.iMAWB_Other_Charge" Width="1.5" PointX="4.75" PointY="33.75" />
+        <EntityTypeShape EntityType="PRDDBModel.iMAWB_Weight_Charge" Width="1.5" PointX="33.75" PointY="8.75" />
+        <EntityTypeShape EntityType="PRDDBModel.import_hawb" Width="1.5" PointX="12.75" PointY="33.75" />
+        <EntityTypeShape EntityType="PRDDBModel.import_mawb" Width="1.5" PointX="33.75" PointY="13.75" />
+        <EntityTypeShape EntityType="PRDDBModel.invoice_detail" Width="1.5" PointX="33.75" PointY="24.75" />
+        <EntityTypeShape EntityType="PRDDBModel.invoice_header" Width="1.5" PointX="33.75" PointY="28.75" />
+        <EntityTypeShape EntityType="PRDDBModel.invoice_joined_temp" Width="1.5" PointX="33.75" PointY="34.75" />
+        <EntityTypeShape EntityType="PRDDBModel.invoice_tmp" Width="1.5" PointX="35.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PRDDBModel.license_code" Width="1.5" PointX="35.75" PointY="11.75" />
+        <EntityTypeShape EntityType="PRDDBModel.MAWB_MASTER" Width="1.5" PointX="35.75" PointY="14.75" />
+        <EntityTypeShape EntityType="PRDDBModel.MAWB_Other_Charge" Width="1.5" PointX="23.75" PointY="35.75" />
+        <EntityTypeShape EntityType="PRDDBModel.mawb_other_cost" Width="1.5" PointX="37.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PRDDBModel.MAWB_Weight_Charge" Width="1.5" PointX="0.75" PointY="37.75" />
+        <EntityTypeShape EntityType="PRDDBModel.mb_cost_item" Width="1.5" PointX="2.75" PointY="37.75" />
+        <EntityTypeShape EntityType="PRDDBModel.mbol_master" Width="1.5" PointX="37.75" PointY="4.75" />
+        <EntityTypeShape EntityType="PRDDBModel.mbol_other_charge" Width="1.5" PointX="4.75" PointY="37.75" />
+        <EntityTypeShape EntityType="PRDDBModel.mbol_other_cost" Width="1.5" PointX="37.75" PointY="21.75" />
+        <EntityTypeShape EntityType="PRDDBModel.Ocean_sed_detail" Width="1.5" PointX="37.75" PointY="25.75" />
+        <EntityTypeShape EntityType="PRDDBModel.ocean_sed_master" Width="1.5" PointX="37.75" PointY="31.75" />
+        <EntityTypeShape EntityType="PRDDBModel.page_user_access" Width="1.5" PointX="39.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PRDDBModel.payment_due" Width="1.5" PointX="39.75" PointY="3.75" />
+        <EntityTypeShape EntityType="PRDDBModel.pickup_order" Width="1.5" PointX="39.75" PointY="8.75" />
+        <EntityTypeShape EntityType="PRDDBModel.reconcile_payment_detail" Width="1.5" PointX="14.75" PointY="39.75" />
+        <EntityTypeShape EntityType="PRDDBModel.reconcile_receivement_detail" Width="1.5" PointX="39.75" PointY="20.75" />
+        <EntityTypeShape EntityType="PRDDBModel.RegionCode" Width="1.5" PointX="39.75" PointY="25.75" />
+        <EntityTypeShape EntityType="PRDDBModel.scheduleB" Width="1.5" PointX="39.75" PointY="28.75" />
+        <EntityTypeShape EntityType="PRDDBModel.SE_Modules" Width="1.5" PointX="39.75" PointY="32.75" />
+        <EntityTypeShape EntityType="PRDDBModel.SE_Pages" Width="1.5" PointX="39.75" PointY="35.75" />
+        <EntityTypeShape EntityType="PRDDBModel.SE_User_Authority" Width="1.5" PointX="39.75" PointY="39.75" />
+        <EntityTypeShape EntityType="PRDDBModel.sed_detail" Width="1.5" PointX="23.75" PointY="40.75" />
+        <EntityTypeShape EntityType="PRDDBModel.sed_master" Width="1.5" PointX="41.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PRDDBModel.setup_master" Width="1.5" PointX="41.75" PointY="11.75" />
+        <EntityTypeShape EntityType="PRDDBModel.Subscription_Tab_Ref" Width="1.5" PointX="41.75" PointY="15.75" />
+        <EntityTypeShape EntityType="PRDDBModel.SubscriptionDefinition" Width="1.5" PointX="41.75" PointY="18.75" />
+        <EntityTypeShape EntityType="PRDDBModel.tab_master" Width="1.5" PointX="41.75" PointY="21.75" />
+        <EntityTypeShape EntityType="PRDDBModel.tmp_org" Width="1.5" PointX="41.75" PointY="26.75" />
+        <EntityTypeShape EntityType="PRDDBModel.unit_code" Width="1.5" PointX="41.75" PointY="35.75" />
+        <EntityTypeShape EntityType="PRDDBModel.user_files" Width="1.5" PointX="41.75" PointY="38.75" />
+        <EntityTypeShape EntityType="PRDDBModel.UserType_Tab_Ref" Width="1.5" PointX="2.75" PointY="42.75" />
+        <EntityTypeShape EntityType="PRDDBModel.warehouse_history" Width="1.5" PointX="4.75" PointY="42.75" />
+        <EntityTypeShape EntityType="PRDDBModel.warehouse_receipt" Width="1.5" PointX="25.75" PointY="42.75" />
+        <EntityTypeShape EntityType="PRDDBModel.warehouse_shipout" Width="1.5" PointX="27.75" PointY="42.75" />
+        <EntityTypeShape EntityType="PRDDBModel.PNL" Width="1.5" PointX="35.75" PointY="42.75" />
+        <EntityTypeShape EntityType="PRDDBModel.View_pay_bill" Width="1.5" PointX="37.75" PointY="42.75" />
+        <EntityTypeShape EntityType="PRDDBModel.VW_ArrivalNotice" Width="1.5" PointX="39.75" PointY="42.75" />
+        <EntityTypeShape EntityType="PRDDBModel.VW_CustomerInfo" Width="1.5" PointX="41.75" PointY="42.75" />
+        <EntityTypeShape EntityType="PRDDBModel.vw_ocean_master" Width="1.5" PointX="43.75" PointY="7.75" />
+        <EntityTypeShape EntityType="PRDDBModel.VW_OperationalCharge" Width="1.5" PointX="43.75" PointY="29.75" />
+        <EntityTypeShape EntityType="PRDDBModel.VW_OperationalCost" Width="1.5" PointX="43.75" PointY="34.75" />
+        <EntityTypeShape EntityType="PRDDBModel.VW_OperationCharge" Width="1.5" PointX="43.75" PointY="39.75" />
+        <AssociationConnector Association="PRDDBModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id" />
+        <AssociationConnector Association="PRDDBModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="PRDDBModel.FK_all_rate_table_rate_table" />
+        <AssociationConnector Association="PRDDBModel.FK_RateBlockDefinition_RateEntryRow" />
+        <AssociationConnector Association="PRDDBModel.FK_Row_Route" />
+        <AssociationConnector Association="PRDDBModel.AspNetUserRoles" />
+        <AssociationConnector Association="PRDDBModel.webpages_UsersInRoles" />
+        <EntityTypeShape EntityType="PRDDBModel.vw_mawb_booking_info" Width="1.5" PointX="44.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

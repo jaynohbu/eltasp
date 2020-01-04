@@ -1,0 +1,15 @@
+﻿@model IEnumerable
+
+@functions{
+    IEnumerable GetEditTypes() {
+        return Enum.GetValues(typeof(GridViewBatchEditMode));
+    }
+    IEnumerable GetStartEditActions() {
+        return Enum.GetValues(typeof(GridViewBatchStartEditAction));
+    }
+}
+
+@using(Html.BeginForm()) {
+
+    @Html.Partial("_AESLineItemsPartial", Model)
+}

@@ -1,0 +1,5 @@
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.CDT\bin\Release\ELT.CDT.dll.config
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.CDT\bin\Release\ELT.CDT.dll
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.CDT\bin\Release\ELT.CDT.pdb
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.CDT\obj\Release\ELT.CDT.dll
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.WEB-VS2013\ELT.CDT\obj\Release\ELT.CDT.pdb

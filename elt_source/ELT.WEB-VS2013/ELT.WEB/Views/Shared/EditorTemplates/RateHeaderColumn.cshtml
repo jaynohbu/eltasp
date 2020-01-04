@@ -1,0 +1,143 @@
+﻿
+
+@model ELT.WEB.Models.RateHeaderColumn
+ @if (Model.RateHeaderColumnMode == ELT.WEB.Models.RateHeaderColumnMode.Add)
+ {
+     if (!Model.IsDropDown)
+     {
+         string Text = Model.Text;
+         string ID = Guid.NewGuid().ToString();
+
+        if (Model.IsMin)
+        {
+            Model.Text = "MIN.($)";
+            <th >
+                
+                @Html.DisplayTextFor(m => m.Text)
+                @Html.HiddenFor(m => m.Text)
+                @Html.HiddenFor(m => m.Value, new { @class = "RateHeaderColValue" })
+                @Html.HiddenFor(m => m.IsMin)
+                @Html.HiddenFor(m => m.IsProfitShare)
+                @Html.HiddenFor(m => m.Id)
+                @Html.HiddenFor(m => m.DropDownType)
+                @Html.HiddenFor(m => m.IsDropDown)
+            </th>
+        }
+        else if (Model.IsProfitShare)
+        {
+            Model.Text = "Profit Share(%)";
+            <th >
+          
+            @Html.DisplayTextFor(m => m.Text)
+            @Html.HiddenFor(m => m.Text)
+            @Html.HiddenFor(m => m.Value, new { @class = "RateHeaderColValue" })
+            @Html.HiddenFor(m => m.IsMin)
+            @Html.HiddenFor(m => m.IsProfitShare)
+            @Html.HiddenFor(m => m.Id)
+            @Html.HiddenFor(m => m.DropDownType)
+            @Html.HiddenFor(m => m.IsDropDown)
+        </th>
+        }
+        else
+        {
+            <th class="RateHeaderColLabel" id="@ID">
+
+                @Html.TextBoxFor(c => c.Text, new { @class = "RateHeaderColText", onfocus = "ShowColHeaderEdit(this);" })
+
+                <div class="ColHeaderEdit" style="display:none">
+                    <table>
+                        <tr>
+                            <td><input type="text" value="" class="ColHeaderEditBegin" onblur="AddColHead(this)" /></td>
+                            <td>~</td>
+                            <td colspan="2"><input type="text" value="" class="ColHeaderEditEnd" onblur="AddColHead(this)" /></td>
+                        </tr>
+                    </table>
+                </div>
+
+                @Html.HiddenFor(m => m.Value, new { @class = "RateHeaderColValue" })
+                @Html.HiddenFor(m => m.IsMin)
+                @Html.HiddenFor(m => m.IsProfitShare)
+                @Html.HiddenFor(m => m.Id)
+                @Html.HiddenFor(m => m.DropDownType)
+                @Html.HiddenFor(m => m.IsDropDown)
+            </th>
+        }
+
+     }
+     else
+     {
+         if (Model.DropDownType == ELT.WEB.Models.ColumnDropDownType.Customer)
+         {
+            <th colspan="1" class="ColHeaderDropDownCustomer">
+                @Html.TextBoxFor(m => m.Text, new { @class = "RateColText" })
+                 @Html.HiddenFor(m => m.Value, new { @class = "RateHeaderColValue" })
+                @Html.HiddenFor(m => m.Id)
+                @Html.HiddenFor(m => m.DropDownType)
+                @Html.HiddenFor(m => m.IsDropDown)
+
+            </th>
+
+         }
+         else if ( Model.DropDownType == ELT.WEB.Models.ColumnDropDownType.Agent)
+         {
+            <th colspan="1" class="ColHeaderDropDownAgent">
+                @Html.TextBoxFor(m => m.Text, new { @class = "RateColText" })
+                 @Html.HiddenFor(m => m.Value, new { @class = "RateHeaderColValue" })
+                @Html.HiddenFor(m => m.Id)
+                @Html.HiddenFor(m => m.DropDownType)
+                @Html.HiddenFor(m => m.IsDropDown)
+            </th>
+
+         }
+         else if (Model.DropDownType == ELT.WEB.Models.ColumnDropDownType.Unit)
+         {
+            <th colspan="1" class="ColHeaderDropDown">
+                @Html.DropDownListFor(m => m.Value, Model.DropDownItems)
+                @Html.HiddenFor(m => m.Id)
+                @Html.HiddenFor(m => m.DropDownType)
+                @Html.HiddenFor(m => m.IsDropDown)
+
+            </th>
+         }
+         else if (Model.DropDownType == ELT.WEB.Models.ColumnDropDownType.Port)
+         {
+            <th colspan="1" class="ColHeaderDropDown">
+                @Html.DropDownListFor(m => m.Value, Model.DropDownItems)
+                @Html.HiddenFor(m => m.Id)
+                @Html.HiddenFor(m => m.DropDownType)
+                @Html.HiddenFor(m => m.IsDropDown)
+
+            </th>
+         }
+
+     }
+
+ }
+ else
+ {
+
+    <th>
+        @if (Model.IsMin)
+        {
+          
+            @Html.DisplayTextFor(m => m.Text)
+        }
+        else if (Model.IsProfitShare)
+        {
+            Model.Text = "Profit Share(%)";
+            @Html.DisplayTextFor(m => m.Text)
+        }
+        else
+        {
+              @Html.DisplayTextFor(m => m.Text)
+           
+         
+        }
+        @Html.HiddenFor(m => m.IsMin)
+        @Html.HiddenFor(m => m.IsProfitShare)     
+        @Html.HiddenFor(m => m.Value)
+        @Html.HiddenFor(m => m.Text)
+    </th>
+
+ }
+

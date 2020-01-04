@@ -1,0 +1,80 @@
+<script type="text/javascript" language="javascript">
+
+function fixProgressBar()
+{
+    if(parent.frames['dummyFrame'])
+    {
+	    parent.frames['dummyFrame'].document.write("");
+	    parent.frames['dummyFrame'].document.close();
+    }    
+}
+
+</script>
+
+<script type="text/javascript" language="javascript">
+
+function jPopUpNormal(){
+var argS = 'menubar=1,toolbar=1,height=600,width=900,hotkeys=0,scrollbars=1,resizable=1';
+ popUpWindow = window.open('','popUpWindow', argS);
+ }
+
+function jPopUpNormalforSED(){
+var argS = 'menubar=1,toolbar=1,height=600,width=900,hotkeys=0,scrollbars=1,resizable=1';
+ popUpSED = window.open('','popUpSED', argS);
+ }
+
+function jPopUpPDF(){
+var argS = 'menubar=1,toolbar=1,height=600,width=900,hotkeys=0,scrollbars=1,resizable=1';
+ popUpPDF = window.open('','popUpPDF', argS);
+ }
+
+function jPopUp(sHeight){
+var argS = 'height=' + sHeight + ',width=500,hotkeys=0,scrollbars=1,resizable=1';
+if (document.layers) {
+var sinist = screen.width / 2 - outerWidth / 2;
+var toppo = screen.height / 2 - outerHeight / 2;
+} else {
+var sinist = screen.width / 2 - document.body.offsetWidth / 2;
+var toppo = -75 + screen.height / 2 - document.body.offsetHeight / 2;
+}
+ popUpWindow = window.open('','popUpWindow', argS);
+ }
+
+
+function viewPop(Url) {
+
+	if ( Url.indexOf("pdf") >= 0 )
+	{
+		if(document.form1) {
+			jPopUpPDF();
+			document.form1.action=Url;
+			document.form1.method="POST";
+			document.form1.target="popUpPDF"
+			document.form1.submit();
+		}
+	}
+	else
+	{
+		var strJavaPop = "";
+		strJavaPop = window.open(Url,'popupNew','staus=0,titlebar=0,toolbar=1,menubar=1,scrollbars=1,resizable=1,location=0,width=900,height=600,hotkeys=0');
+		strJavaPop.focus();
+	}
+}
+
+function viewPop2(WinName,Url) {
+var strJavaPop = "";
+window.open(Url,WinName,'staus=0,titlebar=0,toolbar=1,menubar=1,scrollbars=1,resizable=1,location=0,width=800,height=600,hotkeys=0');
+
+}
+
+function viewPop3(WinName,Url) {
+var strJavaPop = "";
+window.open(Url,WinName,'staus=0,titlebar=0,toolbar=0,menubar=0,scrollbars=1,resizable=1,location=0,width=800,height=600,hotkeys=0');
+
+}
+
+try{
+    window.attachEvent("onload", function(){fixProgressBar();}); 
+}catch (ex) {}
+    
+</script>

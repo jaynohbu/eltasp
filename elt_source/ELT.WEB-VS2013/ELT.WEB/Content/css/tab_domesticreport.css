@@ -1,0 +1,13 @@
+﻿
+	/* Domestic Report */	
+	#tabs .CurDomesticReportDiv a {
+		float:left;
+		background: url(/Images//navtab_cur_replf.gif) no-repeat left top;
+	}
+	#tabs .CurDomesticReportDiv a span {
+		background: url(/Images//navtab_cur_reprt.gif) no-repeat right top;
+		color: #2f2f23;
+		/* bottom padding to hide bottom border line bottom border of tabs 5px+1px(for 1px bottom border)=6px */
+		padding-bottom:6px; 
+	}	    	
+	

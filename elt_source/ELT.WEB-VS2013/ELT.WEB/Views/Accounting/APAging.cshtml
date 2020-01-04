@@ -1,0 +1,62 @@
+﻿@model ELT.WEB.Models.APAgingMasterModel
+@{
+    ViewBag.Title = "A/P Aging";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+@using ELT.WEB.Models
+@using ELT.CDT
+@using ELT.WEB.Controllers
+
+
+
+<hgroup>
+    <h1 class="pageheader">@ViewBag.Title</h1>
+</hgroup>
+<script src="@Url.Content("~/Scripts/Common.js")" type="text/javascript"></script>
+@using (Html.BeginForm("APAging", "Accounting", FormMethod.Post, new { Operation = "APAging" }))
+{
+
+    {
+       
+
+    <table>
+        <tr>
+            <td></td>
+            <td colspan="2" style="text-align:right">
+                @foreach (string typeName in GridViewExportHelper.ExportTypes.Keys)
+                {
+                    <input type="submit" name="@typeName" value="@GridViewExportHelper.ExportTypes[typeName].Title" />
+                    <text>&nbsp;</text>
+                    //http://localhost/Report/AirExport
+                }
+
+                <input type="button" name="ReSelect" value="Go Back to Search" onclick="RedirectParentTo('@Url.Content("~/Accounting/APAging/")')" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:left">
+                As Of: @Model.AsOf
+                <br />
+                @if (Model.Branch != "")
+                {
+                    <Text> @Model.Branch </Text>
+                }
+                <br />
+                @if (Model.Company != "")
+                {
+                    <Text>Company: @Model.Company </Text>
+                }
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                @Html.Partial("_APAging/_APAgingMaster", Model)
+            </td>
+        </tr>
+        <tr><td></td><td></td><td></td></tr>
+    </table>
+
+    }
+}

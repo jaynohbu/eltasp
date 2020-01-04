@@ -1,0 +1,40 @@
+﻿<link href="@Url.Content("~/Content/css/tab_public.css")" rel="stylesheet" type="text/css" />
+<div id="PublicDiv" style="overflow: hidden; height: 28px; position: relative;
+    left: 0px; width: 100%">
+    <div id="divMore" style="cursor: pointer; height: 28px; position: absolute; z-index: 1;
+        visibility: hidden; width: 20px" onmouseover="bevelThis(this)" onmouseout="unbevelThis(this)"
+        onclick="MoveSubMenu()">
+        &gt;&gt;
+    </div>
+    <ul id="PublicUL" style="position: absolute; margin-left: -57px; left: 0px;
+        width: 4000px">
+        <li id="Communication"><a class="noLeft"  
+            href="@Url.Content("~/Public/EmailClient")" >
+            <span>Communication </span></a></li>
+        
+        <li id="DocMgr"><a class="noRight"  
+            href="@Url.Content("~/Public/DocumentManager")" >
+            <span>Document Manager </span></a>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //reset menu
+        var submenues = $("#PublicUL>li");
+        submenues.each(function (index) {
+            $(this).removeClass("selected");
+
+        });
+
+        //detect the name of view
+        var currUrl = $(location).attr('href');
+        var parts = currUrl.split("/");
+        var currView = parts[4];
+
+        if (currView != "")
+            $("#" + currView + ">a").addClass("selected");
+
+        // $(".CurAirExportDiv").attr("id", "CurAirExportDiv");
+    });
+</script>

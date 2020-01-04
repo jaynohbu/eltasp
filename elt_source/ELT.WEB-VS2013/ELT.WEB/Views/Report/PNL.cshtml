@@ -1,0 +1,160 @@
+﻿
+@model ELT.WEB.Models.PNLMasterModel
+@{
+    ViewBag.Title = "PNL Report";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+@using ELT.WEB.Models
+@using ELT.CDT
+@using ELT.WEB.Controllers
+@Styles.Render("~/Content/css/ReportOperation.css")
+<style>
+    .dxgv {
+        text-align: left;
+    } 
+</style>
+<script>
+
+   
+
+    function GroupOrder(s, e) {
+        $("#ddlGroupBy option").each(function () {            
+                $(this).remove();          
+        });
+
+        $('#ddlGroupBy').append($('<option>', {
+            value:"0",
+            text : "Add Grouping" 
+        }));
+        $('#ddlGroupBy').append($('<option>', {
+            value:"1",
+            text : "Customer" 
+        }));
+        $('#ddlGroupBy').append($('<option>', {
+            value:"2",
+            text : "MAWB/MBOL" 
+        }));
+        $('#ddlGroupBy').append($('<option>', {
+            value:"3",
+            text : "HAWB/HBOL" 
+        }));
+        $('#ddlGroupBy').append($('<option>', {
+            value:"4",
+            text : "Item" 
+        }));
+        $('#ddlGroupBy').append($('<option>', {
+            value:"5",
+            text : "Date" 
+        }));
+        $('#ddlGroupBy').append($('<option>', {
+            value:"6",
+            text : "Origination" 
+        }));
+
+        $('#mySelect').append($('<option>', { 
+            value:"7",
+            text : "Destination" 
+        }));
+     
+    }
+
+</script>
+<hgroup>
+    <h1 class="pageheader">@ViewBag.Title</h1>
+</hgroup>
+<div>
+    @using (Html.BeginForm("PNL", "Report", FormMethod.Post, new { Operation = "PNL" }))
+    {
+
+        if (ViewBag.IsSelected != true)
+        {
+            Html.RenderPartial("_PNLSelectionBox", new PNLSelection());
+        }
+        else
+        {
+
+           
+            string Descripton = string.Empty;
+            if (!string.IsNullOrEmpty(Model.MAWB))
+            {                
+                     Descripton = "PNL: Regarding MAWB/MBOL " + Model.MAWB;                           
+            }
+            else
+            {
+                 Descripton = "Period:" + Model.Begin.ToShortDateString() + " ~ " + Model.End.ToShortDateString() + " - ";
+                if (Model.AirOcean == "A")
+                {
+                    Descripton += " Air ";
+                }
+                else if (Model.AirOcean == "O")
+                {
+                    Descripton += " Ocean ";
+                }
+                else 
+                {
+                    Descripton += " All ";
+                }
+                if (Model.ImportExport == "E")
+                {
+                    Descripton += "Export ";
+                }
+                else if (Model.ImportExport == "I")
+                {
+                    Descripton += "Import ";
+                }
+                else
+                {
+                    Descripton += "Import/Export ";
+                }
+                
+            }
+
+        <div style="clear:right;">
+            
+          
+           
+           
+            <br />
+                <table>
+                    <tr>
+                        <td></td>
+                        <td colspan="2" style="text-align:right">
+                            @foreach (string typeName in GridViewExportHelper.ExportTypes.Keys)
+                            {
+                                <input type="submit" name="@typeName" value="@GridViewExportHelper.ExportTypes[typeName].Title" />
+                                <text>&nbsp;</text>
+                            } <input type="submit" name="ReSelect" value="Go Back to Search" />
+                        </td>
+                <tr>
+                    <td colspan="2" id="tdGroupOrder" style="text-align:left">@Descripton</td>
+
+                    <td align="right">
+                        <select id="ddlGroupBy" onchange="grid.PerformCallback({ 'group': this.value }); ">
+                            <option value="0">Add Grouping</option>
+                            <option value="1">Customer</option>
+                            <option value="2">MAWB/MBOL</option>
+                            <option value="3">HAWB/HBOL</option>
+                            <option value="4">Item</option>
+                            <option value="5">Date</option>
+                            <option value="6">Origin</option>
+                            <option value="7">Destination</option>
+                            <option value="8">Air/Ocean</option>
+                            <option value="9">Import/Export</option>
+                        </select>
+                        <input type="button" value="Clear Grouping" onclick="grid.PerformCallback({ 'clear': true });" />
+                    </td>
+                </tr>
+                    <tr><td colspan="3">@Html.Partial("_PNLMaster", Model)</td></tr>
+                    <tr><td></td><td></td><td></td></tr>
+                </table>
+               
+            </div>
+        }
+    }
+</div>
+
+
+
+
+  
+ 

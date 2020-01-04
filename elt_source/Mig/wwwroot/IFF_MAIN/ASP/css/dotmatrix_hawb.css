@@ -1,0 +1,808 @@
+#background {
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 1050px;
+	width: 800px;
+	background-image: url(/iff_main/ASP/Images/dotmatrix_back.gif);
+	margin-top: 23px;
+	margin-left: 35px;
+}
+#PageDiv 
+{
+	position:absolute;
+	z-index:1;
+	left: 0px;
+	top: 25px;
+}
+#txtMAWB {
+	position:absolute;
+	width:250px;
+	height:24px;
+	z-index:1;
+	left: 52px;
+	top: 7px;
+}
+
+#txtHAWBTop 
+{
+    position:absolute;
+	width:250px;
+	height:24px;
+	z-index:1;
+	left: 490px;
+	top: 7px;
+}
+
+#txtHAWBBottom
+{
+    position:absolute;
+	width:250px;
+	height:24px;
+	z-index:1;
+	left: 490px;
+	top: 1002px;
+}
+
+#txtShipperInfo {
+	position:absolute;
+	width:323px;
+	height:70px;
+	z-index:1;
+	left: 58px;
+	top: 58px;
+}
+#txtShipperAcct {
+	position:absolute;
+	width:163px;
+	height:18px;
+	z-index:1;
+	left: 224px;
+	top: 39px;
+}
+#txtConsigneeAcct {
+	position:absolute;
+	width:162px;
+	height:18px;
+	z-index:1;
+	left: 224px;
+	top: 137px;
+}
+#Layer3 {
+	position:absolute;
+	width:180px;
+	height:77px;
+	z-index:2;
+	left: 63px;
+	top: 120px;
+}
+#txtConsigneeInfo {
+	position:absolute;
+	width:322px;
+	height:70px;
+	z-index:3;
+	left: 58px;
+	top: 153px;
+}
+#txtIssuedBy {
+	position:absolute;
+	width:290px;
+	height:70px;
+	z-index:4;
+	left: 451px;
+	top: 55px;
+}
+#txtAccountInfo {
+	position:absolute;
+	width:344px;
+	height:83px;
+	z-index:3;
+	left: 402px;
+	top: 240px;
+}
+#txtAgentIATACode {
+	position:absolute;
+	width:159px;
+	height:19px;
+	z-index:3;
+	left: 58px;
+	top: 302px;
+}
+#txtAgentAcct {
+	position:absolute;
+	width:150px;
+	height:19px;
+	z-index:3;
+	left: 227px;
+	top: 302px;
+}
+#txtDepartureAirport {
+	position:absolute;
+	width:324px;
+	height:19px;
+	z-index:3;
+	left: 58px;
+	top: 334px;
+}
+#txtReferenceNumber {
+	position:absolute;
+	width:130px;
+	height:19px;
+	z-index:3;
+	left: 402px;
+	top: 334px;
+}
+#txtTo {
+	position:absolute;
+	width:28px;
+	height:19px;
+	z-index:3;
+	left: 58px;
+	top: 366px;
+}
+#txtTo1 {
+	position:absolute;
+	width:30px;
+	height:19px;
+	z-index:3;
+	left: 266px;
+	top: 366px;
+}
+#txtTo2 {
+	position:absolute;
+	width:30px;
+	height:19px;
+	z-index:3;
+	left: 333px;
+	top: 366px;
+}
+#txtBy {
+	position:absolute;
+	width:162px;
+	height:19px;
+	z-index:3;
+	left: 95px;
+	top: 366px;
+}
+#txtBy1 {
+	position:absolute;
+	width:28px;
+	height:19px;
+	z-index:3;
+	left: 300px;
+	top: 366px;
+}
+#txtCurrency {
+	position:absolute;
+	width:28px;
+	height:19px;
+	z-index:3;
+	left: 401px;
+	top: 366px;
+}
+#txtBy2 {
+	position:absolute;
+	width:28px;
+	height:19px;
+	z-index:3;
+	left: 369px;
+	top: 366px;
+}
+#txtChargeCode {
+	position:absolute;
+	width:13px;
+	height:19px;
+	z-index:3;
+	left: 440px;
+	top: 366px;
+}
+#ppd1 {
+	position:absolute;
+	width:13px;
+	height:19px;
+	z-index:3;
+	left: 460px;
+	top: 366px;
+}
+#coll1 {
+	position:absolute;
+	width:13px;
+	height:19px;
+	z-index:3;
+	left: 479px;
+	top: 366px;
+}
+#cPPO2{
+	position:absolute;
+	width:13px;
+	height:19px;
+	z-index:3;
+	left: 498px;
+	top: 366px;
+}
+#cCOLL2 {
+	position:absolute;
+	width:13px;
+	height:19px;
+	z-index:3;
+	left: 518px;
+	top: 366px;
+}
+#txtDeclaredValueCarriage {
+	position:absolute;
+	width:99px;
+	height:19px;
+	z-index:3;
+	left: 538px;
+	top: 366px;
+}
+#txtDeclaredValueCustoms {
+	position:absolute;
+	width:94px;
+	height:19px;
+	z-index:3;
+	left: 654px;
+	top: 366px;
+}
+#txtDestAirport {
+	position:absolute;
+	width:164px;
+	height:19px;
+	z-index:3;
+	left: 58px;
+	top: 398px;
+}
+#txtFlightDate1 {
+	position:absolute;
+	width:77px;
+	height:19px;
+	z-index:3;
+	left: 228px;
+	top: 398px;
+}
+#txtFlightDate2 {
+	position:absolute;
+	width:76px;
+	height:19px;
+	z-index:3;
+	left: 313px;
+	top: 398px;
+}
+#txtInsuranceAmt {
+	position:absolute;
+	width:97px;
+	height:19px;
+	z-index:3;
+	left: 401px;
+	top: 398px;
+}
+#txtHandlingInfo {
+	position:absolute;
+	width:575px;
+	height:19px;
+	z-index:3;
+	left: 58px;
+	top: 428px;
+}
+#txtDestCountry {
+	position:absolute;
+	width:133px;
+	height:19px;
+	z-index:3;
+	left: 398px;
+	top: 464px;
+}
+#txtSCI {
+	position:absolute;
+	width:94px;
+	height:19px;
+	z-index:3;
+	left: 654px;
+	top: 464px;
+}
+#txtPiece1 {
+	position:absolute;
+	width:29px;
+	height:14px;
+	z-index:3;
+	left: 58px;
+	top: 519px;
+}
+#txtGrossWeight1 {
+	position:absolute;
+	width:62px;
+	height:14px;
+	z-index:3;
+	left: 90px;
+	top: 519px;
+}
+#txtKgLb1 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 155px;
+	top: 519px;
+}
+#txtRateClass1 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 173px;
+	top: 519px;
+}
+#txtItemNo1 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 191px;
+	top: 519px;
+}
+#txtChargeableWeight1 {
+	position:absolute;
+	width:66px;
+	height:14px;
+	z-index:3;
+	left: 262px;
+	top: 519px;
+}
+#txtRateCharge1 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 340px;
+	top: 519px;
+}
+#txtTotal1 {
+	position:absolute;
+	width:105px;
+	height:14px;
+	z-index:3;
+	left: 430px;
+	top: 519px;
+}
+#txtPiece2 {
+	position:absolute;
+	width:29px;
+	height:14px;
+	z-index:3;
+	left: 58px;
+	top: 534px;
+}
+#txtGrossWeight2 {
+	position:absolute;
+	width:62px;
+	height:14px;
+	z-index:3;
+	left: 90px;
+	top: 534px;
+}
+#txtKgLb2 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 155px;
+	top: 534px;
+}
+#txtRateClass2 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 173px;
+	top: 534px;
+}
+#txtItemNo2 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 191px;
+	top: 534px;
+}
+#txtChargeableWeight2 {
+	position:absolute;
+	width:66px;
+	height:14px;
+	z-index:3;
+	left: 262px;
+	top: 534px;
+}
+#txtRateCharge2 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 340px;
+	top: 534px;
+}
+#txtTotal2 {
+	position:absolute;
+	width:105px;
+	height:14px;
+	z-index:3;
+	left: 430px;
+	top: 534px;
+}
+#txtPiece3 {
+	position:absolute;
+	width:29px;
+	height:14px;
+	z-index:3;
+	left: 58px;
+	top: 549px;
+}
+#txtGrossWeight3 {
+	position:absolute;
+	width:62px;
+	height:14px;
+	z-index:3;
+	left: 90px;
+	top: 549px;
+}
+#txtKgLb3 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 155px;
+	top: 549px;
+}
+#txtRateClass3 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 173px;
+	top: 549px;
+}
+#txtItemNo3 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 191px;
+	top: 549px;
+}
+#txtChargeableWeight3 {
+	position:absolute;
+	width:66px;
+	height:14px;
+	z-index:3;
+	left: 262px;
+	top: 549px;
+}
+#txtRateCharge3 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 340px;
+	top: 549px;
+}
+#txtTotal3 {
+	position:absolute;
+	width:105px;
+	height:14px;
+	z-index:3;
+	left: 430px;
+	top: 549px;
+}
+#txtDemDetail {
+	position:absolute;
+	width:94px;
+	height:130px;
+	z-index:3;
+	left: 58px;
+	top: 570px;
+}
+#txtTotalPiece {
+	position:absolute;
+	width:29px;
+	height:14px;
+	z-index:3;
+	left: 58px;
+	top: 718px;
+}
+#txtTotalGrossWeight {
+	position:absolute;
+	width:62px;
+	height:14px;
+	z-index:3;
+	left: 90px;
+	top: 718px;
+}
+#txtTotalWeightCharge {
+	position:absolute;
+	width:105px;
+	height:14px;
+	z-index:3;
+	left: 430px;
+	top: 718px;
+}
+#txtPrepaidWeightCharge {
+	position:absolute;
+	width:115px;
+	height:14px;
+	z-index:3;
+	left: 58px;
+	top: 754px;
+}
+#txtCollectWeightCharge {
+	position:absolute;
+	width:107px;
+	height:14px;
+	z-index:3;
+	left: 192px;
+	top: 754px;
+}
+#txtOtherCharge1 {
+	position:absolute;
+	width:422px;
+	height:14px;
+	z-index:3;
+	left: 328px;
+	top: 754px;
+}
+#txtPrepaidValuationCharge {
+	position:absolute;
+	width:115px;
+	height:14px;
+	z-index:3;
+	left: 58px;
+	top: 787px;
+}
+#txtCollectValuationCharge {
+	position:absolute;
+	width:107px;
+	height:14px;
+	z-index:3;
+	left: 192px;
+	top: 787px;
+}
+#txtOtherCharge2 {
+	position:absolute;
+	width:422px;
+	height:14px;
+	z-index:3;
+	left: 328px;
+	top: 771px;
+}
+#txtOtherCharge3 {
+	position:absolute;
+	width:422px;
+	height:14px;
+	z-index:3;
+	left: 328px;
+	top: 788px;
+}
+#txtOtherCharge4 {
+	position:absolute;
+	width:422px;
+	height:14px;
+	z-index:3;
+	left: 328px;
+	top: 805px;
+}
+
+#txtPrepaidTax {
+	position:absolute;
+	width:115px;
+	height:14px;
+	z-index:3;
+	left: 58px;
+	top: 819px;
+}
+#txtCollectTax {
+	position:absolute;
+	width:107px;
+	height:14px;
+	z-index:3;
+	left: 192px;
+	top: 819px;
+}
+#txtOtherCharge5 {
+	position:absolute;
+	width:422px;
+	height:14px;
+	z-index:3;
+	left: 328px;
+	top: 820px;
+}
+#txtPrepaidOtherChargeAgent {
+	position:absolute;
+	width:115px;
+	height:14px;
+	z-index:3;
+	left: 58px;
+	top: 850px;
+}
+#txtCollectOtherChargeAgent {
+	position:absolute;
+	width:107px;
+	height:14px;
+	z-index:3;
+	left: 192px;
+	top: 850px;
+}
+#txtPrepaidOtherChargeCarrier {
+	position:absolute;
+	width:115px;
+	height:14px;
+	z-index:3;
+	left: 58px;
+	top: 885px;
+}
+#txtCollectOtherChargeCarrier {
+	position:absolute;
+	width:107px;
+	height:14px;
+	z-index:3;
+	left: 192px;
+	top: 885px;
+}
+#txtSignature {
+	position:absolute;
+	width:422px;
+	height:16px;
+	z-index:3;
+	left: 328px;
+	top: 866px;
+}
+#txtSignatureUserName 
+{
+    position:absolute;
+	width:422px;
+	height:16px;
+	z-index:3;
+	left: 328px;
+	top: 892px;
+}
+#txtPrepaidTotal {
+	position:absolute;
+	width:115px;
+	height:14px;
+	z-index:3;
+	left: 58px;
+	top: 942px;
+}
+#txtCollectTotal {
+	position:absolute;
+	width:107px;
+	height:14px;
+	z-index:3;
+	left: 192px;
+	top: 942px;
+}
+#txtExecute {
+	position:absolute;
+	width:422px;
+	height:14px;
+	z-index:3;
+	left: 328px;
+	top: 936px;
+}
+#txtConversionRate {
+	position:absolute;
+	width:115px;
+	height:14px;
+	z-index:3;
+	left: 58px;
+	top: 974px;
+}
+#txtCCCharge {
+	position:absolute;
+	width:107px;
+	height:14px;
+	z-index:3;
+	left: 192px;
+	top: 974px;
+}
+#txtChargeDestination {
+	position:absolute;
+	width:107px;
+	height:14px;
+	z-index:3;
+	left: 192px;
+	top: 1005px;
+}
+#txtFinalCollect {
+	position:absolute;
+	width:107px;
+	height:14px;
+	z-index:3;
+	left: 328px;
+	top: 1005px;
+}
+#txtDesc2 {
+	position:absolute;
+	width:195px;
+	height:213px;
+	z-index:3;
+	left: 555px;
+	top: 518px;
+}
+
+#txtDesc2Add {
+	position:absolute;
+	width:198px;
+	height:131px;
+	z-index:3;
+	left: 361px;
+	top: 564px;
+}
+
+#txtAgentInfo {
+	position:absolute;
+	width:322px;
+	height:42px;
+	z-index:5;
+	left: 58px;
+	top: 241px;
+}
+#Layer6 {
+	position:absolute;
+	width:317px;
+	height:190px;
+	z-index:6;
+	left: 0;
+	top: 0;
+	background-image: url(images/back.gif);
+}
+#Layer1 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:6;
+}
+#Layer2 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:6;
+}
+
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family: Monospace;
+	font-size: 13px;
+	line-height: 13px;
+}
+
+.monotextarea {
+	font-size: 13px;
+	line-height: 13px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #666666;
+	border-right-color: #999999;
+	border-bottom-color: #999999;
+	border-left-color: #666666;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	background-color: transparent;
+	font-family: Monospace;
+	overflow:hidden;
+}
+
+.pagehead {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family: Monospace;
+	font-size: 15px;
+	line-height: 15px;
+	font-weight:bolder;
+}

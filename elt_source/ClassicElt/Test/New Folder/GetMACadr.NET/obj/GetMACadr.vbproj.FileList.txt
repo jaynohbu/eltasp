@@ -1,0 +1,3 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\GetMACadr.frmGetMACadr.resources
+obj\Debug\GetMACadr.vbproj.GenerateResource.Cache

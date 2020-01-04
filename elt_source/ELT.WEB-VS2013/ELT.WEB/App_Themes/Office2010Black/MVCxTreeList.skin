@@ -1,0 +1,23 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxTreeList" Assembly="DevExpress.Web.ASPxTreeList.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxmvc:MVCxTreeList runat="server">
+    <Styles CssFilePath="~/App_Themes/Office2010Black/{0}/styles.css" CssPostfix="Office2010Black">
+        <LoadingPanel ImageSpacing="5" />
+        <AlternatingNode Enabled="True" />
+    </Styles>
+    <StylesEditors ButtonEditCellSpacing="0" />
+    <StylesPager>
+        <CurrentPageNumber ForeColor="Black" />
+        <PageNumber ForeColor="White" />
+        <Summary ForeColor="White" />
+        <Ellipsis ForeColor="White" />
+        <PageSizeItem ForeColor="White"></PageSizeItem>
+    </StylesPager>
+    <Images SpriteCssFilePath="~/App_Themes/Office2010Black/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/Office2010Black/TreeList/Loading.gif" />
+    </Images>
+    <Settings SuppressOuterGridLines="true" />
+    <SettingsPager CurrentPageNumberFormat="{0}" />
+</dxmvc:MVCxTreeList>

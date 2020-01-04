@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Pop Up 3d borders" PresetDescription="Infragistics Pop up 3d borders.  Sets both Look and Behavior properties." PresetType="All" />-->
+<igtxt:WebPercentEdit BorderStyle="Solid" UseBrowserDefaults="False" BorderWidth="1px" BorderColor="Black">
+  <ButtonsAppearance>
+    <ButtonPressedStyle>
+      <BorderDetails ColorTop="#404040" ColorBottom="#F0F0F0" ColorRight="#F0F0F0" ColorLeft="#404040" />
+    </ButtonPressedStyle>
+    <ButtonStyle BorderWidth="1px" BorderColor="Control" BorderStyle="Solid" BackColor="Control" />
+    <ButtonHoverStyle>
+      <BorderDetails ColorTop="#F0F0F0" ColorBottom="#404040" ColorRight="#404040" ColorLeft="#F0F0F0" />
+    </ButtonHoverStyle>
+  </ButtonsAppearance>
+</igtxt:WebPercentEdit>

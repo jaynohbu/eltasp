@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ELT.Logic", "ELT.Logic\ELT.Logic.csproj", "{317C0D62-CDFF-4719-9930-298F83C14794}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ELT.DataAccess", "ELT.DataAccess\ELT.DataAccess.csproj", "{6076ED9F-6FC5-435B-B419-A2CE38101AF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ELT.Shared", "ELT.Shared\ELT.Shared.csproj", "{FD13F95D-96D2-4C9C-816E-0D98C36A694F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ELT.Api", "ELT.Api\ELT.Api.csproj", "{5614F2DA-2589-48F9-88CB-9A390712DAFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{317C0D62-CDFF-4719-9930-298F83C14794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{317C0D62-CDFF-4719-9930-298F83C14794}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{317C0D62-CDFF-4719-9930-298F83C14794}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{317C0D62-CDFF-4719-9930-298F83C14794}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6076ED9F-6FC5-435B-B419-A2CE38101AF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6076ED9F-6FC5-435B-B419-A2CE38101AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6076ED9F-6FC5-435B-B419-A2CE38101AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6076ED9F-6FC5-435B-B419-A2CE38101AF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD13F95D-96D2-4C9C-816E-0D98C36A694F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD13F95D-96D2-4C9C-816E-0D98C36A694F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD13F95D-96D2-4C9C-816E-0D98C36A694F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD13F95D-96D2-4C9C-816E-0D98C36A694F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5614F2DA-2589-48F9-88CB-9A390712DAFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5614F2DA-2589-48F9-88CB-9A390712DAFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5614F2DA-2589-48F9-88CB-9A390712DAFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5614F2DA-2589-48F9-88CB-9A390712DAFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs201501.discountasp.net/tfs/elt
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ELT.Api\\ELT.Api.csproj
+		SccProjectName1 = ELT.Api
+		SccLocalPath1 = ELT.Api
+		SccProjectUniqueName2 = ELT.DataAccess\\ELT.DataAccess.csproj
+		SccProjectName2 = ELT.DataAccess
+		SccLocalPath2 = ELT.DataAccess
+		SccProjectUniqueName3 = ELT.Logic\\ELT.Logic.csproj
+		SccProjectName3 = ELT.Logic
+		SccLocalPath3 = ELT.Logic
+		SccProjectUniqueName4 = ELT.Shared\\ELT.Shared.csproj
+		SccProjectName4 = ELT.Shared
+		SccLocalPath4 = ELT.Shared
+	EndGlobalSection
+EndGlobal

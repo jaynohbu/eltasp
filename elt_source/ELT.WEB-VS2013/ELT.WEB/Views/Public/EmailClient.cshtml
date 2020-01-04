@@ -1,0 +1,7 @@
+﻿@{
+    ViewBag.Title = "EmailClient";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+
+<iframe id ="ContentFrame" scrolling="no"   frameborder="0" width="100%" height="1000px"  src="@Url.Content("/Webmail/" + ViewBag.Params)"></iframe>
+

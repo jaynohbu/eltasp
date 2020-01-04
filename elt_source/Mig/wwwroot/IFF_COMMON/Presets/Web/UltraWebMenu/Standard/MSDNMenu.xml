@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="MSDNMenu" PresetDescription="A menu style that emulates the look and feel of MSDN. Sets both LOOK and BEHAVIOR." PresetType="Appearance" />-->
+<ignav:UltraWebMenu ScrollImageBottom="ig_menu_scrolldown.gif" BorderStyle="Outset" FileUrl="" XSLFile="" Font-Size="9pt" Font-Names="Microsoft Sans Serif" DefaultImage=""  ScrollImageTopDisabled="ig_menu_scrollup_disabled.gif"  TargetUrl="" ScrollImageBottomDisabled="ig_menu_scrolldown_disabled.gif" Cursor="Default" BorderWidth="2px" CssClass="" BorderColor="#F0F0F0" BackColor="#F0F0F0" TargetFrame="" ScrollImageTop="ig_menu_scrollup.gif">
+  <ItemStyle BorderWidth="1px" BorderColor="#F0F0F0" BorderStyle="Solid" />
+  <Styles>
+    <ignav:Style Cursor="Default" BorderWidth="1px" BorderStyle="Outset" CssClass="TopHover4" />
+    <ignav:Style BorderWidth="1px" BorderColor="#F0F0F0" BorderStyle="Solid" CssClass="TopClass4" />
+  </Styles>
+  <DisabledStyle ForeColor="LightGray" />
+  <HoverItemStyle Cursor="Default" BorderWidth="1px" BorderColor="Gray" BorderStyle="Solid" ForeColor="White" BackColor="DarkBlue" />
+  <IslandStyle Cursor="Default" BorderWidth="1px" Font-Size="8pt" Font-Names="MS Sans Serif" BorderColor="Black" BorderStyle="Outset" ForeColor="Black" BackColor="#F0F0F0" />
+  <MenuClientSideEvents ItemClick="" SubMenuDisplay="" ItemChecked="" InitializeMenu="" ItemHover="" />
+  <ExpandEffects ShadowColor="DarkGray" Type="Fade" />
+  <SeparatorStyle BackgroundImage="ig_menuSep.gif" CustomRules="background-repeat:repeat-x; " />
+</ignav:UltraWebMenu>

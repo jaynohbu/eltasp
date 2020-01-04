@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="myMenu" PresetDescription="sdf" PresetType="Appearance" />-->
+<ignav:UltraWebMenu SeparatorClass="" ScrollImageBottom="ig_menu_scrolldown.gif" FileUrl="" TopSelectedClass="" Font-Size="X-Small" Font-Names="Arial" DefaultImage="ig_treefolder.gif" DisabledClass="" ScrollImageTopDisabled="ig_menu_scrollup_disabled.gif" DefaultIslandClass="" TargetUrl="" ScrollImageBottomDisabled="ig_menu_scrolldown_disabled.gif" Cursor="Default" CssClass="" HoverClass="" DefaultItemClass="" TargetFrame="" ScrollImageTop="ig_menu_scrollup.gif" SubMenuImage="ig_menutri.gif">
+  <Styles>
+    <ignav:Style Cursor="Default" BackColor="Silver" CssClass="TopHover" />
+    <ignav:Style BorderColor="LightGray" BorderStyle="None" CssClass="TopClass" />
+  </Styles>
+  <DisabledStyle ForeColor="LightGray" CssClass="DisabledClass" />
+  <HoverItemStyle Cursor="Default" ForeColor="White" BackColor="DarkBlue" CssClass="HoverClass" />
+  <IslandStyle Cursor="Default" BorderWidth="1px" Font-Size="8pt" Font-Names="MS Sans Serif" BorderStyle="Outset" ForeColor="Black" BackColor="LightGray" CssClass="IslandClass" />
+  <SeparatorStyle BackgroundImage="ig_menuSep.gif" CssClass="SeparatorClass" CustomRules="background-repeat:repeat-x; " />
+</ignav:UltraWebMenu>

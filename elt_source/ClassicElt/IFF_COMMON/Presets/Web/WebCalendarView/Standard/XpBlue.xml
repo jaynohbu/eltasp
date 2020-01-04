@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="XpBlue" PresetDescription="Property values that give WebCalendarView the look of Windows Xp with a blue theme" PresetType="All" />-->
+<ig_sched:WebCalendarView  
+StyleSheetFileName="/ig_common/20053/styles/xpBlue/ig_webcalendarview.css" />

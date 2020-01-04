@@ -1,0 +1,19 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxti" Namespace="DevExpress.Web.ASPxTitleIndex" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxti:ASPxTitleIndex runat="server" ImageFolder="~/App_Themes/iOS/{0}/" SpriteCssFilePath="~/App_Themes/iOS/{0}/sprite.css" CssFilePath="~/App_Themes/iOS/{0}/styles.css"
+    CssPostfix="iOS" FilterBoxSpacing="0px">
+    <IndexPanelItemStyle Font-Size="16px" />
+    <IndexPanelSeparatorStyle Height="0" />
+    <IndexPanel Separator="" />
+    <FilterBox Caption=" " HorizontalPosition="Left" />
+    <ItemStyle>
+        <Paddings PaddingTop="6" PaddingBottom="2" PaddingLeft="2" PaddingRight="0" />
+    </ItemStyle>
+    <ColumnStyle>
+        <Paddings PaddingLeft="25" PaddingRight="25" />
+    </ColumnStyle>
+    <LoadingPanelStyle ImageSpacing="5" />
+    <LoadingPanelImage Url="~/App_Themes/iOS/Web/Loading.gif" />
+</dxti:ASPxTitleIndex>
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Windows2000" PresetDescription="A menu with Windows 2000 colors and behavior. Sets both LOOK and BEHAVIOR." PresetType="All" />-->
+<ignav:UltraWebMenu ScrollImageBottom="ig_menu_scrolldown.gif" TopAligment="Center" FileUrl="" XSLFile="" DefaultImage="" ScrollImageTopDisabled="ig_menu_scrollup_disabled.gif" TargetUrl="" ScrollImageBottomDisabled="ig_menu_scrolldown_disabled.gif" Cursor="Default" CssClass="" WebMenuStyle="WinClient" TargetFrame="" ScrollImageTop="ig_menu_scrollup.gif" SubMenuImage="ig_menuTri.gif">
+  <ItemStyle BorderWidth="1px" BorderColor="LightGray" BorderStyle="Solid" />
+  <Styles>
+    <ignav:Style Cursor="Default" BorderWidth="1px" BorderStyle="Outset" BackColor="LightSteelBlue" CssClass="TopHover2" />
+    <ignav:Style BorderWidth="1px" BorderColor="LightGray" BorderStyle="Solid" CssClass="TopClass2" />
+  </Styles>
+  <DisabledStyle ForeColor="LightGray" />
+  <HoverItemStyle Cursor="Default" BorderWidth="1px" BorderStyle="Outset" ForeColor="White" BackColor="LightSteelBlue" />
+  <IslandStyle Cursor="Default" Font-Size="8pt" Font-Names="MS Sans Serif" BorderStyle="Solid" ForeColor="Black" BackColor="LightGray">
+    <BorderDetails ColorTop="White" WidthLeft="1px" ColorBottom="Gray" WidthTop="1px" ColorRight="Gray" WidthRight="2px" WidthBottom="2px" ColorLeft="White" />
+  </IslandStyle>
+  <MenuClientSideEvents ItemClick="" SubMenuDisplay="" ItemChecked="" InitializeMenu="" ItemHover="" />
+  <ExpandEffects ShadowColor="DarkGray" Type="Fade" />
+  <TopSelectedStyle BorderWidth="1px" BorderStyle="Inset" />
+  <SeparatorStyle BackgroundImage="ig_menuStandardSep.gif" CustomRules="background-repeat:repeat-x; " />
+</ignav:UltraWebMenu>

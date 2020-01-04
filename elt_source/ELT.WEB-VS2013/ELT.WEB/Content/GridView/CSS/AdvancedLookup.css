@@ -1,0 +1,16 @@
+﻿.templateTable td
+{
+	border: 0px;
+}
+.templateTable td.caption
+{
+    font-weight: bold;
+    padding-left: 15px;
+    padding-top: 2px;
+}
+.templateContainer
+{
+    margin: 10px;
+    height: 110px;
+    border: solid 1px #C2D4DA;
+}

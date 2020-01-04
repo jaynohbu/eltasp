@@ -1,0 +1,24 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<dx:MVCxDropDownEdit runat="server" SkinID="CheckComboBox" SpriteCssFilePath="{0}/sprite.css" 
+    CssFilePath="{0}/styles.css" CssPostfix="Youthful" LoadingPanelImagePosition="Bottom" ShowShadow="False">
+    <ValidationSettings>
+        <ErrorFrameStyle ImageSpacing="4px">
+            <ErrorTextPaddings PaddingLeft="4px"></ErrorTextPaddings>
+        </ErrorFrameStyle>
+    </ValidationSettings>
+    <DropDownWindowStyle BackColor="#E4EDCE" />
+    <DropDownButton>
+    </DropDownButton>
+</dx:MVCxDropDownEdit>
+<dx:MVCxListBox runat="server" SkinID="CheckComboBoxListBox" CssPostfix="Youthful" CssFilePath="{0}/styles.css" LoadingPanelImagePosition="Bottom">
+	<ValidationSettings>
+		<ErrorFrameStyle ImageSpacing="4px">
+			<ErrorTextPaddings PaddingLeft="4px"></ErrorTextPaddings>
+		</ErrorFrameStyle>
+	</ValidationSettings>
+    <Border BorderStyle="None" />
+    <BorderBottom BorderStyle="Solid" BorderWidth="1px" BorderColor="#DCDCDC" />
+    <LoadingPanelImage Url="Editors/Loading.gif"></LoadingPanelImage>
+</dx:MVCxListBox>

@@ -1,0 +1,76 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BUSINFO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Branch_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Branch_Code" type="xs:string" minOccurs="0" />
+              <xs:element name="User_FullName" type="xs:string" minOccurs="0" />
+              <xs:element name="business_address" type="xs:string" minOccurs="0" />
+              <xs:element name="business_city" type="xs:string" minOccurs="0" />
+              <xs:element name="business_state" type="xs:string" minOccurs="0" />
+              <xs:element name="business_zip" type="xs:string" minOccurs="0" />
+              <xs:element name="business_country" type="xs:string" minOccurs="0" />
+              <xs:element name="business_fax" type="xs:string" minOccurs="0" />
+              <xs:element name="business_phone" type="xs:string" minOccurs="0" />
+              <xs:element name="business_url" type="xs:string" minOccurs="0" />
+              <xs:element name="period_start" type="xs:string" minOccurs="0" />
+              <xs:element name="period_end" type="xs:string" minOccurs="0" />
+              <xs:element name="group" type="xs:string" minOccurs="0" />
+              <xs:element name="GrandTotalCharge" type="xs:string" minOccurs="0" />
+              <xs:element name="GrandTotalCost" type="xs:string" minOccurs="0" />
+              <xs:element name="GrandTotalProfit" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Parent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="KeyField" type="xs:string" minOccurs="0" />
+              <xs:element name="charge" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Profit" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Child" msdata:CaseSensitive="False" msdata:Locale="en-US">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="freight_size" type="xs:decimal" minOccurs="0" />
+              <xs:element name="scale" type="xs:string" minOccurs="0" />
+              <xs:element name="link" type="xs:string" minOccurs="0" />
+              <xs:element name="link_m" type="xs:string" minOccurs="0" />
+              <xs:element name="invoice_no" type="xs:decimal" minOccurs="0" />
+              <xs:element name="customer_number" type="xs:decimal" minOccurs="0" />
+              <xs:element name="date_exec" type="xs:string" minOccurs="0" />
+              <xs:element name="customer" type="xs:string" minOccurs="0" />
+              <xs:element name="mawb_num" type="xs:string" minOccurs="0" />
+              <xs:element name="hawb_num" type="xs:string" minOccurs="0" />
+              <xs:element name="file_no" type="xs:string" minOccurs="0" />
+              <xs:element name="ref_no" type="xs:string" minOccurs="0" />
+              <xs:element name="origin" type="xs:string" minOccurs="0" />
+              <xs:element name="destination" type="xs:string" minOccurs="0" />
+              <xs:element name="import_export" type="xs:string" minOccurs="0" />
+              <xs:element name="air_ocean" type="xs:string" minOccurs="0" />
+              <xs:element name="charge" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KeyField" type="xs:string" minOccurs="0" />
+              <xs:element name="Profit" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//Parent" />
+      <xs:field xpath="KeyField" />
+    </xs:unique>
+    <xs:keyref name="Relation1" refer="Constraint1">
+      <xs:selector xpath=".//Child" />
+      <xs:field xpath="KeyField" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

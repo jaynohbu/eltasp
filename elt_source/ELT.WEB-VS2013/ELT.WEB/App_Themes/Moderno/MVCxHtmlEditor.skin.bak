@@ -1,0 +1,35 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register Assembly="DevExpress.Web.ASPxHtmlEditor.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxHtmlEditor" TagPrefix="dx" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxmvc:MVCxHtmlEditor runat="server" Width="700px" CssFilePath="~/App_Themes/Moderno/{0}/styles.css" CssPostfix="Moderno">
+    <Styles CssPostfix="Moderno" CssFilePath="~/App_Themes/Moderno/{0}/styles.css">
+        <ViewArea>
+            <Border BorderWidth="0px"></Border>
+        </ViewArea>
+    </Styles>
+
+    <StylesToolbars>
+        <Toolbar ItemSpacing="1px"></Toolbar>
+    </StylesToolbars>
+
+    <StylesEditors ButtonEditCellSpacing="0"></StylesEditors>
+
+    <StylesFileManager>
+        <Toolbar Height="46px"></Toolbar>
+        <UploadPanel Height="50px"></UploadPanel>
+        <LoadingPanel ImageSpacing="9px"></LoadingPanel>
+    </StylesFileManager>
+
+    <Images SpriteCssFilePath="~/App_Themes/Moderno/{0}/sprite.css">
+        <LoadingPanel Url="HtmlEditor/Loading.gif"></LoadingPanel>
+    </Images>
+
+    <ImagesFileManager>
+        <FolderContainerNodeLoadingPanel Url="Web/tvNodeLoading.gif"></FolderContainerNodeLoadingPanel>
+        <LoadingPanel Url="Web/Loading.gif"></LoadingPanel>
+    </ImagesFileManager>
+
+    <PartsRoundPanel ShowDefaultImages="False"></PartsRoundPanel>
+</dxmvc:MVCxHtmlEditor>
+

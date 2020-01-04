@@ -1,0 +1,614 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title></title>
+<style>
+.dxgvControl, .dxgvDisabled {
+	border: 1px Solid #9F9F9F;
+	font: 12px Tahoma, Geneva, sans-serif;
+	background-color: #F2F2F2;
+	color: black;
+	cursor: default;
+}
+.bodycopy {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #000000;
+	text-transform: none;
+}
+.border1px {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	border: 1px solid;
+	color: #000000;
+}
+body, form {
+	border-width: 0px;
+	margin-top: 0px;
+	border-bottom: 0px;
+	border-left: 0px;
+	border-right: 0px;
+}
+.dxMSTouchDraggable, .dxAC {
+	-ms-touch-action: pinch-zoom;
+}
+img {
+	border-width: 0;
+}
+.dxGridView_gvCellError, .dxGridView_gvCollapsedButton, .dxGridView_gvCollapsedButtonRtl, .dxGridView_gvDetailCollapsedButton, .dxGridView_gvDetailCollapsedButtonRtl, .dxGridView_gvDetailExpandedButton, .dxGridView_gvDetailExpandedButtonRtl, .dxGridView_gvDragAndDropArrowDown, .dxGridView_gvDragAndDropArrowUp, .dxGridView_gvDragAndDropHideColumn, .dxGridView_gvExpandedButton, .dxGridView_gvExpandedButtonRtl, .dxGridView_gvFilterRowButton, .dxGridView_gvHeaderFilter, .dxGridView_gvHeaderFilterActive, .dxGridView_gvHeaderSortDown, .dxGridView_gvHeaderSortUp, .dxGridView_gvParentGroupRows, .dxGridView_WindowResizer, .dxGridView_WindowResizerRtl {
+	background-image: url('/IFF_MAIN/DXR.axd?r=1_51-TN1J8');
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+.dxGridView_gvDragAndDropArrowDown {
+	background-position: -10px -109px;
+	width: 11px;
+	height: 9px;
+}
+.dxGridView_gvDragAndDropArrowUp {
+	background-position: 0px -120px;
+	width: 11px;
+	height: 9px;
+}
+.dxGridView_gvDragAndDropHideColumn {
+	background-position: 0px 0px;
+	width: 22px;
+	height: 22px;
+}
+.dxGridView_gvDetailCollapsedButton {
+	background-position: -19px -73px;
+	width: 9px;
+	height: 10px;
+}
+.dxGridView_gvCellError {
+	background-position: 0px -58px;
+	width: 14px;
+	height: 14px;
+}
+.dxEditors_edtError, .dxEditors_edtCalendarPrevYear, .dxEditors_edtCalendarPrevYearDisabled, .dxEditors_edtCalendarPrevMonth, .dxEditors_edtCalendarPrevMonthDisabled, .dxEditors_edtCalendarNextMonth, .dxEditors_edtCalendarNextMonthDisabled, .dxEditors_edtCalendarNextYear, .dxEditors_edtCalendarNextYearDisabled, .dxEditors_edtCalendarFNPrevYear, .dxEditors_edtCalendarFNNextYear, .dxEditors_edtEllipsis, .dxEditors_edtEllipsisDisabled, .dxEditors_edtDropDown, .dxEditors_edtDropDownDisabled, .dxEditors_edtSpinEditIncrementImage, .dxEditors_edtSpinEditIncrementImageDisabled, .dxEditors_edtSpinEditDecrementImage, .dxEditors_edtSpinEditDecrementImageDisabled, .dxEditors_edtSpinEditLargeIncImage, .dxEditors_edtSpinEditLargeIncImageDisabled, .dxEditors_edtSpinEditLargeDecImage, .dxEditors_edtSpinEditLargeDecImageDisabled {
+	display: block;
+	margin: auto;
+}
+.dxGridView_gvDetailExpandedButton {
+	background-position: -10px -87px;
+	width: 9px;
+	height: 10px;
+}
+img[class^='dx'] {
+	max-width: none;
+}
+.dxgvLoadingPanel {
+	border: 1px solid #9F9F9F;
+	background-color: #E3E3E1;
+	font: 12px Tahoma, Geneva, sans-serif;
+	color: #303030;
+}
+.dxgvLoadingDiv {
+	background-color: Gray;
+	opacity: 0.01;
+	filter: alpha(opacity=1);
+}
+.dxgvEditingErrorRow {
+	background-color: #FFC8C8;
+	color: #ff0000;
+}
+.dxgvSelectedRow {
+	background-color: #A0A0A0;
+	color: white;
+}
+.dxgvFocusedRow {
+	background-color: #8D8D8D;
+	color: white;
+}
+.dxgvFocusedGroupRow {
+	background-color: #8D8D8D;
+	color: white;
+}
+.dxgvControl td.dxgvBatchEditCell {
+	padding: 0;
+}
+.dxgvControl td.dxgvBatchEditModifiedCell {
+	background: #d7f9c7;
+}
+.dxgvEditingErrorRow td.dxgv {
+	white-space: pre-wrap;
+	border-bottom: 1px Solid #D3D3D3;
+	border-right-width: 0px;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	padding: 6px 10px;
+}
+.dxgvLoadingPanel td {
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px;
+}
+.dxgvTable {
+	background-color: White;
+	border-width: 0;
+	border-collapse: separate !important;
+	overflow: hidden;
+	color: black;
+}
+.dxgvTable {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.dxgvTitlePanel, .dxgvTable caption {
+	font-size: 15px;
+	font-weight: normal;
+	padding: 3px 3px 5px;
+	text-align: center;
+	background-color: #ACACAC;
+	color: white;
+	border-bottom: 1px Solid #9F9F9F;
+}
+.dxgvCommandColumn {
+	padding: 2px;
+}
+.dxgvEditFormDisplayRow td.dxgv, .dxgvDataRow td.dxgv, .dxgvDataRowAlt td.dxgv, .dxgvSelectedRow td.dxgv, .dxgvFocusedRow td.dxgv {
+	overflow: hidden;
+	border-bottom: 1px Solid #CFCFCF;
+	border-right: 1px Solid #CFCFCF;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	padding: 3px 6px 4px;
+}
+a.dxbButton {
+	color: #0d45b7;
+	text-decoration: underline;
+}
+.dxeHyperlink {
+	font: normal 12px Tahoma, Geneva, sans-serif;
+	color: #0d45b7;
+}
+.dxgvControl a {
+	color: #5555ff;
+}
+.dxgvCommandColumn a {
+	margin: 0 3px 0 0;
+	color: #0d45b7;
+}
+.dxgvDetailRow td.dxgvIndentCell {
+	padding-right: 0px;
+	border-bottom: 1px Solid #D3D3D3;
+}
+.dxgvDetailCell, .dxgvPreviewRow td.dxgv, .dxgvEmptyDataRow td.dxgv {
+	padding: 20px 2px 20px 4px;
+	border-bottom: 1px Solid #D3D3D3;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+}
+.dxgvDetailCell {
+	padding: 16px 18px;
+}
+.dxgvStatusBar {
+	border-top: 1px Solid #9F9F9F;
+}
+.dxgvControl .dxgvErrorCell {
+	padding-left: 5px;
+	width: 1px;
+}
+.dxgvControl .dxgvErrorCell img {
+	margin: -3px 0;
+}
+.dxeTextBoxSys, .dxeMemoSys {
+	border-collapse: separate !important;
+}
+.dxeTextBoxSys, .dxeButtonEditSys {
+	width: 170px;
+}
+.dxeTextBox, .dxeMemo {
+	background-color: white;
+	border: 1px solid #9f9f9f;
+}
+.dxeButtonEdit {
+	background-color: white;
+	border: 1px solid #9F9F9F;
+}
+.dxeTextBox, .dxeButtonEdit, .dxeIRadioButton, .dxeRadioButtonList, .dxeCheckBoxList {
+	cursor: default;
+}
+.dxeListBox {
+	background-color: white;
+	border: 1px solid #A0A0A0;
+	font: 12px Tahoma, Geneva, sans-serif;
+	width: 70px;
+	height: 109px;
+}
+.dxeTrackBar, .dxeIRadioButton, .dxeButtonEdit, .dxeTextBox, .dxeRadioButtonList, .dxeCheckBoxList, .dxeMemo, .dxeListBox, .dxeCalendar, .dxeColorTable {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+td.dxic {
+	font-size: 0px;
+}
+.dxeEditAreaSys {
+	height: 14px;
+	border: 0px !important;
+	background-position: 0 0;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+.dxeTextBox .dxeEditArea {
+	background-color: white;
+}
+.dxeButtonEdit .dxeEditArea {
+	background-color: white;
+}
+.dxeEditAreaSys, input[type='text'].dxeEditAreaSys, input[type='password'].dxeEditAreaSys {
+	padding: 0px 1px 0px 0px;
+}
+.dxeEditAreaSys, .dxeMemoEditAreaSys, input[type='text'].dxeEditAreaSys, input[type='password'].dxeEditAreaSys {
+	line-height: normal;
+}
+.dxeMemoEditAreaSys, input[type='text'].dxeEditAreaSys, input[type='password'].dxeEditAreaSys {
+	display: block;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+.dxic .dxeEditAreaSys {
+	padding: 0px 1px 0px 0px;
+}
+.dxeButtonEditSys .dxeEditAreaSys, .dxeButtonEditSys td.dxic, .dxeTextBoxSys td.dxic, .dxeMemoSys td, .dxeEditAreaSys {
+	width: 100%;
+}
+.dxeEditArea {
+	border: 1px solid #A0A0A0;
+}
+.dxeEditArea, input[type='text'].dxeEditArea, input[type='password'].dxeEditArea {
+	font: 12px Tahoma, Geneva, sans-serif;
+}
+body input.dxeEditArea {
+	color: black;
+}
+.dxeTextBoxSys td.dxic, .dxeButtonEditSys td.dxic {
+	padding: 3px 3px 2px 3px;
+	overflow: hidden;
+}
+.dxeTextBoxSys td.dxic {
+	*padding-left: 3px: ;
+	*padding-top: 2px: ;
+	*padding-bottom: 1px: ;
+}
+input[type='text'].dxeEditArea, input[type='password'].dxeEditArea {
+	height: 14px;
+	margin-bottom: 0px;
+}
+.dxeLoadingPanel {
+	font: 12px Tahoma, Geneva, sans-serif;
+	color: #303030;
+}
+.dxeLoadingDiv {
+	background: White none;
+	opacity: 0.85;
+	filter: alpha(opacity=85);
+}
+.dxpc-ddSys {
+	position: absolute;
+	border-spacing: 0px;
+}
+.dxpc-ie::after {
+	content: "";
+}
+.dxpc-mainDiv {
+	position: relative;
+	*position: static: ;
+}
+.dxpc-shadow {
+	-moz-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.34375);
+	-webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.34375);
+	box-shadow: 0px 2px 12px rgba(0,0,0,0.34375);
+	border-collapse: separate;
+}
+.dxpc-ddSys .dxpc-mainDiv, .dxpc-mainDiv.dxpc-ddSys {
+	border: none !important;
+}
+.dxpc-contentWrapper {
+	display: table;
+	width: 100%;
+	border-spacing: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.dxpc-ddSys .dxpc-content {
+	padding: 0 !important;
+}
+.dxeListBox div.dxlbd {
+	padding-top: 1px;
+	padding-bottom: 1px;
+	height: 107px;
+}
+.dxeListBoxItemRow {
+	cursor: default;
+}
+.dxeListBoxItem {
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	font: normal 12px Tahoma, Geneva, sans-serif;
+	padding: 3px 2px 4px 3px;
+	white-space: nowrap;
+	text-align: left;
+	color: black;
+}
+.dxeButtonEditSysWithSpacing td.dxic {
+	padding: 2px 2px 1px 2px;
+}
+.dxeButtonEditSys td.dxic {
+	*padding-top: 1px: ;
+	*padding-bottom: 0px: ;
+}
+.dxeButtonEdit td.dxic {
+	*padding-left: 2px: ;
+}
+.dxeButtonEditButton, .dxeCalendarButton, .dxeSpinIncButton, .dxeSpinDecButton, .dxeSpinLargeIncButton, .dxeSpinLargeDecButton, .dxeColorEditButton {
+	vertical-align: middle;
+	border: 1px solid #7f7f7f;
+	cursor: pointer;
+	font: normal 11px Tahoma, Geneva, sans-serif;
+	text-align: center;
+	white-space: nowrap;
+}
+.dxeButtonEditButton {
+	padding: 0px 2px 1px 3px;
+}
+.dxeButtonEditButton, .dxeSpinLargeIncButton, .dxeSpinLargeDecButton {
+	background: #e6e6e6 url('/IFF_MAIN/DXR.axd?r=1_23-TN1J8') repeat-x top;
+}
+.dxEditors_caRefresh, .dxEditors_edtCalendarFNNextYear, .dxEditors_edtCalendarFNPrevYear, .dxEditors_edtCalendarNextMonth, .dxEditors_edtCalendarNextMonthDisabled, .dxEditors_edtCalendarNextYear, .dxEditors_edtCalendarNextYearDisabled, .dxEditors_edtCalendarPrevMonth, .dxEditors_edtCalendarPrevMonthDisabled, .dxEditors_edtCalendarPrevYear, .dxEditors_edtCalendarPrevYearDisabled, .dxEditors_edtDETSClockFace, .dxEditors_edtDETSHourHand, .dxEditors_edtDETSMinuteHand, .dxEditors_edtDETSSecondHand, .dxEditors_edtDropDown, .dxEditors_edtDropDownDisabled, .dxEditors_edtEllipsis, .dxEditors_edtEllipsisDisabled, .dxEditors_edtError, .dxEditors_edtRadioButtonChecked, .dxEditors_edtRadioButtonCheckedDisabled, .dxEditors_edtRadioButtonUnchecked, .dxEditors_edtRadioButtonUncheckedDisabled, .dxEditors_edtSpinEditDecrementImage, .dxEditors_edtSpinEditDecrementImageDisabled, .dxEditors_edtSpinEditIncrementImage, .dxEditors_edtSpinEditIncrementImageDisabled, .dxEditors_edtSpinEditLargeDecImage, .dxEditors_edtSpinEditLargeDecImageDisabled, .dxEditors_edtSpinEditLargeIncImage, .dxEditors_edtSpinEditLargeIncImageDisabled, .dxEditors_edtTBDecBtn, .dxEditors_edtTBDecBtnDisabled, .dxEditors_edtTBDecBtnHover, .dxEditors_edtTBDecBtnPressed, .dxEditors_edtTBIncBtn, .dxEditors_edtTBIncBtnDisabled, .dxEditors_edtTBIncBtnHover, .dxEditors_edtTBIncBtnPressed, .dxEditors_edtTokenBoxTokenRemoveButton, .dxEditors_fcadd, .dxEditors_fcaddhot, .dxEditors_fcgroupaddcondition, .dxEditors_fcgroupaddgroup, .dxEditors_fcgroupand, .dxEditors_fcgroupnotand, .dxEditors_fcgroupnotor, .dxEditors_fcgroupor, .dxEditors_fcgroupremove, .dxEditors_fcopany, .dxEditors_fcopbegin, .dxEditors_fcopbetween, .dxEditors_fcopblank, .dxEditors_fcopcontain, .dxEditors_fcopend, .dxEditors_fcopequal, .dxEditors_fcopgreater, .dxEditors_fcopgreaterorequal, .dxEditors_fcopless, .dxEditors_fcoplessorequal, .dxEditors_fcoplike, .dxEditors_fcopnotany, .dxEditors_fcopnotbetween, .dxEditors_fcopnotblank, .dxEditors_fcopnotcontain, .dxEditors_fcopnotequal, .dxEditors_fcopnotlike, .dxEditors_fcremove, .dxEditors_fcremovehot, .dxeFocused .dxeTBHSys .dxeFocusedMDHSys .dxEditors_edtTBMainDH, .dxeFocused .dxeTBHSys .dxeFocusedMDHSys .dxEditors_edtTBMainDHHover, .dxeFocused .dxeTBHSys .dxeFocusedMDHSys .dxEditors_edtTBMainDHPressed, .dxeFocused .dxeTBHSys .dxeFocusedSDHSys .dxEditors_edtTBSecondaryDH, .dxeFocused .dxeTBHSys .dxeFocusedSDHSys .dxEditors_edtTBSecondaryDHHover, .dxeFocused .dxeTBHSys .dxeFocusedSDHSys .dxEditors_edtTBSecondaryDHPressed, .dxeFocused .dxeTBVSys .dxeFocusedMDHSys .dxEditors_edtTBMainDH, .dxeFocused .dxeTBVSys .dxeFocusedMDHSys .dxEditors_edtTBMainDHHover, .dxeFocused .dxeTBVSys .dxeFocusedMDHSys .dxEditors_edtTBMainDHPressed, .dxeFocused .dxeTBVSys .dxeFocusedSDHSys .dxEditors_edtTBSecondaryDH, .dxeFocused .dxeTBVSys .dxeFocusedSDHSys .dxEditors_edtTBSecondaryDHHover, .dxeFocused .dxeTBVSys .dxeFocusedSDHSys .dxEditors_edtTBSecondaryDHPressed, .dxeTBHSys .dxEditors_edtTBMainDH, .dxeTBHSys .dxEditors_edtTBMainDHDisabled, .dxeTBHSys .dxEditors_edtTBMainDHHover, .dxeTBHSys .dxEditors_edtTBMainDHPressed, .dxeTBHSys .dxEditors_edtTBSecondaryDH, .dxeTBHSys .dxEditors_edtTBSecondaryDHDisabled, .dxeTBHSys .dxEditors_edtTBSecondaryDHHover, .dxeTBHSys .dxEditors_edtTBSecondaryDHPressed, .dxeTBVSys .dxEditors_edtTBMainDH, .dxeTBVSys .dxEditors_edtTBMainDHDisabled, .dxeTBVSys .dxEditors_edtTBMainDHHover, .dxeTBVSys .dxEditors_edtTBMainDHPressed, .dxeTBVSys .dxEditors_edtTBSecondaryDH, .dxeTBVSys .dxEditors_edtTBSecondaryDHDisabled, .dxeTBVSys .dxEditors_edtTBSecondaryDHHover, .dxeTBVSys .dxEditors_edtTBSecondaryDHPressed {
+	background-image: url('/IFF_MAIN/DXR.axd?r=1_41-TN1J8');
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+.dxEditors_edtDropDown {
+	background-position: -118px -146px;
+	width: 10px;
+	height: 14px;
+}
+.dxeLoadingPanel td.dx, .dxeLoadingPanelWithContent td.dx {
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px;
+}
+.dxgvStatusBar tr.dxgv {
+	height: 20px;
+}
+.dxgvStatusBar tr.dxgv > td {
+	padding: 4px;
+}
+.dxbButtonSys {
+	cursor: pointer;
+	display: inline-block;
+	text-align: center;
+	white-space: nowrap;
+}
+.dxbButtonSys {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+.dxbButton {
+	color: #000000;
+	font: normal 12px Tahoma, Geneva, sans-serif;
+	border: 1px solid #7F7F7F;
+	background: #E0DFDF url('/IFF_MAIN/DXR.axd?r=1_19-TN1J8') repeat-x top;
+	padding: 1px;
+}
+.dxbDisabled {
+	border-color: #c3c3c3;
+}
+.dxbDisabled, a.dxbDisabled.dxbButton {
+	color: #808080;
+	cursor: default;
+	text-decoration: none;
+}
+a.dxbButtonSys {
+	border: 0;
+	background: none;
+	padding: 0;
+}
+a.dxbButtonSys > span {
+	text-decoration: inherit;
+}
+.dxgvHeader {
+	cursor: pointer;
+	white-space: nowrap;
+	padding: 4px 6px;
+	border: 1px Solid #9F9F9F;
+	background-color: #DCDCDC;
+	overflow: hidden;
+	font-weight: normal;
+	text-align: left;
+}
+.dxgvHeader, .dxgvHeader table {
+	color: black;
+}
+.dxgvMSDraggable .dxgvHeader, .dxgvGroupPanel.dxgvMSDraggable {
+	-ms-touch-action: pinch-zoom;
+}
+.dxgvHeader td {
+	white-space: nowrap;
+}
+.dx-vam, .dx-vat, .dx-vab {
+	display: inline-block !important;
+}
+.dx-vam, .dx-valm {
+	vertical-align: middle;
+}
+span.dx-vam, span.dx-vat, span.dx-vab, a.dx-vam, a.dx-vat, a.dx-vab {
+	line-height: 100%;
+	padding: 2px 0;
+	text-decoration: inherit;
+}
+.dxgvHeader a {
+	color: #0d45b7;
+}
+</style>
+</head>
+<body><form name="form1" id="form1" action="RateManagement.aspx" method="post"><input name="GridMaster$dxdt0$GridSlave$DXBECMVInput" id="GridMaster_dxdt0_GridSlave_DXBECMVInput" type="hidden" value='{"ClientState":{"InsertedIndices":[],"InsertedValues":{},"UpdatedValues":{},"DeletedKeys":[]},"EditState":{"insertedRowValues":{},"modifiedRowValues":{},"deletedRowKeys":[]}}'><input name="GridMaster$dxdt0$GridSlave$DXBEPVInput" id="GridMaster_dxdt0_GridSlave_DXBEPVInput" type="hidden" value="({'7':{'1':'ASIANA A','4':'50.00','5':'5.00','6':'5.00','7':'3.00','8':'2.00','9':'6.00','10':'0.00'},'1':{'1':'All','4':'22.00','5':'44.00','6':'3.00','7':'3.00','8':'2.00','9':'3.00','10':'0.00'},'NewRowKey':{'1':null,'4':null,'5':null,'6':null,'7':null,'8':null,'9':null,'10':null},'13':{'1':'EVA AIRL','4':'33.00','5':'4.00','6':'3.00','7':'2.00','8':'1.00','9':'2.00','10':'1.00'}})"><input name="GridMaster$dxdt0$GridSlave$CallbackState" id="GridMaster_dxdt0_GridSlave_CallbackState" type="hidden" value="BwIHAgIERGF0YQa2AQAAAAADAAAAAwAAAAAAAAADAAAAAAoAAAALQ2FycmllckNvZGUMQ2FycmllciBDb2RlBwAABlJhdGVJRAdSYXRlIElEAwAABVNoYXJlBVNoYXJlBwAACVJhd0l0ZW1JZAtSYXcgSXRlbSBJZAcAAAEwBTAgfiAxBwAAATEGMSB+IDUwBwAAAjUwCDUwIH4gMTAwBwAAAzEwMAkxMDAgfiAyMDAHAAADMjAwCTIwMCB+IDMwMAcAAAMzMDAGMzAwIH4gBwAAAAAAAAcABwAHAAcABv//BwIDQWxsAwcBBwIEMC4wMAcCBTE1MDU2BwIFMjIuMDAHAgU0NC4wMAcCBDMuMDAHAgQzLjAwBwIEMi4wMAcCBDMuMDAHAAcABv//BwIIQVNJQU5BIEEDBwcHAgQwLjAwBwIFMTUwNjIHAgU1MC4wMAcCBDUuMDAHAgQ1LjAwBwIEMy4wMAcCBDIuMDAHAgQ2LjAwBwAHAAb//wcCCEVWQSBBSVJMAwcNBwIEMS4wMAcCBTE1MDY4BwIFMzMuMDAHAgQ0LjAwBwIEMy4wMAcCBDIuMDAHAgQxLjAwBwIEMi4wMAIFU3RhdGUHawcLBwACAQcBAgEG//8CAAb//wIABwICAQcDAgEHBAIBBwUCAQcGAgEHBwIBBwgCAQcABwAHAAcAAgAFAAAAgAkCBlJhdGVJRAcBAgZSYXRlSUQDCQIAAgADBwQCAAcAAgEHAwcAAgEHAAcA"><input name="GridMaster$dxdt0$GridSlave$DXKVInput" id="GridMaster_dxdt0_GridSlave_DXKVInput" type="hidden" value="['1','7','13']"><input name="GridMaster$dxdt0$GridSlave$DXSelInput" id="GridMaster_dxdt0_GridSlave_DXSelInput" type="hidden">
+													<input name="GridMaster$dxdt0$GridSlave$DXEditor1$DDD$L" id="GridMaster_dxdt0_GridSlave_DXEditor1_DDD_L_VI" type="hidden" value=""><input name="GridMaster_dxdt0_GridSlave_DXEditor1_DDD_LCustomCallback" id="GridMaster_dxdt0_GridSlave_DXEditor1_DDD_LCustomCallback" type="hidden" value=""><input name="GridMaster_dxdt0_GridSlave_DXEditor1_DDD_LInsertedItems" id="GridMaster_dxdt0_GridSlave_DXEditor1_DDD_LInsertedItems" type="hidden" value="">
+										<input name="GridMaster_dxdt0_GridSlave_DXEditor1_DDD_LDeletedItems" id="GridMaster_dxdt0_GridSlave_DXEditor1_DDD_LDeletedItems" type="hidden" value=""><input name="GridMaster_dxdt0_GridSlave_DXEditor1_DDDWS" id="GridMaster_dxdt0_GridSlave_DXEditor1_DDDWS" type="hidden" value="0:0:-1:-10000:-10000:0:-10000:-10000:1:0:0:0"><input name="GridMaster_dxdt0_GridSlave_DXEditor1_VI" id="GridMaster_dxdt0_GridSlave_DXEditor1_VI" type="hidden"><table width="90%" align="center" class="border1px" bordercolor="#73beb6" bgcolor="#73beb6" border="0" cellspacing="0" cellpadding="0"><tbody><tr align="center" bgcolor="#ffffff"><td class="bodycopy" valign="middle" style="height: 1px;"><div id="gridMasterWrapper" style="padding: 20px; height: 600px; overflow: scroll; display: block;"><table class="dxgvControl" id="GridMaster" style="border-collapse: separate;" border="0" cellspacing="0" cellpadding="0">
+	<tbody><tr>
+		<td style="padding: 0px;"><div class="dxAC" style="overflow: hidden;"><div class=" dxMSTouchDraggable"><table class="dxgvTable dxMSTouchDraggable" id="GridMaster_DXMainTable" style="width: 100%; border-collapse: collapse; empty-cells: show;" onclick="aspxGVTableClick('GridMaster', event);" border="0" cellspacing="0" cellpadding="0">
+	<caption>
+		Route
+	</caption><tbody><tr class="dxgvMSDraggable" id="GridMaster_DXHeadersRow0">
+		<td class="dxgvHeader" style="width: 0.1%; border-top-width: 0px; border-left-width: 0px; cursor: default;"><img class="dxGridView_gvDetailExpandedButton" style="visibility: hidden;" alt="" src="/IFF_MAIN/DXR.axd?r=1_12-TN1J8"></td><td class="dxgvHeader" id="GridMaster_col0" style="border-top-width: 0px; border-left-width: 0px;" onmousedown="aspxGVHeaderMouseDown('GridMaster', this, event);"><table style="width: 100%; border-collapse: collapse;" border="0" cellspacing="0" cellpadding="0">
+			<tbody><tr>
+				<td id="GridMaster_tcheader0">
+                <a class="dxeHyperlink" id="GridMaster_header0_btnNew" onclick="return aspxSEClick('GridMaster_header0_btnNew', event)">New</a><script id="dxss_172417696" type="text/javascript">
+<!--
+                                                                                                                                                   aspxAddDisabledItems('GridMaster_header0_btnNew', [[['dxeDisabled'], [''], ['']]]);
+
+                                                                                                                                                   var dxo = new ASPxClientHyperLink('GridMaster_header0_btnNew');
+                                                                                                                                                   window['GridMaster_header0_btnNew'] = dxo;
+                                                                                                                                                   dxo.enableSlideCallbackAnimation = true;
+                                                                                                                                                   dxo.enableSwipeGestures = true;
+                                                                                                                                                   dxo.uniqueID = 'GridMaster$header0$btnNew';
+                                                                                                                                                   dxo.Click.AddHandler(function (s, e) { $('#btnTriggerBreakTable').click(); });
+                                                                                                                                                   dxo.AfterCreate();
+
+//-->
+</script>
+                </td><td style="width: 1px; text-align: right;"><span class="dx-vam">&nbsp;</span></td>
+			</tr>
+		</tbody></table></td><td class="dxgvHeader" id="GridMaster_col1" style="border-top-width: 0px; border-left-width: 0px;" onmousedown="aspxGVHeaderMouseDown('GridMaster', this, event);"><table style="width: 100%; border-collapse: collapse;" border="0" cellspacing="0" cellpadding="0">
+			<tbody><tr>
+				<td>Company Name</td><td style="width: 1px; text-align: right;"><span class="dx-vam">&nbsp;</span></td>
+			</tr>
+		</tbody></table></td><td class="dxgvHeader" id="GridMaster_col3" style="border-top-width: 0px; border-left-width: 0px;" onmousedown="aspxGVHeaderMouseDown('GridMaster', this, event);"><table style="width: 100%; border-collapse: collapse;" border="0" cellspacing="0" cellpadding="0">
+			<tbody><tr>
+				<td>Origin</td><td style="width: 1px; text-align: right;"><span class="dx-vam">&nbsp;</span></td>
+			</tr>
+		</tbody></table></td><td class="dxgvHeader" id="GridMaster_col4" style="border-top-width: 0px; border-left-width: 0px;" onmousedown="aspxGVHeaderMouseDown('GridMaster', this, event);"><table style="width: 100%; border-collapse: collapse;" border="0" cellspacing="0" cellpadding="0">
+			<tbody><tr>
+				<td>Destination</td><td style="width: 1px; text-align: right;"><span class="dx-vam">&nbsp;</span></td>
+			</tr>
+		</tbody></table></td><td class="dxgvHeader" id="GridMaster_col5" style="border-top-width: 0px; border-right-width: 0px; border-left-width: 0px;" onmousedown="aspxGVHeaderMouseDown('GridMaster', this, event);"><table style="width: 100%; border-collapse: collapse;" border="0" cellspacing="0" cellpadding="0">
+			<tbody><tr>
+				<td>KG\LB</td><td style="width: 1px; text-align: right;"><span class="dx-vam">&nbsp;</span></td>
+			</tr>
+		</tbody></table></td>
+	</tr><tr class="dxgvDataRow" id="GridMaster_DXDataRow0">
+		<td class="dxgvDetailButton dxgv" style="width: 0px; border-right-width: 0px;"><img class="dxGridView_gvDetailExpandedButton" style="cursor: pointer;" onclick="aspxGVHideDetailRow('GridMaster',0,event);event.cancelBubble = true" alt="[Collapse]" src="/IFF_MAIN/DXR.axd?r=1_12-TN1J8"></td><td align="center" class="dxgvCommandColumn dxgv"><a class="dxgvCommandColumnItem dxgv__cci" onclick="aspxGVScheduleCommand('GridMaster',['Delete',0],1)" href="javascript:;">Delete</a></td><td class="dxgv">159HO</td><td align="left" class="dxgv">ICN</td><td align="left" class="dxgv">SFO - SAN FRANCISCO AIRPORT</td><td align="left" class="dxgv" style="border-right-width: 0px;">LB</td>
+	</tr><tr class="dxgvDetailRow" id="GridMaster_DXDRow0">
+		<td class="dxgvIndentCell dxgv" style="border-right-width: 0px; border-left-width: 0px;">&nbsp;</td><td class="dxgv dxgvDetailCell" id="GridMaster_tcdxdt0" style="padding-left: 0px;" colspan="5">
+                <dataitemtemplate>
+                <input name="GridMaster$dxdt0$hRouteId" id="GridMaster_dxdt0_hRouteId" type="hidden" value="1"> 
+                </dataitemtemplate>
+                <input type="hidden"><script id="dxss_1635157827" type="text/javascript">
+<!--
+
+		                    var dxo = new ASPxClientGridView('GridMaster_dxdt0_GridSlave');
+		                    window['GridSlave'] = dxo;
+		                    dxo.callBack = function (arg) { WebForm_DoCallback('GridMaster$dxdt0$GridSlave', arg, aspxCallback, 'GridMaster_dxdt0_GridSlave', aspxCallbackError, true); };
+		                    dxo.enableSlideCallbackAnimation = true;
+		                    dxo.enableSwipeGestures = true;
+		                    dxo.uniqueID = 'GridMaster$dxdt0$GridSlave';
+		                    dxo.RowClick.AddHandler(GridSlave_RowClick);
+		                    dxo.callBacksEnabled = true;
+		                    dxo.pageRowCount = 3;
+		                    dxo.pageRowSize = 10;
+		                    dxo.pageIndex = 0;
+		                    dxo.pageCount = 1;
+		                    dxo.selectedWithoutPageRowCount = 0;
+		                    dxo.visibleStartIndex = 0;
+		                    dxo.focusedRowIndex = -1;
+		                    dxo.allowFocusedRow = false;
+		                    dxo.allowSelectByRowClick = false;
+		                    dxo.allowSelectSingleRowOnly = false;
+		                    dxo.allowMultiColumnAutoFilter = false;
+		                    dxo.indentColumnCount = 0;
+		                    dxo.callbackOnFocusedRowChanged = false;
+		                    dxo.callbackOnSelectionChanged = false;
+		                    dxo.autoFilterDelay = '1200';
+		                    dxo.columns = [new ASPxClientGridViewColumn('', 0, -1, null, 1, '', 0, 0, 0, 1, 0, 0, 0),
+new ASPxClientGridViewColumn('', 1, -1, 'CarrierCode', 1, '', 0, 1, 1, 1, 0, 0, 0),
+new ASPxClientGridViewColumn('', 2, -1, 'RateID', 0, '', 0, 1, 1, 1, 0, 1, 0),
+new ASPxClientGridViewColumn('', 3, -1, 'RawItemId', 0, '', 0, 1, 1, 1, 0, 1, 0),
+new ASPxClientGridViewColumn('', 4, -1, '0', 1, '', 0, 1, 1, 1, 0, 0, 0),
+new ASPxClientGridViewColumn('', 5, -1, '1', 1, '', 0, 1, 1, 1, 0, 0, 0),
+new ASPxClientGridViewColumn('', 6, -1, '50', 1, '', 0, 1, 1, 1, 0, 0, 0),
+new ASPxClientGridViewColumn('', 7, -1, '100', 1, '', 0, 1, 1, 1, 0, 0, 0),
+new ASPxClientGridViewColumn('', 8, -1, '200', 1, '', 0, 1, 1, 1, 0, 0, 0),
+new ASPxClientGridViewColumn('', 9, -1, '300', 1, '', 0, 1, 1, 1, 0, 0, 0),
+new ASPxClientGridViewColumn('', 10, -1, 'Share', 1, '', 0, 1, 1, 1, 0, 0, 0)];
+		                    dxo.editorIDList = ['GridMaster_dxdt0_GridSlave_DXEditor1', 'GridMaster_dxdt0_GridSlave_DXEditor4', 'GridMaster_dxdt0_GridSlave_DXEditor5', 'GridMaster_dxdt0_GridSlave_DXEditor6', 'GridMaster_dxdt0_GridSlave_DXEditor7', 'GridMaster_dxdt0_GridSlave_DXEditor8', 'GridMaster_dxdt0_GridSlave_DXEditor9', 'GridMaster_dxdt0_GridSlave_DXEditor10'];
+		                    dxo.editState = 0;
+		                    dxo.editMode = 4;
+		                    dxo.allowBatchEditing = true;
+		                    dxo.batchEditClientState = ({ 'isNewRowOnTop': true, 'startEditAction': 0, 'validationInfo': null, 'checkColumnsDisplayHtml': {}, 'columnIndices': [1, 4, 5, 6, 7, 8, 9, 10], 'updateInfo': {}, 'editType': 0 });
+		                    dxo.AfterCreate();
+
+//-->
+</script>
+                </td>
+	</tr><tr class="dxgvDataRow" id="GridMaster_DXDataRow1">
+		<td class="dxgvDetailButton dxgv" style="width: 0px; border-right-width: 0px; border-bottom-width: 0px;"><img class="dxGridView_gvDetailCollapsedButton" style="cursor: pointer;" onclick="aspxGVShowDetailRow('GridMaster',1,event);event.cancelBubble = true" alt="[Expand]" src="/IFF_MAIN/DXR.axd?r=1_12-TN1J8"></td><td align="center" class="dxgvCommandColumn dxgv" style="border-bottom-width: 0px;"><a class="dxgvCommandColumnItem dxgv__cci" onclick="aspxGVScheduleCommand('GridMaster',['Delete',1],1)" href="javascript:;">Delete</a></td><td class="dxgv" style="border-bottom-width: 0px;">159HO</td><td align="left" class="dxgv" style="border-bottom-width: 0px;">SFO - SAN FRANCISCO AIRPORT</td><td align="left" class="dxgv" style="border-bottom-width: 0px;">ICN</td><td align="left" class="dxgv" style="border-right-width: 0px; border-bottom-width: 0px;">LB</td>
+	</tr>
+</tbody></table></div></div><img class="dxGridView_gvDragAndDropArrowDown" id="GridMaster_IADD" style="top: -100px; visibility: hidden; position: absolute;" alt="|" src="/IFF_MAIN/DXR.axd?r=1_12-TN1J8"><img class="dxGridView_gvDragAndDropArrowUp" id="GridMaster_IADU" style="top: -100px; visibility: hidden; position: absolute;" alt="|" src="/IFF_MAIN/DXR.axd?r=1_12-TN1J8"><img class="dxGridView_gvDragAndDropHideColumn" id="GridMaster_IDHF" style="top: -100px; visibility: hidden; position: absolute;" alt="Hide" src="/IFF_MAIN/DXR.axd?r=1_12-TN1J8"><table class="dxgvLoadingPanel" id="GridMaster_LP" style="left: 0px; top: 0px; display: none; border-collapse: collapse; z-index: 30000;" border="0" cellspacing="0" cellpadding="0">
+	<tbody><tr>
+		<td class="dx"><img align="middle" alt="" src="/IFF_MAIN/DXR.axd?r=1_50-TN1J8"></td><td class="dx" style="padding-left: 0px;"><span id="GridMaster_TL">Loading…</span></td>
+	</tr>
+</tbody></table><div class="dxgvLoadingDiv" id="GridMaster_LD" style="display: none; position: absolute; z-index: 29999;">
+
+</div><input name="GridMaster$DXSelInput" id="GridMaster_DXSelInput" type="hidden"><input name="GridMaster$DXKVInput" id="GridMaster_DXKVInput" type="hidden" value="['1','2']"><table id="GridMaster_DXStyleTable" style="display: none;" border="0">
+	<tbody><tr>
+		<td></td>
+	</tr><tr class="dxgvEditingErrorRow">
+		<td class="dxgvIndentCell dxgv" style="border-right-width: 0px; border-left-width: 0px;">&nbsp;</td><td class="dxgv" style="border-right-width: 0px;" colspan="5"></td>
+	</tr><tr class="dxgvSelectedRow">
+		<td></td>
+	</tr><tr class="dxgvFocusedRow">
+		<td></td>
+	</tr><tr class="dxgvFocusedGroupRow">
+		<td></td>
+	</tr><tr>
+		<td class="dxgvBatchEditCell dxgv"></td><td class="dxgvBatchEditModifiedCell dxgv"></td>
+	</tr><tr class="dxgvDataRow">
+		<td></td>
+	</tr><tr class="dxgvDataRow">
+		<td></td>
+	</tr>
+</tbody></table><input name="GridMaster$CallbackState" id="GridMaster_CallbackState" type="hidden" value="BwIHAgIERGF0YQfjAAAAAAIAAAACAAAAAAAAAAIAAAAABQAAAAJJRAJJRAMAAAZPcmlnaW4GT3JpZ2luBwAABERlc3QERGVzdAcAAAhVbml0VGV4dAlVbml0IFRleHQHAAAHT3JnTmFtZQhPcmcgTmFtZQcAAAMAAAAEVW5pdBJvcmdfYWNjb3VudF9udW1iZXISZWx0X2FjY291bnRfbnVtYmVyBwAHAAcABwAG//8DBwEHAgNJQ04HAgNTRk8HAgJMQgcCBTE1OUhPBwAHAAb//wMHAgcCA1NGTwcCA0lDTgcCAkxCBwIFMTU5SE8CBVN0YXRlB1AHBgcAAgEHAQIBBwICAAcDAgEHBAIBBwUCAQcABwAHAAcAAgAFAAAAgAkCAklEBwECAklEAwkCAAIAAwcEAgAHAAIBBwAHAAIBBwAHAQMHAQ=="><script id="dxss_318993864" type="text/javascript">
+<!--
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        var dxo = aspxGetControlCollection().Get('GridMaster');
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        dxo.callBacksEnabled = true;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        dxo.pageRowCount = 2;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        dxo.pageRowSize = 10;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        dxo.pageIndex = 0;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        dxo.pageCount = 1;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        dxo.selectedWithoutPageRowCount = 0;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        dxo.visibleStartIndex = 0;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        dxo.focusedRowIndex = -1;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        dxo.allowFocusedRow = false;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        dxo.allowSelectByRowClick = false;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        dxo.allowSelectSingleRowOnly = false;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        dxo.allowMultiColumnAutoFilter = false;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        dxo.indentColumnCount = 1;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        dxo.callbackOnFocusedRowChanged = false;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        dxo.callbackOnSelectionChanged = false;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        dxo.autoFilterDelay = '1200';
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        dxo.columns = [new ASPxClientGridViewColumn('', 0, -1, null, 1, '', 0, 0, 0, 1, 0, 0, 0),
+new ASPxClientGridViewColumn('OrgName', 1, -1, 'OrgName', 1, '', 0, 1, 1, 1, 0, 0, 0),
+new ASPxClientGridViewColumn('ID', 2, -1, 'ID', 0, '', 0, 1, 1, 1, 0, 1, 0),
+new ASPxClientGridViewColumn('', 3, -1, 'Origin', 1, '', 0, 1, 1, 1, 0, 0, 0),
+new ASPxClientGridViewColumn('', 4, -1, 'Dest', 1, '', 0, 1, 1, 1, 0, 0, 0),
+new ASPxClientGridViewColumn('', 5, -1, 'UnitText', 1, '', 0, 1, 1, 1, 0, 0, 0)];
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        dxo.editState = 0;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        dxo.editMode = 2;
+
+//-->
+</script></td>
+	</tr>
+</tbody></table></div></td></tr></tbody></table></form></body>
+</html>

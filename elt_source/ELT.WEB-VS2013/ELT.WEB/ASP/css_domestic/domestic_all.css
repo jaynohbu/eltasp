@@ -1,0 +1,240 @@
+/***********************************************/
+/* domestic_all.css                            */
+/* Use this for all Domestic styles            */
+/***********************************************/
+
+/***********************************************/
+/* Layout styles                             */
+/***********************************************/
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:86%;
+	margin: 0;	
+	text-align: center;
+	min-width: 850px;
+}
+h1 {
+	text-align: left;
+	font-size: 170%;
+	font-weight:bold;
+	text-transform: uppercase;
+	padding: 1.5em 0 1.4em 0;
+}
+.highlight {
+	color: #C6603E;
+}
+.dateformat, .timeformat {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	behavior: url("/ASP/include/mask_js.htc");
+	border: solid 1px ;
+	border-color: #666 #ccc #ccc #666;
+}
+.dateformat {
+	width:6.8em;
+}
+.timeformat {
+	width:3.8em;
+}
+	
+/***********************************************/
+/* Widgets                                     */
+/***********************************************/
+input, textarea, select {
+	font: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	margin-left: 1em; /* for left margin workin with label { padding-left: 1em; */
+}
+.inputfield, .inputfiledreadonly {
+	border: solid 1px;
+	border-color: #666 #ccc #ccc #666;
+}
+.inputfiledreadonly {
+	background:#ccc;
+}
+/***********************************************/
+/* Layout DIVs                                 */
+/***********************************************/
+.print {
+	padding: 0 0 0.4em;
+	vertical-align: bottom;
+	text-align: right;
+}
+.print a {
+	font-size: 116%;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.print a:hover, .textbutton a:hover {
+	color: #b83423;
+}
+.print img, {
+	padding-right: 1em;
+	margin-left: 6em;
+}
+.textbutton {
+	text-align: left;
+	margin:0.6em 0;
+}
+.textbutton a {
+	font-size:120%;
+	color: #000000;
+	text-decoration: none;
+}
+.textbutton img {
+	vertical-align:middle;
+	margin: 0.2em 0.8em 0.4em 1em;
+}
+.menubar {
+	border: 1px solid #997132;
+	height: 2.4em;
+	background: #eec983;
+	vertical-align: middle;
+	min-width: 2.4em;
+}
+.menubardown {
+	border: 1px solid #997132;
+	border-top: none;
+	height: 2.4em;
+	background: #eec983;
+	vertical-align: middle;
+	min-width: 2.4em;
+	margin-bottom: 1.5em;
+}
+.wrapper, .header, .menubar, .menubardown {
+	font-size: 0.6em;
+	margin-right: 2.6em;
+	margin-left: 2.6em;
+	margin-top: 0;
+}
+.wrapper {
+	border: #997132 solid 1px;
+	border-top: none;
+	background: #f3f3f3;
+	padding-top: 3.5em	
+}
+.centerbody {
+	border: #997132 solid 1px;
+	background: #ffffff;
+	margin: 0em 6em 4em 6em;
+	padding:0;
+}
+.leftcol, .rightcol {
+	text-align: left;
+}
+.leftcol {
+	float:left;	
+}
+.righttcol {	
+}
+.row {
+	font-size:100%;
+	width:100%;
+	text-align:left;
+	width:auto;
+}
+.topline {
+	border-top: solid #997132 1px;
+}
+/***********************************************/	
+/* CSS form styles                             */
+/***********************************************/
+fieldset {
+	padding: 0;
+	margin: 0;
+	font-size:116%;
+}
+label {
+	font:Verdana, Arial, Helvetica, sans-serif;
+	display: block;
+	font-size:100%;
+	font-weight: bold;
+	height: 1.9em;
+	background: #f3f3f3;
+	line-height: 1.8em;
+	padding-left: 1em; /* for left margin working with input { margin-left: 1em;  */
+}
+
+fieldset ul {
+	margin: 0;
+	padding: 0;
+}
+fieldset li {
+	padding: 0;
+	margin: 0;
+}
+fieldset fieldset {
+	border: none;
+	margin: 0;
+}
+fieldset fieldset legend {
+	padding: 0 0 5px;
+	font-weight: normal;
+}
+fieldset fieldset label {
+	display: block;
+	width: auto;
+}
+em {
+	font-weight: bold;
+	font-style: normal;
+	color: #f00;
+}
+
+/***********************************************/
+/* simple tab style                            */
+/***********************************************/
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+	border:none;
+}
+div.simpletab{
+	font-size:100%;
+}
+div.simpletab label{
+	font-size:90%;
+	font-weight:normal;
+}
+ul.simpletabs{
+	font-size: 100%;
+	float:left;			
+}
+ul.simpletabs li{
+	float:left;
+	font-size:100%;
+}
+ul.simpletabs a:link,
+ul.simpletabs a:visited,
+ul.simpletabs a:active,
+ul.simpletabs a:hover{
+	width:auto;
+	display:block;
+	color:#000000;
+	font-weight:bold;
+	text-decoration:none;
+	text-align: center;
+	margin-left: 3px;
+	background-color: #f3d9a8;
+	height: 1.8em;
+	padding: 4px 8px 0px 8px;
+}
+ul.simpletabs a:hover{
+	background:#997132;
+}
+/*
+div.simpletab div{
+	clear:both;
+	width:auto;
+	background:#ffffff;
+	color:#000000;
+}
+*/
+ul.simpletabs li.active a:link,
+ul.simpletabs li.active a:visited,
+ul.simpletabs li.active a:active,
+ul.simpletabs li.active a:hover{
+background:#997132;
+color:#000;
+}

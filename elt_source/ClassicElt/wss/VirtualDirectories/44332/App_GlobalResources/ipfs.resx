@@ -1,0 +1,270 @@
+<root xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!---->
+<xsd:schema id="root" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+<xsd:element name="root" msdata:IsDataSet="true">
+<xsd:complexType>
+<xsd:choice maxOccurs="unbounded">
+<xsd:element name="metadata">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="value" type="xsd:string" minOccurs="0" />
+</xsd:sequence>
+<xsd:attribute name="name" type="xsd:string" />
+<xsd:attribute name="type" type="xsd:string" />
+<xsd:attribute name="mimetype" type="xsd:string" />
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="assembly">
+<xsd:complexType>
+<xsd:attribute name="alias" type="xsd:string" />
+<xsd:attribute name="name" type="xsd:string" />
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="data">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+</xsd:sequence>
+<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="resheader">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+</xsd:sequence>
+<xsd:attribute name="name" type="xsd:string" use="required" />
+</xsd:complexType>
+</xsd:element>
+</xsd:choice>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>
+<resheader name="resmimetype">
+<value>text/microsoft-resx</value>
+</resheader>
+<resheader name="version">
+<value>2.0</value>
+</resheader>
+<resheader name="reader">
+<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<resheader name="writer">
+<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<data name="DeploymentDetailsSectionTitle">
+<value>Details</value>
+</data>
+<data name="SignatureEULATitle">
+<value>Microsoft Corporation License Agreement</value>
+</data>
+<data name="SignatureDetailsTitle">
+<value>Signature Details</value>
+</data>
+<data name="SignatureSummary">
+<value>Signature summary</value>
+</data>
+<data name="SignedAs">
+<value>Signed as:</value>
+</data>
+<data name="SignatureInfo">
+<value>Additional signature information</value>
+</data>
+<data name="SignatureComment">
+<value>Comments:</value>
+</data>
+<data name="CertificateDetails">
+<value>Certificate</value>
+</data>
+<data name="CertificateDetailsAccessKey">
+<value>c</value>
+</data>
+<data name="IssuedTo">
+<value>Issued to:</value>
+</data>
+<data name="IssuedBy">
+<value>Issued by:</value>
+</data>
+<data name="ValidFrom">
+<value>Valid from:</value>
+</data>
+<data name="ValidTo">
+<value>Valid to:</value>
+</data>
+<data name="SignatureDetails">
+<value>Signing viewing environment</value>
+</data>
+<data name="SignatureDetailsAccessKey">
+<value>e</value>
+</data>
+<data name="DateTime">
+<value>Date and time:</value>
+</data>
+<data name="WindowsVersion">
+<value>Windows version:</value>
+</data>
+<data name="OfficeVersion">
+<value>Office Version:</value>
+</data>
+<data name="InfoPathVersion">
+<value>InfoPath version:</value>
+</data>
+<data name="ServerVersion">
+<value>InfoPath Forms Services version:</value>
+</data>
+<data name="Browser">
+<value>Browser:</value>
+</data>
+<data name="ActiveXControlVersion">
+<value>Signing Control Version:</value>
+</data>
+<data name="Monitors">
+<value>Number of monitors:</value>
+</data>
+<data name="PrimaryMonitor">
+<value>Primary monitor:</value>
+</data>
+<data name="Fingerprint">
+<value>Form template fingerprint:</value>
+</data>
+<data name="CurrentView">
+<value>Current View:</value>
+</data>
+<data name="Snapshot">
+<value>Document snapshot</value>
+</data>
+<data name="ScaleToWindow">
+<value>Actual size</value>
+</data>
+<data name="ScaleToWindowAccessKey">
+<value>a</value>
+</data>
+<data name="ScaleToFit">
+<value>Best fit</value>
+</data>
+<data name="ScaleToFitAccessKey">
+<value>b</value>
+</data>
+<data name="SignaturePNGTitle">
+<value>Image of the form view that was seen by the signer</value>
+</data>
+<data name="SignatureOkButton">
+<value>OK</value>
+</data>
+<data name="SignatureEulaAcceptCheckboxText">
+<value>I accept the terms in the License Agreement
+		</value>
+</data>
+<data name="SignatureEulaAcceptCheckboxAccessKey">
+<value>i</value>
+</data>
+<data name="SignatureEulaNextButtonText">
+<value>Next</value>
+</data>
+<data name="SignatureEulaNextButtonAccessKey">
+<value>n</value>
+</data>
+<data name="SignatureEulaCancelButtonText">
+<value>Cancel</value>
+</data>
+<data name="SignatureEulaCancelButtonAccessKey">
+<value>c</value>
+</data>
+<data name="ResolveRecipientTitle">
+<value>Resolve recipient</value>
+</data>
+<data name="ResolveRecipientNoMatchFor">
+<value>Could not find a match for</value>
+</data>
+<data name="ResolveRecipientDelete">
+<value>Delete it from the list of recipients</value>
+</data>
+<data name="ResolveRecipientChangeTo">
+<value>Change it to</value>
+</data>
+<data name="ResolveRecipientMoreNames">
+<value>More names</value>
+</data>
+<data name="FormSettingsPageTitle">
+<value>Form Settings</value>
+</data>
+<data name="FormSettingsBreadCrumb">
+<value>Form Settings</value>
+</data>
+<data name="FormSettingsPageDesc">
+<value>Use Microsoft InfoPath to customize the form for this list. You can modify the form layout, add pictures and formatted text, add custom data validation, create additional views, and add rules.</value>
+</data>
+<data name="FormSettingsOptions">
+<value>Form Options</value>
+</data>
+<data name="FormSettingsOptionInfoPathEnableNew">
+<value>Customize the current form using Microsoft InfoPath</value>
+</data>
+<data name="FormSettingsOptionInfoPathEnableEdit">
+<value>Modify the existing InfoPath form</value>
+</data>
+<data name="FormSettingsOptionRevertInfoPathEnabledList">
+<value>Use the default SharePoint form</value>
+</data>
+<data name="FormSettingsOptionDeleteForm">
+<value>Delete the InfoPath Form from the server</value>
+</data>
+<data name="FormSettingsPageContentTypeTitle">
+<value>Content Type</value>
+</data>
+<data name="FormSettingsPageContentTypeDesc">
+<value>Customize the form for the following content type:</value>
+</data>
+<data name="ErrorMessageListcustomizationProductNotFound">
+<value>Microsoft InfoPath 2010 is required to use this feature.</value>
+</data>
+<data name="TenantConfigPageTitle">
+<value>Configure InfoPath Forms Services</value>
+</data>
+<data name="TenantConfigEndUserPublishedTemplatesLabel">
+<value>User Browser-enabled Form Templates</value>
+</data>
+<data name="TenantConfigDisableActivationLabel">
+<value>Allow users to browser-enable form templates</value>
+</data>
+<data name="TenantConfigDisableRenderingLabel">
+<value>Render form templates that are browser-enabled by users</value>
+</data>
+<data name="TenantConfigEUALabel">
+<value>Exempt User Agents</value>
+</data>
+<data name="TenantConfigEUADescription">
+<value>Specify the list of user agents that, for indexing purposes, will receive InfoPath forms as XML files instead of full Web pages.</value>
+</data>
+<data name="TenantConfigCustomizeEUALabel">
+<value>Customize the list of exempt user agents.</value>
+</data>
+<data name="TenantConfigNameLabel">
+<value>Name:</value>
+</data>
+<data name="TenantConfigAddButtonLabel">
+<value>Add</value>
+</data>
+<data name="TenantConfigRemoveButtonLabel">
+<value>Remove</value>
+</data>
+<data name="TenantConfigWebProxyPageTitle">
+<value>Configure InfoPath Forms Services Web Service Proxy</value>
+</data>
+<data name="TenantConfigWebProxySectionLabel">
+<value>Enable InfoPath Forms Services Web service proxy</value>
+</data>
+<data name="TenantConfigWebServiceDescription">
+<value>Use the proxy for data connections between InfoPath forms and Web services. The data connections must be defined in universal data connection (UDC) files and be enabled to use a proxy.</value>
+</data>
+<data name="TenantConfigWebServiceEnableLabel">
+<value>Enable</value>
+</data>
+<data name="TenantConfigDuplicateExemptUserAgentError">
+<value>The exempt user agent name already exists.</value>
+</data>
+</root>
+

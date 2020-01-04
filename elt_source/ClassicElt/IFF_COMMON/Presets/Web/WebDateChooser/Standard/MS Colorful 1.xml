@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="MS Colorful 1" PresetDescription="Infragistics MS Colorful 1 Preset.  Sets both Look and Behavior properties." PresetType="All" />-->
+<igsch:WebDateChooser >
+  <ClientSideEvents />
+  <CalendarLayout DayNameFormat="FirstLetter" TitleFormat="Month" CellSpacing="1" ShowYearDropDown="False" ShowMonthDropDown="False" ShowFooter="False">
+    <DayStyle BackColor="#FFFFCC" />
+    <SelectedDayStyle Font-Bold="True" BackColor="#CCCCFF" />
+    <OtherMonthDayStyle ForeColor="#CC9966" />
+    <NextPrevStyle Font-Size="9pt" Font-Bold="True" ForeColor="#FFFFCC" />
+    <CalendarStyle BorderWidth="1px" Font-Size="8pt" Font-Names="Verdana" BorderColor="#FFCC66" BorderStyle="Solid" ForeColor="#663399" BackColor="#FFCC66" />
+    <TodayDayStyle ForeColor="White" BackColor="#FFCC66" />
+    <DayHeaderStyle Height="1pt" BackColor="#FFCC66" />
+    <TitleStyle Height="18pt" Font-Size="9pt" Font-Bold="True" ForeColor="#FFFFCC" BackColor="#990000" />
+  </CalendarLayout>
+  <DropButton>
+    <HoverStyle />
+    <Style />
+  </DropButton>
+  <ExpandEffects ShadowColor="LightGray" />
+</igsch:WebDateChooser>

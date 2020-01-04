@@ -1,0 +1,13 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxDataView" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxmvc:MVCxDataView runat="server" PagerPanelSpacing="8px" SpriteCssFilePath="~/App_Themes/MetropolisBlue/{0}/sprite.css" CssPostfix="MetropolisBlue" CssFilePath="~/App_Themes/MetropolisBlue/{0}/styles.css">
+	<PagerSettings CurrentPageNumberFormat="{0}">
+		<PageSizeItemSettings ShowPopupShadow="False">
+		</PageSizeItemSettings>
+	</PagerSettings>
+	<LoadingPanelImage Url="~/App_Themes/MetropolisBlue/Web/Loading.gif" />
+	<PagerStyle ItemSpacing="0px" Spacing="0px" />
+</dxmvc:MVCxDataView>
+

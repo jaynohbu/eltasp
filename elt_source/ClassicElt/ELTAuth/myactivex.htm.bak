@@ -1,0 +1,18 @@
+<HTML>
+<HEAD>
+<TITLE>New Page</TITLE>
+</HEAD>
+<script>
+function testFunction(){
+	//var returnObj = ClientTrack1.GetMacAddr();
+	//alert(returnObj);
+}
+</script>
+<BODY onload="testFunction();">
+
+<OBJECT ID="ClientTrack1" CODEBASE="./ELTAuth.cab#version=1,0,0,1" CLASSID="CLSID:794834BD-2C77-4D7E-9189-68AA99DC426B">
+	<PARAM name="copyright" value="http://www.freighteasy.net">
+</OBJECT>
+
+</BODY>
+</HTML>

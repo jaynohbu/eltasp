@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="WindowsXP - Silver Theme" PresetDescription="Windows XP Silver Preset (final layout of Tabs only).  Sets both Look and Behavior properties." PresetType="All" />-->
+<igtab:UltraWebTab BorderColor="#949C9C" BorderStyle="Solid" ThreeDEffect="False" BorderWidth="1px">
+  <DisabledTabStyle />
+  <DefaultTabStyle Height="22px" Font-Size="8pt" Font-Names="Microsoft Sans Serif" ForeColor="Black" BackColor="#F8F8FF">
+    <Padding Top="2px" />
+  </DefaultTabStyle>
+  <RoundedImage LeftSideWidth="7" RightSideWidth="6" ShiftOfImages="2" SelectedImage="ig_tab_winXPs1.gif" NormalImage="ig_tab_winXPs3.gif" HoverImage="ig_tab_winXPs2.gif" FillStyle="LeftMergedWithCenter" />
+  <DefaultTabSeparatorStyle />
+  <SelectedTabStyle>
+    <Padding Bottom="2px" />
+  </SelectedTabStyle>
+</igtab:UltraWebTab>

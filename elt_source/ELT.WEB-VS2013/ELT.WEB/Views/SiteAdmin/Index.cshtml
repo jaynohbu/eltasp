@@ -1,0 +1,46 @@
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+
+ <link href="@Url.Content("~/ASP/css/defaultpage.css")" rel="stylesheet" type="text/css" >
+	 <style type="text/css">
+ p
+ {
+    text-align:left;
+ }
+ </style>
+<div  class="body">
+
+<div id="rightnavi">
+    <h2>SITE ADMIN</h2>
+    <p>This Tab is where most of the system setup is done.&nbsp;Here you can configure user accounts, your  company information, contact information and set up favorites for the  Navigation Slide.</p>
+	<!-- will add function later
+	<h3 class="bold">Recent Works </h3>
+	<ul class="recentworks">
+	<li><a href="#">File name 1</a></li>
+	<li><a href="#">File name 2</a></li>
+	<li><a href="#">File name 3</a></li>
+	<li><a href="#">File name 4</a></li>
+	</ul>-->
+	<div id="linebreak"></div>
+    <h2>Getting Started </h2>
+    <h3>User's Handbook</h3>
+    <p>A first time user or want to learn how to use FreightEasy? <a href="/images/freighteasy/images/FreightEasy-Guide.pdf" target="_blank">Download</a> a User's Handbook.      
+    <h3>Support Center </h3>
+    <p>We are ready to help you. For technical support, email to <a href="mailto:support@e-logitech.net?subject=Support for FreightEasy-Site Admin">support@e-logitech.net</a> or call us at 1-877-680-EASY(3279).</p>
+</div>
+<div id="leftfloat">
+
+<div id="siteadmin">
+		<p><span class="bold"><a href="/SiteAdmin/UserAdmin" target="_self">User Admin</a></span> - This area is to manage the individual user accounts for your system. Individuals can change their personal information such as email and phone number. Administrators can configure employee accounts and set their access limitations within the system.</p>
+</div>
+		<div id="siteadmin2">
+		    <p><span class="bold"><a href="/SiteAdmin/CompanyInformation">Company Information</a> </span> - This area is to enter and edit your company’s information. This not only includes contact information, but also other settings that will be used throughout other parts of the system. Examples of this are default settings for emails and shipping notices, prefixes for file and HAWB numbers, and starting points for automatically generated numbers, like Invoice Numbers.</p>
+		</div>
+		<div id="siteadminbottom"><p><span class="bold"><a href="/SiteAdmin/FavoriteManager">Favorite Manager</a></span> - This area is used to set up a user’s Favorites, a feature accessible through the Navigation Slide to the right of the screen. These Favorites are set up per user. This can allow someone in charge of Air Export to place all the Air Export screens at the top of his Favorites, to give an example.</p>
+		</div>
+</div>
+</div>
+	
+

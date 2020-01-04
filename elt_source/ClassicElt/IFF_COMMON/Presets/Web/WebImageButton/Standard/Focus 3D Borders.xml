@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Focus 3D Borders" PresetDescription="Infragistics Focus 3D Borders Preset. Sets Look properties only. Note: The 'Reset' box should be checked." PresetType="Appearance" />-->
+<igtxt:WebImageButton UseBrowserDefaults="False">
+	<HoverAppearance ContentShift="NotSet" />
+	<FocusAppearance>
+		<Style>
+			<BorderDetails ColorTop="Black" ColorBottom="Black" ColorRight="Black" ColorLeft="Black">
+			</BorderDetails>
+		</Style>
+		<InnerBorder ColorTop="246, 246, 246" WidthLeft="2px" StyleBottom="Ridge" ColorBottom="224, 224, 224" WidthTop="2px" ColorRight="224, 224, 224" WidthRight="2px" StyleTop="Solid" StyleRight="Ridge" WidthBottom="2px" StyleLeft="Solid" ColorLeft="246, 246, 246">
+		</InnerBorder>
+	</FocusAppearance>
+	<PressedAppearance>
+		<Style>
+			<BorderDetails ColorTop="Black" ColorBottom="Black" ColorRight="Black" ColorLeft="Black">
+			</BorderDetails>
+		</Style>
+		<InnerBorder ColorTop="112, 112, 112" WidthLeft="2px" StyleBottom="Solid" ColorBottom="246, 246, 246" WidthTop="2px" ColorRight="246, 246, 246" WidthRight="2px" StyleTop="Solid" StyleRight="Solid" WidthBottom="2px" StyleLeft="Solid" ColorLeft="112, 112, 112">
+		</InnerBorder>
+	</PressedAppearance>
+	<DisabledAppearance ContentShift="NotSet" />
+	<Appearance>
+		<Style BorderWidth="1px" BorderStyle="Solid" BackColor="Control">
+			<BorderDetails ColorTop="240, 240, 240" ColorBottom="112, 112, 112" ColorRight="112, 112, 112" ColorLeft="240, 240, 240">
+			</BorderDetails>
+		</Style>
+		<InnerBorder ColorTop="White" WidthLeft="1px" StyleBottom="Solid" ColorBottom="160, 160, 160" WidthTop="1px" ColorRight="160, 160, 160" WidthRight="1px" StyleTop="Solid" StyleRight="Solid" WidthBottom="1px" StyleLeft="Solid" ColorLeft="White">
+		</InnerBorder>
+	</Appearance>
+	<RoundedCorners RenderingType="Disabled">
+	</RoundedCorners>
+</igtxt:WebImageButton>

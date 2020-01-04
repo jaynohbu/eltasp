@@ -1,0 +1,1 @@
+<br><br><center><font size="2">EasyWork Editor은 유료버젼만 지원을 합니다.</font></center>

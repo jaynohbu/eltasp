@@ -1,0 +1,30 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxgv" Namespace="DevExpress.Web.ASPxGridLookup" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %> 
+
+<dxgv:ASPxGridLookup runat="server" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" CssFilePath="~/App_Themes/Aqua/{0}/styles.css" CssPostfix="Aqua">
+    <GridViewImages SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/Aqua/GridView/Loading.gif"></LoadingPanel>
+        <LoadingPanelOnStatusBar Url="~/App_Themes/Aqua/GridView/gvLoadingOnStatusBar.gif"></LoadingPanelOnStatusBar>
+    </GridViewImages>
+    <GridViewImagesFilterControl>
+        <LoadingPanel Url="~/App_Themes/Aqua/Editors/Loading.gif"></LoadingPanel>
+    </GridViewImagesFilterControl>
+    <GridViewProperties>
+        <SettingsLoadingPanel ImagePosition="Top" />
+        <SettingsPager CurrentPageNumberFormat="{0}" />
+    </GridViewProperties>
+    <GridViewStyles>
+        <LoadingPanel ImageSpacing="8px"></LoadingPanel>
+    </GridViewStyles>
+    <GridViewStylesEditors>
+        <ProgressBar Height="25px"></ProgressBar>
+        <CalendarHeader Spacing="1px"></CalendarHeader>
+    </GridViewStylesEditors>
+    <ValidationSettings>
+        <ErrorFrameStyle ImageSpacing="4px">
+            <ErrorTextPaddings PaddingLeft="4px"></ErrorTextPaddings>
+        </ErrorFrameStyle>
+    </ValidationSettings>
+</dxgv:ASPxGridLookup>
+

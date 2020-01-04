@@ -1,0 +1,584 @@
+<%@ LANGUAGE = VBScript %>
+<!--  #INCLUDE FILE="../include/connection.asp" -->
+<html>
+<head>
+<title>Print Checks</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../css/elt_css.css" rel="stylesheet" type="text/css">
+
+<link href="../css/elt_css.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.style2 {color: #000000}
+-->
+</style></head>
+<!-- #INCLUDE FILE="../include/header.asp" -->
+<!-- #include file="../include/recent_file.asp" -->
+<!-- #INCLUDE FILE="../include/GOOFY_util_fun.inc" -->
+<%
+Dim rs, SQL
+Set rs = Server.CreateObject("ADODB.Recordset")
+
+Dim CheckDate(256),Vendor(256),CheckAmt(256),CheckType(256),VendorInfo(256),vMemo(256),PrintCheckAs(256)
+Dim CheckInfo(256)
+Dim Print1
+
+'/////////////////////////////////////////////////// by iMoon multi-Check#
+Dim BankAcct(80),BankAcctName(80),ExpenseAcct(100),ExpenseName(100)
+DIM bankIndex,exIndex
+Dim dpBal(32),QueueId,Del
+Print1=Request.QueryString("Print")
+vNextCheckNo=Request.QueryString("NextCheckNo")
+
+Call delete_queue
+
+if vNextCheckNo="" then 
+	vNextCheckNo=0
+else
+	vNextCheckNo=cLng(vNextCheckNo)
+end if
+if Print1="Yes" then
+	NoItem=Request("hNoItem")
+	for i=0 to NoItem-1
+		vChecked=Request("cCheck" & i)
+		vStatus=Request("cStatus" & i)
+		
+		if vChecked="Y" and vStatus = "ok" then
+			vCheckInfo=Request("hCheckInfo" & i)
+			pos=instr(vCheckInfo,"-")
+			if pos>0 then
+				CheckQueueID=Mid(vCheckInfo,1,pos-1)
+				vCheckInfo=Mid(vCheckInfo,pos+1,200)
+			else
+				CheckQueueID=0
+			end if
+			pos=instr(vCheckInfo,"@")
+			if pos>0 then
+				vCheckNo=Mid(vCheckInfo,pos+1,200)
+			end if
+			if pos>0 then
+			end if
+			if CheckQueueID>0 then
+				SQL= "select print_status,check_no from check_queue where elt_account_number = " & elt_account_number & " and print_id=" & CheckQueueID & " and pmt_method = 'Check'"
+				rs.Open SQL, eltConn, adOpenDynamic, adLockPessimistic, adCmdText
+				if 	( instr(	vCheckNo, "@" ) = 0 )then		
+					if not rs.EOF then
+						rs("print_status")="N"
+						rs("check_no")=vCheckNo
+						rs.Update
+					end if
+				end if
+				rs.Close
+				SQL= "select check_no from all_accounts_journal where elt_account_number = " & elt_account_number & " and tran_num=" & CheckQueueID & " and (tran_type='CHK' or tran_type='BP-CHK')"
+				rs.Open SQL, eltConn, adOpenDynamic, adLockPessimistic, adCmdText
+				Do While not rs.EOF
+				 if 	( instr(	vCheckNo, "@" ) = 0 )then		
+					rs("check_no")=vCheckNo
+					rs.Update
+				 end if	
+					rs.MoveNext
+				Loop
+				rs.Close
+			end if
+		end if
+	next
+	
+	BankAcctNo=Request("lstBank")
+	if BankAcctNo="" or isnull(BankAcctNo) then
+		BankAcctNo=0
+	else
+		pos=0
+		pos=instr(BankAcctNo,"^")
+		if pos>0 then
+			BankAcctNo=cLng(Mid(BankAcctNo,1,pos-1))
+		else
+			BankAcctNo=cLng(BankAcctNo)
+		end if
+	end if
+	
+	call check_number_update( BankAcctNo, vNextCheckNo )
+'	if Not vNextCheckNo=0 then
+'		SQL= "select next_check_no from user_profile where elt_account_number = " & elt_account_number
+'		rs.Open SQL, eltConn, adOpenDynamic, adLockPessimistic, adCmdText
+'		if not rs.EOF then
+'			rs("next_check_no")=vNextCheckNo
+'			rs.Update
+'		end if
+'		rs.Close
+'	end if
+end if
+
+'get bank info and A/P
+SQL= "select * from gl where elt_account_number = " & elt_account_number & " and (gl_account_type='"&CONST__BANK&"' or gl_account_type='"& CONST__ACCOUNT_PAYABLE &"' or gl_account_type='"&CONST__EXPENSE&"' or gl_account_type='"&CONST__COST_OF_SALES&"' or gl_account_type='"&CONST__OTHER_EXPENSE&"') order by isnull(gl_default,'') desc, cast(gl_account_number as nvarchar)"
+rs.Open SQL, eltConn, , , adCmdText
+
+'///////////////////////////////////////////////////// by iMoon Jan-20-2007 for multi-check#
+DIM ChkHashTable
+Set ChkHashTable = Server.CreateObject("System.Collections.HashTable")
+
+bankIndex=0
+exIndex=0
+
+Do While Not rs.EOF
+	BankType=rs("gl_account_type")
+	if BankType=CONST__BANK then
+		BankAcct(bankIndex)=clng(rs("gl_account_number"))
+		BankAcctName(bankIndex)=rs("gl_account_desc")
+        ChkHashTable.Add BankAcct(bankIndex), rs("control_no").Value
+		bankIndex=bankIndex+1
+	else
+		ExpenseName(exIndex)=rs("gl_account_desc")
+		ExpenseAcct(exIndex)=clng(rs("gl_account_number"))
+		exIndex=exIndex+1
+	end if
+	
+	rs.MoveNext
+Loop
+rs.Close
+if BankAcctNo = 0 then
+	BankAcctNo = BankAcct(0)
+end if
+
+last_date = get_fiscal_year_of_last_date( year(date) )
+first_date = get_fiscal_year_of_first_date( last_date )
+
+' get bank balance
+SQL= "select a.gl_account_number as gl,sum(a.credit_amount+a.debit_amount+ISNULL(a.debit_memo,0)+ISNULL(a.credit_memo,0)) as balance from all_accounts_journal a, gl b where a.elt_account_number=b.elt_account_number and a.elt_account_number= " & elt_account_number  & " and a.gl_account_number=b.gl_account_number and b.gl_account_type='"&CONST__BANK&"' and a.tran_date >='" & first_date & "' and a.tran_date >='" & first_date & "' and a.tran_date < DATEADD(day, 1,'"& last_date &"')   Group by a.gl_account_number order by a.gl_account_number"
+
+rs.Open SQL, eltConn, , , adCmdText
+BankAcctNo=cLng(BankAcctNo)
+Do While Not rs.EOF
+	if BankAcctNo=0 then 
+		BankAcctNo=cLng(rs("gl"))
+	end if	
+	for i = 0 to bankIndex
+		if BankAcct(i) = cLng(rs("gl")) then
+			dpBal(i)=rs("balance")
+			exit for
+		end if
+	next
+	rs.MoveNext
+Loop
+rs.Close
+
+'get all checks waiting to print
+'SQL= "select * from check_queue where elt_account_number = " & elt_account_number & " and print_status='A' and print_id=2097 order by bill_due_date"
+SQL= "select * from check_queue where elt_account_number = " & elt_account_number & " and print_status='A'"  & " and pmt_method = 'Check'" & " order by bill_due_date"
+'response.write SQL
+rs.Open SQL, eltConn, , , adCmdText
+tIndex=0
+Do While Not rs.EOF
+On Error Resume Next:
+	PrintID=rs("print_id")
+	VendorNo=rs("vendor_number")
+	Bank=rs("bank")
+	CheckInfo(tIndex)=PrintID & "-" & VendorNo & "-" & Bank
+	CheckDate(tIndex)=rs("bill_date")
+	'BillDueDate(tIndex)=rs("bill_due_date")
+	Vendor(tIndex)=rs("vendor_name")
+	PrintCheckAs(tIndex)=rs("print_check_as")
+	if isnull(PrintCheckAs(tIndex)) or PrintCheckAs(tIndex)= "" then
+		PrintCheckAs(tIndex) = Vendor(tIndex)
+	end if
+	VendorInfo(tIndex)=rs("vendor_info")
+	vMemo(tIndex)=rs("memo")
+	CheckAmt(tIndex)=formatNumber(rs("check_amt"),2)
+	CheckType(tIndex)=rs("check_type")
+	tIndex=tIndex+1
+	rs.MoveNext
+Loop
+rs.Close
+
+'/////////////////////////////////////////////////////////////////////// by ig
+DIM BillInvoiceNo(128,64), BillAmt(128,64),detailIndex,aDetailIndex(128) 
+'///////////////////////////////////////////////////////////////////////
+
+for i=0 to tIndex-1
+	
+	pos=Instr(CheckInfo(i),"-")
+	
+	tmpPrintID = Mid(CheckInfo(i),1,pos-1)
+
+	SQL= "select * from check_detail where elt_account_number=" & elt_account_number & " and print_id=" & tmpPrintID
+
+	rs.Open SQL, eltConn, , , adCmdText
+	detailIndex = 0
+	Do While Not rs.EOF
+		BillInvoiceNo(i,detailIndex)=rs("invoice_no")
+		BillAmt(i,detailIndex)=rs("amt_paid")
+		detailIndex = detailIndex + 1
+		rs.MoveNext
+	Loop
+	rs.Close
+	aDetailIndex(i) = detailIndex
+next
+
+
+'get next check no
+	SQL= "select elt_account_number,next_check_no from user_profile where elt_account_number = " & elt_account_number
+	rs.Open SQL, eltConn, adOpenDynamic, adLockPessimistic, adCmdText
+	if Not rs.EOF then
+		vNextCheckNo=rs("next_check_no")
+	else
+		rs.AddNew
+		vNextCheckNo=1
+		rs("elt_account_number")=elt_account_number
+		rs("next_check_no")=vNextCheckNo
+		rs.Update
+	end if
+	rs.Close
+Set rs=Nothing
+vPrintPort=checkPort
+
+%>
+
+<%
+Sub Delete_queue
+DIM SQL
+QueueId = Request.QueryString("QueueId")
+Del = Request.QueryString("Del")
+if isnull(QueueId) then QueueId = ""
+if isnull(Del) then Del = ""
+if del <> "" and QueueId <> "" then
+	if del = "Yes" then
+		SQL = " update check_queue set print_status = 'N' where elt_account_number="&elt_account_number&" and  print_id="&QueueId
+		eltConn.Execute(SQL)
+	end if
+end if
+end sub
+%>
+
+<!--  #INCLUDE FILE="functions_for_ap.inc" -->
+
+<body link="336699" vlink="336699" topmargin="0">
+<form name=form1 method="POST">
+<table width="95%" border="0" align="center" cellpadding="2" cellspacing="0">
+  <tr>
+    <td width="50%" height="32" align="left" valign="middle" class="pageheader">Print Checks</td>
+    <td width="50%" align="right" valign="middle"><div id="print"><img src="/iff_main/ASP/Images/icon_printer.gif" width="40" height="27" align="absbottom"><a href="javascript:;" OnClick="PrintClick();return false;">Print Checks</a></div></td>
+  </tr>
+</table>
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#89A979"bgcolor="#89A979" class="border1px">
+  <tr> 
+    <td> 
+      
+        <input type=hidden name=hPrintPort value="<%= vPrintPort %>">
+        <input type=hidden name=hClientOS value="<%= ClientOS %>">
+	  	<input type="hidden" name="hNoItem" value="<%= tIndex %>">
+		<input type="hidden" name="hCheckNo" value="<%=ChkHashTable(BankAcctNo)%>">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tr bgcolor="D5E8CB"> 
+            <td colspan="8" height="8" align="left" valign="top" class="bodyheader"></td>
+          </tr>
+		            <tr align="left" valign="middle" bgcolor="89A979"> 
+            <td colspan="8" height="1" class="bodyheader"></td>
+          </tr>
+                    <tr align="right" valign="middle" bgcolor="#FFFFFF">
+                        <td align="left" bgcolor="#E7F0E2" class="bodycopy">&nbsp;</td>
+                      <td height="20" colspan="2" align="left" bgcolor="#E7F0E2"><span class="bodyheader"><span class="bodycopy"><font color="c16b42"><strong>Bank Account</strong></font></span></span></td>
+                        <td align="left" bgcolor="#E7F0E2"><span class="bodycopy style2"><strong>Starting  
+              Check No.</strong></span></td>
+                        <td align="left" bgcolor="#E7F0E2">&nbsp;</td>
+                        <td align="left" bgcolor="#E7F0E2"></td>
+                        <td align="left" bgcolor="#E7F0E2"></td>
+                        <td align="left" bgcolor="#E7F0E2"></td>
+                    </tr>
+                    <tr align="right" valign="middle" bgcolor="#FFFFFF"> 
+            <td align="left" class="bodycopy">&nbsp;&nbsp;</td>
+			  <td height="26" colspan="2" align="left" bgcolor="#FFFFFF"><font size="3"><b>
+			    <SELECT name="lstBank" size=1 class="smallselect" style="WIDTH: 240px" OnChange="BalChange()">
+                  <% for i=0 to bankIndex-1 %>
+                  <option Value="<%= BankACCT(i) & "^" & dpBal(i) & "^" & ChkHashTable(BankAcct(i))%>" <% if cLng(BankAcctNo)=cLng(BankAcct(i)) then response.write("selected") %>><%= BankAcctName(i) %></option>
+                  <% next %>
+                </SELECT>
+			  </b></font></td>
+			  <td align="left"><span class="bodycopy">
+			    <input name="txtCheck" type=text class="bodyheader" value="<%=ChkHashTable(BankAcctNo)%>" size=14>
+			  </span></td>
+			  <td align="left">&nbsp;</td>
+			  <td align="left">&nbsp;</td>
+			  <td align="left">&nbsp;</td>
+			  <td align="left"><input name="txtAcctBalance" class="readonlyboldright"  type="hidden" value="<%= formatnumber(vAcctBalance,2) %>" size="18" style="BEHAVIOR: url(../include/igNumChkRight.htc)"></td>
+          </tr>
+          <tr align="left" valign="middle" bgcolor="89A979"> 
+            <td colspan="8" height="2" class="bodyheader"></td>
+          </tr>
+          <tr align="left" valign="middle" bgcolor="ecf7f8"> 
+            <td width="29" height="20" bgcolor="#f3f3f3">&nbsp;</td>
+            <td width="71" height="20" bgcolor="#f3f3f3" class="bodyheader">Check 
+              Date</td>
+            <td width="224" bgcolor="#f3f3f3" class="bodyheader">Vendor</td>
+            <td width="380" bgcolor="#f3f3f3" class="bodyheader">PAY TO THE ORDER OF </td>
+            <td width="128" bgcolor="#f3f3f3" class="bodyheader">Check Amount</td>
+            <td width="107" bgcolor="#f3f3f3" class="bodyheader">Edit Check</td>
+            <td width="229" bgcolor="#f3f3f3" class="bodyheader" align="center">Delete Queue </td>
+            <td width="229" bgcolor="#f3f3f3" class="bodyheader">&nbsp;</td>
+          </tr>
+          <input type=hidden id="CheckInfo">
+          <input type=hidden id="CheckDate">
+          <input type=hidden id="cChecked">
+          <input type=hidden id="cStatus">
+          <input type=hidden id="Vendor">
+          <input type=hidden id="VendorInfo">
+          <input type=hidden id="vMemo">
+          <input type=hidden id="vDIndex">
+          <input type=hidden id="CheckAmt">
+          <input type=hidden id="CheckType">
+          <input type=hidden id="PrintCheckAs">
+
+          <% for i=0 to tIndex-1 %>
+          <tr align="left" valign="middle" bgcolor="#FFFFFF" class="bodycopy"> 
+            <td width="29" align="center" bgcolor="#FFFFFF"> <input type="checkbox" id="cChecked" name="cCheck<%= i %>" value="Y"> 
+                <input type=hidden name="hCheckInfo<%= i %>" id="CheckInfo" Value="<%= CheckInfo(i) %>"></td>
+            <td><b>
+              <input name="txtCheckDate<%= i %>" type="text" class="m_shorttextfield" preset="shortdate"  id="CheckDate" value="<%= CheckDate(i) %>"size="10">
+            </b></td>
+            <td><input name="txtVendor<%= i %>" type="text" class="d_shorttextfield" id="Vendor" Value="<%= Vendor(i) %>" size="40" readonly="true"></td>
+            <td><b>
+              <input name="txtPrintCheckAs<%= i %>" type="text" class="d_shorttextfield" id="PrintCheckAs" value="<%= PrintCheckAs(i) %>" size="60" readonly="true">
+              <input type=hidden id="VendorInfo" Value="<%= VendorInfo(i) %>">
+              <input type=hidden id="vMemo" value="<%= vMemo(i) %>">
+              <input type=hidden id="vDIndex" value="<%= aDetailIndex(i) %>">            </td>
+            <td><b> 
+              <input name="txtCheckAmt<%= i %>" type="text" class="numberfield" id="CheckAmt" Value="<%= CheckAmt(i) %>" size="14" readonly="true">
+              </b></td>
+            <td><img src="../images/button_edit.gif" width="37" height="18" name="bView<%= i %>" onClick="ViewCheck(<%= i+1 %>)"  style="cursor:hand"></td>
+            <td bgcolor="#FFFFFF" align="center"><img src="../images/button_delete.gif" width="50" height="17" name="B2" onClick="DeleteClick(<%= i+1 %>)" style="cursor:hand"></td>
+            <td bgcolor="#FFFFFF"><input type=hidden name="cStatus<%= i %>" id="cStatus" ></td>
+            <input type=hidden id="CheckType" name="CheckType<%= i %>" Value="<%= CheckType(i) %>" >
+			<input type=hidden id="BillInvoiceNo<%= i %>">
+			<input type=hidden id="BillAmt<%= i %>">
+
+		  	<% for iii=0 to aDetailIndex(i) - 1 %>
+              <input type=hidden id="BillInvoiceNo<%= i %>" Value="<%= BillInvoiceNo(i,iii) %>">
+              <input type=hidden id="BillAmt<%= i %>" 		Value="<%= BillAmt(i,iii) %>">
+			<% next %>			
+          </tr>
+          <% next %>
+          <tr align="left" valign="middle" bgcolor="D5E8CB"> 
+            <td height="20" colspan="8" bgcolor="#f3f3f3">&nbsp;<img src="../images/button_selectall.gif" width="61" height="17" name="bSelectAll" OnClick="SelectAllClick()"  style="cursor:hand"></td>
+          </tr>
+		            <tr align="left" valign="middle" bgcolor="89A979"> 
+            <td colspan="8" height="1" class="bodyheader"></td>
+          </tr>
+          <tr align="center" bgcolor="D5E8CB"> 
+            <td height="22" colspan="8" valign="middle" class="bodycopy">&nbsp;</td>
+          </tr>
+        </table>
+      </td>
+  </tr>
+</table>
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+        <td height="32" align="right" valign="bottom"><div id="print"><img src="/iff_main/ASP/Images/icon_printer.gif" width="40" height="27" align="absbottom"><a href="javascript:;" OnClick="PrintClick();return false;">Print Checks</a></div></td>
+    </tr>
+</table>
+<br>
+</form>
+</body>
+<!--  #INCLUDE FILE="../include/shared.asp" -->
+<script language="VBScript">
+<!--
+
+Sub BalChange()
+DIM tmpStr,Bal,CheckNo
+sindex=document.form1.lstBank.selectedindex
+tmpStr=document.form1.lstBank.item(sindex).Value
+pos=0
+pos=instr(tmpStr,"^")
+if pos>0 then
+	tmpStr = Mid(tmpStr,pos+1,200)
+end if
+pos=instr(tmpStr,"^")
+if pos>0 then
+	Bal = Mid(tmpStr,1,pos-1)
+	CheckNo = Mid(tmpStr,pos+1)
+end if
+
+document.form1.txtAcctBalance.Value=Bal
+document.form1.hCheckNo.value = CheckNo
+document.form1.txtCheck.value = document.form1.hCheckNo.value
+
+End Sub
+
+Sub ViewCheck(k)
+CheckType=document.all("CheckType").item(k).Value
+CheckInfo=document.all("CheckInfo").item(k).Value
+
+pos=0
+pos=instr(CheckInfo,"-")
+if pos>0 then
+	CheckQueueID=Mid(CheckInfo,1,pos-1)
+	CheckInfo=Mid(CheckInfo,pos+1,100)
+end if
+pos=instr(CheckInfo,"-")
+if pos>0 then
+	VendorNo=Mid(CheckInfo,1,pos-1)
+	Bank=Mid(CheckInfo,pos+1,100)
+end if
+
+pos=0
+pos=instr(Bank,"@")
+if pos>0 then
+	Bank=Mid(Bank,1,pos-1)
+end if
+
+if CheckType="C" then
+	document.form1.action="write_chk.asp?EditCheck=yes&CheckQueueID=" & CheckQueueID & "&VendorNo=" & VendorNo & "&Bank=" & Bank & "&WindowName=popupNew" 
+else
+	document.form1.action="pay_bills.asp?EditCheck=yes&CheckQueueID=" & CheckQueueID & "&VendorNo=" & VendorNo & "&Bank=" & Bank & "&WindowName=popupNew" 
+end if
+	jPopUpNormal()
+	document.form1.method="POST"
+	document.form1.target="popUpWindow"
+	form1.submit()
+End Sub
+
+Sub DeleteClick(k)
+if k>0 then
+	CheckInfo=document.all("CheckInfo").item(k).Value
+	pos=0
+	pos=instr(CheckInfo,"-")
+	if pos>0 then
+		CheckQueueID=Mid(CheckInfo,1,pos-1)
+	end if
+	ok=MsgBox ("Do you really want to delete this item from the queue?" & chr(13) & "",36,"Message")
+	if ok=6 then	
+		document.form1.action="print_chk.asp?Del=Yes&QueueId=" & CheckQueueID & "&WindowName=" & window.name
+		document.form1.method="POST"
+		Document.form1.target="_self"
+		form1.submit()
+	end if
+	
+end if
+
+End Sub
+
+Sub PrintClick()
+Dim Vendor,CheckAmt
+DIM startCheck,endCheck,nextAction
+document.form1.hCheckNo.Value = document.form1.txtCheck.Value
+NoItem=cInt(document.form1.hNoItem.Value)
+
+	CheckNo=document.form1.hCheckNo.Value
+	if isnull(CheckNo) = "" or trim(CheckNo) = "" then
+		msgbox "Please enter the Start Check No."
+		document.form1.txtCheck.focus()
+		exit sub
+	end if
+	
+	if Not CheckNo="" then CheckNo=cLng(CheckNo)
+	startCheck = CheckNo
+DIM iCnt
+iCnt = 0
+
+	for j=1 to NoItem
+			if document.all("cChecked").item(j).checked=true then
+				iCnt = iCnt + 1
+			end if
+	next
+if iCnt	> 0 then
+else
+	msgbox "Please select at least one item."
+	exit Sub
+end if
+
+///////////////////////////////////////////////// New logic of Check Printing  by iMoon Nov-13-2006
+DIM vCheckInfo,vQueueID,pos,CheckNo,tmpCheckInfo
+tmpCheckInfo = "^^^"	
+	for j=1 to NoItem
+			if document.all("cChecked").item(j).checked=true then
+				document.all("cStatus").item(j).value = ""
+				vCheckInfo = document.all("CheckInfo").item(j).Value 
+				pos=instr(vCheckInfo,"-")
+				if pos>0 then
+					vQueueID= MID(vCheckInfo,1,pos-1)
+				else
+					vQueueID=0
+				end if
+
+				tmpCheckInfo= tmpCheckInfo & vQueueID & "@" & CheckNo  & "^^^"		
+					
+				pos=instr(vCheckInfo,"@")
+				if pos>0 then
+					document.all("checkinfo").item(j).Value=Mid(vCheckInfo,1,pos-1)
+				end if
+				document.all("checkinfo").item(j).Value= vCheckInfo & "@" & CheckNo
+				CheckNo=CheckNo+1
+				document.all("cStatus").item(j).value = "ok"	
+			
+			end if
+	next
+
+	tmpCheckInfo = MID(tmpCheckInfo,1,LEN(tmpCheckInfo)-3)
+
+	DIM wOptions				
+	wOptions = "dialogWidth:700px; dialogHeight:600px; help:no; status:no; scroll:no;center:yes"
+	popUpCheck = showModalDialog("check_Dialog_frame.asp?PostBack=false&cType=all",tmpCheckInfo, wOptions)
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	nextAction = checkPrintStop( startCheck, CheckNo )
+if nextAction = -1 then
+	exit sub
+end if
+
+if nextAction > 0 then
+	startCheck = nextAction
+	for j=1 to NoItem
+		if document.all("cChecked").item(j).checked=true then
+			vCheckInfo=document.all("checkinfo").item(j).Value
+			pos=instr(vCheckInfo,"-")
+			if pos>0 then
+				CheckQueueID=Mid(vCheckInfo,1,pos-1)
+				vCheckInfo=Mid(vCheckInfo,pos+1,200)
+			else
+				CheckQueueID=0
+			end if
+			pos=instr(vCheckInfo,"@")
+			if pos>0 then
+				vCheckNo=Mid(vCheckInfo,pos+1,200)
+			end if
+			On Error Resume Next:
+			if NOT TRIM(vCheckNo) = "" then
+				vCheckNo = cLng(vCheckNo)
+			end if
+			for i = startCheck to CheckNo -1
+				if vCheckNo = i then
+					document.all("cStatus").item(j).value = ""
+				end if	
+			next
+		end if
+	next
+	CheckNo = vCheckNo
+end if	
+	
+if NoItem>0 then
+	document.form1.action="print_chk.asp?Print=Yes&NextCheckNo=" & CheckNo & "&WindowName=" & window.name
+	document.form1.method="POST"
+	Document.form1.target="_self"
+	form1.submit()
+end if
+
+End Sub
+
+Sub SelectAllClick()
+NoItem=cInt(document.form1.hNoItem.Value)
+for j=1 to NoItem
+	if document.all("cChecked").item(j).checked=false then
+		document.all("cChecked").item(j).checked=true
+	end if
+next
+End Sub
+Sub MenuMouseOver()
+End Sub
+Sub MenuMouseOut()
+End Sub
+-->
+</script>
+<!--  #INCLUDE FILE="../include/StatusFooter.asp" -->
+</html>

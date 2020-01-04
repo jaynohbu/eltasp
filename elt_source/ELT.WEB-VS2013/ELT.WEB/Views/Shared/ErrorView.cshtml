@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Error";
+    Layout = "~/Views/Shared/_LayoutPopUp.cshtml";
+}
+ 
+  @model ELT.CDT.ELTError
+
+<h2>
+    ERROR</h2>
+<p>
+    Description: @Model.Description
+    <br />
+    Reference Number:@Model.ReferenceID.ToString()</p>
+<div>
+    <p>
+        Please contact your system admin with the reference number.</p>
+</div>

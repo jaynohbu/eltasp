@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Office2003 - Olive Theme" PresetDescription="Infragistics Office2003 Olive Preset.  Sets both Look and Behavior properties." PresetType="All" />-->
+<igtxt:WebTextEdit BorderStyle="Solid" UseBrowserDefaults="False" BorderWidth="1px" BorderColor="#9FB672" CellSpacing="1">
+  <ButtonsAppearance CustomButtonDefaultTriangleImages="Arrow">
+    <ButtonPressedStyle BackColor="#99B079" BorderColor="#75805E" />
+    <ButtonStyle Width="13px" BorderWidth="1px" BorderColor="#858C6C" BorderStyle="Solid" ForeColor="White" BackColor="#829762" />
+    <ButtonHoverStyle BackColor="#BCC794" BorderColor="#8C9762" />
+    <ButtonDisabledStyle BackColor="#E1E1DD" BorderColor="#D7D7D7" ForeColor="#BEBEBE" />
+  </ButtonsAppearance>
+</igtxt:WebTextEdit>

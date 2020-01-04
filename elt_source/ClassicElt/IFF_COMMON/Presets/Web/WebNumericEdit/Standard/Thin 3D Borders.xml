@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Thin 3D Borders" PresetDescription="Infragistics 3d borders.  Sets both Look and Behavior properties." PresetType="All" />-->
+<igtxt:WebNumericEdit BorderStyle="Solid" UseBrowserDefaults="False" BorderWidth="1px" BorderColor="#404040">
+  <ButtonsAppearance>
+    <ButtonPressedStyle>
+      <BorderDetails ColorTop="#404040" ColorBottom="#F0F0F0" ColorRight="#F0F0F0" ColorLeft="#404040" />
+    </ButtonPressedStyle>
+    <ButtonStyle BorderWidth="1px" BorderColor="#F0F0F0" BorderStyle="Solid" BackColor="Control">
+      <BorderDetails ColorBottom="#404040" ColorRight="#404040" />
+    </ButtonStyle>
+  </ButtonsAppearance>
+  <BorderDetails ColorBottom="#F0F0F0" ColorRight="#F0F0F0" />
+</igtxt:WebNumericEdit>

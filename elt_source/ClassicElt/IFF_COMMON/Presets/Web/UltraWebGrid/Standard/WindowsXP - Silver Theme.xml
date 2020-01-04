@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="WindowsXP - Silver Theme" PresetDescription="Infragistics Windows XP Silver Theme. Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<igtbl:UltraWebGrid>
+  <DisplayLayout Section508Complaint="False" RowHeightDefault="20px" Version="3.00" SelectTypeRowDefault="Single" BorderCollapseDefault="Separate" >
+    <AddNewBox>
+      <Style BorderWidth="1px" BorderStyle="Solid" BackColor="LightGray">
+        <BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White" />
+      </Style>
+      <ButtonStyle />
+    </AddNewBox>
+    <Pager>
+      <Style BorderWidth="1px" BorderStyle="Solid" BackColor="LightGray">
+        <BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White" />
+      </Style>
+    </Pager>
+    <HeaderStyleDefault BorderStyle="Solid" HorizontalAlign="Left" ForeColor="Black" BackColor="#CECDDB">
+      <BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White" />
+    </HeaderStyleDefault>
+    <GroupByRowStyleDefault />
+    <RowSelectorStyleDefault />
+    <FrameStyle  BorderWidth="1px" Font-Size="8pt" Font-Names="Verdana" BorderStyle="Solid" BackColor="#F3F3F6"  />
+    <FooterStyleDefault BorderWidth="1px" BorderStyle="Solid" BackColor="LightGray">
+      <BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White" />
+    </FooterStyleDefault>
+    <ActivationObject BorderColor="#A8A7BF">
+      <BorderDetails />
+    </ActivationObject>
+    <GroupByBox>
+      <Style />
+      <BandLabelStyle />
+    </GroupByBox>
+    <RowExpAreaStyleDefault />
+    <SelectedHeaderStyleDefault />
+    <EditCellStyleDefault BorderWidth="0px" BorderStyle="None" />
+    <SelectedGroupByRowStyleDefault />
+    <SelectedRowStyleDefault BackColor="#B7B6CA" />
+    <RowAlternateStyleDefault />
+    <RowStyleDefault BorderWidth="1px" BorderColor="#A8A7BF" BorderStyle="Solid">
+      <Padding Left="3px" />
+      <BorderDetails WidthLeft="0px" WidthTop="0px" />
+    </RowStyleDefault>
+    <ImageUrls />
+    <Strings />
+  </DisplayLayout>
+</igtbl:UltraWebGrid>

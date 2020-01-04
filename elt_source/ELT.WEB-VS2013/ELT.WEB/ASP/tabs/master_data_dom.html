@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Master Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+function IMG1_onclick() {
+
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+var currentTabIndex=-1;
+
+var tabCount=6;// change when the # of tabs differnt 
+var TabImgsOff=new Array();
+
+TabImgsOff[0]='../images/md_eo.gif';//change the names of off-state img src
+TabImgsOff[1]='../images/md_er.gif';
+TabImgsOff[2]='../images/md_ep.gif' ;
+TabImgsOff[3]='../images/md_efl.gif';
+TabImgsOff[4]='../images/md_esn.gif';
+TabImgsOff[5]='../images/md_manum.gif';
+
+var TabImgsOn=new Array();
+
+TabImgsOn[0]='../images/md_eo_over.gif';////change the names of on-state img src
+TabImgsOn[1]='../images/md_er_over.gif';
+TabImgsOn[2]='../images/md_ep_over.gif' ;
+TabImgsOn[3]='../images/md_efl_over.gif';
+TabImgsOn[4]='../images/md_esn_over.gif';
+TabImgsOn[5]='../images/md_manum_over.gif';
+
+var TabPages=new Array();
+
+TabPages[0]='client_profile'
+TabPages[1]='../../IFF_MAIN/ASPX/OnLines/Rate/RateManagement.aspx'
+TabPages[2]='edit_port.asp'
+TabPages[3]='edit_freight.asp'
+TabPages[4]='edit_sche_b.asp'
+TabPages[5]='booking_number.asp'
+
+
+function pointTabOnload(page){ 
+   
+    for(var i=0;i<tabCount;i++){
+    
+        if(TabPages[i]==page){
+        
+            currentTabIndex=i;
+        }
+    }
+    setToCurrentTab();  
+}
+
+function pointTab(obj){
+
+   var temp=obj.id.split('-');
+   currentTabIndex=temp[1]; 
+   
+}
+
+function setToCurrentTab(){
+
+   var index=currentTabIndex; 
+   var id;
+   var img;
+      
+   for(var i=0;i< tabCount;i++){ 
+   
+    id="t-"+i;     
+        if(i!=index){
+             document.getElementById(id).firstChild.src=TabImgsOff[i];
+        }else{
+             document.getElementById(id).firstChild.src=TabImgsOn[i];
+        
+        }
+   }
+}
+
+function refreshTabsOnMoving(){
+
+   var index=currentTabIndex; 
+   var id;
+   var img;      
+   for(var i=0;i< tabCount;i++){ 
+    id="t-"+i;     
+    document.getElementById(id).firstChild.src=TabImgsOff[i];        
+   }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+//-->
+</script>
+<style type="text/css">
+<!--
+.style1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+}
+-->
+</style>
+</head>
+
+<body leftmargin="0" topmargin="0" onLoad="MM_preloadImages('../images/md_eo_over.gif','../images/md_er_over.gif','../images/md_ep_over.gif','../images/md_efl_over.gif','../images/md_esn_over.gif','../images/md_cfn_over.gif')">
+<table width="100%" height="56" border="0" cellpadding="0" cellspacing="0" background="../images/back_md.gif" bgcolor="#efefef">
+  <tr align="left" valign="top">
+    <td width="14%" height="56"><table width="170" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="100%" height="56" align="left" valign="top"></td>
+      </tr>
+    </table></td>
+    <td width="86%" height="56" align="center"><table width="100%" height="56" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td width="1024" height="35" align="right" valign="top"><a href="domfreight.htm" target="topFrame" onClick="MM_goToURL('parent.frames[\'topFrame\']','domfreight.htm','parent.frames[\'mainFrame\']','../domestic/booking.asp');return document.MM_returnValue"><img src="../images/tab_domestic.gif" name="dom" width="79" height="19" border="0" id="dom" style="margin-right:1px; cursor:hand" onMouseOver="MM_swapImage('dom','','/ASP/Images/tab_domestic_over.gif',1)" onMouseOut="MM_swapImgRestore()"></a><a href="air_export.htm" target="topFrame" onClick="MM_goToURL('parent.frames[\'topFrame\']','air_export.htm','parent.frames[\'mainFrame\']','airexport_blank.html');return document.MM_returnValue"><img src="../images/tab_intl.gif" name="intl" width="103" height="19" border="0" id="intl" style="margin-right:135px; cursor:hand" onMouseOver="MM_swapImage('intl','','/ASP/Images/tab_intl_over.gif',1)" onMouseOut="MM_swapImgRestore()"></a></td>
+		  <td width="98" rowspan="2" align="center" valign="bottom"><img src="../Images/icon_newfresh.gif" width="38" height="38" style="cursor:hand; margin-right:15px" onClick="parent.frameReload();"><img src="../images/icon_newlogout.gif" width="35" height="38" border="0" onClick="parent.logout();" style="cursor:hand; margin-right:10px"></td>
+        </tr>
+	 <tr>
+        <td height="21" align="center" valign="top"><a href="site_admin_domestic.htm" target="topFrame" onClick="MM_goToURL('parent.frames[\'topFrame\']','site_admin_domestic.htm','parent.frames[\'mainFrame\']','siteadmin_blank.html');return document.MM_returnValue"><img src="../images/tab_sa_back.gif" width="76" height="21" border="0"></a><a href="master_data_dom.html" target="topFrame" onClick="MM_goToURL('parent.frames[\'topFrame\']','master_data_dom.html','parent.frames[\'mainFrame\']','masterdata_blank.html');return document.MM_returnValue"><img src="../images/tab_md_top.gif" width="84" height="21" border="0"></a><a href="../pre_shipment/pickup_order.asp" target="topFrame" onClick="MM_goToURL('parent.frames[\'topFrame\']','preshipment_dom.html','parent.frames[\'mainFrame\']','../pre_shipment/pickup_order.asp');return document.MM_returnValue"><img src="../images/tab_preship_back2.gif" width="91" height="21" border="0"></a><a href="/ASP/domestic/booking.asp" target="topFrame" onClick="MM_goToURL('parent.frames[\'topFrame\']','domfreight.htm','parent.frames[\'mainFrame\']','../domestic/booking.asp');return document.MM_returnValue"><img src="/ASP/Images/tab_dom.gif" alt="Domestic Freight" width="107" height="21" border="0"></a><a href="acc_tasks.htm" target="topFrame" onClick="MM_goToURL('parent.frames[\'topFrame\']','acc_tasks_domestic.htm','parent.frames[\'mainFrame\']','acct_tasks_blank_page.asp');return document.MM_returnValue"><img src="../images/tab_acc.gif" width="76" height="21" border="0"></a><a href="reports.htm" target="topFrame" onClick="MM_goToURL('parent.frames[\'topFrame\']','reports_domestic.htm','parent.frames[\'mainFrame\']','reports_blank.html');return document.MM_returnValue"><img src="../images/tab_re.gif" width="85" height="21" border="0"></a></td>
+		</tr>     
+      
+    </table></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td height="27" colspan="2" align="center" valign="top" background="/ASP/Images/back_md_2.gif"  onMouseOut="setToCurrentTab()"><img src="../images/spacer.gif" width="12" height="27"><a id="t-0" onClick="pointTab(this);" href="../master_data/client_profile_list.asp?PostBack=false" target="mainFrame" onMouseOver="refreshTabsOnMoving();MM_swapImage('Image14','','../images/md_eo_over.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../images/md_eo.gif" name="Image14" width="122" height="27" border="0" id="IMG1" onClick="return IMG1_onclick()"></a><a id="t-1" onClick="pointTab(this)" href="../../IFF_MAIN/ASPX/OnLines/Rate/RateManagement.aspx" target="mainFrame"  onMouseOver="refreshTabsOnMoving();MM_swapImage('Image15','','../images/md_er_over.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../images/md_er.gif" name="Image15" width="85" height="27" border="0"></a><a id="t-2" onClick="pointTab(this)" href="../master_data/edit_port.asp" target="mainFrame" onMouseOver="refreshTabsOnMoving();MM_swapImage('Image16','','../images/md_ep_over.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../images/md_ep.gif" name="Image16" width="38" height="27" border="0"></a><a id="t-3" onClick="pointTab(this)" href="../master_data/edit_freight.asp" target="mainFrame" onMouseOver="refreshTabsOnMoving();MM_swapImage('Image17','','../images/md_efl_over.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../images/md_efl.gif" name="Image17" width="98" height="27" border="0"></a><a id="t-4" onClick="pointTab(this)" href="../master_data/edit_sche_b.asp" target="mainFrame" onMouseOver="refreshTabsOnMoving();MM_swapImage('Image18','','../images/md_esn_over.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../images/md_esn.gif" name="Image18" width="73" height="27" border="0"></a><a id="t-5" onClick="pointTab(this)" href="../master_data/booking_number.asp" target="mainFrame" onMouseOver="refreshTabsOnMoving();MM_swapImage('Image20','','../images/md_manum_over.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../images/md_manum.gif" name="Image20" width="67" height="27" border="0"></a><img src="../images/spacer.gif" width="12" height="27"></td>
+    </tr>
+</table>
+</body>
+</html>

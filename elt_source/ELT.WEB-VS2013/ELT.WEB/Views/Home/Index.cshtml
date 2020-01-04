@@ -1,0 +1,287 @@
+﻿@using System.Configuration
+@{
+
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+@Scripts.Render("~/Scripts/ELTModal.js");
+<input id="apiBaseUrl" type="hidden" value="@ConfigurationManager.AppSettings["ApiBaseUrl"]" />
+<script type="text/jscript">
+    function getNews(s) {
+        var ss = "<div id='newsleft'><ul class='psmall'>";
+        //        ss = ss + "<li class='style3'>" + "<%=aField0[0]%></li>";
+        //        ss = ss + "<li class='style3'>" + "<%=aField0[1]%></li>";
+        //        ss = ss + "<li class='style3'>" + "<%=aField0[2]%></li>";
+        //        ss = ss + "<li class='style3'>" + "<%=aField0[3]%></li></ul></div>";
+        //        ss = ss + "<li class='style3'>" + "<%=aField0[3]%></li>";
+        ss = ss + "</ul></div>";
+        //        ss = ss + "<li class='style4'><a href='<%=aField2[0]%>' target='_blank'><%=aField1[0]%></a></li>";
+        //        ss = ss + "<li class='style4'><a href='<%=aField2[1]%>' target='_blank'><%=aField1[1]%></a></li>";
+        //        ss = ss + "<li class='style4'><a href='<%=aField2[2]%>' target='_blank'><%=aField1[2]%></a></li>";
+        //        ss = ss + "<li class='style4'><a href='<%=aField2[3]%>' target='_blank'><%=aField1[3]%></a></li></ul></div>";
+        ss = ss + "</ul></div>";
+        document.getElementById("tabbody").innerHTML = ss;
+        s.style.backgroundImage = "url(../../Images/FreightEasy/images/tabnavback_over.gif)";
+        document.getElementById("T1").style.backgroundImage = "url(../../Images/FreightEasy/images/tabnavback_line.gif)";
+        document.getElementById("T2").style.backgroundImage = "url(../../Images/FreightEasy/images/tabnavback_line.gif)";
+        document.getElementById("T4").style.backgroundImage = "url(../../Images/FreightEasy/images/tabnavback_line.gif)";
+    }
+
+    function getUpdates(s) {
+
+        var ss = "<div><ul class='psmall'>";
+        ss = ss + "<li>12/08/2008 - Pickup Order and Ship Out have been Updated</li>";
+        ss = ss + "<li>12/08/2008 - Data transfering from preshipment to Air/Ocean Export has been added</li>";
+        ss = ss + "</ul></div>";
+
+        document.getElementById("tabbody").innerHTML = ss;
+        s.style.backgroundImage = "url(../../Images/FreightEasy/images/tabnavback_over.gif)";
+        document.getElementById("T1").style.backgroundImage = "url(../../Images/FreightEasy/images/tabnavback_line.gif)";
+        document.getElementById("T2").style.backgroundImage = "url(../../Images/FreightEasy/images/tabnavback_line.gif)";
+        document.getElementById("T3").style.backgroundImage = "url(../../Images/FreightEasy/images/tabnavback_line.gif)";
+    }
+    (function () {
+        var init_url = $("#apiBaseUrl").val() + "app/init";   
+            $.ajax(init_url)
+            .always(function (d) {
+                //  console.log(d); 
+            });     
+
+    })();
+    
+
+</script>
+
+            <div>
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="3%" height="24" align="left" valign="top" bgcolor="#FFFFFF">
+                        &nbsp;
+                    </td>
+                    <td width="94%" align="left" valign="top" bgcolor="#FFFFFF">
+                    </td>
+                    <td width="3%" align="left" valign="top" bgcolor="#FFFFFF">
+                    </td>
+                </tr>
+                <tr>
+                    <td height="29" align="left" valign="top" bgcolor="#FFFFFF">
+                    </td>
+                    <td align="left" valign="top" bgcolor="#FFFFFF">
+                        <h1>
+                            A Complete Freight Forwarding System Made Easy</h1>
+                    </td>
+                    <td align="left" valign="top" bgcolor="#FFFFFF">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" valign="top" bgcolor="#FFFFFF">
+                    </td>
+                    <td align="left" valign="top" bgcolor="#FFFFFF">
+                        <p>
+                            FreightEasy&trade; is an all-in-one software system made for Freight Forwarders.
+                            It is web-native, which increases data security, allows users to use it outside
+                            of the office, and greatly reduces the time and cost of implementation. FreightEasy
+                            also has an integrated accounting and reporting system. Its design is very intuitive
+                            with a professional look and feel.&nbsp;Despite these improvements over other systems
+                            on the market, FreightEasy still comes at a competitive price.
+                        </p>
+                    </td>
+                    <td align="left" valign="top" bgcolor="#FFFFFF">
+                    </td>
+                </tr>
+            </table>
+            </div>
+<img src="../../Images/FreightEasy/images/index_intro.jpg"  style="margin-left:3%;display: block;" width="590" height="140" />
+            <div style="border-top:1px solid #a4a3a7;">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td width="3%" align="left" valign="top" id="infogroup">
+                        <table width="100%" height="52" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td id="logtitleback">
+                                    &nbsp;
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td colspan="2" align="left" valign="top">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td align="left" valign="top" id="infogroup">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                   
+                                        <tr id="logtitleback">
+                                            <td>
+                                                <br /><br /><br />
+                                                <a href="/Account/Login"><img src="../../Images/Member-Login-Button.png" width="170" /></a>
+@*                                                <iframe id="loginFrame" style="padding-right: 0px; padding-left: 0px; padding-bottom: 0px;
+                                                    margin: 0px; padding-top: 0px" name="loginFrame" frameborder="no" scrolling="no"
+                                                    height="130px" width="181px" src="/account/login"></iframe>*@
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="24" align="left" valign="bottom">
+                                                <a href="/Home/GettingTips" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('loginhelp','','../../Images/freighteasy/images/button_login_help_over.gif',1)">
+                                                    <img src="../../Images/freighteasy/images/button_login_help.gif" name="loginhelp"
+                                                        width="173" height="14" border="0" id="loginhelp" /></a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="77%" align="left" valign="top" id="infogroupright">
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td width="5%" height="58" align="left" valign="bottom" id="tablineback">
+                                                &nbsp;
+                                            </td>
+                                            <td width="90%" align="left" valign="bottom" id="tablineback">
+                                                <table border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td style="width: 1px; background-color: #aeaeae">
+                                                        </td>
+                                                        <td id="T1" onclick="tabscript(this);">
+                                                            <span style="margin: 0px 5px 0px 5px">
+                                                                <img src="../../Images/FreightEasy/images/spacer.gif" width="1" height="16" align="absmiddle"
+                                                                    alt="" /><a href="#">Account Request</a></span>
+                                                        </td>
+                                                        <td style="width: 1px; background-color: #aeaeae">
+                                                        </td>
+                                                        <td id="T2" onclick="tabscript(this);">
+                                                            <span style="margin: 0px 5px 0px 5px">
+                                                                <img src="../../Images/FreightEasy/images/icon_down.gif" width="13" height="16" align="absmiddle"
+                                                                    alt="" />&nbsp;&nbsp;<a href="#">Downloads</a></span>
+                                                        </td>
+                                                        <td style="width: 1px; background-color: #aeaeae">
+                                                        </td>
+                                                        <td id="T3" onclick="getNews(this);">
+                                                            <span style="margin: 0px 5px 0px 5px">
+                                                                <img src="../../Images/FreightEasy/images/spacer.gif" width="1" height="16" align="absmiddle"
+                                                                    alt="" /><a href="#">News</a></span>
+                                                        </td>
+                                                        <td style="width: 1px; background-color: #aeaeae">
+                                                        </td>
+                                                        <td id="T4" onclick="getUpdates(this);" style="visibility: hidden">
+                                                            <span style="margin: 0px 5px 0px 5px">
+                                                                <img src="../../Images/FreightEasy/images/spacer.gif" width="1" height="16" align="absmiddle"
+                                                                    alt="" /><a href="#">Updates</a></span>
+                                                        </td>
+                                                        <td style="width: 1px; background-color: #aeaeae" style="visibility: hidden">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td width="5%" align="left" valign="bottom" id="tablineback">
+                                                &nbsp;
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td width="35%" align="left" valign="top">
+                                                            <div id="tabbody">
+                                                                <div id="tabbodyleft">
+                                                                    <img src="../../Images/FreightEasy/images/tab_trial_img.gif" width="98" height="98" />
+                                                                </div>
+                                                                <div id="tabbodyright">
+                                                                    <h2>
+                                                                        Want to know how FreightEasy works? Free Trial Accounts are available.</h2>
+                                                                    <ul class="psmall">
+                                                                        <li>
+                                                                            <img src="../../Images/FreightEasy/images/tabbutton1.gif" width="18" height="11"
+                                                                                align="absmiddle" />Instant account setup</li>
+                                                                        <li>
+                                                                            <img src="../../Images/FreightEasy/images/tabbutton2.gif" width="18" height="11"
+                                                                                align="absmiddle" />A full version of the system</li>
+                                                                    </ul>
+                                                                    <ul class="psmallbottom">
+                                                                        <li>
+                                                                            <img src="../../Images/FreightEasy/images/tabbutton3.gif" width="18" height="11"
+                                                                                align="absmiddle" />No installation required</li>
+                                                                    </ul>
+                                                                    <h2 class="buttonlink">
+                                                                        <a href="account_setup.asp">Get Started Now!<!--<img src="../../Images/FreightEasy/images/button_trial.gif" border="0" />--></a></h2>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td width="94%" align="left" valign="top">
+                        &nbsp;
+                    </td>
+                    <td width="3%">
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
+            </div>
+        
+@section righttop{
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                               
+                                <td width="100%" align="left" valign="top" bgcolor="#edf2f8">
+                                    <div id="features">
+                                        <img src="../../Images/FreightEasy/images/feature_default.gif" width="202" height="52" />
+                                        <h4>
+                                            FreightEasy&trade; was designed with one overarching goal in mind: to give our members
+                                            a competitive edge. We have achieved this goal by concentrating on system features
+                                            that will have a real impact on real businesses.</h4>
+                                        <h5>
+                                            <a href="/Home/FeatureStory">< Read More ></a></h5>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                               
+                                <td height="1" bgcolor="#9dc8ef">
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td align="left" valign="top">
+                                    <div id="featurequeston">
+                                        Learn how FreightEasy&trade; features will improve the way you do business.
+                                    </div>
+                                    <select name="listbox" id="listbox" onchange="javascript:listboxscript();">
+                                        <option value="0">Choose from the following:</option>
+                                        <option value="1">Customer Care</option>
+                                        <option value="2">Mobility</option>
+                                        <option value="3">Accounting</option>
+                                        <option value="4">SaaS</option>
+                                        <option value="5">System Design</option>
+                                    </select>
+                                </td>
+                            </tr>
+                         
+                        </table>
+}
+@if (ViewBag.ShowNewUser != null)
+{ 
+    <script type="text/jscript">
+        $(document).ready(function () {
+            var Url = '@Url.Content("~/Account/NewRegistrationViaFileAccess")'
+            ShowModalPageIframe(Url);
+
+        });    
+    </script>
+}

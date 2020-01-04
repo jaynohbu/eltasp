@@ -1,0 +1,9 @@
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.RateManagement\ELT.Shared\bin\Release\ELT.Shared.dll.config
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.RateManagement\ELT.Shared\bin\Release\ELT.Shared.dll
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.RateManagement\ELT.Shared\bin\Release\ELT.Shared.pdb
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.RateManagement\ELT.Shared\bin\Release\EntityFramework.dll
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.RateManagement\ELT.Shared\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.RateManagement\ELT.Shared\bin\Release\EntityFramework.xml
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.RateManagement\ELT.Shared\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.RateManagement\ELT.Shared\obj\Release\ELT.Shared.dll
+C:\Users\Jay\Source\Workspaces\ELT.WEB\ELT.RateManagement\ELT.Shared\obj\Release\ELT.Shared.pdb

@@ -1,0 +1,279 @@
+.Sprite_Mail,
+.Sprite_Calendar,
+.Sprite_ExpandPane,
+.Sprite_Arrow,
+.Sprite_Feeds,
+.Sprite_Contacts,
+.Sprite_CollapsePane,
+.Sprite_Logo,
+.Sprite_Frameworks,
+.Sprite_Attachment_Light,
+.Sprite_NewAppointment,
+.Sprite_SendMail,
+.Sprite_NewContact,
+.Sprite_Help,
+.Sprite_Search_Pressed,
+.Sprite_MarkAs,
+.Sprite_NewMail,
+.Sprite_Back,
+.Sprite_RemoveLarge,
+.Sprite_Search,
+.Sprite_Theme,
+.Sprite_Save,
+.Sprite_Print,
+.Sprite_Reply,
+.Sprite_Search_Hover,
+.Sprite_SentItems,
+.Sprite_Inbox,
+.Sprite_Announcements,
+.Sprite_ASP,
+.Sprite_DevExtreme,
+.Sprite_Drafts,
+.Sprite_Attachment,
+.Sprite_BuyNow,
+.Sprite_MarkAsUnread,
+.Sprite_About,
+.Sprite_DownloadSource,
+.Sprite_MarkAsRead,
+.Sprite_EditContact,
+.Sprite_RemoveSmall
+{
+    background-image: url('sprite.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+.Sprite_Mail
+{
+    background-position: 0px 0px;
+    width: 50px;
+    height: 50px;
+}
+.Sprite_Calendar
+{
+    background-position: -51px 0px;
+    width: 50px;
+    height: 50px;
+}
+.Sprite_ExpandPane
+{
+    background-position: -102px 0px;
+    width: 30px;
+    height: 32px;
+}
+.Sprite_Arrow
+{
+    background-position: -116px -34px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Feeds
+{
+    background-position: 0px -51px;
+    width: 50px;
+    height: 50px;
+}
+.Sprite_Contacts
+{
+    background-position: -51px -51px;
+    width: 50px;
+    height: 50px;
+}
+.Sprite_CollapsePane
+{
+    background-position: -102px -51px;
+    width: 30px;
+    height: 32px;
+}
+.Sprite_Logo
+{
+    background-position: 0px -102px;
+    width: 200px;
+    height: 40px;
+}
+.Sprite_Frameworks
+{
+    background-position: -206px -105px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Attachment_Light
+{
+    background-position: -207px -126px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_NewAppointment
+{
+    background-position: 0px -143px;
+    width: 32px;
+    height: 32px;
+}
+.Sprite_SendMail
+{
+    background-position: -66px -143px;
+    width: 32px;
+    height: 32px;
+}
+.Sprite_NewContact
+{
+    background-position: -99px -143px;
+    width: 32px;
+    height: 32px;
+}
+.Sprite_Help
+{
+    background-position: -132px -143px;
+    width: 32px;
+    height: 32px;
+}
+.Sprite_MarkAs
+{
+    background-position: -33px -176px;
+    width: 32px;
+    height: 32px;
+}
+.Sprite_NewMail
+{
+    background-position: -66px -176px;
+    width: 32px;
+    height: 32px;
+}
+.Sprite_Back
+{
+    background-position: -99px -176px;
+    width: 32px;
+    height: 32px;
+}
+.Sprite_RemoveLarge
+{
+    background-position: -165px -176px;
+    width: 32px;
+    height: 32px;
+}
+.Sprite_Search
+{
+    background-position: -198px -176px;
+    width: 23px;
+    height: 23px;
+}
+.Sprite_Theme
+{
+    background-position: 0px -209px;
+    width: 32px;
+    height: 32px;
+}
+.Sprite_Save
+{
+    background-position: -33px -209px;
+    width: 32px;
+    height: 32px;
+}
+.Sprite_Print
+{
+    background-position: -66px -209px;
+    width: 32px;
+    height: 32px;
+}
+.Sprite_Reply
+{
+    background-position: -99px -209px;
+    width: 32px;
+    height: 32px;
+}
+.Sprite_Search_Hover
+{
+    background-position: -132px -209px;
+    width: 23px;
+    height: 23px;
+}
+.Sprite_Search_Pressed
+{
+    background-position: -198px -143px;
+    width: 23px;
+    height: 23px;
+}
+.Sprite_SentItems
+{
+    background-position: -163px -212px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Inbox
+{
+    background-position: -185px -212px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Announcements
+{
+    background-position: -207px -212px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_ASP
+{
+    background-position: -5px -245px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_DevExtreme
+{
+    background-position: -27px -245px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Drafts
+{
+    background-position: -49px -245px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_Attachment
+{
+    background-position: -66px -242px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_BuyNow
+{
+    background-position: -83px -242px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_MarkAsUnread
+{
+    background-position: -100px -242px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_About
+{
+    background-position: -117px -242px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_DownloadSource
+{
+    background-position: -134px -242px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_MarkAsRead
+{
+    background-position: -151px -242px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_EditContact
+{
+    background-position: -168px -242px;
+    width: 16px;
+    height: 16px;
+}
+.Sprite_RemoveSmall
+{
+    background-position: -185px -242px;
+    width: 16px;
+    height: 16px;
+}
+

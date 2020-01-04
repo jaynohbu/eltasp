@@ -1,0 +1,20 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register Assembly="DevExpress.Web.ASPxPivotGrid.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxPivotGrid" TagPrefix="dxwpg" %>
+<%@ Register Assembly="DevExpress.PivotGrid.v13.2.Core, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.XtraPivotGrid" TagPrefix="temp" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<dxmvc:MVCxPivotGrid runat="server">
+	<Images SpriteCssFilePath="~/App_Themes/iOS/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/iOS/PivotGrid/Loading.gif" />
+        <CustomizationFieldsBackground Url="~/App_Themes/iOS/PivotGrid/pcHeaderBack.png" />
+        <TreeViewNodeLoadingPanel Url="~/App_Themes/iOS/PivotGrid/tvNodeLoading.gif" />
+	</Images>
+	<OptionsPager CurrentPageNumberFormat="{0}">
+    </OptionsPager>
+    <Styles CssFilePath="~/App_Themes/iOS/{0}/styles.css" CssPostfix="iOS">
+        <LoadingPanel ImageSpacing="5" />
+    </Styles>
+    <OptionsCustomization CustomizationWindowWidth="250" CustomizationWindowHeight="400" 
+        FilterPopupWindowWidth="350" FilterPopupWindowHeight="300"
+        FilterPopupWindowMinHeight="250" FilterPopupWindowMinWidth="250" />
+    <StylesEditors ButtonEditCellSpacing="0" />
+</dxmvc:MVCxPivotGrid>

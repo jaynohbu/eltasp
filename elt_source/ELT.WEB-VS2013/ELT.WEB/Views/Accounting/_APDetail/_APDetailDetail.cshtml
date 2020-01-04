@@ -1,0 +1,103 @@
+﻿@model ELT.WEB.Models.APDetailDetailModel
+
+@Html.DevExpress().GridView(settings => {
+   
+
+     settings.Name = "detailGrid_" + Model.Key.Replace(' ', '_');
+    settings.SettingsDetail.MasterGridName = "grid";
+    settings.CallbackRouteValues = new { Controller = "Accounting", Action = "APDetailDetail", KeyFieldName = Model.KeyFieldName, Key = Model.Key };
+    settings.Width = Unit.Percentage(100);
+    settings.KeyFieldName = Model.KeyFieldName;
+    settings.SettingsPager.PageSize = 50;
+    settings.Columns.Add("Type");
+    settings.Columns.Add("Date");
+   
+    settings.Columns.Add(c =>
+    {
+        c.Caption = "No.";
+        c.FieldName = "Num";
+        c.SetDataItemTemplateContent(a =>
+        {
+            if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Num"))))
+            {
+                string url = DataBinder.Eval(a.DataItem, "Link").ToString();
+                url = "\"" + url + "\"";
+                ViewContext.Writer.Write(
+                    "<a href='javascript:void(0)' onclick = 'viewPop(" + url + ")'>" + a.Text + "</a>");
+            }
+        });
+
+        c.CellStyle.CssClass = "numeric";
+    });
+
+
+   
+    settings.Columns.Add("Memo", "Memo");
+    settings.Columns.Add(column =>
+    {
+        column.FieldName = "Start";
+        column.Caption = "Start Balance";
+        column.SetDataItemTemplateContent(a =>
+        {
+            if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Start"))))
+            {
+                string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                if (a.Text == "0") val = ".00";
+                ViewContext.Writer.Write(val
+                   );
+            }
+        });
+    });
+
+
+    settings.Columns.Add(column =>
+    {
+        column.FieldName = "Billed";
+        column.SetDataItemTemplateContent(a =>
+        {
+            if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Billed"))))
+            {
+                string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                if (a.Text == "0") val = ".00";
+                ViewContext.Writer.Write(val
+                   );
+            }
+        });
+    });
+
+
+
+    settings.Columns.Add(column =>
+    {
+        column.FieldName = "Paid";
+        column.SetDataItemTemplateContent(a =>
+        {
+            if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Paid"))))
+            {
+                string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                if (a.Text == "0") val = ".00";
+                ViewContext.Writer.Write(val
+                   );
+            }
+        });
+    });
+
+    settings.Columns.Add(column =>
+    {
+        column.FieldName = "Balance";
+        column.SetDataItemTemplateContent(a =>
+        {
+            if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Balance"))))
+            {
+                string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                if (a.Text == "0") val = ".00";
+                ViewContext.Writer.Write(val
+                   );
+            }
+        });
+    });
+
+
+   
+
+  }).Bind(Model.Elements).GetHtml()

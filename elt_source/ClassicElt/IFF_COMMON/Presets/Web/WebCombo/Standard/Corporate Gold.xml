@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Corporate Gold" PresetDescription="Infragistics Corporate Gold. Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<igcmbo:WebCombo BorderStyle="Solid" DropImage1="/ig_common/images/ig_cmboCorpGold_up.gif" DropImage2="/ig_common/images/ig_cmboCorpGold_down.gif" BorderWidth="1px" DropImageXP1="/ig_common/images/ig_cmboCorpGold_up.gif" DropImageXP2="/ig_common/images/ig_cmboCorpGold_down.gif" SelBackColor="169, 163, 61" BackColor="White" ForeColor="Black" BorderColor="LightGray" SelForeColor="White" Version="3.00">
+  <DropDownLayout DropdownWidth="325px" BorderCollapse="Separate" RowHeightDefault="20px" HeaderClickAction="Select" DropdownHeight="130px">
+    <RowStyle BorderWidth="1px" Font-Size="8pt" Font-Names="Tahoma" BorderColor="Gray" BorderStyle="Solid" BackColor="White">
+      <BorderDetails WidthLeft="0px" WidthTop="0px" />
+    </RowStyle>
+    <RowSelectorStyle />
+    <SelectedRowStyle ForeColor="Black" BackColor="#A9A33D" />
+    <HeaderStyle Font-Size="10pt" Font-Names="Trebuchet MS" BorderStyle="Solid" BackColor="#A9A33D">
+      <BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White" />
+    </HeaderStyle>
+    <RowAlternateStyle />
+    <FooterStyle />
+    <FrameStyle Width="100%" Cursor="Default" BorderWidth="2px" Font-Size="10pt" Font-Names="Verdana" BorderStyle="Ridge" BackColor="White" Height="100%" />
+    <ImageUrls />
+  </DropDownLayout>
+  <ExpandEffects ShadowColor="LightGray" />
+</igcmbo:WebCombo>

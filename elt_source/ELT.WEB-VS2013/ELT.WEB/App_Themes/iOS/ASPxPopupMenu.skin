@@ -1,0 +1,10 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxm" Namespace="DevExpress.Web.ASPxMenu" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxm:ASPxPopupMenu runat="server" CssFilePath="~/App_Themes/iOS/{0}/styles.css" SpriteCssFilePath="~/App_Themes/iOS/{0}/sprite.css" CssPostfix="iOS" ShowSubMenuShadow="false">
+    <RootItemSubMenuOffset FirstItemY="-11" LastItemY="-11" Y="-11" />
+    <ItemSubMenuOffset FirstItemY="-11" LastItemY="-11" Y="-11" />
+    <ItemStyle PopOutImageSpacing="0" DropDownButtonSpacing="6" ToolbarPopOutImageSpacing="0" ToolbarDropDownButtonSpacing="6" />
+    <SubMenuItemStyle PopOutImageSpacing="0" DropDownButtonSpacing="0" ToolbarPopOutImageSpacing="0" ToolbarDropDownButtonSpacing="0" />
+    <LoadingPanelImage Url="~/App_Themes/iOS/Web/Loading.gif" />
+</dxm:ASPxPopupMenu>

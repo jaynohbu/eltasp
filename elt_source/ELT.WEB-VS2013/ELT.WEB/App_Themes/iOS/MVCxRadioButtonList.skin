@@ -1,0 +1,8 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxmvc:MVCxRadioButtonList runat="server" SpriteCssFilePath="~/App_Themes/iOS/{0}/sprite.css" CssPostfix="iOS" CssFilePath="~/App_Themes/iOS/{0}/styles.css" TextAlign="Left">
+    <CheckedImage SpriteProperties-CssClass="dxEditors_edtRadioButtonListOn_iOS" SpriteProperties-DisabledCssClass="dxEditors_edtRadioButtonListOnDisabled_iOS" />
+    <UncheckedImage SpriteProperties-CssClass="dxEditors_edtRadioButtonListOff_iOS" SpriteProperties-DisabledCssClass="dxEditors_edtRadioButtonListOffDisabled_iOS" />
+</dxmvc:MVCxRadioButtonList>

@@ -1,0 +1,87 @@
+﻿body 
+{
+    
+}
+
+.DevFromTable 
+{
+    border: 1px Solid #9F9F9F;
+}
+
+.DevFromTable  .Header {
+	cursor: pointer;
+	white-space: nowrap;
+	padding: 4px 6px;
+	border: 1px Solid #9F9F9F;
+	background-color: #DCDCDC;
+	overflow: hidden;
+	font-weight: normal;
+	text-align: left;
+	font: normal 12px Tahoma, Geneva, sans-serif;
+}
+
+.DevFromTable tr
+{
+    
+    	border-top-width:0px;
+}
+
+.DevFromTable td
+{
+    font: 12px Tahoma, Geneva, sans-serif;
+    overflow: hidden;
+ 
+    border-bottom: 1px Solid #CFCFCF;
+	border-left: 1px Solid #CFCFCF;
+	border-top: 1px Solid #CFCFCF;
+	border-right: 1px Solid #CFCFCF;	
+	border-left-width:0px;
+	padding: 3px 3px 3px 3px; 
+	
+}
+
+
+
+.DevFromTable .jnHyperlink {
+	font: normal 12px Tahoma, Geneva, sans-serif;
+	color: #0d45b7;
+}
+
+
+.DevFromTable a {
+	margin: 0 3px 0 0;
+	color: #0d45b7;
+}
+
+.jnListBox {
+	background-color: white;
+	border: 1px solid #A0A0A0;
+	font: 12px Tahoma, Geneva, sans-serif;	
+	height: 109px;
+}
+
+.jnListBoxItem {
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	font: normal 12px Tahoma, Geneva, sans-serif;
+	padding: 3px 2px 4px 3px;
+	white-space: nowrap;
+	text-align: left;
+	color: black;
+}
+
+.DevFromTable input[type='text'], input[type='password']{
+	display: block;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	height: 14px;
+	margin-bottom: 0px;
+}

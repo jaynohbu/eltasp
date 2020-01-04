@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Shades of Gray" PresetDescription="Infragistics Shades of Gray Listbar Preset.  Sets both Look and Behavior properties." PresetType="All" />-->
+<iglbar:UltraWebListbar BarWidth="100%" BorderStyle="None" MergeStyles="True" ItemSelectionStyle="IconOnlySelection" BorderWidth="4px">
+  <DefaultGroupStyle Cursor="Default" Height="100%" BorderWidth="2px" BorderStyle="Inset" BackColor="WhiteSmoke" />
+  <DefaultItemStyle Cursor="Default" BorderWidth="1px" Font-Size="10pt" Font-Names="Microsoft Sans Serif" BorderColor="#4A657B" BorderStyle="Solid" ForeColor="MediumBlue">
+    <Padding Left="5px" />
+    <Margin Left="1px" />
+  </DefaultItemStyle>
+  <DefaultItemHoverStyle Cursor="Default" BorderWidth="1px" BorderStyle="Outset">
+    <Margin Left="0px" />
+  </DefaultItemHoverStyle>
+  <DefaultGroupButtonSelectedStyle Cursor="Default" BorderWidth="1px" BorderStyle="Inset" />
+  <DefaultItemSelectedStyle Cursor="Default" BorderWidth="1px" BorderStyle="Inset">
+    <Margin Left="0px" />
+  </DefaultItemSelectedStyle>
+  <DefaultGroupButtonStyle Cursor="Default" Height="23px" BorderWidth="1px" Font-Size="10pt" Font-Names="Microsoft Sans Serif" BorderStyle="Outset" BackColor="Gainsboro">
+    <Padding Bottom="0px" Left="5px" Top="0px" Right="5px" />
+  </DefaultGroupButtonStyle>
+  <DefaultGroupButtonHoverStyle Cursor="Default" BorderWidth="1px" Font-Bold="True" BorderColor="Control" BorderStyle="Outset" BackColor="Menu" />
+</iglbar:UltraWebListbar>

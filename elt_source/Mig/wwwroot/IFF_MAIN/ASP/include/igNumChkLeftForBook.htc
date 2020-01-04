@@ -1,0 +1,90 @@
+<PUBLIC:COMPONENT lightWeight="true">
+	<PUBLIC:ATTACH event="oncontentready" for="element" onevent="evtContentReady();" />
+	<PUBLIC:ATTACH event="onfocus"        for="element" onevent="evtFocus();"        />
+	<PUBLIC:ATTACH event="onkeydown"      for="element" onevent="evtKeydown();"      />
+	<PUBLIC:ATTACH event="onblur"         for="element" onevent="evtBlur();"         />
+	<PUBLIC:PROPERTY name="defaultValue" value="" />
+	<PUBLIC:METHOD name="setDefaultValue" />
+
+	 <SCRIPT language="javascript" type="text/javascript">
+	    <!--
+	    
+		function evtContentReady()
+		{
+			if (!checkTagType()) return;
+			element.runtimeStyle.textAlign = "left";
+			if (trim(element.value).length == 0)
+			element.value = defaultValue;
+
+		}
+
+		function trim(sourceString)
+		{
+			if (!checkTagType()) return;
+			return sourceString.replace(/(?:^\s+|\s+$)/ig, "");
+		}
+		
+		function evtFocus()
+		{
+			if (!checkTagType()) return;
+			element.runtimeStyle.imeMode = "disabled";
+			element.select();
+		}
+
+		function evtKeydown()
+		{
+			if (!checkTagType()) return;
+			
+			var nKey = event.keyCode;
+		
+			if (event.ctrlKey)
+			{
+			if (nKey == 65 || nKey == 67 || nKey == 82 || 
+				nKey == 86 || nKey == 88 || nKey == 90)
+				event.returnValue = true;
+			else
+				event.returnValue = false;
+			}
+			else
+			{
+			if ((nKey >= 48 && nKey <= 57)  || 
+				(nKey >= 96 && nKey <= 105) || 
+				(nKey >= 33 && nKey <= 40)  ||
+				nKey == 8  || nKey == 9  || nKey == 27  || nKey == 43  || 
+				nKey == 45 || nKey == 46 || nKey == 107 || nKey == 109
+			)
+				event.returnValue = true;
+			else
+				event.returnValue = false;
+			}
+		}
+		
+		function evtBlur()
+		{
+			if (!checkTagType()) return;
+			var objRegEx = /^\d+$/ig;
+        
+			if (!objRegEx.test(trim(element.value)))
+			element.value = defaultValue;
+		}
+
+		function checkTagType()
+		{
+			if (element.tagName.toUpperCase() == "INPUT" &&
+			element.type.toUpperCase()    == "TEXT")
+			return true;
+                
+			return false;
+		}
+
+		function setDefaultValue(newValue)
+		{
+			element.defaultValue = newValue;
+		}
+
+
+	    //-->
+	</SCRIPT>
+
+ 
+</PUBLIC:COMPONENT>

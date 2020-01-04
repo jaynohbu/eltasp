@@ -1,0 +1,50 @@
+﻿@model ELT.WEB.Models.RateHeaderRow
+@Html.HiddenFor(m => m.RateType)
+@if (Model.Mode == ELT.WEB.Models.RateHeaderRowMode.Add)
+{
+    <script>
+
+        $(document).ready(function () {
+
+            $(".ColHeaderDropDownCustomer").find(".RateColText").ComboBoxJnoh({ Width: "200px", TypeOfOrg: "All", ValueField: $(".ColHeaderDropDownCustomer").find(".RateHeaderColValue").get(0) });
+            $(".ColHeaderDropDownAgent").find(".RateColText").ComboBoxJnoh({ Width: "200px", TypeOfOrg: "Agent", ValueField: $(".ColHeaderDropDownAgent").find(".RateHeaderColValue").get(0) });
+            
+            $('.ColHeaderEditBegin').each(function(){                
+                if ($(this).val() == undefined || $(this).val() == "") {
+                    $(this).watermark('Enter Wt.');
+                }
+            });
+
+            $('.ColHeaderEditEnd').each(function () {
+                if ($(this).val() == undefined || $(this).val() == "") {
+                    $(this).watermark('Enter Wt.');
+                }
+            });
+          
+            //spnAddRoute
+        });
+        function IsNumber(val) {
+         
+            if(isNaN(val)){
+                
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <tr class="RateRowAdd">
+        @Html.EditorFor(m => m.RateHeaderColumns)
+       
+    </tr>
+
+}
+else
+{
+
+
+    <tr>
+        @Html.EditorFor(m => m.RateHeaderColumns)
+        <th></th>      
+    </tr>
+
+}

@@ -1,0 +1,190 @@
+﻿@Html.DevExpress().GridView(
+    settings => {
+        settings.Name = "gvLineItems";
+        settings.KeyFieldName = "ID";
+        settings.Width = Unit.Percentage(100);
+        settings.SettingsPager.PageSize = 50;
+        settings.CallbackRouteValues 
+            = new { Controller = "AirExport", 
+                Action = "_AESLineItemsPartial",
+                    AesNo = ViewData["AesNo"]
+            };
+        settings.CustomActionRouteValues = 
+            new { Controller = "AirExport",
+                  Action = "ChangeEditModePartial",
+                  AesNo = ViewData["AesNo"]
+            };
+        settings.SettingsEditing.AddNewRowRouteValues 
+            = new { Controller = "AirExport",
+                    Action = "EditModesAddNewPartial",
+                    AesNo = ViewData["AesNo"],
+            };
+        settings.SettingsEditing.UpdateRowRouteValues 
+            = new { Controller = "AirExport",
+                    Action = "EditModesUpdatePartial",
+                    AesNo = ViewData["AesNo"]
+            };
+        settings.SettingsEditing.DeleteRowRouteValues 
+            = new { Controller = "AirExport",
+                    Action = "EditModesDeletePartial",
+                    AesNo = ViewData["AesNo"]
+            };
+
+
+        //settings.ClientSideEvents.BeginCallback = "OnBeginCallback";
+                    
+        
+
+        settings.SettingsEditing.Mode = GridViewEditingMode.Inline;
+        settings.SettingsBehavior.ConfirmDelete = true;
+        settings.SettingsPopup.EditForm.Width = 600;
+
+        settings.CommandColumn.Visible = true;
+        settings.CommandColumn.ShowNewButton = true;
+        settings.CommandColumn.ShowDeleteButton = true;
+        settings.CommandColumn.ShowEditButton = true;
+
+
+        settings.Columns.Add(column => {
+            column.FieldName = "Origin";
+            column.Caption = "Origin";
+
+            column.ColumnType = MVCxGridViewColumnType.ComboBox;
+            var comboBoxProperties = column.PropertiesEdit as ComboBoxProperties;
+            comboBoxProperties.DataSource = ELT.WEB.Models.AESLineItemEntity.OriginList;
+
+            comboBoxProperties.ValueType = typeof(string);
+        });
+        string elt_account_no = ((ELT.CDT.ELTUser)System.Web.HttpContext.Current.Session["authBLGetELTUser"]).elt_account_number;
+        
+        
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "ItemDesc";
+            column.Caption = "ItemDesc";
+            column.Name = "ItemDesc";
+            column.ColumnType = MVCxGridViewColumnType.ComboBox;
+            var comboBoxProperties = column.PropertiesEdit as ComboBoxProperties;
+            comboBoxProperties.DataSource = ELT.WEB.Models.AESLineItemEntity.ItemList(elt_account_no);
+
+            comboBoxProperties.ValueType = typeof(string);
+            comboBoxProperties.ClientSideEvents.SelectedIndexChanged = "ItemDescSelected";
+            
+        });
+        
+        settings.Columns.Add("ScheduleB");
+        
+        settings.Columns.Add(column => {
+            column.FieldName = "Qty1";
+
+            column.ColumnType = MVCxGridViewColumnType.SpinEdit;
+            var spinEditProperties = column.PropertiesEdit as SpinEditProperties;
+            spinEditProperties.NumberType = SpinEditNumberType.Integer;
+            spinEditProperties.MinValue = 0;
+            spinEditProperties.MaxValue = 10000;
+        });
+
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Unit1";
+            column.Caption = "Unit1";
+            column.ColumnType = MVCxGridViewColumnType.ComboBox;
+            var comboBoxProperties = column.PropertiesEdit as ComboBoxProperties;
+            comboBoxProperties.DataSource = ELT.WEB.Models.AESLineItemEntity.UnitList();
+
+            comboBoxProperties.ValueType = typeof(string);
+           // comboBoxProperties.ClientSideEvents.SelectedIndexChanged = "ItemDescSelected";
+
+        });
+        
+        
+        
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Qty2";
+
+            column.ColumnType = MVCxGridViewColumnType.SpinEdit;
+            var spinEditProperties = column.PropertiesEdit as SpinEditProperties;
+            spinEditProperties.NumberType = SpinEditNumberType.Integer;
+            spinEditProperties.MinValue = 0;
+            spinEditProperties.MaxValue = 10000;
+        });
+
+
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Unit2";
+            column.Caption = "Unit2";
+            column.ColumnType = MVCxGridViewColumnType.ComboBox;
+            var comboBoxProperties = column.PropertiesEdit as ComboBoxProperties;
+            comboBoxProperties.DataSource = ELT.WEB.Models.AESLineItemEntity.UnitList();
+
+            comboBoxProperties.ValueType = typeof(string);
+            // comboBoxProperties.ClientSideEvents.SelectedIndexChanged = "ItemDescSelected";
+
+        });
+        
+      
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "ItemValue";
+
+            column.ColumnType = MVCxGridViewColumnType.SpinEdit;
+            var spinEditProperties = column.PropertiesEdit as SpinEditProperties;
+            spinEditProperties.DisplayFormatString = "c";
+            spinEditProperties.DisplayFormatInEditMode = true;
+            spinEditProperties.MinValue = 0;
+            spinEditProperties.MaxValue = 1000000;
+        });
+
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "GrossWeight";
+
+            column.ColumnType = MVCxGridViewColumnType.SpinEdit;
+            var spinEditProperties = column.PropertiesEdit as SpinEditProperties;
+            spinEditProperties.DisplayFormatString = "f";
+            spinEditProperties.DisplayFormatInEditMode = true;
+            spinEditProperties.MinValue = 0;
+            spinEditProperties.MaxValue = 1000000;
+        });
+
+        settings.Columns.Add("VehicleIDType");
+        settings.Columns.Add("VehicleID");
+        settings.Columns.Add("VehicleTitle");
+        settings.Columns.Add("VihicleTitleState");
+
+
+
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "ExportCode";
+            column.Caption = "ExportCode";
+            column.ColumnType = MVCxGridViewColumnType.ComboBox;
+            var comboBoxProperties = column.PropertiesEdit as ComboBoxProperties;
+            comboBoxProperties.DataSource = ELT.WEB.Models.AESLineItemEntity.ExportCodeList();
+            comboBoxProperties.TextField = "Value";
+            comboBoxProperties.ValueType = typeof(string);
+            // comboBoxProperties.ClientSideEvents.SelectedIndexChanged = "ItemDescSelected";
+
+        });
+
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "LicenseType";
+            column.Caption = "LicenseType";
+            column.ColumnType = MVCxGridViewColumnType.ComboBox;
+            var comboBoxProperties = column.PropertiesEdit as ComboBoxProperties;
+            comboBoxProperties.DataSource = ELT.WEB.Models.AESLineItemEntity.LicenseTypeList();
+            comboBoxProperties.TextField = "Value";
+            comboBoxProperties.ValueType = typeof(string);
+            // comboBoxProperties.ClientSideEvents.SelectedIndexChanged = "ItemDescSelected";
+
+        });
+        
+        
+
+        settings.Columns.Add("ECCN");
+        settings.Columns.Add("LicenseNumber");
+        
+    }).Bind(Model).GetHtml()

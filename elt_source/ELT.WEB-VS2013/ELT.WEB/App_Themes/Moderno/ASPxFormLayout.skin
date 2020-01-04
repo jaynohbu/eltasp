@@ -1,0 +1,7 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxFormLayout" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %> 
+
+<dx:ASPxFormLayout runat="server" CssFilePath="~/App_Themes/Moderno/{0}/styles.css" CssPostfix="Moderno">
+</dx:ASPxFormLayout>
+
+

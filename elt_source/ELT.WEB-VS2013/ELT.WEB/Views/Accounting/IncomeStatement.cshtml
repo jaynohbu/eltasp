@@ -1,0 +1,66 @@
+﻿@model IEnumerable
+@{
+    ViewBag.Title = "Income Statement";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+
+@using ELT.WEB.Models
+@using ELT.CDT
+@using ELT.WEB.Controllers
+
+@Styles.Render("~/Content/css/ReportAccounting.css")
+<hgroup>
+    <h1 class="pageheader">@ViewBag.Title</h1>
+</hgroup>
+
+
+@using (Html.BeginForm("IncomeStatement", "Accounting", FormMethod.Post, new { Operation = "IncomeStatement" }))
+{
+if (ViewBag.IsSelected != true)
+    {
+        Html.RenderPartial("_IncomeStatement/_IncomeStatementSelectionBox", new IncomeStatementSelection(ViewBag.EltAccountNumber));
+    }
+    else
+    {
+  
+       
+  
+    <table>
+        <tr>
+            <td></td>
+            <td colspan="2" style="text-align:right">
+                @foreach (string typeName in GridViewExportHelper.ExportTypes.Keys)
+                {
+                    <input type="submit" name="@typeName" value="@GridViewExportHelper.ExportTypes[typeName].Title" />
+                    <text>&nbsp;</text>
+                    //http://localhost/Report/AirExport
+                }
+
+                <input type="button" name="ReSelect" value="Go Back to Search" onclick="RedirectParentTo('@Url.Content("~/Accounting/IncomeStatement/parm=incom")')" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:left">
+                <br />
+                Period: @ViewBag.PeriodBegin ~ @ViewBag.PeriodEnd
+               
+                @if (ViewBag.Branch != "")
+                {   <br />
+                    <text>  Branch: @ViewBag.Branch</text>
+
+                }
+                <br />
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                @Html.Partial("_IncomeStatement/_IncomeStatementPartial", Model)
+            </td>
+        </tr>
+        <tr><td></td><td></td><td></td></tr>
+    </table>
+
+     
+    
+    }
+}

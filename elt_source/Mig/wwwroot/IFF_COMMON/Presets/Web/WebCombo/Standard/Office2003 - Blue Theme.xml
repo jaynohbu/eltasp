@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Office2003 - Blue Theme" PresetDescription="Infragistics Office 2003 Blue for WebCombo. Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<igcmbo:WebCombo BorderStyle="Solid" DropImage1="/ig_common/images/Office2003DropDownBlue.gif" DropImage2="/ig_common/images/Office2003DropDownOrange.gif" BorderWidth="1px" DropImageXP1="/ig_common/images/Office2003DropDownBlue.gif" DropImageXP2="/ig_common/images/Office2003DropDownOrange.gif" SelBackColor="17, 69, 158" BackColor="White" ForeColor="Black" BorderColor="LightGray" SelForeColor="White" Version="3.00">
+  <DropDownLayout DropdownWidth="325px" BorderCollapse="Separate" RowHeightDefault="20px" HeaderClickAction="Select" DropdownHeight="130px">
+    <RowStyle BorderWidth="1px" BorderColor="Black" BorderStyle="Solid">
+      <Padding Left="3px" />
+      <BorderDetails WidthLeft="0px" WidthTop="0px" />
+    </RowStyle>
+    <RowSelectorStyle />
+    <SelectedRowStyle ForeColor="White" BackColor="#F09D21" CustomRules="background-image:url(/ig_common/images/Office2003SelRow.png);background-repeat:repeat-x;" />
+    <HeaderStyle Font-Size="X-Small" Font-Names="Arial" Font-Bold="True" BorderStyle="Solid" ForeColor="#E1E8F5" BackColor="#11459E" CustomRules="background-image:url(/ig_common/images/Office2003BlueBG.png);background-repeat:repeat-x;">
+      <BorderDetails ColorTop="173, 197, 235" WidthLeft="1px" WidthTop="1px" ColorLeft="173, 197, 235" />
+    </HeaderStyle>
+    <RowAlternateStyle />
+    <FooterStyle />
+    <FrameStyle Width="100%" Cursor="Default" BorderWidth="1px" Font-Size="8pt" Font-Names="Verdana" BorderStyle="Solid" BackColor="Silver" Height="100%" />
+    <ImageUrls />
+  </DropDownLayout>
+  <ExpandEffects ShadowColor="LightGray" />
+</igcmbo:WebCombo>

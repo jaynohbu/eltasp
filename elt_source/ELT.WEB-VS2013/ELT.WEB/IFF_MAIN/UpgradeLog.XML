@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="IFF_MAIN">
+</Property><Property Name="Solution File" Value="D:\inetpub\wwwroot\IFF_MAIN\IFF_MAIN.sln">
+</Property><Property Name="User Options File" Value="D:\inetpub\wwwroot\IFF_MAIN\IFF_MAIN.suo">
+</Property><Property Name="Date" Value="Tuesday, March 12, 2013">
+</Property><Property Name="Time" Value="23:00 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="IFF_MAIN.sln" Description="File successfully backed up as D:\inetpub\wwwroot\IFF_MAIN\Backup\IFF_MAIN.sln">
+</Event><Event ErrorLevel="0" Project="" Source="IFF_MAIN.suo" Description="File successfully backed up as D:\inetpub\wwwroot\IFF_MAIN\Backup\IFF_MAIN.suo">
+</Event><Event ErrorLevel="1" Project="IFF_MAIN" Source="http://localhost/IFF_MAIN" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="1" Project="freighteasy" Source="http://localhost/freighteasy" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="" Source="IFF_MAIN.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="IFF_MAIN.sln" Description="Converted">
+</Event></UpgradeLog>

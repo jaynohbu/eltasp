@@ -1,0 +1,23 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxwschs" Namespace="DevExpress.Web.ASPxScheduler" Assembly="DevExpress.Web.ASPxScheduler.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register Assembly="DevExpress.XtraScheduler.v13.2.Core, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.XtraScheduler" TagPrefix="temp" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<dxmvc:MVCxScheduler runat="server">
+	<Styles CssFilePath="~/App_Themes/Aqua/{0}/styles.css" CssPostfix="Aqua" SelectionColor="#ffd765">
+		<Menu>
+			<SubMenuItem ImageSpacing="4px" />
+		</Menu>
+		<FormEditors>
+			<CalendarFooter Spacing="17px" />
+			<CalendarHeader Spacing="1px" />
+		</FormEditors>
+		<ViewNavigator ButtonSpacing="2px" />
+		<ViewSelector ButtonSpacing="2px" />
+	</Styles>
+	<Images SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/Aqua/Scheduler/Loading.gif"></LoadingPanel>
+	</Images>
+    <OptionsLoadingPanel ImagePosition="Top" />
+</dxmvc:MVCxScheduler>
+
+

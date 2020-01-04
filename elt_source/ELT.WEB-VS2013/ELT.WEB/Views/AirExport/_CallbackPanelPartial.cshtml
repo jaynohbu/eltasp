@@ -1,0 +1,12 @@
+@Html.DevExpress().CallbackPanel(settings =>
+{
+    settings.Name = "CallbackPanel";
+    settings.CallbackRouteValues = new { Controller = "AirExport", Action = "CallbackPanelPartial" };
+    settings.Width = 500;
+    settings.Height = 300;
+
+    settings.SetContent(() =>
+    {
+        ViewContext.Writer.Write("content");
+    });
+}).GetHtml()

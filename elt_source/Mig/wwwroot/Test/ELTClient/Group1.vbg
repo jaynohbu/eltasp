@@ -1,0 +1,3 @@
+VBGROUP 5.0
+StartupProject=test.vbp
+Project=..\..\Program Files\ELTClient\ELTSoft.vbp

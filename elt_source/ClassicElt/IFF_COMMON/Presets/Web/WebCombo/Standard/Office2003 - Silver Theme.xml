@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Office2003 - Silver Theme" PresetDescription="Infragistics Office 2003 Theme Silver. Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<igcmbo:WebCombo BorderStyle="Solid" DropImage1="/ig_common/images/Office2003DropDownSilver.gif" DropImage2="/ig_common/images/Office2003DropDownOrange.gif" BorderWidth="1px" DropImageXP1="/ig_common/images/Office2003DropDownSilver.gif" DropImageXP2="/ig_common/images/Office2003DropDownOrange.gif" SelBackColor="#777697" BackColor="White" ForeColor="Black" BorderColor="LightGray" SelForeColor="#EFEFF3" Version="3.00">
+  <DropDownLayout DropdownWidth="325px" BorderCollapse="Separate" RowHeightDefault="20px" HeaderClickAction="Select" DropdownHeight="130px">
+    <RowStyle BorderWidth="1px" BorderColor="Gray" BorderStyle="Solid" BackColor="White">
+      <BorderDetails WidthLeft="0px" WidthTop="0px" />
+    </RowStyle>
+    <RowSelectorStyle />
+    <SelectedRowStyle ForeColor="White" BackColor="#F09D21" CustomRules="background-image:url(/ig_common/images/Office2003SelRow.png);background-repeat:repeat-x;" />
+    <HeaderStyle Font-Size="X-Small" Font-Names="Arial" Font-Bold="True" BorderStyle="Solid" ForeColor="#EFEFF3" BackColor="#777697" CustomRules="background-image:url(/ig_common/images/Office2003SilverBG.png);background-repeat:repeat-x;">
+      <BorderDetails ColorTop="#D3D2DF" WidthLeft="1px" WidthTop="1px" ColorLeft="#D3D2DF" />
+    </HeaderStyle>
+    <RowAlternateStyle />
+    <FooterStyle />
+    <FrameStyle Width="100%" Cursor="Default" BorderWidth="2px" Font-Size="10pt" Font-Names="Verdana" BorderStyle="Ridge" BackColor="Silver" Height="100%" />
+    <ImageUrls />
+  </DropDownLayout>
+  <ExpandEffects ShadowColor="LightGray" />
+</igcmbo:WebCombo>

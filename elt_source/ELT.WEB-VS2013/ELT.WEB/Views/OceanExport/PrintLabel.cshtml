@@ -1,0 +1,7 @@
+﻿@{
+    ViewBag.Title = "PrintLabel";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+
+<iframe id ="ContentFrame" scrolling="no"   frameborder="0" width="100%" onload="autoResize('ContentFrame');" src="@Url.Content("~/ASP/ocean_export/print_label.asp" + ViewBag.Params)"></iframe>
+

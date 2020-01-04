@@ -1,0 +1,266 @@
+<%@ Register TagPrefix="igchart" Namespace="Infragistics.UltraChart.Resources.Appearance" Assembly="Infragistics.WebUI.UltraWebChart, Version=11.1.20111.2064, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="PNLCharts.aspx.cs" Inherits="ASPX_Reports_PNL_PNLCharts" %>
+
+<%@ Register TagPrefix="igchart" Namespace="Infragistics.WebUI.UltraWebChart" Assembly="Infragistics.WebUI.UltraWebChart, Version=11.1.20111.2064, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<%@ Register TagPrefix="igchartprop" Namespace="Infragistics.UltraChart.Resources.Appearance" Assembly="Infragistics.WebUI.UltraWebChart, Version=11.1.20111.2064, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+
+<%@ Register TagPrefix="igchartdata" Namespace="Infragistics.UltraChart.Data" Assembly="Infragistics.WebUI.UltraWebChart, Version=11.1.20111.2064, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>PNL Chart</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table id="Table1" border="0" cellpadding="1" cellspacing="4">
+            <tr>
+                <td>
+                    <asp:Label ID="Label2" runat="server" DESIGNTIMEDRAGDROP="9087" Font-Bold="True"
+                        Font-Italic="False" Font-Size="10px" ForeColor="Navy" Height="8px" Width="100%" Font-Names="Verdana"></asp:Label></td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;
+                    <igchart:UltraChart ID="UltraChart1" runat="server" ChartType="CylinderStackColumnChart3D" Width="750px" BackgroundImageFileName=""  EmptyChartText="Data Not Available. Please call UltraChart.Data.DataBind() after setting valid Data.DataSource" ForeColor="Black" Height="500px" ImageUrl="" Version="6.1">
+                        <TitleRight Extent="33" Visible="True">
+                        </TitleRight>
+                        <Data UseRowLabelsColumn="True">
+                            <EmptyStyle LegendDisplayType="PE">
+                                <LineStyle DrawStyle="Dash" EndStyle="NoAnchor" MidPointAnchors="False" StartStyle="NoAnchor" />
+                            </EmptyStyle>
+                        </Data>
+                        <TitleLeft Extent="33" Visible="True">
+                        </TitleLeft>
+                        <ColorModel AlphaLevel="255" ModelStyle="CustomSkin">
+                            <Skin>
+                                <PEs>
+                                    <igchartprop:PaintElement ElementType="Gradient" Fill="108, 162, 36" FillGradientStyle="Horizontal"
+                                        FillStopColor="148, 244, 17" StrokeWidth="0">
+                                    </igchartprop:PaintElement>
+                                    <igchartprop:PaintElement ElementType="Gradient" Fill="7, 108, 176" FillGradientStyle="Horizontal"
+                                        FillStopColor="53, 200, 255" StrokeWidth="0">
+                                    </igchartprop:PaintElement>
+                                    <igchartprop:PaintElement ElementType="Gradient" Fill="230, 190, 2" FillGradientStyle="Horizontal"
+                                        FillStopColor="255, 255, 81" StrokeWidth="0">
+                                    </igchartprop:PaintElement>
+                                    <igchartprop:PaintElement ElementType="Gradient" Fill="215, 0, 5" FillGradientStyle="Horizontal"
+                                        FillStopColor="254, 117, 16" StrokeWidth="0">
+                                    </igchartprop:PaintElement>
+                                    <igchartprop:PaintElement ElementType="Gradient" Fill="252, 122, 10" FillGradientStyle="Horizontal"
+                                        FillStopColor="255, 108, 66" StrokeWidth="0">
+                                    </igchartprop:PaintElement>
+                                </PEs>
+                            </Skin>
+                        </ColorModel>
+                        <Axis>
+                            <Y TickmarkInterval="0" TickmarkPercentage="20"
+                                Visible="True">
+                                <ScrollScale Height="10" Visible="False" Width="15" />
+                                <Labels Flip="False" Font="Verdana, 7pt, style=Bold" HorizontalAlign="Far" ItemFormatString="&lt;DATA_VALUE:00.##&gt;"
+                                    Orientation="Horizontal" OrientationAngle="0" VerticalAlign="Center">
+                                    <SeriesLabels Flip="False" FormatString="" HorizontalAlign="Far" Orientation="Horizontal"
+                                        OrientationAngle="0" VerticalAlign="Center" />
+                                </Labels>
+                                <MajorGridLines AlphaLevel="255" Color="Gainsboro" DrawStyle="Dot" Thickness="1"
+                                    Visible="True" />
+                                <MinorGridLines AlphaLevel="255" Color="LightGray" DrawStyle="Dot" Thickness="1"
+                                    Visible="False" />
+                            </Y>
+                            <Y2 TickmarkInterval="0" Visible="False">
+                                <ScrollScale Height="10" Visible="False" Width="15" />
+                                <Labels Flip="False" Font="Verdana, 7pt" HorizontalAlign="Near" ItemFormatString="&lt;DATA_VALUE:00.##&gt;"
+                                    Orientation="Horizontal" OrientationAngle="0" VerticalAlign="Center">
+                                    <SeriesLabels Flip="False" FormatString="" HorizontalAlign="Near" Orientation="Horizontal"
+                                        OrientationAngle="0" VerticalAlign="Center" />
+                                </Labels>
+                                <MajorGridLines AlphaLevel="255" Color="Gainsboro" DrawStyle="Dot" Thickness="1"
+                                    Visible="True" />
+                                <MinorGridLines AlphaLevel="255" Color="LightGray" DrawStyle="Dot" Thickness="1"
+                                    Visible="False" />
+                            </Y2>
+                            <X2 TickmarkInterval="0" Visible="False">
+                                <ScrollScale Height="10" Visible="False" Width="15" />
+                                <Labels Flip="False" Font="Verdana, 7pt" HorizontalAlign="Far" ItemFormatString="&lt;ITEM_LABEL&gt;"
+                                    Orientation="VerticalLeftFacing" OrientationAngle="0" VerticalAlign="Center">
+                                    <SeriesLabels Flip="False" FormatString="" HorizontalAlign="Far" Orientation="VerticalLeftFacing"
+                                        OrientationAngle="0" VerticalAlign="Center" />
+                                </Labels>
+                                <MajorGridLines AlphaLevel="255" Color="Gainsboro" DrawStyle="Dot" Thickness="1"
+                                    Visible="True" />
+                                <MinorGridLines AlphaLevel="255" Color="LightGray" DrawStyle="Dot" Thickness="1"
+                                    Visible="False" />
+                            </X2>
+                            <Z2 TickmarkInterval="0" Visible="True">
+                                <ScrollScale Height="10" Visible="False" Width="15" />
+                                <Labels Flip="False" HorizontalAlign="Near" ItemFormatString=""
+                                    Orientation="Horizontal" OrientationAngle="0" VerticalAlign="Center">
+                                    <SeriesLabels Flip="False" HorizontalAlign="Near" Orientation="Horizontal" OrientationAngle="0"
+                                        VerticalAlign="Center" />
+                                </Labels>
+                                <MajorGridLines AlphaLevel="255" Color="Gainsboro" DrawStyle="Dot" Thickness="1"
+                                    Visible="True" />
+                                <MinorGridLines AlphaLevel="255" Color="LightGray" DrawStyle="Dot" Thickness="1"
+                                    Visible="False" />
+                            </Z2>
+                            <Z TickmarkInterval="0" Visible="True">
+                                <ScrollScale Height="10" Visible="False" Width="15" />
+                                <Labels Flip="False" Font="Verdana, 7pt" HorizontalAlign="Far" ItemFormatString="&lt;DATA_VALUE:00.##&gt;"
+                                    Orientation="Horizontal" OrientationAngle="0" VerticalAlign="Center">
+                                    <SeriesLabels Flip="False" HorizontalAlign="Far" Orientation="Horizontal" OrientationAngle="0"
+                                        VerticalAlign="Center" />
+                                </Labels>
+                                <MajorGridLines AlphaLevel="255" Color="Gainsboro" DrawStyle="Dot" Thickness="1"
+                                    Visible="True" />
+                                <MinorGridLines AlphaLevel="255" Color="LightGray" DrawStyle="Dot" Thickness="1"
+                                    Visible="False" />
+                            </Z>
+                            <X TickmarkInterval="0" Visible="True" Extent="200" LineEndCapStyle="DiamondAnchor">
+                                <ScrollScale Height="10" Visible="False" Width="15" />
+                                <Labels Flip="False" Font="Tahoma, 6.75pt, style=Bold" HorizontalAlign="Near"
+                                    Orientation="VerticalLeftFacing" OrientationAngle="0"  VerticalAlign="Center" ItemFormatString="">
+                                    <SeriesLabels Flip="False" HorizontalAlign="Near" Orientation="Custom"
+                                        OrientationAngle="41" VerticalAlign="Center" Font="Microsoft Sans Serif, 8.25pt, style=Bold" />
+                                </Labels>
+                                <MajorGridLines AlphaLevel="255" Color="Gainsboro" DrawStyle="Dot" Thickness="1"
+                                    Visible="True" />
+                                <MinorGridLines AlphaLevel="255" Color="LightGray" DrawStyle="Dot" Thickness="1"
+                                    Visible="False" />
+                            </X>
+                        </Axis>
+                        <TitleBottom Visible="False" Extent="33" HorizontalAlign="Near">
+                        </TitleBottom>
+                        <TitleTop Visible="False">
+                        </TitleTop>
+                        <Tooltips Overflow="None" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" />
+                        <Border CornerRadius="5" />
+                        <Legend Visible="True"></Legend>
+                    </igchart:UltraChart>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <igchart:UltraChart ID="UltraChart2" runat="server" BackgroundImageFileName="" 
+                        ChartType="StackColumnChart" EmptyChartText="Data Not Available. Please call UltraChart.Data.DataBind() after setting valid Data.DataSource"
+                        EnableScrollBar="True" ForeColor="Black" Height="500px" ImageUrl="" Version="6.1"
+                        Width="750px">
+                        <Axis>
+                            <Z TickmarkInterval="0" Visible="False">
+                                <ScrollScale Height="10" Visible="False" Width="15" />
+                                <MinorGridLines AlphaLevel="255" Color="LightGray" DrawStyle="Dot" Thickness="1"
+                                    Visible="False" />
+                                <MajorGridLines AlphaLevel="255" Color="Gainsboro" DrawStyle="Dot" Thickness="1"
+                                    Visible="True" />
+                                <Labels Flip="False" HorizontalAlign="Near" ItemFormatString="&lt;DATA_VALUE:00.##&gt;"
+                                    Orientation="Horizontal" OrientationAngle="0" VerticalAlign="Center">
+                                    <SeriesLabels Flip="False" HorizontalAlign="Near" Orientation="Horizontal" OrientationAngle="0"
+                                        VerticalAlign="Center" />
+                                </Labels>
+                            </Z>
+                            <Y2 TickmarkInterval="0" Visible="False">
+                                <ScrollScale Height="10" Visible="False" Width="15" />
+                                <MinorGridLines AlphaLevel="255" Color="LightGray" DrawStyle="Dot" Thickness="1"
+                                    Visible="False" />
+                                <MajorGridLines AlphaLevel="255" Color="Gainsboro" DrawStyle="Dot" Thickness="1"
+                                    Visible="True" />
+                                <Labels Flip="False" HorizontalAlign="Near" ItemFormatString="&lt;DATA_VALUE:00.##&gt;"
+                                    Orientation="Horizontal" OrientationAngle="0" VerticalAlign="Center">
+                                    <SeriesLabels Flip="False" FormatString="" HorizontalAlign="Near" Orientation="Horizontal"
+                                        OrientationAngle="0" VerticalAlign="Center" />
+                                </Labels>
+                            </Y2>
+                            <X Extent="330" LineEndCapStyle="Flat" LineThickness="1" TickmarkInterval="20" TickmarkStyle="Smart"
+                                Visible="True">
+                                <ScrollScale Height="10" Visible="False" Width="15" />
+                                <MinorGridLines AlphaLevel="255" Color="LightGray" DrawStyle="Dot" Thickness="1"
+                                    Visible="False" />
+                                <MajorGridLines AlphaLevel="255" Color="Gainsboro" DrawStyle="Dot" Thickness="1"
+                                    Visible="True" />
+                                <Labels Flip="False" Font="Tahoma, 6.75pt, style=Bold" HorizontalAlign="Near" ItemFormatString="&lt;ITEM_LABEL&gt;"
+                                    Orientation="VerticalLeftFacing" OrientationAngle="0" VerticalAlign="Center">
+                                    <SeriesLabels Flip="True" Font="Tahoma, 8.25pt" HorizontalAlign="Center" Orientation="VerticalLeftFacing"
+                                        OrientationAngle="0" VerticalAlign="Center" />
+                                </Labels>
+                            </X>
+                            <Y Extent="40" LineThickness="1" TickmarkInterval="100" TickmarkStyle="Smart" Visible="True">
+                                <ScrollScale Height="10" Visible="False" Width="15" />
+                                <MinorGridLines AlphaLevel="255" Color="LightGray" DrawStyle="Dot" Thickness="1"
+                                    Visible="False" />
+                                <MajorGridLines AlphaLevel="255" Color="Gainsboro" DrawStyle="Dot" Thickness="1"
+                                    Visible="True" />
+                                <Labels Flip="False" Font="Verdana, 7pt" HorizontalAlign="Far" ItemFormatString="&lt;DATA_VALUE:00.##&gt;"
+                                    Orientation="Horizontal" OrientationAngle="0" VerticalAlign="Center">
+                                    <SeriesLabels Flip="False" FormatString="" HorizontalAlign="Far" Orientation="Horizontal"
+                                        OrientationAngle="0" VerticalAlign="Near" />
+                                </Labels>
+                            </Y>
+                            <X2 TickmarkInterval="0" Visible="False">
+                                <ScrollScale Height="10" Visible="False" Width="15" />
+                                <MinorGridLines AlphaLevel="255" Color="LightGray" DrawStyle="Dot" Thickness="1"
+                                    Visible="False" />
+                                <MajorGridLines AlphaLevel="255" Color="Gainsboro" DrawStyle="Dot" Thickness="1"
+                                    Visible="True" />
+                                <Labels Flip="False" HorizontalAlign="Far" ItemFormatString="&lt;ITEM_LABEL&gt;"
+                                    Orientation="VerticalLeftFacing" OrientationAngle="0" VerticalAlign="Center">
+                                    <SeriesLabels Flip="False" HorizontalAlign="Far" Orientation="VerticalLeftFacing"
+                                        OrientationAngle="0" VerticalAlign="Center" />
+                                </Labels>
+                            </X2>
+                            <Z2 TickmarkInterval="0" Visible="False">
+                                <ScrollScale Height="10" Visible="False" Width="15" />
+                                <MinorGridLines AlphaLevel="255" Color="LightGray" DrawStyle="Dot" Thickness="1"
+                                    Visible="False" />
+                                <MajorGridLines AlphaLevel="255" Color="Gainsboro" DrawStyle="Dot" Thickness="1"
+                                    Visible="True" />
+                                <Labels Flip="False" HorizontalAlign="Near" ItemFormatString="" Orientation="Horizontal"
+                                    OrientationAngle="0" VerticalAlign="Center">
+                                    <SeriesLabels Flip="False" HorizontalAlign="Near" Orientation="Horizontal" OrientationAngle="0"
+                                        VerticalAlign="Center" />
+                                </Labels>
+                            </Z2>
+                        </Axis>
+                        <TitleTop Orientation="VerticalLeftFacing" Visible="False">
+                        </TitleTop>
+                        <Border CornerRadius="5" />
+                        <Tooltips Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False"
+                            Font-Underline="False" Overflow="None" />
+                        <ColorModel AlphaLevel="150" ModelStyle="CustomSkin">
+                            <Skin ApplyRowWise="False">
+                                <PEs>
+                                    <igchartprop:PaintElement ElementType="Gradient" Fill="108, 162, 36" FillGradientStyle="Vertical"
+                                        FillStopColor="148, 244, 17" StrokeWidth="0">
+                                    </igchartprop:PaintElement>
+                                    <igchartprop:PaintElement ElementType="Gradient" Fill="7, 108, 176" FillGradientStyle="Vertical"
+                                        FillStopColor="53, 200, 255" StrokeWidth="0">
+                                    </igchartprop:PaintElement>
+                                    <igchartprop:PaintElement ElementType="Gradient" Fill="230, 190, 2" FillGradientStyle="Vertical"
+                                        FillStopColor="255, 255, 81" StrokeWidth="0">
+                                    </igchartprop:PaintElement>
+                                    <igchartprop:PaintElement ElementType="Gradient" Fill="215, 0, 5" FillGradientStyle="Vertical"
+                                        FillStopColor="254, 117, 16" StrokeWidth="0">
+                                    </igchartprop:PaintElement>
+                                    <igchartprop:PaintElement ElementType="Gradient" Fill="252, 122, 10" FillGradientStyle="Vertical"
+                                        FillStopColor="255, 108, 66" StrokeWidth="0">
+                                    </igchartprop:PaintElement>
+                                </PEs>
+                            </Skin>
+                        </ColorModel>
+                        <Legend Visible="True"></Legend>
+                        <TitleBottom Extent="33" Location="Bottom" Orientation="VerticalLeftFacing" Visible="False">
+                        </TitleBottom>
+                        <Data>
+                            <EmptyStyle LegendDisplayType="PE">
+                                <LineStyle DrawStyle="Dash" EndStyle="NoAnchor" MidPointAnchors="False" StartStyle="NoAnchor" />
+                            </EmptyStyle>
+                        </Data>
+                    </igchart:UltraChart>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

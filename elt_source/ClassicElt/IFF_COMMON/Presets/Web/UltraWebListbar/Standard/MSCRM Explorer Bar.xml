@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="MSCRM - Explorer Bar" PresetDescription="Infragistics MSCRM Explorer Bar Look and Feel.   Sets both Look and Behavior properties." PresetType="All" />-->
+<iglbar:UltraWebListbar BarWidth="100%" BorderStyle="None" BackColor="#E9E7D7" ViewType="ExplorerBar" GroupSpacing="5px" HeaderClickAction="None">
+  <DefaultGroupStyle Cursor="Hand" Height="100%" BorderColor="DarkGray" BorderStyle="None" BackColor="#E9E7D7">
+    <BorderDetails StyleBottom="None" />
+  </DefaultGroupStyle>
+  <DefaultItemStyle Cursor="Hand" Font-Size="9pt" Font-Names="Microsoft Sans Serif" BorderStyle="None" ForeColor="#666666" />
+  <DefaultItemHoverStyle Cursor="Hand" Font-Size="9pt" Font-Names="Microsoft Sans Serif" BorderStyle="None" ForeColor="Black" BackColor="#EFEFEB" />
+  <DefaultGroupHeaderAppearance>
+    <CollapsedAppearance>
+      <Style />
+    </CollapsedAppearance>
+    <HoverAppearance>
+      <Style Font-Size="9pt" Font-Names="Microsoft Sans Serif" Font-Bold="True" />
+    </HoverAppearance>
+    <ExpandedAppearance>
+      <Style Font-Size="9pt" Font-Names="Microsoft Sans Serif" Font-Bold="True">
+        <BorderDetails StyleBottom="Solid" ColorBottom="#666666" WidthBottom="1px" />
+      </Style>
+    </ExpandedAppearance>
+  </DefaultGroupHeaderAppearance>
+  <DefaultItemSelectedStyle Cursor="Default" Font-Size="9pt" Font-Names="Microsoft Sans Serif" BorderStyle="None" />
+</iglbar:UltraWebListbar>

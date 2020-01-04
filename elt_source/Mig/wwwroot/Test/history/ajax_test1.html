@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> AJAX & HISTORY TEST </TITLE>
+<STYLE TYPE='Text/css'>
+  body,td,textarea { font-size:12px; }
+</STYLE>
+<script type='text/javascript' src='dhtmlHistory.js'></script>
+<SCRIPT TYPE='Text/JavaScript'>
+<!--
+/*
+AJAX의 history와 bookmark(즐겨찾기)를 다루는 방법
+원문        : http://www.onjava.com/pub/a/onjava/2005/10/26/ajax-handling-bookmarks-and-back-button.html
+한글 번역문 : http://network.hanbitbook.co.kr/view.php?bi_id=1162
+현재 문서   : http://blog.naver.com/ioo
+AJAX history와 bookmark가 가능한 게시판
+            : http://211.233.58.198/~jude/new_board/?gbd=test_board01
+*/
+window.onload = initialize;
+// history 제어를 위한 변수
+var his_id = '';
+function initialize() {
+  // history 저장을 위해 초기화
+  dhtmlHistory.initialize();
+  // 뒤로가기가 실행될때 실행할 이벤트 함수를 지정
+  dhtmlHistory.addListener(historyfunc);
+}
+
+function historyfunc(HistoryName, HistoryValue) {
+  // 히스토리 데이터가 없으면 리턴
+  if(HistoryValue == null) return;
+
+  /*** historyStorage.get(history_data_id) 으로 저장된 데이터를 가져온다
+       history_data_id 의 이름으로 저장된 데이터를 가져온다  ***/
+  var storage_data = historyStorage.get(HistoryValue);
+  // 저장된 데이터를 출력한다
+  $('output_field').value  = '*** HISTORY DATA *** \r\n[데이터 ID : ';
+  $('output_field').value += HistoryValue + ']\r\n\r\n[데이터 출력]\r\n';
+  $('output_field').value += storage_data;
+}
+
+function ReqdataOutput(text) {
+  var historyID   = 'HIS_ID:' + his_id;
+  var historyDATAID = 'HIS_DATA_ID_' + his_id;
+  /*** dhtmlHistory.add(var1, var2)   : 즐겨찾기 제어를 위한 클래스.add 메서드
+       var1 : 북마크 제어를 위한 해쉬(hash)명
+       var2 : 해쉬명을 따라 저장될 간단한 데이터 , 내용이 길어지면 딜레이거 생긴다  ***/
+  dhtmlHistory.add(historyID , historyDATAID);
+
+  /*** historyStorage.put(var1, var2) : 히스토리 데이터를 저장하기 위한 클래스.put 메서드
+       var1 : 히스토리 데이터 ID
+       var2 : 실제적인 히스토리 데이터, 역시 내용이 길어지면 딜레이가 생긴다  ***/
+  historyStorage.put(historyDATAID, text);
+  $('output_field').value = text;
+}
+
+function XMLHttp(file, id) {
+  var Req = newXMLHttp();
+  if(!Req) return false;
+  // 캐쉬된 파일을 가져오지 않도록 랜덤변수 지정
+  var randkey = '?randkey=' + parseInt(Math.random() * 1000000);
+  var url = 'test_data_dir/' + file + randkey;
+  //*** his_id 를 지정하였다 1,2,3,4 의 값이 들어갈 것이다. ***//
+  his_id = id;
+  Req.onreadystatechange = function() {
+    if (Req.readyState == 4 && Req.status == 200) {
+      //*** 히스토리 저장 및 데이터 출력 함수 호출 ***//
+      ReqdataOutput(Req.responseText);
+    }
+   }
+  Req.open('GET', url, true);
+  Req.setRequestHeader("Pragma","no-cache");
+  Req.setRequestHeader("Cache-control","no-cache");
+  // POST로 전송시에는 Req.send('var1=value1&var2=value2...');
+  Req.send(null);
+}
+function newXMLHttp() {
+  var Req = false;
+  if(window.ActiveXObject) {
+    try {
+      Req = new ActiveXObject("Msxml2.XMLHTTP");
+    } catch (e) {
+      try {
+          Req = new ActiveXObject("Microsoft.XMLHTTP");
+      } catch (se) {}
+    }
+  }
+  else if(window.XMLHttpRequest) {
+    Req = new XMLHttpRequest();
+  } 
+  if(!Req) {
+    alert('브라우저가 AJAX를 지원하지 않습니다');
+  }
+  return Req;
+}
+
+function $() {
+  var element = arguments[0];
+  var elength = document.getElementsByName(element).length;
+  return (elength > 1) 
+    ? document.getElementsByName(element) 
+    : document.getElementById(element);
+}
+-->
+</SCRIPT>
+
+</HEAD>
+
+<BODY>
+
+<form name='test_form' method='post'>
+<input type='button' value='TEST1' onclick="XMLHttp('small_1.html',1);">
+<input type='button' value='TEST2' onclick="XMLHttp('small_2.html',2);">
+<input type='button' value='TEST3' onclick="XMLHttp('small_3.html',3);">
+<input type='button' value='TEST4' onclick="XMLHttp('small_4.html',4);">
+</form>
+<br>
+
+출력내용 :
+<br>
+<textarea id='output_field' style='width:500px;height:400px;'></textarea>
+
+</BODY>
+</HTML>

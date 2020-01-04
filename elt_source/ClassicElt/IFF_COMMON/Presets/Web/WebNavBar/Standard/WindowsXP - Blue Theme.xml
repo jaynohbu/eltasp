@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Windows XP - Blue Theme" PresetDescription="Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<ignavbar:WebNavBar BorderStyle="Solid" Movable="True" MovableImage="XpBlue/drag.gif" BorderWidth="1px" BorderColor="Gainsboro" BackColor="#F2F2EE" BackgroundImage="" Font-Size="9pt" Font-Names="Arial" Theme="XpBlue">
+  <Navigation>
+    <End Tag="" DisabledImage="XpBlue/end_disabled.gif" Key="end" StepUnit="Last" TabIndex="0" HoverImage="XpBlue/end_hover.gif" Image="XpBlue/end_up.gif" DepthFirst="True" SelectedImage="XpBlue/end_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="2147483647" ToolTip="End">
+      <HoverStyle BorderStyle="None" />
+      <SelectedStyle BorderStyle="None" />
+      <DefaultStyle BorderStyle="None" />
+    </End>
+    <Start Tag="" DisabledImage="XpBlue/start_disabled.gif" Key="start" StepUnit="First" TabIndex="0" HoverImage="XpBlue/start_hover.gif" Image="XpBlue/start_up.gif" DepthFirst="True" SelectedImage="XpBlue/start_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="-2147483648" ToolTip="Start">
+      <HoverStyle BorderStyle="None" />
+      <SelectedStyle BorderStyle="None" />
+      <DefaultStyle BorderStyle="None" />
+    </Start>
+    <Next Tag="" DisabledImage="XpBlue/next_disabled.gif" Key="next" StepUnit="Row" TabIndex="0" HoverImage="XpBlue/next_hover.gif" Image="XpBlue/next_up.gif" DepthFirst="False" SelectedImage="XpBlue/next_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="1" ToolTip="Next">
+      <HoverStyle BorderStyle="None" />
+      <SelectedStyle BorderStyle="None" />
+      <DefaultStyle BorderStyle="None" />
+    </Next>
+    <Rewind Tag="" DisabledImage="XpBlue/rew_disabled.gif" Key="rew" StepUnit="Page" TabIndex="0" HoverImage="XpBlue/rew_hover.gif" Image="XpBlue/rew_up.gif" DepthFirst="False" SelectedImage="XpBlue/rew_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="-1" ToolTip="Reverse">
+      <HoverStyle BorderStyle="None" />
+      <SelectedStyle BorderStyle="None" />
+      <DefaultStyle BorderStyle="None" />
+    </Rewind>
+    <FastForward Tag="" DisabledImage="XpBlue/ff_disabled.gif" Key="ff" StepUnit="Page" TabIndex="0" HoverImage="XpBlue/ff_hover.gif" Image="XpBlue/ff_up.gif" DepthFirst="False" SelectedImage="XpBlue/ff_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="1" ToolTip="Forward">
+      <HoverStyle BorderStyle="None" />
+      <SelectedStyle BorderStyle="None" />
+      <DefaultStyle BorderStyle="None" />
+    </FastForward>
+    <Prev Tag="" DisabledImage="XpBlue/prev_disabled.gif" Key="prev" StepUnit="Row" TabIndex="0" HoverImage="XpBlue/prev_hover.gif" Image="XpBlue/prev_up.gif" DepthFirst="False" SelectedImage="XpBlue/prev_down.gif" TargetURL="" TargetFrame="" AutoPostBack="False" Step="-1" ToolTip="Previous">
+      <HoverStyle BorderStyle="None" />
+      <SelectedStyle BorderStyle="None" />
+      <DefaultStyle BorderStyle="None" />
+    </Prev>
+  </Navigation>
+  <Extension>
+    <Submit Tag="" Key="submit" TabIndex="0" HoverImage="XpBlue/submit_hover.gif" ToolTip="" SelectedImage="XpBlue/submit_down.gif" TargetURL="" DisabledImage="XpBlue/submit_disabled.gif" TargetFrame="" Image="XpBlue/submit_up.gif">
+      <HoverStyle BorderStyle="None" />
+      <SelectedStyle BorderStyle="None" />
+      <DefaultStyle BorderStyle="None" />
+    </Submit>
+    <Delete Tag="" Key="del" TabIndex="0" HoverImage="XpBlue/del_hover.gif" ToolTip="" SelectedImage="XpBlue/del_down.gif" TargetURL="" DisabledImage="XpBlue/del_disabled.gif" TargetFrame="" Image="XpBlue/del_up.gif">
+      <HoverStyle BorderStyle="None" />
+      <SelectedStyle BorderStyle="None" />
+      <DefaultStyle BorderStyle="None" />
+    </Delete>
+    <Insert Tag="" Key="add" TabIndex="0" HoverImage="XpBlue/add_hover.gif" ToolTip="" SelectedImage="XpBlue/add_down.gif" TargetURL="" DisabledImage="XpBlue/add_disabled.gif" TargetFrame="" Image="XpBlue/add_up.gif">
+      <HoverStyle BorderStyle="None" />
+      <SelectedStyle BorderStyle="None" />
+      <DefaultStyle BorderStyle="None" />
+    </Insert>
+  </Extension>
+</ignavbar:WebNavBar>

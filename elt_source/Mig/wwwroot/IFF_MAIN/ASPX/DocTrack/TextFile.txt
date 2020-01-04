@@ -1,0 +1,429 @@
+using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Web;
+using System.Web.SessionState;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
+using System.IO;
+using System.Data.SqlClient;
+using System.Configuration;
+
+
+
+namespace IFF_MAIN.ASPX.DocTrack
+{
+	/// <summary>
+	/// AirExportOperationSelection에 대한 요약 설명입니다.
+	/// </summary>
+    public partial class OperationDocTracking : System.Web.UI.Page
+	{
+		public string elt_account_number;
+		public string user_id,login_name,user_right;
+        string timeStart; 
+        string timeEnd;
+        protected string ConnectStr;
+        public string windowName;
+        protected DataSet ds;
+        protected DataSet ds_No_Hawb;
+
+        private HtmlTable MAWB_TABLE;
+        private HtmlTable HAWB_TABLE;
+        private HtmlTable MBOL_TABLE;
+        private HtmlTable HBOL_TABLE;
+        private HtmlTable IV_TABLE;
+        private HtmlTable RP_TABLE;
+
+        private string AO="";
+  
+        protected void Page_Load(object sender, System.EventArgs e)
+		{
+			Session.LCID = 1033;
+            windowName = Request.QueryString["WindowName"];
+            elt_account_number = Request.Cookies["CurrentUserInfo"]["elt_account_number"];			
+            user_id  = Request.Cookies["CurrentUserInfo"]["user_id"];
+			user_right = Request.Cookies["CurrentUserInfo"]["user_right"];			
+            login_name  = Request.Cookies["CurrentUserInfo"]["login_name"];		
+
+            ConnectStr = (new igFunctions.DB().getConStr());
+            timeStart = Webdatetimeedit1.Date.ToShortDateString();
+            timeEnd = Webdatetimeedit2.Date.ToShortDateString();			
+			
+            if(!IsPostBack){	
+		        if(txtRefNo.Text!=""){
+                    iBtnGo.Attributes.Add("onclick", "Javascript:return CheckDate();");
+                }
+			}
+		}           
+   
+        protected void iBtnGo_Click(object sender, ImageClickEventArgs e)
+        {
+            if (this.ddlRefType.SelectedValue == "HAWB#")
+            {
+                HAWBTracker tracker = new HAWBTracker(elt_account_number, ConnectStr);
+                ds = tracker.trackDoc(this.txtRefNo.Text, timeStart, timeEnd);               
+                AO = "A"; 
+            }
+            else if (this.ddlRefType.SelectedValue == "MAWB#")
+            {
+                MAWBTracker tracker = new MAWBTracker(elt_account_number, ConnectStr);
+                ds = tracker.trackDoc(this.txtRefNo.Text, timeStart, timeEnd);
+                AO = "A";              
+              
+            }
+
+            if (this.ddlRefType.SelectedValue == "HBOL#")
+            {
+                HBOLTracker tracker = new HBOLTracker(elt_account_number, ConnectStr);
+                ds = tracker.trackDoc(this.txtRefNo.Text, timeStart, timeEnd);                
+                AO = "O"; 
+            }
+            else if (this.ddlRefType.SelectedValue == "MBOL#")
+            {
+                MBOLTracker tracker = new MBOLTracker(elt_account_number, ConnectStr);
+                ds= tracker.trackDoc(this.txtRefNo.Text, timeStart, timeEnd);
+                AO = "O"; 
+                
+            }
+
+            if (ds.Tables.Count>0)
+            {
+                if (AO == "A")
+                {
+                    fillHtmlTables_Air();
+                    this.pnlResult.Controls.Add(MAWB_TABLE);
+                   
+                }
+                else if (AO == "O")
+                {
+                    //fillHtmlTables_Ocean();
+                    this.pnlResult.Controls.Add(MBOL_TABLE);                   
+                }   
+             
+            }
+        }    
+
+		# region /// DateDefault
+		private void performDateDefault()
+		{
+			
+			//			this.Button1.Attributes.Add("onMouseDown", "Javascript:checkDate();");
+
+			//			Webdatetimeedit1.Date = getFirstDate();
+			//			Webdatetimeedit2.Date = DateTime.Now;
+		}
+
+		private DateTime getFirstDate()
+		{
+			int daysToAdd;
+			DateTime sd = DateTime.Now.AddMonths(-1);
+			DateTime firstDate;					
+			daysToAdd = System.DateTime.DaysInMonth(int.Parse(sd.Year.ToString()),int.Parse(sd.Month.ToString())) - int.Parse(sd.Day.ToString());
+			firstDate = sd.AddDays(daysToAdd);
+			return firstDate.AddDays(1);
+
+		}
+		# endregion
+
+       #region Web Form 디자이너에서 생성한 코드
+		override protected void OnInit(EventArgs e)
+		{
+			//
+			// CODEGEN: 이 호출은 ASP.NET Web Form 디자이너에 필요합니다.
+			//
+			InitializeComponent();
+			base.OnInit(e);
+		}
+		
+		/// <summary>
+		/// 디자이너 지원에 필요한 메서드입니다.
+		/// 이 메서드의 내용을 코드 편집기로 수정하지 마십시오.
+		/// </summary>
+		private void InitializeComponent()
+		{
+            //this.iBtnGo.Click += new System.Web.UI.ImageClickEventHandler(this.iBtnGo_Click);
+
+		}
+		#endregion
+
+        protected void fillMAWBTable(HtmlTable hTbl, DataRow[] dRows)
+        {
+
+            for (int i = 0; i < dRows.Length; i++)
+            {
+                string MAWB = dRows[i]["MAWB#"].ToString();
+                string date = "";
+                string MAWB_IE = dRows[i]["IE"].ToString();
+                date = dRows[i]["Date Issued"].ToString().Split()[0];
+                pky = dRows[i]["Primary"].ToString();
+
+                HtmlTableRow trow=getMAWB_Row(MAWB, date,IE);
+                HtmlTable tbl=trow.Cells[2].Controls[0];
+                DataRow[] HAWB_drs = ds.Tables["HAWB"].Select("Foreign = '" + pky + "'");
+                fillHAWBTable(tbl, HAWB_drs);
+                hTbl.Rows.Add(trow);  
+            }
+
+        }
+
+        protected void fillHAWBTable(HtmlTable hTbl, DataRow[] dRows)
+        {
+
+            for (int i = 0; i < dRows.Length; i++)
+            {
+                string HAWB = dRows[i]["HAWB#"].ToString();
+                string date = "";
+                string HAWB_IE = dRows[i]["IE"].ToString();
+                date = dRows[i]["Date Issued"].ToString().Split()[0];
+                pky = dRows[i]["Primary"].ToString();
+
+                HtmlTableRow trow = getIV_Row(HAWB, date, HAWB_IE);
+                HtmlTable tbl = trow.Cells[2].Controls[0];
+                DataRow[] IV_drs = ds.Tables["IV"].Select("Foreign = '" + pky + "'");
+                fillIVTable(tbl, IV_drs);
+                hTbl.Rows.Add(trow);
+            }
+
+        }
+
+
+        protected void fillIVTable(HtmlTable hTbl, DataRow[] dRows)
+        {
+
+            for (int i = 0; i < dRows.Length; i++)
+            {
+                string rp = dRows[i]["RP#"].ToString();
+                string amount = dRows[i]["Paid"].ToString();
+                string date_rp = "";
+                date_rp = dRows[i]["Date Issued"].ToString().Split()[0];
+
+                HtmlTableRow trow = getRP_Row(rp, amount, date_rp);
+                hTbl.Rows.Add(trow);
+            }
+
+        }
+
+        
+
+
+        protected HtmlTableRow getMBOL_Row(string MBOL, string date, string IE)
+        {
+            HtmlTableRow MBOL_ROW1 = new HtmlTableRow();
+            HtmlTableCell col1 = new HtmlTableCell();
+            HtmlAnchor lbl1 = new HtmlAnchor();
+            string formatDate = "";
+            if (date != "") formatDate = " (" + date + ")";
+            lbl1.InnerText = MBOL + formatDate;
+
+            string url = "";
+
+            if (IE == "E") url = "../../ASP/ocean_export/new_edit_mbol.asp?BookingNum=" + MBOL;
+            else if (IE == "I") url = "../../ASP/ocean_import/ocean_import2.asp?iType=O&Edit=yes&MAWB=" + MBOL;
+
+            lbl1.HRef = url;
+            col1.Width = "200px";
+            col1.Controls.Add(lbl1);
+            HtmlTableCell col2 = new HtmlTableCell();
+            HtmlTableCell col3 = new HtmlTableCell();
+            HtmlTableCell col4 = new HtmlTableCell();
+            MBOL_ROW1.Controls.Add(col1);
+            MBOL_ROW1.Controls.Add(col2);
+            MBOL_ROW1.Controls.Add(col3);
+            MBOL_ROW1.Controls.Add(col4);
+            return MBOL_ROW1;
+        }
+        protected HtmlTableRow getHAWB_Row(string HAWB, string date, string IE, string MAWB)
+        {
+            HtmlTableRow HAWB_ROW1 = new HtmlTableRow();
+            HtmlTableCell HAWB_col1 = new HtmlTableCell();
+            HtmlTableCell HAWB_col2 = new HtmlTableCell();
+            HtmlTableCell HAWB_col3 = new HtmlTableCell();
+
+            HAWB_col1.Width = "160px";
+            HtmlAnchor HAWB_lbl1 = new HtmlAnchor();
+            string formatDate = "";
+            if (date != "") formatDate = " (" + date + ")";
+            string url = "";
+            if (IE == "E") url = "../../ASP/air_export/new_edit_hawb.asp?Edit=yes&hawb=" + HAWB;
+            else if (IE == "I") url = "../../ASP/air_import/arrival_notice.asp?iType=A&Edit=yes&HAWB=" + HAWB + "&MAWB=" + MAWB;
+            HAWB_lbl1.InnerText = HAWB + formatDate;
+            HAWB_lbl1.HRef = url;
+            HAWB_col1.Controls.Add(HAWB_lbl1);
+            HAWB_col3.Controls.Add(new HtmlTable());
+            HAWB_ROW1.Controls.Add(HAWB_col1);
+            HAWB_ROW1.Controls.Add(HAWB_col2);
+            HAWB_ROW1.Controls.Add(HAWB_col3);
+            
+            return HAWB_ROW1;
+        }
+        protected HtmlTableRow getHBOL_Row(string HBOL, string date, string IE, string MBOL)
+        {
+            HtmlTableRow HBOL_ROW1 = new HtmlTableRow();
+            HtmlTableCell HBOL_col1 = new HtmlTableCell();
+            HBOL_col1.Width = "160px";
+            HBOL_col1.Align = "Center";
+            HtmlAnchor HBOL_lbl1 = new HtmlAnchor();
+            string formatDate = "";
+            if (date != "") formatDate = " (" + date + ")";
+            string url = "";
+            if (IE == "E") url = "../../ASP/ocean_export/new_edit_hbol.asp?hbol=" + HBOL;
+            else if (IE == "I") url = "../../ASP/ocean_import/arrival_notice.asp?iType=O&Edit=yes&HAWB=" + HBOL + "&MAWB=" + MBOL;
+            HBOL_lbl1.InnerText = HBOL + formatDate;
+            HBOL_lbl1.HRef = url;
+            HBOL_col1.Controls.Add(HBOL_lbl1);
+            HBOL_ROW1.Controls.Add(HBOL_col1);
+            return HBOL_ROW1;
+        }
+        protected HtmlTableRow getIV_Row(string iv, string date)
+        {
+            HtmlTableRow IV_ROW1 = new HtmlTableRow();
+            HtmlTableCell IV_col1 = new HtmlTableCell();
+            HtmlTableCell IV_col2 = new HtmlTableCell();
+            HtmlTableCell IV_col3 = new HtmlTableCell();
+
+            IV_col1.Align = "Center";
+            IV_col1.Width = "140px";
+            HtmlAnchor IV_lbl1 = new HtmlAnchor();
+            string formatDate = "";
+            if (date != "") formatDate = " (" + date + ")";
+            string url = "../..//ASP/acct_tasks/edit_invoice.asp?edit=yes&InvoiceNo=" + iv;
+            IV_lbl1.InnerText = iv + formatDate;
+            IV_lbl1.HRef = url;
+            IV_col1.Controls.Add(IV_lbl1);
+            IV_col3.Controls.Add(new HtmlTable());
+
+            IV_ROW1.Controls.Add(IV_col1);
+            IV_ROW1.Controls.Add(IV_col2);
+            IV_ROW1.Controls.Add(IV_col3);
+
+            return IV_ROW1;
+        }
+        protected HtmlTableRow getRP_Row(string rp, string amount, string date)
+        {
+            HtmlTableRow RP_ROW1 = new HtmlTableRow();
+            HtmlTableCell RP_col1 = new HtmlTableCell();
+
+            RP_col1.Align = "Center";
+            HtmlAnchor RP_lbl1 = new HtmlAnchor();
+            string formatDate = "";
+            if (date != "") formatDate = " (" + date + ")";
+            string url = "../../ASP/acct_tasks/receiv_pay.asp?PaymentNo=" + rp;
+            RP_lbl1.InnerText = rp + formatDate;
+            RP_lbl1.HRef = url;
+            RP_col1.Controls.Add(RP_lbl1);
+            HtmlTableCell RP_col3 = new HtmlTableCell();
+            Label RP_lbl3 = new Label();
+            RP_lbl3.Text = " -AMT: " + amount;
+            RP_col3.Controls.Add(RP_lbl3);
+            RP_ROW1.Controls.Add(RP_col1);
+            RP_ROW1.Controls.Add(RP_col3);
+            return RP_ROW1;
+        }
+
+
+        protected void initMAWB_Table(ref HtmlTable MAWB_TABLE)
+        {
+            MAWB_TABLE.BorderColor = "#ffffff";
+            MAWB_TABLE.CellSpacing = 0;
+            MAWB_TABLE.CellPadding = 0;
+            MAWB_TABLE.Border = 1;
+            HtmlTableRow MAWB_ROW1 = new HtmlTableRow();
+            HtmlTableCell col1 = new HtmlTableCell();
+            col1.Width = "200px";
+            Label lbl1 = new Label();
+            lbl1.Text = "MAWB";
+            col1.Align = "Center";
+            col1.Controls.Add(lbl1);
+            HtmlTableCell col2 = new HtmlTableCell();
+            col2.Width = "160px";
+            Label lbl2 = new Label();
+            lbl2.Text = "HAWB";
+            col2.Align = "Center";
+            col2.Controls.Add(lbl2);
+            HtmlTableCell col3 = new HtmlTableCell();
+            Label lbl3 = new Label();
+            lbl3.Text = "INVOICE";
+            col3.Align = "Center";
+            col3.Width = "140px";
+            col3.Controls.Add(lbl3);
+            HtmlTableCell col4 = new HtmlTableCell();
+            Label lbl4 = new Label();
+            lbl4.Text = "PAYMENT";
+            col4.Align = "Center";
+            col4.Width = "220px";
+            col4.Controls.Add(lbl4);
+            MAWB_ROW1.Controls.Add(col1);
+            MAWB_ROW1.Controls.Add(col2);
+            MAWB_ROW1.Controls.Add(col3);
+            MAWB_ROW1.Controls.Add(col4);
+            MAWB_TABLE.Controls.Add(MAWB_ROW1);
+        }
+        protected void initMBOL_Table(ref HtmlTable MBOL_TABLE)
+        {
+            MBOL_TABLE.BorderColor = "#ffffff";
+            MBOL_TABLE.CellSpacing = 0;
+            MBOL_TABLE.CellPadding = 0;
+          
+            HtmlTableRow MBOL_ROW1 = new HtmlTableRow();
+            HtmlTableCell col1 = new HtmlTableCell();
+            col1.Width = "200px";
+            Label lbl1 = new Label();
+            lbl1.Text = "MBOL";
+            col1.Align = "Center";
+            col1.Controls.Add(lbl1);
+            HtmlTableCell col2 = new HtmlTableCell();
+            col2.Width = "160px";
+            Label lbl2 = new Label();
+            lbl2.Text = "HBOL";
+            col2.Align = "Center";
+            col2.Controls.Add(lbl2);
+            HtmlTableCell col3 = new HtmlTableCell();
+            Label lbl3 = new Label();
+            lbl3.Text = "INVOICE";
+            col3.Align = "Center";
+            col3.Width = "140px";
+            col3.Controls.Add(lbl3);
+            HtmlTableCell col4 = new HtmlTableCell();
+            Label lbl4 = new Label();
+            lbl4.Text = "PAYMENT";
+            col4.Align = "Center";
+            col4.Width = "220px";
+            col4.Controls.Add(lbl4);
+            MBOL_ROW1.Controls.Add(col1);
+            MBOL_ROW1.Controls.Add(col2);
+            MBOL_ROW1.Controls.Add(col3);
+            MBOL_ROW1.Controls.Add(col4);
+            MBOL_TABLE.Controls.Add(MBOL_ROW1);
+        }
+        protected void initHAWB_Table(ref HtmlTable HAWB_TABLE)
+        {
+            
+            HAWB_TABLE.CellPadding = 0;
+            HAWB_TABLE.CellSpacing = 0;
+        }
+        protected void initHBOL_Table(ref HtmlTable HBOL_TABLE)
+        {           
+            HBOL_TABLE.CellPadding = 0;
+            HBOL_TABLE.CellSpacing = 0;
+            HBOL_TABLE.Align = "Center";
+        }
+        protected void initIV_Table(ref HtmlTable IV_TABLE)
+        {
+          
+            IV_TABLE.CellPadding = 0;
+            IV_TABLE.CellSpacing = 0;
+            IV_TABLE.Align = "Center";
+        }
+        protected void initRP_Table(ref HtmlTable RP_TABLE)
+        {
+           
+            RP_TABLE.CellPadding = 0;
+            RP_TABLE.CellSpacing = 0;
+            RP_TABLE.Align = "Center";
+        }
+
+    }
+}

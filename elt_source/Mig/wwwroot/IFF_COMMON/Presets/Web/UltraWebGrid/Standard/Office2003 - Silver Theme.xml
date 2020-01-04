@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Office2003 - Silver Theme" PresetDescription="Colors from Office2003 when running on XP Silver theme. Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<igtbl:UltraWebGrid>
+  <DisplayLayout RowHeightDefault="21px" Version="3.00" SelectTypeRowDefault="Single"  BorderCollapseDefault="Separate"  TableLayout="Fixed" CellClickActionDefault="Edit" AllowUpdateDefault="Yes">
+    <AddNewBox>
+      <Style />
+      <ButtonStyle />
+    </AddNewBox>
+    <Pager>
+      <Style />
+    </Pager>
+    <HeaderStyleDefault Font-Size="X-Small" Font-Names="Arial" Font-Bold="True" BorderStyle="Solid" ForeColor="#EFEFF3" BackColor="#777697" CustomRules="background-image:url(/ig_common/images/Office2003SilverBG.png);background-repeat:repeat-x;">
+      <BorderDetails ColorTop="#D3D2DF" WidthLeft="1px" WidthTop="1px" ColorLeft="#D3D2DF" />
+    </HeaderStyleDefault>
+    <GroupByRowStyleDefault />
+    <RowSelectorStyleDefault />
+    <FrameStyle BorderWidth="1px" Font-Size="8pt" Font-Names="Verdana" BorderStyle="Solid" />
+    <FooterStyleDefault BorderWidth="1px" BorderStyle="Solid" BackColor="LightGray">
+      <BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White" />
+    </FooterStyleDefault>
+    <ActivationObject>
+      <BorderDetails />
+    </ActivationObject>
+    <GroupByBox>
+      <Style />
+      <BandLabelStyle />
+    </GroupByBox>
+    <RowExpAreaStyleDefault />
+    <SelectedHeaderStyleDefault />
+    <EditCellStyleDefault BorderWidth="0px" BorderStyle="None" />
+    <SelectedGroupByRowStyleDefault />
+    <SelectedRowStyleDefault ForeColor="White" BackColor="#F09D21" CustomRules="background-image:url(/ig_common/images/Office2003SelRow.png);background-repeat:repeat-x;" />
+    <RowAlternateStyleDefault />
+    <RowStyleDefault BorderWidth="1px" BorderColor="Black" BorderStyle="Solid">
+      <Padding Left="3px" />
+      <BorderDetails WidthLeft="0px" WidthTop="0px" />
+    </RowStyleDefault>
+    <ImageUrls />
+    <Strings />
+  </DisplayLayout>
+</igtbl:UltraWebGrid>

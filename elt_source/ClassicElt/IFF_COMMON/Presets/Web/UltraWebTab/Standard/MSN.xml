@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="MSN " PresetDescription="MSN Layout Preset (final layout of tabs only).  Sets both Look and Behavior properties." PresetType="All" />-->
+<igtab:UltraWebTab BorderColor="#819FAD" BorderStyle="Solid" BackColor="#4A63A5" ThreeDEffect="False" BorderWidth="1px">
+  <DisabledTabStyle />
+  <BorderDetails ColorBottom="#5A78A0" ColorRight="#5A78A0" />
+  <DefaultTabStyle Height="34px" Font-Size="9pt" Font-Names="Arial" Font-Bold="True" BorderStyle="None" ForeColor="White" BackgroundImage="ig_tab_msn2.gif" BackColor="Transparent" CustomRules="background-repeat:no-repeat">
+    <Padding Left="20px" Right="3px" />
+  </DefaultTabStyle>
+  <DefaultTabSeparatorStyle />
+  <SelectedTabStyle BackgroundImage="ig_tab_msn1.gif" />
+</igtab:UltraWebTab>

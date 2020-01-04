@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MetaBuilders.WebControls.ComboBox</name>
+    </assembly>
+    <members>
+        <member name="T:MetaBuilders.WebControls.ComboBox">
+            <summary>
+            A variation on the DropDownList control with the added ability to type directly into the text portion of the control.
+            </summary>
+            <remarks>
+            <p>On modern browsers that support javascript and css properly, the ComboBox has a similar appearance to the standard DropDownList,
+            except that the top area accepts direct text entry.
+            On older browsers, or those that don't support modern standards, 
+            the ComboBox will appear as two seperate controls, a TextBox, followed by a DropDownList.
+            </p>
+            <p>
+            If you are using a visual designer with the ComboBox, be aware that Grid Mode layout support,
+            while existing, is limited by the same constraints as the DropDownList control.
+            Most 'alternate' browsers will not display the drop-down portion of the control correctly.
+            </p>
+            </remarks>
+            <example>
+            The following example demonstrates how to use the combobox on a page.
+            <code>
+            <![CDATA[
+            <%@ Register TagPrefix="mbcbb" Namespace="MetaBuilders.WebControls" Assembly="MetaBuilders.WebControls.ComboBox" %>
+            <html><body><form runat="server">
+             <mbcbb:ComboBox id="ComboBox1" runat="server" >
+              <asp:ListItem Value="1">Item 1</asp:ListItem>
+              <asp:ListItem Value="2">Item 2</asp:ListItem>
+              <asp:ListItem Value="3">Item 3</asp:ListItem>
+             </mbcbb:ComboBox>
+            </form></body></html>
+            ]]>
+            </code>
+            </example>
+        </member>
+        <member name="M:MetaBuilders.WebControls.ComboBox.#ctor">
+            <summary>
+            Creates a new instance of the ComboBox control.
+            </summary>
+        </member>
+        <member name="M:MetaBuilders.WebControls.ComboBox.OnTextChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:MetaBuilders.WebControls.ComboBox.TextChanged"/> event.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:MetaBuilders.WebControls.ComboBox.LoadViewState(System.Object)">
+            <summary>
+            Overrides the LoadViewState method.
+            </summary>
+        </member>
+        <member name="M:MetaBuilders.WebControls.ComboBox.CreateChildControls">
+            <summary>
+            Overrides the CreateChildControls method.
+            </summary>
+        </member>
+        <member name="M:MetaBuilders.WebControls.ComboBox.OnPreRender(System.EventArgs)">
+            <summary>
+            Overrides the OnPreRender method.
+            </summary>
+        </member>
+        <member name="M:MetaBuilders.WebControls.ComboBox.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Overrides the AddAttributesToRender method.
+            </summary>
+        </member>
+        <member name="M:MetaBuilders.WebControls.ComboBox.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Overrides the Render method.
+            </summary>
+        </member>
+        <member name="M:MetaBuilders.WebControls.ComboBox.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Overrides the RenderBeginTag method.
+            </summary>
+        </member>
+        <member name="M:MetaBuilders.WebControls.ComboBox.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Overrides the RenderContents method.
+            </summary>
+        </member>
+        <member name="M:MetaBuilders.WebControls.ComboBox.SaveViewState">
+            <summary>
+            Overrides the SaveViewState method.
+            </summary>
+        </member>
+        <member name="M:MetaBuilders.WebControls.ComboBox.OnLoad(System.EventArgs)">
+            <summary>
+            Overrides <see cref="M:System.Web.UI.Control.OnLoad(System.EventArgs)"/>
+            </summary>
+        </member>
+        <member name="E:MetaBuilders.WebControls.ComboBox.TextChanged">
+            <summary>
+            The event which occurs when the <see cref="P:MetaBuilders.WebControls.ComboBox.Text"/> property is changed.
+            </summary>
+        </member>
+        <member name="P:MetaBuilders.WebControls.ComboBox.Rows">
+            <summary>
+            Gets or sets the number of rows displayed in the dropdown portion of the <see cref="T:MetaBuilders.WebControls.ComboBox"/> control.
+            </summary>
+            <value>
+            The number of rows displayed in the <see cref="T:MetaBuilders.WebControls.ComboBox"/> control. The default value is 4.
+            </value>
+        </member>
+        <member name="P:MetaBuilders.WebControls.ComboBox.Text">
+            <summary>
+            Gets or sets the text content of the text box portion of the <see cref="T:MetaBuilders.WebControls.ComboBox"/> control.
+            </summary>
+        </member>
+        <member name="P:MetaBuilders.WebControls.ComboBox.TextIsInList">
+            <summary>
+            Gets a boolean value indicating whether the string in the text portion of the <see cref="T:MetaBuilders.WebControls.ComboBox"/>
+            can be found in the text property of any of the ListItems in the Items collection.
+            </summary>
+        </member>
+        <member name="P:MetaBuilders.WebControls.ComboBox.UseReferenceLibrary">
+            <summary>
+            Gets a boolean value indicating whether an external script library should be used,
+            instead of the library being emitted as a whole.
+            </summary>
+        </member>
+        <member name="P:MetaBuilders.WebControls.ComboBox.ReferenceLibraryUrl">
+            <summary>
+            Queries the web.config file to get the external reference script library path, if available.
+            </summary>
+        </member>
+        <member name="P:MetaBuilders.WebControls.ComboBox.BorderColor">
+            <summary>
+            Hides the BorderColor property, as it not relevant on this control.
+            </summary>
+        </member>
+        <member name="P:MetaBuilders.WebControls.ComboBox.BorderStyle">
+            <summary>
+            Hides the BorderStyle property, as it not relevant on this control.
+            </summary>
+        </member>
+        <member name="P:MetaBuilders.WebControls.ComboBox.BorderWidth">
+            <summary>
+            Hides the BorderWidth property, as it not relevant on this control.
+            </summary>
+        </member>
+        <member name="P:MetaBuilders.WebControls.ComboBox.ToolTip">
+            <summary>
+            Hides the ToolTip property, as it not relevant on this control.
+            </summary>
+        </member>
+        <member name="P:MetaBuilders.WebControls.ComboBox.Height">
+            <summary>
+            Hides the Height property, as it not relevant on this control.
+            </summary>
+        </member>
+        <member name="P:MetaBuilders.WebControls.ComboBox.ContainerControl">
+            <summary>
+            The container control of ComboBox's controls.
+            </summary>
+            <remarks>
+            This is used by the designer.
+            </remarks>
+        </member>
+        <member name="P:MetaBuilders.WebControls.ComboBox.ButtonControl">
+            <summary>
+            The button which activates the dropdownlist portion of the ComboBox.
+            </summary>
+            <remarks>This is used by the designer.</remarks>
+        </member>
+        <member name="P:MetaBuilders.WebControls.ComboBox.TextControl">
+            <summary>
+            The text area of the ComboBox.
+            </summary>
+            <remarks>This is used by the designer.</remarks>
+        </member>
+        <member name="P:MetaBuilders.WebControls.ComboBox.SelectedIndex">
+            <summary>
+            Overrides <see cref="P:System.Web.UI.WebControls.ListControl.SelectedIndex"/>.
+            </summary>
+        </member>
+        <member name="T:MetaBuilders.WebControls.ComboBoxDesigner">
+            <summary>
+            The designer for the <see cref="T:MetaBuilders.WebControls.ComboBox"/>.
+            </summary>
+        </member>
+        <member name="M:MetaBuilders.WebControls.ComboBoxDesigner.GetDesignTimeHtml">
+            <summary>
+            Overrides <see cref="M:System.Web.UI.Design.WebControls.ListControlDesigner.GetDesignTimeHtml"/>.
+            </summary>
+        </member>
+        <member name="M:MetaBuilders.WebControls.ComboBoxDesigner.Initialize(System.ComponentModel.IComponent)">
+            <summary>
+            Overrides <see cref="M:System.Web.UI.Design.WebControls.ListControlDesigner.Initialize(System.ComponentModel.IComponent)"/>.
+            </summary>
+        </member>
+        <member name="F:MetaBuilders.WebControls.ComboBoxDesigner.combo">
+            <summary>
+            The ComboBox for this designer.
+            </summary>
+        </member>
+    </members>
+</doc>

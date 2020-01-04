@@ -1,0 +1,31 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxm" Namespace="DevExpress.Web.ASPxMenu" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxmvc:MVCxMenu runat="server"
+    SpriteCssFilePath="~/App_Themes/BlackGlass/{0}/sprite.css" CssFilePath="~/App_Themes/BlackGlass/{0}/styles.css" CssPostfix="BlackGlass"
+    AutoSeparators="RootOnly" ShowPopOutImages="True">
+    <ItemStyle DropDownButtonSpacing="11px" ToolbarPopOutImageSpacing="8px" ToolbarDropDownButtonSpacing="8px"></ItemStyle>
+    <RootItemSubMenuOffset X="-1" LastItemX="-1" FirstItemX="-1"></RootItemSubMenuOffset>
+    <LoadingPanelImage Url="~/App_Themes/BlackGlass/Web/Loading.gif"></LoadingPanelImage>
+</dxmvc:MVCxMenu>
+
+<dxmvc:MVCxMenu runat="server" SkinID="MenuToolBar" CssFilePath="~/App_Themes/BlackGlass/{0}/styles.css"  ShowPopOutImages="True"
+    CssPostfix="BlackGlass" SpriteCssFilePath="~/App_Themes/BlackGlass/{0}/sprite.css" SeparatorHeight="100%"
+    AutoSeparators="None" Width="100%" ItemAutoWidth="False">
+    <RootItemSubMenuOffset FirstItemX="-1" X="-1" FirstItemY="-1" Y="-1"/>
+    <ItemStyle DropDownButtonSpacing="11px"></ItemStyle>
+    <LoadingPanelImage Url="~/App_Themes/BlackGlass/Web/Loading.gif"></LoadingPanelImage>
+</dxmvc:MVCxMenu>
+<dxmvc:MVCxMenu runat="server" SkinID="MenuButtons" SpriteCssFilePath="~/App_Themes/BlackGlass/{0}/sprite.css" CssFilePath="~/App_Themes/BlackGlass/{0}/styles.css" 
+		AutoSeparators="None" ItemSpacing="5px" ShowPopOutImages="True" CssPostfix="BlackGlass" CssClass="menuButtons menuButtons_BlackGlass" SeparatorHeight="0px">
+    <Border BorderWidth="0px"/>
+    <RootItemSubMenuOffset X="-1" LastItemX="-1" FirstItemX="-1"></RootItemSubMenuOffset>
+    <SubMenuItemStyle Wrap="False"></SubMenuItemStyle>
+    <LoadingPanelImage Url="~/App_Themes/BlackGlass/Web/Loading.gif"></LoadingPanelImage>
+</dxmvc:MVCxMenu>
+<dxmvc:MVCxMenu runat="server" SkinID="MenuLinks" CssFilePath="~/App_Themes/BlackGlass/{0}/styles.css" ShowPopOutImages="True" 
+    CssPostfix="BlackGlass" SpriteCssFilePath="~/App_Themes/BlackGlass/{0}/sprite.css"  
+    CssClass="menuLinks_BlackGlass">
+    <LoadingPanelImage Url="~/App_Themes/BlackGlass/Web/Loading.gif"></LoadingPanelImage>
+</dxmvc:MVCxMenu>

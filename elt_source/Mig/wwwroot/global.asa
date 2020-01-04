@@ -1,0 +1,27 @@
+<SCRIPT RUNAT=Server LANGUAGE=VBScript>
+Sub Application_OnStart
+	'Dim eltConn
+	'Set eltConn = Server.CreateObject("ADODB.Connection")
+	'eltConn.Open "Driver={Microsoft Access Driver (*.mdb)}; DBQ=C:\InetPub\wwwroot\elt\database\elt.mdb"
+	'objConn.Open "Provider=Microsoft.Jet.OLEDB.4.0;Data Source= E:\support\human_resources\Careers5\script1\careers.mdb"
+
+End Sub
+Sub Session_OnStart
+	OS_INFO=Request("HTTP_USER_AGENT")
+	pos=0
+	pos=instr(OS_INFO,"Windows NT")
+	if pos>0 then 
+		Session("ClientOS")="NT"
+	else
+		Session("ClientOS")="98"
+	end if
+	'Dim eltConn
+	Set Session("eltConn")=Server.CreateObject("ADODB.Connection")
+	'eltConn=Session("eltConn")
+	'eltConn.Open "Driver={Microsoft Access Driver (*.mdb)}; DBQ=C:\InetPub\wwwroot\elt\database\elt.mdb"
+	Session.Timeout=480
+
+End Sub
+</SCRIPT> 
+
+

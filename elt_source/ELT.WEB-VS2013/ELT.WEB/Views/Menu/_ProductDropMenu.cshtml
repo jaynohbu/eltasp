@@ -1,0 +1,17 @@
+﻿ 
+ @model ELT.WEB.Models.Menu
+ <div id="ProuctSelection">
+ @using (Html.BeginForm("ProductDropDownMenu", "Menu", FormMethod.Get, new { id = "FormProdMenu" }))
+ {
+ @Html.DropDownList("ProductMenuList")
+ }
+
+  <script type="text/javascript">
+      $(document).ready(function () {
+          $("#ProductMenuList").bind("change", function () { 
+            $("#FormProdMenu").submit(); });
+          $("#ProductMenuList").val("@Model.ContextToInt");
+      });
+     
+  </script>
+</div>

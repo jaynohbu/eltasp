@@ -1,0 +1,150 @@
+﻿@using ELT.WEB.Models
+@using ELT.CDT
+@model ELT.WEB.Models.ARAgingMasterModel
+
+@Html.DevExpress().GridView(
+    settings =>
+    {
+        settings.DataBound = (sender, e) =>
+        {
+            MVCxGridView gv = sender as MVCxGridView;
+            gv.Visible = (gv.VisibleRowCount > 0);
+        };
+
+        settings.HtmlRowCreated += (s, e) =>
+        {
+            if(e.RowType!= GridViewRowType.EmptyDataRow)
+            if (e.KeyValue.ToString().Contains("_Fiscal"))
+            {
+                System.Web.UI.WebControls.TableCell cell = e.Row.Cells[0];
+
+                if (cell is DevExpress.Web.ASPxGridView.Rendering.GridViewTableDetailButtonCell)
+                    cell.Controls[0].Visible = false;
+            }
+        };
+        settings.Name = "grid";
+
+        settings.CallbackRouteValues = new { Controller = "Accounting", Action = "ARAgingMaster" };
+        settings.Width = Unit.Percentage(100);
+        settings.Theme = "Metropolis";
+        settings.KeyFieldName = Model.KeyFieldName;
+
+
+        settings.Columns.Add("Company_Name", "Customer");
+        settings.Columns.Add("Phone", "Phone");
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Current";
+
+            column.SetDataItemTemplateContent(a =>
+            {
+                if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Current"))))
+                {
+                    string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                    if (a.Text == "0") val = "0";
+                    ViewContext.Writer.Write(val
+                       );
+                }
+            });
+        });
+        
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "One_Month";
+            column.Caption = "1~30";
+            column.SetDataItemTemplateContent(a =>
+            {
+                if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "One_Month"))))
+                {
+                    string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                    if (a.Text == "0") val = "0";
+                    ViewContext.Writer.Write(val
+                       );
+                }
+            });
+
+        });
+
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Two_Month";
+            column.Caption = "31~60";
+            column.SetDataItemTemplateContent(a =>
+            {
+                if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Two_Month"))))
+                {
+                    string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                    if (a.Text == "0") val = "0";
+                    ViewContext.Writer.Write(val
+                       );
+                }
+            });
+
+        });
+
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Three_Month";
+            column.Caption = "61~90";
+            column.SetDataItemTemplateContent(a =>
+            {
+                if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Three_Month"))))
+                {
+                    string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                    if (a.Text == "0") val = "0";
+                    ViewContext.Writer.Write(val
+                       );
+                }
+            });
+
+        });
+
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "More_Than_Three_Month";
+            column.Caption = "+90";
+            column.SetDataItemTemplateContent(a =>
+            {
+                if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "More_Than_Three_Month"))))
+                {
+                    string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                    if (a.Text == "0") val = "0";
+                    ViewContext.Writer.Write(val
+                       );
+                }
+            });
+
+        });
+
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Total";
+            column.SetDataItemTemplateContent(a =>
+            {
+                if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Total"))))
+                {
+                    string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                    if (a.Text == "0") val = "0";
+                    ViewContext.Writer.Write(val
+                       );
+                }
+            });
+
+        });
+   
+   
+        
+        settings.SettingsDetail.AllowOnlyOneMasterRowExpanded = false;
+        settings.SettingsDetail.ShowDetailRow = true;
+
+        settings.SetDetailRowTemplateContent(c =>
+        {
+
+            Html.RenderAction("ARAgingDetail", new { Key = (string)DataBinder.Eval(c.DataItem, Model.KeyFieldName), KeyFieldName = Model.KeyFieldName });
+        });
+        settings.PreRender = (sender, e) =>
+        {
+            ((MVCxGridView)sender).DetailRows.ExpandRow(0);
+        };
+    }).Bind(Model.Elements).GetHtml() 
+

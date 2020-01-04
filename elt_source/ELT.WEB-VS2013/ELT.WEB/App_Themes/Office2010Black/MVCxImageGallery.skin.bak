@@ -1,0 +1,18 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxImageGallery" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxmvc:MVCxImageGallery runat="server" PagerPanelSpacing="0">
+    <Images SpriteCssFilePath="~/App_Themes/Office2010Black/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/Office2010Black/Web/Loading.gif" />
+    </Images>
+    <Styles CssPostfix="Office2010Black" CssFilePath="~/App_Themes/Office2010Black/{0}/styles.css">
+        <LoadingPanel ImageSpacing="5" />
+        <Pager ForeColor="White" />
+        <PagerCurrentPageNumber ForeColor="Black" />
+        <PagerPageSizeItem>
+            <ComboBoxStyle ForeColor="Black" />
+        </PagerPageSizeItem>
+    </Styles>
+    <PagerSettings CurrentPageNumberFormat="{0}" />
+</dxmvc:MVCxImageGallery>

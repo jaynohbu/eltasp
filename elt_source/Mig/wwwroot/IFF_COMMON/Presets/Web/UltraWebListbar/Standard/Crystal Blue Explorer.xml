@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Crystal Blue Explorer" PresetDescription="Infragistics Crystal Blue Explorer Bar Preset.   Sets both Look and Behavior properties." PresetType="All" />-->
+<iglbar:UltraWebListbar BarWidth="100%" BorderStyle="None" MergeStyles="True" ItemIconStyle="SmallWithInsetText" ViewType="ExplorerBar" GroupSpacing="0px" BorderWidth="4px">
+  <DefaultGroupStyle Cursor="Default" BackColor="AliceBlue" />
+  <DefaultItemStyle Cursor="Default" Font-Size="8pt" Font-Names="Verdana" ForeColor="MediumBlue">
+    <Margin Left="1px" />
+  </DefaultItemStyle>
+  <DefaultItemHoverStyle Font-Bold="True" />
+  <DefaultGroupHeaderAppearance>
+    <CollapsedAppearance ExpansionIndicatorImage="downarrows_white.gif">
+      <Style />
+    </CollapsedAppearance>
+    <HoverAppearance>
+      <Style />
+    </HoverAppearance>
+    <ExpandedAppearance ExpansionIndicatorImage="uparrows_white.gif">
+      <Style Width="145px" Cursor="Default" Font-Size="10pt" Font-Names="Verdana" BackgroundImage="explorerbar.gif">
+        <Padding Bottom="2px" Left="5px" Top="2px" Right="5px" />
+      </Style>
+    </ExpandedAppearance>
+  </DefaultGroupHeaderAppearance>
+  <DefaultItemSelectedStyle Cursor="Default" BorderWidth="1px" BorderStyle="Inset" />
+</iglbar:UltraWebListbar>

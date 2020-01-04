@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Windows2000" PresetDescription="Infragistics Windows 2000 Look and Feel for WebGrid. Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<igtbl:UltraWebGrid>
+  <DisplayLayout Section508Complaint="False" RowHeightDefault="20px" Version="3.00"  BorderCollapseDefault="Separate" >
+    <AddNewBox>
+      <Style BorderWidth="1px" BorderStyle="Solid" BackColor="LightGray">
+        <BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White" />
+      </Style>
+      <ButtonStyle />
+    </AddNewBox>
+    <Pager>
+      <Style BorderWidth="1px" BorderStyle="Solid" BackColor="LightGray">
+        <BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White" />
+      </Style>
+    </Pager>
+    <HeaderStyleDefault BorderStyle="Solid" BackColor="LightGray">
+      <BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White" />
+    </HeaderStyleDefault>
+    <GroupByRowStyleDefault />
+    <RowSelectorStyleDefault />
+    <FrameStyle BorderWidth="1px" Font-Size="8pt" Font-Names="Verdana" BorderStyle="Solid" />
+    <FooterStyleDefault BorderWidth="1px" BorderStyle="Solid" BackColor="LightGray">
+      <BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White" />
+    </FooterStyleDefault>
+    <ActivationObject>
+      <BorderDetails />
+    </ActivationObject>
+    <GroupByBox>
+      <Style />
+      <BandLabelStyle />
+    </GroupByBox>
+    <RowExpAreaStyleDefault />
+    <SelectedHeaderStyleDefault />
+    <EditCellStyleDefault BorderWidth="0px" BorderStyle="None" />
+    <SelectedGroupByRowStyleDefault />
+    <SelectedRowStyleDefault BackColor="#0A246A" />
+    <RowAlternateStyleDefault />
+    <RowStyleDefault BorderWidth="1px" BorderColor="Gray" BorderStyle="Solid">
+      <Padding Left="3px" />
+      <BorderDetails WidthLeft="0px" WidthTop="0px" />
+    </RowStyleDefault>
+    <ImageUrls />
+    <Strings />
+  </DisplayLayout>
+</igtbl:UltraWebGrid>

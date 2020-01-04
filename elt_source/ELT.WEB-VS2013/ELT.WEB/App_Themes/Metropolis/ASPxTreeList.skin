@@ -1,0 +1,28 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxTreeList" Assembly="DevExpress.Web.ASPxTreeList.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxTreeList runat="server" CssFilePath="~/App_Themes/Metropolis/{0}/styles.css" CssPostfix="Metropolis">
+<Settings ShowTreeLines="False"></Settings>
+
+<SettingsPager CurrentPageNumberFormat="{0}">
+<PageSizeItemSettings ShowPopupShadow="False">
+</PageSizeItemSettings>
+</SettingsPager>
+
+<Images SpriteCssFilePath="~/App_Themes/Metropolis/{0}/sprite.css">
+<LoadingPanel Url="~/App_Themes/Metropolis/TreeList/Loading.gif"></LoadingPanel>
+</Images>
+
+<Styles CssPostfix="Metropolis" CssFilePath="~/App_Themes/Metropolis/{0}/styles.css"></Styles>
+
+<StylesPager>
+<Pager ItemSpacing="1px" Spacing="1px"></Pager>
+</StylesPager>
+
+<StylesEditors>
+<Calendar>
+<Border BorderColor="Silver" BorderStyle="Solid" BorderWidth="1px"></Border>
+</Calendar>
+</StylesEditors>
+</dx:ASPxTreeList>
+

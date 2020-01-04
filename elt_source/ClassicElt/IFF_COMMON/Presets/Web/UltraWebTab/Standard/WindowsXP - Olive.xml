@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="WindowsXP - Olive Theme" PresetDescription="Windows XP Olive Preset (final layout of Tabs only).  Sets both Look and Behavior properties." PresetType="All" />-->
+<igtab:UltraWebTab BorderColor="#A0A0A4" BorderStyle="Solid" ThreeDEffect="False" BorderWidth="1px">
+  <DisabledTabStyle />
+  <DefaultTabStyle Height="22px" Font-Size="8pt" Font-Names="Microsoft Sans Serif" ForeColor="Black" BackColor="White">
+    <Padding Top="2px" />
+  </DefaultTabStyle>
+  <RoundedImage LeftSideWidth="7" RightSideWidth="6" ShiftOfImages="2" SelectedImage="ig_tab_winXPo1.gif" NormalImage="ig_tab_winXPo3.gif" HoverImage="ig_tab_winXPo2.gif" FillStyle="LeftMergedWithCenter" />
+  <DefaultTabSeparatorStyle />
+  <SelectedTabStyle>
+    <Padding Bottom="2px" />
+  </SelectedTabStyle>
+</igtab:UltraWebTab>

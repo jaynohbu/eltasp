@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Aqua" PresetDescription="Property values that give WebDayView an aqua theme" PresetType="All" />-->
+<ig_sched:WebDayView  
+StyleSheetFileName="/ig_common/20053/styles/aqua/ig_webdayview.css" />

@@ -1,0 +1,13 @@
+[version]
+signature="$CHICAGO$
+AdvancedINF=2.0
+
+[Add.Code]
+IEPrint.ocx=IEPrint.ocx
+
+[IEPrint.ocx]
+file-win32-x86=thiscab
+clsid={F290B058-CB26-460E-B3D4-8F36AEEDBE44}
+DestDir=11
+RegisterServer=yes
+FileVersion=1,0,1,1

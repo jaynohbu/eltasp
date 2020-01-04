@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "freighteasy", "freighteasy\freighteasy.csproj", "{6A371F2F-CA65-4930-8513-825A79B8166F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "freighteasy.Tests", "freighteasy.Tests\freighteasy.Tests.csproj", "{D2492A4D-2B54-4F51-A0E8-70FA35BECBF8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A371F2F-CA65-4930-8513-825A79B8166F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A371F2F-CA65-4930-8513-825A79B8166F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A371F2F-CA65-4930-8513-825A79B8166F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A371F2F-CA65-4930-8513-825A79B8166F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2492A4D-2B54-4F51-A0E8-70FA35BECBF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2492A4D-2B54-4F51-A0E8-70FA35BECBF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2492A4D-2B54-4F51-A0E8-70FA35BECBF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2492A4D-2B54-4F51-A0E8-70FA35BECBF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

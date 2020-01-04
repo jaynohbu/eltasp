@@ -1,0 +1,17 @@
+<SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+<a1:ObjectStreamer id="ref-1" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Infragistics.Shared.Serialization/Infragistics.Shared.v3.2">
+<TargetTypeName id="ref-3">UltraGridBase</TargetTypeName>
+<DisplayLayout href="#ref-4"/>
+<PresetDescription id="ref-5">AutoFit columns with Fixed headers</PresetDescription>
+<PresetType>2</PresetType>
+<PresetName id="ref-6">AutoFit Columns</PresetName>
+</a1:ObjectStreamer>
+<a1:ObjectStreamer id="ref-4" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Infragistics.Shared.Serialization/Infragistics.Shared.v3.2">
+<TargetTypeName id="ref-7">UltraGridLayout</TargetTypeName>
+<AutoFitColumns>true</AutoFitColumns>
+<PresetType>2</PresetType>
+<UseFixedHeaders>true</UseFixedHeaders>
+</a1:ObjectStreamer>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

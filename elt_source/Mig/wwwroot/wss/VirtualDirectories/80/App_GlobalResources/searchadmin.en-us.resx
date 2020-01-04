@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="14.0.6107.5000" _dal="1" -->
+<!-- _LocalBinding -->
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+  <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+  <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+  <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value xml:space="preserve">[base64 mime encoded serialized .NET Framework object]</value>
+  </data>
+  <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value xml:space="preserve">[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+    <comment>This is a comment</comment>
+  </data>
+
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value xml:space="preserve">text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value xml:space="preserve">2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value xml:space="preserve">System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value xml:space="preserve">System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FSMasterJobDefinition_Feature_Title">
+    <value>FAST Search Server 2010 for SharePoint Master Job Provisioning</value>
+  </data>
+  <data name="FSMasterJobDefinition_Feature_Description">
+    <value>Provisions FAST Search Server 2010 for SharePoint Master Job.</value>
+  </data>
+  <data name="VisualBestBetWebPartTitle">
+    <value>Search Visual Best Bet</value>
+  </data>
+  <data name="VisualBestBetWebPartDescription">
+    <value>Displays Visual Best Bet</value>
+  </data>
+  <data name="SearchExtensionsFeatureTitle">
+    <value>Search extensions</value>
+  </data>
+  <data name="SearchExtensionsFeatureDescription">
+    <value>Search extensions</value>
+  </data>
+  <data name="FSAdmin_SiteSettings_ContextualKeywordManagement_Title" xml:space="preserve">
+    <value>FAST Search keywords</value>
+    
+  </data>
+  <data name="FSAdmin_SiteSettings_ContextualKeywordManagement_ToolTip" xml:space="preserve">
+    <value>Provide synonymn definitions, best bets, visual best bets, promotions and demotions for search queries on this site.</value>
+    
+  </data>
+  <data name="FSAdmin_SiteSettings_SiteBoostAndDemotionManagement_Title" xml:space="preserve">
+    <value>FAST Search site promotion and demotion</value>
+    
+  </data>
+  <data name="FSAdmin_SiteSettings_SiteBoostAndDemotionManagement_ToolTip" xml:space="preserve">
+    <value>Provide site promotions and demotions for search queries on this site.</value>
+    
+  </data>
+  <data name="FSAdmin_SiteSettings_UserContextManagement_Title" xml:space="preserve">
+    <value>FAST Search user context</value>
+    
+  </data>
+  <data name="FastCentralAdmin_Feature_Title" xml:space="preserve">
+    <value>FAST Search Central Admin Help Collection</value>
+    
+  </data>
+  <data name="FastCentralAdmin_Feature_Description" xml:space="preserve">
+    <value>Enables FAST Search Central Admin Help Collection</value>
+    
+  </data>
+  <data name="FastEndUser_Feature_Title" xml:space="preserve">
+    <value>FAST Search End User Help Collection</value>
+    
+  </data>
+  <data name="FastEndUser_Feature_Description" xml:space="preserve">
+    <value>Enables FAST Search End User Help Collection</value>
+    
+  </data>
+  <data name="ManageCrawlerRules_SearchAdminBreadcrumb">
+    <value>Crawler Impact Rules</value>
+  </data>
+  <data name="Admin_SearchFarmDasboard_Title">
+    <value>Farm Search Administration</value>
+  </data>
+  <data name="TopologyWP_Desc">
+    <value>This web part displays Search Application Topology</value>
+  </data>
+  <data name="TopologyWP_Title">
+    <value>Search Application Topology</value>
+  </data>
+  <data name="SystemStatusWP_Title">
+    <value>System Status</value>
+  </data>
+  <data name="SystemStatusWP_Desc">
+    <value>This Web Part displays status of Search System</value>
+  </data>
+  <data name="FarmSystemStatusWP_Title">
+    <value>Farm-Level Search Settings</value>
+  </data>
+  <data name="FarmSystemStatusWP_Desc">
+    <value>This web part displays Farm-Level Search Settings.</value>
+  </data>
+  <data name="FarmSearchApplicationsWP_Title">
+    <value>Search Service Applications</value>
+  </data>
+  <data name="FarmSearchApplicationsWP_Desc">
+    <value>This web part displays list of available Search Service Applications.</value>
+  </data>
+  <data name="SearchAdminWebParts_GroupName">
+    <value>Search Administration</value>
+  </data>
+  <data name="ContentSourcesStatusWP_Title">
+    <value>Crawl History</value>
+  </data>
+  <data name="ContentSourcesStatusWP_Desc">
+    <value>This Web Part displays status of Content Sources</value>
+  </data>
+  <data name="HealthReportSearchLibraryName">
+    <value>Search administration reports</value>
+  </data>
+  <data name="HealthReportSearchLibraryAdvancedReportsName">
+    <value>Advanced Reports</value>
+  </data>
+  <data name="HealthReportTitle_SharePointBackendQueryLatency">
+    <value>SharePoint Backend Query Latency</value>
+  </data>
+  <data name="HealthReportTitle_OverallQueryLatency">
+    <value>Overall Query Latency</value>
+  </data>
+  <data name="HealthReportTitle_QueryLatencyTrend">
+    <value>Query Latency Trend</value>
+  </data>
+  <data name="HealthReportTitle_CrawlProcessingPerActivity">
+    <value>Crawl Processing Per Activity</value>
+  </data>
+  <data name="HealthReportTitle_CrawlProcessingPerComponent">
+    <value>Crawl Processing Per Component</value>
+  </data>
+  <data name="HealthReportTitle_CrawlQueue">
+    <value>Crawl Queue</value>
+  </data>
+  <data name="HealthReportTitle_CrawlRatePerContentSource">
+    <value>Crawl Rate Per Content Source</value>
+  </data>
+  <data name="HealthReportTitle_CrawlRatePerType">
+    <value>Crawl Rate Per Type</value>
+  </data>
+  <data name="Admin_SearchSection_Title">
+    <value>Search</value>
+  </data>
+  <data name="SearchCenterOnet_SearchCenterListName">
+    <value>Tabs in Search Pages</value>
+  </data>
+  <data name="SearchCenterOnet_SearchCenterListDescription">
+    <value>Use this list to store the tabs displayed in the default blank search pages.</value>
+  </data>
+  <data name="SearchCenterOnet_SearchResultsListName">
+    <value>Tabs in Search Results</value>
+  </data>
+  <data name="SearchCenterOnet_SearchResultsListDescription">
+    <value>Use this list to store the tabs displayed in search results.</value>
+  </data>
+  <data name="DocumentsTab">
+    <value>All Sites</value>
+  </data>
+  <data name="DocumentsTabComment">
+    <value>Click for results from All Sites</value>
+  </data>
+  <data name="PeopleTab">
+    <value>People</value>
+  </data>
+  <data name="PeopleTabComment">
+    <value>Click for people results</value>
+  </data>
+  <data name="SearchWebPartGroup">
+    <value>Search</value>
+  </data>
+  <data name="TopAnswer_Title">
+    <value>Top Federated Results</value>
+  </data>
+  <data name="TopAnswer_Desc">
+    <value>Displays the Top Federated result from the configured location.</value>
+  </data>
+  <data name="SummaryResults_Title">
+    <value>Federated Results</value>
+  </data>
+  <data name="SummaryResults_Desc">
+    <value>Displays search results from a configured location.</value>
+  </data>
+  <data name="Refinement_Title">
+    <value>Refinement Panel</value>
+  </data>
+  <data name="Refinement_Desc">
+    <value>This webpart helps the users to refine search results</value>
+  </data>
+  <data name="PrivacyStatementWP_Title">
+    <value>Information Links</value>
+  </data>
+  <data name="PrivacyStatementWP_Desc">
+    <value>Use for formatted text, tables, and images.</value>
+  </data>
+  <data name="PrivacyStatementWP_LinkText">
+    <value>Where do my searches go?</value>
+  </data>
+  <data name="AdvancedSearch_Webpart_Title">
+    <value>Advanced Search Box</value>
+  </data>
+  <data name="AdvancedSearch_Webpart_Description">
+    <value>Displays parameterized search options based on properties and combinations of words.</value>
+  </data>
+  <data name="PeopleSearchBoxTitle">
+    <value>People Search Box</value>
+  </data>
+  <data name="PeopleSearchBoxDescription">
+    <value>Presents a search box that allows users to search for people.</value>
+  </data>
+  <data name="AdvancedSearch_FindDocsWith_Title">
+    <value>Find documents that have...</value>
+  </data>
+  <data name="AdvancedSearch_NarrowSearch_Title">
+    <value>Narrow the search...</value>
+  </data>
+  <data name="AdvancedSearch_AddPropRestrictions_Title">
+    <value>Add property restrictions...</value>
+  </data>
+  <data name="Dualchinese_SearchWP_Title">
+    <value>Dual Chinese Search</value>
+  </data>
+  <data name="DualChinese_SearchWP_Desc">
+    <value>Used to search Dual Chinese document and items at the same time.</value>
+  </data>
+  <data name="PeopleRefinement_Title">
+    <value>People Refinement Panel</value>
+  </data>
+  <data name="PeopleRefinement_Desc">
+    <value>This webpart helps the users to refine people search results</value>
+  </data>
+  <data name="SearchAdmin_Back_AccessKey">
+    <value xml:space="preserve">B</value>
+  </data>
+  <data name="SearchSettings_SearchAdminBreadcrumb">
+    <value xml:space="preserve">Search Settings</value>
+  </data>
+  <data name="HighConfidenceWP_Title">
+    <value>Search High Confidence Results</value>
+  </data>
+  <data name="HighConfidenceWP_Desc">
+    <value>Displays keywords, best bets and high confidence results.</value>
+  </data>
+  <data name="CoreResultsWP_Title">
+    <value>Search Core Results</value>
+  </data>
+  <data name="CoreResultsWP_Desc">
+    <value>Displays the search results and the properties associated with them.</value>
+  </data>
+  <data name="PeopleCoreResultsWP_Title">
+    <value>People Search Core Results</value>
+  </data>
+  <data name="PeopleCoreResultsWP_Desc">
+    <value>Displays the people search results and the properties associated with them.</value>
+  </data>
+  <data name="SearchBestBetsWP_Title">
+    <value>Search Best Bets</value>
+  </data>
+  <data name="SearchBestBetsWP_Desc">
+    <value>Displays high-confidence results on a search results page.</value>
+  </data>
+  <data name="SearchPagingWP_Title">
+    <value>Search Paging</value>
+  </data>
+  <data name="SearchPagingWPWP_Desc">
+    <value>Display links for navigating pages containing search results.</value>
+  </data>
+  <data name="SearchActionsWP_Title">
+    <value>Search Action Links</value>
+  </data>
+  <data name="SearchActionsWP_Desc">
+    <value>Displays the search action links on the search results page.</value>
+  </data>
+  <data name="QuerySuggestions_Title">
+    <value>Related Queries</value>
+  </data>
+  <data name="QuerySuggestions_Desc">
+    <value>This webpart displays related queries to a user query.</value>
+  </data>
+  <data name="SearchBoxWP_Title">
+    <value>Search Box</value>
+  </data>
+  <data name="SearchBoxWP_Desc">
+    <value>Displays a search box that allows users to search for information.</value>
+  </data>
+  <data name="SearchStatsWP_Title">
+    <value>Search Statistics</value>
+  </data>
+  <data name="SearchStatsWP_Desc">
+    <value>Displays the search statistics such as the number of results shown on the current page, total number of results and time taken to perform the search.</value>
+  </data>
+  <data name="SearchSummaryWP_Title">
+    <value>Search Summary</value>
+  </data>
+  <data name="SearchSummaryWP_Desc">
+    <value>Displays suggestions for current search query.</value>
+  </data>
+  <data name="SiteSettings_ManageScopes_Title">
+    <value>Search scopes</value>
+  </data>
+  <data name="SiteSettings_ManageSpecialTerms_Title">
+    <value>Search keywords</value>
+  </data>
+  <data name="SiteSettings_ManageEnhancedSearch_Title">
+    <value>Search settings</value>
+  </data>
+  <data name="SiteSettings_SearchSettings_Tooltip">
+    <value>Configure custom scopes and search center settings for this site.</value>
+  </data>
+  <data name="SiteSettings_SearchKeywords_Tooltip">
+    <value>Provide synonym definitions, best bets, and publishing schedules for search queries on this site.</value>
+  </data>
+  <data name="SiteSettings_SearchScopes_Tooltip">
+    <value>Define the search space results for queries on this site.</value>
+  </data>
+  <data name="SearchPortalAdmin_Feature_Title">
+    <value>Search Admin Portal Links and Navbar</value>
+  </data>
+  <data name="SearchPortalAdmin_Feature_Desc">
+    <value>Out-of-Box Search Portal admin Links.</value>
+  </data>
+  <data name="SearchMainTitle">
+    <value>Search box</value>
+  </data>
+  <data name="SearchResultsTitle">
+    <value>Search results</value>
+  </data>
+  <data name="PeopleSearchResultsTitle">
+    <value>People search results</value>
+  </data>
+  <data name="SearchCenterPageTitle">
+    <value>Search Center</value>
+  </data>
+  <data name="SearchCenterAdvancedSearchTitle">
+    <value>Advanced search</value>
+  </data>
+  <data name="SearchCenterPeopleSearchTitle">
+    <value>People Search</value>
+  </data>
+  <data name="SearchCenterResultsPageTitle">
+    <value>Search Results</value>
+  </data>
+  <data name="SearchCenterPeopleResultsPageTitle">
+    <value>People Results</value>
+  </data>
+  <data name="LayoutPageZone_BottomZone">
+    <value>Bottom Zone</value>
+  </data>
+  <data name="LayoutPageZone_MiddleUpperLeftZone">
+    <value>Middle Upper Left Zone</value>
+  </data>
+  <data name="LayoutPageZone_MiddleUpperRightZone">
+    <value>Middle Upper Right Zone</value>
+  </data>
+  <data name="LayoutPageZone_LeftZone">
+    <value>Left Zone</value>
+  </data>
+  <data name="LayoutPageZone_MiddleLowerLeftZone">
+    <value>Middle Lower Left Zone</value>
+  </data>
+  <data name="LayoutPageZone_MiddleLowerRightZone">
+    <value>Middle Lower Right Zone</value>
+  </data>
+  <data name="LayoutPageZone_RightZone">
+    <value>Right Zone</value>
+  </data>
+  <data name="List_Pages_UrlName">
+    <value>Pages</value>
+  </data>
+  <data name="contenttype_welcomepage_name">
+    <value>Welcome Page</value>
+  </data>
+  <data name="SearchResults_ATEventDiscovered">
+    <value>New items in search result</value>
+  </data>
+  <data name="SearchResults_ATEventModified">
+    <value>Existing items are changed</value>
+  </data>
+  <data name="SearchResults_ATEventAll">
+    <value>All changes</value>
+  </data>
+  <data name="AddNewContent_HelpLinkText">
+    <value>Add new content to crawl</value>
+  </data>
+  <data name="Federate_HelpLinkText">
+    <value>Federate results from other locations</value>
+  </data>
+  <data name="AddUsers_HelpLinkText">
+    <value>Add users to search</value>
+  </data>
+  <data name="CustomizeSearchCenter_HelpLinkText">
+    <value>Customize the Search Center</value>
+  </data>
+  <data name="SecureSearchSystem_HelpLinkText">
+    <value>Secure the search system</value>
+  </data>
+  <data name="EnhanceUserExperience_HelpLinkText">
+    <value>Enhance the user experience</value>
+  </data>
+  <data name="AddNewContent_ToolTipText">
+    <value>Learn more about crawling content.</value>
+  </data>
+  <data name="Federate_ToolTipText">
+    <value>Learn more about federating results from an external provider.</value>
+  </data>
+  <data name="AddUsers_ToolTipText">
+    <value>Learn more about adding users to the Search Center site.</value>
+  </data>
+  <data name="CustomizeSearchCenter_ToolTipText">
+    <value>Learn more about customizing the Search Center site.</value>
+  </data>
+  <data name="SecureSearchSystem_ToolTipText">
+    <value>Learn more about securing the search system.</value>
+  </data>
+  <data name="EnhanceUserExperience_ToolTipText">
+    <value>Learn more about enhancing the user experience.</value>
+  </data>
+  <data name="S2RightNav_OnlineDocumentation_ToolTipText">
+    <value>Read online documentation.</value>
+  </data>
+  <data name="ListKeywords_SearchAdminBreadcrumb">
+    <value>Keywords</value>
+  </data>
+  <data name="AddKeyword_SearchAdminBreadcrumb">
+    <value>Add Keyword</value>
+  </data>
+  <data name="EnhancedSearch_SearchAdminBreadcrumb">
+    <value>Search Settings</value>
+  </data>
+  <data name="LayoutPageZone_TopZone">
+    <value>Top Zone</value>
+  </data>
+  <data name="Search_MainPage_Title">
+    <value>Search Center</value>
+  </data>
+  <data name="SearchWebParts_Feature_Description">
+    <value>This feature uploads all web parts required for Search Center.</value>
+  </data>
+  <data name="SearchWebParts_Feature_Title">
+    <value>Search Server Web Parts</value>
+  </data>
+  <data name="SitesOnet_TabsListName">
+    <value>Tabs List</value>
+  </data>
+  <data name="PeopleSummaryResults_MoreLinkLabel">
+    <value>View more people »</value>
+  </data>
+  <data name="PeopleSummaryResults_Title">
+    <value>People Matches</value>
+  </data>
+  <data name="PeopleSummaryResults_Desc">
+    <value>This webpart displays people results matching the user query.</value>
+  </data>
+  <Data Name="BasicSearch_Feature_Title">
+    <Value>SharePoint Server Site Search</Value>
+  </Data>
+  <Data Name="BasicSearch_Feature_Description">
+    <Value>Uses the Search Server Service for site and list scoped searches.</Value>
+  </Data>
+  <Data Name="BasicSearch_Feature_SearchBox_QueryPromptString">
+    <Value>Search this site/list...</Value>
+  </Data>
+  <Data Name="BasicSearch_Feature_SearchBox_QueryPromptString2">
+    <Value>Search...</Value>
+  </Data>
+  <Data Name="EnhancedSearch_Feature_Title">
+    <Value>SharePoint Server Enterprise Search</Value>
+  </Data>
+  <Data Name="EnhancedSearch_Feature_Description">
+    <Value>Uses the Search Server Service for search over broad enterprise content. In addition to list and site scopes, provides search over people profiles, business data, remote and custom content sources. Uses multiple tabs to display results in the Search Center.</Value>
+  </Data>
+  <Data name="SearchCentralAdmin_Feature_Title">
+    <Value>Search Central Admin Links</Value>
+  </Data>
+  <Data name="SearchCentralAdmin_Feature_Desc">
+    <Value>Search Central admin Links.</Value>
+  </Data>
+  <Data Name="SearchCenterUrl_Feature_Title">
+    <Value>Search Center URL</Value>
+  </Data>
+  <Data Name="SearchCenterUrl_Feature_Description">
+    <Value>Search Center URL Feature.</Value>
+  </Data>
+  <data name="EditUserPref_SearchAdminBreadcrumb">
+    <value>Preferences</value>
+  </data>
+  <data name="SearchAdminWebParts_Feature_Title">
+    <value>Microsoft Search Administration Web Parts</value>
+  </data>
+  <data name="SearchAdminWebParts_Feature_Description">
+    <value>This feature uploads all web parts required for Search Administration Dashboards.</value>
+  </data>
+  <data name="SearchApplicationShortcutsList_Title">
+    <value>Shortcuts</value>
+  </data>
+  <data name="SearchApplicationShortcutsList_Desc">
+    <value>Commonly used search administration links</value>
+  </data>
+  <data name="SearchCenterLiteOnet_Title">
+    <value>Search Center</value>
+  </data>
+  <data name="SitesOnet_TabsList_Description">
+    <value>Use the Tabs list to store links to pages. The Tabs list should be used with the tab control on your site.</value>
+  </data>
+</root>

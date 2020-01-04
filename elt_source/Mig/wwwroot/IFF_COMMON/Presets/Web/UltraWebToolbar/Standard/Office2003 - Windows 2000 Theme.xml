@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Office 2003 - Windows 2000 Theme" PresetDescription="Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<igtbar:UltraWebToolbar ImageDirectory="/ig_common/images/" BorderStyle="None" MovableImage="ig_tb_move03.gif" BackColor="White" BackgroundImage="/ig_common/webtoolbar2/ig_tb_back03.gif" Font-Size="9pt" Font-Names="Arial" ItemWidthDefault="80px" Movable="True" ItemSpacing="0" Height="22px" ItemPadding="0" ForeColor="Black">
+  <HoverStyle Cursor="Default" BorderWidth="1px" BorderColor="Navy" BorderStyle="Solid" BackgroundImage="none" BackColor="LightBlue" Font-Size="9pt" Font-Names="Arial" ForeColor="Black" />
+  <SelectedStyle Cursor="Default" BorderWidth="1px" BorderColor="Navy" BorderStyle="Solid" BackgroundImage="none" BackColor="Gainsboro" Font-Size="9pt" Font-Names="Arial" ForeColor="Black" />
+  <DefaultStyle BorderWidth="0px" BorderColor="Menu" BorderStyle="None" BackgroundImage="ig_tb_back03.gif" Font-Size="9pt" Font-Names="Arial" ForeColor="Black" />
+</igtbar:UltraWebToolbar>

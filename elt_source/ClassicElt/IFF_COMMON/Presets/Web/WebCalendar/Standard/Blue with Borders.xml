@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Blue with Borders" PresetDescription="Infragistics Blue with Borders Preset" PresetType="Appearance" />-->
+<igsch:WebCalendar ID="WebCalendar1">
+  <Layout CellSpacing="1" ShowYearDropDown="False" PrevMonthImageUrl="ig_cal_blueDP.gif" ShowMonthDropDown="False" NextMonthImageUrl="ig_cal_blueDN.gif">
+    <DayStyle BorderWidth="1px" BorderColor="SlateBlue" BorderStyle="Solid" BackColor="#637DFF" />
+    <FooterStyle Height="16pt" BorderWidth="1px" Font-Size="8pt" Font-Names="Verdana" BorderColor="#E9E9FF" BorderStyle="Solid" ForeColor="DarkBlue" BackColor="#BEC4E5">
+      <BorderDetails ColorBottom="#5050A0" ColorRight="#5050A0" />
+    </FooterStyle>
+    <SelectedDayStyle Font-Bold="True" ForeColor="White" BackColor="#3030C0" />
+    <OtherMonthDayStyle Font-Italic="True" ForeColor="#5757A0" />
+    <NextPrevStyle Width="20px" BorderWidth="1px" BorderColor="#B0B0F0" BorderStyle="Solid">
+      <BorderDetails ColorBottom="#5050A0" ColorRight="#5050A0" WidthBottom="2px" />
+    </NextPrevStyle>
+    <CalendarStyle BorderWidth="1px" Font-Size="9pt" Font-Names="Courier New" BorderColor="SlateBlue" BorderStyle="Solid" ForeColor="DarkBlue" BackColor="#BEC4E5" />
+    <WeekendDayStyle ForeColor="#4040A0" />
+    <TodayDayStyle Font-Bold="True" BackColor="#839DFF" />
+    <DayHeaderStyle Height="1pt" Font-Size="8pt" Font-Italic="True" BackColor="#BEC4E5" />
+    <TitleStyle Font-Size="14pt" Font-Names="Arial Black" ForeColor="#BEC4E5" BackColor="#637DFF">
+      <BorderDetails StyleBottom="Solid" ColorBottom="SlateBlue" WidthBottom="1px" />
+    </TitleStyle>
+  </Layout>
+</igsch:WebCalendar>

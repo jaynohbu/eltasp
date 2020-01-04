@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Office.DocumentManagement.AdminPages</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Office.DocumentManagement.AdminPages.DocConvLauncher">
+      <summary>Launches the document converter.</summary>
+    </member>
+    <member name="M:Microsoft.Office.DocumentManagement.AdminPages.DocConvLauncher.#ctor">
+      <summary>Constructs an instance of a <see cref="T:Microsoft.Office.DocumentManagement.AdminPages.DocConvLauncher" /> object.</summary>
+    </member>
+    <member name="M:Microsoft.Office.DocumentManagement.AdminPages.DocConvLauncher.BtnSubmit_Click(System.Object,System.EventArgs)">
+      <param name="sender"></param>
+      <param name="args"></param>
+    </member>
+    <member name="F:Microsoft.Office.DocumentManagement.AdminPages.DocConvLauncher.DDLoadBalancer"></member>
+    <member name="P:Microsoft.Office.DocumentManagement.AdminPages.DocConvLauncher.LSI">
+      <summary>Represents the launcher service instance of the current <see cref="T:Microsoft.Office.DocumentManagement.AdminPages.DocConvLauncher" /> object.</summary>
+      <returns>Returns 
+<see cref="T:Microsoft.Office.Server.Conversions.LauncherServiceInstance" />
+.</returns>
+    </member>
+    <member name="M:Microsoft.Office.DocumentManagement.AdminPages.DocConvLauncher.OnContextChange(System.Object,System.EventArgs)">
+      <param name="sender"></param>
+      <param name="e"></param>
+    </member>
+    <member name="M:Microsoft.Office.DocumentManagement.AdminPages.DocConvLauncher.OnLoad(System.EventArgs)">
+      <param name="args"></param>
+    </member>
+    <member name="M:Microsoft.Office.DocumentManagement.AdminPages.DocConvLauncher.Port_Validate(System.Object,System.Web.UI.WebControls.ServerValidateEventArgs)">
+      <param name="sender"></param>
+      <param name="e"></param>
+    </member>
+    <member name="F:Microsoft.Office.DocumentManagement.AdminPages.DocConvLauncher.PortVal"></member>
+    <member name="F:Microsoft.Office.DocumentManagement.AdminPages.DocConvLauncher.Selector"></member>
+    <member name="F:Microsoft.Office.DocumentManagement.AdminPages.DocConvLauncher.TxtPort"></member>
+    <member name="T:Microsoft.Office.DocumentManagement.AdminPages.DocConvLoadBalancer">
+      <summary>Balances the load for the document converter.</summary>
+    </member>
+    <member name="M:Microsoft.Office.DocumentManagement.AdminPages.DocConvLoadBalancer.#ctor">
+      <summary>Constructs an instance of a <see cref="T:Microsoft.Office.DocumentManagement.AdminPages.DocConvLoadBalancer" /> object.</summary>
+    </member>
+    <member name="M:Microsoft.Office.DocumentManagement.AdminPages.DocConvLoadBalancer.BtnSubmit_Click(System.Object,System.EventArgs)">
+      <param name="sender"></param>
+      <param name="args"></param>
+    </member>
+    <member name="F:Microsoft.Office.DocumentManagement.AdminPages.DocConvLoadBalancer.DDScheme"></member>
+    <member name="P:Microsoft.Office.DocumentManagement.AdminPages.DocConvLoadBalancer.LBSI">
+      <returns>Returns 
+<see cref="T:Microsoft.Office.Server.Conversions.LoadBalancerServiceInstance" />
+.</returns>
+    </member>
+    <member name="M:Microsoft.Office.DocumentManagement.AdminPages.DocConvLoadBalancer.OnContextChange(System.Object,System.EventArgs)">
+      <param name="sender"></param>
+      <param name="e"></param>
+    </member>
+    <member name="M:Microsoft.Office.DocumentManagement.AdminPages.DocConvLoadBalancer.OnLoad(System.EventArgs)">
+      <param name="args"></param>
+    </member>
+    <member name="M:Microsoft.Office.DocumentManagement.AdminPages.DocConvLoadBalancer.Port_Validate(System.Object,System.Web.UI.WebControls.ServerValidateEventArgs)">
+      <summary>Validates the port the T:Microsoft.Office.DocumentManagement.AdminPages.DocConvLoadBalancer uses.</summary>
+      <param name="sender"></param>
+      <param name="e"></param>
+    </member>
+    <member name="F:Microsoft.Office.DocumentManagement.AdminPages.DocConvLoadBalancer.PortVal">
+      <summary>The port number.</summary>
+    </member>
+    <member name="M:Microsoft.Office.DocumentManagement.AdminPages.DocConvLoadBalancer.ResetLBSI"></member>
+    <member name="F:Microsoft.Office.DocumentManagement.AdminPages.DocConvLoadBalancer.Selector"></member>
+    <member name="F:Microsoft.Office.DocumentManagement.AdminPages.DocConvLoadBalancer.TxtPort"></member>
+  </members>
+</doc>

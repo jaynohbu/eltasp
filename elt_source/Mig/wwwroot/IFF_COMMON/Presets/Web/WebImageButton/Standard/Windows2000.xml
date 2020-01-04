@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Windows 2000" PresetDescription="Infragistics Windows 2000 Preset. Sets Look properties only. Note: The 'Reset' box should be checked." PresetType="Appearance" />-->
+<igtxt:WebImageButton UseBrowserDefaults="False">
+	<HoverAppearance ContentShift="NotSet" />
+	<FocusAppearance ContentShift="NotSet" />
+	<PressedAppearance>
+		<Style>
+			<BorderDetails ColorTop="112, 112, 112" ColorBottom="208, 208, 208" ColorRight="208, 208, 208" ColorLeft="112, 112, 112">
+			</BorderDetails>
+		</Style>
+		<InnerBorder ColorTop="160, 160, 160" WidthLeft="1px" StyleBottom="Solid" ColorBottom="240, 240, 240" WidthTop="1px" ColorRight="240, 240, 240" WidthRight="1px" StyleTop="Solid" StyleRight="Solid" WidthBottom="1px" StyleLeft="Solid" ColorLeft="160, 160, 160">
+		</InnerBorder>
+	</PressedAppearance>
+	<DisabledAppearance ContentShift="NotSet" />
+	<Appearance>
+		<Style BorderWidth="1px" BorderStyle="Solid" BackColor="Control">
+			<BorderDetails ColorTop="240, 240, 240" ColorBottom="112, 112, 112" ColorRight="112, 112, 112" ColorLeft="240, 240, 240">
+			</BorderDetails>
+		</Style>
+		<InnerBorder ColorTop="White" WidthLeft="1px" StyleBottom="Solid" ColorBottom="160, 160, 160" WidthTop="1px" ColorRight="160, 160, 160" WidthRight="1px" StyleTop="Solid" StyleRight="Solid" WidthBottom="1px" StyleLeft="Solid" ColorLeft="White">
+		</InnerBorder>
+	</Appearance>
+	<RoundedCorners RenderingType="Disabled">
+	</RoundedCorners>
+</igtxt:WebImageButton>

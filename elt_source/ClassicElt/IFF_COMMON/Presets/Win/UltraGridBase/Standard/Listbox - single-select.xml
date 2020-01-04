@@ -1,0 +1,33 @@
+<SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+<a1:ObjectStreamer id="ref-1" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Infragistics.Shared.Serialization/Infragistics.Shared.v3.2">
+<TargetTypeName id="ref-3">UltraGridBase</TargetTypeName>
+<DisplayLayout href="#ref-4"/>
+<PresetDescription id="ref-5">A read-only listbox-style grid. Users can select multiple rows, but cannot modify any data.</PresetDescription>
+<PresetType>2</PresetType>
+<PresetName id="ref-6">Listbox - single-select</PresetName>
+</a1:ObjectStreamer>
+<a1:ObjectStreamer id="ref-4" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Infragistics.Shared.Serialization/Infragistics.Shared.v3.2">
+<TargetTypeName id="ref-7">UltraGridLayout</TargetTypeName>
+<TabNavigation>1</TabNavigation>
+<ScrollStyle>1</ScrollStyle>
+<Override href="#ref-8"/>
+<ScrollBounds>0</ScrollBounds>
+<PresetType>2</PresetType>
+<ViewStyle>0</ViewStyle>
+</a1:ObjectStreamer>
+<a1:ObjectStreamer id="ref-8" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Infragistics.Shared.Serialization/Infragistics.Shared.v3.2">
+<AllowAddNew>2</AllowAddNew>
+<SelectTypeCell>1</SelectTypeCell>
+<AllowDelete>2</AllowDelete>
+<ColumnAutoSizeMode>4</ColumnAutoSizeMode>
+<AllowUpdate>2</AllowUpdate>
+<HeaderClickAction>3</HeaderClickAction>
+<CellClickAction>2</CellClickAction>
+<PresetType>2</PresetType>
+<SelectTypeCol>1</SelectTypeCol>
+<TargetTypeName id="ref-9">UltraGridOverride</TargetTypeName>
+<SelectTypeRow>2</SelectTypeRow>
+</a1:ObjectStreamer>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

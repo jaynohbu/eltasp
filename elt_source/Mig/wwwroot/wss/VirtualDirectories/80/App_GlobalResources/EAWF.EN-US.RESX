@@ -1,0 +1,801 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="14.0.4758.1000" _dal="1" -->
+<!-- _LocalBinding -->
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <!-- EawfForm -->
+  <data name="EawfFormOK">
+    <value>OK</value>
+  </data>
+  <data name="EawfFormCancel">
+    <value>Cancel</value>
+  </data>
+  <!-- EawfRoleForm -->
+  <data name="EawfRoleFormPageSectionTitleName">
+    <value>Name and Description</value>
+  </data>
+  <data name="EawfRoleFormPageSectionDescriptionName">
+    <value>Type a name and description for the approval role. </value>
+  </data>
+  <data name="EawfRoleFormName">
+    <value>Name:</value>
+  </data>
+  <data name="EawfRoleFormNameTooltip">
+    <value>Name of the approval role</value>
+  </data>
+  <data name="EawfRoleFormDescription">
+    <value>Description:</value>
+  </data>
+  <data name="EawfRoleFormDescriptionTooltip">
+    <value>Description of the approval role</value>
+  </data>
+  <data name="EawfRoleFormBlankGroupName">
+    <value>Type an approval role name.</value>
+  </data>
+  <data name="EawfRoleFormInvalidCharacterInName">
+    <value>The approval role name cannot contain characters such as: | ' [ ] / \ : &lt; &gt; , ; ? * @</value>
+  </data>
+  <data name="EawfRoleFormPageSectionAddMembers">
+    <value>Add Members</value>
+  </data>
+  <data name="EawfRoleFormPageSectionDescriptionAddMembers">
+    <value>Select members of this approval role.</value>
+  </data>
+  <data name="EawfRoleFormSectionTitlePermission">
+    <value>Give Group Permission to this Site</value>
+  </data>
+  <data name="EawfRoleFormSectionDescriptionPermission">
+    <value>All the members of approval role will have Read permission for this site.</value>
+  </data>
+  <data name="EawfRoleFormChoosePermissionLevel">
+    <value>Choose the permission level for approval role members to have for this site:</value>
+  </data>
+  <!-- EawfRoleDispFormPage -->
+  <data name="EawfRoleDispFormPageTitle">
+    <value>Approval Roles</value>
+  </data>
+  <data name="EawfRoleDispFormPageDescription">
+    <value>Use this page to view and manage all approval roles for Group Approval</value>
+  </data>
+  <data name="EawfRoleDispFormCreateNewGroup">
+    <value>New Approval Role</value>
+  </data>
+  <!-- EawfRoleNewFormPage -->
+  <data name="EawfRoleNewFormPageTitle">
+    <value>New Approval Role</value>
+  </data>
+  <data name="EawfRoleNewFormPageDescription">
+    <value>Use this page to create an approval role.</value>
+  </data>
+  <data name="EawfRoleNewFormCreate">
+    <value>Create</value>
+  </data>
+  <!-- EawfRoleEditFormPage -->
+  <data name="EawfRoleEditFormPageTitle">
+    <value>Edit Approval Role</value>
+  </data>
+  <data name="EawfRoleEditFormPageDescription">
+    <value>Use this page to edit an approval role.</value>
+  </data>
+  <data name="EawfRoleEditFormDelete">
+    <value>Delete</value>
+  </data>
+  <data name="EawfRoleEditFormDeleteConfirmMessage">
+    <value>Are you sure you want to delete this approval role?</value>
+  </data>
+  <!-- EawfGrpDispForm -->
+  <data name="EawfGrpDispFormSectionTitleOrganization">
+    <value>Organization</value>
+  </data>
+  <data name="EawfGrpDispFormOrganizationNameLabel">
+    <value>Name:</value>
+  </data>
+  <data name="EawfGrpDispFormOrganizationNameTooltip">
+    <value>Organization name</value>
+  </data>
+  <data name="EawfGrpDispFormYomiLabel">
+    <value>Yomi:</value>
+  </data>
+  <data name="EawfGrpDispFormYomiTooltip">
+    <value>Yomi of organization name</value>
+  </data>
+  <data name="EawfGrpDispFormOrganizationCodeLabel">
+    <value>Code:</value>
+  </data>
+  <data name="EawfGrpDispFormOrganizationCodeTooltip">
+    <value>Organization code</value>
+  </data>
+  <data name="EawfGrpDispFormSectionTitleLeaderMembers">
+    <value>Leader and Members</value>
+  </data>
+  <data name="EawfGrpDispFormOrganizationLeaderLabel">
+    <value>Leader:</value>
+  </data>
+  <data name="EawfGrpDispFormOrganizationLeaderTooltip">
+    <value>Leader of organization</value>
+  </data>
+  <data name="EawfGrpDispFormOrganizationMembersLabel">
+    <value>Members:</value>
+  </data>
+  <data name="EawfGrpDispFormOrganizationMembersTooltip">
+    <value>Members of organization</value>
+  </data>
+  <data name="EawfGrpDispFormPageDescription">
+    <value>Use this page to view detailed information of the selected user or organization. You can also add a new user or move to the "Manage Title" or "Manage Organization Chart" page using the menus.</value>
+  </data>
+  <data name="EawfGrpDispFormSectionDescriptionOrganization">
+    <value>You can see the name and code of this organization.</value>
+  </data>
+  <data name="EawfGrpDispFormSectionDescriptionLeaderAndMembers">
+    <value>You can see the leader and members of this organization.</value>
+  </data>
+  <data name="EawfGrpDispFormSectionDescriptionNotes">
+    <value>You can see the warnings and alerts on this organization. To fix the problems, you need to use the "Manage Organization Chart" menu on the toolbar.</value>
+  </data>
+  <!-- EawfUserDispForm -->
+  <data name="EawfUserDispFormPageTitle">
+    <value>Users and Organizations</value>
+  </data>
+  <data name="EawfUserDispFormPageDescription">
+    <value>Use this page to view detailed information of the selected user or organization. You can also add a new user or move to the "Manage Title" or "Manage Organization Chart" page using the menus.</value>
+  </data>
+  <data name="EawfUserDispFormAddMember">
+    <value>Add User</value>
+  </data>
+  <data name="EawfUserDispFormEditMember">
+    <value>Edit User Information</value>
+  </data>
+  <data name="EawfUserDispFormEditMemberDescription">
+    <value>Edit Group Approval user information</value>
+  </data>
+  <data name="EawfUserDispFormManageOrganization">
+    <value>Manage Organization Chart</value>
+  </data>
+  <data name="EawfUserDispFormManageOrganizationDescription">
+    <value> Add, Edit and Remove organizations</value>
+  </data>
+  <data name="EawfUserDispFormManageTitle">
+    <value>Manage Title</value>
+  </data>
+  <data name="EawfUserDispFormManageTitleDescription">
+    <value>Add, Edit and Remove job titles that are being used in the company</value>
+  </data>
+  <data name="EawfUserDispFormDepartFromGroupConfirm">
+    <value>You are about to remove the following user from this organization:\n^1\nIf the user does not belong to any other organization, the user will be moved to Isolated Users.</value>
+  </data>
+  <data name="EawfUserDispFormRemoveUserConfirm">
+    <value>You are about to remove the following user from site collection:\n^1\nDo you want to continue?</value>
+  </data>
+  <data name="EawfUserDispFormSectionDescriptionUser">
+    <value>You can view the basic user information such as account, name and e-mail address of this user.</value>
+  </data>
+  <data name="EawfUserDispFormSectionDescriptionOrganization">
+    <value>You can view the organizational information such as organization name and title.</value>
+  </data>
+  <data name="EawfUserDispFormSectionDescriptionAdditionalInformation">
+    <value>You can view additional information such as phone numbers and building location.</value>
+  </data>
+  <data name="EawfUserDispFormSectionDescriptionStamp">
+    <value>You can view the stamp image that will be used in approval on behalf of this user.</value>
+  </data>
+  <data name="EawfUserDispFormSectionDescriptionNotes">
+    <value>You can see the warnings and alerts on this user that you may need to fix to allow this user to participate in approval.</value>
+  </data>
+  <!-- EawfUserEditForm -->
+  <data name="EawfUserEditFormPageTitle">
+    <value>Edit User</value>
+  </data>
+  <data name="EawfUserEditFormPageDescription">
+    <value>Use this page to select the user to add to the organization chart. Click the "Next" button to proceed.</value>
+  </data>
+  <data name="EawfUserEditFormManagePermissions">
+    <value>Manage Permissions</value>
+  </data>
+  <data name="EawfUserEditFormManagePermissionsDescription">
+    <value>Edit permissions of users</value>
+  </data>
+  <!-- EawfUserNewFormPage -->
+  <data name="EawfUserNewFormPageTitle">
+    <value>Add User</value>
+  </data>
+  <data name="EawfUserNewFormPageDescription">
+    <value>Use this page to specify detail information of the user. Click the "Finish" button to add the user.</value>
+  </data>
+  <data name="EawfUserNewFormSectionDescriptionUser">
+    <value>You can confirm or modify account, name and e-mail address.</value>
+  </data>
+  <data name="EawfUserNewFormSectionDescriptionOrganization">
+    <value>You can confirm or modify organization name and title.</value>
+  </data>
+  <data name="EawfUserNewFormSectionDescriptionAdditionalInformation">
+    <value>You can confirm or modify additional information such as phone numbers and building location.</value>
+  </data>
+  <data name="EawfUserNewFormSectionDescriptionStamp">
+    <value>You can choose to use the default stamp image or designate the stamp image for this user.</value>
+  </data>
+  <!-- EawfTitlePage -->
+  <data name="EawfUserTitlePageTitle">
+    <value>Manage Title</value>
+  </data>
+  <data name="EawfUserTitlePageDescription">
+    <value>Use this page to add new titles, delete titles, or arrange the order of the titles.</value>
+  </data>
+  <data name="EawfUserTitleSectionHeader">
+    <value>Manage Title</value>
+  </data>
+  <data name="EawfUserTitleDescriptionText">
+    <value>You can add or delete titles that are used for your organization. The title list is displayed in the Title list when you try to set a title for a member of your organization in User Management. You can also arrange the title order by clicking Move Up or Move Down.</value>
+  </data>
+  <data name="EawfUserTitleTitleToAdd">
+    <value>Title to add:</value>
+  </data>
+  <data name="EawfUserTitleTitleTooltip">
+    <value>Title to add</value>
+  </data>
+  <data name="EawfUserTitleTitleList">
+    <value>Title List:</value>
+  </data>
+  <data name="EawfUserTitleAdd">
+    <value>Add</value>
+  </data>
+  <data name="EawfUserTitleDelete">
+    <value>Remove</value>
+  </data>
+  <data name="EawfUserTitleMoveUp">
+    <value>Move Up</value>
+  </data>
+  <data name="EawfUserTitleMoveDown">
+    <value>Move Down</value>
+  </data>
+  <!-- EawfUserForm -->
+  <data name="EawfUserFormGoBack">
+    <value>Go Back to View Mode</value>
+  </data>
+  <data name="EawfUserFormSectionTitleUser">
+    <value>User</value>
+  </data>
+  <data name="EawfUserFormAccountLabel">
+    <value>Account:</value>
+  </data>
+  <data name="EawfUserFormAccountTooltip">
+    <value>User account</value>
+  </data>
+  <data name="EawfUserFormNameLabel">
+    <value>Name:</value>
+  </data>
+  <data name="EawfUserFormNameTooltip">
+    <value>User name</value>
+  </data>
+  <data name="EawfUserFormYomiLabel">
+    <value>Yomi:</value>
+  </data>
+  <data name="EawfUserFormYomiTooltip">
+    <value>Yomi of user name</value>
+  </data>
+  <data name="EawfUserFormSectionTitleOrganization">
+    <value>Organization</value>
+  </data>
+  <data name="EawfUserFormOrganizationLabel">
+    <value>Organization:</value>
+  </data>
+  <data name="EawfUserFormOrganizationTooltip">
+    <value>Organization name</value>
+  </data>
+  <data name="EawfUserFormTitleLabel">
+    <value>Title:</value>
+  </data>
+  <data name="EawfUserFormTitleTooltip">
+    <value>Job title</value>
+  </data>
+  <data name="EawfUserFormSectionTitleAdditionalInformation">
+    <value>Additional Information</value>
+  </data>
+  <data name="EawfUserFormBuildingLocationLabel">
+    <value>Building Location:</value>
+  </data>
+  <data name="EawfUserFormBuildingLocationTooltip">
+    <value>Building location</value>
+  </data>
+  <data name="EawfUserFormWorkPhoneLabel">
+    <value>Work Phone:</value>
+  </data>
+  <data name="EawfUserFormWorkPhoneTooltip">
+    <value>Work phone</value>
+  </data>
+  <data name="EawfUserFormMobilePhoneLabel">
+    <value>Mobile Phone:</value>
+  </data>
+  <data name="EawfUserFormMobilePhoneTooltip">
+    <value>Mobile phone</value>
+  </data>
+  <data name="EawfUserFormStampLabel">
+    <value>Stamp Image:</value>
+  </data>
+  <data name="EawfUserFormEmailLabel">
+    <value>E-Mail Address:</value>
+  </data>
+  <data name="EawfUserFormEmailTooltip">
+    <value>E-Mail Address</value>
+  </data>
+  <data name="EawfUserFormInformation">
+    <value>Notes</value>
+  </data>
+  <data name="EawfUserFormSectionTitleStamp">
+    <value>Stamp</value>
+  </data>
+  <data name="EawfUserFormBlankNameError">
+    <value>You must type a name.</value>
+  </data>
+  <data name="EawfUserFormBlankEmailError">
+    <value>You must type an e-mail address.</value>
+  </data>
+  <data name="EawfUserFormNext">
+    <value>Next</value>
+  </data>
+  <data name="EawfUserFormBack">
+    <value>Back</value>
+  </data>
+  <data name="EawfUserFormSave">
+    <value>Save</value>
+  </data>
+  <data name="EawfUserFormFinish">
+    <value>Finish</value>
+  </data>
+  <data name="EawfUserFormDefaultStamp">
+    <value>Default stamp</value>
+  </data>
+  <data name="EawfUserFormSetUsersSignature">
+    <value>Set user's stamp</value>
+  </data>
+  <data name="EawfUserFormSetUsersSignatureTooltip">
+    <value>User's stamp</value>
+  </data>
+  <data name="EawfUserFormSelectPersonButton">
+    <value>Select...</value>
+  </data>
+  <!-- EawfUserInvFormPage -->
+  <data name="EawfUserInvFormPageTitle">
+    <value>Add User</value>
+  </data>
+  <data name="EawfUserInvFormPageDescription">
+    <value>Use this page to select a user for creation. Select "Next" button to proceed.</value>
+  </data>
+  <data name="EawfUserInvFormUser">
+    <value>User</value>
+  </data>
+  <data name="EawfUserInvFormUserDescription">
+    <value>You can enter a user name or e-mail address.</value>
+  </data>
+  <data name="EawfUserInvFormRoles">
+    <value>Permissions</value>
+  </data>
+  <data name="EawfUserInvFormRolesDescription">
+    <value>Select the permissions for this user.</value>
+  </data>
+  <data name="EawfUserInvFormNoPermission">
+    <value>At least one permission should be selected.</value>
+  </data>
+  <!-- EawfUserPrefFormPage -->
+  <data name="EawfUserPrefFormPageTitle">
+    <value>Preference</value>
+  </data>
+  <data name="EawfUserPrefFormSectionTitleDelegate">
+    <value>Delegate</value>
+  </data>
+  <data name="EawfUserPrefFormSectionDescriptionDelegate">
+    <value>You can select a person who will approve documents on your behalf.</value>
+  </data>
+  <data name="EawfUserPrefFormDelegateDescription">
+    <value>I'm out of the office</value>
+  </data>
+  <data name="EawfUserPrefFormDelegateToPersonCaption">
+    <value>Delegate all my approval task to:</value>
+  </data>
+  <!-- EawfTmpltForm -->
+  <data name="EawfTmpltFormNameSectionHeader">
+    <value>Name and Description</value>
+  </data>
+  <data name="EawfTmpltFormNameSectionDescription">
+    <value>Enter a new name that will appear in the Group Approval Template list and New Item button. Type descriptive text that will help users use this template.</value>
+  </data>
+  <data name="EawfTmpltFormNameSectionNameField">
+    <value>Name:</value>
+  </data>
+  <data name="EawfTmpltFormNameSectionNameTooltip">
+    <value>Template name</value>
+  </data>
+  <data name="EawfTmpltFormNameSectionDescriptionField">
+    <value>Description:</value>
+  </data>
+  <data name="EawfTmpltFormNameSectionDescriptionTooltip">
+    <value>Template description</value>
+  </data>
+  <data name="EawfTmpltFormDocumentTemplateSectionHeader">
+    <value>Document Template</value>
+  </data>
+  <data name="EawfTmpltFormDocumentTemplateSectionDescription">
+    <value>Specify the document to use for this Group Approval template.</value>
+  </data>
+  <data name="EawfTmpltFormDocumentTemplateSectionExistingTemplateField">
+    <value>Edit an existing document template.</value>
+  </data>
+  <data name="EawfTmpltFormDocumentTemplateSectionEditExistingTemplate">
+    <value>(Edit Template)</value>
+  </data>
+  <data name="EawfTmpltFormDocumentTemplateSectionUploadTemplateField">
+    <value>Upload a new document template</value>
+  </data>
+  <data name="EawfTmpltFormDefaultTemplateSectionHeader">
+    <value>Default Template</value>
+  </data>
+  <data name="EawfTmpltFormDefaultTemplateSectionDescription">
+    <value>Choose whether to make this template the default selection for Group Approval when uploading or creating new item.</value>
+  </data>
+  <data name="EawfTmpltFormDefaultTemplateSectionFieldLabel">
+    <value>Set this document as default template</value>
+  </data>
+  <data name="EawfTmpltFormDefaultTemplateSectionFieldValueYes">
+    <value>Yes</value>
+  </data>
+  <data name="EawfTmpltFormDefaultTemplateSectionFieldValueNo">
+    <value>No</value>
+  </data>
+  <data name="EawfTmpltFormBlankTemplateNameError">
+    <value>You must enter a template name.</value>
+  </data>
+  <data name="EawfTmpltFormBlankDocTemplateUploadError">
+    <value>At lease one document template should be uploaded.</value>
+  </data>
+  <data name="EawfTmpltFormBlankReceivingDepartmentError">
+    <value>Select the receiving organization for this template.</value>
+  </data>
+  <data name="EawfTmpltFormReceivingDepartmentSectionHeader">
+    <value>Receiving Organization</value>
+  </data>
+  <data name="EawfTmpltFormReceivingDepartmentSectionDescription">
+    <value>Choose whether to use another archival organization folder and desiginate the organization folder if you choose to use it. If you designate the organization folder, the approved document will be archived in the selected organization folder in addition to the organization folder of submitter.</value>
+  </data>
+  <data name="EawfTmpltFormReceivingDepartmentSectionDefaultDepartment">
+    <value>Archive only in the organization folder of the submitter</value>
+  </data>
+  <data name="EawfTmpltFormReceivingDepartmentSectionAnotherDepartment">
+    <value>Archive in the organization folder of the submitter and the designated organization folder</value>
+  </data>
+  <data name="EawfTmpltFormReceivingDepartmentSectionDialogTitle">
+    <value>Select Organization</value>
+  </data>
+  <data name="EawfTmpltFormReceivingDepartmentSectionDialogTooltip">
+    <value>Organization Editor</value>
+  </data>
+  <data name="EawfTmpltFormReceivingDepartmentSectionSelectButton">
+    <value>Select...</value>
+  </data>
+  <data name="EawfTmpltFormIsBackwardSigningSectionHeader">
+    <value>Direction of Signature Insertion</value>
+  </data>
+  <data name="EawfTmpltFormIsBackwardSigningSectionDescription">
+    <value>Choose whether to use reverse direction when the signature is inserted. The ordinary direction implies that the signature will be inserted left-to-right and top-to-bottom. The reverse direction implies that the signature will be inserted in the opposite order.</value>
+  </data>
+  <data name="EawfTmpltFormIsBackwardSigningCheckboxText">
+    <value>Use the reverse direction of signature insertion</value>
+  </data>
+  <!-- EawfTmpltMainForm -->
+  <data name="EawfTmpltMainFormPageTitle">
+    <value>Group Approval Templates</value>
+  </data>
+  <data name="EawfTmpltMainFormPageDescription">
+    <value>Use this page to manage Group Approval templates.</value>
+  </data>
+  <data name="EawfTmpltMainFormMenuItemAddTemplateText">
+    <value>New Template</value>
+  </data>
+  <data name="EawfTmpltMainFormMenuItemChangeTemplateOrderText">
+    <value>Change Template Order and Visibility</value>
+  </data>
+  <data name="EawfTmpltMainFormMenuItemChangeTemplateOrderDescription">
+    <value>Change the template order and visibility of My Approval document library.</value>
+  </data>
+  <data name="EawfTmpltMainFormColumnNameType">
+    <value>Type</value>
+  </data>
+  <data name="EawfTmpltMainFormColumnNameName">
+    <value>Name</value>
+  </data>
+  <data name="EawfTmpltMainFormColumnNamePolicySettings">
+    <value>Policy Settings</value>
+  </data>
+  <data name="EawfTmpltMainFormColumnNameVisible">
+    <value>Visible on New Button</value>
+  </data>
+  <data name="EawfTmpltMainFormColumnNameDefaultTemplate">
+    <value>Default Template</value>
+  </data>
+  <!-- EawfTmpltNewForm -->
+  <data name="EawfTmpltNewFormPageTitle">
+    <value>New Template</value>
+  </data>
+  <data name="EawfTmpltNewFormPageDescription">
+    <value>Use this page to create a new template.</value>
+  </data>
+  <!-- EawfTmpltEditForm -->
+  <data name="EawfTmpltEditFormPageTitle">
+    <value>Change Template Settings</value>
+  </data>
+  <data name="EawfTmpltEditFormPageDescription">
+    <value>Use this page to change the settings for this template.</value>
+  </data>
+  <data name="EawfTmpltEditFormRemove">
+    <value>Delete</value>
+  </data>
+  <data name="EawfTmpltEditFormRemoveConfirmMessage">
+    <value>Are you sure you want to delete this template?</value>
+  </data>
+  <!-- EawfDocLibAdminPage -->
+  <data name="EawfDocLibAdminPageTitle">
+    <value>My Approval</value>
+  </data>
+  <data name="EawfDocLibAdminPageNewFolder">
+    <value>New Folder</value>
+  </data>
+  <!-- EawfDocLibViewDescription -->
+  <data name="EawfDocLibViewDescriptionDocsToApprove">
+    <value>Use this view to approve a document which is assigned to you.</value>
+  </data>
+  <data name="EawfDocLibViewDescriptionProposedByMe">
+    <value>Use this view to track a document which is created by you.</value>
+  </data>
+  <data name="EawfDocLibViewDescriptionRejectedForMe">
+    <value>Use this view to track a document whose approval process is started by you but rejected.</value>
+  </data>
+  <data name="EawfDocLibViewDescriptionApprovedByMe">
+    <value>Use this view to track a document which is approved by you.</value>
+  </data>
+  <data name="EawfDocLibViewDescriptionTeamFolder">
+    <value>Use this view to review a document which has been approved and archived per organization.</value>
+  </data>
+  <!-- EawfDocLibDisplayForm -->
+  <data name="EawfDocLibDisplayFormFileNameLabel">
+    <value>Name</value>
+  </data>
+  <data name="EawfDocLibDisplayFormDocumentIdLabel">
+    <value>Document ID</value>
+  </data>
+  <data name="EawfDocLibDisplayFormCompanyNameLabel">
+    <value>Company Name</value>
+  </data>
+  <data name="EawfDocLibDisplayFormDepartmentLabel">
+    <value>Organization</value>
+  </data>
+  <data name="EawfDocLibDisplayFormTemplateNameLabel">
+    <value>Template Name</value>
+  </data>
+  <data name="EawfDocLibDisplayFormSubmitterLabel">
+    <value>Submitter</value>
+  </data>
+  <data name="EawfDocLibDisplayFormSubmitDateLabel">
+    <value>Submit Date</value>
+  </data>
+  <data name="EawfDocLibDisplayFormOpenScopeLabel">
+    <value>Open Scope</value>
+  </data>
+  <data name="EawfDocLibDisplayFormStateLabel">
+    <value>Status</value>
+  </data>
+  <!-- EawfDocLibDisplayFormCommentsList -->
+  <data name="EawfDocLibDisplayFormCommentsListLabel">
+    <value>Approval Line with Comments</value>
+  </data>
+  <!-- EawfDocLibDisplayFormWorkflowDetailStatus -->
+  <data name="EawfDocLibDisplayFormWorkflowDetailStatusLabel">
+    <value>Detail Status</value>
+  </data>
+  <data name="EawfDocLibDisplayFormWorkflowDetailStatusLinkName">
+    <value>Approval Status</value>
+  </data>
+  <data name="EawfDocLibDisplayFormWorkflowDetailStatusCancelWorkflowLinkName">
+    <value>Cancel this approval</value>
+  </data>
+  <!-- EawfDocLibDisplayFormAttachments -->
+  <data name="EawfDocLibDisplayFormAttachmentsLabel">
+    <value>Attachments</value>
+  </data>
+  <data name="EawfDocLibDisplayFormAttachmentsLinkName">
+    <value>View Files</value>
+  </data>
+  <!-- EawfDocLibApprovalFolders -->
+  <data name="EawfDocLibApprovalFoldersTitle">
+    <value>Approval Folders</value>
+  </data>
+  <!-- EawfDocLibArchivalFolders -->
+  <data name="EawfDocLibArchivalFoldersTitle">
+    <value>Archival Folders</value>
+  </data>
+  <!-- EawfDocLibMenuItem -->
+  <data name="EawfDocLibMenuItemEditMyPreferenceText">
+    <value>Edit my preferences</value>
+  </data>
+  <data name="EawfDocLibMenuItemEditMyPreferenceDescription">
+    <value>Edit my preferences.</value>
+  </data>
+  <data name="EawfDocLibMenuItemAlertMeText">
+    <value>Alert Me</value>
+  </data>
+  <data name="EawfDocLibMenuItemAlertMeDescription">
+    <value>Receive e-mail notifications when items change.</value>
+  </data>
+  <!-- EawfDocLibAdminMenuItem -->
+  <data name="EawfDocLibAdminMenuItemModifySettingsText">
+    <value>My Approval Settings</value>
+  </data>
+  <data name="EawfDocLibAdminMenuItemModifySettingsDescription">
+    <value>Manage settings such as permissions, columns, views, and policy.</value>
+  </data>
+  <data name="EawfDocLibAdminMenuItemModifyPolicySettingsText">
+    <value>Modify Policy Settings</value>
+  </data>
+  <data name="EawfDocLibAdminMenuItemModifyPolicySettingsDescription">
+    <value>You can set Document ID, Expiration and etc.</value>
+  </data>
+  <!-- EawfDocIdLogReportPage -->
+  <data name="EawfDocIdLogReportPageWebBotPreview">
+    <value>This page contains a view that is only usable in a Web browser such as Microsoft Internet Explorer. To view this page, preview it in a browser.</value>
+  </data>
+  <!-- EawfDocIdLogMenuItem -->
+  <data name="EawfDocIdLogMenuItemResetSeqNumText">
+    <value>Reset Document ID Sequence Number</value>
+  </data>
+  <data name="EawfDocIdLogMenuItemResetSeqNumDescription">
+    <value>Reset sequence number that is a part of Document ID</value>
+  </data>
+  <!-- EawfViewAttachments Page -->
+  <data name="EawfViewAttachmentsPageTitle">
+    <value>Attachments</value>
+  </data>
+  <data name="EawfViewAttachmentsPageDescription">
+    <value>Use this page to view the attachments</value>
+  </data>
+  <!-- EawfTaskEdit Page -->
+  <data name="EawfTaskEditPageTitle">
+    <value>Workflow Task</value>
+  </data>
+  <data name="EawfTaskEditPageDescription">
+    <value>This workflow task applies to {0}.</value>
+  </data>
+  <data name="EawfTaskEditPageMissingListError">
+    <value>The list referenced by this task is missing or has been deleted.</value>
+  </data>
+  <data name="EawfTaskEditPageMissingParentItemError">
+    <value>You cannot complete this workflow task because the item that the workflow is running on has been deleted. If the item is in your Recycle Bin, restore it, and then try again.</value>
+  </data>
+  <data name="EawfTaskEditPageInvalidWorkflowError">
+    <value>The workflow referenced by this task is not Group Approval.</value>
+  </data>
+  <data name="EawfTaskEditPageInvalidBaseTypeError">
+    <value>The list referenced by this task is not a Document Libraray.</value>
+  </data>
+  <data name="EawfTaskEditPageContentTitle">
+    <value>Approval Requested</value>
+  </data>
+  <data name="EawfTaskEditPageContentDescription">
+    <value>You cannot modify your task here. To approve/reject the document, open the document and approve/reject the document.</value>
+  </data>
+  <data name="EawfTaskEditPageStatus">
+    <value>Status</value>
+  </data>
+  <data name="EawfTaskEditPageOutcome">
+    <value>Outcome</value>
+  </data>
+</root>

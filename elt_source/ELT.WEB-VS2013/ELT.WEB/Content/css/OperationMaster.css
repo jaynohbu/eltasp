@@ -1,0 +1,74 @@
+﻿body {
+}
+h3
+{
+    font-size:14px;
+}
+.FormWrapper
+{
+    width:95%;    
+    border: 10px, solid, black;
+}
+.FormTitle
+{
+    height:32px;
+    float:left;
+    padding-left :45px;
+}
+.FormSearch
+{
+    float:right;
+    padding-right:45px;
+    padding-top:5px;
+    vertical-align: middle;     
+    position:relative;
+    height:60px;
+}
+.FormSearch .Lookup
+{
+  color:  #000000;
+  width:200px; 
+  margin-right:0px;
+}
+.FormSearch .ToolTip
+{   
+  margin-right:5px;
+}
+.FormSearch .SearchGlass
+{
+    margin-left:0px;
+    height:27px;
+    vertical-align:middle; 
+}
+.FromSearch .SearchFor
+{
+    
+}
+.ClearBoth
+{
+    clear:both;
+}
+
+.Hide
+{
+    display:none;
+}
+.FloatLeft
+{
+    float : left;
+}
+.FloatRight
+{
+    float:right;
+}
+
+#ContentFrame
+{
+    padding-right: 0px; 
+    padding-left: 0px; 
+    padding-bottom: 0px; 
+    margin: 0px;                                    
+    padding-top: 0px;
+    width:100%; 
+    
+}

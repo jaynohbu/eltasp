@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Windows-XP-LightBlue" PresetDescription="Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<igchart:UltraChart Transform3D-Scale="56" BackgroundImageFileName="" ForeColor="Black" EnableCrossHair="True" BackColor="Menu" ImageUrl="">
+  <ColorModel ColorBegin="0, 0, 64" ColorEnd="DodgerBlue" ModelStyle="CustomSkin" Scaling="Increasing">
+    <Skin>
+      <PEs>
+        <igchartprop:PaintElement Fill="InactiveCaption" FillGradientStyle="BackwardDiagonal" ElementType="Gradient" />
+      </PEs>
+    </Skin>
+  </ColorModel>
+  <TitleTop Font="Lucida Console, 10.2pt" Visible="False" FontColor="#0000C0" HorizontalAlign="Center">
+    <Margins />
+  </TitleTop>
+  <Border CornerRadius="20" Color="#0000C0" />
+  <TitleBottom Font="Lucida Console, 10.2pt" Visible="False" FontColor="#0000C0" HorizontalAlign="Far" Location="Bottom">
+    <Margins />
+  </TitleBottom>
+  <Axis BackColor="#C0C0FF">
+    <Y LineEndCapStyle="ArrowAnchor" LineColor="Navy" TickmarkInterval="0" LineThickness="1" Extent="40">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels Font="Times New Roman, 7.8pt" HorizontalAlign="Far" SeriesFormatString="" ItemFormatString="&lt;DATA_VALUE:00.00&gt;" Flip="False" ItemFormat="DataValue" VerticalAlign="Center" FontColor="#0000C0" Orientation="Horizontal" OrientationAngle="0" />
+      <MajorGridLines Color="RoyalBlue" />
+    </Y>
+    <Y2 TickmarkInterval="0">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels Font="Times New Roman, 7.8pt" HorizontalAlign="Near" SeriesFormatString="" ItemFormatString="&lt;DATA_VALUE:00.00&gt;" Flip="False" ItemFormat="DataValue" VerticalAlign="Center" FontColor="#0000C0" Orientation="Horizontal" OrientationAngle="0" />
+      <MajorGridLines Color="RoyalBlue" />
+    </Y2>
+    <X2 LineEndCapStyle="ArrowAnchor" LineColor="Blue" TickmarkInterval="0" LineThickness="1">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels Font="Times New Roman, 7.8pt" ItemFormatString="&lt;ITEM_LABEL&gt;" Flip="False" ItemFormat="ItemLabel" VerticalAlign="Center" FontColor="#0000C0" Orientation="VerticalLeftFacing" OrientationAngle="0" />
+      <MajorGridLines Color="RoyalBlue" />
+    </X2>
+    <Z2 LineColor="Blue" TickmarkInterval="0" LineThickness="1">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels HorizontalAlign="Near" SeriesFormatString="" ItemFormatString="" Flip="False" ItemFormat="None" VerticalAlign="Center" OrientationAngle="0" />
+      <MajorGridLines Color="RoyalBlue" />
+    </Z2>
+    <Z LineColor="Blue" TickmarkInterval="0" LineThickness="1">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels Font="Times New Roman, 7.8pt" HorizontalAlign="Near" SeriesFormatString="" ItemFormatString="&lt;DATA_VALUE:00.00&gt;" Flip="False" ItemFormat="DataValue" VerticalAlign="Center" FontColor="#0000C0" Orientation="Horizontal" OrientationAngle="0" />
+      <MajorGridLines Color="RoyalBlue" />
+    </Z>
+    <X LineEndCapStyle="ArrowAnchor" LineColor="Navy" TickmarkInterval="0" LineThickness="1" Extent="60">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels Font="Times New Roman, 7.8pt" HorizontalAlign="Near" ItemFormatString="&lt;ITEM_LABEL&gt;" Flip="False" ItemFormat="ItemLabel" VerticalAlign="Center" FontColor="#0000C0" Orientation="VerticalLeftFacing" OrientationAngle="0" />
+      <MajorGridLines Color="RoyalBlue" />
+    </X>
+  </Axis>
+  <Data ZeroAligned="True" />
+  <Legend Font="Times New Roman, 7.8pt" Visible="True" FontColor="Navy" BackgroundColor="Menu" />
+  <Tooltips FontColor="Navy"  BackColor="#C0C0FF" />
+  <TitleRight FontColor="#0000C0" Location="Right">
+    <Margins />
+  </TitleRight>
+  <TitleLeft FontColor="#0000C0" Location="Left">
+    <Margins />
+  </TitleLeft>
+</igchart:UltraChart>

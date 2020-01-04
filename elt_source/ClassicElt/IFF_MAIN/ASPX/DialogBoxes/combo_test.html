@@ -1,0 +1,20 @@
+<html>
+
+<head>
+<script type="text/javascript" src="Searchable_DropDown.js" language="javascript"> </script>
+</head>
+<body onload="LoadAll('lstDropDown_A','hf');">
+<input type=hidden name='hf' id='hf' value='jay__javal^sara__sval^jong__joval^saroh__sval_1^jonga__joval_2^serah__sval_2^jjanga__jjval^soorah__sval_3^jjajangmyun__jjval_1' />
+<FORM name="frmName" method="post">
+
+<SELECT name="lstDropDown_A" id="lstDropDown_A" style="width:150px;direction:ltr; height:20px;"
+onKeyDown="fnKeyDownHandler(this, event);" onKeyUp="fnKeyUpHandler_A(this, event); return false;" onKeyPress = "return fnKeyPressHandler_A(this, event,'hf');" onChange="fnChangeHandler_A(this, event);">
+<OPTION value="" style="COLOR:#000000;BACKGROUND-COLOR:#ffffff;">Enter a Search Key</OPTION> 
+<OPTION value="addnew" style="COLOR:#ff0000;BACKGROUND-COLOR:#ffff00;">-------Add New------------</OPTION> <!-- This is the Editable Option -->
+
+</SELECT>
+<br>
+
+</FORM>
+</body>
+</html>

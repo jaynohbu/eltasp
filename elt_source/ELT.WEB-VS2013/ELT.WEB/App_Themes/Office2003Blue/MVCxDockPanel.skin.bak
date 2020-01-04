@@ -1,0 +1,17 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxPopupControl" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxDocking" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxmvc:MVCxDockPanel  runat="server"  EnableHotTrack="False">
+    <Images SpriteCssFilePath="~/App_Themes/Office2003Blue/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/Office2003Blue/Web/Loading.gif"/>
+    </Images>
+    <Styles CssFilePath="~/App_Themes/Office2003Blue/{0}/styles.css" CssPostfix="Office2003Blue">
+        <LoadingPanel ImageSpacing="5"/>
+        <Header>
+            <Paddings PaddingRight="6px"/>
+        </Header>
+    </Styles>
+</dxmvc:MVCxDockPanel>
+

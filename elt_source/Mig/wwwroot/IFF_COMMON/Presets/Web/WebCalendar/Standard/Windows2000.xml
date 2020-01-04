@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Windows2000" PresetDescription="Infragistics Windows 2000 Look and Feel for WebCalendar.  Sets both Look and Behavior properties." PresetType="All" />-->
+<igsch:WebCalendar >
+  <Layout DayNameFormat="FirstLetter" ShowNextPrevMonth="False" ShowTitle="False" ShowFooter="False">
+    <SelectedDayStyle ForeColor="White" BackColor="#0A246A" />
+    <OtherMonthDayStyle ForeColor="White" />
+    <CalendarStyle Width="105px" Height="77px" BorderWidth="3px" BorderStyle="Inset" />
+    <DropDownStyle BackColor="White" />
+    <DayHeaderStyle ForeColor="#D4D0C8" BackColor="Gray" />
+  </Layout>
+</igsch:WebCalendar>

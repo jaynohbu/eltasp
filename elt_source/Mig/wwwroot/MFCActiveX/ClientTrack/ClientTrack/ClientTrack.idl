@@ -1,0 +1,54 @@
+// ClientTrack.idl : type library source for ActiveX Control project.
+
+// This file will be processed by the MIDL compiler tool to
+// produce the type library (ClientTrack.tlb) that will become a resource in
+// ClientTrack.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(6FD5081B-30BB-47C2-8D21-586CE323291C), version(1.0),
+  helpfile("ClientTrack.hlp"),
+  helpstring("ClientTrack ActiveX Control module"),
+  control ]
+library ClientTrackLib
+{
+	importlib(STDOLE_TLB);
+
+	//  Primary dispatch interface for CClientTrackCtrl
+
+	[ uuid(6376F744-ECE3-4B58-86E0-7EFED8F6DDD9),
+	  helpstring("Dispatch interface for ClientTrack Control")]
+	dispinterface _DClientTrack
+	{
+		properties:
+		methods:
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+            [id(1), helpstring("method GetIPAddr")] BSTR GetIPAddr(void);
+            [id(2), helpstring("method GetMacAddr")] BSTR GetMacAddr(void);
+    };
+
+	//  Event dispatch interface for CClientTrackCtrl
+
+	[ uuid(657E8F93-BCA3-463C-98F6-30359044ECBB),
+	  helpstring("Event interface for ClientTrack Control") ]
+	dispinterface _DClientTrackEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+	};
+
+	//  Class information for CClientTrackCtrl
+
+	[ uuid(794834BD-2C77-4D7E-9189-68AA99DC426B),
+	  helpstring("ClientTrack Control"), control ]
+	coclass ClientTrack
+	{
+		[default] dispinterface _DClientTrack;
+		[default, source] dispinterface _DClientTrackEvents;
+	};
+
+};

@@ -1,0 +1,212 @@
+<INVOICE>
+  <Tmp>
+    <Customer>1   /2007</Customer>
+    <Amount>5091.62</Amount>
+    <Cost>866.54</Cost>
+    <Profit>4225.08</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>2   /2007</Customer>
+    <Amount>48</Amount>
+    <Cost>0</Cost>
+    <Profit>48</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>3   /2007</Customer>
+    <Amount>61</Amount>
+    <Cost>61</Cost>
+    <Profit>0</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>4   /2007</Customer>
+    <Amount>575</Amount>
+    <Cost>200</Cost>
+    <Profit>375</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>5   /2007</Customer>
+    <Amount>18823.89</Amount>
+    <Cost>185627.5</Cost>
+    <Profit>-166803.61</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>6   /2007</Customer>
+    <Amount>0</Amount>
+    <Cost>150</Cost>
+    <Profit>-150</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>7   /2007</Customer>
+    <Amount>468.4</Amount>
+    <Cost>680</Cost>
+    <Profit>-211.6</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>8   /2007</Customer>
+    <Amount>0</Amount>
+    <Cost>0</Cost>
+    <Profit>0</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>9   /2007</Customer>
+    <Amount>1275.44</Amount>
+    <Cost>884.5</Cost>
+    <Profit>390.94</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>10  /2007</Customer>
+    <Amount>3870.5</Amount>
+    <Cost>580.25</Cost>
+    <Profit>3290.25</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>11  /2007</Customer>
+    <Amount>3549.84</Amount>
+    <Cost>275</Cost>
+    <Profit>3274.84</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>1   /2008</Customer>
+    <Amount>0</Amount>
+    <Cost>0</Cost>
+    <Profit>0</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>2   /2008</Customer>
+    <Amount>1490.33</Amount>
+    <Cost>880</Cost>
+    <Profit>610.33</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>3   /2008</Customer>
+    <Amount>0</Amount>
+    <Cost>0</Cost>
+    <Profit>0</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>5   /2008</Customer>
+    <Amount>0</Amount>
+    <Cost>0</Cost>
+    <Profit>0</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>8   /2008</Customer>
+    <Amount>45</Amount>
+    <Cost>80</Cost>
+    <Profit>-35</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>9   /2008</Customer>
+    <Amount>249.36</Amount>
+    <Cost>0</Cost>
+    <Profit>249.36</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>10  /2008</Customer>
+    <Amount>2825</Amount>
+    <Cost>0</Cost>
+    <Profit>2825</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>12  /2008</Customer>
+    <Amount>710.78</Amount>
+    <Cost>400</Cost>
+    <Profit>310.78</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>1   /2009</Customer>
+    <Amount>500</Amount>
+    <Cost>0</Cost>
+    <Profit>500</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>3   /2009</Customer>
+    <Amount>225</Amount>
+    <Cost>0</Cost>
+    <Profit>225</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>6   /2009</Customer>
+    <Amount>210</Amount>
+    <Cost>0</Cost>
+    <Profit>210</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>7   /2009</Customer>
+    <Amount>-410</Amount>
+    <Cost>0</Cost>
+    <Profit>-410</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>8   /2009</Customer>
+    <Amount>300</Amount>
+    <Cost>0</Cost>
+    <Profit>300</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>9   /2009</Customer>
+    <Amount>100</Amount>
+    <Cost>0</Cost>
+    <Profit>100</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>10  /2009</Customer>
+    <Amount>3000</Amount>
+    <Cost>0</Cost>
+    <Profit>8000</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>1   /2010</Customer>
+    <Amount>-400</Amount>
+    <Cost>0</Cost>
+    <Profit>-400</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>4   /2010</Customer>
+    <Amount>25257.82</Amount>
+    <Cost>0</Cost>
+    <Profit>25257.82</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>5   /2010</Customer>
+    <Amount>3632.08</Amount>
+    <Cost>300</Cost>
+    <Profit>3332.08</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>9   /2010</Customer>
+    <Amount>15.13</Amount>
+    <Cost>0</Cost>
+    <Profit>15.13</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>10  /2010</Customer>
+    <Amount>1700</Amount>
+    <Cost>2000</Cost>
+    <Profit>-300</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>11  /2010</Customer>
+    <Amount>-1000</Amount>
+    <Cost>0</Cost>
+    <Profit>-1000</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>1   /2011</Customer>
+    <Amount>50</Amount>
+    <Cost>20</Cost>
+    <Profit>30</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>3   /2011</Customer>
+    <Amount>0</Amount>
+    <Cost>130</Cost>
+    <Profit>-130</Profit>
+  </Tmp>
+  <Tmp>
+    <Customer>Grand Total</Customer>
+    <Amount>72264.19</Amount>
+    <Cost>193134.79</Cost>
+    <Profit>-115870.6</Profit>
+  </Tmp>
+</INVOICE>

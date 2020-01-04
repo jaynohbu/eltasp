@@ -1,0 +1,158 @@
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+var currentTabIndex=-1;
+
+var tabCount=14;// change when the # of tabs differnt 
+var TabImgsOff=new Array();
+
+TabImgsOff[0]='../images/acc_ta_ci.gif';//change the names of off-state img src
+TabImgsOff[1]='../images/acc_ta_ai.gif';
+TabImgsOff[2]='../images/acc_ta_si.gif';
+TabImgsOff[3]='../images/acc_ta_rp.gif';
+TabImgsOff[4]='../images/acc_ta_eb.gif';
+TabImgsOff[5]='../images/acc_ta_pb.gif';
+TabImgsOff[6]='../images/acc_ta_wc.gif';
+TabImgsOff[7]='../images/acc_ta_pc.gif';
+TabImgsOff[8]='../images/acc_ta_mc.gif';
+TabImgsOff[9]='../images/acc_ta_ca.gif';
+TabImgsOff[10]='../images/acc_ta_ei.gif';
+TabImgsOff[11]='../images/acc_ta_eci.gif';
+TabImgsOff[12]='../images/acc_ta_gje.gif';
+TabImgsOff[13]='../images/acc_ta_fc.gif';
+
+var TabImgsOn=new Array();
+
+TabImgsOn[0]='../images/acc_ta_ci_over.gif';////change the names of on-state img src
+TabImgsOn[1]='../images/acc_ta_ai_over.gif';
+TabImgsOn[2]='../images/acc_ta_si_over.gif';
+TabImgsOn[3]='../images/acc_ta_rp_over.gif';
+TabImgsOn[4]='../images/acc_ta_eb_over.gif';
+TabImgsOn[5]='../images/acc_ta_pb_over.gif';
+TabImgsOn[6]='../images/acc_ta_wc_over.gif';
+TabImgsOn[7]='../images/acc_ta_pc_over.gif';
+TabImgsOn[8]='../images/acc_ta_mc_over.gif';
+TabImgsOn[9]='../images/acc_ta_ca_over.gif';
+TabImgsOn[10]='../images/acc_ta_ei_over.gif';
+TabImgsOn[11]='../images/acc_ta_eci_over.gif';
+TabImgsOn[12]='../images/acc_ta_gje_over.gif';
+TabImgsOn[13]='../images/acc_ta_fc_over.gif';
+
+
+var TabPages=new Array();
+
+TabPages[0]='create_invoi.asp'
+TabPages[1]='edit_invoice.asp'
+TabPages[2]='../../IFF_MAIN/ASPX/Reports/Accounting/SearchInvoiceSelection.aspx'
+TabPages[3]='receiv_pay.asp'
+TabPages[4]='enter_bill.asp'
+TabPages[5]='pay_bills.asp'
+TabPages[6]='write_chk.asp'
+TabPages[7]='print_chk.asp'
+TabPages[8]='manage_chk.asp'
+TabPages[9]='chart_acct.asp'
+TabPages[10]='edit_ch_items.asp'
+TabPages[11]='edit_co_items.asp'
+TabPages[12]='gj_entry.asp'
+TabPages[13]='fiscalclose.asp'
+
+
+
+function pointTabOnload(page){ 
+    
+    for(var i=0;i<tabCount;i++){
+   //alert(page+"   "+TabPages[i]);
+        if(TabPages[i]==page){        
+            currentTabIndex=i;
+	   }
+    }
+    setToCurrentTab();  
+}
+
+function pointTab(obj){
+   var temp=obj.id.split('-');
+   currentTabIndex=temp[1];  
+}
+
+function setToCurrentTab(){
+try {
+   var index=currentTabIndex;   
+   var id;
+   var img;      
+   for(var i=0;i< tabCount;i++){ 
+    id="t-"+i; 	
+        if(i!=index){
+            document.getElementById(id).firstChild.src=TabImgsOff[i];
+        }else{
+           document.getElementById(id).firstChild.src=TabImgsOn[i];        
+        }
+	  }  
+  } catch(f) {}
+}
+
+function refreshTabsOnMoving(){
+try {
+   var index=currentTabIndex; 
+   var id;
+   var img;      
+   for(var i=0;i< tabCount;i++){ 
+    id="t-"+i;     
+    document.getElementById(id).firstChild.src=TabImgsOff[i];        
+   }
+  } catch(f) {}
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//-->
+</script>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style>
+<body onLoad="MM_preloadImages('/ASP/Images/acc_ta_si_over.gif','/ASP/Images/acc_ta_rp_over.gif','/ASP/Images/acc_ta_eb_over.gif','/ASP/Images/acc_ta_pb_over.gif','/ASP/Images/acc_ta_wc_over.gif','/ASP/Images/acc_ta_pc_over.gif','/ASP/Images/acc_ta_ca_over.gif','/ASP/Images/acc_ta_eci_over.gif','/ASP/Images/acc_ta_ei_over.gif','/ASP/Images/acc_ta_gje_over.gif','/ASP/Images/acc_ta_fc_over.gif','/ASP/Images/acc_ta_ci_over.gif','/ASP/Images/acc_ta_ai_over.gif')">
+<table width="100%" height= "41" border="0" cellpadding="0" cellspacing="0" background= "../images/back_acc_sub.gif" >
+    <tr>
+        <td height="19" align="center" valign="top" onMouseOut= " setToCurrentTab()"><a id="t-0" onClick="pointTab(this)" href="/ASP/acct_tasks/create_invoi.asp" onMouseOut="MM_swapImgRestore()" onMouseOver=" refreshTabsOnMoving();MM_swapImage('iq','','/ASP/Images/acc_ta_ci_over.gif',1)"><img src="/ASP/Images/acc_ta_ci.gif" name="iq" width="91" height="19" border="0"></a><a id="t-1" onClick="pointTab(this)" href="/ASP/acct_tasks/edit_invoice.asp" onMouseOut="MM_swapImgRestore()" onMouseOver="refreshTabsOnMoving();MM_swapImage('ai','','/ASP/Images/acc_ta_ai_over.gif',1)"><img src="/ASP/Images/acc_ta_ai.gif" name="ai" width="82" height="19" border="0"></a><a id="t-2" onClick="pointTab(this)" href="../../IFF_MAIN/ASPX/Reports/Accounting/SearchInvoiceSelection.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="refreshTabsOnMoving();MM_swapImage('si','','/ASP/Images/acc_ta_si_over.gif',1)"><img src="/ASP/Images/acc_ta_si.gif" name="si" width="97" height="19" border="0"></a><a id="t-3" onClick="pointTab(this)" href="../acct_tasks/receiv_pay.asp" onMouseOut="MM_swapImgRestore()" onMouseOver="refreshTabsOnMoving();MM_swapImage('ar','','/ASP/Images/acc_ta_rp_over.gif',1)"><img src="/ASP/Images/acc_ta_rp.gif" name="ar" width="120" height="19" border="0"></a><a id="t-4" onClick="pointTab(this)" href="../acct_tasks/enter_bill.asp" onMouseOut="MM_swapImgRestore()" onMouseOver="refreshTabsOnMoving();MM_swapImage('pq','','/ASP/Images/acc_ta_eb_over.gif',1)"><img src="/ASP/Images/acc_ta_eb.gif" name="pq" width="97" height="19" border="0"></a><a id="t-5" onClick="pointTab(this)" href="../acct_tasks/pay_bills.asp" onMouseOut="MM_swapImgRestore()" onMouseOver="refreshTabsOnMoving();MM_swapImage('ap','','/ASP/Images/acc_ta_pb_over.gif',1)"><img src="/ASP/Images/acc_ta_pb.gif" name="ap" width="104" height="19" border="0"></a><a id="t-6" onClick="pointTab(this)" href="../acct_tasks/write_chk.asp" onMouseOut="MM_swapImgRestore()" onMouseOver="refreshTabsOnMoving();MM_swapImage('wc','','/ASP/Images/acc_ta_wc_over.gif',1)"><img src="/ASP/Images/acc_ta_wc.gif" name="wc" width="80" height="19" border="0"></a> </td>
+    </tr>
+    <tr>
+        <td height="22" align="center" valign="top" onMouseOut= " setToCurrentTab()"><a id="t-7" onClick="pointTab(this)" href="/ASP/acct_tasks/print_chk.asp" onMouseOut="MM_swapImgRestore()" onMouseOver="refreshTabsOnMoving();MM_swapImage('pc','','/ASP/Images/acc_ta_pc_over.gif',1)"><img src="/ASP/Images/acc_ta_pc.gif" name="pc" width="81" height="22" border="0"></a><a id="t-8" onClick="pointTab(this)" href="/ASP/acct_tasks/manage_chk.asp" onMouseOut="MM_swapImgRestore()" onMouseOver="refreshTabsOnMoving();MM_swapImage('mc','','/ASP/Images/acc_ta_mc_over.gif',1)"><img src="/ASP/Images/acc_ta_mc.gif" name="mc" width="98" height="22" border="0"></a><a id="t-9" onClick="pointTab(this)" href="/ASP/acct_tasks/chart_acct.asp" onMouseOut="MM_swapImgRestore()" onMouseOver="refreshTabsOnMoving();MM_swapImage('coa','','/ASP/Images/acc_ta_ca_over.gif',1)"><img src="/ASP/Images/acc_ta_ca.gif" name="coa" width="106" height="22" border="0"></a><a id="t-10" onClick="pointTab(this)" href="/ASP/acct_tasks/edit_ch_items.asp" onMouseOut="MM_swapImgRestore()" onMouseOver="refreshTabsOnMoving();MM_swapImage('ec','','/ASP/Images/acc_ta_ei_over.gif',1)"><img src="/ASP/Images/acc_ta_ei.gif" name="ec" width="109" height="22" border="0"></a><a id="t-11" onClick="pointTab(this)" href="/ASP/acct_tasks/edit_co_items.asp" onMouseOut="MM_swapImgRestore()" onMouseOver="refreshTabsOnMoving();MM_swapImage('eci','','/ASP/Images/acc_ta_eci_over.gif',1)"><img src="/ASP/Images/acc_ta_eci.gif" name="eci" width="95" height="22" border="0"></a><a id="t-12" onClick="pointTab(this)" href="/ASP/acct_tasks/gj_entry.asp" onMouseOut="MM_swapImgRestore()" onMouseOver="refreshTabsOnMoving();MM_swapImage('gj','','/ASP/Images/acc_ta_gje_over.gif',1)"><img src="/ASP/Images/acc_ta_gje.gif" name="gj" width="124" height="22" border="0"></a><a id="t-13" onClick="pointTab(this);" href="/ASP/acct_tasks/fiscalClose.asp" onMouseOut="MM_swapImgRestore()" onMouseOver="refreshTabsOnMoving();MM_swapImage('as','','/ASP/Images/acc_ta_fc_over.gif',1)"><img src="/ASP/Images/acc_ta_fc.gif" name="as" width="108" height="22" border="0"></a></td>
+    </tr>
+</table>

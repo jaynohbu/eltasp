@@ -1,0 +1,12 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxDateEdit runat="server" Spacing="0" SpriteCssFilePath="~/App_Themes/MetropolisBlue/{0}/sprite.css" CssPostfix="MetropolisBlue" CssFilePath="~/App_Themes/MetropolisBlue/{0}/styles.css">
+    <CalendarProperties>
+		<LoadingPanelImage Url="~/App_Themes/MetropolisBlue/Editors/Loading.gif" />
+		<Style>
+			<Border BorderColor="Silver" BorderStyle="Solid" BorderWidth="1px" />
+		</Style>
+	</CalendarProperties>
+</dx:ASPxDateEdit>
+

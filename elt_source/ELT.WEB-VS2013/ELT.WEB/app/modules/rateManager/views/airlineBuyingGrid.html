@@ -1,0 +1,77 @@
+﻿
+
+
+<div>
+    <span ng-show="model!=undefined" style="text-align: center"><ng-transclude></ng-transclude></span>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th colspan="6"><button class="button btn-sm" ng-click="addRoute()"><span class="glyphicon glyphicon-plus"></span> Route </button></th>
+
+
+                <th>Origin</th>
+                <th>Dest.</th>
+                <th>KG/LB</th>
+                <th colspan="11" style="text-align: center">WT. BRK.</th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="m in model" ng-hide="m.disabled">
+            <tr>
+                <td></td>
+                <td colspan="1"><button ng-click="removeRate(m)" class="button btn-sm"><span class="glyphicon glyphicon-trash"></span> Route</button></td>
+                <td colspan="1"></td>
+
+
+                <td colspan="3"><button class="button btn-sm" ng-click="addCarrier(m.customerNo)"><span class="glyphicon glyphicon-plus"></span> Carrier </button></td>
+
+                <td>
+                    <select class="sPortOrign" ng-model="m.originPort " required="required" ng-disabled="existingRoute(r)">
+                        <option ng-repeat="p in ports" value="{{p.value}}">{{p.value}}</option>
+                    </select>
+                </td>
+                <td>
+                    <select class="sPortDestin" ng-model="m.destPort " required="required" ng-disabled="existingRoute(r)">
+                        <option ng-repeat="p in ports" value="{{p.value}}">{{p.value}}</option>
+                    </select>
+                </td>
+                <td>
+                    <select class="sKgLb" ng-model="m.kgLb " required="required">
+                        <option value="K">KG</option>
+                        <option value="L">LB</option>
+                    </select>
+                </td>
+                <td>MIN.</td>
+                <td>+MIN.</td>
+                <td><input class="smallInputBox" type="text" onchange="checkNumeric(this); checkOrder(this);" ng-model="m.weightBreak[0]" /></td>
+                <td><input class="smallInputBox" type="text" onchange="checkNumeric(this); checkOrder(this);" ng-model="m.weightBreak[1]" /></td>
+                <td><input class="smallInputBox" type="text" onchange="checkNumeric(this); checkOrder(this);" ng-model="m.weightBreak[2]" /></td>
+                <td><input class="smallInputBox" type="text" onchange="checkNumeric(this); checkOrder(this);" ng-model="m.weightBreak[3]" /></td>
+                <td><input class="smallInputBox" type="text" onchange="checkNumeric(this); checkOrder(this);" ng-model="m.weightBreak[4]" /></td>
+                <td><input class="smallInputBox" type="text" onchange="checkNumeric(this); checkOrder(this);" ng-model="m.weightBreak[5]" /></td>
+                <td><input class="smallInputBox" type="text" onchange="checkNumeric(this); checkOrder(this);" ng-model="m.weightBreak[6]" /></td>
+                <td><input class="smallInputBox" type="text" onchange="checkNumeric(this); checkOrder(this);" ng-model="m.weightBreak[7]" /></td>
+                <td>Share 	&#40;&#37;&#41;</td>
+            </tr>
+            <tr style="background-color: #f5f5f5" ng-repeat="c in m.perCarrier" ng-hide="c.disabled">
+                <td colspan="6"></td>
+                <td colspan="1"><button class="button btn-sm" ng-click="removeCarrier(m,c)"><span class="glyphicon glyphicon-trash"></span> Carrier</button></td>
+                <td colspan="2">
+                    <div custom-select="a.value as a.text for a in searchAirline($searchTerm)"
+                         ng-model="c.airline"></div>
+                </td>
+                <td><input class="smallInputBox" type="text" onchange="checkNumeric(this)" ng-model="c.min" /></td>
+                <td><input class="smallInputBox" type="text" onchange="checkNumeric(this)" ng-model="c.minPlus" /></td>
+                <td><input class="smallInputBox" type="text" onchange="checkNumeric(this)" ng-model="c.rateBreak[0]" /></td>
+                <td><input class="smallInputBox" type="text" onchange="checkNumeric(this)" ng-model="c.rateBreak[1]" /></td>
+                <td><input class="smallInputBox" type="text" onchange="checkNumeric(this)" ng-model="c.rateBreak[2]" /></td>
+                <td><input class="smallInputBox" type="text" onchange="checkNumeric(this)" ng-model="c.rateBreak[3]" /></td>
+                <td><input class="smallInputBox" type="text" onchange="checkNumeric(this)" ng-model="c.rateBreak[4]" /></td>
+                <td><input class="smallInputBox" type="text" onchange="checkNumeric(this)" ng-model="c.rateBreak[5]" /></td>
+                <td><input class="smallInputBox" type="text" onchange="checkNumeric(this)" ng-model="c.rateBreak[6]" /></td>
+                <td><input class="smallInputBox" type="text" onchange="checkNumeric(this)" ng-model="c.rateBreak[7]" /></td>
+                <td><input class="smallInputBox" type="text" onchange="checkNumeric(this)" ng-model="c.share" /></td>
+            </tr>
+        </tbody>
+    </table>
+    <span ng-show="model!=undefined" style="text-align: center"><ng-transclude></ng-transclude></span>
+</div>

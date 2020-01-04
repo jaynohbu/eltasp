@@ -1,0 +1,80 @@
+﻿
+@model List<ELT.CDT.ExpenseItem>
+@Html.DevExpress().GridView(
+    settings =>
+    {
+        settings.Name = "grid";
+        settings.CallbackRouteValues = new { Controller = "Accounting", Action = "_ExpensesMasterPartial" };
+        settings.Width = Unit.Pixel(1000);
+        settings.SettingsPager.PageSize = 50;
+        settings.KeyFieldName = "customer_number";
+        settings.Columns.Add("customer_name", "Customer");
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Amount";
+
+            column.SetDataItemTemplateContent(a =>
+            {
+                if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Amount"))))
+                {
+                    string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                    if (a.Text == "0") val = "0";
+                    ViewContext.Writer.Write(val
+                       );
+                }
+            });
+
+        });
+        decimal total = 0;
+        settings.Columns.Add(column =>
+        {         
+            column.FieldName = "Accumulation";
+            column.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            column.Width = 80;
+            column.CellStyle.CssClass = "numeric";
+        });
+
+        settings.CustomUnboundColumnData = (sender, e) =>
+        {
+            if (e.Column.FieldName == "Accumulation")
+            {
+                if (e.ListSourceRowIndex == 0) total = 0;
+                if (e.GetListSourceFieldValue("Amount") != null && e.GetListSourceFieldValue("Amount") != "")
+                {
+                    decimal Amount = Convert.ToDecimal(e.GetListSourceFieldValue("Amount"));
+                    total = total + Amount;
+                }
+                string s_detail_total = "0";
+                if (total > 0)
+                    s_detail_total = string.Format("{0:###,###,###.00}", Convert.ToDecimal(total));
+                e.Value = s_detail_total;
+            }
+        };
+            
+
+        settings.SettingsDetail.AllowOnlyOneMasterRowExpanded = false;
+        settings.SettingsDetail.ShowDetailRow = true;
+
+        settings.SetDetailRowTemplateContent(c => {
+            Html.RenderAction("_ExpensesDetailPartial", new { customer_number = DataBinder.Eval(c.DataItem, "customer_number") });
+        });
+
+        settings.HtmlRowCreated += (s, e) =>
+        {
+          
+            if (e.KeyValue != null)
+                if (e.KeyValue.ToString().Equals("0") || e.KeyValue.ToString().Equals(""))
+                {
+                    System.Web.UI.WebControls.TableCell cell = e.Row.Cells[0];
+
+                    if (cell is DevExpress.Web.ASPxGridView.Rendering.GridViewTableDetailButtonCell)
+                        cell.Controls[0].Visible = false;
+                }
+        };
+        settings.Settings.ShowFooter = true;
+        settings.TotalSummary.Add(DevExpress.Data.SummaryItemType.Sum, "Amount").DisplayFormat = "Total = {0:###,###,##0.00}";
+      
+        settings.PreRender = (sender, e) => {
+           // ((MVCxGridView)sender).DetailRows.ExpandRow(0);
+        };
+    }).Bind(Model).GetHtml()

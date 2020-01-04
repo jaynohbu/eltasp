@@ -1,0 +1,46 @@
+﻿
+@model ELT.WEB.Models.RateColumn
+@{
+    
+    string col_id = "RateCol_" + Model.DropDownType.ToString();
+    string s_class = "RateColText NumberOnly";
+    if (Model.IsEmptyCell) { 
+        s_class = s_class + " " + "EmptyCell";
+    }
+    if (Model.IsHidden)
+    {
+        col_id = col_id + " " + "HiddenDrop";
+    }
+}
+
+    <td class="@col_id">
+        @Html.TextBoxFor(m => m.Text, new { @class = s_class })
+        @Html.DropDownListFor(m => m.Value, Model.DropDownItems, new { @class = "RateDropHidden", onchange = "HideDropDown($(this).parent().get(0), null, '" + Model.DropDownType + "');" })
+        @Html.HiddenFor(m => m.Value, new { @class = "RateColValue" })
+        @Html.HiddenFor(m=>m.DropDownType)
+        @Html.HiddenFor(m => m.IsDropDown)
+        @Html.HiddenFor(m => m.IsHidden)
+        @Html.HiddenFor(m => m.WeightBreakValueTag)
+    </td>
+
+@if (Model.IsDropDown)
+{
+ 
+    <script>
+    if ("@Model.DropDownType" == "@ELT.WEB.Models.ColumnDropDownType.Carrier") {
+        if ("@Model.RateType" == "@ELT.CDT.RateType.CustomerSellingRate" || "@Model.RateType" == "@ELT.CDT.RateType.AgentBuyingRate") {
+
+            $("." + "@col_id").attr("colspan", "4");
+            $("." + "@col_id").click(function () { ShowDropDown(this, '@Model.DropDownType'); });
+            } else {
+                $("." + "@col_id").attr("colspan", "3");
+                $("." + "@col_id").click(function () { ShowDropDown(this, '@Model.DropDownType'); });
+            }
+
+    }
+
+    </script>
+
+ }
+
+

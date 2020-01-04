@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="14.0.4756.1000" _dal="1" -->
+<!-- _LocalBinding -->
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MultiPageWebApplicationText">
+    <value xml:space="preserve">Web application</value>
+  </data>
+  <data name="FailurePageTitle">
+    <value xml:space="preserve">Failure!</value>
+  </data>
+  <data name="InformationPageTitle">
+    <value xml:space="preserve">Information</value>
+  </data>
+  <data name="multipages_direction_left_align_value">
+    <value xml:space="preserve">left</value>
+  </data>
+  <data name="multipages_direction_right_align_value">
+    <value xml:space="preserve">right</value>
+  </data>
+  <data name="MultiPagesWebApplicationsText">
+    <value xml:space="preserve">Web applications</value>
+  </data>
+  <data name="MultiPagesDeleteText">
+    <value xml:space="preserve">Delete</value>
+  </data>
+  <data name="MultiPagesEditPropertiesText">
+    <value xml:space="preserve">Edit Properties</value>
+  </data>
+  <data name="MultiPagesViewPropertiesText">
+    <value xml:space="preserve">View Properties</value>
+  </data>
+  <data name="MultiPagesUserAccountsLabel">
+    <value xml:space="preserve">Users</value>
+  </data>
+  <data name="SuccessPageTitle">
+    <value xml:space="preserve">Operation Completed Successfully</value>
+  </data>
+  <data name="WarningPageTitle">
+    <value xml:space="preserve">Warning!</value>
+  </data>
+  <data name="MultiPagesDummyText">
+    <value xml:space="preserve">Dummy</value>
+  </data>
+  <data name="MultiPagesOKButtonAccessKey">
+    <value xml:space="preserve">O</value>
+  </data>
+  <data name="MultiPagesYesText">
+    <value xml:space="preserve">Yes</value>
+  </data>
+  <data name="MultiPagesNoText">
+    <value xml:space="preserve">No</value>
+  </data>
+  <data name="MultiPagesSelectAllText">
+    <value xml:space="preserve">Select all</value>
+  </data>
+  <data name="MultiPageDefaultText">
+    <value xml:space="preserve">Default</value>
+  </data>
+  <data name="MultiPageStatusText">
+    <value xml:space="preserve">Status</value>
+  </data>
+  <data name="MultiPageOkText">
+    <value xml:space="preserve">OK</value>
+  </data>
+  <data name="MultiPageOkButtonAccessKey">
+    <value xml:space="preserve">o</value>
+  </data>
+  <data name="MultiPageCancelText">
+    <value xml:space="preserve">Cancel</value>
+  </data>
+  <data name="MultiPageCancelButtonAccessKey">
+    <value xml:space="preserve">c</value>
+  </data>
+  <data name="MultiPageHiddenControlText">
+    <value xml:space="preserve">Hidden Control</value>
+  </data>
+  <data name="MultiPageNoSspErrorMessage">
+    <value xml:space="preserve">An SSP must be selected</value>
+  </data>
+  <data name="ServerRoleSelectorDescriptionTop">
+    <value xml:space="preserve">Select server role to display services you will need to start in the table below.</value>
+  </data>
+  <data name="ServerRoleSelectorDescriptionBottom">
+    <value xml:space="preserve">When you finish configuring services for all servers, return to the &lt;a href="/" tabIndex="1"&gt;Central Administration Home Page&lt;/a&gt; for additional tasks.</value>
+  </data>
+  <data name="SingleServerRoleTitle">
+    <value xml:space="preserve">Single Server or Web Server for small server farms</value>
+  </data>
+  <data name="SingleServerRoleDescription">
+    <value xml:space="preserve">All services run on this server</value>
+  </data>
+  <data name="WebFrontEndRoleTitle">
+    <value xml:space="preserve">Web Server for medium server farms</value>
+  </data>
+  <data name="OsgWebFrontEndRoleDescription">
+    <value xml:space="preserve">Web application and Search Query services run on this server</value>
+  </data>
+  <data name="ProjectWebFrontEndRoleDescription">
+    <value xml:space="preserve">Web application service runs on this server</value>
+  </data>
+  <data name="IndexingRoleTitle">
+    <value xml:space="preserve">Search Indexing</value>
+  </data>
+  <data name="IndexingRoleDescription">
+    <value xml:space="preserve">Search Indexing service runs on this server</value>
+  </data>
+  <data name="ExcelServicesRoleTitle">
+    <value xml:space="preserve">Excel Calculation</value>
+  </data>
+  <data name="ExcelServicesRoleDescription">
+    <value xml:space="preserve">Excel Calculation service runs on this server</value>
+  </data>
+  <data name="ProjectServerRoleTitle">
+    <value xml:space="preserve">Project Application</value>
+  </data>
+  <data name="ProjectServerRoleDescription">
+    <value xml:space="preserve">Project Application service runs on this server</value>
+  </data>
+  <data name="CustomRoleTitle">
+    <value xml:space="preserve">Custom</value>
+  </data>
+  <data name="CustomRoleDescription">
+    <value xml:space="preserve">Services you choose run on this server</value>
+  </data>
+  <data name="Conversion_CurrentLicense">
+    <value xml:space="preserve">Current License</value>
+  </data>
+  <data name="Conversion_EnterPidKeySectionTitle">
+    <value xml:space="preserve">Enter Product Key</value>
+  </data>
+  <data name="Conversion_EnterPidKeyDescription">
+    <value xml:space="preserve">Type in the 25 character license key for the new license. You will find this key printed on your Client Access License Agreement.</value>
+  </data>
+  <data name="Conversion_PageTitle">
+    <value xml:space="preserve">Convert License Type</value>
+  </data>
+  <data name="Conversion_PidKeyTextBox_Title">
+    <value xml:space="preserve">Enter the Product Key:</value>
+  </data>
+  <data name="Conversion_PidKeyTextBox_Key">
+    <value xml:space="preserve">K</value>
+  </data>
+  <data name="Conversion_NoPidKey">
+    <value xml:space="preserve">Enter the Product Key</value>
+  </data>
+</root>

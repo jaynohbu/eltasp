@@ -1,0 +1,1383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="14.0.4750.1000" _dal="1" -->
+<!-- _LocalBinding -->
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="cancelbutton_accesskey" xml:space="preserve">
+    <value>c</value>
+    
+  </data>
+  <data name="cpupload_page_title" xml:space="preserve">
+    <value>Content Deployment Upload Page. </value>
+    
+  </data>
+  <data name="cpupload_sect_filename_desc" xml:space="preserve">
+    <value>Select the content deployment file that you want to upload.</value>
+    
+  </data>
+  <data name="cpupload_sect_filename_title" xml:space="preserve">
+    <value>Content Deployment File Upload Information</value>
+    
+  </data>
+  <data name="cpupload_sect_jobid_desc" xml:space="preserve">
+    <value>Enter the Content Deployment Remote Job ID that you want to upload the file to.</value>
+    
+  </data>
+  <data name="cpupload_sect_jobid_title" xml:space="preserve">
+    <value>Content Deployment Remote Job ID</value>
+    
+  </data>
+  <data name="deployeventdetail_eventdescriptionlabel" xml:space="preserve">
+    <value>Description</value>
+    
+  </data>
+  <data name="deployeventdetail_eventtitlelabel" xml:space="preserve">
+    <value>Title</value>
+    
+  </data>
+  <data name="deployeventdetail_objectlabel" xml:space="preserve">
+    <value>Object</value>
+    
+  </data>
+  <data name="deployeventdetail_recommendationlabel" xml:space="preserve">
+    <value>Recommendation</value>
+    
+  </data>
+  <data name="deployeventdetail_severitylabel" xml:space="preserve">
+    <value>Severity</value>
+    
+  </data>
+  <data name="deployeventdetail_timelabel" xml:space="preserve">
+    <value>Time</value>
+    
+  </data>
+  <data name="deployeventdetails_pagetitle" xml:space="preserve">
+    <value>Event Detail</value>
+    
+  </data>
+  <data name="deployjob_AdSched_Description" xml:space="preserve">
+    <value>&lt;b&gt;Note:&lt;/b&gt; An advanced schedule has been specified for this job. Select the check box to specify a different schedule.</value>
+    
+  </data>
+  <data name="deployjob_completescope_radiotext" xml:space="preserve">
+    <value>Entire site collection</value>
+    
+  </data>
+  <data name="deployjob_configureusers_label" xml:space="preserve">
+    <value>Specify Quick Deploy users</value>
+    
+  </data>
+  <data name="deployjob_configureusers_tooltip" xml:space="preserve">
+    <value>Open a new window to specify Quick Deploy users</value>
+    
+  </data>
+  <data name="deployjob_daily_radiotext" xml:space="preserve">
+    <value>Once a day</value>
+    
+  </data>
+  <data name="deployjob_date_label" xml:space="preserve">
+    <value>Date:</value>
+    
+  </data>
+  <data name="day_1_label" xml:space="preserve">
+    <value>1</value>
+    
+  </data>
+  <data name="day_10_label" xml:space="preserve">
+    <value>10</value>
+    
+  </data>
+  <data name="day_11_label" xml:space="preserve">
+    <value>11</value>
+    
+  </data>
+  <data name="day_12_label" xml:space="preserve">
+    <value>12</value>
+    
+  </data>
+  <data name="day_13_label" xml:space="preserve">
+    <value>13</value>
+    
+  </data>
+  <data name="day_14_label" xml:space="preserve">
+    <value>14</value>
+    
+  </data>
+  <data name="day_15_label" xml:space="preserve">
+    <value>15</value>
+    
+  </data>
+  <data name="day_16_label" xml:space="preserve">
+    <value>16</value>
+    
+  </data>
+  <data name="day_17_label" xml:space="preserve">
+    <value>17</value>
+    
+  </data>
+  <data name="day_18_label" xml:space="preserve">
+    <value>18</value>
+    
+  </data>
+  <data name="day_19_label" xml:space="preserve">
+    <value>19</value>
+    
+  </data>
+  <data name="day_2_label" xml:space="preserve">
+    <value>2</value>
+    
+  </data>
+  <data name="day_20_label" xml:space="preserve">
+    <value>20</value>
+    
+  </data>
+  <data name="day_21_label" xml:space="preserve">
+    <value>21</value>
+    
+  </data>
+  <data name="day_22_label" xml:space="preserve">
+    <value>22</value>
+    
+  </data>
+  <data name="day_23_label" xml:space="preserve">
+    <value>23</value>
+    
+  </data>
+  <data name="day_24_label" xml:space="preserve">
+    <value>24</value>
+    
+  </data>
+  <data name="day_25_label" xml:space="preserve">
+    <value>25</value>
+    
+  </data>
+  <data name="day_26_label" xml:space="preserve">
+    <value>26</value>
+    
+  </data>
+  <data name="day_27_label" xml:space="preserve">
+    <value>27</value>
+    
+  </data>
+  <data name="day_28_label" xml:space="preserve">
+    <value>28</value>
+    
+  </data>
+  <data name="day_29_label" xml:space="preserve">
+    <value>29</value>
+    
+  </data>
+  <data name="day_3_label" xml:space="preserve">
+    <value>3</value>
+    
+  </data>
+  <data name="day_30_label" xml:space="preserve">
+    <value>30</value>
+    
+  </data>
+  <data name="day_31_label" xml:space="preserve">
+    <value>31</value>
+    
+  </data>
+  <data name="day_4_label" xml:space="preserve">
+    <value>4</value>
+    
+  </data>
+  <data name="day_5_label" xml:space="preserve">
+    <value>5</value>
+    
+  </data>
+  <data name="day_6_label" xml:space="preserve">
+    <value>6</value>
+    
+  </data>
+  <data name="day_7_label" xml:space="preserve">
+    <value>7</value>
+    
+  </data>
+  <data name="day_8_label" xml:space="preserve">
+    <value>8</value>
+    
+  </data>
+  <data name="day_9_label" xml:space="preserve">
+    <value>9</value>
+    
+  </data>
+  <data name="day_friday_label" xml:space="preserve">
+    <value>Friday</value>
+    
+  </data>
+  <data name="deployjob_day_label" xml:space="preserve">
+    <value>Day:</value>
+    
+  </data>
+  <data name="day_saturday_label" xml:space="preserve">
+    <value>Saturday</value>
+    
+  </data>
+  <data name="day_sunday_label" xml:space="preserve">
+    <value>Sunday</value>
+    
+  </data>
+  <data name="day_thursday_label" xml:space="preserve">
+    <value>Thursday</value>
+    
+  </data>
+  <data name="day_tuesday_label" xml:space="preserve">
+    <value>Tuesday</value>
+    
+  </data>
+  <data name="day_wednesday_label" xml:space="preserve">
+    <value>Wednesday</value>
+    
+  </data>
+  <data name="deployjob_description_label" xml:space="preserve">
+    <value>Description:</value>
+    
+  </data>
+  <data name="deployjob_description_textbox_title" xml:space="preserve">
+    <value>Job description:</value>
+    
+  </data>
+  <data name="deployjob_emailfailure_label" xml:space="preserve">
+    <value>Send e-mail if the content deployment job fails</value>
+    
+  </data>
+  <data name="deployjob_emailids_label" xml:space="preserve">
+    <value>Type e-mail addresses:</value>
+    
+  </data>
+  <data name="deployjob_emailids_textbox_title" xml:space="preserve">
+    <value>E-mail addresses</value>
+    
+  </data>
+  <data name="deployjob_emailsuccess_label" xml:space="preserve">
+    <value>Send e-mail when the content deployment job succeeds</value>
+    
+  </data>
+  <data name="deployjob_fulldeploy_radiotext" xml:space="preserve">
+    <value>Deploy all content, including content that has been deployed before</value>
+    
+  </data>
+  <data name="deployjob_hourly_radiotext" xml:space="preserve">
+    <value>Once an hour</value>
+    
+  </data>
+  <data name="deployjob_hourlyminute_label" xml:space="preserve">
+    <value>At minute:</value>
+    
+  </data>
+  <data name="deployjob_incremental_description" xml:space="preserve">
+    <value>Generally, the only content that is included in a deployment job is content that has changed on the source site since the last time that site was successfully deployed.</value>
+    
+  </data>
+  <data name="deployjob_incremental_header" xml:space="preserve">
+    <value>Deployment Options</value>
+    
+  </data>
+  <data name="deployjob_incremental_radiotext" xml:space="preserve">
+    <value>Deploy only new, changed, or deleted content</value>
+    
+  </data>
+  <data name="deployjob_jobfreq_description" xml:space="preserve">
+    <value>Specify how often you want to run this content deployment job.</value>
+    
+  </data>
+  <data name="deployjob_jobfreq_header" xml:space="preserve">
+    <value>Frequency</value>
+    
+  </data>
+  <data name="deployjob_minute_fifteen_label" xml:space="preserve">
+    <value>15 minutes</value>
+    
+  </data>
+  <data name="deployjob_minute_fortyfive_label" xml:space="preserve">
+    <value>45 minutes</value>
+    
+  </data>
+  <data name="deployjob_minute_ten_label" xml:space="preserve">
+    <value>10 minutes</value>
+    
+  </data>
+  <data name="deployjob_minute_thirty_label" xml:space="preserve">
+    <value>30 minutes</value>
+    
+  </data>
+  <data name="deployjob_minutely_radiotext" xml:space="preserve">
+    <value>Every</value>
+    
+  </data>
+  <data name="deployjob_monthly_radiotext" xml:space="preserve">
+    <value>Once a month</value>
+    
+  </data>
+  <data name="deployjob_name_label" xml:space="preserve">
+    <value>Name:</value>
+    
+  </data>
+  <data name="deployjob_name_textbox_title" xml:space="preserve">
+    <value>Job Name</value>
+    
+  </data>
+  <data name="deployjob_name_validate" xml:space="preserve">
+    <value>Job name is a required field for a content deployment job.</value>
+    
+  </data>
+  <data name="deployjob_nameanddescription_description" xml:space="preserve">
+    <value>Specify a unique name and description for this content deployment job.</value>
+    
+  </data>
+  <data name="deployjob_nameanddescription_header" xml:space="preserve">
+    <value>Name and Description</value>
+    
+  </data>
+  <data name="deployjob_notify_description" xml:space="preserve">
+    <value>When the deployment job is finished, send e-mail notification to these e-mail addresses. Use semicolons to separate multiple e-mail addresses.</value>
+    
+  </data>
+  <data name="deployjob_notify_header" xml:space="preserve">
+    <value>Notification</value>
+    
+  </data>
+  <data name="deployjob_notifyemail_validate" xml:space="preserve">
+    <value>Specify at least one e-mail address.</value>
+    
+  </data>
+  <data name="deployjob_once_radiotext" xml:space="preserve">
+    <value>One time only</value>
+    
+  </data>
+  <data name="deployjob_pagedescription" xml:space="preserve">
+    <value>Use content deployment jobs to specify the content you want to deploy along a path, and to schedule the deployment.&lt;br&gt;&lt;br&gt;</value>
+    
+  </data>
+  <data name="deployjob_pagetitle" xml:space="preserve">
+    <value>Content Deployment Job</value>
+    
+  </data>
+  <data name="deployjob_partialscope_radiotext" xml:space="preserve">
+    <value>Specific sites within the site collection</value>
+    
+  </data>
+  <data name="deployjob_path_description" xml:space="preserve">
+    <value>Select the path this job is associated with.</value>
+    
+  </data>
+  <data name="deployjob_path_header" xml:space="preserve">
+    <value>Path</value>
+    
+  </data>
+  <data name="deployjob_path_label" xml:space="preserve">
+    <value>Select a content deployment path:</value>
+    
+  </data>
+  <data name="deployjob_path_validate" xml:space="preserve">
+    <value>You must select a path.</value>
+    
+  </data>
+  <data name="deployjob_pathdropdown_title" xml:space="preserve">
+    <value>Content Deployment Path</value>
+    
+  </data>
+  <data name="deployjob_sqlsnapshot_header" xml:space="preserve">
+    <value>SQL Snapshots</value>
+    
+  </data>
+  <data name="deployjob_sqlsnapshot_description" xml:space="preserve">
+    <value>Specify whether or not this job should use SQL snapshots for export operations.</value>
+    
+  </data>
+  <data name="deployjob_sqlsnapshot_donotusesnapshot_option" xml:space="preserve">
+    <value>Do not use SQL snapshots</value>
+    
+  </data>
+  <data name="deployjob_sqlsnapshot_createnewsnapshot_option" xml:space="preserve">
+    <value>Automatically create and manage snapshots for content deployment</value>
+    
+  </data>
+  <data name="deployjob_sqlsnapshot_validate" xml:space="preserve">
+    <value>The content database of the source site collection does not support SQL snapshots.</value>
+    
+  </data>
+  <data name="deployjob_replaceschedule_checkboxtext" xml:space="preserve">
+    <value>Replace the advanced schedule for this job with the schedule below</value>
+    
+  </data>
+  <data name="deployjob_runjob_checkboxtext" xml:space="preserve">
+    <value>Run this job on the following schedule:</value>
+    
+  </data>
+  <data name="deployjob_scope_description" xml:space="preserve">
+    <value>Select the sites you want to deploy. By default, the complete site collection is selected. To specify different sites, click &lt;b&gt;Specific sites within the site collection&lt;/b&gt;, and then click &lt;b&gt;Select sites&lt;/b&gt;.</value>
+    
+  </data>
+  <data name="deployjob_scope_header" xml:space="preserve">
+    <value>Scope</value>
+    
+  </data>
+  <data name="deployjob_scopeselect_noneselected" xml:space="preserve">
+    <value>You must select at least one site.</value>
+    
+  </data>
+  <data name="deployjob_scopeselectionrequirespath" xml:space="preserve">
+    <value>You must first select a path before you can select the scope for this job.</value>
+    
+  </data>
+  <data name="deployjob_selectedwebsleadtext" xml:space="preserve">
+    <value>Selected sites:</value>
+    
+  </data>
+  <data name="deployjob_specifyscope_label" xml:space="preserve">
+    <value>Select sites</value>
+    
+  </data>
+  <data name="deployjob_time_label" xml:space="preserve">
+    <value>At time:</value>
+    
+  </data>
+  <data name="deployjob_time_validate" xml:space="preserve">
+    <value>The value must be from 0 through 59.</value>
+    
+  </data>
+  <data name="deployjob_users_header" xml:space="preserve">
+    <value>Users</value>
+    
+  </data>
+  <data name="deployjob_weekly_radiotext" xml:space="preserve">
+    <value>Once a week</value>
+    
+  </data>
+  <data name="deployjobhistory_durationcolumnheader" xml:space="preserve">
+    <value>Duration</value>
+    
+  </data>
+  <data name="deployjobhistory_endtimecolumnheader" xml:space="preserve">
+    <value>End Time</value>
+    
+  </data>
+  <data name="deployjobhistory_errorscolumnheader" xml:space="preserve">
+    <value>Errors</value>
+    
+  </data>
+  <data name="deployjobhistory_historylistaccesskey" xml:space="preserve">
+    <value>G</value>
+    
+  </data>
+  <data name="deployjobhistory_objectscolumnheader" xml:space="preserve">
+    <value>Objects</value>
+    
+  </data>
+  <data name="deployjobhistory_pagedescription" xml:space="preserve">
+    <value>This page shows the history of a recurring job.</value>
+    
+  </data>
+  <data name="deployjobhistory_pagetitle" xml:space="preserve">
+    <value>Job History</value>
+    
+  </data>
+  <data name="deployjobhistory_sizecolumnheader" xml:space="preserve">
+    <value>Size (MB)</value>
+    
+  </data>
+  <data name="deployjobhistory_starttimecolumnheader" xml:space="preserve">
+    <value>Start Time</value>
+    
+  </data>
+  <data name="deployjobhistory_statuscolumnheader" xml:space="preserve">
+    <value>Status</value>
+    
+  </data>
+  <data name="deployjobhistory_warningscolumnheader" xml:space="preserve">
+    <value>Warnings</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_canceljobmenutext" xml:space="preserve">
+    <value>Cancel</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_createdbycolumnheader" xml:space="preserve">
+    <value>Created By</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_CreateJobMenuText" xml:space="preserve">
+    <value>Create Job</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_deletejobmenutext" xml:space="preserve">
+    <value>Delete</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_deletejobprompt" xml:space="preserve">
+    <value>Are you sure you want to delete this job?</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_deletepathmenutext" xml:space="preserve">
+    <value>Delete</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_deletepathprompt" xml:space="preserve">
+    <value>Deleting the path will delete all jobs related to that path. Are you sure you want to delete the path?</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_disablemenutext" xml:space="preserve">
+    <value>Disable</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_editmenutext" xml:space="preserve">
+    <value>Edit</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_enablemenutext" xml:space="preserve">
+    <value>Enable</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_GridViewAccessKey" xml:space="preserve">
+    <value>G</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_GridViewEmptyDataText" xml:space="preserve">
+    <value>There are no paths or jobs defined.  Create a new path to enable content deployment.</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_mostrecentrunstatuscolumnheader" xml:space="preserve">
+    <value>Status</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_mostrecentstarttimecolumnheader" xml:space="preserve">
+    <value>Last Run</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_namecolumnheader" xml:space="preserve">
+    <value>Name</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_NewJobButtonAccessKey" xml:space="preserve">
+    <value>J</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_NewJobButtonDescription" xml:space="preserve">
+    <value>Click to create a new job</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_NewJobButtonTitle" xml:space="preserve">
+    <value>New Job</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_NewPathButtonAccessKey" xml:space="preserve">
+    <value>N</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_NewPathButtonDescription" xml:space="preserve">
+    <value>Click to create a new path</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_NewPathButtonTitle" xml:space="preserve">
+    <value>New Path</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_nextstarttimecolumnheader" xml:space="preserve">
+    <value>Next Run</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_pagetitle" xml:space="preserve">
+    <value>Manage Content Deployment Paths and Jobs</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_quickdeploysettingsmenutext" xml:space="preserve">
+    <value>Quick Deploy Settings</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_runjobmenutext" xml:space="preserve">
+    <value>Run Now</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_testjobmenutext" xml:space="preserve">
+    <value>Test Job</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_checkjobstatusmenutext" xml:space="preserve">
+    <value>Check Status</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_typecolumnheader" xml:space="preserve">
+    <value>Type</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_viewhistorymenutext" xml:space="preserve">
+    <value>View History</value>
+    
+  </data>
+  <data name="deploypath_auth_description" xml:space="preserve">
+    <value>Specify the authentication method and credentials you want to use for the destination server. The specified account must have SharePoint Central Administration credentials on the destination server.&lt;br&gt;&lt;br&gt;Click &lt;b&gt;Connect&lt;/b&gt; to connect to the destination server and specify settings for this path.</value>
+    
+  </data>
+  <data name="deploypath_auth_header" xml:space="preserve">
+    <value>Authentication Information</value>
+    
+  </data>
+  <data name="deploypath_auth_label" xml:space="preserve">
+    <value>Specify the authentication method and credentials you want to use to log on to the destination server:</value>
+    
+  </data>
+  <data name="deploypath_authbasic_radiotext" xml:space="preserve">
+    <value>Use Basic authentication</value>
+    
+  </data>
+  <data name="deploypath_authconnectbuttontext" xml:space="preserve">
+    <value>Connect</value>
+    
+  </data>
+  <data name="deploypath_authenticationtype_label" xml:space="preserve">
+    <value>Authentication Type:</value>
+    
+  </data>
+  <data name="deploypath_authpass_label" xml:space="preserve">
+    <value>Password:</value>
+    
+  </data>
+  <data name="deploypath_authpass_textbox_title" xml:space="preserve">
+    <value>Destination Server Authentication User Password</value>
+    
+  </data>
+  <data name="deploypath_authuser_label" xml:space="preserve">
+    <value>User Name:</value>
+    
+  </data>
+  <data name="deploypath_authuser_textbox_title" xml:space="preserve">
+    <value>Destination Server Authentication Username</value>
+    
+  </data>
+  <data name="deploypath_authUser_validate" xml:space="preserve">
+    <value>User name must be specified.</value>
+    
+  </data>
+  <data name="deploypath_authwindows_radiotext" xml:space="preserve">
+    <value>Use Integrated Windows authentication</value>
+    
+  </data>
+  <data name="deploypath_description_label" xml:space="preserve">
+    <value>Type the description of the content deployment path:</value>
+    
+  </data>
+  <data name="deploypath_description_textbox_title" xml:space="preserve">
+    <value>Path Description</value>
+    
+  </data>
+  <data name="deploypath_destAdminServer_description" xml:space="preserve">
+    <value>Specify the URL for the destination Central Administration Server.</value>
+    
+  </data>
+  <data name="deploypath_destAdminServer_header" xml:space="preserve">
+    <value>Destination Central Administration Web Application</value>
+    
+  </data>
+  <data name="deploypath_destAdminServerUrl_label" xml:space="preserve">
+    <value>Type the URL of the destination Central Administration Server:</value>
+    
+  </data>
+  <data name="deploypath_destAdminServerUrl_textboxtitle" xml:space="preserve">
+    <value>Destination Central Administration Server URL</value>
+    
+  </data>
+  <data name="deploypath_destAdminServerUrl_validate" xml:space="preserve">
+    <value>Destination Central Administration Server URL is a required field for a content deployment path.</value>
+    
+  </data>
+  <data name="deploypath_destsitecollection_label" xml:space="preserve">
+    <value>Destination Site Collection:</value>
+    
+  </data>
+  <data name="deploypath_destsitecollection_textboxtitle" xml:space="preserve">
+    <value>Destination site collection</value>
+    
+  </data>
+  <data name="deploypath_desturllabel" xml:space="preserve">
+    <value>URL: </value>
+    
+  </data>
+  <data name="deploypath_destvserver_description" xml:space="preserve">
+    <value>Specify the URL for the destination web application and site collection.</value>
+    
+  </data>
+  <data name="deploypath_destvserver_header" xml:space="preserve">
+    <value>Destination web application and site collection</value>
+    
+  </data>
+  <data name="deploypath_destvserver_label" xml:space="preserve">
+    <value>Destination web application:</value>
+    
+  </data>
+  <data name="deploypath_destvserver_title" xml:space="preserve">
+    <value>Destination web application</value>
+    
+  </data>
+  <data name="deploypath_destvserver_validate" xml:space="preserve">
+    <value>Destination web application and site collection are required fields for a content deployment path.</value>
+    
+  </data>
+  <data name="deploypath_name_description" xml:space="preserve">
+    <value>Specify the name and description of the content deployment path.</value>
+    
+  </data>
+  <data name="deploypath_name_header" xml:space="preserve">
+    <value>Name and Description</value>
+    
+  </data>
+  <data name="deploypath_name_label" xml:space="preserve">
+    <value>Type the name of this path:</value>
+    
+  </data>
+  <data name="deploypath_name_textbox_title" xml:space="preserve">
+    <value>Path Name</value>
+    
+  </data>
+  <data name="deploypath_name_validate" xml:space="preserve">
+    <value>Path name is a required field for a content deployment path.</value>
+    
+  </data>
+  <data name="deploypath_pagetitle" xml:space="preserve">
+    <value>Content Deployment Path</value>
+    
+  </data>
+  <data name="deploypath_securityinformation_description" xml:space="preserve">
+    <value>Specify whether you want to deploy security information (such as ACLs, roles, and membership).
+</value>
+    
+  </data>
+  <data name="deploypath_securityinformation_header" xml:space="preserve">
+    <value>Security Information</value>
+    
+  </data>
+  <data name="deploypath_securityinformationdropdown_label" xml:space="preserve">
+    <value>Security information in the content deployment:</value>
+    
+  </data>
+  <data name="deploypath_securityinformationdropdown_title" xml:space="preserve">
+    <value>Security information in the content deployment</value>
+    
+  </data>
+  <data name="deploypath_sourcesc_label" xml:space="preserve">
+    <value>Source site collection:</value>
+    
+  </data>
+  <data name="deploypath_sourcesc_title" xml:space="preserve">
+    <value>Source Site Collection</value>
+    
+  </data>
+  <data name="deploypath_sourcesc_validate" xml:space="preserve">
+    <value>Source site collection is a required field for a content deployment path.</value>
+    
+  </data>
+  <data name="deploypath_sourceurllabel" xml:space="preserve">
+    <value>URL: </value>
+    
+  </data>
+  <data name="deploypath_sourcevs_description" xml:space="preserve">
+    <value>Specify the web application and site collection on the source server.</value>
+    
+  </data>
+  <data name="deploypath_sourcevs_header" xml:space="preserve">
+    <value>Source Web Application and Site Collection</value>
+    
+  </data>
+  <data name="deploypath_sourcevs_label" xml:space="preserve">
+    <value>Source web application:</value>
+    
+  </data>
+  <data name="deploypath_sourcevs_title" xml:space="preserve">
+    <value>Source Web Application</value>
+    
+  </data>
+  <data name="deploypath_sourcevserver_validate" xml:space="preserve">
+    <value>Source web application is a required field for a content deployment path.</value>
+    
+  </data>
+  <data name="deploypath_user_description" xml:space="preserve">
+    <value>Specify whether or not to deploy the user names associated with content.</value>
+    
+  </data>
+  <data name="deploypath_user_header" xml:space="preserve">
+    <value>User Names</value>
+    
+  </data>
+  <data name="deploypath_user_label" xml:space="preserve">
+    <value>Deploy user names</value>
+    
+  </data>
+  <data name="deployreport_canceljobbuttontext" xml:space="preserve">
+    <value>Cancel Job</value>
+    
+  </data>
+  <data name="DeployReport_canceljobprompt" xml:space="preserve">
+    <value>Are you sure you want to cancel this job?</value>
+    
+  </data>
+  <data name="deployreport_errorwarninglistaccesskey" xml:space="preserve">
+    <value>G</value>
+    
+  </data>
+  <data name="deployreport_errorwarningobjectcolumnheader" xml:space="preserve">
+    <value>Object</value>
+    
+  </data>
+  <data name="deployreport_errorwarningtimecolumnheader" xml:space="preserve">
+    <value>Time</value>
+    
+  </data>
+  <data name="deployreport_errorwarningtitlecolumnheader" xml:space="preserve">
+    <value>Title</value>
+    
+  </data>
+  <data name="deployreport_errorwarningtypecolumnheader" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="deployreport_pagetitle" xml:space="preserve">
+    <value>Content Deployment Report</value>
+    
+  </data>
+  <data name="deployreport_teststatusdescription" xml:space="preserve">
+    <value>Note: A test only verifies that the export succeeded and that the destination farm can be reached. It does not guarantee that this job will succeed the next time it is run.</value>
+    
+  </data>
+  <data name="DeployScope_pagedescriptionintitlearea" xml:space="preserve">
+    <value>Use this page to select which portion of the site collection you want to deploy.&lt;br&gt;&lt;br&gt;&lt;b&gt;Note:&lt;/b&gt; If you are deploying an individual subsite, all of the parent sites must already be deployed or be deployed in this deployment job.</value>
+    
+  </data>
+  <data name="DeployScope_pagetitle" xml:space="preserve">
+    <value>Select Sites</value>
+    
+  </data>
+  <data name="DeployScopeEcb_SelectBranch" xml:space="preserve">
+    <value>Select this branch</value>
+    
+  </data>
+  <data name="DeployScopeEcb_SelectWeb" xml:space="preserve">
+    <value>Select this site</value>
+    
+  </data>
+  <data name="DeployScopeEcb_UnselectBranch" xml:space="preserve">
+    <value>Cancel the selection of this branch.</value>
+    
+  </data>
+  <data name="DeployScopeEcb_UnselectWeb" xml:space="preserve">
+    <value>Cancel the selection of this site.</value>
+    
+  </data>
+  <data name="DeploySet_AcceptJob_RadioText" xml:space="preserve">
+    <value>Accept incoming content deployment jobs</value>
+    
+  </data>
+  <data name="DeploySet_Count_Textbox_Title" xml:space="preserve">
+    <value>Default Report Count</value>
+    
+  </data>
+  <data name="DeploySet_Encrypt_RadioText" xml:space="preserve">
+    <value>Require encryption (recommended)</value>
+    
+  </data>
+  <data name="DeploySet_Export_Description" xml:space="preserve">
+    <value>Specify the server to which you want to send outgoing content deployment jobs. This server must have enough available disk space to store the outgoing jobs, and it must be running an administration web application for the farm.&lt;br&gt;&lt;br&gt;This server will experience additional load when a content deployment job runs.</value>
+    
+  </data>
+  <data name="DeploySet_Export_Header" xml:space="preserve">
+    <value>Export Server</value>
+    
+  </data>
+  <data name="DeploySet_Export_Label" xml:space="preserve">
+    <value>Server you want to use to manage export of content deployment jobs</value>
+    
+  </data>
+  <data name="DeploySet_ExportDropDown_Title" xml:space="preserve">
+    <value>Export Server</value>
+    
+  </data>
+  <data name="DeploySet_Expose_RadioText" xml:space="preserve">
+    <value>Do not require encryption</value>
+    
+  </data>
+  <data name="DeploySet_Files_Description" xml:space="preserve">
+    <value>Specify where you want to store temporary files for content deployment jobs. These files are automatically deleted when the deployment job is finished.&lt;br&gt;&lt;br&gt;This folder must have enough available disk space to store all the content that is deployed at one time.</value>
+    
+  </data>
+  <data name="DeploySet_Files_Header" xml:space="preserve">
+    <value>Temporary Files</value>
+    
+  </data>
+  <data name="DeploySet_Files_Label" xml:space="preserve">
+    <value>Path:</value>
+    
+  </data>
+  <data name="DeploySet_Import_Description" xml:space="preserve">
+    <value>Specify the server you want to receive incoming content deployment jobs. This server must have enough available disk space to store the incoming jobs, and it must be running an administration web application for the farm.&lt;br&gt;&lt;br&gt;This server will experience additional load when a content deployment job runs.</value>
+    
+  </data>
+  <data name="DeploySet_Import_Header" xml:space="preserve">
+    <value>Import Server</value>
+    
+  </data>
+  <data name="DeploySet_Import_Label" xml:space="preserve">
+    <value>Server you want to use to manage import of content deployment jobs</value>
+    
+  </data>
+  <data name="DeploySet_ImportDropDown_Title" xml:space="preserve">
+    <value>Import Server</value>
+    
+  </data>
+  <data name="DeploySet_Job_Description" xml:space="preserve">
+    <value>Specify whether you want to permit this server farm to receive content deployment jobs from another farm. Even with this setting enabled, the remote farm will need to authenticate to Central Administration to deploy content.</value>
+    
+  </data>
+  <data name="DeploySet_Job_Header" xml:space="preserve">
+    <value>Accept Content Deployment Jobs</value>
+    
+  </data>
+  <data name="DeploySet_PageDescription" xml:space="preserve">
+    <value>These settings apply to all content deployment paths and jobs.</value>
+    
+  </data>
+  <data name="DeploySet_PageTitle" xml:space="preserve">
+    <value>Content Deployment Settings</value>
+    
+  </data>
+  <data name="DeploySet_Path_Textbox_Title" xml:space="preserve">
+    <value>Temporary File Path</value>
+    
+  </data>
+  <data name="DeploySet_Path_Validate" xml:space="preserve">
+    <value>Temporary file path is a required field for content deployment settings.</value>
+    
+  </data>
+  <data name="DeploySet_RejectJob_RadioText" xml:space="preserve">
+    <value>Reject incoming content deployment jobs</value>
+    
+  </data>
+  <data name="DeploySet_Report_Description" xml:space="preserve">
+    <value>Specify the number of reports you want to keep for each content deployment job that originates from this farm. The oldest reports will automatically be deleted to make room for new ones.</value>
+    
+  </data>
+  <data name="DeploySet_Report_Header" xml:space="preserve">
+    <value>Reporting</value>
+    
+  </data>
+  <data name="DeploySet_Report_Label" xml:space="preserve">
+    <value>Number of reports to retain for each job:</value>
+    
+  </data>
+  <data name="DeploySet_ReportCount_Validate" xml:space="preserve">
+    <value>The value must be from 1 through 999.</value>
+    
+  </data>
+  <data name="DeploySet_Security_Description" xml:space="preserve">
+    <value>By default, content deployment can only occur if the connection between source and destination farms is encrypted by using the HTTPS protocol.&lt;br&gt;&lt;br&gt;If you deploy content over a connection that is not encrypted, the user name and password you use to authenticate with the destination farm could be intercepted by malicious users, as could the content you are deploying.</value>
+    
+  </data>
+  <data name="DeploySet_Security_Header" xml:space="preserve">
+    <value>Connection Security</value>
+    
+  </data>
+  <data name="DeployStatus_MajorTimeColumnHeader" xml:space="preserve">
+    <value>Major Version Last Modified</value>
+    
+  </data>
+  <data name="DeployStatus_MinorTimeColumnHeader" xml:space="preserve">
+    <value>Minor Version Last Modified</value>
+    
+  </data>
+  <data name="DeployStatus_DeployDesinationsAccessKey" xml:space="preserve">
+    <value>G</value>
+    
+  </data>
+  <data name="DeployStatus_DeployTypeColumnHeader" xml:space="preserve">
+    <value />
+    
+  </data>
+  <data name="DeployStatus_DestinationsLabel" xml:space="preserve">
+    <value>Destination Object Details</value>
+    
+  </data>
+  <data name="DeployStatus_GetStatusButtonText" xml:space="preserve">
+    <value>Check Status</value>
+    
+  </data>
+  <data name="DeployStatus_LastMajorVersion" xml:space="preserve">
+    <value>Latest Major Version</value>
+    
+  </data>
+  <data name="DeployStatus_LastMinorVersion" xml:space="preserve">
+    <value>Latest Minor Version</value>
+    
+  </data>
+  <data name="DeployStatus_ObjectDetailsLabel" xml:space="preserve">
+    <value>Source Object Details</value>
+    
+  </data>
+  <data name="DeployStatus_ObjectStatusText" xml:space="preserve">
+    <value>No object URL provided</value>
+    
+  </data>
+  <data name="DeployStatus_PageDescription" xml:space="preserve">
+    <value>Use this page to check the deployment status for a particular object. Type the URL of the object below, and then click &lt;b&gt;Check Status&lt;/b&gt;.</value>
+    
+  </data>
+  <data name="ContentReport_PageDescription" xml:space="preserve">
+    <value>This page might reload automatically to show updated report information.</value>
+    
+  </data>
+  <data name="DeployStatus_PageTitle" xml:space="preserve">
+    <value>Content Deployment Object Status</value>
+    
+  </data>
+  <data name="DeployStatus_PathColumnHeader" xml:space="preserve">
+    <value>Deployment Path</value>
+    
+  </data>
+  <data name="DeployStatus_ScheduleStart" xml:space="preserve">
+    <value>Start Date</value>
+    
+  </data>
+  <data name="DeployStatus_ScheduleStop" xml:space="preserve">
+    <value>Expiry Date</value>
+    
+  </data>
+  <data name="DeployStatus_Url_TextboxTitle" xml:space="preserve">
+    <value>Object URL</value>
+    
+  </data>
+  <data name="DeployStatus_Url_Validate" xml:space="preserve">
+    <value>Object URL is required to check the deployment status for a particular object.</value>
+    
+  </data>
+  <data name="DeployStatus_UrlColumnHeader" xml:space="preserve">
+    <value>URL</value>
+    
+  </data>
+  <data name="DeployStatus_UrlLabel" xml:space="preserve">
+    <value>URL</value>
+    
+  </data>
+  <data name="DeployStatus_UrlStatusText" xml:space="preserve">
+    <value>&lt;br&gt;Object URL not found. Check the URL and try again.</value>
+    
+  </data>
+  <data name="DeployStatus_NoPathText" xml:space="preserve">
+    <value>&lt;b&gt;Note:&lt;/b&gt; There are no deployment paths configured to deploy this object.</value>
+    
+  </data>
+  <data name="Error_CPUpload_JobIdEmpty" xml:space="preserve">
+    <value>The Content Deployment Remote Job ID cannot be empty.</value>
+    
+  </data>
+  <data name="multipage_errorcountlabel" xml:space="preserve">
+    <value>Errors</value>
+    
+  </data>
+  <data name="multipage_phaselabel" xml:space="preserve">
+    <value>Phase</value>
+    
+  </data>
+  <data name="multipage_runstatuslabel" xml:space="preserve">
+    <value>Status of this run</value>
+    
+  </data>
+  <data name="multipage_warningcountlabel" xml:space="preserve">
+    <value>Warnings</value>
+    
+  </data>
+  <data name="multipages_cancelbutton_text" xml:space="preserve">
+    <value>Cancel</value>
+    
+  </data>
+  <data name="multipages_descriptionlabel" xml:space="preserve">
+    <value>Job Description</value>
+    
+  </data>
+  <data name="multipages_nexteventlabel" xml:space="preserve">
+    <value>Next Event</value>
+    
+  </data>
+  <data name="multipages_previouseventlabel" xml:space="preserve">
+    <value>Previous Event</value>
+    
+  </data>
+  <data name="multipages_destinationurllabel" xml:space="preserve">
+    <value>Destination Server URL</value>
+    
+  </data>
+  <data name="multipages_downloadreportLabel" xml:space="preserve">
+    <value>&lt;b&gt;Note:&lt;/b&gt; This report contains more errors and warnings that can be displayed. Download the full report using the link above.</value>
+    
+  </data>
+  <data name="multipages_downloadreportlinktext" xml:space="preserve">
+    <value>Download Report</value>
+    
+  </data>
+  <data name="multipages_editjoblinktext" xml:space="preserve">
+    <value>Edit Job Settings</value>
+    
+  </data>
+  <data name="multipages_editpathlinktext" xml:space="preserve">
+    <value>Edit Path Settings</value>
+    
+  </data>
+  <data name="multipages_endtimelabel" xml:space="preserve">
+    <value>End Time</value>
+    
+  </data>
+  <data name="multipages_errorsandwarningslabel" xml:space="preserve">
+    <value>Errors and Warnings</value>
+    
+  </data>
+  <data name="multipages_jobpathnamelabel" xml:space="preserve">
+    <value>Path</value>
+    
+  </data>
+  <data name="multipages_namelabel" xml:space="preserve">
+    <value>Job Name</value>
+    
+  </data>
+  <data name="DeployReport_JobDetailsAndStatusTitle" xml:space="preserve">
+    <value>Job Details and Status</value>
+    
+  </data>
+  <data name="multipages_objectsexportedlabel" xml:space="preserve">
+    <value>Objects Exported</value>
+    
+  </data>
+  <data name="multipages_objectsimportedlabel" xml:space="preserve">
+    <value>Objects Imported</value>
+    
+  </data>
+  <data name="multipages_sourcedatabaselabel" xml:space="preserve">
+    <value>Source Database</value>
+    
+  </data>
+  <data name="multipages_sourceserverlabel" xml:space="preserve">
+    <value>Source Server</value>
+    
+  </data>
+  <data name="multipages_sourceurllabel" xml:space="preserve">
+    <value>Source Server URL</value>
+    
+  </data>
+  <data name="multipages_starttimelabel" xml:space="preserve">
+    <value>Start Time</value>
+    
+  </data>
+  <data name="multipages_viewjobhistorylinktext" xml:space="preserve">
+    <value>View Job History</value>
+    
+  </data>
+  <data name="multipages_viewjobreportlinktext" xml:space="preserve">
+    <value>View Job Report</value>
+    
+  </data>
+  <data name="multipages_viewobjectstatuslinktext" xml:space="preserve">
+    <value>Check Deployment of a Specific Object</value>
+    
+  </data>
+  <data name="day_monday_label" xml:space="preserve">
+    <value>Monday</value>
+    
+  </data>
+  <data name="deployjob_quickfreq_description" xml:space="preserve">
+    <value>Specify how often a Quick Deploy job checks for and deploys content.</value>
+    
+  </data>
+  <data name="deployjob_quickfreq_header" xml:space="preserve">
+    <value>Quick Deploy Schedule</value>
+    
+  </data>
+  <data name="deployjob_quickfreq_label" xml:space="preserve">
+    <value>Check every:</value>
+    
+  </data>
+  <data name="deployjob_allowquick_header" xml:space="preserve">
+    <value>Allow Quick Deploy jobs</value>
+    
+  </data>
+  <data name="deployjob_allowquick_label" xml:space="preserve">
+    <value>Allow Quick Deploy jobs along this path</value>
+    
+  </data>
+  <data name="deployjob_minute_sixty_label" xml:space="preserve">
+    <value>60 minutes</value>
+    
+  </data>
+  <data name="deployjob_allowquick_description" xml:space="preserve">
+    <value>Specify whether you want to allow items to be deployed by Quick Deploy jobs along this path.</value>
+    
+  </data>
+  <data name="manageMigrationProfile_tableHeaderText" xml:space="preserve">
+    <value>Migration Profiles</value>
+    
+  </data>
+  <data name="deploy_OnLoad_Error" xml:space="preserve">
+    <value>Error loading this page</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_pagedescription_firstlistitem" xml:space="preserve">
+    <value>A content deployment path defines a relationship between a source and destination site collection for content deployment. Once a path is created, jobs can be created and associated with the path to begin deploying content.</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_pagedescription_seclistitem" xml:space="preserve">
+    <value>A job is associated with a path, and defines the specific content to be deployed from the source to the destination, and the schedule on which the deployment should occur.</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_pagedescription" xml:space="preserve">
+    <value>This page is used to manage content deployment jobs and paths.</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_pagedescription2" xml:space="preserve">
+    <value>Content deployment is used to deploy content from one site collection into another site collection. The source and destination site collections can be in the same farm or in different farms.&lt;br&gt;&lt;br&gt;Content deployment is managed using paths and jobs:&lt;br&gt;</value>
+    
+  </data>
+  <data name="DeployManagePathsAndJobs_morepagedescription" xml:space="preserve">
+    <value>After running a content deployment job, refresh this page and click the link in the &lt;b&gt;Status&lt;/b&gt; column to view updated status information.&lt;br&gt;&lt;br&gt;</value>
+    
+  </data>
+  <data name="deployjob_users_description" xml:space="preserve">
+    <value>Choose the users and groups who will have permission to mark pages for a Quick Deploy job along this path. These users must be in the Quick Deploy Users group.</value>
+    
+  </data>
+  <data name="MultiPages_ShowInfo_LinkText" xml:space="preserve">
+    <value>Show me more information.</value>
+    
+  </data>
+  <data name="connectbutton_accesskey" xml:space="preserve">
+    <value>n</value>
+    
+  </data>
+  <data name="deployjob_users_description_linktooltip" xml:space="preserve">
+    <value>Open a new window to learn more about Quick Deploy users</value>
+    
+  </data>
+  <data name="multipages_linkheader" xml:space="preserve">
+    <value>Quick Links</value>
+    
+  </data>
+  <data name="deploypath_basicauthwarntext" xml:space="preserve">
+    <value>When you use Basic authentication, your credentials are not encrypted, and they can be intercepted by malicious users.</value>
+    
+  </data>
+  <data name="deploypath_sslwarntext" xml:space="preserve">
+    <value>You have specified a URL that begins with http://. Communication to this URL will not be secure and can be intercepted by malicious users.</value>
+    
+  </data>
+</root>

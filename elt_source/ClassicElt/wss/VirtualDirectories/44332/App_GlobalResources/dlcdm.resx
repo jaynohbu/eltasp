@@ -1,0 +1,880 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="14.0.4758.1000" _dal="1" -->
+<!-- _LocalBinding -->
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ctdmsettings_pagetitle">
+    <value>Document Information Panel Settings</value>
+  </data>
+  <data name="ctdmsettings_xsntemplate_section_description">
+    <value>Specify the type of Document Information Panel template to show in Microsoft Office compatible applications.</value>
+  </data>
+  <data name="ctdmsettings_xsntemplate_section_description2">
+    <value>Note: Creating a custom Document Information Panel template requires Microsoft InfoPath.</value>
+  </data>
+  <data name="ctdmsettings_xsntemplate_section_title">
+    <value>Document Information Panel Template</value>
+  </data>
+  <data name="ctdmsettings_showalways_section_title">
+    <value>Show Always</value>
+  </data>
+  <data name="ctdmsettings_showalways_section_description">
+    <value>Require that the Document Information Panel is displayed automatically for the user under specific conditions.</value>
+  </data>
+  <data name="ctdmsettings_template_section_defaultshow">
+    <value>Always show Document Information Panel on document open and initial save for this content type</value>
+  </data>
+  <data name="ctdmsettings_template_section_default">
+    <value>Use the default template for Microsoft Office applications</value>
+  </data>
+  <data name="ctdmsettings_template_section_upload">
+    <value>Upload an existing custom template (XSN) to use</value>
+  </data>
+  <data name="ctdmsettings_template_upload_textbox_title">
+    <value>Enter the location of an existing custom template</value>
+  </data>
+  <data name="ctdmsettings_edit_template">
+    <value>Edit this template</value>
+  </data>
+  <data name="ctdmsettings_create_template">
+    <value>Create a new custom template</value>
+  </data>
+  <data name="ctdmsettings_xsntemplate_section_existing">
+    <value>Use existing custom template (URL, UNC, or URN)</value>
+  </data>
+  <data name="ctdmsettings_xsntemplate_existing_textbox_title">
+    <value>Enter the URL, UNC, or URN of an existing custom template</value>
+  </data>
+  <data name="dmplaceholder_pagetitle_edit">
+    <value>Editing Custom Template</value>
+  </data>
+  <data name="dmplaceholder_pagetitle_create">
+    <value>Creating Custom Template</value>
+  </data>
+  <data name="dmplaceholder_back">
+    <value>back</value>
+  </data>
+  <data name="dmplaceholder_gobackto">
+    <value>Go back to the Document Information Panel settings page</value>
+  </data>
+  <data name="dmplaceholder_page_description">
+    <value>To edit the form, open Microsoft InfoPath and make any changes that you want. When you finish editing the form, save your changes, and then close InfoPath.</value>
+  </data>
+  <data name="ctdmsettings_ederror_runtime">
+    <value>The document could not be opened.
+The required application may not be installed properly, or the template for this content type cannot be opened.
+
+Please try the following:
+1. Check the Document Information Panel Settings for this document library for the name of the template, and install the application necessary for opening the template. If the application was set to install on first use, run the application and then try creating a new document again.
+
+2. If you have permission to modify this content type, go to Document Information Panel Settings for the library and configure a new template.</value>
+  </data>
+  <data name="ctdmsettings_ederror_init">
+    <value>To use this feature, you must have an XML editor compatible with SharePoint Foundation, such as Microsoft InfoPath, and you must have at least Microsoft Internet Explorer 5.</value>
+  </data>
+  <data name="ctdmsettings_uploadXsnError">
+    <value>You must specify a valid path for the template.</value>
+  </data>
+  <data name="ctdmsettings_XsnUrlError">
+    <value>You must specify a valid URL, UNC path, or URN for the template.</value>
+  </data>
+  <data name="ctdmsettings_ederror_urn">
+    <value>This file cannot be edited from the Web server. To edit this file, open it in Microsoft InfoPath.</value>
+  </data>
+  <data name="docconvlauncherprovision_page_title">
+    <value>Launcher Service Settings</value>
+  </data>
+  <data name="docconvlauncherprovision_page_description">
+    <value>Use this page to configure the settings for the Launcher Service for Document Conversions.</value>
+  </data>
+  <data name="docconvlauncherprovision_lb_title">
+    <value>Load Balancer</value>
+  </data>
+  <data name="docconvlauncherprovision_lb_description">
+    <value>Specify the Load Balancer with which to associate this launcher.</value>
+  </data>
+  <data name="docconvlauncherprovision_lb_label">
+    <value>Load Balancer server:</value>
+  </data>
+  <data name="docconvlauncherprovision_port_title">
+    <value>Port Number</value>
+  </data>
+  <data name="docconvlauncherprovision_port_description">
+    <value>Specify the port number the Launcher will use for communication.</value>
+  </data>
+  <data name="docconvlauncherprovision_port_label">
+    <value>Port Number:</value>
+  </data>
+  <data name="docconvlauncherprovision_ss_title">
+    <value>Select Server</value>
+  </data>
+  <data name="docconvlauncherprovision_ss_description">
+    <value>Select the server on which to run the launcher.</value>
+  </data>
+  <data name="docconvloadbalancerprovision_page_title">
+    <value>Load Balancer Service Settings</value>
+  </data>
+  <data name="docconvloadbalancerprovision_page_description">
+    <value>Use this page to configure the settings for the Load Balancer Service for Document Conversions.</value>
+  </data>
+  <data name="docconvloadbalancerprovision_ss_title">
+    <value>Select Server</value>
+  </data>
+  <data name="docconvloadbalancerprovision_ss_description">
+    <value>Select the server on which to run the load balancer.</value>
+  </data>
+  <data name="docconvloadbalancerprovision_port_title">
+    <value>Port Number</value>
+  </data>
+  <data name="docconvloadbalancerprovision_port_description">
+    <value>Specify the port number the Load Balancer will use for communication.</value>
+  </data>
+  <data name="docconvloadbalancerprovision_port_label">
+    <value>Port Number:</value>
+  </data>
+  <data name="docconv_port_error">
+    <value>The port must be a number between 1 and 65,535.</value>
+  </data>
+  <data name="docconvloadbalancerprovision_scheme_title">
+    <value>Communication Scheme</value>
+  </data>
+  <data name="docconvloadbalancerprovision_scheme_description">
+    <value>Specify the scheme that the Load Balancer will use for communication. This should match the scheme in the configuration xml file for the load balancer service.</value>
+  </data>
+  <data name="docconvloadbalancerprovision_scheme_label">
+    <value>Scheme:</value>
+  </data>
+  <data name="ctdmsettings_error_readOnlyCT">
+    <value>The content type is read only.</value>
+  </data>
+  <data name="DM_Add">
+    <value>Add &gt;</value>
+  </data>
+  <data name="DM_Apply">
+    <value>Apply</value>
+  </data>
+  <data name="DM_ApplyButton_AccessKey">
+    <value>A</value>
+  </data>
+  <data name="DM_Cancel">
+    <value>Cancel</value>
+  </data>
+  <data name="DM_CancelButton_AccessKey">
+    <value>C</value>
+  </data>
+  <data name="DM_Remove">
+    <value>&lt; Remove</value>
+  </data>
+  <data name="DM_Yes">
+    <value>Yes</value>
+  </data>
+  <data name="DM_No">
+    <value>No</value>
+  </data>
+  <data name="DM_XlateWorkflow">
+    <value>Translation Management Workflow</value>
+  </data>
+  <data name="DM_XlateWorkflowDesc">
+    <value>The Translation Management workflow will create copies of a source document for each target language you specify. The workflow will then assign translation tasks to the appropriate translators.</value>
+  </data>
+  <data name="DM_XlateWorkflowAssoc">
+    <value>Add a Translation Management workflow to this document library?</value>
+  </data>
+  <data name="DM_XlateWorkflow_AssocTooltipYes">
+    <value>Add a Translation Management workflow to this library: Yes</value>
+  </data>
+  <data name="DM_XlateWorkflow_AssocTooltipNo">
+    <value>Add a Translation Management workflow to this library: No</value>
+  </data>
+  <data name="DocIdSettings_PageTitle">
+    <value>Document ID Settings</value>
+  </data>
+  <data name="DocIdSettings_PageTitleInTitleArea">
+    <value>Document ID Settings</value>
+  </data>
+  <data name="DocIdSettings_AssignIds_SectionHeader">
+    <value>Assign Document IDs</value>
+  </data>
+  <data name="DocIdSettings_AssignIds_SectionDescription">
+    <value>
+            Specify whether IDs will be automatically assigned to all documents in the Site Collection.
+            Additionally, you can specify a set of 4-12 characters that will be used at the beginning of all IDs assigned for documents in this Site Collection, to help ensure that items in different Site Collections will never get the same ID.
+            Note: A timer job will be scheduled to assign IDs to documents already in the Site Collection.
+        </value>
+  </data>
+  <data name="DocIdSettings_AssignIds_LabelText">
+    <value>Assign Document IDs</value>
+  </data>
+  <data name="DocIdSettings_ForceReassignIds_LabelText">
+    <value>Reset all Document IDs in this Site Collection to begin with these characters.</value>
+  </data>
+  <data name="DocIdSettings_ProvisioningInProgress">
+    <value>Configuration of the Document ID feature is scheduled to be completed by an automated process.</value>
+  </data>
+  <data name="DocIdSettings_AssignIds_SitePrefix_LabelText">
+    <value>Begin IDs with the following characters:</value>
+  </data>
+  <data name="DocIdSettings_AssignIds_SitePrefix_ValidationError" xml:space="preserve">
+        <value>The Document ID prefix must be 4 to 12 characters long, and contain only digits (0-9) and letters.</value>
+    </data>
+  <data name="DocIdSettings_AssignIds_SitePrefix_ValidationErrorEmpty" xml:space="preserve">
+        <value>Site prefix must not be empty.</value>
+    </data>
+  <data name="DocIdSettings_SearchScope_SectionHeader">
+    <value>Document ID Lookup Search Scope</value>
+  </data>
+  <data name="DocIdSettings_SearchScope_SectionDescription">
+    <value>Specify which search scope will be used to look up documents using their IDs.</value>
+  </data>
+  <data name="DocIdSettings_SearchScope_DropDownTitle">
+    <value>Use this search scope for ID lookup:</value>
+  </data>
+  <data name="DocIdSettings_SearchScope_DropDownName">
+    <value>Search Scope for Document ID lookup</value>
+  </data>
+  <data name="DocIdSettings_SearchScope_SearchDisabledWarning">
+    <value>Search is not configured in this site collection.</value>
+  </data>
+  <data name="DocIdSettings_Error_InvalidArguments">
+    <value>Invalid argument.</value>
+  </data>
+  <data name="DocIdSettings_Error_NotFound">
+    <value>No documents with the ID {0} were found in this site collection.</value>
+  </data>
+  <data name="DocIdSettings_Error_Lookup_Exception_Format_2">
+    <value><![CDATA[Could not look up Document ID "{0}" due to an error encountered in Microsoft Search Server.<br>{1}]]></value>
+  </data>
+  <data name="DocIdSettings_Error_Unexpected">
+    <value>Unexpected error.</value>
+  </data>
+  <data name="DocIdSettings_Error_NotEnabled">
+    <value>This Site Collection is not configured to use Document IDs.</value>
+  </data>
+  <data name="DocIdSettings_Warning_CustomProvider">
+    <value>A custom Document ID provider has been configured for this Site Collection. Refer to the documentation supplied with that custom provider to learn how to configure its settings.</value>
+  </data>
+  <data name="MyLinksRibbon_MySite">
+    <value>My Site</value>
+  </data>
+  <data name="DocSetHomepage_Title">
+    <value>Document Set</value>
+  </data>
+  <data name="DocSetNewPage_Title">
+    <value>New Document Set</value>
+  </data>
+  <data name="DocSetNew_CannotCreateInDropOffList">
+    <value>Unable to create a Document Set in this location because of the Content Organizer settings. Please contact your administrator.</value>
+  </data>
+  <data name="DocSetNew_CannotCreateByExternalRouter">
+    <value>Unable to create a Document Set because the Content Organizer is configured to send this Document Set to another Content Organizer. Please contact your administrator.</value>
+  </data>
+  <data name="CreateDocSetVersion_comments_description" xml:space="preserve">
+        <value>Type comments describing what has changed in this version.</value>
+    </data>
+  <data name="CreateDocSetVersion_comments_inputlabel" xml:space="preserve">
+        <value>Comments:</value>
+    </data>
+  <data name="CreateDocSetVersion_comments_title" xml:space="preserve">
+        <value>Comments</value>
+    </data>
+  <data name="CreateDocSetVersion_description_create" xml:space="preserve">
+        <value>Use this page to capture a version of this Document Set. The Document Set version will record the current properties of the Document Set, and the current version of each document in the Document Set.</value>
+    </data>
+  <data name="CreateDocSetVersion_exclaim_icon" xml:space="preserve">
+        <value>Important</value>
+    </data>
+  <data name="CreateDocSetVersion_okbutton_accesskey" xml:space="preserve">
+        <value>O</value>
+    </data>
+  <data name="CreateDocSetVersion_okbutton_text" xml:space="preserve">
+        <value>OK</value>
+    </data>
+  <data name="CreateDocSetVersion_title" xml:space="preserve">
+        <value>Capture Document Set Version</value>
+    </data>
+  <data name="CreateDocSetVersion_version_major" xml:space="preserve">
+        <value>Latest major versions only</value>
+    </data>
+  <data name="CreateDocSetVersion_version_minor" xml:space="preserve">
+        <value>Latest major or minor versions</value>
+    </data>
+  <data name="CreateDocSetVersion_versionoptions_description" xml:space="preserve">
+        <value>Specify whether this Document Set version should include only major versions of the items in the set or the latest minor versions.</value>
+    </data>
+  <data name="CreateDocSetVersion_versionoptions_title" xml:space="preserve">
+        <value>Version Options</value>
+    </data>
+  <data name="CreateDocSetVersion_versionoptions_type_label" xml:space="preserve">
+        <value>What versions of the items in the set would you like to include in this version?</value>
+    </data>
+  <data name="CreateDocSetVersion_warning_itemscheckedout_generic" xml:space="preserve">
+        <value>At least one item in the Document Set is currently checked out. This version will be created using only checked-in versions of items.</value>
+    </data>
+  <data name="MultPages_warning_versioningoff" xml:space="preserve">
+        <value>Versions are currently disabled for this document library.</value>
+    </data>
+  <data name="DocSetVersions_warning_noversionyet" xml:space="preserve">
+        <value>There are no versions of this Document Set. To capture a version, click "Capture Version" on the Document Set Welcome Page.	</value>
+    </data>
+  <data name="CreateDocSetVersion_warning_versionlimit" xml:space="preserve">
+        <value>This document library is configured to limit the number of versions to retain. Document versions referenced in the version you've created may be deleted later in accordance with the document library's versioning settings.</value>
+    </data>
+  <data name="CreateDocSetVersion_warning_itemscheckedout_list" xml:space="preserve">
+        <value>Items currently checked out:</value>
+    </data>
+  <data name="CreateDocSetVersion_error_notes_length_exceeded" xml:space="preserve">
+        <value>You have exceeded the maximum length allowed (1023) for version comments. Reduce the amount of text in the Comments field and try again.</value>
+    </data>
+  <data name="DocSetVersions_CommentsCol" xml:space="preserve">
+        <value>Comments</value>
+    </data>
+  <data name="DocSetVersions_ContentItem" xml:space="preserve">
+        <value>{0} (Version {1})</value>
+        
+    </data>
+  <data name="DocSetVersions_Contents" xml:space="preserve">
+        <value>Contents:</value>
+    </data>
+  <data name="DocSetVersions_CreatedByCol" xml:space="preserve">
+        <value>Created By</value>
+    </data>
+  <data name="DocSetVersions_CreatedDateCol" xml:space="preserve">
+        <value>Created Date</value>
+    </data>
+  <data name="DocSetVersions_DeleteAllVersions" xml:space="preserve">
+        <value>Delete All Previous Versions</value>
+    </data>
+  <data name="DocSetVersions_Intro" xml:space="preserve">
+        <value>All versions of this document set are listed below with the new value of any changed properties and links to the items in the set at the time the version was created.</value>
+    </data>
+  <data name="DocSetVersions_NumberCol" xml:space="preserve">
+        <value>No.</value>
+    </data>
+  <data name="DocSetVersions_NumberCol_title" xml:space="preserve">
+        <value>Version number</value>
+    </data>
+  <data name="DocSetVersions_Properties" xml:space="preserve">
+        <value>Properties:</value>
+    </data>
+  <data name="DocSetVersions_Title" xml:space="preserve">
+        <value>Version History</value>
+    </data>
+  <data name="DocSetVersions_VersionsSavedFor" xml:space="preserve">
+        <value>Versions saved for &lt;A HREF="{0}"&gt;{1}&lt;/A&gt;</value>
+        
+    </data>
+  <data name="DocSetVersions_Deletion_Confirmation" xml:space="preserve">
+        <value>Are you sure you want to delete this version of the Document Set? (Deleting the Document Set version does not delete the versions of the items in the Document Set.)</value>
+    </data>
+  <data name="DocSetVersions_ItemNotFound" xml:space="preserve">
+        <value>Item not found</value>
+    </data>
+  <data name="DocSetVersions_ECB_VersionDelete" xml:space="preserve">
+        <value>Delete Version</value>
+    </data>
+  <data name="DocSetVersions_ECB_VersionRestore" xml:space="preserve">
+        <value>Restore Version</value>
+    </data>
+  <data name="DocSetVersions_CommentsColSort" xml:space="preserve">
+        <value>Sort By Comments</value>
+    </data>
+  <data name="DocSetVersions_CreatedByColSort" xml:space="preserve">
+        <value>Sort By Created By</value>
+    </data>
+  <data name="DocSetVersions_CreatedDateColSort" xml:space="preserve">
+        <value>Sort By Created Date</value>
+    </data>
+  <data name="DocSetVersions_NumberColSort" xml:space="preserve">
+        <value>Version number</value>
+    </data>
+  <data name="DocSetVersions_Restore_Confirmation" xml:space="preserve">
+        <value>You are about to replace the current versions of all items with the versions specified in the selected Document Set version.</value>
+    </data>
+  <data name="DocSetVersions_SortAscending_Alt" xml:space="preserve">
+        <value>Sort Ascending</value>
+    </data>
+  <data name="DocSetVersions_SortDescending_Alt" xml:space="preserve">
+        <value>Sort Descending</value>
+    </data>
+  <data name="DocSetVersions_Error_NotRestoredListTitle" xml:space="preserve">
+        <value>The following items could not be restored when restoring this version of the document set:</value>
+    </data>
+  <data name="DocSetVersions_Error_NotRestoredListFooter" xml:space="preserve">
+        <value>The other items in this version were successfully restored.</value>
+    </data>
+  <data name="DocSetVersions_Error_RedirectText" xml:space="preserve">
+        <value>Return to Document Set Version History</value>
+    </data>
+  <data name="docsetsend_title" xml:space="preserve">
+        <value>Send to Other Location</value>
+    </data>
+  <data name="docsetsend_pickrc_title" xml:space="preserve">
+        <value>Send to Other Location</value>
+    </data>
+  <data name="docsetsend_pickrc_description" xml:space="preserve">
+        <value>Send the Document Set to another location that has been configured by your administrator.</value>
+    </data>
+  <data name="docsetsend_pickrc" xml:space="preserve">
+        <value>Location:</value>
+    </data>
+  <data name="docsetsend_selectRC" xml:space="preserve">
+        <value>Select the location to send to</value>
+    </data>
+  <data name="docsetsend_send" xml:space="preserve">
+        <value>Send</value>
+    </data>
+  <data name="docsetsend_success" xml:space="preserve">
+        <value>The Document Set was submitted successfully.&lt;br /&gt;It will be saved to its final location by a scheduled process.&lt;br /&gt;Once the Document Set has been moved to its final location you can access it here:&lt;br /&gt; {0}</value>
+        
+    </data>
+  <data name="docsetsettings_title" xml:space="preserve">
+        <value>Document Set Settings</value>
+    </data>
+  <data name="docsetsettings_allowedcontenttypes" xml:space="preserve">
+        <value>Allowed Content Types</value>
+    </data>
+  <data name="docsetsettings_allowedcontenttypes_description" xml:space="preserve">
+        <value>Select from the list of available site content types to add them to the Document Set.</value>
+    </data>
+  <data name="docsetsettings_contenttypesallowed" xml:space="preserve">
+        <value>Content types allowed in the Document Set:</value>
+    </data>
+  <data name="docsetsettings_defaultcontent_title" xml:space="preserve">
+        <value>Default Content</value>
+    </data>
+  <data name="docsetsettings_defaultcontent_description" xml:space="preserve">
+        <value>If you want new Document Sets created from this Content Type to include specific items, upload them here and specify their content type.</value>
+    </data>
+  <data name="docsetsettings_contentyype" xml:space="preserve">
+        <value>Content Type</value>
+    </data>
+  <data name="docsetsettings_filename" xml:space="preserve">
+        <value>File Name</value>
+    </data>
+  <data name="docsetsettings_delete" xml:space="preserve">
+        <value>Delete</value>
+    </data>
+  <data name="docsetsettings_addnewdoclink" xml:space="preserve">
+        <value>Add new default content ...</value>
+    </data>
+  <data name="docsetsettings_nonewdocs" xml:space="preserve">
+        <value>You can upload up to 10 items at a time. To upload additional items, commit the existing changes and return to this page later.</value>
+    </data>
+  <data name="docsetsettings_addsetname" xml:space="preserve">
+        <value>Add the name of the Document Set to each file name</value>
+    </data>
+  <data name="docsetsettings_sharedfields" xml:space="preserve">
+        <value>Shared Columns</value>
+    </data>
+  <data name="docsetsettings_sharedfields_description" xml:space="preserve">
+        <value>Select which column values for the Document Set should be automatically synchronized to all documents contained in the set.</value>
+    </data>
+  <data name="docsetsettings_synchronized" xml:space="preserve">
+        <value>Shared</value>
+    </data>
+  <data name="docsetsettings_columnname" xml:space="preserve">
+        <value>Column name</value>
+    </data>
+  <data name="docsetsettings_welcomepagecolumns" xml:space="preserve">
+        <value>Welcome Page Columns</value>
+    </data>
+  <data name="docsetsettings_welcomepagecolumns_description" xml:space="preserve">
+        <value>Select which columns to show on the welcome page for the Document Set.</value>
+    </data>
+  <data name="docsetsettings_welcomepagecolumns_available" xml:space="preserve">
+        <value>Available columns:</value>
+    </data>
+  <data name="docsetsettings_welcomepagecolumns_selected" xml:space="preserve">
+        <value>Columns shown on the welcome page:</value>
+    </data>
+  <data name="docsetsettings_welcomepageview" xml:space="preserve">
+        <value>Welcome Page View</value>
+    </data>
+  <data name="docsetsettings_welcomepageview_description" xml:space="preserve">
+        <value>Select the view used to display the contents of this Document Set on the welcome page.</value>
+    </data>
+  <data name="docsetsettings_welcomepageview_selectview" xml:space="preserve">
+        <value>Select View:</value>
+    </data>
+  <data name="docsetsettings_welcomepage" xml:space="preserve">
+        <value>Welcome Page</value>
+    </data>
+  <data name="docsetsettings_welcomepage_description" xml:space="preserve">
+        <value>You can customize the Welcome Page used for this Document Set, using either your browser to manipulate Web Parts on the Welcome Page, or SharePoint Designer to perform more advanced customizations. After completing your customizations, you can apply them to all child list and site content types using the option below on this page.</value>
+    </data>
+  <data name="docsetsettings_customizewelcomepage" xml:space="preserve">
+        <value>Customize the Welcome Page</value>
+    </data>
+  <data name="docsetsettings_customizewelcomepage_warning" xml:space="preserve">
+		<value>Welcome Page changes will not be available until you update all content types inheriting from this type.</value>
+    </data>
+  <data name="docsetsettings_customizewelcomepage_pushdown" xml:space="preserve">
+        <value>Update the Welcome Page of Document Sets inheriting from this content type.</value>
+    </data>
+  <data name="docsetsettings_duplicatedefaultdocs" xml:space="preserve">
+        <value>Each default document must have a unique name.</value>
+    </data>
+  <data name="docsetadddoc_title" xml:space="preserve">
+        <value>Add default content to a Document Set</value>
+    </data>
+  <data name="docsetadddoc_defaultcontent_title" xml:space="preserve">
+        <value>Add default content</value>
+    </data>
+  <data name="docsetadddoc_defaultcontent_description" xml:space="preserve">
+        <value>Upload documents that will be added by default to the Document Set created using this Content Type.</value>
+    </data>
+  <data name="docsetadddoc_contenttype" xml:space="preserve">
+        <value>Content Type:</value>
+    </data>
+  <data name="docsetadddoc_selectcontenttype" xml:space="preserve">
+        <value>Possible values</value>
+        
+    </data>
+  <data name="docsetadddoc_file" xml:space="preserve">
+        <value>File:</value>
+    </data>
+  <data name="docsetadddoc_add" xml:space="preserve">
+        <value>Add</value>
+    </data>
+  <data name="MDN_Tree_Label_Configure_Settings_Here">
+    <value>Location to configure</value>
+  </data>
+  <data name="MetaNavPerNode_DocsetBlocked">
+    <value>Per-location view settings can not be configured for Document Sets.  To configure settings for a Document Set, go to the settings page for the Document Set content type.</value>
+  </data>
+  <data name="MetaNavPerNode_PageTitle">
+    <value>Per-Location View Settings</value>
+  </data>
+  <data name="MetaNavPerNode_PageDescription">
+    <value>Use this page to configure the views available at the location selected in the tree below.</value>
+  </data>
+  <data name="MetaNavPerNode_InheritViewTitle">
+    <value>View Settings Inheritance</value>
+  </data>
+  <data name="MetaNavPerNode_InheritViewDescription">
+    <value>Specify whether this location inherits view settings from its parent location, or defines its own view settings.</value>
+  </data>
+  <data name="MetaNavPerNode_InheritViewQuestion">
+    <value>Inherit view settings from parent location?</value>
+  </data>
+  <data name="MetaNavPerNode_DefaultViewTitle">
+    <value>Default View</value>
+  </data>
+  <data name="MetaNavPerNode_DefaultViewDescription">
+    <value>Select the default view that should be used when a user navigates to this location.</value>
+  </data>
+  <data name="MetaNavPerNode_DefaultViewLabel">
+    <value>Default view for this location:</value>
+  </data>
+  <data name="MetaNavPerNode_AvailableViewsTitle">
+    <value>Available Views</value>
+  </data>
+  <data name="MetaNavPerNode_AvailableViewsDescription">
+    <value>Specify the views that are available at this location. Views available at this location will also be available in locations that inherit view settings from it. The first view listed will be the default view when navigating to that location.</value>
+  </data>
+  <data name="MetaNavPerNode_AvailableViewsLabel">
+    <value>Views hidden from this location</value>
+  </data>
+  <data name="MetaNavPerNode_SelectedViewsLabel">
+    <value>Views available at this location</value>
+  </data>
+  <data name="MetaNavPerNode_ViewActions">
+    <value>Actions:</value>
+  </data>
+  <data name="MetaNavPerNode_DefaultSuffix" xml:space="preserve">
+       <value> (Default)</value>
+    </data>
+  <data name="MetaNavPerNode_SetAsDefault_Format">
+    <value><![CDATA[Make "{0}" the default view at this location.]]></value>
+  </data>
+  <data name="MetaNavPerNode_AddToAllLocations_Format">
+    <value><![CDATA[Add "{0}" to all locations in this library.]]></value>
+  </data>
+  <data name="MetaNavPerNode_AddToAllLocationsPrompt_Format">
+    <value><![CDATA[Add the view "{0}" to all locations?]]></value>
+  </data>
+  <data name="MetaNavPerNode_Error_Parameter_Format">
+    <value>Invalid parameter: {0}</value>
+  </data>
+  <data name="MetaNavPerNode_Error_NoViewsAvailable">
+    <value>Please make at least one view available</value>
+  </data>
+  <data name="MetaNavPerNode_Error_UnsupportedList">
+    <value>Configuring Per-Location View Settings on this library type is not supported</value>
+  </data>
+  <data name="MetaNavSettings_PageTitle">
+    <value>Metadata Navigation Settings</value>
+  </data>
+  <data name="MetaNavSettings_PageDescription">
+    <value>Use this page to configure metadata navigation hierarchies and key filter input controls.</value>
+  </data>
+  <data name="MetaNavSettings_VirtualListError">
+    <value>This feature is not supported for external lists.</value>
+  </data>
+  <data name="MetaNavSettings_FolderFieldDescription">
+    <value>Display the folder hierarchy in the tree.</value>
+  </data>
+  <data name="MetaNavSettings_NoFieldDescription">
+    <value>No Description</value>
+  </data>
+  <data name="MetaNavSettings_IndexAutoManagementTitle">
+    <value>Configure automatic column indexing for this list</value>
+  </data>
+  <data name="MetaNavSettings_IndexAutoManagementDescription">
+    <value>Specify whether to automatically create indices on this list that will increase the performance of queries using the Navigation Hierarchy and Key Filter columns specified above.</value>
+  </data>
+  <data name="MetaNavSettings_IndexAutoManagement_Yes">
+    <value>Automatically manage column indices on this list.</value>
+  </data>
+  <data name="MetaNavSettings_IndexAutoManagement_No">
+    <value>Do not modify column indices on this list.</value>
+  </data>
+  <data name="MetaNavSettings_IndexAutoManagement_LongOperationMessage">
+    <value>Please wait while your list column indexing is being modified...</value>
+  </data>
+  <data name="MetaNavSettings_IndexAutoManagement_GotToIndexColsMessage">
+    <value>You can view the current list indexing configuration at this link: </value>
+  </data>
+  <data name="MetaNavSettings_IndexAutoManagement_GotToIndexColsLinkText">
+    <value>Indexed Columns</value>
+  </data>
+  <data name="MetaNavSettings_LargeListContext_AutoIndexValidationMessage">
+    <value>Remove the option to automatically manage column indexing in order to save these settings. Indexing operations are not allowed because this list is large.  Contact your administrator for permissions or a service window to perform this operation.</value>
+  </data>
+  <data name="MetaNavSettings_LargeListContext_TooManyIndicesValidationMessage">
+    <value>There are not enough available index slots on this list to automatically create indexes for your chosen fields.  Either choose fewer fields or remove the option to automatically manage column indexing.</value>
+  </data>
+  <data name="MetaNavSettings_HierarchyFieldsSectionDescription">
+    <value>Select from the list of available fields to use them as navigation hierarchies for this list.  Selected fields will appear under this list in the Site Hierarchy tree view.  You can expand these fields and select one of their values to filter your current view to show only items matching that value.&lt;br&gt;&lt;br&gt;Fields that are available for use as navigation hierarchies include columns on this list that are one of the following types:&lt;br&gt; - Content Type&lt;br&gt; - Single-value Choice Field&lt;br&gt; - Managed Metadata Field</value>
+  </data>
+  <data name="MetaNavSettings_HierarchyFieldsSectionTitle">
+    <value>Configure Navigation Hierarchies</value>
+  </data>
+  <data name="MetaNavSettings_AvailableHierarchyFieldsLabel">
+    <value>Available Hierarchy Fields:</value>
+  </data>
+  <data name="MetaNavSettings_SelectedHierarchyFieldsLabel">
+    <value>Selected Hierarchy Fields:</value>
+  </data>
+  <data name="MetaNavSettings_KeyFilterFieldsSectionDescription">
+    <value>Select from the list of available fields to use them as key filters for this list.  Selected fields will appear underneath the Site Hierarchy tree when viewing items in this list.  You can use these fields to filter your current view to show only items matching that value.&lt;br&gt;&lt;br&gt;Fields that are available for use as navigation hierarchies include columns on this list that are one of the following types:&lt;br&gt; - Content Type&lt;br&gt; - Choice Field&lt;br&gt; - Managed Metadata Field&lt;br&gt; - Person or Group Field&lt;br&gt; - Date and Time Field&lt;br&gt; - Number Field</value>
+  </data>
+  <data name="MetaNavSettings_KeyFilterFieldsSectionTitle">
+    <value>Configure Key Filters</value>
+  </data>
+  <data name="MetaNavSettings_AvailableKeyFilterFieldsLabel">
+    <value>Available Key Filter Fields:</value>
+  </data>
+  <data name="MetaNavSettings_SelectedKeyFilterFieldsLabel">
+    <value>Selected Key Filter Fields:</value>
+  </data>
+  <data name="MetadataNav_KeyFiltersControl_ControlHeading">
+    <value>Key Filters</value>
+  </data>
+  <data name="MetadataNav_KeyFiltersControl_ApplyButton">
+    <value>Apply</value>
+  </data>
+  <data name="MetadataNav_KeyFiltersControl_ClearButton">
+    <value>Clear</value>
+  </data>
+  <data name="GetSpotlight_Error_InvalidArguments">
+    <value>Invalid argument.</value>
+  </data>
+  <data name="GetSpotlight_Error_Unexpected">
+    <value>Unexpected error.</value>
+  </data>
+  <data name="columndefaults_page_title">
+    <value>Change Default Column Values</value>
+  </data>
+  <data name="columndefaults_page_description">
+    <value>Use this page to change the default column values for documents added to this folder.</value>
+  </data>
+  <data name="columndefaults_heading_column">
+    <value>Column (click to edit default value)</value>
+  </data>
+  <data name="columndefaults_heading_type">
+    <value>Type</value>
+  </data>
+  <data name="columndefaults_heading_default">
+    <value>Default Value</value>
+  </data>
+  <data name="columndefaults_heading_source">
+    <value>Source of Default Value</value>
+  </data>
+  <data name="columndefaults_heading_usedin">
+    <value>Used In</value>
+  </data>
+  <data name="columndefaults_page_readonly">
+    <value>{0} (Read-only)</value>
+  </data>
+  <data name="columndefaults_page_sealed">
+    <value>{0} (Sealed)</value>
+  </data>
+  <data name="columndefaults_page_foldernotfound">
+    <value>Invalid folder id {0}</value>
+  </data>
+  <data name="columndefaults_table_doclib">
+    <value>Document Library</value>
+  </data>
+  <data name="columndefaults_table_thisfolder">
+    <value>This folder</value>
+  </data>
+  <data name="columndefaults_page_breadcrumb">
+    <value>Default values</value>
+  </data>
+  <data name="columndefaults_page_nofields">
+    <value>This library does not contain any columns whose default values can be changed. To create a new column, go to the the Library Settings page.</value>
+  </data>
+  <data name="columndefaults_table_invalidfieldvalue">
+    <value>Current value invalid</value>
+  </data>
+  <data name="flddefedit_page_title">
+    <value>{0} : Edit Default Value</value>
+  </data>
+  <data name="flddefedit_page_Sectiontitle">
+    <value>Default Value</value>
+  </data>
+  <data name="flddefedit_page_sectiondescription">
+    <value>Specify whether you want to apply a default value for this column to items added in this location.</value>
+  </data>
+  <data name="columndefault_page_sectiondescription">
+    <value>Specify whether you want to apply a default value for this column to items added in this location.</value>
+  </data>
+  <data name="columndefaults_page_notdoclib">
+    <value>Configuring column based defaults is only allowed in Document Library lists.</value>
+  </data>
+  <data name="columndefaults_page_docsetblocked">
+    <value>Column default values can not be configured for Document Sets. To configure the settings for a {0}, go to the settings page for the {0} content type.</value>
+  </data>
+  <data name="flddefedit_page_nodefault">
+    <value>Do not specify a default value for this location</value>
+  </data>
+  <data name="flddefedit_page_usedefault">
+    <value>Use this default value:</value>
+  </data>
+  <data name="flddefedit_page_alerttaxonomy">
+    <value>The default value for a Taxonomy column must be chosen from the specified choices. Please try again.</value>
+  </data>
+  <data name="flddefedit_page_undermin">
+    <value>Please enter a valid default value.  It must not be less than {0}.</value>
+  </data>
+  <data name="flddefedit_page_overmax">
+    <value>Please enter a valid default value.  It must not be greater than {0}.</value>
+  </data>
+  <data name="flddefedit_page_blankdefault">
+    <value>Please enter a valid default value.  It must not be blank.</value>
+  </data>
+</root>

@@ -1,0 +1,752 @@
+body {
+	color: #606060;
+	background-color: white;
+	font-size: 74%;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5em;
+	font-family: sans-serif;
+}
+#hr {
+	margin: 0px;
+	padding: 0px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #9dc8ef;
+	height: 1px;
+}
+body a:visited {
+	color: #7A92AD;
+}
+
+#featurequeston {
+	font-size: 1em;
+	font-weight: bold;
+	color: #000000;
+	margin-bottom: 0.4em;
+	margin-top: 0.6em;
+}
+
+
+#features {
+	color: #606060;
+	line-height: 1.4em;
+}
+
+.link_header {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #5c6065;
+}
+#mainnav {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	font-size: 1em;
+	color: #0099CC;
+}
+#mainnavbottom {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	font-size: 1em;
+	color: #990000;
+}
+#mainnavbottom a {
+	font-size: 1em;
+	color: #0099CC;
+	text-decoration: none;
+	list-style-type: none;
+	padding-top: 1.1em;
+	padding-bottom: 1em;
+	padding-left: 8%;
+	display: block;
+	width: 14em;
+	background-color: #FFFFFF;
+	border-top-width: 1px;
+	border-top-style: dashed;
+	border-top-color: #9dc8ef;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #b83423;
+}
+#mainnavbottom a:hover {
+	font-weight: normal;
+	background-color: #edf2f8;
+	color: #b83423;
+}
+#mainnavbottom a:visited {
+	color: #7A92AD;
+}
+#mainnavheader {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	font-size: 1em;
+	color: #575757;
+}
+#mainnavheader a {
+	font-size: 1em;
+	color: #575757;
+	text-decoration: none;
+	list-style-type: none;
+	padding-top: 1.1em;
+	padding-bottom: 1em;
+	padding-left: 8%;
+	display: block;
+	width: 14em;
+	font-weight: bold;
+}
+
+#mainnav a {
+	font-size: 1em;
+	color: #0099CC;
+	text-decoration: none;
+	list-style-type: none;
+	padding-left: 8%;
+	display: block;
+	width: 14em;
+	background-color: #FFFFFF;
+	border-top-width: 1px;
+	border-top-style: dashed;
+	border-top-color: #9dc8ef;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	margin: 0px;
+}
+#mainnav a:hover {
+	font-weight: normal;
+	background-color: #edf2f8;
+	color: #b83423;
+}
+#mainnav a:visited {
+	color: #7A92AD;
+}
+
+
+
+.bodycopy_indent {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	line-height: 130%;
+	color: #363535;
+	text-indent: 6px;
+}
+
+.link_body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #355c8e;
+}
+.bodycopy {
+	font-size: 74%;
+	color: #6b6b6b;
+	line-height: 130%;
+	font-family: sans-serif;
+}
+.bodycopysmall {
+	font-family: sans-serif;
+	font-size: 70%;
+	color: #6b6b6b;
+}
+
+.questions {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 70%;
+	line-height: 130%;
+	color: #363535;
+	padding-bottom: 8px;
+}
+
+.body_anchor {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 70%;
+	color: #0066CC;
+	line-height: 140%;
+}
+.bodycopy_big {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 70%;
+	color: #444444;
+	line-height: 140%;
+}
+
+
+.bodycopy a:link{
+	text-decoration:none;
+	color: #235BA0;
+}
+.bodycopy a:hover{
+	text-decoration:none;
+	color: #b83423;
+}
+.bodycopy a:visited, .breadcrumb a:active{
+	color: #5C6996;
+}
+.pageheader {
+	font-size: 1.3em;
+	color: #4580c7;
+	padding-bottom: 10px;
+	padding-top: 6px;
+}
+.subhead {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #3E3C3C;
+	font-size: 65%;
+	font-weight: bold;
+	padding-bottom: 0px;
+}
+.pagebreak {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	line-height: 0px;
+}
+
+
+.newslink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #4a81c7;
+}
+.breadcrumb {
+	font-size: 0.9em;
+	color: #575757;
+}
+.breadcrumb a:link{
+	text-decoration: none;
+	color: #8e8e90;
+}
+.breadcrumb a:hover{
+	text-decoration: none;
+	color: #b83423;
+}
+.breadcrumb a:visited{
+	color: #8e8e90;
+}
+.navi {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #355c8e;
+}
+.navi a:link{
+	text-decoration: none;
+	color: #355c8e;
+}
+.navi a:hover{
+	text-decoration: none;
+	color: #b83423;
+	background-color: #efefef;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #efefef;
+	border-right-color: #efefef;
+	border-bottom-color: #efefef;
+	width: 100%;
+	float: right;
+}
+.navi a:visited{
+	color: #64768e;
+}
+.body_form {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 70%;
+	line-height: 14px;
+	color: #363535;
+}
+.selection {
+	font-size: 0.9em;
+	color: #000000;
+}
+#listbox {
+}
+
+.formfield {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #363535;
+}
+.fineprint {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	color: #363535;
+}
+
+.body_fixed {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 17px;
+	color: #363535;
+}
+
+.bodycopy_bold {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 65%;
+	font-weight: bold;
+	color: #363535;
+}
+#inputs {
+	text-decoration: none;
+	margin: 0px;
+	padding: 0px;
+}
+#listbox {
+	color: #000000;
+	font-size: 0.9em;
+}
+h5 {
+	font-size: 10px;
+	color: #027ac6;
+	text-decoration: none;
+	padding: 0px;
+	margin-bottom: 0.9em;
+}
+a:link {
+	color: #027ac6;
+	text-decoration: none;
+}
+a:hover {
+	color: #b83423;
+	text-decoration: none;
+}
+p {
+	color: #606060;
+	padding: 0em;
+	margin-bottom: 1em;
+	margin-top: 0.4em;
+}
+a {
+	margin: 0px;
+	padding: 0px;
+}
+h4 {
+	color: #606060;
+	padding: 0px;
+	margin-top: 0.3em;
+	font-weight: normal;
+	font-size: 0.9em;
+	line-height: 1.4em;
+}
+
+
+
+
+#siteinfo {
+	margin: 0px;
+	color: #575757;
+	line-height: 1.3em;
+	font-size: 0.9em;
+	text-decoration: none;
+	padding: 0px;
+}
+#siteinfo a {
+	margin: 0px;
+	text-decoration: none;
+	color: #606060;
+	display: inline;
+	padding: 0px;
+}
+#siteinfo a:hover {
+	color: #b83423;
+}
+#sitefino a:visited {
+	color: #7A92AD;
+}
+
+
+
+ul {
+	list-style-type: none;
+}
+#aspbutton {
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	height: 0px;
+	width: 0px;
+}
+
+.nav {
+	color: #575757;
+	line-height: 2.5em;
+	margin: 0px;
+	list-style-type: none;
+	font-size: 1em;
+	font-weight: bold;
+	padding-top: 0px;
+	padding-left: 0.7em;
+}
+#navleftbar {
+	
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.nav a {
+	display: block;
+	width: 16em;
+	font-weight: normal;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	line-height: 3em;
+	text-decoration: none;
+	color: #1783c7;
+}
+
+.nav hover {
+	color: #b83423;
+	background-color: #FFCC00;
+}
+
+
+.navheader {
+	font-size: 1em;
+	font-weight: bold;
+	color: #666666;
+	list-style-type: none;
+	margin: 0px;
+	padding-top: 1em;
+	padding-right: 0px;
+	padding-bottom: 0.5em;
+	padding-left: 0px;
+}
+ul.nav li {
+	disply:inline;
+	background-color: #999933;
+	width: 16em;
+}
+#dotback {
+	background-image: url(../../images/freighteasy/images/dotback.gif);
+	background-repeat: repeat-x;
+}
+#logo {
+	background-image: url(../../images/freighteasy/images/company_logo.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+#infospace {
+	background-color: #edf2f8;
+	height: 20em;
+}
+h1 {
+	font-size: 1.3em;
+	color: #1783c7;
+	font-weight: normal;
+}
+ul#highlight {
+	list-style-type: none;
+	list-style-image: url(../../images/freighteasy/images/bullet_feature.gif);
+	display: block;
+	margin-top: 0.7em;
+	font-size: 0.9em;
+	line-height: 1.4em;
+	color: #606060;
+}
+* html #mainvav a{
+	height:1px;
+}
+#iframeht {
+	width: 100%;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #d6d5d8;
+}
+#loginbottom {
+	background-image: url(../../images/freighteasy/images/loginbottomback.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	min-height: 65px;
+}
+
+#loginback {
+	background-image: url(../../images/freighteasy/images/logintitleback.gif);
+	background-repeat: repeat-x;
+	height: 4em;
+	background-position: left top;
+	margin: 0px;
+	padding: 0px;
+}
+#logtitleback {
+	background-image: url(../../images/freighteasy/images/logintitleback.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	padding-top: 10px;
+}
+
+#infogroup, #infogroupright {
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	height: 20em;
+	min-height: 20em;
+}
+#tablineback {
+	background-image: url(../../images/freighteasy/images/tablineback.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	
+}
+ul.tabnav li {
+	display: inline;
+	float: left;
+}
+
+
+#tabbody {
+	margin: 0px;
+	padding-top: 2.4em;
+}
+.psmall {
+	font-size: 1em;
+	color: #403f46;
+	line-height: 2.2em;
+	margin: 0px;
+	padding: 0px;
+	font-weight: bold;
+}
+.buttonlink {
+	margin: 0px;
+	padding-top: 1.3em;
+}
+
+.psmall li {
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #e0e0e0;
+}
+.psmallbottom {
+	font-size: 1em;
+	color: #403f46;
+	line-height: 1.5em;
+	margin: 0px;
+	padding: 0px;
+	font-weight: bold;
+}
+.psmallbottom li {
+}
+#tabbodyleft {
+	float: left;
+	width: 31%;
+}
+#tabbodyright {
+	width: 65%;
+	margin-left: 32%;
+	padding-bottom: 2em;
+}
+#newsleft {
+	float: left;
+	width: 16%;
+}
+#newsright {
+	width: 80%;
+	margin-left: 17%;
+	padding-bottom: 2em;
+}
+#advantageleft {
+	float: left;
+	width: 26%;
+}
+#advantageright {
+	width: 68%;
+	margin-left: 27%;
+	padding-bottom: 1em;
+}
+h2 {
+	font-size: 1em;
+	color: #618cbc;
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0.7em;
+	padding-left: 0px;
+	font-weight: bold;
+}
+.psmallsub {
+	font-size: 0.9em;
+	font-weight: normal;
+	color: #999999;
+	margin: 0px;
+	line-height: 1.9em;
+	padding-bottom: 8px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+#bottomspacer {
+	height: 2em;
+}
+
+#devider {
+	height: 1px;
+	width: 100%;
+	margin: 0px;
+	padding-bottom: 6px;
+	border-top-width: 1px;
+	border-top-style: dashed;
+	border-top-color: #e0e0e0;
+}
+
+.psmallsub li {
+}
+
+
+
+
+#tabgroup {
+}
+#tabnavwrap {
+	width: 100%;
+}
+#tabwrap {
+	height: 20em;
+}
+
+
+
+#infogroupright {
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #CCCBCF;
+	background-image: url(../../Images/FreightEasy/images/loginrightback.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+#tabnav li {
+	display: inline;
+	float: left;
+	width: 9em;
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-left-style: solid;
+	border-top-color: #aeaeae;
+	border-left-color: #aeaeae;
+	height: 1.9em;
+	text-align: center;
+	margin: 0px;
+	background-color: #FFFFFF;
+	padding-top: 0.3em;
+}
+
+
+
+#infogroup {
+	background-image: url(../../Images/FreightEasy/images/loginbottomback.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+#T1 {
+	height: 25px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #aeaeae;
+	border-right-color: #aeaeae;
+	border-bottom-color: #aeaeae;
+	border-left-color: #aeaeae;
+	background-image: url(../../Images/FreightEasy/images/tabnavback.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	margin: 0px;
+	font-size: 12px;
+	color: #000000;
+	text-align: center;
+}
+#T2 {
+	height: 25px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #aeaeae;
+	border-right-color: #aeaeae;
+	border-bottom-color: #aeaeae;
+	border-left-color: #aeaeae;
+	background-image: url(../../Images/FreightEasy/images/tabnavback_line.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	margin: 0px;
+	font-size: 12px;
+	color: #000000;
+	text-align: center;
+}
+#T3 {
+	height: 25px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #aeaeae;
+	border-right-color: #aeaeae;
+	border-bottom-color: #aeaeae;
+	border-left-color: #aeaeae;
+	background-image: url(../../Images/FreightEasy/images/tabnavback_line.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	margin: 0px;
+	font-size: 12px;
+	color: #000000;
+	text-align: center;
+}
+#T4 {
+	height: 25px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #aeaeae;
+	border-right-color: #aeaeae;
+	border-bottom-color: #aeaeae;
+	border-left-color: #aeaeae;
+	background-image: url(../../images/freighteasy/images/tabnavback_line.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	margin: 0px;
+	font-size: 12px;
+	color: #000000;
+	text-align: center;
+}
+#T1 a:hover {
+	text-decoration: none;
+}
+#T2 a:hover {
+	text-decoration: none;
+}
+#T3 a:hover {
+	text-decoration: none;
+}
+#T4 a:hover {
+	text-decoration: none;
+}
+#T1 a {
+	color: #000000;
+}
+#T2 a {
+	color: #000000;
+}
+#T3 a {
+	color: #000000;
+}
+#T4 a {
+	color: #000000;
+}
+.headline {
+	padding-top: 1em;
+	color: #000000;
+}
+.questions {
+	font-weight: bold;
+	color: #000000;
+}
+.scenario {
+	font-style: normal;
+	color: #775100;
+}
+#advangage {
+	padding-top: 1.5em;
+}
+#pagetitle {
+	font-size: 18px;
+	font-weight: lighter;
+	color: #000000;
+	height: 37px;
+	text-align: left;
+	vertical-align: bottom;
+	padding-top: 0px;
+	line-height: 37px;
+}

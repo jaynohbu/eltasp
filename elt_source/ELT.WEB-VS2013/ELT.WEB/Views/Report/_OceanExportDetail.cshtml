@@ -1,0 +1,75 @@
+﻿@model ELT.WEB.Models.OceanReportDetailModel
+@Html.DevExpress().GridView(settings => {
+
+    settings.Name = "detailGrid_" + Model.Key.Replace(' ', '_');
+    settings.SettingsDetail.MasterGridName = "grid";
+    settings.CallbackRouteValues = new { Controller = "Report", Action = "OceanExportDetail", KeyFieldName = Model.KeyFieldName, Key = Model.Key };
+    settings.Width = Unit.Percentage(100);
+    settings.KeyFieldName = Model.KeyFieldName;
+
+
+    settings.Columns.Add("FileNo", "File#");
+    
+    var column = settings.Columns.Add("Master", "MBOL#", MVCxGridViewColumnType.HyperLink);
+    HyperLinkProperties properties = column.PropertiesEdit as HyperLinkProperties;
+    String urlFormatString = Url.Action("MAWB", "OceanExport", new RouteValueDictionary(new { param = HttpUtility.UrlEncode("edit=yes&") + "MBOL={0}" }));
+    properties.NavigateUrlFormatString = HttpUtility.UrlDecode(urlFormatString);
+
+    var column2 = settings.Columns.Add("House", "HBOL#", MVCxGridViewColumnType.HyperLink);
+    HyperLinkProperties properties2 = column2.PropertiesEdit as HyperLinkProperties;
+    String urlFormatString2 
+        = Url.Action("HBOL", "OceanExport", 
+                new RouteValueDictionary(
+                    new { edit = "yes", HBOL="{0}" }
+                )
+        );
+    properties2.NavigateUrlFormatString = HttpUtility.UrlDecode(urlFormatString2);
+    
+
+    settings.Columns.Add("Shipper");
+    settings.Columns.Add("Consignee");
+    settings.Columns.Add("Agent");
+    settings.Columns.Add("Carrier");
+    settings.Columns.Add("Origin");
+    settings.Columns.Add("Destination");
+
+    settings.Columns.Add("Date","ETD");
+    settings.Columns.Add("Sale_Rep","Sales Rep.");
+    settings.Columns.Add("Processed_By","Processed By");
+
+
+    settings.Columns.Add(c =>
+    {
+        c.FieldName = "Quantity";
+        c.Caption = "";
+        ((MVCxGridViewColumn)c).CellStyle.CssClass = "numeric";
+    });
+
+    settings.Columns.Add(c =>
+    {
+        c.FieldName = "Gros_Wt";
+        c.Caption = "Gros Wt.";
+        ((MVCxGridViewColumn)c).CellStyle.CssClass = "numeric";
+    });
+
+    settings.Columns.Add(c =>
+    {
+        c.FieldName = "Measurement";
+        c.Caption = "Measurement (CBM)";
+        ((MVCxGridViewColumn)c).CellStyle.CssClass = "numeric";
+    });
+
+    settings.Columns.Add(c =>
+    {
+        c.FieldName = "Freight_Charge";
+        c.Caption = "Freight Charge";
+        ((MVCxGridViewColumn)c).CellStyle.CssClass = "numeric";
+    });
+
+    settings.Columns.Add(c =>
+    {
+        c.FieldName = "Other_Charge";
+        c.Caption ="Other Charge";
+        ((MVCxGridViewColumn)c).CellStyle.CssClass = "numeric";
+    });
+  }).Bind(Model.Elements).GetHtml()

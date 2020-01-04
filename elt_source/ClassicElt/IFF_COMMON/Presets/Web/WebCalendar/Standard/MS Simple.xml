@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="MS Simple" PresetDescription="Infragistics MS Simple Look" PresetType="Appearance" />-->
+<igsch:WebCalendar >
+  <Layout DayNameFormat="FirstLetter" ShowYearDropDown="False" ShowMonthDropDown="False" ShowFooter="False">
+    <SelectedDayStyle ForeColor="White" BackColor="#666666" />
+    <OtherMonthDayStyle ForeColor="Gray" />
+    <NextPrevStyle Font-Bold="True" />
+    <CalendarStyle BorderWidth="1px" Font-Size="8pt" Font-Names="Verdana" BorderColor="#999999" BorderStyle="Solid" ForeColor="Black" BackColor="White" />
+    <WeekendDayStyle BackColor="#FFFFCC" />
+    <TodayDayStyle BackColor="#CCCCCC" />
+    <DayHeaderStyle Font-Size="7pt" Font-Bold="True" BackColor="#CCCCCC" />
+    <TitleStyle Height="24px" Font-Bold="True" BackColor="#999999" />
+  </Layout>
+</igsch:WebCalendar>

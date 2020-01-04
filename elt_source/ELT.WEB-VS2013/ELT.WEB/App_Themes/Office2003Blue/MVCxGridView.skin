@@ -1,0 +1,23 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxwgv" Namespace="DevExpress.Web.ASPxGridView" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxmvc:MVCxGridView runat="server"
+	CssFilePath="~/App_Themes/Office2003Blue/{0}/styles.css" CssPostfix="Office2003Blue">
+	<Images SpriteCssFilePath="~/App_Themes/Office2003Blue/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/Office2003Blue/GridView/Loading.gif"></LoadingPanel>
+        <LoadingPanelOnStatusBar Url="~/App_Themes/Office2003Blue/GridView/gvLoadingOnStatusBar.gif"></LoadingPanelOnStatusBar>
+	</Images>	
+    <ImagesFilterControl>
+        <LoadingPanel Url="~/App_Themes/Office2003Blue/Editors/Loading.gif"></LoadingPanel>
+    </ImagesFilterControl>
+    <Styles>
+        <Header SortingImageSpacing="5"></Header>
+	<LoadingPanel ImageSpacing="10px" />
+    </Styles>	
+    <StylesEditors>
+        <ProgressBar Height="25px">
+        </ProgressBar>
+    </StylesEditors>
+</dxmvc:MVCxGridView>
+

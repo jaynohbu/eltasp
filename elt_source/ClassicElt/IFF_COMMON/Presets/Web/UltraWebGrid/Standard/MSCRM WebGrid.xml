@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="MSCRM WebGrid" PresetDescription="Infragistics MSCRM Look. Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<igtbl:UltraWebGrid >
+  <DisplayLayout Section508Complaint="False" ColWidthDefault="" AllowSortingDefault="OnClient" RowHeightDefault="20px" Version="3.00" GridLinesDefault="Horizontal" SelectTypeRowDefault="Extended"  HeaderClickActionDefault="SortSingle" BorderCollapseDefault="Separate" AllowColSizingDefault="Free" CellPaddingDefault="4" RowSelectorsDefault="No" Name="UltraWebGrid1" TableLayout="Fixed" CellClickActionDefault="RowSelect">
+    <AddNewBox>
+      <Style BorderWidth="1px" BorderStyle="Solid" BackColor="LightGray">
+        <BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White" />
+      </Style>
+      <ButtonStyle />
+    </AddNewBox>
+    <Pager PageSize="20" AllowPaging="True">
+      <Style BorderWidth="1px" BorderStyle="Solid" BackColor="LightGray">
+        <BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White" />
+      </Style>
+    </Pager>
+    <HeaderStyleDefault BorderStyle="Solid" BackColor="#E9E7D7">
+      <BorderDetails ColorTop="LightGray" WidthLeft="1px" StyleBottom="Solid" ColorBottom="DarkGray" WidthTop="1px" StyleTop="Outset" WidthBottom="2px" ColorLeft="White" />
+    </HeaderStyleDefault>
+    <GroupByRowStyleDefault />
+    <RowSelectorStyleDefault />
+    <FrameStyle BorderWidth="1px" Font-Size="8pt" Font-Names="Verdana" BorderStyle="Solid"  />
+    <FooterStyleDefault BorderWidth="1px" BorderStyle="Solid" BackColor="LightGray">
+      <BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White" />
+    </FooterStyleDefault>
+    <ActivationObject BorderStyle="Dotted">
+      <BorderDetails />
+    </ActivationObject>
+    <GroupByBox>
+      <Style />
+      <BandLabelStyle />
+    </GroupByBox>
+    <RowExpAreaStyleDefault />
+    <SelectedHeaderStyleDefault />
+    <EditCellStyleDefault BorderWidth="0px" BorderStyle="None" />
+    <SelectedGroupByRowStyleDefault />
+    <SelectedRowStyleDefault BackColor="#CAD3E4">
+      <BorderDetails WidthLeft="0px" StyleBottom="Solid" ColorBottom="Black" WidthTop="0px" WidthRight="0px" StyleTop="None" StyleRight="None" WidthBottom="1px" StyleLeft="None" />
+    </SelectedRowStyleDefault>
+    <RowAlternateStyleDefault />
+    <RowStyleDefault BorderWidth="1px" BorderColor="Gray" BorderStyle="Solid">
+      <Padding Left="3px" />
+      <BorderDetails WidthLeft="0px" WidthTop="0px" />
+    </RowStyleDefault>
+    <ImageUrls ExpandImage="ig_tblcrm_rowarrow_right.gif" CollapseImage="ig_tblcrm_rowarrow_down.gif" />
+    <Strings />
+  </DisplayLayout>
+  <Rows />
+  <Bands>
+    <igtbl:UltraGridBand >
+      <RowExpandEffects />
+      <SelectedHeaderStyle />
+      <RowExpAreaStyle />
+      <HeaderStyle />
+      <GroupByRowStyle />
+      <EditCellStyle />
+      <RowAlternateStyle />
+      <Columns />
+      <RowTemplateStyle />
+      <RowStyle />
+      <FooterStyle />
+      <SelectedRowStyle BackColor="#CAD3E4" />
+      <SelectedGroupByRowStyle />
+      <RowSelectorStyle />
+      <RowEditTemplate />
+    </igtbl:UltraGridBand>
+  </Bands>
+</igtbl:UltraWebGrid>

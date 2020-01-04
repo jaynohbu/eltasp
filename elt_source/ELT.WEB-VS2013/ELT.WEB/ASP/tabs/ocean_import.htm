@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>ELT-Ocean Import</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+var currentTabIndex=-1;
+
+var tabCount=7;// change when the # of tabs differnt 
+var TabImgsOff=new Array();
+
+TabImgsOff[0]='../images/oi_sr.gif';//change the names of off-state img src
+TabImgsOff[1]='../images/oi_ds.gif';
+TabImgsOff[2]='../images/oi_pd.gif' ;
+TabImgsOff[3]='../images/oi_ean.gif';
+TabImgsOff[4]='../images/oi_cs.gif';
+TabImgsOff[5]='../images/oi_do.gif';
+TabImgsOff[6]='../images/oi_an.gif';
+
+var TabImgsOn=new Array();
+
+TabImgsOn[0]='../images/oi_sr_over.gif';////change the names of on-state img src
+TabImgsOn[1]='../images/oi_ds_over.gif';
+TabImgsOn[2]='../images/oi_pd_over.gif' ;
+TabImgsOn[3]='../images/oi_ean_over.gif';
+TabImgsOn[4]='../images/oi_cs_over.gif';
+TabImgsOn[5]='../images/oi_do_over.gif';
+TabImgsOn[6]='../images/oi_an_over.gif';
+
+var TabPages=new Array();
+
+TabPages[0]='ocean_import1.asp'
+TabPages[1]='ocean_import2.asp'
+TabPages[2]='proof_delivery.asp'
+TabPages[3]='earrival_notice.asp'
+TabPages[4]='oi_search.asp'
+TabPages[5]='delivery_order.asp'
+TabPages[6]='arrival_notice.asp'
+
+function pointTabOnload(page){ 
+   
+    for(var i=0;i<tabCount;i++){
+    
+        if(TabPages[i]==page){
+        
+            currentTabIndex=i;
+        }
+    }
+    setToCurrentTab();  
+}
+
+function pointTab(obj){
+
+   var temp=obj.id.split('-');
+   currentTabIndex=temp[1]; 
+   
+}
+
+function setToCurrentTab(){
+
+   var index=currentTabIndex; 
+   var id;
+   var img;
+      
+   for(var i=0;i< tabCount;i++){ 
+   
+    id="t-"+i;     
+        if(i!=index){
+             document.getElementById(id).firstChild.src=TabImgsOff[i];
+        }else{
+             document.getElementById(id).firstChild.src=TabImgsOn[i];
+        
+        }
+   }
+}
+
+function refreshTabsOnMoving(){
+
+   var index=currentTabIndex; 
+   var id;
+   var img;      
+   for(var i=0;i< tabCount;i++){ 
+    id="t-"+i;     
+    document.getElementById(id).firstChild.src=TabImgsOff[i];        
+   }
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//-->
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_preloadImages('../images/oi_sr_over.gif','../images/oi_ds_over.gif','../images/oi_pd_over.gif','../images/oi_cs_over.gif','/ASP/Images/oi_do_over.gif','/ASP/Images/oi_an_over.gif')">
+<table width="100%" height="56" border="0" cellpadding="0" cellspacing="0" background="../images/back_oi.gif" bgcolor="#efefef">
+  <tr align="left" valign="top"> 
+    <td width="14%" height="56"><table width="170" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="100%" height="56" align="left" valign="top"></td>
+        </tr>
+      </table></td>
+    <td width="86%" height="56" align="center">
+        <table width="100%" height="56" border="0" cellpadding="0" cellspacing="0" background="../images/back_oi.gif">
+        <tr> 
+          <td width="914" height="35" align="right" valign="top">
+		  <a href="domfreight.htm" target="topFrame" onClick="MM_goToURL('parent.frames[\'topFrame\']','domfreight.htm','parent.frames[\'mainFrame\']','../domestic/booking.asp');return document.MM_returnValue"><img src="../images/tab_domestic.gif" name="dom" width="79" height="19" border="0" id="dom" style="margin-right:1px; cursor:hand" onMouseOver="MM_swapImage('dom','','/ASP/Images/tab_domestic_over.gif','intl','','/ASP/Images/tab_intl.gif',1)" onMouseOut="MM_swapImgRestore()"></a><a href="air_export.htm" target="topFrame" onClick="MM_goToURL('parent.frames[\'topFrame\']','air_export.htm','parent.frames[\'mainFrame\']','airexport_blank.html');return document.MM_returnValue"><img src="../images/tab_intl_over.gif" name="intl" width="103" height="19" border="0" id="intl" style="margin-right:135px; cursor:hand" onMouseOver="MM_swapImage('intl','','/ASP/Images/tab_intl_over.gif',1)" onMouseOut="MM_swapImgRestore()"></a>
+		  </td>
+		  <td width="98" rowspan="2" align="center" valign="bottom"><img src="../Images/icon_newfresh.gif" width="38" height="38" style="cursor:hand; margin-right:15px" onClick="parent.frameReload();"><img src="../images/icon_newlogout.gif" width="35" height="38" border="0" onClick="parent.logout();" style="cursor:hand; margin-right:10px"></td>
+        </tr>
+        <tr> 
+          <td  olspan="2" height="21" align="center" valign="top"><a href="site_admin.htm" target="topFrame" onClick="MM_goToURL('parent.frames[\'topFrame\']','site_admin.htm','parent.frames[\'mainFrame\']','siteadmin_blank.html');return document.MM_returnValue"><img src="../images/tab_sa_back.gif" width="76" height="21" border="0"></a><a href="master_data.htm" target="topFrame" onClick="MM_goToURL('parent.frames[\'topFrame\']','master_data.htm','parent.frames[\'mainFrame\']','masterdata_blank.html');return document.MM_returnValue"><img src="../images/tab_md_back.gif" width="84" height="21" border="0"></a><a href="../pre_shipment/pickup_order.asp" target="topFrame" onClick="MM_goToURL('parent.frames[\'topFrame\']','preshipment.htm','parent.frames[\'mainFrame\']','../pre_shipment/pickup_order.asp');return document.MM_returnValue"><img src="../images/tab_preship_back.gif" width="91" height="21" border="0"></a><a href="air_export.htm" target="topFrame" onClick="MM_goToURL('parent.frames[\'topFrame\']','air_export.htm','parent.frames[\'mainFrame\']','airexport_blank.html');return document.MM_returnValue"><img src="../images/tab_ae.gif" width="76" height="21" border="0"></a><a href="ocean_export.htm" target="topFrame" onClick="MM_goToURL('parent.frames[\'topFrame\']','ocean_export.htm','parent.frames[\'mainFrame\']','oceanexport_blank.html');return document.MM_returnValue"><img src="../images/tab_oe.gif" width="86" height="21" border="0"></a><a href="air_import.htm" target="topFrame" onClick="MM_goToURL('parent.frames[\'topFrame\']','air_import.htm','parent.frames[\'mainFrame\']','airimport_blank.html');return document.MM_returnValue"><img src="../images/tab_ai.gif" width="76" height="21" border="0"></a><a href="javascript:;" onClick="MM_goToURL('parent.frames[\'topFrame\']','ocean_import.htm','parent.frames[\'mainFrame\']','oceanimport_blank.html');return document.MM_returnValue"><img src="../images/tab_oi_top.gif" width="87" height="21" border="0"></a><a href="acct_tasks.htm" target="topFrame" onClick="MM_goToURL('parent.frames[\'topFrame\']','acct_tasks.htm','parent.frames[\'mainFrame\']','acct_tasks_blank_page.asp');return document.MM_returnValue"><img src="../images/tab_acct_back.gif" width="76" height="21" border="0"></a><a href="reports.htm" onClick="MM_goToURL('parent.frames[\'topFrame\']','reports.htm','parent.frames[\'mainFrame\']','reports_blank.html');return document.MM_returnValue"><img src="../images/tab_re.gif" width="85" height="21" border="0"></a></td>
+		  </tr>
+      
+      </table></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td height="27" colspan="2" align="center" valign="top" background="/ASP/Images/back_oi_2.gif" onMouseOut="setToCurrentTab()"><img src="../images/spacer.gif" width="12" height="27"><a id="t-0" onClick="pointTab(this)" href="../ocean_import/ocean_import1.asp" target="mainFrame" onMouseOver="refreshTabsOnMoving();MM_swapImage('Image14','','../images/oi_sr_over.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../images/oi_sr.gif" name="Image14" width="133" height="27" border="0"></a><a id="t-1" onClick="pointTab(this)" href="../ocean_import/ocean_import2.asp" target="mainFrame" onMouseOver="refreshTabsOnMoving();MM_swapImage('Image15','','../images/oi_ds_over.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../images/oi_ds.gif" name="Image15" width="95" height="27" border="0"></a><a id="t-6" onClick="pointTab(this)" href="/ASP/ocean_import/arrival_notice.asp" target="mainFrame" onMouseOver="refreshTabsOnMoving();MM_swapImage('an','','/ASP/Images/oi_an_over.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="/ASP/Images/oi_an.gif" name="an" width="85" height="27" border="0"></a><a id="t-5" onClick="pointTab(this)" href="/ASP/ocean_import/delivery_order.asp" target="mainFrame" onMouseOver="refreshTabsOnMoving();MM_swapImage('do','','../images/oi_do_over.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../images/oi_do.gif" name="do" width="91" height="27" border="0"></a><a id="t-2" onClick="pointTab(this)" href="../ocean_import/proof_delivery.asp" target="mainFrame" onMouseOver="refreshTabsOnMoving();MM_swapImage('Image16','','../images/oi_pd_over.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../images/oi_pd.gif" name="Image16" width="102" height="27" border="0"></a><a id="t-3" onClick="pointTab(this)" href="../ocean_import/earrival_notice.asp" target="mainFrame" onMouseOver="refreshTabsOnMoving();MM_swapImage('Image99','','../images/oi_ean_over.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../images/oi_ean.gif" name="Image99" width="88" height="27" border="0"></a><a id="t-4" onClick="pointTab(this)" href="../ocean_import/oi_search.asp" target="mainFrame" onMouseOver="refreshTabsOnMoving();MM_swapImage('Image17','','../images/oi_cs_over.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../images/oi_cs.gif" name="Image17" width="63" height="27" border="0"></a><img src="../images/spacer.gif" width="12" height="27"></td>
+    </tr>
+</table>
+</body>
+</html>

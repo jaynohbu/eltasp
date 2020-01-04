@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Windows2000" PresetDescription="Infragistics WebDateChooser Windows 2000 look and feel.  Sets both Look and Behavior properties." PresetType="All" />-->
+<igsch:WebDateChooser >
+  <ClientSideEvents />
+  <CalendarLayout DayNameFormat="FirstLetter" ShowNextPrevMonth="False" ShowTitle="False" ShowFooter="False">
+    <SelectedDayStyle ForeColor="White" BackColor="#0A246A" />
+    <OtherMonthDayStyle ForeColor="White" />
+    <DropDownStyle BackColor="White" />
+    <DayHeaderStyle ForeColor="#D4D0C8" BackColor="Gray" />
+  </CalendarLayout>
+  <DropDownStyle BorderStyle="Inset" />
+  <DropButton ImageUrl2="/ig_common/images/ig_cmboDown2.bmp" ImageUrl1="/ig_common/images/ig_cmboDown1.bmp">
+    <HoverStyle />
+    <Style />
+  </DropButton>
+  <ExpandEffects ShadowColor="LightGray" />
+</igsch:WebDateChooser>

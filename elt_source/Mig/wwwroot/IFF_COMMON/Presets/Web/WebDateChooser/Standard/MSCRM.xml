@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="MSCRM" PresetDescription="Infragistics WebSchedule MSCRM.  Sets both Look and Behavior properties." PresetType="All" />-->
+<igsch:WebDateChooser BorderStyle="Solid"  BorderColor="#7B9EBD" >
+  <ClientSideEvents />
+  <CalendarLayout DayNameFormat="FirstLetter" ShowYearDropDown="False" GridLineColor="#7288AC" ShowMonthDropDown="False" ShowGridLines="Both">
+    <FooterStyle Cursor="Default" Font-Size="9pt" Font-Names="Verdana" BackColor="#D8D9DB" CustomRules="text-align:center">
+      <BorderDetails WidthLeft="1px" StyleBottom="Solid" ColorBottom="Black" ColorRight="Black" WidthRight="1px" StyleRight="Solid" WidthBottom="1px" StyleLeft="Solid" ColorLeft="Black" />
+    </FooterStyle>
+    <SelectedDayStyle ForeColor="Black" />
+    <OtherMonthDayStyle ForeColor="#CCCCCC" />
+    <TodayDayStyle BorderWidth="2px" BorderColor="#E89F2E" BorderStyle="Solid" />
+    <DayHeaderStyle Font-Size="9pt" Font-Names="Verdana" BackColor="#EEEEEE" />
+    <TitleStyle Font-Size="9pt" Font-Names="Verdana" BackColor="#D8D9DB" />
+  </CalendarLayout>
+  <DropDownStyle BorderStyle="Solid" />
+  <DropButton ImageUrl2="/ig_common/images/igsch_mscrmdown.gif" ImageUrl1="/ig_common/images/igsch_mscrmup.gif">
+    <HoverStyle />
+    <Style />
+  </DropButton>
+  <ExpandEffects ShadowColor="LightGray" />
+</igsch:WebDateChooser>

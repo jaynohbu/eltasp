@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Office 2003 - Silver Theme" PresetDescription="Office 2003 look and feel with silver color scheme. Sets both LOOK and BEHAVIOR." PresetType="All" />-->
+<ignav:UltraWebTree DefaultSelectedImage="ig_treeOfficeFolder.GIF" ExpandImage="ig_treeXPPlus.gif" Indentation="20" WebTreeTarget="HierarchicalTree" Cursor="Default" DefaultImage="ig_treeOfficeFolder.GIF" Font-Size="8pt" Font-Names="Microsoft Sans Serif" CollapseImage="ig_treeXPMinus.gif" >
+
+  <SelectedNodeStyle ForeColor="Black" BackColor="#B2B4BF">
+    <Padding Bottom="2px" Left="2px" Top="2px" Right="2px" />
+  </SelectedNodeStyle>
+  <NodeStyle>
+    <Padding Bottom="2px" Left="2px" Top="2px" Right="2px" />
+  </NodeStyle>
+</ignav:UltraWebTree>

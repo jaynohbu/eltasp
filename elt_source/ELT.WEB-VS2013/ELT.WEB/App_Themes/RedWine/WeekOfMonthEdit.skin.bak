@@ -1,0 +1,12 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxwschs" Namespace="DevExpress.Web.ASPxScheduler.Controls" Assembly="DevExpress.Web.ASPxScheduler.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<dxwschs:WeekOfMonthEdit runat="server" SpriteCssFilePath="~/App_Themes/RedWine/{0}/sprite.css" CssFilePath="~/App_Themes/RedWine/{0}/styles.css" CssPostfix="RedWine" LoadingPanelText="">
+    <ValidationSettings>
+        <ErrorFrameStyle ImageSpacing="4px">
+            <ErrorTextPaddings PaddingLeft="4px"></ErrorTextPaddings>
+        </ErrorFrameStyle>
+    </ValidationSettings>
+    <LoadingPanelImage Url="~/App_Themes/RedWine/Web/Loading.gif"></LoadingPanelImage>
+</dxwschs:WeekOfMonthEdit>
+

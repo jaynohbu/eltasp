@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetDescription="Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+			<igtbl:UltraWebGrid style="POSITION: absolute;" runat="server" >
+				<DisplayLayout RowHeightDefault="20px" Version="4.00" BorderCollapseDefault="Separate">
+					<AddNewBox>
+						<Style BorderWidth="1px" BorderStyle="Solid" BackColor="LightGray">
+
+<BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White">
+</BorderDetails>
+
+						</Style>
+					</AddNewBox>
+					<Pager>
+						<Style BorderWidth="1px" BorderStyle="Solid" BackColor="LightGray">
+
+<BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White">
+</BorderDetails>
+
+						</Style>
+					</Pager>
+					<HeaderStyleDefault BorderStyle="Solid" BackColor="LightGray">
+						<BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White"></BorderDetails>
+					</HeaderStyleDefault>
+					<FrameStyle BorderWidth="1px" Font-Size="8pt" Font-Names="Verdana" BorderStyle="Solid"></FrameStyle>
+					<FooterStyleDefault BorderWidth="1px" BorderStyle="Solid" BackColor="LightGray">
+						<BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White"></BorderDetails>
+					</FooterStyleDefault>
+					<EditCellStyleDefault BorderWidth="0px" BorderStyle="None"></EditCellStyleDefault>
+					<RowStyleDefault BorderWidth="1px" BorderColor="Gray" BorderStyle="Solid">
+						<Padding Left="3px"></Padding>
+						<BorderDetails WidthLeft="0px" WidthTop="0px"></BorderDetails>
+					</RowStyleDefault>
+				</DisplayLayout>
+				<Bands>
+					<igtbl:UltraGridBand></igtbl:UltraGridBand>
+				</Bands>
+			</igtbl:UltraWebGrid>

@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "MultiFileUpload";
+    Layout = "~/Views/Shared/_LayoutPopUp.cshtml";
+}
+
+@using (Html.BeginForm("MultiFileUpload", "FileManagement", FormMethod.Post, new { @class = "imageGallery" })) {
+    @Html.DevExpress().UploadControl(
+        settings =>
+        {
+            settings.Name = "ucMultiFile";
+            settings.AddUploadButtonsHorizontalPosition = DevExpress.Web.ASPxUploadControl.AddUploadButtonsHorizontalPosition.Left;
+            settings.FileInputCount = UploadFileHelper.FileInputCount;
+            settings.ShowAddRemoveButtons = true;
+            settings.ValidationSettings.Assign(UploadFileHelper.ValidationSettings);
+        }).GetHtml()
+    <br />
+    <div class="text">
+        Allowed image types: jpeg, gif<br />
+        Maximum file size: 20MB
+    </div>
+    <div class="buttons">
+        <input type="submit" name="add" value="Add images to collection" />&nbsp;
+        <input type="submit" name="clear" value="Clear collection" />
+    </div>            
+   
+}

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="WindowsXP - Blue Theme" PresetDescription="Windows XP Blue Preset (final layout of Tabs only).  Sets both Look and Behavior properties." PresetType="All" />-->
+<igtab:UltraWebTab BorderColor="#949878" BorderStyle="Solid" ThreeDEffect="False" BorderWidth="1px">
+  <DisabledTabStyle />
+  <DefaultTabStyle Height="22px" Font-Size="8pt" Font-Names="Microsoft Sans Serif" ForeColor="Black" BackColor="#FEFCFD">
+    <Padding Top="2px" />
+  </DefaultTabStyle>
+  <RoundedImage LeftSideWidth="7" RightSideWidth="6" ShiftOfImages="2" SelectedImage="ig_tab_winXP1.gif" NormalImage="ig_tab_winXP3.gif" HoverImage="ig_tab_winXP2.gif" FillStyle="LeftMergedWithCenter" />
+  <DefaultTabSeparatorStyle />
+  <SelectedTabStyle>
+    <Padding Bottom="2px" />
+  </SelectedTabStyle>
+</igtab:UltraWebTab>

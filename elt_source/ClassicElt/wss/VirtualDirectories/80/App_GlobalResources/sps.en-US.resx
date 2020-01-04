@@ -1,0 +1,2303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="14.0.4759.1000" _dal="1" -->
+<!-- _LocalBinding -->
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddAction_Title">
+    <value>Add Action</value>
+  </data>
+  <data name="EditAction_Title">
+    <value>Edit Action</value>
+  </data>
+  <data name="EditAction_Delete">
+    <value>Delete</value>
+  </data>
+  <data name="AddAction_Name">
+    <value>Name</value>
+  </data>
+  <data name="AddAction_NameDescription">
+    <value>Type a name for the action.</value>
+  </data>
+  <data name="AddAction_ActionName">
+    <value>Action Name:</value>
+  </data>
+  <data name="AddAction_URL">
+    <value>URL</value>
+  </data>
+  <data name="AddAction_URLDescription">
+    <value>Type the URL to navigate to when you click on the action. If you want the URL to vary depending on the item to which it applies, add one or more parameters, then assign a property to each parameter below. Type a number in braces such as {0} where you want to insert a parameter in the URL</value>
+  </data>
+  <data name="AddAction_Navigate">
+    <value>Navigate to this URL:</value>
+  </data>
+  <data name="AddAction_Example">
+    <value>Example:</value>
+  </data>
+  <data name="AddAction_Launch">
+    <value>Launch the action in a new browser window:</value>
+  </data>
+  <data name="AddAction_Yes">
+    <value>Yes</value>
+  </data>
+  <data name="AddAction_No">
+    <value>No</value>
+  </data>
+  <data name="AddAction_URLParameters">
+    <value>URL Parameters</value>
+  </data>
+  <data name="AddAction_URLParameterDescription">
+    <value>Assign a property to each parameter in the URL</value>
+  </data>
+  <data name="AddAction_Parameter">
+    <value>Parameter</value>
+  </data>
+  <data name="AddAction_Property">
+    <value>Property</value>
+  </data>
+  <data name="AddAction_Remove">
+    <value>Remove</value>
+  </data>
+  <data name="AddAction_AddParameter">
+    <value>Add Parameter</value>
+  </data>
+  <data name="AddAction_Icon">
+    <value>Icon</value>
+  </data>
+  <data name="AddAction_IconDescription">
+    <value>Choose an icon to display next to the action.</value>
+  </data>
+  <data name="AddAction_NoIcon">
+    <value>No icon</value>
+  </data>
+  <data name="AddAction_StandardIcon">
+    <value>Standard icon:</value>
+  </data>
+  <data name="AddAction_Image">
+    <value>The image at this URL:</value>
+  </data>
+  <data name="AddAction_DuplicateNameError">
+    <value>An action with this name already exists</value>
+  </data>
+  <data name="AddAction_InvalidURLError">
+    <value>Invalid URL</value>
+  </data>
+  <data name="AddAction_InvalidImageError">
+    <value>Invalid image URL</value>
+  </data>
+  <data name="AddAction_Error">
+    <value>Correct the errors below and click OK</value>
+  </data>
+  <data name="AddAction_DuplicateParameter">
+    <value>Should not have duplicate parameter</value>
+  </data>
+  <data name="Applications_BDC">
+    <value>Business Data Connectivity</value>
+  </data>
+  <data name="Applications_Applications">
+    <value>Applications</value>
+  </data>
+  <data name="Applications_Name">
+    <value>Name</value>
+  </data>
+  <data name="Applications_Type">
+    <value>Type</value>
+  </data>
+  <data name="Applications_Description">
+    <value>Description</value>
+  </data>
+  <data name="Applications_Status">
+    <value>Status</value>
+  </data>
+  <data name="ViewApplication_Application">
+    <value>Application</value>
+  </data>
+  <data name="ViewApplication_Version">
+    <value>Version</value>
+  </data>
+  <data name="ViewApplication_Authentication">
+    <value>Authentication</value>
+  </data>
+  <data name="ViewApplication_Throttling">
+    <value>Throttling</value>
+  </data>
+  <data name="ViewApplication_Properties">
+    <value>Application Settings</value>
+  </data>
+  <data name="ViewApplication_Entities">
+    <value>Entities</value>
+  </data>
+  <data name="ViewEntity_Entity">
+    <value>Entity</value>
+  </data>
+  <data name="ViewEntity_EntitySettings">
+    <value>Entity Settings</value>
+  </data>
+  <data name="ViewEntity_Fields">
+    <value>Fields</value>
+  </data>
+  <data name="ViewEntity_Actions">
+    <value>Actions</value>
+  </data>
+  <data name="ViewEntity_Filters">
+    <value>Filters</value>
+  </data>
+  <data name="ViewEntity_Hidden">
+    <value>Hidden</value>
+  </data>
+  <data name="ViewEntity_Icon">
+    <value>Icon</value>
+  </data>
+  <data name="ViewEntity_Parameterized">
+    <value>Parameterized</value>
+  </data>
+  <data name="ViewEntity_Default">
+    <value>Default Filter</value>
+  </data>
+  <data name="BusinessDataField_EntityType">
+    <value>Type:</value>
+  </data>
+  <data name="BusinessDataField_PrimaryField">
+    <value>Display this field of the selected type:</value>
+  </data>
+  <data name="BusinessDataField_SecondaryFields">
+    <value>Add a column to show each of these additional fields:</value>
+  </data>
+  <data name="KPI_SectionDetailsLink">
+    <value>Details Link</value>
+  </data>
+  <data name="KPI_SectionUpdateRules">
+    <value>Update Rules</value>
+  </data>
+  <data name="KPI_DescriptionDetailsLink">
+    <value>Select the custom page that contains detailed information about this indicator. If no custom page is selected a default details page will be displayed when a user clicks on the indicator in the status indicator list web part.</value>
+  </data>
+  <data name="KPI_DesciptionUpdateRules">
+    <value>Specify the rules to use when updating this indicator.</value>
+  </data>
+  <data name="KPI_DetailsPageTextBoxLabel">
+    <value>Details Page</value>
+  </data>
+  <data name="KPI_UpdateRulesTextBoxLabel">
+    <value>Update Rules</value>
+  </data>
+  <data name="IndicatorWebPart_Title">
+    <value>Indicator Details</value>
+  </data>
+  <data name="ExcelCellPicker_InductiveText">
+    <value>Click on a cell to select it, and then click on the Set button to specify the cell address for the value, goal, or warning.</value>
+  </data>
+  <data name="ExcelKPI_ValueCell">
+    <value>Cell Address for Indicator Value</value>
+  </data>
+  <data name="ExcelKPI_WorkbookUrl">
+    <value>Workbook URL</value>
+  </data>
+  <data name="ExcelKpiProfilePage_EWR_Title">
+    <value>Excel Web Access</value>
+  </data>
+  <data name="NewASKPI_PageTitle">
+    <value>Add a new SQL Server 2005 Analysis Services KPI</value>
+  </data>
+  <data name="EditASKPI_PageTitle">
+    <value>Edit SQL Server 2005 Analysis Services KPI</value>
+  </data>
+  <data name="ASKPI_SectionName">
+    <value>Name</value>
+  </data>
+  <data name="ASKPI_SectionComments">
+    <value>Comments</value>
+  </data>
+  <data name="ASKPI_SectionDataConnection">
+    <value>Data Connection</value>
+  </data>
+  <data name="ASKPI_SectionASKPI">
+    <value>SQL Server 2005 Analysis Services KPI</value>
+  </data>
+  <data name="ASKPI_DescriptionName">
+    <value>Enter the name of the indicator.</value>
+  </data>
+  <data name="ASKPI_DescriptionComments">
+    <value>Comments help explain the current value or status of the indicator.</value>
+  </data>
+  <data name="ASKPI_DescriptionDataConnection">
+    <value>Select the data connection that contains the connection information for the SQL Server 2005 Analysis Services server, database and cube that contains the KPI.</value>
+  </data>
+  <data name="ASKPI_DescriptionASKPI">
+    <value>Select the SQL Server 2005 Analysis Services KPI for this indicator.</value>
+  </data>
+  <data name="ASKPI_DescriptionASKPI2">
+    <value>Some KPIs have several other KPIs that contribute to their value.  Select Include child indicators to display these other KPIs in the KPI List.</value>
+  </data>
+  <data name="ASKPI_NameTextBoxLabel">
+    <value>Name:</value>
+  </data>
+  <data name="ASKPI_NameTextBox">
+    <value>Name</value>
+  </data>
+  <data name="ASKPI_CommentsTextBoxLabel">
+    <value>Comments:</value>
+  </data>
+  <data name="ASKPI_DataConnectionTextBoxLabel">
+    <value>Data Connection:</value>
+  </data>
+  <data name="ASKPI_DataConnectionTextBox">
+    <value>Data Connection:</value>
+  </data>
+  <data name="ASKPI_KPILabel">
+    <value>KPI:</value>
+  </data>
+  <data name="ASKPI_DataConnection_Examples">
+    <value>Examples:</value>
+  </data>
+  <data name="ASKPI_DataConnection_Example_Full">
+    <value>http://portal/dataconnections/datacube.odc</value>
+  </data>
+  <data name="ASKPI_DataConnection_Example_Or">
+    <value>or</value>
+  </data>
+  <data name="ASKPI_DataConnection_Example_Relative">
+    <value>/dataconnections/datacube.odc</value>
+  </data>
+  <data name="ASKPI_NameRequired_Error">
+    <value>Name is required.</value>
+  </data>
+  <data name="ASKPI_DataConnectionRequired_Error">
+    <value>Enter a value for data connection.</value>
+  </data>
+  <data name="NewSimpleKPI_PageTitle">
+    <value>New Simple Status Indicator</value>
+  </data>
+  <data name="SimpleKPI_SectionNameDescription">
+    <value>Name and Description</value>
+  </data>
+  <data name="SimpleKPI_NameTextBoxLabel">
+    <value>Name</value>
+  </data>
+  <data name="SimpleKPI_NameDescription">
+    <value>Enter the name and description of the indicator.</value>
+  </data>
+  <data name="SimpleKPI_NameDescription2">
+    <value>The description explains the purpose or goal of the indicator.</value>
+  </data>
+  <data name="SimpleKPI_NameTextBox">
+    <value>Name:</value>
+  </data>
+  <data name="SimpleKPI_NameRequired_Error">
+    <value>Name is required.</value>
+  </data>
+  <data name="SimpleKPI_DescriptionTextBoxLabel">
+    <value>Description</value>
+  </data>
+  <data name="SimpleKPI_DescriptionTextBox">
+    <value>Description:</value>
+  </data>
+  <data name="SimpleKPI_SectionComments">
+    <value>Comments</value>
+  </data>
+  <data name="SimpleKPI_CommentsTextBoxLabel">
+    <value>Comments</value>
+  </data>
+  <data name="SimpleKPI_CommentsDescription">
+    <value>Comments help explain the current value or status of the indicator.</value>
+  </data>
+  <data name="SimpleKPI_CommentsTextBox">
+    <value>Comments:</value>
+  </data>
+  <data name="SimpleKPI_DetailsLinkTextBox">
+    <value>Details Link</value>
+  </data>
+  <data name="SimpleKPI_SectionIndicatorValue">
+    <value>Indicator Value</value>
+  </data>
+  <data name="SimpleKPI_SectionIndicatorValueHelp">
+    <value>Specify the current value for the indicator</value>
+  </data>
+  <data name="SimpleKPI_ValueTextBoxLabel">
+    <value>Value:</value>
+  </data>
+  <data name="SimpleKPI_ValueTextBox">
+    <value>Value</value>
+  </data>
+  <data name="SimpleKPI_ValueRequired_Error">
+    <value>Value is required.</value>
+  </data>
+  <data name="SimpleKPI_SectionStatusIcon">
+    <value>Status Icon</value>
+  </data>
+  <data name="SimpleKPI_SectionStatusIconHelp">
+    <value>Specify the icon rules that are used to determine which icon to display to represent the status of the indicator</value>
+  </data>
+  <data name="SimpleKPI_StatusIconLabel">
+    <value>Status Icon Rules:</value>
+  </data>
+  <data name="EditSimpleKPI_PageTitle">
+    <value>Edit Simple Status Indicator</value>
+  </data>
+  <data name="NewSharePointKPI_PageTitle">
+    <value>New Sharepoint List Indicator</value>
+  </data>
+  <data name="EditSharePointKPI_PageTitle">
+    <value>Edit Sharepoint List Indicator</value>
+  </data>
+  <data name="SharePointKPI_SectionIndicatorValue">
+    <value>Indicator Value</value>
+  </data>
+  <data name="SharePointKPI_SectionIndicatorValueHelp1">
+    <value>The indicator value is the number that tracks the progress toward the goal of this indicator.</value>
+  </data>
+  <data name="SharePointKPI_SectionIndicatorValueHelp2">
+    <value>For example, the indicator value may be:</value>
+  </data>
+  <data name="SharePointKPI_SectionIndicatorValueHelp3">
+    <value>The number of issues that are currently active</value>
+  </data>
+  <data name="SharePointKPI_SectionIndicatorValueHelp4">
+    <value>Or</value>
+  </data>
+  <data name="SharePointKPI_SectionIndicatorValueHelp5">
+    <value>The percentage of tasks complete</value>
+  </data>
+  <data name="SharePointKPI_SectionIndicatorValueHelp6">
+    <value>To specify the indicator value:</value>
+  </data>
+  <data name="SharePointKPI_SectionIndicatorValueHelp7">
+    <value>1) Select the SharePoint list that contains the information for calculating the value of this indicator.</value>
+  </data>
+  <data name="SharePointKPI_SectionIndicatorValueHelp8">
+    <value>2) Select the view of the list that contains the items for calculating the value of this indicator.  Views can be used for selecting a subset of items.</value>
+  </data>
+  <data name="SharePointKPI_SectionIndicatorValueHelp9">
+    <value>3) Specify the calculation to perform for the value of this indicator.  Choose summary calculation to set the goal to be the total, average, minimum or maximum of a numerical column.</value>
+  </data>
+  <data name="SharePointKPI_IndicatorValueLabel">
+    <value>SharePoint List and View:</value>
+  </data>
+  <data name="SharePointKPI_SectionStatusIcon">
+    <value>Status Icon</value>
+  </data>
+  <data name="SharePointKPI_SectionStatusIconHelp1">
+    <value>The status icon rules determine which icon to display to represent the status of the indicator.</value>
+  </data>
+  <data name="SharePointKPI_SectionStatusIconHelp2">
+    <value>For some indicators, such as 'The percentage of tasks completed', better values are usually higher.</value>
+  </data>
+  <data name="SharePointKPI_SectionStatusIconHelp3">
+    <value>For other indicators, such as 'The number of active tasks', better values are usually lower.</value>
+  </data>
+  <data name="SharePointKPI_SectionStatusIconHelp4">
+    <value>To specify the status icon rules:</value>
+  </data>
+  <data name="SharePointKPI_SectionStatusIconHelp5">
+    <value>1) Select whether better values are higher or lower</value>
+  </data>
+  <data name="SharePointKPI_SectionStatusIconHelp6">
+    <value>2) Specify the 'Goal' value</value>
+  </data>
+  <data name="SharePointKPI_SectionStatusIconHelp7">
+    <value>3) Specify the 'Warning' value</value>
+  </data>
+  <data name="SharePointKPI_StatusIconLabel">
+    <value>Status Icon Rules:</value>
+  </data>
+  <data name="NewExcelKPI_PageTitle">
+    <value>New Excel Status Indicator</value>
+  </data>
+  <data name="EditExcelKPI_PageTitle">
+    <value>Edit Excel Status Indicator</value>
+  </data>
+  <data name="ExcelKPI_SectionIndicatorValue">
+    <value>Indicator Value</value>
+  </data>
+  <data name="ExcelKPI_SectionIndicatorValueHelp1">
+    <value>Select the workbook that contains the information for the indicator value.</value>
+  </data>
+  <data name="ExcelKPI_SectionIndicatorValueHelp2">
+    <value>Select the cell in the workbook that contains the indicator value.</value>
+  </data>
+  <data name="ExcelKPI_SectionIndicatorValueHelp3">
+    <value>The cell address can be any valid Excel cell address for the selected workbook such as Sheet1!$A$1 or the name of a cell such as 'Total'.</value>
+  </data>
+  <data name="ExcelKPI_SectionStatusIcon">
+    <value>Status Icon</value>
+  </data>
+  <data name="ExcelKPI_SectionStatusIconHelp1">
+    <value>Values can be either numbers, or valid Excel workbook cell addresses such as: Sheet1!$A$1 or Sheet1!A1.</value>
+  </data>
+  <data name="ExcelKPI_StatusIconLabel">
+    <value>Status Icon Rules:</value>
+  </data>
+  <data name="AddDashboard_PageTitle">
+    <value>New web part page with status list</value>
+  </data>
+  <data name="AddDashboard_SectionName">
+    <value>Page Name</value>
+  </data>
+  <data name="AddDashboard_SectionLocation">
+    <value>Location</value>
+  </data>
+  <data name="AddDashboard_SectionNavBarLink">
+    <value>Create Link in Current Navigation Bar</value>
+  </data>
+  <data name="AddDashboard_SectionPageContent">
+    <value>Web part page with status list Layout</value>
+  </data>
+  <data name="AddDashboard_DescriptionLocation">
+    <value>Select the location of the new page.</value>
+  </data>
+  <data name="AddDashboard_DescriptionName">
+    <value>Enter a name and description for your new page.  The name appears in headings and links throughout the site.</value>
+  </data>
+  <data name="AddDashboard_DescriptionNavBarLink">
+    <value>Choose whether you would like to add a link to the new page in the current navigation bar.</value>
+  </data>
+  <data name="AddDashboard_DescriptionPageContent">
+    <value>Choose a layout for your web part page with status list. The different layouts allow you to choose the orientation of the filters on the page, the number of columns and navigation. You can rearrange the web parts later.</value>
+  </data>
+  <data name="AddDashboard_NameTextBoxLabel">
+    <value>Name:</value>
+  </data>
+  <data name="AddDashboard_NameRequired_Error">
+    <value>Name is required.</value>
+  </data>
+  <data name="AddDashboard_TitleTextBoxLabel">
+    <value>Page Title:</value>
+  </data>
+  <data name="AddDashboard_DescriptionTextBoxLabel">
+    <value>Description:</value>
+  </data>
+  <data name="AddDashboard_LocationLibraryLabel">
+    <value>Document Library:</value>
+  </data>
+  <data name="AddDashboard_LocationFolderLabel">
+    <value>Folder:</value>
+  </data>
+  <data name="AddDashboard_AddNavBarLinkLabel">
+    <value>Add a link to current navigation bar?</value>
+  </data>
+  <data name="AddDashboard_AddNavBarLinkYesLabel">
+    <value>Yes, use navigation heading:</value>
+  </data>
+  <data name="AddDashboard_AddNavBarLinkNoLabel">
+    <value>No</value>
+  </data>
+  <data name="AddDashboard_AddKpiListRadioButtonLabel">
+    <value>Create a status indicator list for me automatically.</value>
+  </data>
+  <data name="AddDashboard_SelectKpiListLaterRadioButtonLabel">
+    <value>Allow me to select an existing status indicator list later.</value>
+  </data>
+  <data name="AddDashboard_DontCreateKpiListRadioButtonLabel">
+    <value>Do not add a status indicator list to this dashboard.</value>
+  </data>
+  <data name="AddDashboard_FilterZoneLabel">
+    <value>Layout</value>
+  </data>
+  <data name="AddDashboard_KpiSectionName">
+    <value>Status Indicators</value>
+  </data>
+  <data name="AddDashboard_KpiSectionDescription">
+    <value>By default a new status indicator list will be created for you. You can optionally select to use an existing status indicator list by editing the status indicator web part during web part page customization. If you do not have permissions to create a list, the option to create a status indicator list will be unavailable.</value>
+  </data>
+  <data name="AddScorecard_PageTitle">
+    <value>New Status Indicator List Page</value>
+  </data>
+  <data name="cancelbutton_accesskey">
+    <value>c</value>
+  </data>
+  <data name="AddAction_NameRequired">
+    <value>Action name is required</value>
+  </data>
+  <data name="AddAction_URLRequired">
+    <value>URL is required</value>
+  </data>
+  <data name="okbutton_accesskey">
+    <value>u</value>
+  </data>
+  <data name="EditAction_Edit">
+    <value>Edit</value>
+  </data>
+  <data name="EditAction_New">
+    <value>New</value>
+  </data>
+  <data name="CreateView_CreateView">
+    <value>CreateView</value>
+  </data>
+  <data name="multipages_Name">
+    <value>Name</value>
+  </data>
+  <data name="View_EditView">
+    <value>Edit View</value>
+  </data>
+  <data name="View_NameRequired">
+    <value>View name is required</value>
+  </data>
+  <data name="View_NameDescription">
+    <value>Type a name for this view of the list. Make the name descriptive, such as "Sorted by Region", so that site visitors will know what to expect when they choose this view.</value>
+  </data>
+  <data name="View_ViewName">
+    <value>View Name:</value>
+  </data>
+  <data name="View_DefaultView">
+    <value>Default View</value>
+  </data>
+  <data name="View_Query">
+    <value>Items to Retrieve</value>
+  </data>
+  <data name="View_TestQuery">
+    <value>Test Query</value>
+  </data>
+  <data name="View_FromUser">
+    <value>Retrieve items specified by the user</value>
+  </data>
+  <data name="View_AllItems">
+    <value>Retrieve all items</value>
+  </data>
+  <data name="View_MeetCriteria">
+    <value>Retrieve items that meet these criteria:</value>
+  </data>
+  <data name="View_FilterName">
+    <value>Filter name</value>
+  </data>
+  <data name="View_Operator">
+    <value>Operator</value>
+  </data>
+  <data name="View_AValue">
+    <value>A value:</value>
+  </data>
+  <data name="View_ProfileProperty">
+    <value>A user profile property of the user viewing this page:</value>
+  </data>
+  <data name="View_UserProfileProperties">
+    <value>User Profile Properties</value>
+  </data>
+  <data name="multipages_Add">
+    <value>Add</value>
+  </data>
+  <data name="multipages_Remove">
+    <value>Remove</value>
+  </data>
+  <data name="View_Columns">
+    <value>Columns</value>
+  </data>
+  <data name="View_ColumnsDescription">
+    <value>Select or clear the check box next to each column you want to show or hide in this view. To specify the order of the columns, select a number in the Position from the left box. The column you choose as the title column will contain the edit menu and will be linked to the profile page.</value>
+  </data>
+  <data name="View_Display">
+    <value>Display</value>
+  </data>
+  <data name="View_Title">
+    <value>Title</value>
+  </data>
+  <data name="View_ColumnName">
+    <value>Column Name</value>
+  </data>
+  <data name="View_Position">
+    <value>Position from Left</value>
+  </data>
+  <data name="View_Filter">
+    <value>Filter</value>
+  </data>
+  <data name="View_ShowAll">
+    <value>Show all items</value>
+  </data>
+  <data name="View_ShowCriteria">
+    <value>Show items that meet these criteria:</value>
+  </data>
+  <data name="View_Sort">
+    <value>Sort</value>
+  </data>
+  <data name="View_SortDescription">
+    <value>Select up to two columns to determine the order in which the items in the view are displayed.</value>
+  </data>
+  <data name="View_FirstColumn">
+    <value>First sort by the column:</value>
+  </data>
+  <data name="View_Ascending">
+    <value>Show items in ascending order&lt;BR&gt;(A, B, C, or 1, 2, 3)</value>
+  </data>
+  <data name="View_Descending">
+    <value>Show items in descending order&lt;BR&gt;(C, B, A, or 3, 2, 1)</value>
+  </data>
+  <data name="View_AscendingAlt">
+    <value>Show items in ascending order</value>
+  </data>
+  <data name="View_DescendingAlt">
+    <value>Show items in descending order</value>
+  </data>
+  <data name="View_SecondColumn">
+    <value>Then sort by the column:</value>
+  </data>
+  <data name="View_FieldName">
+    <value>Field Name</value>
+  </data>
+  <data name="View_ItemLimit">
+    <value>Item Limit</value>
+  </data>
+  <data name="View_NoLimit">
+    <value>Do not limit the number of items displayed</value>
+  </data>
+  <data name="View_Limit">
+    <value>Limit the number of items displayed to:</value>
+  </data>
+  <data name="View_LimitError">
+    <value>The item limit must be greater than 0</value>
+  </data>
+  <data name="View_Paging">
+    <value>Pages</value>
+  </data>
+  <data name="View_PagingDescription">
+    <value>Choose whether to divide the list into pages and enter how many items appear on each page.</value>
+  </data>
+  <data name="View_NoPaging">
+    <value>Display all items on one page</value>
+  </data>
+  <data name="View_DisplayPaging">
+    <value>Display items in pages of:</value>
+  </data>
+  <data name="View_And">
+    <value>And</value>
+  </data>
+  <data name="multipages_DuplicateName">
+    <value>Name already exists</value>
+  </data>
+  <data name="multipages_ImageUrlRequired">
+    <value>Url for the image is required</value>
+  </data>
+  <data name="SiteDirSettings_Title">
+    <value>Site Directory Settings</value>
+  </data>
+  <data name="SiteDirSettings_LocationSection_Title">
+    <value>Site Directory Location</value>
+  </data>
+  <data name="SiteDirSettings_LocationSection_Description">
+    <value>Please enter the relative path to the Site Directory where you would like to capture all new sites. Example:/SiteDirectory</value>
+  </data>
+  <data name="SiteDirSettings_LocationSection_PathLabel">
+    <value>Site Directory Path</value>
+  </data>
+  <data name="SiteDirSettings_ClickToTest">
+    <value>Click here to test</value>
+  </data>
+  <data name="SiteDirSettings_SiteDirPath">
+    <value>Site Directory Path</value>
+  </data>
+  <data name="SiteDirSettings_SiteDirPathRequired">
+    <value>Please enter a Site Directory path</value>
+  </data>
+  <data name="SiteDirSettings_SiteDirPath_ValidateError">
+    <value>The location entered is not a site collection relative path, or the specified Site Directory does not exist in the current Site Collection.</value>
+  </data>
+  <data name="SiteDirSettings_RequirementsSection_Title">
+    <value>Site Creation Metadata</value>
+  </data>
+  <data name="SiteDirSettings_RequirementsSection_Description">
+    <value>Specify what information is required to be filled in by new site creators.</value>
+  </data>
+  <data name="SiteDirSettings_RequirementsSection_CbEnforce_Label">
+    <value>Enforce listing new sites in Site Directory</value>
+  </data>
+  <data name="SiteDirSettings_RequirementsSection_CatOptionalRb_Label">
+    <value>No site categories are mandatory.</value>
+  </data>
+  <data name="SiteDirSettings_RequirementsSection_OneCatMandatoryRb_Label">
+    <value>One site category is mandatory</value>
+  </data>
+  <data name="SiteDirSettings_RequirementsSection_AllCatMandatoryRb_Label">
+    <value>All site categories are mandatory</value>
+  </data>
+  <data name="SiteCategoryPanel_section_title">
+    <value>Site Categories</value>
+  </data>
+  <data name="SiteCategoryPanel_section_desc">
+    <value>Users can find your site listed in the site directory under a particular category. Select a category appropriate for your site.</value>
+  </data>
+  <data name="SiteCategoryPanel_CbEnforce_Label">
+    <value>List this new site in the site directory</value>
+  </data>
+  <data name="LinksCheckerWiz_PageTitle">
+    <value>Broken Site Directory Links</value>
+  </data>
+  <data name="LinksCheckerWiz_Scan">
+    <value>Scan a Site Directory View</value>
+  </data>
+  <data name="LinksCheckerWiz_ScanDescription">
+    <value>Choose the view in the site directory to scan for broken links. It will take several minutes to scan a large number of sites. The maximum number of sites scanned is 1000.</value>
+  </data>
+  <data name="LinksCheckerWiz_View">
+    <value>View:</value>
+  </data>
+  <data name="LinksCheckerWiz_ViewDDL_AccessKey">
+    <value>I</value>
+  </data>
+  <data name="LinksChecker_PageTitle">
+    <value>Broken Links Scan</value>
+  </data>
+  <data name="LinksChecker_SummaryTitle">
+    <value>Summary</value>
+  </data>
+  <data name="LinksChecker_InitStatus">
+    <value>Initializing...</value>
+  </data>
+  <data name="LinksChecker_BrokenLinksCount">
+    <value>Broken Sites: {0}</value>
+  </data>
+  <data name="LinksChecker_WorkingLinksCount">
+    <value>Non-broken Sites: {0}</value>
+  </data>
+  <data name="LinksChecker_UnknownLinksCount">
+    <value>Unknown: {0}</value>
+  </data>
+  <data name="LinksCheckerJobSettings_PageTitle">
+    <value>Site Directory Links Scan</value>
+  </data>
+  <data name="LinksCheckerJobSettings_Scan">
+    <value>Choose views to scan:</value>
+  </data>
+  <data name="LinksCheckerJobSettings_ScanDescription">
+    <value>This scan will look for broken links in views of the site directory. Enter URLs to site directory views that you want to scan for broken links. Separate multiple views by commas. Example: http://[ServerName]/sitedirectory/lists/siteslist/allitems.aspx. Note: The site directory is updated when the site directory timer job is next run. By default this timer job is scheduled to run daily.</value>
+  </data>
+  <data name="LinksCheckerJobSettings_View">
+    <value>Site directory view URLs:</value>
+  </data>
+  <data name="LinksChecker_StopScanText">
+    <value>Stop Scan</value>
+  </data>
+  <data name="LinksChecker_ProgressImage">
+    <value>Please Wait...</value>
+  </data>
+  <data name="View_PageSizeError">
+    <value>The page size must be greater than zero</value>
+  </data>
+  <data name="View_NoColumnError">
+    <value>Select at least one column</value>
+  </data>
+  <data name="Picker_Select">
+    <value>Select</value>
+  </data>
+  <data name="Picker_Description">
+    <value>Select what to display and set the order in which the appear.</value>
+  </data>
+  <data name="myinfo_SiteDocuments">
+    <value>Documents</value>
+  </data>
+  <data name="myinfo_SiteTasks">
+    <value>Tasks</value>
+  </data>
+  <data name="Ssp_UserProfiles">
+    <value>User profiles</value>
+  </data>
+  <data name="SspPermissions_CreateMySite">
+    <value>Create personal site</value>
+  </data>
+  <data name="SspPermissions_Personalize">
+    <value>Use personal features</value>
+  </data>
+  <data name="SspPermissions_ManageUsers">
+    <value>Manage user profiles</value>
+  </data>
+  <data name="SspPermissions_ManageAudiences">
+    <value>Manage audiences</value>
+  </data>
+  <data name="SspPermissions_ManageAnalytics">
+    <value>Manage usage analytics</value>
+  </data>
+  <data name="SspPermissions_ManagePermissions">
+    <value>Manage permissions</value>
+  </data>
+  <data name="SSOAdminManageAccounts_PageTitle_Text">
+    <value>Manage Account Information for an Enterprise Application Definition</value>
+  </data>
+  <data name="SSOAdminManageApps_PageTitle_Text">
+    <value>Manage Enterprise Application Definitions</value>
+  </data>
+  <data name="SSOAdminManageKey_PageTitle_Text">
+    <value>Manage Encryption Key</value>
+  </data>
+  <data name="SSOAdminManageKey_HelpLink_Text">
+    <value>Learn about managing encryption key</value>
+  </data>
+  <data name="SSOAdminManageServer_PageTitle_Text">
+    <value>Manage Server Settings for Single Sign-On</value>
+  </data>
+  <data name="SSOAdminManageServer_HelpLink_Text">
+    <value>Learn about managing Single Sign-On</value>
+  </data>
+  <data name="SSOAdminReEncrypt_PageTitle_Text">
+    <value>Create Encryption Key</value>
+  </data>
+  <data name="BDC_ChooseStandardIconToolTip">
+    <value>Choose standard icon</value>
+  </data>
+  <data name="BDC_PropagatePermissionsButtonText">
+    <value>Copy all permissions to descendants</value>
+  </data>
+  <data name="BDC_PropagatePermissionsConfirmation">
+    <value>You will replace all permissions on all descendants. Are you sure?</value>
+  </data>
+  <data name="BDC_IsCrawlable">
+    <value>Crawlable</value>
+  </data>
+  <data name="BDC_ServerBusy">
+    <value>The page is busy submitting data to the server.</value>
+  </data>
+  <data name="BDC_WebServiceUrlMissingErrorText">
+    <value>*Enter a Web Service Url </value>
+  </data>
+  <data name="BDC_ProxyAddressMissingErrorText">
+    <value>*Enter the URL to a proxy server </value>
+  </data>
+  <data name="BDC_ConnectionStringEmptyErrorText">
+    <value>*Enter the connection string </value>
+  </data>
+  <data name="BDC_Applications">
+    <value>Business Data Connectivity Applications</value>
+  </data>
+  <data name="BDC_ApplicationsGridTitle">
+    <value>Applications</value>
+  </data>
+  <data name="BDC_SRPAdminLinkText">
+    <value>SRP Administration</value>
+  </data>
+  <data name="BDC_SearchApplications">
+    <value>Search application name for </value>
+  </data>
+  <data name="BDC_SearchEntities">
+    <value>Search entity name for </value>
+  </data>
+  <data name="BDC_AddApplication">
+    <value>Import Application Definition</value>
+  </data>
+  <data name="BDC_Name">
+    <value>Name</value>
+  </data>
+  <data name="BDC_Type">
+    <value>Type</value>
+  </data>
+  <data name="BDC_Version">
+    <value>Version </value>
+  </data>
+  <data name="BDC_DefinitionVersion">
+    <value>Definition Version</value>
+  </data>
+  <data name="BDC_AccessAccount">
+    <value>Access Account</value>
+  </data>
+  <data name="BDC_Throttling">
+    <value>Maximum Concurrent Connections</value>
+  </data>
+  <data name="BDC_ViewApplication">
+    <value>View Application</value>
+  </data>
+  <data name="BDC_ViewEntity">
+    <value>View Entity</value>
+  </data>
+  <data name="BDC_ChangeSettings">
+    <value>Change Settings</value>
+  </data>
+  <data name="BDC_ManagePermissions">
+    <value>Manage Permissions</value>
+  </data>
+  <data name="BDC_ExportApplication">
+    <value>Export Application Definition</value>
+  </data>
+  <data name="BDC_Export">
+    <value>Export</value>
+  </data>
+  <data name="BDC_DeleteApplication">
+    <value>Delete Application</value>
+  </data>
+  <data name="BDC_ApplicationSettings">
+    <value>Application Information</value>
+  </data>
+  <data name="BDC_EntitySettings">
+    <value>Entity Information</value>
+  </data>
+  <data name="BDC_Application">
+    <value>Application</value>
+  </data>
+  <data name="BDC_ThrottlingEnabled">
+    <value>Enabled</value>
+  </data>
+  <data name="BDC_ThrottlingDisabled">
+    <value>Disabled</value>
+  </data>
+  <data name="BDC_Entities">
+    <value>Entities</value>
+  </data>
+  <data name="BDC_EntitiesPageTitle">
+    <value>Business Data Connectivity Entities</value>
+  </data>
+  <data name="BDC_Fields">
+    <value>Fields(of default view)</value>
+  </data>
+  <data name="BDC_Relationships">
+    <value>Relationships</value>
+  </data>
+  <data name="BDC_Actions">
+    <value>Actions</value>
+  </data>
+  <data name="BDC_Filters">
+    <value>Filters(of finder method)</value>
+  </data>
+  <data name="BDC_Title">
+    <value>Title</value>
+  </data>
+  <data name="BDC_DisplayByDefault">
+    <value>Display by Default</value>
+  </data>
+  <data name="BDC_AddAction">
+    <value>Add Action</value>
+  </data>
+  <data name="BDC_Default">
+    <value>Default</value>
+  </data>
+  <data name="BDC_Icon">
+    <value>Icon</value>
+  </data>
+  <data name="BDC_Url">
+    <value>URL</value>
+  </data>
+  <data name="BDC_AddUsers">
+    <value>Add Users/Groups</value>
+  </data>
+  <data name="BDC_EditRights">
+    <value>Edit Rights</value>
+  </data>
+  <data name="BDC_ManagePermissionsCaption">
+    <value>Use this page to control access to </value>
+  </data>
+  <data name="BDC_RemoveUsers">
+    <value>Remove Selected Users</value>
+  </data>
+  <data name="BDC_EditUsers">
+    <value>Modify Permissions of Selected Users</value>
+  </data>
+  <data name="BDC_SelectUnselectAllUsers">
+    <value>Select|Unselect All</value>
+  </data>
+  <data name="BDC_UserGroup">
+    <value>User/Group</value>
+  </data>
+  <data name="BDC_UserName">
+    <value>User/Group Name</value>
+  </data>
+  <data name="BDC_Rights">
+    <value>Rights</value>
+  </data>
+  <data name="BDC_Users">
+    <value>Users/Groups:</value>
+  </data>
+  <data name="BDC_ChooseRights">
+    <value>Choose Permissions</value>
+  </data>
+  <data name="BDC_ViewItems">
+    <value>Execute - Execute a method instance. Users with this right can view instances of an entity that has finder methods. Applies to method instances, which are descendants of entities.</value>
+  </data>
+  <data name="BDC_EditItems">
+    <value>Edit - Update and delete objects and create child objects. Users with this right on Business Data Connectivity itself can import application definitions. Applies to all objects.</value>
+  </data>
+  <data name="BDC_SetPermissions">
+    <value>Set Permissions - Applies to all objects</value>
+  </data>
+  <data name="BDC_Pickable">
+    <value>Select in Clients - Select an entity when configuring business data web parts, columns, or other clients. Applies to entities.</value>
+  </data>
+  <data name="BDC_CopyAclToChildren">
+    <value>Propagate permissions to all descendants (will overwrite their current permissions)</value>
+  </data>
+  <data name="BDC_Save">
+    <value>Save</value>
+  </data>
+  <data name="BDC_SetPermissionsErrorMessage">
+    <value>Please press the back button of the browser,fix the error and try the operation again</value>
+  </data>
+  <data name="BDC_NoApplications">
+    <value>There are no applications in Business Data Connectivity</value>
+  </data>
+  <data name="BDC_NoEntities">
+    <value>The application has no entities</value>
+  </data>
+  <data name="BDC_NoEntitiesInRegistry">
+    <value>There are no entities in Business Data Connectivity</value>
+  </data>
+  <data name="BDC_NoFields">
+    <value>The entity has no fields</value>
+  </data>
+  <data name="BDC_NoRelationships">
+    <value>The entity has no relationships</value>
+  </data>
+  <data name="BDC_NoActions">
+    <value>The entity has no actions</value>
+  </data>
+  <data name="BDC_NoFilters">
+    <value>The entity has no filters</value>
+  </data>
+  <data name="BDC_ApplicationDefinition">
+    <value>Application Definition</value>
+  </data>
+  <data name="BDC_FileTypeSectionTitle">
+    <value>File Type</value>
+  </data>
+  <data name="BDC_ImportFileTypeSectionDescription">
+    <value>Choose the type of application definition file to import</value>
+  </data>
+  <data name="BDC_ExportFileTypeSectionDescription">
+    <value>Choose the type of application definition file to export</value>
+  </data>
+  <data name="BDC_FileTypeModel">
+    <value>Model</value>
+  </data>
+  <data name="BDC_FileTypeResource">
+    <value>Resource</value>
+  </data>
+  <data name="BDC_ImportResourceSectionTitle">
+    <value>Resources to import</value>
+  </data>
+  <data name="BDC_ImportResourceSectionDescription">
+    <value>Choose resources to import</value>
+  </data>
+  <data name="BDC_ExportResourceSectionTitle">
+    <value>Resources to export</value>
+  </data>
+  <data name="BDC_ExportResourceSectionDescription">
+    <value>Choose resources to export</value>
+  </data>
+  <data name="BDC_LocalizedNames">
+    <value>Localized Names</value>
+  </data>
+  <data name="BDC_Properties">
+    <value>Properties</value>
+  </data>
+  <data name="BDC_Permissions">
+    <value>Permissions</value>
+  </data>
+  <data name="BDC_ApplicationDefinitionFile">
+    <value>Application Definition File:</value>
+  </data>
+  <data name="BDC_ApplicationDefinitionFileTitle">
+    <value>Application Definition File</value>
+  </data>
+  <data name="BDC_ApplicationDefinitionFileDescription">
+    <value>An application definition describes a database or web service. It includes connection settings, authentication mode, definitions of available entities, and other information. After you upload an application definition to Business Data Connectivity, you can use its entities in lists, web parts, search, user profiles and custom applications.</value>
+  </data>
+  <data name="BDC_ChooseApplicationDefinitionFileToImport">
+    <value>Choose an application definition file and click Import.</value>
+  </data>
+  <data name="BDC_ApplicationDefinitionFileImportWarning">
+    <value>Uploading a new application definition will overwrite any existing settings and changes you have made to the application. This includes security settings and actions. Before uploading a new version, you should export the current state of your application definition.</value>
+  </data>
+  <data name="BDC_ApplicationDefinitionFileDescriptionLinkText">
+    <value>Learn about writing application definition files</value>
+  </data>
+  <data name="BDC_PathOfFileToUpdate">
+    <value>Enter the path to the updated application defintion file.</value>
+  </data>
+  <data name="BDC_Import">
+    <value>Import</value>
+  </data>
+  <data name="BDC_RelatedTo">
+    <value>Related To</value>
+  </data>
+  <data name="BDC_RoleInRelationship">
+    <value>Role in Relationship</value>
+  </data>
+  <data name="BDC_ChangeApplicationSettings">
+    <value>Change Application Settings</value>
+  </data>
+  <data name="BDC_NameAndType">
+    <value>Name and Type</value>
+  </data>
+  <data name="BDC_ApplicationName">
+    <value>Application Name:</value>
+  </data>
+  <data name="BDC_ApplicationType">
+    <value>Application Type:</value>
+  </data>
+  <data name="BDC_Ok">
+    <value>Ok</value>
+  </data>
+  <data name="BDC_Connection">
+    <value>Connection</value>
+  </data>
+  <data name="BDC_WebServiceUrl">
+    <value>Web service URL:</value>
+  </data>
+  <data name="BDC_ServerProcessAccount">
+    <value>Server process account</value>
+  </data>
+  <data name="BDC_LoggedOnUser">
+    <value>Logged-on user (requires Kerberos delegation)</value>
+  </data>
+  <data name="BDC_SsoWindowsCredentials">
+    <value>Windows credentials from Single Sign-on</value>
+  </data>
+  <data name="BDC_SsoNonWindowsCredentials">
+    <value>Non-Windows credentials from Single Sign-on</value>
+  </data>
+  <data name="BDC_SsoDatabaseWindowsCredentials">
+    <value>Database credentials from Single Sign-on</value>
+  </data>
+  <data name="BDC_RetrieveCredentialFromSso">
+    <value>Retrieve credentials from this Single Sign-on Application</value>
+  </data>
+  <data name="BDC_WindowsCredentials">
+    <value>Credentials are Windows credentials</value>
+  </data>
+  <data name="BDC_DatabaseCredentials">
+    <value>Credentials are database credentials</value>
+  </data>
+  <data name="BDC_CreateSsoApplication">
+    <value>Create...</value>
+  </data>
+  <data name="BDC_ConnectionThrottling">
+    <value>Connection Throttling</value>
+  </data>
+  <data name="BDC_LimitConnections">
+    <value>Limit the number of concurrent connections to</value>
+  </data>
+  <data name="BDC_ProxyServer">
+    <value>Proxy Server</value>
+  </data>
+  <data name="BDC_ConnectThroughProxy">
+    <value>Connect through a proxy server</value>
+  </data>
+  <data name="BDC_ProxyAddress">
+    <value>Address:</value>
+  </data>
+  <data name="BDC_ProxyPort">
+    <value>Port:</value>
+  </data>
+  <data name="BDC_WSDLRetrievalAccount">
+    <value>WSDL Retrieval Account</value>
+  </data>
+  <data name="BDC_RetrieveWSDL">
+    <value>Retrieve WSDL using different credentials than those specified above</value>
+  </data>
+  <data name="BDC_DataProvider">
+    <value>Data Provider:</value>
+  </data>
+  <data name="BDC_ConnectionString">
+    <value>Connection String:</value>
+  </data>
+  <data name="BDC_WSAccessAccountDescription1">
+    <value>Select the account Business Data Connectivity uses to access the web service.If the web service enforces per-user permissions,you must access it as the end-user.</value>
+  </data>
+  <data name="BDC_WSAccessAccountDescription2">
+    <value>Business Data Connectivity will negotiate an authentication protocol with the web service server.To ensure credentials are transimitted securely,disable basic authentication on the web service server.</value>
+  </data>
+  <data name="BDC_DBAccessAccountDescription">
+    <value>Select the account Business Data Connectivity uses to access the database.To take advantage of database connection pooling,you must access the database as a service account.If the database enforces per-user permissions,you must access it as the end-user.</value>
+  </data>
+  <data name="BDC_SsoDescription">
+    <value>To use authentication modes that require stored credentials,create a Single Sign-on application to securely store the credentials.</value>
+  </data>
+  <data name="BDC_SelectSsoApplication">
+    <value>*Select a Single sign-on application</value>
+  </data>
+  <data name="BDC_ThrottlingTextBoxErrorMessage">
+    <value>*Please Enter an Integer between 1 and 50</value>
+  </data>
+  <data name="BDC_ImportSuccessful">
+    <value>Import Successful</value>
+  </data>
+  <data name="BDC_ImportFailed">
+    <value>Import Failed</value>
+  </data>
+  <data name="BDC_ViewNewApplicationLinkMessage">
+    <value>View the new application.</value>
+  </data>
+  <data name="BDC_ViewModifiedApplicationLinkMessage">
+    <value>View the modified application.</value>
+  </data>
+  <data name="BDC_NoFileToImport">
+    <value>*Please choose a valid application definition file to import.Ensure that the file is not empty and you have permissions to read the file.</value>
+  </data>
+  <data name="BDC_Profile_TopZone">
+    <value>Top Zone</value>
+  </data>
+  <data name="BDC_Profile_MiddleZone">
+    <value>Middle Zone</value>
+  </data>
+  <data name="BDC_Profile_MiddleRightZone">
+    <value>Middle Right Zone</value>
+  </data>
+  <data name="BDC_Profile_BottomZone">
+    <value>Bottom Zone</value>
+  </data>
+  <data name="AnalyticsConfig_TitleText">
+    <value>Configure Advanced Usage Analysis Processing</value>
+  </data>
+  <data name="AnalyticsConfig_EnableProcessingGroupText">
+    <value xml:space="preserve">Processing Settings</value>
+  </data>
+  <data name="AnalyticsConfig_EnableProcessingDescriptionText">
+    <value>Advanced usage analysis processing allows content owners of site collections and sites to understand how their site is being used, and provides information to help them improve the effectiveness of their site. When advanced usage analysis processing is enabled a daily schedule will process usage logs and provide the results to reports available from the site settings page of every site.</value>
+  </data>
+  <data name="AnalyticsConfig_EnableProcessingCheckboxCaptionText">
+    <value>Enable advanced usage analysis processing.</value>
+  </data>
+  <data name="AnalyticsConfig_EnableProcessingCheckboxCaptionAccessKey">
+    <value>U</value>
+  </data>
+  <data name="AnalyticsConfig_EnableQueryLoggingGroupText">
+    <value xml:space="preserve">Search Query Logging</value>
+  </data>
+  <data name="AnalyticsConfig_EnableQueryLoggingDescriptionText">
+    <value>When you enable search query logging, records of queries will be stored in the Shared Services Provider database.  You can view search query data in usage reports available from the top-level site in a site collection or from the Shared Services Administration page.</value>
+  </data>
+  <data name="AnalyticsConfig_EnableQueryLoggingCheckboxCaptionText">
+    <value>Enable search query logging.</value>
+  </data>
+  <data name="AnalyticsConfig_EnableQueryLoggingCheckboxCaptionAccessKey">
+    <value>Q</value>
+  </data>
+  <data name="Analytics_AspxSiteClickthroughs">
+    <value xml:space="preserve">Site collection destination pages</value>
+  </data>
+  <data name="Analytics_AspxSiteHomePage">
+    <value xml:space="preserve">Site collection home page</value>
+  </data>
+  <data name="Analytics_AspxSiteReferrers">
+    <value xml:space="preserve">Site collection referrers</value>
+  </data>
+  <data name="Analytics_AspxSiteRequests">
+    <value xml:space="preserve">Site collection requests</value>
+  </data>
+  <data name="Analytics_AspxSiteUsageSummary">
+    <value xml:space="preserve">Site collection usage summary</value>
+  </data>
+  <data name="Analytics_AspxSiteUsers">
+    <value xml:space="preserve">Site collection users</value>
+  </data>
+  <data name="Analytics_AspxUsers">
+    <value xml:space="preserve">Users</value>
+  </data>
+  <data name="Analytics_AspxWebClickthroughs">
+    <value xml:space="preserve">Site destination pages</value>
+  </data>
+  <data name="Analytics_AspxWebHomePage">
+    <value xml:space="preserve">Site home page</value>
+  </data>
+  <data name="Analytics_AspxWebReferrers">
+    <value xml:space="preserve">Site referrers</value>
+  </data>
+  <data name="Analytics_AspxWebRequests">
+    <value xml:space="preserve">Site requests</value>
+  </data>
+  <data name="Analytics_AspxWebUsageSummary">
+    <value xml:space="preserve">Site usage summary</value>
+  </data>
+  <data name="Analytics_AspxWebUsers">
+    <value xml:space="preserve">Site users</value>
+  </data>
+  <data name="Analytics_AspxPageData30Days">
+    <value xml:space="preserve">Reports on this page display data from the previous 30 days.</value>
+  </data>
+  <data name="Analytics_AspxHintAtGraphicalReportsPage2">
+    <value xml:space="preserve">Tip: On the graphical reports, click on the arrow to go to page two to see a tabular view of the same data.</value>
+  </data>
+  <data name="Analytics_AspxSearchQueries">
+    <value xml:space="preserve">Search queries</value>
+  </data>
+  <data name="Analytics_AspxSearchQueriesReport">
+    <value xml:space="preserve">Search Queries Report</value>
+  </data>
+  <data name="Analytics_AspxSearchResults">
+    <value xml:space="preserve">Search results</value>
+  </data>
+  <data name="Analytics_AspxSearchResultsReport">
+    <value xml:space="preserve">Search Results Report</value>
+  </data>
+  <data name="BDC_SelectOneOrMoreUsers">
+    <value>Select one or more users to perform this operation</value>
+  </data>
+  <data name="DashboardTemplate_TopLeftZone">
+    <value>Top Left Zone</value>
+  </data>
+  <data name="DashboardTemplate_TopRightZone">
+    <value>Top Right Zone</value>
+  </data>
+  <data name="DashboardTemplate_FilterZone">
+    <value>Filter Zone</value>
+  </data>
+  <data name="DashboardTemplate_FilterZoneButtonText">
+    <value>Add a Filter</value>
+  </data>
+  <data name="DashboardTemplate_BottomLeftZone">
+    <value>Bottom Left Zone</value>
+  </data>
+  <data name="DashboardTemplate_BottomMiddleZone">
+    <value>Bottom Middle Zone</value>
+  </data>
+  <data name="DashboardTemplate_BottomRightZone">
+    <value>Bottom Right Zone</value>
+  </data>
+  <data name="DashboardTemplate_MiddleZone">
+    <value>Middle Zone</value>
+  </data>
+  <data name="ScorecardTemplate_TopZone">
+    <value>Top Zone</value>
+  </data>
+  <data name="ScorecardTemplate_MiddleLeftZone">
+    <value>Middle Left Zone</value>
+  </data>
+  <data name="ScorecardTemplate_MiddleRightZone">
+    <value>Middle Right Zone</value>
+  </data>
+  <data name="ScorecardTemplate_BottomZone">
+    <value>Bottom Zone</value>
+  </data>
+  <data name="ReportCenter_LeftNavBar_AllContent">
+    <value>All Content</value>
+  </data>
+  <data name="AdminEnablingFeatures_CloseButton_AccessKey">
+    <value>C</value>
+  </data>
+  <data name="AdminEnablingFeatures_CloseButton_Text">
+    <value>Close</value>
+  </data>
+  <data name="AdminEnablingFeatures_CloseButton_ToolTip">
+    <value>Close the current page and return to the Operations Page</value>
+  </data>
+  <data name="AdminEnablingFeatures_JobInProgress_Text2">
+    <value>This page will be periodically updated with current status. Processing will continue even if you close this page.</value>
+  </data>
+  <data name="AdminEnablingFeatures_JobInProgress_Text3">
+    <value>Finished processing:</value>
+  </data>
+  <data name="AdminEnablingFeatures_PageTitle">
+    <value>Feature Enabling Status</value>
+  </data>
+  <data name="AdminEnablingFeatures_ResumeButton_AccessKey">
+    <value>R</value>
+  </data>
+  <data name="AdminEnablingFeatures_ResumeButton_Text">
+    <value>Resume</value>
+  </data>
+  <data name="AdminEnablingFeatures_ResumeButton_ToolTip">
+    <value>Resume the failed enable features job</value>
+  </data>
+  <data name="AdminEnablingFeatures_SiteStatusColumn">
+    <value>Site Collections:</value>
+  </data>
+  <data name="AdminEnablingFeatures_WebApplicationStatusColumn">
+    <value>Web Applications:</value>
+  </data>
+  <data name="AdminEnablingFeatures_WebStatusColumn">
+    <value>Sites:</value>
+  </data>
+  <data name="AdminFeaturePushdown_PageTitle">
+    <value>Enable Features on existing sites</value>
+  </data>
+  <data name="AdminFeaturePushdown_SelectEnableFeatures">
+    <value>Enable Features</value>
+  </data>
+  <data name="AdminFeaturePushdown_EnableFeaturesDescriptionLiteral1">
+    <value>Currently installed features may not be available on all sites in this SharePoint installation. Check the 'Enable all sites' checkbox to make these features available to all sites in the installation.</value>
+  </data>
+  <data name="AdminFeaturePushdown_EnableFeaturesDescriptionLiteral2">
+    <value>Newly created sites will have these features and you do not need to run this operation again for new sites.</value>
+  </data>
+  <data name="AdminFeaturePushdown_EnableFeaturesDescriptionLiteral3">
+    <value>This operation may take a long time to complete depending on the number of sites in your SharePoint installation.</value>
+  </data>
+  <data name="AdminFeaturePushdown_EnableFeaturesCheckBoxText">
+    <value>Enable all sites in this installation to use the following set of features:</value>
+  </data>
+  <data name="AdminSkuUpgrade_EnterPidKey">
+    <value>Enter Product Key</value>
+  </data>
+  <data name="AdminSkuUpgrade_EnterPidKeyLiteral">
+    <value>Type in the 25 character Enterprise Client license key. You will find this key printed on your Enterprise Client Access License Agreement.</value>
+  </data>
+  <data name="AdminSkuUpgrade_NoPidKey">
+    <value>Enter the Product Key.</value>
+  </data>
+  <data name="AdminSkuUpgrade_PageTitle">
+    <value>Enable Enterprise Features</value>
+  </data>
+  <data name="AdminSkuUpgrade_PidKeyTextBox_Title">
+    <value>Product Key</value>
+  </data>
+  <data name="AdminSkuUpgrade_SelectFeatureSet">
+    <value>Select Feature Set</value>
+  </data>
+  <data name="AdminSkuUpgrade_SelectFeatureSetDescriptionLiteral1">
+    <value>To enable Enterprise features for this Sharepoint installation, select the corresponding radio button. You need to do this only once for each installation.</value>
+  </data>
+  <data name="AdminSkuUpgrade_SelectFeatureSetDescriptionLiteral2">
+    <value>Once you have upgraded to Enterprise, you cannot switch back to use only the Standard features. For evaluation purposes, it is recommended that you configure a separate installation and deploy SharePoint Server Trial.</value>
+  </data>
+  <data name="AdminSkuUpgrade_UseTheseFeatures">
+    <value>Use these features:</value>
+  </data>
+  <data name="AdminSkuUpgrade_SelectStandardFeatures_Label">
+    <value>Standard (Requires Standard client license)</value>
+  </data>
+  <data name="AdminSkuUpgrade_SelectPremiumFeatures_Label">
+    <value>Enterprise (Requires Enterprise client license)</value>
+  </data>
+  <data name="AdminSkuUpgrade_StandardFeatures_Key">
+    <value>S</value>
+  </data>
+  <data name="AdminSkuUpgrade_PremiumFeatures_Key">
+    <value>P</value>
+  </data>
+  <data name="AdminSkuUpgrade_PidKeyTextBox_Key">
+    <value>K</value>
+  </data>
+  <data name="BDC_DeleteConfirmation">
+    <value>Are you sure you want to delete the rights of selected user(s)?</value>
+  </data>
+  <data name="BDC_DeleteApplicationConfirmation">
+    <value>Are you sure you want to delete the application {0} ?</value>
+  </data>
+  <data name="BDC_SsoErrorMessage">
+    <value>*Please select an SSO application.Use the Create link to create an SSO Application if there are no SSO Applications to choose from.</value>
+  </data>
+  <data name="BDC_SelectRightsErrorMessage">
+    <value>Choose one or more rights.</value>
+  </data>
+  <data name="BDC_Clear">
+    <value>Show all</value>
+  </data>
+  <data name="BusinessDataWebPart_View_Add">
+    <value>Add</value>
+  </data>
+  <data name="BusinessDataWebPart_View_Remove">
+    <value>Remove</value>
+  </data>
+  <data name="AudienceList_ViewChooser_All_Text">
+    <value>All</value>
+  </data>
+  <data name="AudienceList_ViewChooser_Compiled_Text">
+    <value>Compiled</value>
+  </data>
+  <data name="AudienceList_ViewChooser_Uncompiled_Text">
+    <value>Uncompiled</value>
+  </data>
+  <data name="AudienceList_ViewChooser_All_ToolTip">
+    <value>All audiences</value>
+  </data>
+  <data name="AudienceList_ViewChooser_Compiled_ToolTip">
+    <value>Compiled audiences</value>
+  </data>
+  <data name="AudienceList_ViewChooser_Uncompiled_ToolTip">
+    <value>Uncompiled audiences</value>
+  </data>
+  <data name="AudienceList_ViewChooser_All_AccessKey">
+    <value>A</value>
+  </data>
+  <data name="AudienceList_ViewChooser_Compiled_AccessKey">
+    <value>C</value>
+  </data>
+  <data name="AudienceList_ViewChooser_Uncompiled_AccessKey">
+    <value>U</value>
+  </data>
+  <data name="UserProfileManage_ViewChooser_Title_Text">
+    <value>Select View</value>
+  </data>
+  <data name="UserProfileManage_ViewChooser_AciveProfile_Text">
+    <value>Show only active users</value>
+  </data>
+  <data name="UserProfileManage_ViewChooser_AciveProfile_ToolTip">
+    <value>User profiles active during last import</value>
+  </data>
+  <data name="UserProfileManage_ViewChooser_AciveProfile_AccessKey">
+    <value>A</value>
+  </data>
+  <data name="UserProfileManage_ViewChooser_MarkDelProfile_Text">
+    <value>Missing from import:</value>
+  </data>
+  <data name="UserProfileManage_ViewChooser_MarkDelProfileNoComma_Text">
+    <value>Show only users missing from import</value>
+  </data>
+  <data name="UserProfileManage_ViewChooser_MarkDelProfile_ToolTip">
+    <value>User profiles missing from previous three full imports.</value>
+  </data>
+  <data name="UserProfileManage_ViewChooser_MarkDelProfile_AccessKey">
+    <value>M</value>
+  </data>
+  <data name="RelLinksScopeSettings_PageTitle_Text">
+    <value>Manage search scope for related links</value>
+  </data>
+  <data name="RelLinksScopeSettings_PageDescription_Text">
+    <value>Use this page to manage the related links search scope. Changes to this scope will be reflected after the next scheduled scope update.</value>
+  </data>
+  <data name="RelLinksScopeSettings_LinkPicker_Text">
+    <value>Sites in the scope</value>
+  </data>
+  <data name="RelLinksScopeSettings_LinkPicker_Help_Text1">
+    <value>These sites are part of "This and Related Sites" search scope. Select sites to add or remove from the scope.</value>
+  </data>
+  <data name="RelLinksScopeSettings_LinkPicker_Help_Text2">
+    <value>Sites linked to a specific item, like default.aspx or test.doc etc. are not included in the search scope.</value>
+  </data>
+  <data name="MasterSiteDirSettings_SiteDirPath_ValidateError">
+    <value>The URL entered is not an absolute URL or the protocol of the URL is not valid.</value>
+  </data>
+  <data name="MasterSiteDirSettings_LocationSection_Description">
+    <value>Please enter the path to the master Site Directory where you would like to capture all new site collections. Example: http://farm/sitedirectory. </value>
+  </data>
+  <data name="Search_MainPage_Title">
+    <value>Search Center</value>
+  </data>
+  <data name="Search_Results_Page_Title1">
+    <value>Search Results: </value>
+  </data>
+  <data name="Search_People_Results_Page_Title">
+    <value>Search People Results: </value>
+  </data>
+  <data name="Search_Advanced_Page_Title">
+    <value>Advanced Search</value>
+  </data>
+  <data name="FiltersWebPartGroup">
+    <value>Filters</value>
+  </data>
+  <data name="DashboardWebPartGroup">
+    <value>Dashboard</value>
+  </data>
+  <data name="sitemap_sso_ManageAccounts" xml:space="preserve">
+    <value>Manage Account Information for an Enterprise Application Definition</value>
+    
+  </data>
+  <data name="sitemap_sso_ManageApp" xml:space="preserve">
+    <value>Manage Enterprise Application Definition</value>
+    
+  </data>
+  <data name="sitemap_sso_ManageApps" xml:space="preserve">
+    <value>Manage Enterprise Application Definitions</value>
+    
+  </data>
+  <data name="sitemap_sso_ManageKey" xml:space="preserve">
+    <value>Manage Encryption Key</value>
+    
+  </data>
+  <data name="sitemap_sso_ManageServer" xml:space="preserve">
+    <value>Manage Server Settings for Single Sign-On</value>
+    
+  </data>
+  <data name="sitemap_sso_ManageSSO" xml:space="preserve">
+    <value>Manage Single Sign-On</value>
+    
+  </data>
+  <data name="sitemap_sso_Reencrypt" xml:space="preserve">
+    <value>Create Encryption Key</value>
+    
+  </data>
+  <data name="sitemap_sso_SSOLogon" xml:space="preserve">
+    <value>Manage Enterprise Application Credentials</value>
+    
+  </data>
+  <data name="LayoutPageZone_TopZone">
+    <value>Top Zone</value>
+  </data>
+  <data name="LayoutPageZone_LeftZone">
+    <value>Left Zone</value>
+  </data>
+  <data name="LayoutPageZone_MiddleLeftZone">
+    <value>Middle Left Zone</value>
+  </data>
+  <data name="LayoutPageZone_MiddleRightZone">
+    <value>Middle Right Zone</value>
+  </data>
+  <data name="LayoutPageZone_BottomZone">
+    <value>Bottom Zone</value>
+  </data>
+  <data name="LayoutPageZone_RightZone">
+    <value>Right Zone</value>
+  </data>
+  <data name="LayoutPageZone_TopLeftZone">
+    <value>Top Left Zone</value>
+  </data>
+  <data name="LayoutPageZone_MiddleMiddleZone">
+    <value>Middle Middle Zone</value>
+  </data>
+  <data name="LayoutPageZone_MiddleUpperLeftZone">
+    <value>Middle Upper Left Zone</value>
+  </data>
+  <data name="LayoutPageZone_MiddleUpperRightZone">
+    <value>Middle Upper Right Zone</value>
+  </data>
+  <data name="LayoutPageZone_MiddleLowerLeftZone">
+    <value>Middle Lower Left Zone</value>
+  </data>
+  <data name="LayoutPageZone_MiddleLowerRightZone">
+    <value>Middle Lower Right Zone</value>
+  </data>
+  <data name="LayoutPageZone_Footer">
+    <value>Footer</value>
+  </data>
+  <data name="LayoutPageZone_Header">
+    <value>Header</value>
+  </data>
+  <data name="LayoutPageZone_RightColumn">
+    <value>Right Column</value>
+  </data>
+  <data name="LayoutPageZone_LeftColumn">
+    <value>Left Column</value>
+  </data>
+  <data name="LayoutPageZone_BottomLeftZone">
+    <value>Bottom Left Zone</value>
+  </data>
+  <data name="ActivityFeed_Setup_Database_Structures_Title">
+    <value>Setup the ActivityFeed database structures.</value>
+  </data>
+  <data name="ActivityFeed_Generate_Activity_Feed_Button">
+    <value>Run Job Now</value>
+  </data>
+  <data name="ActivityFeed_Fill_Publisher_Email_Text">
+    <value>Please type in the email of the person whose recent activities you would like to see (default is self).</value>
+  </data>
+  <data name="ActivityFeed_Get_Published_Events_Button">
+    <value>Published Events</value>
+  </data>
+  <data name="ActivityFeed_Get_Consolidated_Events_Button">
+    <value>Consolidated Events</value>
+  </data>
+  <data name="ActivityFeed_Setup_Database_Structures_Button">
+    <value>Setup Database</value>
+  </data>
+  <data name="ProfileAdmin_EditProperty_ReplicableOn_Alert">
+    <value>Notice: Replicated data will not be deleted by turning this setting off.</value>
+  </data>
+  <data name="ProfileAdmin_EditProperty_ReplicableOff_Alert">
+    <value>Notice: This will not remove data that has already been replicated to SharePoint Foundation sites.</value>
+  </data>
+  <data name="LinksCheckerJobSettings_ViewAccessKey">
+    <value>V</value>
+  </data>
+  <data name="LinksCheckerJobSettings_MetadataSync">
+    <value>Update Site Properties</value>
+  </data>
+  <data name="LinksCheckerJobSettings_MetadataSyncDescription">
+    <value>Specify whether the Site Directory Links Scan automatically updates link titles and descriptions. This will change entries in the site directory to match the actual site title and description. Note: The site directory is updated when the site directory timer job is next run. By default this timer job is scheduled to run daily.</value>
+  </data>
+  <data name="LinksCheckerJobSettings_MetadataSyncFlag">
+    <value>Update title and description of links in the site directory automatically</value>
+  </data>
+  <data name="LinksCheckerJobSettings_MetadataSyncFlagAccessKey">
+    <value>U</value>
+  </data>
+  <data name="LinksCheckerJobSettings_SiteDirScanJobHelpLink">
+    <value>Show me more information</value>
+  </data>
+  <data name="RefineByTitle">
+    <value>Refine By Job Title</value>
+  </data>
+  <data name="RefineByDepartment">
+    <value>Refine By Department</value>
+  </data>
+  <data name="ActivityFeedAdmin_pagetitle">
+    <value>Activity Feed Administration</value>
+  </data>
+  <data name="ManageProfSrv_pagetitle">
+    <value>Manage User Profile Service Application</value>
+  </data>
+  <data name="ProfMain_pagetitle">
+    <value>User Profile and Properties</value>
+  </data>
+  <data name="ProfNew_pagetitle">
+    <value>Add User Profile</value>
+  </data>
+  <data name="ProfMngr_pagetitle">
+    <value>View User Profiles</value>
+  </data>
+  <data name="SetImport_pagetitle">
+    <value>Configure Profile Import</value>
+  </data>
+  <data name="MgrDSServer_pagetitle">
+    <value>Manage Connections</value>
+  </data>
+  <data name="LogViewer_pagetitle">
+    <value>URL Summary</value>
+  </data>
+  <data name="EditProperty_pagetitle">
+    <value>User Profile Property</value>
+  </data>
+  <data name="MgrProperty_pagetitle">
+    <value>View Profile Properties</value>
+  </data>
+  <data name="ProfAdminEdit_pagetitle">
+    <value>Edit User Profile</value>
+  </data>
+  <data name="EditDSServer_pagetitle">
+    <value>Edit Connection</value>
+  </data>
+  <data name="LogSummary_pagetitle">
+    <value>Hostname Summary</value>
+  </data>
+  <data name="EditSection_pagetitle">
+    <value>User Profile Section</value>
+  </data>
+  <data name="Audience_Main_pagetitle">
+    <value>Manage Audiences</value>
+  </data>
+  <data name="Audience_Sched_pagetitle">
+    <value>Specify Compilation Schedule</value>
+  </data>
+  <data name="Audience_Edit_pagetitle">
+    <value>Edit Audience</value>
+  </data>
+  <data name="Audience_List_pagetitle">
+    <value>View Audiences</value>
+  </data>
+  <data name="Audience_DefRuleEdit_pagetitle">
+    <value>Audience Rule</value>
+  </data>
+  <data name="Audience_MemberList_pagetitle">
+    <value>View Audience Membership</value>
+  </data>
+  <data name="Audience_View_pagetitle">
+    <value>View Audience Properties</value>
+  </data>
+  <data name="ManagePrivacyPolicy_pagetitle">
+    <value>Manage Policy</value>
+  </data>
+  <data name="EditPolicy_pagetitle">
+    <value>Edit Policy</value>
+  </data>
+  <data name="PersonalSites_pagetitle">
+    <value>My Site Settings</value>
+  </data>
+  <data name="ManageServicePermissions_pagetitle">
+    <value>Manage Permissions</value>
+  </data>
+  <data name="MyContactLinks_pagetitle">
+    <value>My Colleagues</value>
+  </data>
+  <data name="MyMemberships_pagetitle">
+    <value>My Memberships</value>
+  </data>
+  <data name="MyQuickLinks_pagetitle">
+    <value>My Links</value>
+  </data>
+  <data name="QuickLinks_AddColleague_pagetitle">
+    <value>Add Colleagues</value>
+  </data>
+  <data name="QuickLinks_AddLink_pagetitle">
+    <value>Add Link</value>
+  </data>
+  <data name="QuickLinks_pagetitle">
+    <value>Edit</value>
+  </data>
+  <data name="EditProfile_pagetitle">
+    <value>Edit Details</value>
+  </data>
+  <data name="CreateMySite_pagetitle">
+    <value>Create My Site</value>
+  </data>
+  <data name="EnableListTargeting_PageTitle">
+    <value>Modify List Audience Targeting Settings</value>
+  </data>
+  <data name="EnableListTargeting_PageDesc">
+    <value>Use this page to modify content targeting settings for this list.</value>
+  </data>
+  <data name="EnableListTargeting_SectionTitle">
+    <value>Enable Audience Targeting</value>
+  </data>
+  <data name="EnableListTargeting_SectionDesc">
+    <value>Enabling audience targeting will create a targeting column for this list. Web parts, such as the Content Query Web Part, can use this data to filter list contents based on the user's context.</value>
+  </data>
+  <data name="EnableListTargeting_ButtonText">
+    <value>Enable audience targeting</value>
+  </data>
+  <data name="SearchWebPartGroup">
+    <value>Search</value>
+  </data>
+  <data name="SitesOnet_TabsList_Title">
+    <value>Tabs</value>
+  </data>
+  <data name="SearchCenterOnet_SearchCenterListName">
+    <value>Tabs in Search Pages</value>
+  </data>
+  <data name="SearchCenterOnet_SearchResultsListName">
+    <value>Tabs in Search Results</value>
+  </data>
+  <data name="EditIndicator">
+    <value>Edit Indicator</value>
+  </data>
+  <data name="DeleteIndicator">
+    <value>Delete Indicator</value>
+  </data>
+  <data name="SiteSettings_pagetitle">
+    <value>Site Settings</value>
+  </data>
+  <data name="AreaCacheSettings_pagetitle">
+    <value>Publishing Site Output Cache Settings</value>
+  </data>
+  <data name="SiteCacheSettings_pagetitle">
+    <value>Site Collection Output Cache Settings</value>
+  </data>
+  <data name="ObjectCacheSettings_pagetitle">
+    <value>Object Cache Settings</value>
+  </data>
+  <data name="SiteDirSettings_SSCSection_Title">
+    <value>Site Collection Creation</value>
+  </data>
+  <data name="SiteDirSettings_SSCSection_Description_Text1">
+    <value>Specify site collection creation from the site directory. New site collections will not inherit permissions and navigation, but can be managed in separate databases.</value>
+  </data>
+  <data name="SiteDirSettings_SSCSection_Description_Text2">
+    <value>Note: You must enable self-service site creation from Central Administration to create new site collections.</value>
+  </data>
+  <data name="SiteDirSettings_SSCSection_CbSSC_Label">
+    <value>Create new site collections from Site Directory</value>
+  </data>
+  <data name="UsageWeb_pagetitle">
+    <value>Site Usage Summary</value>
+  </data>
+  <data name="UsageSite_pagetitle">
+    <value>Site Collection Usage Summary</value>
+  </data>
+  <data name="SiteDirectorySettings_pagetitle">
+    <value>Site Directory Settings</value>
+  </data>
+  <data name="MyPage_MySiteHost_HelpText">
+    <value>This site is designed for hosting My Sites, which includes personal sites and profile pages. To designate this site as the My Site Host, click the 'Set as My Site Host' button below. Once this has been set, this page will always redirect to the user's My Site.&lt;br&gt;&lt;br&gt;If a different host is already designated and personal sites were created there, those sites will need to be migrated or they will be lost. After migrating those sites, the personal site URL property for the affected users will need to be updated to reflect the correct location.</value>
+  </data>
+  <data name="MyPage_MySiteHost_ButtonText">
+    <value>Set as My Site Host</value>
+  </data>
+  <data name="MySiteTopQuickAddGroup">
+    <value>My Site: Top</value>
+  </data>
+  <data name="MySiteMiddleLeftQuickAddGroup">
+    <value>My Site: Middle Left</value>
+  </data>
+  <data name="MySiteMiddleRightQuickAddGroup">
+    <value>My Site: Middle Right</value>
+  </data>
+  <data name="MySiteBottomQuickAddGroup">
+    <value>My Site: Bottom</value>
+  </data>
+  <data name="Permissions_MySiteHost">
+    <value>My Site Host Permissions</value>
+  </data>
+  <data name="Permissions_DefaultReaders">
+    <value>My Site Reader Permissions</value>
+  </data>
+  <data name="Permissions_PersonalizationServices">
+    <value>Personalization Services Permissions</value>
+  </data>
+  <data name="SearchBox_SearchScopeDropDownToolTip_Text">
+    <value>Select a scope</value>
+  </data>
+  <data name="SSPAdminHelpLink_Text">
+    <value>Show me more information</value>
+  </data>
+  <data name="SSPConfigProfileImportHelpLink_Text">
+    <value>Learn more about configuring profile import.</value>
+  </data>
+  <data name="SSPManagingUserProfilesHelpLink_Text">
+    <value>Learn more about managing profiles.</value>
+  </data>
+  <data name="Mobile_Button_Refresh_Text">
+    <value>Go!</value>
+  </data>
+  <data name="Mobile_MyContentPage_TitlePrefix">
+    <value>My Site: Content</value>
+  </data>
+  <data name="Mobile_MyProfile_NavigationText">
+    <value>My Profile</value>
+  </data>
+  <data name="Mobile_ColleagueProfile_NavigationText">
+    <value>Profile</value>
+  </data>
+  <data name="Mobile_MySite_NavigationText">
+    <value>My Site</value>
+  </data>
+  <data name="WhereaboutsWebPart_LeadersText">
+    <value>Leaders</value>
+  </data>
+  <data name="WhereaboutsWebPart_MembersText">
+    <value>Members</value>
+  </data>
+  <data name="WhereaboutsWebPart_MemberSelectionDropdownText">
+    <value>Show:</value>
+  </data>
+  <data name="WhereaboutsWebpart_GoButtonText">
+    <value>Go</value>
+  </data>
+  <data name="Ratings_PopupWaitMessage">
+    <value>Loading...</value>
+  </data>
+  <data name="Ratings_PopupDataNotAvailableMessage">
+    <value>Not available</value>
+  </data>
+  <data name="Ratings_PopupDataNotRatedMessage">
+    <value>Not rated yet</value>
+  </data>
+  <data name="Ratings_ClickToRateMessage">
+    <value>Click to assign a rating (0-5)</value>
+  </data>
+  <data name="Ratings_PopupSubmitMessage">
+    <value>Thank you. Your rating has been submitted and will be processed soon.</value>
+  </data>
+  <data name="Ratings_PopupAverageRatingLabel">
+    <value>Average Rating</value>
+  </data>
+  <data name="Ratings_PopupRatingCountLabel">
+    <value>Number of Ratings</value>
+  </data>
+  <data name="Ratings_PopupUserRatingLabel">
+    <value>My Rating</value>
+  </data>
+  <data name="Ratings_SubmitNewRatingOpenerMessage">
+    <value>Press SHIFT+ENTER to rate this item.</value>
+  </data>
+  <data name="Ratings_CurrentAverageUnrated">
+    <value>Item is currently unrated.</value>
+  </data>
+  <data name="Ratings_CurrentAverageRating0_5Stars">
+    <value>Current average rating is 1 half star.</value>
+  </data>
+  <data name="Ratings_CurrentAverageRating1_0Stars">
+    <value>Current average rating is 1 star.</value>
+  </data>
+  <data name="Ratings_CurrentAverageRating1_5Stars">
+    <value>Current average rating is 1 and a half stars.</value>
+  </data>
+  <data name="Ratings_CurrentAverageRating2_0Stars">
+    <value>Current average rating is 2 stars.</value>
+  </data>
+  <data name="Ratings_CurrentAverageRating2_5Stars">
+    <value>Current average rating is 2 and a half stars.</value>
+  </data>
+  <data name="Ratings_CurrentAverageRating3_0Stars">
+    <value>Current average rating is 3 stars.</value>
+  </data>
+  <data name="Ratings_CurrentAverageRating3_5Stars">
+    <value>Current average rating is 3 and a half stars.</value>
+  </data>
+  <data name="Ratings_CurrentAverageRating4_0Stars">
+    <value>Current average rating is 4 stars.</value>
+  </data>
+  <data name="Ratings_CurrentAverageRating4_5Stars">
+    <value>Current average rating is 4 and a half stars.</value>
+  </data>
+  <data name="Ratings_CurrentAverageRating5_0Stars">
+    <value>Current average rating is 5 stars.</value>
+  </data>
+  <data name="Ratings_Rate1StarMessage">
+    <value>1 star selected.</value>
+  </data>
+  <data name="Ratings_Rate2StarMessage">
+    <value>2 stars selected.</value>
+  </data>
+  <data name="Ratings_Rate3StarMessage">
+    <value>3 stars selected.</value>
+  </data>
+  <data name="Ratings_Rate4StarMessage">
+    <value>4 stars selected.</value>
+  </data>
+  <data name="Ratings_Rate5StarMessage">
+    <value>5 stars selected.</value>
+  </data>
+  <data name="Ratings_SubmitInstruction">
+    <value>Press SHIFT+ENTER to submit.</value>
+  </data>
+  <data name="Ratings_DecreaseRatingInstruction">
+    <value>Press SHIFT+TAB to decrease rating.</value>
+  </data>
+  <data name="Ratings_IncreaseRatingInstruction">
+    <value>Press TAB to increase rating.</value>
+  </data>
+  <data name="Ratings_EscapeInstruction">
+    <value>Press SHIFT+ESCAPE to leave rating submit mode.</value>
+  </data>
+  <data name="Ratings_RatingNotSupported">
+    <value>Rating not supported</value>
+  </data>
+  <data name="Ratings_Settings_PageTitleInTitleArea">
+    <value>Rating Settings</value>
+  </data>
+  <data name="Ratings_ListSettingTitle">
+    <value>Rating Settings</value>
+  </data>
+  <data name="Ratings_ListSettingDesc">
+    <value>
+    </value>
+  </data>
+  <data name="Ratings_ListSettingRatingsSettingsTitle">
+    <value>Rating settings</value>
+  </data>
+  <data name="Ratings_ListSettingEnableRatingsDesc">
+    <value>Specify whether or not items in this list can be rated.</value>
+  </data>
+  <data name="Ratings_ListSettingEnableRatingsNotes">
+    <value>When you enable ratings, two ratings fields (average rating and number of ratings) are added to the content types available for this list. The column "Rating (0-5)" is also added to the default view. If you add new content types to this list later, and they do not already contain the ratings fields, you will need to add the ratings fields to them either manually, or by returning to this page and re-enabling ratings. If you disable ratings, the rating fields are removed from the list, but they are not removed from the content types for this list or from views that already have rating columns.</value>
+  </data>
+  <data name="Ratings_ListSettingDescShortQ">
+    <value>Allow items in this list to be rated?</value>
+  </data>
+  <data name="RatingsSettings_Yes">
+    <value>Yes</value>
+  </data>
+  <data name="RatingsSettings_No">
+    <value>No</value>
+  </data>
+  <data name="Ratings_DisabledForVirtualListsMessage">
+    <value>Ratings are disabled because ratings are not supported on virtual lists.</value>
+  </data>
+  <data name="NewReport_PageTitle">
+    <value>New Report</value>
+  </data>
+  <data name="NewReport_SectionName">
+    <value>Name</value>
+  </data>
+  <data name="NewReport_SectionTitle">
+    <value>Title</value>
+  </data>
+  <data name="NewReport_SectionDescription">
+    <value>Report Description</value>
+  </data>
+  <data name="NewReport_LabelDescription">
+    <value>A description of the contents of the report</value>
+  </data>
+  <data name="NewReport_SectionOwner">
+    <value>Owner</value>
+  </data>
+  <data name="NewReport_LabelOwner">
+    <value>Owner of the document</value>
+  </data>
+  <data name="NewReport_SectionCategory">
+    <value>Report Category</value>
+  </data>
+  <data name="NewReport_SectionStatus">
+    <value>Report Status</value>
+  </data>
+  <data name="NewReport_LabelCategory">
+    <value>Category of the report</value>
+  </data>
+  <data name="NewReport_LabelStatus">
+    <value>Status of the report</value>
+  </data>
+  <data name="NewReport_CategoryOption1">
+    <value>Category 1</value>
+  </data>
+  <data name="NewReport_CategoryOption2">
+    <value>Category 2</value>
+  </data>
+  <data name="NewReport_CategoryOption3">
+    <value>Category 3</value>
+  </data>
+  <data name="NewReport_StatusFinal">
+    <value>Final</value>
+  </data>
+  <data name="NewReport_StatusPrelim">
+    <value>Preliminary</value>
+  </data>
+  <data name="NewReport_StatusPtd">
+    <value>Period To Date</value>
+  </data>
+  <data name="CreateProfileServiceInstance_Name_Title">
+    <value>Name:</value>
+  </data>
+  <data name="CreateProfileServiceInstance_SelectServiceAccount">
+    <value>Service Account:</value>
+  </data>
+  <data name="CreateProfileServiceInstance_Profile_DB_Title">
+    <value>Profile Database:</value>
+  </data>
+  <data name="CreateProfileServiceInstance_Sync_DB_Title">
+    <value>Synchronization Database:</value>
+  </data>
+  <data name="CreateProfileServiceInstance_SocialTag_DB_Title">
+    <value>Social Tagging Database:</value>
+  </data>
+  <data name="ProfileAdmin_EditDSServer_Containers_SelectAll">
+    <value>Select All</value>
+  </data>
+  <data name="CreateProfileServiceInstance_SyncMachineInstance_Title">
+    <value>Profile Synchronization Instance</value>
+  </data>
+  <data name="CreateProfileServiceInstance_SyncMachineInstance_Text">
+    <value>Select the machine in this farm on which you would like to run Profile Synchronization process.</value>
+  </data>
+  <data name="CreateProfileServiceInstance_PersonalSite_ProviderSectionTitle_Text">
+    <value>My Site Host URL</value>
+  </data>
+  <data name="CreateProfileServiceInstance_PersonalSite_ProviderSectionDescription_Text">
+    <value><![CDATA[Provide the URL of the site collection where you would like to provision My Site Host. You may want to <a href="createsite.aspx">create a new site collection</a> for this. Please make sure that the Site Collection you specify does not currently have a site template or it uses My Site Host site template.<br/><br/>Example: http:&#47;&#47;&lt;My Site host name&gt;, http:&#47;&#47;servername/&lt;My Site Host Name&gt; etc.]]></value>
+  </data>
+  <data name="CreateProfileServiceInstance_PersonalSite_ManagedPathSectionTitle_Text">
+    <value>My Site Managed Path</value>
+  </data>
+  <data name="CreateProfileServiceInstance_PersonalSite_ManagedPathSectionDescription_Text">
+    <value><![CDATA[Provide managed path under which you want all personal sites to be created. This managed path will be used to form the URL for My Sites on the same Web Application as the My Site Host.<br/><br/>Example: http:&#47;&#47;&lt;My Site Host Web Application Path&gt;/&lt;My Site Managed Path&gt;/&lt;Site Naming Format&gt; will be the URL for the personal site for a user.]]></value>
+  </data>
+  <data name="CreateProfileServiceInstance_PersonalSite_SiteNameFormatSectionTitle_Text">
+    <value>Site Naming Format</value>
+  </data>
+  <data name="CreateProfileServiceInstance_PersonalSite_SiteNameFormatSectionDescription_Text">
+    <value>Select the format to use to name new personal sites.</value>
+  </data>
+  <data name="CreateProfileServiceInstance_DefaultProxyGroupSectionTitle_Text">
+    <value>Default Proxy Group</value>
+  </data>
+  <data name="CreateProfileServiceInstance_DefaultProxyGroupSectionDescription_Text">
+    <value>Specify if you want proxy of this User Profile Service to be a part of default proxy group on this farm.</value>
+  </data>
+  <data name="CreateProfileServiceInstance_DefaultProxyGroup_Yes">
+    <value>Yes</value>
+  </data>
+  <data name="CreateProfileServiceInstance_DefaultProxyGroup_No">
+    <value>No</value>
+  </data>
+  <data name="ManageSocialItems_Column_URL">
+    <value>URL</value>
+  </data>
+  <data name="ManageSocialItems_Column_Title">
+    <value>Title</value>
+  </data>
+  <data name="ManageSocialItems_Column_LastModified">
+    <value>Date</value>
+  </data>
+  <data name="ManageSocialItems_Column_Type">
+    <value>Type</value>
+  </data>
+  <data name="ManageSocialItems_Column_Content">
+    <value>Tag/Note</value>
+  </data>
+  <data name="ManageSocialItems_Column_User">
+    <value>Preferred Name</value>
+  </data>
+  <data name="Multipages_SkipButton_Text">
+    <value>Skip</value>
+  </data>
+  <data name="ProfileAdmin_EditDSServer_Populate_Containers">
+    <value>Populate Containers</value>
+  </data>
+  <data name="ProfileAdmin_EditDSServer_Querying">
+    <value>Querying</value>
+  </data>
+  <data name="MySiteTopNav_PeopleSearch_Text">
+    <value>Find People</value>
+  </data>
+  <data name="Mobile_MySite_Text">
+    <value>My Site</value>
+  </data>
+  <data name="Mobile_Profile_Text">
+    <value>Profile</value>
+  </data>
+  <data name="Mobile_Content_Text">
+    <value>Content</value>
+  </data>
+  <data name="Mobile_MyContent_Text">
+    <value>My Content</value>
+  </data>
+</root>

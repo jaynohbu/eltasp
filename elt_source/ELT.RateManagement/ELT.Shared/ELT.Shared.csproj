@@ -1,0 +1,658 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FD13F95D-96D2-4C9C-816E-0D98C36A694F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ELT.Shared</RootNamespace>
+    <AssemblyName>ELT.Shared</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\AppConstant.cs" />
+    <Compile Include="Entities\account_payable_journal.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\account_receivable_journal.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\account_request.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\aes_detail.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\aes_master.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\agent.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\all_accounts_journal.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\all_code.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\all_currency_code.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\all_rate_table.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\application.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AspNetRole.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AspNetUser.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AspNetUserClaim.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AspNetUserLogin.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\bill.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\bill_detail.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\booking_confirm.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\bug_master.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\carrier_master.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\certificate_origin_air.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\certificate_origin_air_items.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\certificate_origin_ocean.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\certificate_origin_ocean_items.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\charge_item.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\check_detail.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\check_queue.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\City.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Country.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\customer_credits.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\customer_credit_info.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\customer_payment.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\customer_payment_detail.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\delivery_order.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dtproperty.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\eli_back.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ELT_NOTIFICATION.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\email_history.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\email_report.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\export_code.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GetAirlines_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\gl.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\gl_reference.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\greetMessage.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\HAWB_master.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\HAWB_master_add.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\HAWB_master_drivers.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\hawb_milestones.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\hawb_Other_Charge.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\hawb_other_cost.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\hawb_weight_charge.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\hbol_master.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\hbol_other_charge.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\hbol_other_cost.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ig_ocean_ams_edi_header.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ig_ocean_ams_edi_item.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ig_ocean_ams_que.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ig_org_comments.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ig_org_comments_tmp.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ig_org_contact.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ig_org_que.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ig_schedule_b.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ig_schedule_b_old.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\iHAWB_master.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ihawb_Other_Charge.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ihawb_weight_charge.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\iMAWB_MASTER.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\iMAWB_NUMBER.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\iMAWB_Other_Charge.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\iMAWB_Weight_Charge.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\import_hawb.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\import_mawb.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\invoice.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\invoice_detail.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\invoice_header.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\invoice_joined_temp.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\invoice_queue.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\invoice_tmp.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\license_code.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MAWB_MASTER.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MAWB_NUMBER.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MAWB_Other_Charge.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\mawb_other_cost.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MAWB_Weight_Charge.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\mbol_master.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\mbol_other_charge.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\mbol_other_cost.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\mb_cost_item.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MigrateUser_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\NewAccountRequest.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Ocean_sed_detail.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ocean_sed_master.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\organization.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\page_user_access.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\payment_due.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\pickup_order.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\PNL.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\port.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\RateBlockDefinition.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\RateEntryRow.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\RateRoute.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\rate_table.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Recent_Work.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\reconcile.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\reconcile_payment_detail.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\reconcile_receivement_detail.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\RegionCode.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\scheduleB.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sed_detail.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sed_master.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\setup_master.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SE_Modules.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SE_Pages.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SE_User_Authority.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SubscriptionDefinition.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Subscription_Tab_Ref.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\tab_master.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\tmp_org.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\unit_code.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\USCounty.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\user.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\UserProfile.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\UserType_Tab_Ref.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\user_files.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ViewUserAccessPages_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\View_pay_bill.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\VW_ArrivalNotice.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\VW_CustomerInfo.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vw_mawb_booking_info.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vw_ocean_master.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\VW_OperationalCharge.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\VW_OperationalCost.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\VW_OperationCharge.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\warehouse_history.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\warehouse_receipt.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\warehouse_shipout.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\webpages_Membership.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\webpages_OAuthMembership.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\webpages_Roles.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ELTUser.cs" />
+    <Compile Include="Entities\AddTabAccessForUserType_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AEOperationReport_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\AIOperationReport_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\APDetail_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ARDetail_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\BalanceSheetReport_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\BankRegisterReport_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dt_getpropertiesbyid_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\dt_getpropertiesbyid_u_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\EltDb.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EltDb.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\EltDb.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\EltDb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EltDb.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ExpenseReportDetail_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ExpenseReportMaster_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GeneralLedgerDetailReport_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GeneralLedgerMasterReport_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GetAESLineItems_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GetAgentsInMAWB_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GetAgentsInMBOL_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GetAirExportDocumentList_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GetAllRate_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GetAllUserAuthorizedPages_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GetAllUserPages_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GetClientList_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GetClient_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GetDomesticFreightDocumentList_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GetImportDocumentList_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GetOceanExportDocumentList_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GetPNL_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GetScheduleB_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ig_up_organization_insert_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ig_up_organization_select_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ig_up_organization_update_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\IncomeStatementReport_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\OEOperationReport_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\OIOperationReport_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SalesReportDetail_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SalesReportMaster_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Split_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_aging_list_by_company_insert_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_aging_list_by_company_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_aging_list_by_company_update_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TrialBalanceReport_Result.cs">
+      <DependentUpon>EltDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\RateRoute.cs" />
+    <Compile Include="Model\RateBreak.cs" />
+    <Compile Include="Model\RateTable.cs" />
+    <Compile Include="Model\RateType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\HttpUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Entities\EltDb.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EltDb.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Entities\EltDb.edmx.diagram">
+      <DependentUpon>EltDb.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entities\EltDb.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EltDb.edmx</DependentUpon>
+      <LastGenOutput>EltDb.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entities\EltDb.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EltDb.edmx</DependentUpon>
+      <LastGenOutput>EltDb.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

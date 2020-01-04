@@ -1,0 +1,31 @@
+﻿@using ELT.WEB.Models
+@using ELT.CDT
+@model ELT.WEB.Models.AirReportMasterModel
+
+
+@Html.DevExpress().GridView(
+    settings =>
+    {
+        settings.Name = "grid";
+        settings.CallbackRouteValues = new { Controller = "Report", Action = "AirImportMaster" };
+        settings.Width = Unit.Percentage(100);
+        settings.Theme = "Metropolis";
+
+
+        settings.KeyFieldName = Model.KeyFieldName;
+        settings.Columns.Add(Model.KeyFieldName);
+       
+
+        settings.SettingsDetail.AllowOnlyOneMasterRowExpanded = false;
+        settings.SettingsDetail.ShowDetailRow = true;
+
+        settings.SetDetailRowTemplateContent(c =>
+        {
+
+            Html.RenderAction("AirImportDetail", new { Key = (string)DataBinder.Eval(c.DataItem, Model.KeyFieldName), KeyFieldName = Model.KeyFieldName });
+        });
+        settings.PreRender = (sender, e) =>
+        {
+            ((MVCxGridView)sender).DetailRows.ExpandAllRows();
+        };
+    }).Bind(Model.Elements).GetHtml() 

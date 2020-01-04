@@ -1,0 +1,68 @@
+﻿@model ELT.WEB.Models.APDisputeDetailModel
+
+@Html.DevExpress().GridView(settings => {   
+
+    settings.Name = "detailGrid_" + Model.Key.Replace(' ', '_');
+    settings.SettingsDetail.MasterGridName = "grid";
+    settings.CallbackRouteValues = new { Controller = "Accounting", Action = "APDisputeDetail", KeyFieldName = Model.KeyFieldName, Key = Model.Key };
+    settings.Width = Unit.Percentage(100);
+    settings.KeyFieldName = Model.KeyFieldName;
+    settings.SettingsPager.PageSize = 50;       
+
+    settings.Columns.Add("Date");
+    settings.Columns.Add("FileNo", "File No.");
+    settings.Columns.Add("Payment_Method", "Payment Method");
+
+    settings.Columns.Add(column =>
+    {
+        column.FieldName = "Due_Amount";
+        column.Caption = "Due";
+        column.SetDataItemTemplateContent(a =>
+        {
+            if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Due_Amount"))))
+            {
+                string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                if (a.Text == "0") val = "0";
+                ViewContext.Writer.Write(val
+                   );
+            }
+        });
+
+    });
+
+    settings.Columns.Add(column =>
+    {
+        column.FieldName = "Paid_Amount";
+        column.Caption = "Paid";
+        column.SetDataItemTemplateContent(a =>
+        {
+            if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Paid_Amount"))))
+            {
+                string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                if (a.Text == "0") val = "0";
+                ViewContext.Writer.Write(val
+                   );
+            }
+        });
+
+    });
+
+    settings.Columns.Add(column =>
+    {
+        column.FieldName = "Dispute_Amount";
+        column.Caption = "Dispute";
+        column.SetDataItemTemplateContent(a =>
+        {
+            if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Dispute_Amount"))))
+            {
+                string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                if (a.Text == "0") val = "0";
+                ViewContext.Writer.Write(val
+                   );
+            }
+        });
+
+    });
+
+
+  }).Bind(Model.Elements).GetHtml()

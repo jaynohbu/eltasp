@@ -1,0 +1,68 @@
+﻿@using ELT.WEB.Models
+@using ELT.CDT
+@model ELT.WEB.Models.APDisputeMasterModel
+
+@Html.DevExpress().GridView(
+    settings =>
+    {
+        settings.DataBound = (sender, e) =>
+        {
+            MVCxGridView gv = sender as MVCxGridView;         
+
+        };
+
+        settings.DetailRowExpandedChanged = (s, e) =>
+        {
+
+        };
+        settings.HtmlRowCreated += (s, e) =>
+        {          
+          if(e.RowType== GridViewRowType.Data)
+            if (e.KeyValue.ToString().Contains("_Fiscal"))
+            {
+                System.Web.UI.WebControls.TableCell cell = e.Row.Cells[0];
+                
+                if (cell is DevExpress.Web.ASPxGridView.Rendering.GridViewTableDetailButtonCell)
+                    cell.Controls[0].Visible = false;
+            }
+        };
+        settings.Name = "grid";
+
+        settings.CallbackRouteValues = new { Controller = "Accounting", Action = "APDisputeMaster" };
+        settings.Width = Unit.Percentage(100);
+        settings.Theme = "Metropolis";   
+ 
+
+        settings.KeyFieldName = Model.KeyFieldName;
+  
+        //    public string Class { get; set; }
+        //public string Customer_Number { get; set; }
+        //public string Company_Name { get; set; }
+        //public string Phone { get; set; }     
+        //public string Bill_Amount { get; set; }
+        //public string Balance { get; set; }
+        //public string Paid_Amount { get; set; }
+        //public string Dispute_Amount { get; set; }      
+        
+        
+        settings.Columns.Add("Company_Name", "Customer");
+        settings.Columns.Add("Class", "Class");
+        settings.Columns.Add("Phone", "Phone");
+        settings.Columns.Add("Bill_Amount", "Billed");
+        settings.Columns.Add("Paid_Amount", "Paid");
+        settings.Columns.Add("Dispute_Amount", "Dispute");
+        settings.Columns.Add("Balance", "Balance");
+
+        settings.SettingsDetail.AllowOnlyOneMasterRowExpanded = false;
+        settings.SettingsDetail.ShowDetailRow = true;
+
+        settings.SetDetailRowTemplateContent(c =>
+        {
+            Html.RenderAction("APDisputeDetail", new { Key = (string)DataBinder.Eval(c.DataItem, Model.KeyFieldName), KeyFieldName = Model.KeyFieldName });
+        });
+        settings.PreRender = (sender, e) =>
+        {
+           
+        };
+    }).Bind(Model.Elements).GetHtml() 
+

@@ -1,0 +1,11 @@
+﻿/* Accounting */
+	#tabs .CurAccountReportDiv a 
+   {
+		background: url(/Images/navtab_cur_acctlf.gif) no-repeat left top;
+	}
+	#tabs .CurAccountReportDiv a span {
+		background: url(/Images/navtab_cur_acctrt.gif) no-repeat right top;
+		color: #293126;
+		/* bottom padding to hide bottom border line bottom border of tabs 5px+1px(for 1px bottom border)=6px */
+		padding-bottom:6px; 
+	}   

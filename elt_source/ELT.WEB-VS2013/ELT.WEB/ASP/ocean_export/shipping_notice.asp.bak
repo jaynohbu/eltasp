@@ -1,0 +1,1177 @@
+<%@ LANGUAGE = VBScript %>
+<html>
+<head>
+<title>Shipping Notice</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../css/elt_css.css" rel="stylesheet" type="text/css">
+<!--  #INCLUDE FILE="../include/connection.asp" -->
+<!--  #INCLUDE FILE="../include/GOOFY_util_fun.inc" -->
+<!-- /Start of Combobox/ -->
+<script type="text/javascript">
+<!-- 
+// var ComboBoxes =  new Array('list1','list2','list3',.....);
+var ComboBoxes =  new Array('lstMAWB','lstHAWB');
+// -->
+</script>
+<script language='JScript' src='../Include/iMoonCombo.js'></script>
+<!-- /End of Combobox/ -->
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.style1 {color: #663366}
+.goto a:link, a:visited {
+	color: #336699;
+}
+a:link {
+	color: #336699;
+}
+a:hover {
+	color: #CC3300;
+}
+-->
+</style>
+</head>
+
+<!--  #INCLUDE FILE="../include/header.asp" -->
+<!--  #INCLUDE FILE="../include/MakeAgentPreAlertPDFFile.asp" -->
+<!--  #INCLUDE FILE="../include/clsUpload.asp"-->
+<!--  #INCLUDE FILE="../include/SaveBinaryFile.asp" -->
+
+<!--  added by Joon On Dec-8-2006 -->
+<!--  #INCLUDE FILE="../include/GOOFY_export_bills.inc" -->
+<!--  #INCLUDE FILE="../include/GOOFY_util_fun.inc" -->
+
+<%
+Dim aMAWB(2000),aAgentName(32),aAgentNo(32),aAgentEmail(32),aAgentCheck(32),aAgentCC(32),aAgentMSG(32)
+Dim aHAWB(32,64),aHAWBCheck(32,64),aInvoice(32),aManifest(32),aHAWBIndex(32),aInvoiceAmt(32),aInvoiceCheck(32),aManifestCheck(32)
+Dim aStmtCheck(32)
+Dim aOnlineAlertCheck(32),aAgentELTAcct(32)
+Dim aShipper(32,64),aConsignee(32,64)
+Dim aShipperName(32),aShipperNo(32),aShipperEmail(32),aShipperCheck(32),aShipperCC(32),aShipperMSG(32)
+Dim vMBOL,vShipperNo
+
+'////////////////////////////////////////////////////////////////////////////////////////// by ig
+Dim aShipperHAWB(32,64),aShipperHAWBCheck(32,64),aShipperHAWBIndex(32)
+Dim aShipperInvoice(32,64),aShipperInvoiceCheck(32,64),aShipperInvoiceIndex(32)
+Dim aShipperMAWB(1),aShipperMAWBIndex(1),sIndex,aIndex,shIndex,ahIndex,mIndex
+Dim vCarrier,vFileNo,vFLT,vETD,vETA,vDepPort,vArrPort
+
+Dim objUpload
+Dim strFileName
+Dim objConn
+Dim objRs
+Dim lngFileID
+Dim rs,rs1,SQL
+
+'////////////////////////////////////////////////////////////////////////////////////////// by ig
+
+Dim aShipperSubject(32),aAgentSubject(32)
+Dim aShipperFileCheck(32,128),aShipperFileURL(32,128),aShipperFileIndex(32),aShipperFileName(32,128)
+Dim aMAWBAgentCheck(32),aMAWBShipperCheck(32)
+Dim aAgentFileCheck(32,128),aAgentFileURL(32,128),aAgentFileIndex(32),aAgentFileName(32,128)
+Dim vMAWB,vAgent,vCC,vSubject,vYourName,vYourEmail,vMSG
+Dim aSendInfo(32)
+Dim MasterAgentNo,MasterAgentName,MasterAgentPhone
+
+'// Add search function using by File No. // by ig 7/11/2006
+Dim aFileNo(2000)
+
+'// Added by Joon On Dec-8-2006 /////////////////////
+Dim vHAWB,hawb_list,rMAWB
+Set hawb_list = get_HBOL_list_booked(elt_account_number)
+'////////////////////////////////////////////////////
+
+%>
+
+<%
+Send=Request.QueryString("Send")
+Edit=Request.QueryString("Edit")
+UP=Request.QueryString("UP")
+RM=Request.QueryString("RM")
+dFileName=Request.QueryString("dFileName")
+vEMPHAWB=Request.QueryString("EMPHAWB")
+'// added by Joon On Joon On Dec-8-2006
+rMAWB=Request.QueryString("rMAWB")
+%>
+
+<%
+Set rs=Server.CreateObject("ADODB.Recordset")
+Set rs1=Server.CreateObject("ADODB.Recordset")
+%>
+
+<%
+	rEdit=Request.QueryString("rEdit")
+	if rEdit = "yes" then
+		vMAWB = Request.QueryString("rMAWB")
+	end if
+%>
+
+<%
+if rEdit="yes" Then
+	 if rEdit="yes" then
+			response.write("<body link='336699' vlink='336699' leftmargin='0' topmargin='0' marginwidth='0' marginheight='0' onload='MAWBCHANGE()'>")
+	  else
+			response.write("<body link='336699' vlink='336699' leftmargin='0' topmargin='0' marginwidth='0' marginheight='0'>")
+	 end if
+End If
+%>
+
+<%
+if rEdit="" then
+%>
+
+<%
+if Edit="yes" or Send="yes" or UP="yes" Or RM="yes" then
+	Set objUpload = New clsUpload
+	vMAWB=checkBlank(objUpload("lstMAWB").Value,"")
+	If vMAWB <> "" Then
+	    vMAWB=Mid(vMAWB,1,len(vMAWB)-2)
+	End If
+'// Added by Joon On Dec-8-2006 /////////////////////
+    vHAWB=objUpload("lstHAWB").Value
+    If rMAWB="" Then
+	    vHAWB=Mid(vHAWB,1,len(vHAWB)-2)
+	    If IsNull(vMAWB) Or vMAWB = "0" Or vMAWB = "" Then
+	        vMAWB=get_mawb_by_hawb(vHAWB)
+	    End If
+	End If
+'////////////////////////////////////////////////////
+
+	vYourName=objUpload("txtYourName").Value
+	vYourName=Mid(vYourName,1,len(vYourName)-2)
+	vYourEmail=objUpload("txtYourEmail").Value
+	vYourEmail=Mid(vYourEmail,1,len(vYourEmail)-2)
+end if
+%>
+
+<%
+if Edit="yes" then
+	SQL= "select * from users where elt_account_number=" & elt_account_number & " and userid=" & user_id
+	rs.Open SQL, eltConn, , , adCmdText
+	if Not rs.EOF then
+		vYourName=rs("user_fname") & " " & rs("user_lname")
+		vYourEmail=rs("user_email")
+	end if
+	rs.Close
+	SQL= "select dba_name from agent where elt_account_number=" & elt_account_number
+	rs.Open SQL, eltConn, , , adCmdText
+	if Not rs.EOF then
+		vFF=rs("dba_name")
+	end if
+	rs.Close
+	vSubject="Notice: " & vFF & " MAWB:" & vMAWB
+elseif Send="yes" or UP="yes" Or RM="yes" then
+	vFF=objUpload("hExportAgent").Value
+end if
+%>
+
+<%
+if Send = "yes" and vEMPHAWB = "yes" then
+       sIndex=1
+       shIndex=1
+       aShipperName(0) = objUpload("txtShipperName" & 0).Value
+       aShipperMAWB(0)=vMAWB
+	  aShipperNo(0) = objUpload("hShipperNo" & 0).Value
+	  aShipperNo(0) = Mid(aShipperNo(0),1,len(aShipperNo(0))-2)
+       aShipperCheck(0)=Mid(objUpload("cShipperCheck" & 0).Value,1,1)
+       aShipperSubject(0)=objUpload("txtShipperSubject" & 0).Value
+       aShipperSubject(0)=Mid(aShipperSubject(0),1,len(aShipperSubject(0))-2)
+       aShipperEmail(0)=objUpload("txtShipperEmail" & 0).Value
+       aShipperEmail(0)=Mid(aShipperEmail(0),1,len(aShipperEmail(0))-2)
+       aShipperCC(0)=objUpload("txtShipperCC" & 0).Value
+       aShipperCC(0)=Mid(aShipperCC(0),1,len(aShipperCC(0))-2)
+       aShipperMSG(0)=objUpload("txtShipperMSG" & 0).Value
+	   aMAWBShipperCheck(0)=objUpload("cShipperMAWBCheck" & 0).Value
+       aMAWBShipperCheck(0)=Mid(aMAWBShipperCheck(0),1,len(aMAWBShipperCheck(0))-2)
+
+       for iii = 0 to 4
+       	if Not objUpload("cShipperInvoiceCheck" & 0 & "," & iii).Value = NULL then
+			aShipperInvoiceCheck(0,iii)=Mid(objUpload("cShipperInvoiceCheck" & 0 & "," & iii).Value,1,1)
+		end if
+       next
+
+        if NOT vMAWB = "" then
+            Call Get_Invoice_For_MAWB(0,0)
+        end if
+end if
+
+if Not vMAWB="" and rEdit="" then
+  if Not vEMPHAWB = "yes" then
+	  Call Get_Normal_Shipping_Data
+	  Call Get_Attached_File
+  else
+	  Call Get_Attached_File
+  end if
+
+end if
+
+Call Get_MAWB_NUMBER
+
+'send email to all Shippers
+
+'ShipperNoItem=Request("hShipperNoItem")
+if Edit="yes" or Send="yes" or UP="yes" or RM="yes" then
+	ShipperNoItem=objUpload("hShipperNoItem").Value
+	if Not ShipperNoItem="" then
+		ShipperNoItem=Mid(ShipperNoItem,1,len(ShipperNoItem)-2)
+	end if
+end if
+
+%>
+
+<%
+'///////////////////// rEdit End
+else
+	Call Get_MAWB_NUMBER
+end if
+'///////////////////// rEdit End
+%>
+
+<%
+  Set rs  = Nothing
+  Set rs1 = Nothing
+%>
+
+<!--  #INCLUDE FILE="../include/FunctionMailExtra.asp" -->
+<%
+DIM tmpGreetingMessage
+tmpGreetingMessage = GET_GREETING_MESSAGE( "OE/Shipping Notice" )
+
+IF Edit = "yes" or rEdit = "yes" Then
+	For i=0 to sIndex-1
+        aShipperMSG(i) = tmpGreetingMessage & chr(10) & aShipperMSG(i)					
+    Next
+Elseif UP = "yes" Or RM = "yes" Then
+    For i=0 to sIndex-1
+        aShipperMSG(i) = tmpGreetingMessage	
+    Next
+End if
+%>
+
+<!--  #include file="../include/recent_file.asp" -->
+<%
+
+Sub Get_MAWB_NUMBER
+
+SQL= "select * from ocean_booking_number where elt_account_number = " & elt_account_number & " and status='B' order by booking_num"
+rs.Open SQL, eltConn, , , adCmdText
+mIndex=0
+Do While Not rs.EOF
+	aMAWB(mIndex)=rs("booking_num")
+	aFileNo(mIndex)=rs("File_no")	
+	if vMAWB=aMAWB(mIndex) then
+		vCarrier=rs("carrier_desc")
+		vFileNo=rs("file_no")
+		'vFLT=rs("flight#1")
+		vETD=rs("departure_date")
+		vETA=rs("arrival_date")
+		vDepPort=rs("origin_port_id")
+		vArrPort=rs("dest_port_id")
+	end if
+	rs.MoveNext
+	mIndex=mIndex+1
+Loop
+rs.Close
+End Sub
+
+Sub Get_Normal_Shipping_Data
+    dim MA_N,VA_N 
+	SQL="select a.consignee_acct_num,b.dba_name,b.business_phone from mbol_master a, organization b "
+	SQL=SQL & "where a.elt_account_number=b.elt_account_number and a.elt_account_number = " & elt_account_number & " and a.consignee_acct_num=b.org_account_number and a.booking_num = '" & vMAWB & "'"
+	rs.Open SQL, eltConn, , , adCmdText
+	'Response.Write(SQL)
+	if Not rs.EOF then
+		MasterAgentNo=rs("consignee_acct_num")
+		MasterAgentName=rs("dba_name")
+		MasterAgentPhone=rs("business_phone")
+	end if
+	rs.close
+	SQL= "select a.agent_name,a.agent_no,a.shipper_name,a.consignee_name,mbol_num,hbol_num,b.agent_elt_acct,b.owner_email,b.edt from hbol_master a, organization b where a.elt_account_number=b.elt_account_number and a.elt_account_number = " & elt_account_number & " and a.agent_no=b.org_account_number and a.booking_num = '" & vMAWB & "' order by a.agent_name,a.hbol_num"
+	rs.Open SQL, eltConn, , , adCmdText
+	'Response.Write(SQL)
+	aIndex=0
+	hIndex=0
+	LastAgent=""
+	Do While Not rs.EOF
+		vHAWB=rs("hbol_num")
+		vMBOL=rs("mbol_num")
+		vShipper=rs("shipper_name")
+		vConsignee=rs("consignee_name")
+		vAgentName=rs("agent_name")
+		vAgentNo=rs("agent_no")
+		vAgentEmail=rs("owner_email")
+		vAgentELTAcct=rs("agent_elt_acct")
+		if IsNull(vAgentELTAcct) or vAgentELTAcct="" then vAgentELTAcct=0
+		vEDTEnable=rs("edt")
+		if Not LastAgent=vAgentName then
+			hIndex=0
+			aHAWB(aIndex,hIndex)=vHAWB
+			aShipper(aIndex,hIndex)=vShipper
+			aConsignee(aIndex,hIndex)=vConsignee
+			if Edit="yes" then
+				aHAWBCheck(aIndex,hIndex)="Y"
+			else
+				aHAWBCheck(aIndex,hIndex)=Mid(objUpload("cHAWBCheck" & aIndex & "," & hIndex).Value,1,1)
+			end if
+			aHAWBIndex(aIndex)=hIndex
+			aAgentName(aIndex)=vAgentName
+			aAgentNo(aIndex)=vAgentNo
+			aAgentELTAcct(aIndex)=vAgentELTAcct
+			if Not MasterAgentNo="" and not vAgentNo="" then
+			    VM_N=checkblank(MasterAgentNo,0)
+				VA_N=checkblank(vAgentNo,0)
+				if Not VM_N=VA_N then
+					aAgentMSG(aIndex)="Master agent is " & MasterAgentName & chr(10) & "Phone# " & MasterAgentPhone
+				end if
+			end if
+			LastAgent=vAgentName
+			aIndex=aIndex+1
+			hIndex=hIndex+1
+		else
+			if aIndex > 0 then
+			aHAWB(aIndex-1,hIndex)=vHAWB
+			aShipper(aIndex-1,hIndex)=vShipper
+			aConsignee(aIndex-1,hIndex)=vConsignee
+			if Edit="yes" then
+				aHAWBCheck(aIndex-1,hIndex)="Y"
+			else
+				aHAWBCheck(aIndex-1,hIndex)=Mid(objUpload("cHAWBCheck" & aIndex-1 & "," & hIndex).Value,1,1)
+			end if
+			aHAWBIndex(aIndex-1)=hIndex
+			hIndex=hIndex+1
+			end if
+		end if
+		rs.MoveNext
+	Loop
+	rs.close
+
+'get info for shipper
+	SQL= "select a.mbol_num,a.shipper_name,a.shipper_acct_num,hbol_num,a.ci,b.owner_email from hbol_master a, organization b where a.elt_account_number=b.elt_account_number and a.elt_account_number = " & elt_account_number & " and a.shipper_acct_num=b.org_account_number and a.booking_NUM = '" & vMAWB & "' order by a.shipper_acct_num,a.hbol_num"
+	rs.Open SQL, eltConn, , , adCmdText
+	sIndex=0
+	shIndex=0
+	LastShipper=""
+'Response.Write(SQL)
+'/////////////////////////
+if  Not rs.EOF then
+'/////////////////////////
+  	Do While Not rs.EOF
+		vHAWB=rs("hbol_num")
+		vMBOL=rs("mbol_num")
+		vShipperName=rs("shipper_name")
+		vShipperNo=rs("shipper_acct_num")
+		vShipperEmail=rs("owner_email")
+		vShipperSubject=rs("ci")
+		if Not LastShipper=vShipperName then
+			shIndex=0
+			aShipperHAWB(sIndex,shIndex)=vHAWB
+			aShipperName(sIndex)=vShipperName
+			if Edit="yes" then
+				aShipperHAWBCheck(sIndex,shIndex)="Y"
+			else
+				aShipperHAWBCheck(sIndex,shIndex)=Mid(objUpload("cShipperHAWBCheck" & sIndex & "," & shIndex).Value,1,1)
+			end if
+
+			aShipperHAWBIndex(sIndex)=shIndex
+			aShipperNo(sIndex)=vShipperNo
+			if Edit="yes" then
+				aShipperCheck(sIndex)="Y"
+				aShipperEmail(sIndex)=vShipperEmail
+				aShipperSubject(sIndex)="Notice: " & vFF & " " & vShipperSubject
+				aMAWBShipperCheck(sIndex)="Y"
+			else
+				aShipperCheck(sIndex)=Mid(objUpload("cShipperCheck" & sIndex).Value,1,1)
+				aShipperSubject(sIndex)=objUpload("txtShipperSubject" & sIndex).Value
+				aShipperSubject(sIndex)=Mid(aShipperSubject(sIndex),1,len(aShipperSubject(sIndex))-2)
+				aShipperEmail(sIndex)=objUpload("txtShipperEmail" & sIndex).Value
+				aShipperEmail(sIndex)=Mid(aShipperEmail(sIndex),1,len(aShipperEmail(sIndex))-2)
+				aShipperCC(sIndex)=objUpload("txtShipperCC" & sIndex).Value
+				aShipperCC(sIndex)=Mid(aShipperCC(sIndex),1,len(aShipperCC(sIndex))-2)
+				aShipperMSG(sIndex)=objUpload("txtShipperMSG" & sIndex).Value
+				aMAWBShipperCheck(sIndex)=Mid(objUpload("cMAWBShipperCheck" & sIndex).Value,1,1)
+			end if
+			LastShipper=vShipperName
+
+'get invoice
+			SQL= "select distinct invoice_no from invoice where elt_account_number = " & elt_account_number & " and MAWB_NUM = '" & vMBOL & "' and isnull(air_ocean,'') <> 'O' and customer_number='" & vShipperNo & "'"
+
+'			response.write SQL
+			rs1.Open SQL, eltConn, , , adCmdText
+			sIIndex=0
+
+			Do While Not rs1.EOF
+				aShipperInvoice(sIndex,sIIndex)=rs1("invoice_no")
+				if Edit="yes" then
+
+					aShipperInvoiceCheck(sIndex,sIIndex)="Y"
+				else
+					aShipperInvoiceCheck(sIndex,sIIndex)=Mid(objUpload("cShipperInvoiceCheck" & sIndex & "," & sIIndex).Value,1,1)
+				end if
+	                 sIIndex=sIIndex+1
+	                 rs1.MoveNext
+			Loop
+                 aShipperInvoiceIndex(sIndex)=sIIndex
+			rs1.close
+
+			sIndex=sIndex+1
+			shIndex=shIndex+1
+		else
+			if sIndex > 0 then
+			aShipperHAWB(sIndex-1,shIndex)=vHAWB
+			aShipperName(sIndex-1)=vShipperName
+			aShipperSubject(sIndex-1)=aShipperSubject(sIndex-1) & " " & vShipperSubject
+			if Edit="yes" then
+				aShipperHAWBCheck(sIndex-1,shIndex)="Y"
+			else
+				aShipperHAWBCheck(sIndex-1,shIndex)=Mid(objUpload("cShipperHAWBCheck" & sIndex-1 & "," & shIndex).Value,1,1)
+			end if
+			aShipperHAWBIndex(sIndex-1)=shIndex
+			shIndex=shIndex+1
+			end if
+		end if
+		rs.MoveNext
+	Loop
+	rs.close
+
+'///////////////////////////
+else
+'///////////////////////////
+
+		rs.close
+
+	SQL= "select MBOL_NUM,shipper_name,shipper_acct_num,booking_num from mbol_master where  elt_account_number = " & elt_account_number & " and  booking_num = '" & vMAWB & "' "
+		rs.Open SQL, eltConn, , , adCmdText
+		if not rs.EOF then
+			vShipperName=rs("shipper_name")
+			vMBOL = rs("MBOL_NUM")
+			
+			If IsNull(rs("shipper_acct_num")) Then
+			else
+			vShipperNo=rs("shipper_acct_num")
+			End if
+			rs.close
+		else
+			rs.close
+     		%> <script language='javascript'>alert('booking number'+ '<%=vMAWB%>' + ' has no MBOL info.');</script>
+     		<%
+                 exit sub
+		end if
+
+		if  len(vShipperNo) < 5  and  vShipperNo <> "" then
+			SQL= "select owner_email from organization where elt_account_number = " & elt_account_number & " and org_account_number = '" &  vShipperNo & "'"
+			rs.Open SQL, eltConn, , , adCmdText
+			if not rs.EOF then			
+				vShipperEmail=rs("owner_email")
+			end if	
+			rs.close
+			aShipperEmail(0) = vShipperEmail
+		else
+			vShipperEmail=""
+		end if
+		
+		if NOT	vMAWB = "" then
+		   Call Get_Invoice_For_MAWB(0,0)
+		end if
+		
+		sIndex=sIndex+1
+		shIndex=shIndex+1
+		aShipperName(0) = vShipperName
+		aShipperNo(0) = vShipperNo
+
+		aShipperCheck(0)="Y"
+		aShipperEmail(0)=vShipperEmail
+		aShipperSubject(0)="Notice: " & vFF & " " & vShipperSubject
+		aMAWBShipperCheck(0)="Y"
+		aShipperMAWB(0)=vMAWB
+		aMAWBShipperCheck(0)="Y"
+
+end if
+
+End Sub
+
+Sub Get_Invoice_For_MAWB(ssIndex,ssIIndex)
+
+  SQL= "select distinct invoice_no from invoice where elt_account_number = " & elt_account_number & " and air_ocean <> 'A' and mawb_num = '" & vMAWB &"' and customer_number=" & vShipperNo
+
+  rs1.Open SQL, eltConn, , , adCmdText
+
+  Do While Not rs1.EOF
+        aShipperInvoice(ssIndex,ssIIndex)=rs1("invoice_no")
+        if Edit="yes" then
+              aShipperInvoiceCheck(ssIndex,ssIIndex)="Y"
+        else
+              aShipperInvoiceCheck(ssIndex,ssIIndex)=Mid(objUpload("cShipperInvoiceCheck" & ssIndex & "," & ssIIndex).Value,1,1)
+        end if
+       ssIIndex=ssIIndex+1
+       rs1.MoveNext
+  Loop
+
+  aShipperInvoiceIndex(ssIndex)=ssIIndex
+  rs1.close
+
+End SUb
+
+Sub Get_Attached_File
+
+'update shipper file check status
+'	if Not aShipperNo(i) = ""  then
+		for i=0 to sIndex-1
+			SQL= "select file_checked from user_files where elt_account_number=" & elt_account_number & " and org_no=" & aShipperNo(i)
+			rs.Open SQL, eltConn, adOpenDynamic, adLockPessimistic, adCmdText
+			afIndex=0
+			Do while Not rs.EOF
+				vFileChecked=Mid(objUpload("cShipperFileCheck" & i & "," & afIndex).Value,1,1)
+				rs("file_checked")=vFileChecked
+				rs.Update
+				rs.MoveNext
+				afIndex=afIndex+1
+			loop
+			rs.Close
+		next
+'	end if
+
+'uploading file
+	if UP="yes" then
+		UpOrgNo=Request.QueryString("UpOrgNo")
+		if Not UpOrgNo="" then
+			UpFileName=objUpload.Fields("File" & UpOrgNo).FileName
+			SQL= "select * from user_files where elt_account_number =" & elt_account_number & " and org_no=" & UpOrgNo & " and file_name='" & UpFileName & "'"
+			rs.Open SQL, eltConn, adOpenDynamic, adLockPessimistic, adCmdText
+			If rs.EOF=true Then
+				rs.AddNew
+				rs("elt_account_number") = elt_account_number
+				rs("org_no") =UpOrgNo
+				rs("file_name") = UpFileName
+			end if
+			rs("file_size") = objUpload.Fields("File" & UpOrgNo).Length
+			rs("file_type") = objUpload.Fields("File" & UpOrgNo).ContentType
+			rs("file_content").AppendChunk objUpload("File" & UpOrgNo).BLOB & ChrB(0)
+			rs("file_checked")="Y"
+			rs("in_dt") = Now
+			rs.Update
+			rs.Close
+		end if
+	end if
+	if RM="yes" then
+		UpOrgNo=Request.QueryString("UpOrgNo")
+
+'//  by iMoon DEC/03/2006
+		dFileName=objUpload("hDeleteFileName").Value
+		dFileName=Mid(dFileName,1,len(dFileName)-2)
+'////////////////////////
+		
+		SQL= "delete from user_files where elt_account_number = " & elt_account_number & " and org_no=" & UpOrgNo & " and file_name='" & dFileName & "'"
+		eltConn.Execute SQL
+	end if
+
+' get shipper attached files
+'	if Not aShipperNo(i) = ""  then
+       for i=0 to sIndex-1
+         SQL= "select file_name,file_checked from user_files where elt_account_number=" & elt_account_number & " and org_no=" & aShipperNo(i)
+         rs.Open SQL, eltConn, , , adCmdText
+         sfIndex=0
+         Do while Not rs.EOF
+               vFileName=rs("file_name")
+               aShipperFileURL(i,sfIndex)="/ASP/include/viewfile.asp?OrgNo=" & aShipperNo(i) & "&FileName=" & vFileName
+               aShipperFileName(i,sfIndex)=vFileName
+               aShipperFileCheck(i,sfIndex)=rs("file_checked")
+               rs.MoveNext
+               sfIndex=sfIndex+1
+         loop
+         rs.Close
+         aShipperFileIndex(i)=sfIndex
+       Next
+'    End if
+End Sub
+
+'// Added by Joon on Dec-8-2006 ////////////////////////////////////////////////////////////////
+
+Function get_mawb_by_hawb(arg)
+
+    Dim resV
+    resV = ""
+    SQL = "select a.booking_num from ocean_booking_number a, hbol_master b where " _
+        & "a.elt_account_number = b.elt_account_number and " _
+        & "a.booking_num = b.booking_num and b.HBOL_NUM='" & arg & "' and " _
+        & "a.elt_account_number=" & elt_account_number & " group by a.booking_num"
+    rs.Open SQL, eltConn, , , adCmdText
+
+    If Not rs.EOF And Not rs.BOF Then
+        resV = rs("booking_num")
+    End If
+    rs.Close
+    
+    get_mawb_by_hawb = resV
+End Function
+
+'///////////////////////////////////////////////////////////////////////////////////////////////
+
+%>
+<body>
+<!-- tooltip placeholder -->
+<div id="tooltipcontent"></div>
+<!-- placeholder ends -->
+<form name="form1"  enctype="multipart/form-data">
+<table width="95%" border="0" align="center" cellpadding="2" cellspacing="0">
+  <tr>
+    <td width="60%" height="32" align="left" valign="middle" class="pageheader">Shipping Notice </td>
+    <td width="40%" align="right" valign="middle"><span class="bodyheader style1">FILE NO.</span>
+    <input name="txtJobNum" type=text class="lookup" size="22" value="Search Here" onFocus="javascript: this.value=''; this.style.color='#000000'; " onKeyPress="javascript: if(event.keyCode == 13) { lookupFile(); }">
+    <img src="../images/icon_search.gif" name="B1" width="33" height="27" align="absmiddle"  style="cursor:hand" onClick="lookupFile()" ></td>
+  </tr>
+</table>
+<div class="selectarea">
+    <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="62%" valign="bottom"><table border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td><span class="select">Select Master B/L No. or </span></td>
+                    <td>&nbsp;</td>
+                    <td><span class="select">House B/L No. </span></td>
+                </tr>
+                <tr>
+                    <td><!-- //Start of Combobox// -->	
+<%  iMoonDefaultValue = vMAWB %>						
+<%  iMoonComboBoxName =  "lstMAWB" %>
+<%  iMoonComboBoxWidth =  "160px" %>
+<script language="javascript"> function <%=iMoonComboBoxName%>_OnChangePlus() {	MAWBChange(); } </script>
+<div id="<%=iMoonComboBoxName%>_Container" class="ComboBox" style="width:<%=iMoonComboBoxWidth%>;POSITION:;TOP:;LEFT:;Z-INDEX:;"><input name="<%=iMoonComboBoxName%>:Text" type="text" id="<%=iMoonComboBoxName%>_Text" class="ComboBox" autocomplete="off" style="width:<%=iMoonComboBoxWidth%>;vertical-align:middle" value="<%=iMoonDefaultValue%>" tabindex="-1"/><div id="<%=iMoonComboBoxName%>_Div" style="display:none;position:absolute;top:0;left:0;width:17px"><img id="<%=iMoonComboBoxName%>_Button" src="/ig_common/Images/combobox_drop.gif" border="0" /></div></div><div id="<%=iMoonComboBoxName%>_NewDiv" style="display:none;position:absolute;top:0;left:0;width:17px"><img id="<%=iMoonComboBoxName%>_AddNewButton" src="/ig_common/Images/combobox_addnew.gif" border="0" /></div>
+<!-- /End of Combobox/ --><select name="lstMAWB" id="lstMAWB" listsize = "20" class="ComboBox" style="width: 160px;display:none" onChange="ComboBox_SimpleAttach(this, this.form['<%=iMoonComboBoxName%>_Text'])">
+                      <option value=0>Select One</option>
+                      <% for i=0 to mIndex-1 %>
+                      <option <% if vMAWB=aMAWB(i) then response.write("selected") %>><%= aMAWB(i) %></option>
+                      <% next %>
+                    </select>
+<!-- /End of Combobox/ --></td>
+                    <td>&nbsp;</td>
+                    <td><!-- //Start of Combobox// -->	
+<%  iMoonDefaultValue = "" %>						
+<%  iMoonComboBoxName =  "lstHAWB" %>
+<%  iMoonComboBoxWidth =  "160px" %>
+<script language="javascript"> function <%=iMoonComboBoxName%>_OnChangePlus() {	HAWBChange(); } </script>
+<div id="<%=iMoonComboBoxName%>_Container" class="ComboBox" style="width:<%=iMoonComboBoxWidth%>;POSITION:;TOP:;LEFT:;Z-INDEX:;"><input name="<%=iMoonComboBoxName%>:Text" type="text" id="<%=iMoonComboBoxName%>_Text" class="ComboBox" autocomplete="off" style="width:<%=iMoonComboBoxWidth%>;vertical-align:middle" value="<%=iMoonDefaultValue%>" tabindex="-1"/><div id="<%=iMoonComboBoxName%>_Div" style="display:none;position:absolute;top:0;left:0;width:17px"><img id="<%=iMoonComboBoxName%>_Button" src="/ig_common/Images/combobox_drop.gif" border="0" /></div></div><div id="<%=iMoonComboBoxName%>_NewDiv" style="display:none;position:absolute;top:0;left:0;width:17px"><img id="<%=iMoonComboBoxName%>_AddNewButton" src="/ig_common/Images/combobox_addnew.gif" border="0" /></div>
+<!-- /End of Combobox/ --><select name="lstHAWB" id="lstHAWB" listsize = "20" class="ComboBox" style="width: 160px;display:none" onChange="ComboBox_SimpleAttach(this, this.form['<%=iMoonComboBoxName%>_Text'])">
+                      <option value=0>Select One</option>
+                      <% for i=0 to hawb_list.count-1 %>
+                      <option <% if vHAWB=hawb_list(i) then response.write("selected") %>><%= hawb_list(i) %></option>
+                      <% next %>
+                    </select>
+<!-- /End of Combobox/ --></td>
+                </tr>
+            </table></td>
+            <td width="38%" align="right" valign="bottom">&nbsp;</td>
+        </tr>
+    </table>
+</div>
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="6D8C80" bgcolor="6D8C80" class="border1px" >
+  <tr>
+    <td>
+     
+			<input type=hidden name="hNoItem" value="<%= aIndex %>">
+			<input type=hidden name="hShipperNoItem" value="<%= sIndex %>">
+			<input type=hidden name="hExportAgent" value="<%= vFF %>">
+			<input type=hidden name="hShipperNo" value="<%= vShipperNo %>">
+			<input type=hidden name="hDeleteFileName">			
+        <table width="100%" border="0" cellpadding="2" cellspacing="0">
+
+          <tr bgcolor="BFD0C9">
+            <td height="24" colspan="6" align="center" valign="middle" bgcolor="BFD0C9" class="bodyheader"><span class="pageheader"><img src="../images/button_send_email.gif" width="101" height="18" name="bSend" onClick="SendClick()"  style="cursor:hand"></span></td>
+          </tr>
+		            <tr bgcolor="6D8C80">
+            <td colspan="6" height="1" align="left" valign="top" class="bodyheader"></td>
+          </tr>
+		  
+          <tr align="center" valign="middle" bgcolor="E0EDE8">
+            <td height="24" colspan="6" align="center" bgcolor="#f3f3f3" class="bodyheader"><br>
+                <br>
+                    <table width="65%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td width="54%" height="28" align="left" valign="middle" class="bodyheader style1"><span class="bodycopy"><span class="goto"><img src="/ASP/Images/icon_email_history.gif" align="absbottom"><a href="javascript:;" onClick="ShowEmailHistory()">View Email History</a></span></span></td>
+                            <td width="46%" align="right" valign="middle" class="bodyheader"><img src="/ASP/Images/required.gif" align="absbottom">Required field</td>
+                        </tr>
+                    </table>
+              <table width="65%" border="0" cellpadding="2" cellspacing="0" bordercolor="6D8C80" bgcolor="edd3cf" class="border1px">
+<!-- duplicated function                
+				<tr align="left" valign="middle" bgcolor="E0EDE8">
+                  <td align="left" valign="middle" class="bodycopy">&nbsp;</td>
+                  <td align="left" valign="middle" class="bodyheader">Ocean 
+                  Booking No.</td>
+                  <td align="left" valign="middle" class="bodycopy"><input name="txtSMAWB" type=text class="shorttextfield" tabindex=1 size="19">
+                  <font color="#333333" size="2"><strong><font size="2"><img src="../images/button_search.gif" name="B1" align="absmiddle" onClick="lookup()"  style="cursor:hand"></font></strong></font></td>
+                  <td align="left" valign="middle" class="bodycopy">&nbsp;</td>
+                  <td align="left" valign="middle" class="bodycopy">&nbsp;</td>
+                </tr>
+-->				
+                
+<!-- modified by Joon on Dec-8-2006 --->                
+                
+<!-- End of modified by Joon on Dec-8-2006 --->    
+                <tr align="left" valign="middle" bgcolor="#E0EDE8">
+                    <td width="3" align="left" valign="middle" class="bodycopy">&nbsp;</td>
+                    <td width="725" height="20" colspan="3" align="left" valign="middle" class="bodyheader">Your Name</td>
+                </tr>
+                <tr align="left" valign="middle" bgcolor="#FFFFFF">
+                  <td align="left" valign="middle" bgcolor="#FFFFFF" class="bodycopy">&nbsp;</td>
+                  <td colspan="3" align="left" valign="middle" bgcolor="#FFFFFF" class="bodycopy">
+                    <input name="txtYourName" class="shorttextfield" value="<%= vYourName %>" size="28"></td>
+                </tr>
+                <tr align="left" valign="middle" bgcolor="#E0EDE8">
+                    <td height="20" align="left" valign="middle" class="bodycopy">&nbsp;</td>
+                    <td height="20" colspan="3" align="left" valign="middle" class="bodyheader">From</td>
+                </tr>
+                <tr align="left" valign="middle" bgcolor="#F3f3f3">
+                  <td align="left" valign="middle" bgcolor="#FFFFFF" class="bodycopy">&nbsp;</td>
+                  <td colspan="3" align="left" valign="middle" bgcolor="#FFFFFF" class="bodycopy">
+                    <input name="txtYourEmail" type="text" class="shorttextfield" value="<%= vYourEmail %>" size="45">
+                    <select name="lstFileNo" size="1" class="smallselect" style="width: 150px; visibility:hidden" >
+                      <option value=0></option>
+                      <% for i=0 to mIndex-1 %>
+                      <option><%= aFileNo(i) %></option>
+                      <% next %>
+                    </select></td>
+                </tr>
+              </table>
+              <br> </td>
+        </table>
+          <input type=hidden name="hMBOL" value="<%=vMBOL%>">
+          <input type=hidden id="AgentCheck">
+          <input type=hidden id="hHAWBIndex">
+          <input type=hidden id="InvoiceCheck">
+          <input type=hidden id="STMTCheck">
+          <input type=hidden id="ManifestCheck">
+          <input type=hidden id="MAWBAgentCheck">
+          <input type=hidden id="hAgentFileIndex">
+          <input type=hidden id="OnlineAlertCheck">
+        <table width="100%" border="0" cellpadding="2" cellspacing="0" class="bodycopy">
+          <input name="hidden" type=hidden id="ShipperCheck">
+          <input name="hidden" type=hidden id="hShipperHAWBIndex">
+          <input name="hidden" type=hidden id="hShipperInvoiceIndex">
+          <input name="hidden" type=hidden id="hShipperMAWBIndex">
+          <input name="hidden" type=hidden id="MAWBShipperCheck">
+          <input name="hidden" type=hidden id="hShipperFileIndex">
+          <% for i=0 to sIndex-1 %>
+          <tr>
+            <td width="50" height="1" align="left" valign="middle" bgcolor="#6D8C80" class="bodycopy"></td>
+            <td width="67" align="left" valign="middle" class="bodycopy"></td>
+            <td width="189" align="left" valign="middle" class="bodycopy"></td>
+            <td width="178" align="left" valign="middle" class="bodycopy"></td>
+            <td colspan="2" align="left" valign="middle" class="bodycopy"></td>
+          </tr>
+          <tr>
+            <td colspan="8" height="1" align="center" valign="middle" bgcolor="#6D8C80"></td>
+          </tr>
+          <tr bgcolor="#FFFFFF">
+            <td align="center" valign="middle"> <input type="checkbox" id="ShipperCheck" name="cShipperCheck<%= i %>" value="Y" <% if aShipperCheck(i)="Y" then response.write("checked") %> onClick="ShipperCheckClick(<%= i %>)"></td>
+            <td align="left" valign="middle">Shipper</td>
+            <td colspan="6" height="20" align="left" valign="middle"><input name="hShipperNo<%= i %>" type=hidden value="<%= aShipperNo(i) %>">
+              <input name="txtShipperName<%= i %>" type="text" class="shorttextfield" value="<%= aShipperName(i) %>" size="58"></td>
+          </tr>
+          <tr align="left" bgcolor="#F3f3f3">
+              <td valign="middle">&nbsp;</td>
+              <td align="left" valign="middle" bgcolor="#F3f3f3" class="bodyheader"><img src="/ASP/Images/required.gif" align="absbottom">TO</td>
+              <td colspan="6" align="left" valign="middle"><input name="txtShipperEmail<%= i %>" type="text" class="shorttextfield" value="<%= aShipperEmail(i) %>" size="58"></td>
+          </tr>
+          
+          <tr align="left">
+            <td valign="middle" bgcolor="#FFFFFF">&nbsp;</td>
+            <td align="left" valign="middle" bgcolor="#FFFFFF">CC</td>
+            <td colspan="6" align="left" valign="middle" bgcolor="#FFFFFF"><input name="txtShipperCC<%= i %>" type="text" class="shorttextfield" value="<%= aShipperCC(i) %>" size="58"></td>
+          </tr>
+          <tr align="left" bgcolor="#F3f3f3">
+            <td valign="middle" bgcolor="#f3f3f3">&nbsp;</td>
+            <td align="left" valign="middle" bgcolor="#f3f3f3" class="bodyheader">Subject</td>
+            <td colspan="6" align="left" valign="middle" bgcolor="#f3f3f3"><input name="txtShipperSubject<%= i %>" type="text" class="shorttextfield" value="<%=  aShipperSubject(i) %>" size="58"></td>
+          </tr>
+          <input type=hidden id="hShipperInvoiceIndex" name="hShipperInvoiceIndex<%= i %>" value="<%= aShipperInvoiceIndex(i) %>">
+          <input name="hidden" type=hidden id="ShipperInvoiceCheck<%= i %>">
+          <input type=hidden id="hShipperHAWBIndex" name="hShipperHawbIndex<%= i %>" value="<%= aShipperHAWBIndex(i) %>">
+          <input name="hidden" type=hidden id="ShipperHAWBCheck<%= i %>">
+          <% for j=0 to aShipperHAWBIndex(i) step 4%>
+			  
+			  <tr align="left" bgcolor="#FFFFFF">
+				<td valign="middle" bgcolor="#f3f3f3">&nbsp;</td>
+				<td align="left" valign="middle" bgcolor="#f3f3f3">&nbsp;</td>
+				<td width="189" align="left" valign="middle" bgcolor="#f3f3f3"><em>
+				  <% if aShipperHAWB(i,j) = "" then%>
+				  <%else%>
+				  <input type=checkbox id="ShipperHAWBCheck<%= i %>" name="cShipperHAWBCheck<%= i %>,<%= j %>" value="Y" <% if aShipperHAWBCheck(i,j)="Y" then response.write("checked") %>>
+              <font color="#CC3300">HBOL:</font><a href= "javascript:void(viewPop('hbol_pdf.asp?hbol=<%= aShipperHAWB(i,j) %>&Copy=SHIPPER'));"><%= aShipperHAWB(i,j) %></a>			  
+              <%end if%>
+              </em></td>
+				<td width="178" align="left" valign="middle" bgcolor="#f3f3f3"><em>
+				  <% if aShipperHAWB(i,j+1) = "" then%>
+				  <%else%>
+				  <input type=checkbox id="ShipperHAWBCheck<%= i %>" name="cShipperHAWBCheck<%= i %>,<%= j+1 %>" value="Y" <% if aShipperHAWBCheck(i,j+1)="Y" then response.write("checked") %>>
+				  <a href= "javascript:void(viewPop('hbol_pdf.asp?hbol=<%= aShipperHAWB(i,j+1) %>&Copy=SHIPPER'));"><%= aShipperHAWB(i,j+1) %></a>
+				  <%end if%>
+				  </em></td>
+				<td width="184" align="left" valign="middle" bgcolor="#f3f3f3"><em>
+				  <% if aShipperHAWB(i,j+2) = "" then%>
+				  <%else%>
+				  <input type=checkbox id="ShipperHAWBCheck<%= i %>" name="cShipperHAWBCheck<%= i %>,<%= j+2 %>" value="Y" <% if aShipperHAWBCheck(i,j+2)="Y" then response.write("checked") %>>
+				  <a href= "javascript:void(viewPop('hbol_pdf.asp?hbol=<%= aShipperHAWB(i,j+2) %>&Copy=SHIPPER'));"><%= aShipperHAWB(i,j+2) %></a>
+				  <%end if%>
+				  </em></td>
+				<td width="460" colspan="3" align="left" valign="middle" bgcolor="#f3f3f3"><em>
+				  <% if aShipperHAWB(i,j+3) = "" then%>
+				  <%else%>
+				  <input type=checkbox id="ShipperHAWBCheck<%= i %>" name="cShipperHAWBCheck<%= i %>,<%= j+3 %>" value="Y" <% if aShipperHAWBCheck(i,j+3)="Y" then response.write("checked") %>>
+				  <a href= "javascript:void(viewPop('hbol_pdf.asp?hbol=<%= aShipperHAWB(i,j+3) %>&Copy=SHIPPER'));"><%= aShipperHAWB(i,j+3) %></a>
+				  <%end if%>
+				  </em></td>
+			  </tr>
+          <% next %>
+
+          <% for j=0 to aShipperInvoiceIndex(i) step 4%>
+			  <tr align="left" bgcolor="#FFFFFF">
+				<td valign="middle" bgcolor="#f3f3f3">&nbsp;</td>
+				<td align="left" valign="middle" bgcolor="#f3f3f3">&nbsp;</td>
+				<td width="189" align="left" valign="middle" bgcolor="#f3f3f3"><em>
+				  <% if aShipperInvoice(i,j) = "" then%>
+				  <%else%>
+				  <input type=checkbox id="ShipperInvoiceCheck<%= i %>" name="cShipperInvoiceCheck<%= i %>,<%= j %>" value="Y" <% if aShipperInvoiceCheck(i,j)="Y" then response.write("checked") %>>
+				  <font color="#CC3300">Invoice:</font><a href="javascript:void(viewPop('../acct_tasks/invoice_pdf.asp?InvoiceNo=<%= aShipperInvoice(i,j) %>'));"><%= aShipperInvoice(i,j) %></a>
+				  <%end if%>
+				  </em></td>
+				<td width="178" align="left" valign="middle" bgcolor="#f3f3f3"><em>
+				  <% if aShipperInvoice(i,j+1) = "" then%>
+				  <%else%>
+				  <input type=checkbox id="ShipperInvoiceCheck<%= i %>" name="cShipperInvoiceCheck<%= i %>,<%= j +1%>" value="Y" <% if aShipperInvoiceCheck(i,j+1)="Y" then response.write("checked") %>>
+				  <font color="#FF0000"></font><a href="javascript:void(viewPop('../acct_tasks/invoice_pdf.asp?InvoiceNo=<%= aShipperInvoice(i,j+1) %>'));"><%= aShipperInvoice(i,j+1) %></a>
+				  <%end if%>
+				  </em></td>
+				<td width="184" align="left" valign="middle" bgcolor="#f3f3f3"><em>
+				  <% if aShipperInvoice(i,j+2) = "" then%>
+				  <%else%>
+				  <input type=checkbox id="ShipperInvoiceCheck<%= i %>" name="cShipperInvoiceCheck<%= i %>,<%= j +2%>" value="Y" <% if aShipperInvoiceCheck(i,j+2)="Y" then response.write("checked") %>>
+				  <font color="#FF0000"></font><a href="javascript:void(viewPop('../acct_tasks/invoice_pdf.asp?InvoiceNo=<%= aShipperInvoice(i,j+2) %>'));"><%= aShipperInvoice(i,j+2) %></a>
+				  <%end if%>
+				  </em></td>
+				<td colspan="3" align="left" valign="middle" bgcolor="#f3f3f3"><em>
+				  <% if aShipperInvoice(i,j+3) = "" then%>
+				  <%else%>
+				  <input type=checkbox id="ShipperInvoiceCheck<%= i %>" name="cShipperInvoiceCheck<%= i %>,<%= j +3%>" value="Y" <% if aShipperInvoiceCheck(i,j+3)="Y" then response.write("checked") %>>
+				  <font color="#FF0000"></font><a href="javascript:void(viewPop('../acct_tasks/invoice_pdf.asp?InvoiceNo=<%= aShipperInvoice(i,j+3) %>'));"><%= aShipperInvoice(i,j+3) %></a>
+				  <%end if%>
+				  </em></td>
+			  </tr>
+          <% next %>
+
+          <tr align="left" bgcolor="#FFFFFF">
+            <td valign="middle" bgcolor="#FFFFFF">&nbsp;</td>
+            <td align="left" valign="middle" bgcolor="#FFFFFF">Attach Files </td>
+            <td colspan="6" align="left" valign="middle" bgcolor="#FFFFFF"> <input type="File" name="File<%= aShipperNo(i) %>" size=50 onKeyDown="return false;">
+              &nbsp;&nbsp;&nbsp; <img src="../images/button_upload.gif" width="95" height="18" name="txtUpload" onClick="UpLoadClick(<%= aShipperNo(i) %>)"  style="cursor:hand">
+              <% if mode_begin then %>
+              <div style="width:21px; display:inline; vertical-align:text-bottom" onMouseOver="showtip('Click Browse to find the fine on your local computer, and click Attach Files to add it to the email.  This is useful for documents such as packing lists and commercial invoices.')";
+onMouseOut="hidetip()"><img src="../Images/button_info.gif" align="bottom" class="bodylistheader"></div>
+              <% end if %></td>
+          </tr>
+          <input name="hidden" type=hidden id="ShipperFileCheck<%= i %>">
+          <input type=hidden id="hShipperFileIndex" name="hShipperFileIndex<%= i %>" value="<%= aShipperFileIndex(i) %>">
+          <% for j=0 to aShipperFileIndex(i)-1 step 4%>
+          <tr align="left" bgcolor="#FFFFFF">
+            <td valign="middle" bgcolor="#FFFFFF">&nbsp;</td>
+            <td align="left" valign="middle" bgcolor="#FFFFFF">&nbsp;</td>
+            <td colspan="2" align="left" valign="middle" bgcolor="#FFFFFF"><em>
+                    <input type=checkbox id="ShipperFileCheck<%= i %>" name="cShipperFileCheck<%= i %>,<%= j %>" value="Y" <% if aShipperFileCheck(i,j)="Y" then response.write("checked") %>><font color="#CC3300">Attachment 1:</font>
+                    <a href= "javascript:void(viewPop('<%= aShipperFileURL(i,j) %>'));"><%= aShipperFileName(i,j) %></a><img src="../Images/spacer.gif" width="10" height="8"><img src="../images/button_delete.gif" align="absbottom" onClick="DeleteFile(<%= aShipperNo(i) %>,'<%= aShipperFileName(i,j) %>')"  style="cursor:hand"></em></td>
+            <td colspan="4" align="left" valign="middle" bgcolor="#FFFFFF" class="bodycopy"><em>
+                <% if aShipperFileName(i,j+1) = "" then%>
+                <%else%>
+                <input type=checkbox id="ShipperFileCheck<%= i %>" name="cShipperFileCheck<%= i %>,<%= j+1 %>" value="Y" <% if aShipperFileCheck(i,j+1)="Y" then response.write("checked") %>><font color="#CC3300">Attachment 2:</font>
+                <a href= "javascript:void(viewPop('<%= aShipperFileURL(i,j+1) %>'));"><%= aShipperFileName(i,j+1) %></a><img src="../Images/spacer.gif" width="10" height="8"><img src="../images/button_delete.gif" align="absbottom" onClick="DeleteFile(<%= aShipperNo(i) %>,'<%= aShipperFileName(i,j+1) %>')"  style="cursor:hand">
+                <%end if%>
+            </em></td>
+            </tr>
+          <tr align="left" bgcolor="#FFFFFF">
+              <td valign="middle" bgcolor="#FFFFFF">&nbsp;</td>
+              <td align="left" valign="middle" bgcolor="#FFFFFF">&nbsp;</td>
+              <td colspan="2" align="left" valign="middle" bgcolor="#FFFFFF"><em>
+                  <% if aShipperFileName(i,j+2) = "" then%>
+                  <%else%>
+                  <input type=checkbox id="ShipperFileCheck<%= i %>" name="cShipperFileCheck<%= i %>,<%= j+2 %>" value="Y" <% if aShipperFileCheck(i,j+2)="Y" then response.write("checked") %>><font color="#CC3300">Attachment 3:</font>
+                  <a href= "javascript:void(viewPop('<%= aShipperFileURL(i,j+2) %>'));"><%= aShipperFileName(i,j+2) %></a><img src="../Images/spacer.gif" width="10" height="8"><img src="../images/button_delete.gif" align="absbottom" onClick="DeleteFile(<%= aShipperNo(i) %>,'<%= aShipperFileName(i,j+2) %>')"  style="cursor:hand">
+                  <%end if%>
+              </em></td>
+              <td colspan="4" align="left" valign="middle" bgcolor="#FFFFFF" class="bodycopy"><em>
+                  <% if aShipperFileName(i,j+3) = "" then%>
+                  <%else%>
+                  <input type=checkbox id="ShipperFileCheck<%= i %>" name="cShipperFileCheck<%= i %>,<%= j+3 %>" value="Y" <% if aShipperFileCheck(i,j+3)="Y" then response.write("checked") %>><font color="#CC3300">Attachment 4:</font>
+                  <a href= "javascript:void(viewPop('<%= aShipperFileURL(i,j+3) %>'));"><%= aShipperFileName(i,j+3) %></a><img src="../Images/spacer.gif" width="10" height="8"><img src="../images/button_delete.gif" align="absbottom" onClick="DeleteFile(<%= aShipperNo(i) %>,'<%= aShipperFileName(i,j+3) %>')"  style="cursor:hand">
+                  <%end if%>
+              </em></td>
+              </tr>
+          <% next %>
+          <tr align="left">
+            <td height="20" valign="middle" bgcolor="#f3f3f3">&nbsp;</td>
+            <td colspan="7" align="left" valign="top" bgcolor="#f3f3f3" class="bodyheader">Message<br>
+                <textarea name="txtShipperMSG<%= i %>" cols="100" rows="3" class="multilinetextfield"><%= aShipperMSG(i) %></textarea></td>
+            </tr>
+          
+          
+          <% next %>
+        </table>
+        <table width="100%" border="0" cellpadding="2" cellspacing="0">
+          <tr>
+            <td height="1" colspan="6" align="left" valign="middle" bgcolor="#6D8C80" class="bodycopy"></td>
+          </tr>
+		  <tr>
+            <td height="24" align="center" valign="middle" bgcolor="BFD0C9"><img src="../images/button_send_email.gif" width="101" height="18" name="bSend" onClick="SendClick()"  style="cursor:hand"></td>
+         </tr>
+        </table>
+      
+    </td>
+  </tr>
+</table>
+</form>
+</body>
+
+<script language=VBscript>
+
+// Add search function 7/11/2006
+
+/////////////////////////////
+Sub Lookup()
+/////////////////////////////
+DIM mIndex,existMAWB,MAWB
+ mIndex = "<%=mIndex%>"
+	MAWB=UCase(document.form1.txtSMAWB.value)
+
+	if NOT TRIM(MAWB) = "" then
+		existMAWB = false
+		For i=0 to mIndex
+			if MAWB = UCase(document.form1.lstMAWB.item(i).text) then
+				existMAWB = true
+				exit for
+			end if
+		Next	
+		
+		if existMAWB then
+				document.form1.lstMAWB.selectedIndex = i
+				document.form1.action="shipping_notice.asp?Edit=yes&rMAWB="& document.form1.txtSMAWB.value & "&WindowName=" & window.name
+				document.form1.txtsMAWB.value = ""
+				document.form1.method="POST"
+				document.form1.target = "_self"
+				form1.submit()
+		else
+				msgbox "MAWB # " & document.form1.txtSMAWB.value & " does not exist."
+		end if		
+	END IF
+End Sub
+
+/////////////////////////////
+Sub LookupFile()
+/////////////////////////////
+DIM mIndex, existMJob, JobNo, mFile,sIndex,MAWB,fileno
+
+mIndex = "<%=mIndex%>"
+    fileno=document.form1.txtJobNum.value 
+	JobNo=UCase(document.form1.txtJobNum.value)
+	if NOT TRIM(JobNo) = "" and NOT fileno = "Search Here" then
+		existMJob = false
+		For i=0 to mIndex
+			if Trim(Replace(JobNo,"-","")) = Trim(Replace(UCase(document.form1.lstFileNo.item(i).text),"-","")) then
+				existMJob = true
+				MAWB = document.form1.lstMAWB.item(i).text
+				exit for
+			end if
+		Next	
+	
+		if existMJob then
+				document.form1.txtJobNum.value = ""
+				document.form1.lstMAWB.selectedIndex = i
+				document.form1.action="shipping_notice.asp?Edit=yes&rMAWB="& MAWB & "&WindowName=" & window.name
+				document.form1.method="POST"
+				document.form1.target = "_self"
+				form1.submit()
+		else
+				msgbox "File # " & document.form1.txtJobNum.value & " does not exist."
+		end if
+	else
+	        msgbox "Please enter a File No!"	
+	end if	
+End Sub
+///////////////////////////////////// by ig
+Sub SendClick()
+if document.form1.txtYourEmail.value = "" then
+	msgbox "Please enter your email address!"
+	exit sub
+end if
+
+if document.form1.txtYourName.value = "" then
+	msgbox "Please enter your name!"
+	exit sub
+end if
+
+tmpIndex =  "<%= sIndex %>"
+if tmpIndex = "" then 
+	MsgBox "Please check at least one item."
+	Exit sub
+End If
+Mail_Due = 0
+For iii = 0 To tmpIndex-1
+	If document.all("ShipperCheck").item(iii+1).checked=True Then
+        If document.all("txtShipperEmail" & iii).value = "" Then
+	        MsgBox "Please, enter recipient's email address."
+	        Exit Sub
+	    Else
+		    Mail_Due = Mail_Due + 1
+		End If
+	End if
+Next
+if Mail_Due = 0 Then
+	MsgBox "Please check at least one item."
+	Exit sub
+End If
+
+ParamH = Mail_Due * 20 + 120
+
+jPopUp(ParamH)
+if  document.all("hShipperHAWBIndex").item(1).Value = "" then
+	document.form1.action= "shipping_noticeOK.asp?Send=yes&EMPHAWB=yes"
+else
+	document.form1.action= "shipping_noticeOK.asp?Send=yes"
+end If
+	document.form1.method="post"
+	document.form1.target="popUpWindow"
+	form1.submit()
+End Sub
+
+///////////////////////////////////// by ig
+
+Sub MAWBChange()
+    '// If document.form1.lstMAWB.selectedindex > 0 then
+    document.form1.target="_self"
+    document.form1.action="shipping_notice.asp?Edit=yes&rMAWB="& (document.form1.lstMAWB.item(document.form1.lstMAWB.selectedindex).Text)
+    document.form1.method="post"
+    form1.submit()
+    '// End if
+End Sub
+
+/// added by Joon on Dec-08-2006 /////////////////////////////////////
+
+Sub HAWBChange()
+    '// If document.form1.lstHAWB.selectedindex > 0 then
+    document.form1.lstMAWB.value = ""
+    document.form1.action="shipping_notice.asp?Edit=yes"
+    document.form1.method="post"
+    document.form1.target="_self"
+    form1.submit()
+    '// End if
+End Sub
+
+///////////////////////////////////////////////////////////////////////
+
+Sub ShipperCheckClick(m)
+
+	NoItem=document.all("hShipperHAWBIndex").item(m+1).Value
+	NoIVItem=document.all("hShipperInvoiceIndex").item(m+1).Value
+	NoFile=document.all("hShipperFileIndex").item(m+1).Value
+
+if document.all("ShipperCheck").item(m+1).checked=True then
+
+	if  document.all("hShipperHAWBIndex").item(m+1).Value = "" then
+	    If document.getElementsbyTagName("MAWBShipperCheck").length > 0 Then
+		    document.all("MAWBShipperCheck").item(m+1).checked=True
+		End If
+     end if
+
+     if Not NoItem = "" then
+	     for i=0 to NoItem
+	           if  not document.all("hShipperHAWBIndex").item(m+1).Value = ""  then
+	                 document.all("ShipperHAWBCheck" & m).item(i+1).checked=True
+	           end if
+	     next
+     end if
+
+     if Not NoIVItem = "" then
+	     for i=0 to NoIVItem-1
+	           if  not document.all("hShipperInvoiceIndex").item(m+1).Value = ""  then
+	                 document.all("ShipperInvoiceCheck" & m).item(i+1).checked=True
+	           end if
+	     next
+	End if
+
+	for i=0 to NoFile-1
+		document.all("ShipperFileCheck" & m).item(i+1).checked=True
+	next
+
+else
+	if  document.all("hShipperHAWBIndex").item(m+1).Value = "" then
+	    If document.getElementsbyTagName("MAWBShipperCheck").length > 0 Then
+		    document.all("MAWBShipperCheck").item(m+1).checked=False
+		End If
+     end if
+
+     if Not NoItem = "" then
+	     for i=0 to NoItem
+	           if  not document.all("hShipperHAWBIndex").item(m+1).Value = ""  then
+	                 document.all("ShipperHAWBCheck" & m).item(i+1).checked=False
+	           end if
+	     next
+     end if
+
+     if Not NoIVItem = "" then
+	     for i=0 to NoIVItem-1
+	           if  not document.all("hShipperInvoiceIndex").item(m+1).Value = ""  then
+	                 document.all("ShipperInvoiceCheck" & m).item(i+1).checked=False
+	           end if
+	     next
+	end if
+
+	for i=0 to NoFile-1
+		document.all("ShipperFileCheck" & m).item(i+1).checked=False
+	next
+end if
+end Sub
+
+Sub UploadClick(OrgNo)
+
+	if Not OrgNo="" then
+		if document.all("File" & OrgNo).Value="" then
+			MsgBox "Please select a file to upload!"
+			exit Sub
+		end if
+		document.form1.action="shipping_notice.asp?UP=yes&UpOrgNo=" & OrgNo
+		document.form1.method="POST"
+		document.form1.target="_self"
+		form1.submit()
+	end if
+End Sub
+Sub DeleteFile(OrgNo, dFileName)
+
+// by iMoon DEC/01/2006 /////////////////////////////////
+		document.form1.hDeleteFileName.value = dFileName
+/////////////////////////////////////////////////////////
+
+		document.form1.action="shipping_notice.asp?RM=yes&UpOrgNo=" & OrgNo & "&dFileName=" & dFileName
+		document.form1.method="POST"
+		document.form1.target="_self"
+		form1.submit()
+End Sub
+Sub MenuMouseOver()
+  document.form1.lstMAWB.style.visibility="hidden"
+End Sub
+Sub MenuMouseOut()
+  document.form1.lstMAWB.style.visibility="visible"
+End Sub
+
+Sub ShowEmailHistory()
+
+    jPopUpNormal()
+	document.form1.action= "../../ASPX/MISC/EmailHistory.aspx?title=Shipping Notice&ao=O&ie=E"
+	document.form1.method="post"
+	document.form1.target="popUpWindow"
+	form1.submit()
+	
+End Sub
+</script>
+<!-- //for Tooltip// -->
+<script language="JavaScript" type="text/javascript" src="../include/tooltips.js"></script>
+<!--  #INCLUDE FILE="../include/StatusFooter.asp" -->
+</html>

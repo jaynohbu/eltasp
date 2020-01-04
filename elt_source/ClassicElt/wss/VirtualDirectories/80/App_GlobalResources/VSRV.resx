@@ -1,0 +1,3667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!--Service strings-->
+  <data name="VisioServiceApplicationName">
+    <value>Visio Web Access</value>
+    <comment>LOC_RESTRICTION_APP_SERVICE_NAME {InvalidChars="/\\[]:|+=;,?*@"}</comment>
+  </data>
+  <data name="VisioGraphicsServiceWebApplicationName">
+    <value>Visio Graphics Service</value>
+    <comment>The name that is displayed in the Sharepoint farm config wizard for Visio service. This is also used in the admin user interface. LOC_RESTRICTION_APP_SERVICE_NAME {InvalidChars="/\\[]:|+=;,?*@"}</comment>
+  </data>
+  <data name="VisioGraphicsServiceDescription">
+    <value>Enables viewing and refreshing of Visio Web Drawings.</value>
+    <comment>The description that is displayed in the Sharepoint farm config wizard for Visio service.</comment>
+  </data>
+  <data name="VisioGraphicsServiceApplicationName">
+    <value>Visio Graphics Service Application</value>
+    <comment>The name that is displayed in the Sharepoint farm config wizard for Visio service. This is also used in the admin user interface. LOC_RESTRICTION_APP_SERVICE_NAME {InvalidChars="/\\[]:|+=;,?*@"}</comment>
+  </data>
+  <data name="VisioGraphicsServiceApplicationProxyName">
+    <value>Visio Graphics Service Application Proxy</value>
+    <comment>The name that is displayed in the Sharepoint farm config wizard for Visio service. This is also used in the admin user interface. LOC_RESTRICTION_APP_SERVICE_NAME {InvalidChars="/\\[]:|+=;,?*@"}</comment>
+  </data>
+  <data name="VisioGraphicsServiceProxyName">
+    <value>Visio Graphics Service Proxy</value>
+    <comment>The name that is displayed in the Sharepoint Central Administration, Manage Service Application, Connect Dropdown.</comment>
+  </data>
+  <data name="VisioGraphicsServiceProxyDescription">
+    <value>Connects to the Visio Graphics Web Service.</value>
+    <comment>The description that is displayed in the Sharepoint Central Administration, Manage Service Application, Connect Dropdown.</comment>
+  </data>
+  <!-- End Service strings-->
+
+  <!--Web part strings-->
+  <data name="VisioWebAccess">
+    <value>Visio Web Access</value>
+    <comment>The title of the html page that opens when a .VDW file is viewed in the web browser {MaxLength="128"}</comment>
+  </data>
+  <data name="HyperlinksPaneTitle" xml:space="preserve">
+    <value>Hyperlinks</value>
+    <comment>The sub-title in the Shape Info Pane under which shape hyperlinks are displayed</comment>
+  </data>
+  <data name="ShapeInfoPaneTitle" xml:space="preserve">
+    <value>Shape Information</value>
+    <comment>The title of the Shape Info Pane under which shape hyperlinks and shape data are displayed</comment>
+  </data>
+  <data name="ShapeInfoEmptyText" xml:space="preserve">
+    <value>Select a shape to view its associated hyperlinks and data.</value>
+    <comment>The text displayed when the shape info pane is visible but no shape is selected.</comment>
+  </data>
+  <data name="ShapeInfoNoHyperlinks" xml:space="preserve">
+    <value>No hyperlinks.</value>
+    <comment>The text displayed in the shape info pane when the selected shape does not have associated hyperlinks.</comment>
+  </data>
+  <data name="ShapeInfoNoData" xml:space="preserve">
+    <value>No shape data.</value>
+    <comment>The text displayed in the shape info pane when the selected shape does not have associated data.</comment>
+  </data>
+  <data name="OpenInVisioButtonText" xml:space="preserve">
+    <value>Open in Visio</value>
+    <comment>Button displayed on the toolbar in the web part</comment>
+  </data>
+  <data name="OpenInVisioButtonTooltipText" xml:space="preserve">
+    <value>Open this Web Drawing in Visio</value>
+    <comment>Tooltip displayed when hovering over the Open In Visio button in the web part</comment>
+  </data>
+  <data name="CloseButtonTooltipText" xml:space="preserve">
+    <value>Close</value>
+    <comment>Tooltip displayed when hovering over a Close button.</comment>
+  </data>
+  <data name="PageControlText" xml:space="preserve">
+    <value>Page:</value>
+    <comment>The label of the Page dropdown list. This label is immediately followed by a drop down list showing the page names</comment>
+  </data>
+  <data name="PageControlTooltipText" xml:space="preserve">
+    <value>Select the page to be displayed</value>
+    <comment>Tooltip displayed when hovering over the Page dropdown list in the webpart toolbar.</comment>
+  </data>
+  <data name="RefreshButtonText" xml:space="preserve">
+    <value>Refresh</value>
+    <comment>Button displayed on the toolbar in the web part</comment>
+  </data>
+  <data name="RefreshButtonTooltipText" xml:space="preserve">
+    <value>Refresh the current page</value>
+    <comment>Tooltip displayed when hovering over the Refresh button in the web part</comment>
+  </data>
+  <data name="ShapeInfoButtonTooltipText" xml:space="preserve">
+    <value>Toggle the visibility of the shape information pane.</value>
+    <comment>Tooltip displayed when hovering over the ShapeInfo toggle button in the web part</comment>
+  </data>
+  <data name="ResizeGripTooltipText" xml:space="preserve">
+    <value>Resize the shape information pane</value>
+    <comment>Tooltip displayed when hovering over the resize handles of the shape info pane in the webpart</comment>
+  </data>
+  <data name="ShapeDataPaneTitle" xml:space="preserve">
+    <value>Shape Data</value>
+    <comment>Title of the shape info pane in the webpart</comment>
+  </data>
+  <data name="StatusReady" xml:space="preserve">
+    <value>Ready</value>
+    <comment>Ready text for status bar.</comment>
+  </data>
+  <data name="ErrorScriptManagerMustExist" xml:space="preserve">
+    <value>A ScriptManager control must exist on the current page.</value>
+    <comment>Error message shown if the web page with the VWA web part does not have a ScriptManager control.</comment>
+  </data>
+  <data name="RetryButtonText" xml:space="preserve">
+    <value>Retry</value>
+    <comment>Retry button text on error dialog.</comment>
+  </data>
+  <data name="CancelButtonText" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Cancel button text on error dialog and progress control.</comment>
+  </data>
+  <data name="DetailButtonText" xml:space="preserve">
+    <value>Detail</value>
+    <comment>Detail button text on error dialog.</comment>
+  </data>
+  <data name="ReportTitleServerError" xml:space="preserve">
+    <value>Server Error</value>
+    <comment>Title for the error message box.</comment>
+  </data>
+  <data name="ShapeDataLabelTitle" xml:space="preserve">
+    <value>Label</value>
+    <comment>Title of a column in the shape info pane in the webpart</comment>
+  </data>
+  <data name="ShapeDataValueTitle" xml:space="preserve">
+    <value>Value</value>
+    <comment>Title of a column in the shape info pane in the webpart</comment>
+  </data>
+  <data name="ShapeDataTableSummary" xml:space="preserve">
+    <value>Shape data in the form of label-value pairs.</value>
+    <comment>Shown in the shape info pane in the webpart</comment>
+  </data>
+  <data name="ShapeHyperlinkListTooltipText" xml:space="preserve">
+    <value>Shape hyperlinks</value>
+    <comment>Shown in the shape info pane in the webpart</comment>
+  </data>
+  <data name="ShapeDataTableTooltipText" xml:space="preserve">
+    <value>Shape data</value>
+    <comment>Tooltip shown when hovering over shape data in the shape info pane in the webpart</comment>
+  </data>
+  <data name="ZoomValueTooltipText" xml:space="preserve">
+    <value>Enter a zoom value between 10 and 400</value>
+    <comment>Tooltip for the value text box of zoom control.</comment>
+  </data>
+  <data name="ZoomHandleTooltipText" xml:space="preserve">
+    <value>Drag this control to the right to increase the zoom value, to the left to decrease it</value>
+    <comment>Tooltip for the handle of the zoom control.</comment>
+  </data>
+  <data name="ZoomInButtonTooltipText" xml:space="preserve">
+    <value>Zoom in</value>
+    <comment>Tooltip displayed when hovering over the Zoom buttons in the web part toolbar</comment>
+  </data>
+  <data name="ZoomOutButtonTooltipText" xml:space="preserve">
+    <value>Zoom out</value>
+    <comment>Tooltip displayed when hovering over the Zoom buttons in the web part toolbar</comment>
+  </data>
+  <data name="ZoomFitButtonTooltipText" xml:space="preserve">
+    <value>Zoom to fit page to view</value>
+    <comment>Tooltip displayed when hovering over the Zoom buttons in the web part toolbar</comment>
+  </data>
+  <data name="PreviousPageText" xml:space="preserve">
+    <value>Previous Page</value>
+    <comment>TODO JohnWang</comment>
+  </data>
+  <data name="SilverlightBarEntryTitle" xml:space="preserve">
+    <value>Improve Your Experience</value>
+    <comment>Title for the notification bar that appears when Silverlight is not installed.</comment>
+  </data>
+  <data name="SilverlightBarEntryText" xml:space="preserve">
+    <value>Web Drawings load faster and look clearer when Silverlight is installed.</value>
+    <comment>Text in the notification bar that appears when Silverlight is not installed.</comment>
+  </data>
+  <data name="SilverlightDownloadText" xml:space="preserve">
+    <value>Install Microsoft Silverlight</value>
+    <comment>Text in the notification bar that appears when Silverlight is not installed.</comment>
+  </data>
+  <data name="RefreshBarEntryTitle" xml:space="preserve">
+    <value>Refresh Disabled</value>
+    <comment>Title for the notification bar that appears when viewing a diagram connected to data sources.</comment>
+  </data>
+  <data name="RefreshBarEntryText" xml:space="preserve">
+    <value>Enable refresh if you trust the contents of this file.</value>
+    <comment>Text in the notification bar that appears when viewing a diagram connected to data sources.</comment>
+  </data>
+  <data name="RefreshOnceText" xml:space="preserve">
+    <value>Enable (this session)</value>
+    <comment>Button Text in the notification bar that appears when viewing a diagram connected to data sources.</comment>
+  </data>
+  <data name="RefreshOnceTooltipText" xml:space="preserve">
+    <value>Click this button if you want to enable refresh of the external data connections contained in this Web Drawing during this browser session only.</value>
+    <comment>Button tooltip in the notification bar that appears when viewing a diagram connected to data sources.</comment>
+  </data>
+  <data name="RefreshAlwaysText" xml:space="preserve">
+    <value>Enable (always)</value>
+    <comment>Button Text in the notification bar that appears when viewing a diagram connected to data sources.</comment>
+  </data>
+  <data name="RefreshAlwaysTooltipText" xml:space="preserve">
+    <value>Click this button if you want to enable refresh of the external data connections contained in this Web Drawing during all browser sessions.</value>
+    <comment>Button tooltip in the notification bar that appears when viewing a diagram connected to data sources.</comment>
+  </data>
+  <!--End Web Part strings-->
+
+  <!--Web part customization and tool pane strings-->
+  <data name="GettingStartedOpenToolPane" xml:space="preserve">
+    <value>Click here to open the tool pane.</value>
+    <comment>A link shown when adding a web part to a web page.  Clicking this link opens the tool pane that enables the web page author to customize the web part</comment>    
+  </data>
+  <data name="GettingStartedSelectDiagram" xml:space="preserve">
+    <value>To select a Web Drawing, open the tool pane, and then edit the Web Drawing URL web part setting.</value>
+    <comment>An informative string shown when adding a web part to a web page</comment>
+  </data>
+  <data name="TitleSelectDiagram" xml:space="preserve">
+    <value>Select a Web Drawing</value>
+    <comment>The title string shown when adding a web part to a web page</comment>
+  </data>
+  <data name="GettingStartedDisplayDiagram" xml:space="preserve">
+    <value>To display a Web Drawing in this web part, you must first select the Web Drawing.</value>
+    <comment>An informative string shown when adding a web part to a web page</comment>
+  </data>
+  <data name="GettingStartedHelpText" xml:space="preserve">
+    <value>How do I connect this web part to a Web Drawing?</value>
+    <comment>Text for the getting started hyperlink to help.</comment>
+  </data>
+  <!--End Web part customization and tool pane strings-->
+
+  <!--Service setting strings-->
+  <data name="ServiceSettingsInvalidMaxDiagramSize" xml:space="preserve">
+    <value>The maximum Web Drawing size specified for the service is invalid</value>
+    <comment>Error message shown when an Admin sets an invalid value for the diagram size via Admin UI GlobalSettings.aspx or SETSPVISIOPERFORAMNCE Powershell</comment>
+  </data>
+  <data name="ServiceSettingsInvalidMaxDiagramCacheAge" xml:space="preserve">
+    <value>The maximum Web Drawing cache age specified for the service is invalid</value>
+    <comment>Error message shown when an Admin sets an invalid value for the diagram cache age via Admin UI GlobalSettings.aspx or SETSPVISIOPERFORAMNCE Powershell</comment>
+  </data>
+  <data name="ServiceSettingsInvalidMinDiagramCacheAge" xml:space="preserve">
+    <value>The minimum Web Drawing cache age specified for the service is invalid</value>
+    <comment>Error message shown when an Admin sets an invalid value for the diagram cache age via Admin UI GlobalSettings.aspx or SETSPVISIOPERFORAMNCE Powershell</comment>
+  </data>
+  <data name="ServiceSettingsInvalidMaxRecalcDuration" xml:space="preserve">
+    <value>The value of this setting must be between {0} and {1} seconds</value>
+    <comment>Error message shown when an Admin sets an invalid value for the recalc duration via Admin UI GlobalSettings.aspx or SETSPVISIOPERFORAMNCE Powershell {NumberedPlaceholder="{0}"} 0 is the lower bound while {NumberedPlaceholder="{1}"} 1 is the upper bound </comment>
+  </data>
+  <data name="InvalidTrustedDataProviderId" xml:space="preserve">
+    <value>The Trusted Data Provider ID specified is invalid</value>
+    <comment>Error message shown when an Admin sets an invalid string (null or empty) for a TrustedDataProvider via Admin UI AddTrusteddataProvider.aspx or EditTrustedDataprovider.aspx or Add/Set SafeDataProvider Powershell</comment>
+  </data>
+  <data name="InvalidTrustedDataProviderType" xml:space="preserve">
+    <value>The Trusted Data Provider Type specified is invalid</value>
+    <comment>Description of the exception thrown when an Admin sets an invalid value (less than 1) for a TrustedDataProvider Type via Admin UI AddTrusteddataProvider.aspx or EditTrustedDataprovider.aspx or Add/Set SafeDataProvider Powershell</comment>
+  </data>
+  <data name="InvalidVisioFileURL" xml:space="preserve">
+    <value>Visio Services is unable to load this Web Drawing because the Web Drawing URL web part setting is invalid. To resolve this issue, verify that the Web Drawing URL is properly formed and refers to an existing .VDW file.</value>
+    <comment>Error message shown when the URL of the file to be processed by the server is invalid, empty</comment>
+  </data>
+  <data name="FileNotExistOrNoPermission" xml:space="preserve">
+    <value>Visio Services is unable to load this Web Drawing because you do not have permissions to view it or the Web Drawing URL web part setting is invalid. To resolve this issue, verify that the Web Drawing URL is valid and refers to an existing .VDW file that you have permissions to view.</value>
+    <comment>Error message shown when the use does not have access to the URL of the file to be processed by the server</comment>
+  </data>
+  <data name="InvalidVisioFilePage" xml:space="preserve">
+    <value>Visio Services is unable to display the requested page because it does not exist within this Web Drawing. To resolve this issue, make sure to request a page that exists within this Web Drawing.</value>
+    <comment>Error message shown when the Page number of the file to be processed by the server is invalid (less than 1)</comment>
+  </data>
+  <data name="AccessModelHelpMessage" xml:space="preserve">
+    <value>Whether the communication between front end and back end servers is through a trusted sub system or delegation</value>
+  </data>
+  <data name="MaxDiagramCacheSizeHelpMessage" xml:space="preserve">
+    <value> The maximum size in megabytes of a Web Drawing that should be cached / rendered by the service</value>
+  </data>
+  <data name="MaxDiagramCacheAgeHelpMessage" xml:space="preserve">
+    <value>The maximum time in minutes a Web Drawing should be cached by the service</value>
+  </data>
+  <data name="DiagramCacheSettingsUpateFailed" xml:space="preserve">
+    <value>Unable to update the Visio Graphics Service cache settings for service application {0}</value>
+  </data>
+  <data name="ExternalDataSettingsUpateFailed" xml:space="preserve">
+    <value>Unable to update external data service settings for service application {0}</value>
+  </data>
+  <data name="SafeDataProviderNotFound" xml:space="preserve">
+    <value>Unable to locate Trusted Data Providers</value>
+  </data>
+  <data name="SafeDataProviderUpdateFailed" xml:space="preserve">
+    <value>Unable to update this Trusted Data Provider</value>
+  </data>
+  <data name="SafeDataProviderRemoveFailed" xml:space="preserve">
+    <value>Unable to remove this Trusted Data Provider</value>
+  </data>
+  <data name="NewSafeDataProviderFailed" xml:space="preserve">
+    <value>Unable to add a new Trusted Data Provider</value>
+  </data>
+  <data name="SafeDataProviderAlreadyExists" xml:space="preserve">
+    <value>A Trusted Data Provider already exists with provider ID {0} and provider type {1}</value>
+  </data>
+  <data name="MaxDiagramSizeHelpMessage" xml:space="preserve">
+    <value>Maximum Web Drawing size, in MB, that the Visio Graphics Service can render</value>
+  </data>
+  <data name="GetVisioServiceApplicationFailed" xml:space="preserve">
+    <value>Unable to retrieve Visio Graphics Service Application</value>
+  </data>
+  <data name="FarmNotFound" xml:space="preserve">
+    <value>Unable to retrieve the SharePoint Farm</value>
+  </data>
+  <data name="VisioServiceNotFound" xml:space="preserve">
+    <value>Unable to retrieve the Visio Graphics Service in the farm</value>
+  </data>
+  <data name="VisioServiceApplicationNotFound" xml:space="preserve">
+    <value>Unable to find the Visio Graphics Service Application with name {0}</value>
+  </data>
+  <data name="ServiceApplicationNameHelpMessage" xml:space="preserve">
+    <value>The name of the Visio Graphics Service Application in the farm</value>
+  </data>
+  <data name="VisioServiceProxyNotFound" xml:space="preserve">
+    <value>Unable to retrieve Visio Graphics Service Proxy in the farm</value>
+  </data>
+  <data name="VisioServiceApplicationProxyNotFound" xml:space="preserve">
+    <value>Unable to find Visio Graphics Service Application Proxy with name {0}</value>
+  </data>
+  <data name="SiteSpecificVisioGrpahicsServiceApplicationProxyNotFound" xml:space="preserve">
+    <value>Unable to find Visio Graphics Service Application Proxy associated with this site</value>
+  </data>
+  <data name="GetVisioServiceApplicationProxyFailed" xml:space="preserve">
+    <value>Unable to remove the Visio Graphics Service Application Proxy</value>
+  </data>
+  <data name="ServiceApplicationProxyNameHelpMessage" xml:space="preserve">
+    <value>The name of the Visio Graphics Service Application Proxy in the farm</value>
+  </data>
+  <data name="VisioServiceApplicationProxyAlreadyExists" xml:space="preserve">
+    <value>There is an existing Visio Graphics Service Application Proxy with this name {0}</value>
+  </data>
+  <data name="AddVisioServiceApplicationProxyFailed" xml:space="preserve">
+    <value>Unable to add the Visio Graphics Service Application Proxy</value>
+  </data>
+  <data name="VisioServiceApplicationAlreadyExists" xml:space="preserve">
+    <value>There is an existing Visio Graphics Service Application with this name {0}</value>
+  </data>
+  <data name="ApplicationPoolNotFound" xml:space="preserve">
+    <value>The specified Application Pool was not found</value>
+  </data>
+  <data name="AddVisioServiceApplicationFailed" xml:space="preserve">
+    <value>Unable to add the Visio Graphics Service Application</value>
+  </data>
+  <data name="ServiceApplicationUserNameNameHelpMessage" xml:space="preserve">
+    <value>The Windows Account User Name under which the Service Application would run</value>
+  </data>
+  <data name="ServiceApplicationPasswordHelpMessage" xml:space="preserve">
+    <value>The Windows Account Password under which the Service Application would run</value>
+  </data>
+  <data name="SetVisioServiceApplicationFailed" xml:space="preserve">
+    <value>Unable to update the Visio Graphics Service Application</value>
+  </data>
+  <data name="SetVisioServiceApplicationProxyFailed" xml:space="preserve">
+    <value>Unable to update the Visio Graphics Service Application Proxy</value>
+  </data>
+  <data name="RemoveSafeDataProviderConfirmation" xml:space="preserve">
+    <value>Removing this Trusted Data Provider will prevent the Visio Graphics Service from refreshing Web Drawings with connections to external data sources of type {0}. Are you sure you want to remove this Trusted Data Provider?</value>
+  </data>
+  <data name="InvalidSSSTargetApplicationId" xml:space="preserve">
+    <value>The Secure Store Target Application Id specified is invalid</value>
+    <comment>Shown in admin ui /  powershell when setting the SSS Target Applicaton to be used by visio services for external data connectivity</comment>
+  </data>
+  <!--End Service setting strings-->
+  <data name="LandingPageTitle" xml:space="preserve">
+    <value>Visio Graphics Service</value>
+    <comment>Shown in main Service Setting page</comment>
+  </data>
+  <data name="ManageVisioServicePageTitle" xml:space="preserve">
+    <value>Manage the Visio Graphics Service</value>
+    <comment>Shown in main Service Setting page</comment>
+  </data>
+  <data name="GlobalSettingsPageTitle" xml:space="preserve">
+    <value>Global Settings</value>
+    <comment>Shown in main Service Setting page</comment>
+  </data>
+  <data name="TrustedDataProvidersPageTitle" xml:space="preserve">
+    <value>Trusted Data Providers</value>
+    <comment>Shown in main Service Setting page</comment>
+  </data>
+  <data name="ManageVisioServicePageDescription" xml:space="preserve">
+    <value>Use this page to change settings for {0}</value>
+    <comment>This string is displayed in the admin ui visio services landing page, the parameter being substituted is the name of the service application</comment>
+  </data>
+  <data name="GlobalSettingsPageDescription" xml:space="preserve">
+    <value>Manage settings for performance, security, and refreshing data connections.</value>
+    <comment>Shown in main Service Setting page</comment>
+  </data>
+  <data name="TrustedDataProvidersPageDescription" xml:space="preserve">
+    <value>Add or remove data providers that can be used when refreshing data connections.</value>
+    <comment>Shown in main Service Setting page</comment>
+  </data>
+  <data name="InvalidServiceApplicationIdSpecified" xml:space="preserve">
+    <value>Please specify a Visio Graphics Service Application</value>
+    <comment>Shown in admin ui / error message when creating proxy</comment>
+  </data>  
+  <!-- Data Provider List Page-->
+  <data name="ListDataProvidersPageTitle" xml:space="preserve">
+    <value>Visio Graphics Service Trusted Data Providers</value>
+    <comment>Shown in Trusted Data Provider settings page</comment>
+  </data>
+  <data name="ListDataProvidersPageHelpText" xml:space="preserve">
+    <value>Trusted Data Providers for the Visio Graphics Service</value>
+    <comment>Shown in Trusted Data Provider settings page</comment>
+  </data>
+  <data name="ListDataProvidersPageDescription" xml:space="preserve">
+    <value>This is the list of Trusted Data Provider that can be used to refresh external data connections stored within Web Drawings processed by the Visio Graphics Service.</value>
+    <comment>Shown in Trusted Data Provider settings page</comment>
+  </data>
+  <data name="DataProviderIdColumnHeader" xml:space="preserve">
+    <value>Trusted Data Provider ID</value>
+    <comment>Shown in Trusted Data Provider settings page</comment>
+  </data>
+  <data name="DataProviderTypeDescriptionColumnHeader" xml:space="preserve">
+    <value>Trusted Data Provider Description</value>
+    <comment>Shown in Trusted Data Provider settings page</comment>
+  </data>
+  <data name="ListDataProviders_AddDataProvider_AccessKey">
+    <value xml:space="preserve">N</value>
+    <comment>the shortcut key for the control {Locked}</comment>
+  </data>
+  <data name="EditDataProviderLabel">
+    <value xml:space="preserve">Edit Trusted Data Provider</value>
+    <comment>Shown in Trusted Data Provider settings page</comment>
+  </data>
+  <data name="DeleteDataProviderLabel">
+    <value xml:space="preserve">Delete Trusted Data Provider</value>
+    <comment>Shown in Trusted Data Provider settings page</comment>
+  </data>
+  <data name="AddDataProviderLabel">
+    <value xml:space="preserve">Add a new Trusted Data Provider</value>
+    <comment>Shown in Trusted Data Provider settings page</comment>
+  </data>
+  <data name="ConfirmDataProviderDelete">
+    <value xml:space="preserve">You are about to delete the item from the configuration. Press OK to continue with the deletion or Cancel to abort the request.</value>
+    <comment>The confirmation message shown to the user using a JavaScript confirm dialog asking to approve a list delete entry operation</comment>
+  </data>
+
+  <!-- Add Data Provider  Page-->
+  <data name="AddDataProviderPageTitle" xml:space="preserve">
+    <value>Add Trusted Data Provider</value>
+    <comment>Shown in the Add Trusted Data Provider page</comment>
+  </data>
+  <data name="AddDataProviderPageHelpText" xml:space="preserve">
+    <value>Adds a Trusted Data Provider for the service application</value>
+    <comment>Shown in the Add Trusted Data Provider page</comment>
+  </data>
+  <data name="AddDataProvider_DataProviderIdTextBox_Label" xml:space="preserve">
+    <value>Trusted Data Provider ID</value>
+    <comment>Shown in the Add Trusted Data Provider page</comment>
+  </data>
+  <data name="AddDataProvider_DataProviderId_AccessKey" xml:space="preserve">
+    <value>I</value>
+    <comment>access key{Locked}</comment>
+  </data>
+  <data name="AddDataProvider_DataProviderIdTextBox_Error" xml:space="preserve">
+    <value>Please specify a valid Id for the Trusted Data Provider</value>
+    <comment>Shown in the Add Trusted Data Provider page</comment>
+  </data>
+  <data name="AddDataProvider_DataProviderTypeTextBox_Label" xml:space="preserve">
+    <value>Trusted Data Provider Type</value>
+    <comment>Shown in the Add Trusted Data Provider page</comment>
+  </data>
+  <data name="AddDataProvider_DataProviderTypeTextBox_Error" xml:space="preserve">
+    <value>Please specify a valid Trusted Data Provider Type</value>
+    <comment>Shown in the Add Trusted Data Provider page</comment>
+  </data>
+  <data name="AddDataProvider_DataProviderTypeDescriptionTextBox_Label" xml:space="preserve">
+    <value>Trusted Data Provider Description</value>
+    <comment>Shown in the Add Trusted Data Provider page</comment>
+  </data>
+  <data name="AddDataProvider_DataProviderTypeDescriptionTextBox_Error" xml:space="preserve">
+    <value>Please specify a valid Trusted Data Provider description</value>
+    <comment>Shown in the Add Trusted Data Provider page</comment>
+  </data>
+
+  <data name="DataProviderID_Description" xml:space="preserve">
+    <value>The identifier for this data provider.</value>
+    <comment>The description of Data Provider ID field shown in the Add/Edit Trusted Data Provider page</comment>
+  </data>
+  <data name="DataProviderType_Description" xml:space="preserve">
+    <value>The type of this data provider. Must be one of the following values: 1 for OLEDB, 2 for SQL, 3 for ODBC, 4 for ODBC with DSN, 5 for SharePoint Lists and 6 for Visio Custom Data Providers.</value>
+    <comment>The description of Data Provider Type field shown in the Add/Edit Trusted Data Provider page</comment>
+  </data>
+  <data name="DataProviderDescription_Description" xml:space="preserve">
+    <value>The description of the purpose of this data provider.</value>
+    <comment>The description Data Provider Description field shown in the Add/Edit Trusted Data Provider page</comment>
+  </data>
+
+  <!-- Edit Data Provider  Page-->
+  <data name="EditDataProviderPageTitle" xml:space="preserve">
+    <value>Edit Trusted Data Provider</value>
+    <comment>Shown in the Edit Trusted Data Provider page</comment>
+  </data>
+  <data name="EditDataProviderPageHelpText" xml:space="preserve">
+    <value>Edits a Trusted Data Provider for the Visio Graphics Service</value>
+    <comment>Shown in the Edit Trusted Data Provider page</comment>
+  </data>
+  <data name="EditDataProvider_DataProviderIdTextBox_Label" xml:space="preserve">
+    <value>Trusted Data Provider ID</value>
+    <comment>Shown in the Edit Trusted Data Provider page</comment>
+  </data>
+  <data name="EditDataProvider_DataProviderId_AccessKey" xml:space="preserve">
+    <value>I</value>
+    <comment>{Locked}</comment>
+  </data>
+  <data name="EditDataProvider_DataProviderIdTextBox_Error" xml:space="preserve">
+    <value>Please specify a valid Id for the Trusted Data Provider</value>
+    <comment>Shown in the Edit Trusted Data Provider page</comment>
+  </data>
+  <data name="EditDataProvider_DataProviderTypeTextBox_Label" xml:space="preserve">
+    <value>Trusted Data Provider Type</value>
+    <comment>Shown in the Edit Trusted Data Provider page</comment>
+  </data>
+  <data name="EditDataProvider_DataProviderTypeTextBox_Error" xml:space="preserve">
+    <value>Please specify a valid Trusted Data Provider Type</value>
+    <comment>Shown in the Edit Trusted Data Provider page</comment>
+  </data>
+  <data name="EditDataProvider_DataProviderTypeDescriptionTextBox_Label" xml:space="preserve">
+    <value>Trusted Data Provider Description</value>
+    <comment>Shown in the Edit Trusted Data Provider page</comment>
+  </data>
+  <data name="EditDataProvider_DataProviderTypeDescriptionTextBox_Error" xml:space="preserve">
+    <value>Please specify a valid Trusted Data Provider description</value>
+    <comment>Shown in the Edit Trusted Data Provider page</comment>
+  </data>
+
+  <!-- Edit Service Settings  Page-->
+  <data name="EditServiceSettingsPageTitle" xml:space="preserve">
+    <value>Visio Graphics Service Settings</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditServiceSettingsPageHelpText" xml:space="preserve">
+    <value>Edit Global Settings for the service application</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditVisioServiceSettings_MaxCacheSize_Label" xml:space="preserve">
+    <value>Maximum Web Drawing Size</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditVisioServiceSettings_MaxCacheSize_Description" xml:space="preserve">
+    <value>The maximum size in MB (between 1 and 50) of a Web Drawing that can be rendered. A larger size limit may lead to slower performance if the server is under heavy load, while a smaller limit may prevent more complicated Web Drawings from being rendered.</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditVisioServiceSettings_MaxCacheSize_HelpText" xml:space="preserve">
+    <value>Size of a Web Drawing in MB (between 1 and 50)</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditVisioServiceSettings_MaxCacheSizeTextBox_Error" xml:space="preserve">
+    <value>Please specify a valid size limit (max) for a Web Drawing in MB (between 1 and 50)</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditVisioServiceSettings_MaxCacheAge_Label" xml:space="preserve">
+    <value>Maximum Cache Age</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditVisioServiceSettings_MaxCacheAge_Description" xml:space="preserve">
+    <value>The number of minutes (between 0 and 34560) after which cached Web Drawings are purged. Larger values decrease file I/O and CPU load but increase memory usage on the server.</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditVisioServiceSettings_MaxCacheAge_HelpText" xml:space="preserve">
+    <value>Time in minutes between 0 and 34560</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditVisioServiceSettings_MaxCacheAgeTextBox_Error" xml:space="preserve">
+    <value>Please specify a valid maximum age limit for the cache in minutes (between 0 and 34560).This value must be greater than minimum cache age.</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditVisioServiceSettings_MaxRecalcDuration_Label" xml:space="preserve">
+    <value>Maximum Recalc Duration</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditVisioServiceSettings_MaxRecalcDuration_Description" xml:space="preserve">
+    <value>The number of seconds (between 10 and 120) before data refresh operations time out.</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditVisioServiceSettings_MaxRecalcDuration_HelpText" xml:space="preserve">
+    <value>Time in seconds between 10 and 120</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditVisioServiceSettings_MaxRecalcDurationTextBox_Error" xml:space="preserve">
+    <value>Please specify a valid limit in seconds (between 10 and 120).</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditVisioServiceSettings_MinCacheAge_Label" xml:space="preserve">
+    <value>Minimum Cache Age</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditVisioServiceSettings_MinCacheAge_Description" xml:space="preserve">
+    <value>The minimum number of minutes (between 0 and 34560) that a Web Drawing is cached in memory. Smaller values allow more frequent data refresh operations for users, but increase CPU and memory usage on the server.</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditVisioServiceSettings_MinCacheAge_HelpText" xml:space="preserve">
+    <value>Time in minutes between 0 and 34560</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditVisioServiceSettings_MinCacheAgeTextBox_Error" xml:space="preserve">
+    <value>Please specify a valid minimum age limit for the cache in minutes (between 0 and 34560).</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditVisioServiceSettings_ExternalData_Label" xml:space="preserve">
+    <value>External Data</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditVisioServiceSettings_ExternalData_Description" xml:space="preserve">
+    <value>Handling external data connections in Visio Graphics Service.</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditVisioServiceSettings_SSSTargetApplicationId_Label" xml:space="preserve">
+    <value>Unattended Service Account</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditVisioServiceSettings_SSSTargetApplicationId_Description" xml:space="preserve">
+    <value>The target application ID in the registered Secure Store Service that is used to reference Unattended Service Account credentials. The Unattended Service Account is a single account that all documents can use to refresh data. It is required when connecting to data sources external to SharePoint, such as SQL.</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditVisioServiceSettings_SSSTargetApplicationId_HelpText" xml:space="preserve">
+    <value>Must exist in the registered Secure Store Service Application</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditVisioServiceSettings_SSSTargetApplicationId_Error" xml:space="preserve">
+    <value>Valid Values: &lt;=256 characters. Must exist in the registered Secure Store Service Application.</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <data name="EditVisioServiceSettings_SSSTargetApplicationId" xml:space="preserve">
+    <value>Application ID</value>
+    <comment>Shown in the Edit Service Settings page</comment>
+  </data>
+  <!-- End-->  
+  <!-- Create Service Application Page -->
+  <data name="VisioServiceApplicationPageTitle" xml:space="preserve">
+    <value>New Visio Graphics Service Application</value>
+    <comment>Shown in the New Service Application page</comment>
+  </data>
+  <data name="VisioServiceApplicationPageHelpText" xml:space="preserve">
+    <value>Create a new Visio Graphics Service Application</value>
+    <comment>Shown in the New Service Application page</comment>
+  </data>
+  <data name="VisioServiceApplication_ApplicationName_Label" xml:space="preserve">
+    <value>Visio Graphics Service Application Name</value>
+    <comment>Shown in the New Service Application page</comment>
+  </data>
+  <data name="VisioServiceApplication_ApplicationName_HelpText" xml:space="preserve">
+    <value>The name by which this instance of the Visio Graphics Service is to be identified</value>
+    <comment>Shown in the New Service Application page</comment>
+  </data>
+  <data name="VisioServiceApplication_ApplicationName_Error" xml:space="preserve">
+    <value>Please specify a valid name for the Visio Graphics Service Application</value>
+    <comment>Shown in the New Service Application page</comment>
+  </data>
+  <data name="VisioServiceApplication_ApplicationPool_Label" xml:space="preserve">
+    <value>Application Pool</value>
+    <comment>Shown in the New Service Application page</comment>
+  </data>
+  <data name="VisioServiceApplication_ApplicationPool_HelpText" xml:space="preserve">
+    <value>Specify the Application Pool which Visio Graphics Service should run under</value>
+    <comment>Shown in the New Service Application page</comment>
+  </data>
+  <data name="farmcredmgmt_credmgmt_selacct" xml:space="preserve">
+    <value>Select an account for this component</value>
+    <comment>Shown in the New Service Application page</comment>
+  </data>
+  <data name="VisioServiceApplication_CreateProxy_Label" xml:space="preserve">
+    <value>Create a Visio Graphics Service Application Proxy</value>
+    <comment>Shown in the New Service Application page</comment>
+  </data>
+  <data name="VisioServiceApplication_CreateProxy_HelpText" xml:space="preserve">
+    <value>Create a Visio Graphics Service Application Proxy and add it to the default proxy group</value>
+    <comment>Shown in the New Service Application page</comment>
+  </data>
+  <data name="InvalidProvisioningContext" xml:space="preserve">
+    <value>Error creating the Visio Graphics Service Application as the specified provisioning context is null</value>
+    <comment>Error message to be displayed in User interface / command line / log files when visio service application creation fails</comment>
+  </data>
+  <data name="InvalidServiceApplicationType" xml:space="preserve">
+    <value>Error creating the Visio Graphics Service Application as the specified application type is not supported</value>
+    <comment>Error message to be displayed in User interface / command line / log files when visio service application creation fails</comment>
+  </data>
+  <!-- End Create Service Application Page -->
+  <!-- Edit visio proxy settings page-->
+  <data name="VisioServiceProxySettingsPageTitle" xml:space="preserve">
+    <value>Visio Graphics Service Proxy Settings</value>
+    <comment>Shown in the Edit Service Application Proxy page</comment>
+  </data>
+  <data name="VisioServiceProxySettingsPageHelpText" xml:space="preserve">
+    <value>Update Visio Graphics Service Application Proxy</value>
+    <comment>Shown in the Edit Service Application Proxy page</comment>
+  </data>
+  <data name="VisioServiceProxySettings_RequireSSL_Label" xml:space="preserve">
+    <value>Require Secure Socket Layer</value>
+    <comment>Shown in the Edit Service Application Proxy page</comment>
+  </data>
+  <data name="VisioServiceProxySettings_RequireSSL_Yes" xml:space="preserve">
+    <value>Yes</value>
+    <comment>Shown in the Edit Service Application Proxy page</comment>
+  </data>
+  <data name="VisioServiceProxySettings_RequireSSL_No" xml:space="preserve">
+    <value>No</value>
+    <comment>Shown in the Edit Service Application Proxy page</comment>
+  </data>
+  <data name="VisioServiceProxySettings_Communication_Label" xml:space="preserve">
+    <value>Communication Settings</value>
+    <comment>Shown in the Edit Service Application Proxy page</comment>
+  </data>
+  <data name="VisioServiceProxySettings_Communication_HelpText" xml:space="preserve">
+    <value>Choose if Secure Connections are required for inter farm and farm to farm communication</value>
+    <comment>Shown in the Edit Service Application Proxy page</comment>
+  </data>
+  <data name="VisioServiceProxySettings_AccessModel_Label" xml:space="preserve">
+    <value>Access Model</value>
+    <comment>Shown in the Edit Service Application Proxy page</comment>
+  </data>
+  <data name="VisioServiceProxySettings_AccessModel_HelpText" xml:space="preserve">
+    <value>Type of security scheme to use for front end to application server communication</value>
+    <comment>Shown in the Edit Service Application Proxy page</comment>
+  </data>
+  <data name="VisioServiceProxySettings_AccessModel_TrustedSubSystem" xml:space="preserve">
+    <value>Trusted Sub System</value>
+    <comment>Shown in the Edit Service Application Proxy page</comment>
+  </data>
+  <data name="VisioServiceProxySettings_AccessModel_Delegation" xml:space="preserve">
+    <value>Delegation</value>
+    <comment>Shown in the Edit Service Application Proxy page</comment>
+  </data>
+  <data name="VisioServiceProxySettings_InvalidProxyName" xml:space="preserve">
+    <value>Please specify a valid name for the service application proxy. As an example "Connection To" followed by the service application name is a valid.</value>
+    <comment>Shown in the Edit Service Application Proxy page</comment>
+  </data>
+  <data name="ProxyNameBaseString" xml:space="preserve">
+    <value>Connection to</value>
+    <comment>Proxies are named in the format of "Connection to xxx" where xxx is the user defined connection name </comment>
+  </data>
+  <data name="VisioServiceProxySettings_ProxyNotFound" xml:space="preserve">
+    <value>The specified Visio Graphics Service Application Proxy does not exist.</value>
+    <comment>Shown in the Edit Service Application Proxy page</comment>
+  </data>
+  <!-- End Edit visio proxy settings page-->
+  <!-- Visio Server SharePoint Features-->
+  <data name="WorkflowVisualizationWebPartTitle" xml:space="preserve">
+  <value>Workflow Visualization</value>
+  </data>
+  <data name="WorkflowVisualizationWebPartDescription" xml:space="preserve">
+  <value>Visio Web Access</value>
+  </data>
+  <data name="Feature_VisioServer_Title" xml:space="preserve">
+  <value>Visio Web Access</value>
+  </data>
+  <data name="Feature_VisioServer_Description" xml:space="preserve">
+  <value>View Visio Web Drawings in the browser</value>
+  </data>
+  <data name="Feature_VisioServer_View_Title" xml:space="preserve">
+  <value>View</value>
+  </data>
+  <data name="Feature_VisioServer_View_Description" xml:space="preserve">
+  <value>View Visio Web Drawings in the browser</value>
+  </data>
+  <data name="Feature_VisioServer_ViewInBrowser_Title" xml:space="preserve">
+  <value>View in Web Browser</value>
+  </data>
+  <data name="Feature_VisioServer_ViewInBrowser_Description" xml:space="preserve">
+  <value>View Visio Web Drawings in the browser</value>
+  </data>
+  <data name="Feature_VisioServerPowershell_Title" xml:space="preserve">
+  <value>Visio Services PowerShell</value>
+  </data>
+  <data name="Feature_VisioServerPowershell_Description" xml:space="preserve">
+  <value>Visio Services commandlet registration feature</value>
+  </data>
+  <data name="Feature_VisioWebAccess_Title" xml:space="preserve">
+  <value>Visio Web Access</value>
+  </data>
+  <data name="Feature_VisioWebAccess_Description" xml:space="preserve">
+  <value>View Visio Web Drawings in the browser</value>
+  </data>
+  <data name="Feature_VisioWebAccess_WebPart_Title" xml:space="preserve">
+  <value>Visio Services</value>
+  </data>
+  <data name="Feature_VisioWebAccess_WebPart_Description" xml:space="preserve">
+  <value>Enables viewing and refreshing of Visio Web Drawings.</value>
+  </data>
+  <data name="Feature_VisioWebAccess_DisabledErrorMessage" xml:space="preserve">
+  <value>Visio Web Access is not available on this site.</value>
+  <comment>shown in the sharepoint pages when the visio web access webpart is loaded but the feature is disabled</comment>
+  </data>
+  <data name="BusinessDataWebPartGroup" xml:space="preserve">
+  <value>Business Data</value>
+  <comment>{duplicate=match,sps;BusinessDataWebPartGroup}</comment>
+  </data>
+  <!-- End-->
+  <!-- All Pages-->
+  <data name="Page_OkButton_Text" xml:space="preserve">
+    <value>Ok</value>
+    <comment>Shown in the admin ui</comment> 
+  </data>
+  <data name="VisioAdmin_Ok_AccessKey" xml:space="preserve">
+    <value>O</value>
+    <comment>used in the admin ui for the ok button {Locked}</comment>
+  </data>
+  <data name="Page_CancelButton_Text" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Shown in the admin ui</comment> 
+  </data>
+  <data name="VisioAdmin_Cancel_AccessKey" xml:space="preserve">
+    <value>C</value>
+    <comment>used in the admin ui for the cancel button {Locked}</comment>
+  </data>
+  <data name="InvalidConfigurationXml" xml:space="preserve">
+    <value>The configuration being restored is invalid</value>
+    <comment>Shown in the admin ui</comment> 
+  </data>
+  <data name="IMPresenceLabel" xml:space="preserve">
+    <value>Author</value>
+    <comment>Shown in the admin ui</comment> 
+  </data>
+
+  <!-- Unit Strings-->
+  <data name="ptgAcre_Long" xml:space="preserve">
+    <value>ACRES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAcre_Short" xml:space="preserve">
+    <value>ACRES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgHectare_Long" xml:space="preserve">
+    <value>HECTARES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgHectare_Short" xml:space="preserve">
+    <value>HA.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTDurDFT_Long" xml:space="preserve">
+    <value>EDAY</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTDurDFT_Short" xml:space="preserve">
+    <value>ED.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgEWeek_Long" xml:space="preserve">
+    <value>EWEEK</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgEWeek_Short" xml:space="preserve">
+    <value>EW.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgEDay_Long" xml:space="preserve">
+    <value>EDAY</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgEDay_Short" xml:space="preserve">
+    <value>ED.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgEHour_Long" xml:space="preserve">
+    <value>EHOUR</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgEHour_Short" xml:space="preserve">
+    <value>EH.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgEMin_Long" xml:space="preserve">
+    <value>EMINUTE</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgEMin_Short" xml:space="preserve">
+    <value>EM.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgESec_Long" xml:space="preserve">
+    <value>ESECOND</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgESec_Short" xml:space="preserve">
+    <value>ES.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypPP_Long" xml:space="preserve">
+    <value>PICAPOINTS</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypPP_Short" xml:space="preserve">
+    <value>P</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypPT_Long" xml:space="preserve">
+    <value>POINTS</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypPT_Short" xml:space="preserve">
+    <value>PT.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypPI_Long" xml:space="preserve">
+    <value>PICAS</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypPI_Short" xml:space="preserve">
+    <value>P</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypCD_Long" xml:space="preserve">
+    <value>CICEROSDIDOTS</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypCD_Short" xml:space="preserve">
+    <value>C</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypDI_Long" xml:space="preserve">
+    <value>DIDOTS</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypDI_Short" xml:space="preserve">
+    <value>D</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypCI_Long" xml:space="preserve">
+    <value>CICEROS</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypCI_Short" xml:space="preserve">
+    <value>C</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumI_Long" xml:space="preserve">
+    <value>INCHES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumI_Short" xml:space="preserve">
+    <value>IN.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumF_Long" xml:space="preserve">
+    <value>FEET</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumF_Short" xml:space="preserve">
+    <value>FT.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumFI_Long" xml:space="preserve">
+    <value>FEET/INCHES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumFI_Short" xml:space="preserve">
+    <value>FT.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumMI_Long" xml:space="preserve">
+    <value>MILES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumMI_Short" xml:space="preserve">
+    <value>MI.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumCM_Long" xml:space="preserve">
+    <value>CENTIMETERS</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumCM_Short" xml:space="preserve">
+    <value>CM.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumMM_Long" xml:space="preserve">
+    <value>MILLIMETERS</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumMM_Short" xml:space="preserve">
+    <value>MM.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumM_Long" xml:space="preserve">
+    <value>METERS</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumM_Short" xml:space="preserve">
+    <value>M.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumKM_Long" xml:space="preserve">
+    <value>KILOMETERS</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumKM_Short" xml:space="preserve">
+    <value>KM.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumIfrac_Long" xml:space="preserve">
+    <value>INCHES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumIfrac_Short" xml:space="preserve">
+    <value>IN.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumMIfrac_Long" xml:space="preserve">
+    <value>MILES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumMIfrac_Short" xml:space="preserve">
+    <value>MI.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumYards_Long" xml:space="preserve">
+    <value>YARDS</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumYards_Short" xml:space="preserve">
+    <value>YD.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumNM_Long" xml:space="preserve">
+    <value>NM.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumNM_Short" xml:space="preserve">
+    <value>NM.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngDD_Long" xml:space="preserve">
+    <value>DEGREES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngDD_Short" xml:space="preserve">
+    <value>DEG.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngDMS_Long" xml:space="preserve">
+    <value>DEGREES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngDMS_Short" xml:space="preserve">
+    <value>˚</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngRad_Long" xml:space="preserve">
+    <value>RADIANS</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngRad_Short" xml:space="preserve">
+    <value>RAD.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngMin_Long" xml:space="preserve">
+    <value>MINUTES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngMin_Short" xml:space="preserve">
+    <value>'</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngSec_Long" xml:space="preserve">
+    <value>SECONDS</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngSec_Short" xml:space="preserve">
+    <value>"</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgPageDFT_Long" xml:space="preserve">
+    <value>INCHES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgPageDFT_Short" xml:space="preserve">
+    <value>IN.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumDFT_Long" xml:space="preserve">
+    <value>INCHES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumDFT_Short" xml:space="preserve">
+    <value>IN.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngDFT_Long" xml:space="preserve">
+    <value>DEGREES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngDFT_Short" xml:space="preserve">
+    <value>DEG.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAcre_Long_Metric" xml:space="preserve">
+    <value>ACRES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAcre_Short_Metric" xml:space="preserve">
+    <value>ACRES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgHectare_Long_Metric" xml:space="preserve">
+    <value>HECTARES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgHectare_Short_Metric" xml:space="preserve">
+    <value>HA</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTDurDFT_Long_Metric" xml:space="preserve">
+    <value>EDAY</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTDurDFT_Short_Metric" xml:space="preserve">
+    <value>ED.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgEWeek_Long_Metric" xml:space="preserve">
+    <value>EWEEK</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgEWeek_Short_Metric" xml:space="preserve">
+    <value>EW.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgEDay_Long_Metric" xml:space="preserve">
+    <value>EDAY</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgEDay_Short_Metric" xml:space="preserve">
+    <value>ED.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgEHour_Long_Metric" xml:space="preserve">
+    <value>EHOUR</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgEHour_Short_Metric" xml:space="preserve">
+    <value>EH.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgEMin_Long_Metric" xml:space="preserve">
+    <value>EMINUTE</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgEMin_Short_Metric" xml:space="preserve">
+    <value>EM.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgESec_Long_Metric" xml:space="preserve">
+    <value>ESECOND</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgESec_Short_Metric" xml:space="preserve">
+    <value>ES.</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypPP_Long_Metric" xml:space="preserve">
+    <value>PICAPOINTS</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypPP_Short_Metric" xml:space="preserve">
+    <value>P</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypPT_Long_Metric" xml:space="preserve">
+    <value>POINTS</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypPT_Short_Metric" xml:space="preserve">
+    <value>PT</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypPI_Long_Metric" xml:space="preserve">
+    <value>PICAS</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypPI_Short_Metric" xml:space="preserve">
+    <value>P</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypCD_Long_Metric" xml:space="preserve">
+    <value>CICEROSDIDOTS</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypCD_Short_Metric" xml:space="preserve">
+    <value>C</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypDI_Long_Metric" xml:space="preserve">
+    <value>DIDOTS</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypDI_Short_Metric" xml:space="preserve">
+    <value>D</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypCI_Long_Metric" xml:space="preserve">
+    <value>CICEROS</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgTypCI_Short_Metric" xml:space="preserve">
+    <value>C</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumI_Long_Metric" xml:space="preserve">
+    <value>INCHES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumI_Short_Metric" xml:space="preserve">
+    <value>IN</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumF_Long_Metric" xml:space="preserve">
+    <value>FEET</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumF_Short_Metric" xml:space="preserve">
+    <value>FT</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumFI_Long_Metric" xml:space="preserve">
+    <value>FEET/INCHES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumFI_Short_Metric" xml:space="preserve">
+    <value>FT</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumMI_Long_Metric" xml:space="preserve">
+    <value>MILES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumMI_Short_Metric" xml:space="preserve">
+    <value>MI</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumCM_Long_Metric" xml:space="preserve">
+    <value>CENTIMETRES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumCM_Short_Metric" xml:space="preserve">
+    <value>CM</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumMM_Long_Metric" xml:space="preserve">
+    <value>MILLIMETRES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumMM_Short_Metric" xml:space="preserve">
+    <value>MM</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumM_Long_Metric" xml:space="preserve">
+    <value>METRES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumM_Short_Metric" xml:space="preserve">
+    <value>M</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumKM_Long_Metric" xml:space="preserve">
+    <value>KILOMETRES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumKM_Short_Metric" xml:space="preserve">
+    <value>KM</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumIfrac_Long_Metric" xml:space="preserve">
+    <value>INCHES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumIfrac_Short_Metric" xml:space="preserve">
+    <value>IN</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumMIfrac_Long_Metric" xml:space="preserve">
+    <value>MILES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumMIfrac_Short_Metric" xml:space="preserve">
+    <value>MI</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumYards_Long_Metric" xml:space="preserve">
+    <value>YARDS</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumYards_Short_Metric" xml:space="preserve">
+    <value>YD</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumNM_Long_Metric" xml:space="preserve">
+    <value>NM</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumNM_Short_Metric" xml:space="preserve">
+    <value>NM</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngDD_Long_Metric" xml:space="preserve">
+    <value>DEGREES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngDD_Short_Metric" xml:space="preserve">
+    <value>DEG</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngDMS_Long_Metric" xml:space="preserve">
+    <value>DEGREES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngDMS_Short_Metric" xml:space="preserve">
+    <value>DEG</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngRad_Long_Metric" xml:space="preserve">
+    <value>RADIANS</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngRad_Short_Metric" xml:space="preserve">
+    <value>RAD</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngMin_Long_Metric" xml:space="preserve">
+    <value>MINUTES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngMin_Short_Metric" xml:space="preserve">
+    <value>'</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngSec_Long_Metric" xml:space="preserve">
+    <value>SECONDS</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngSec_Short_Metric" xml:space="preserve">
+    <value>"</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgPageDFT_Long_Metric" xml:space="preserve">
+    <value>INCHES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgPageDFT_Short_Metric" xml:space="preserve">
+    <value>IN</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumDFT_Long_Metric" xml:space="preserve">
+    <value>INCHES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgNumDFT_Short_Metric" xml:space="preserve">
+    <value>IN</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngDFT_Long_Metric" xml:space="preserve">
+    <value>DEGREES</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="ptgAngDFT_Short_Metric" xml:space="preserve">
+    <value>DEG</value>
+    <comment>Unit string. Already localized in the Visio client product.</comment>
+  </data>
+  <!-- End Unit Strings-->
+  <!-- Currency strings -->
+  <data name="CYID_SYS_Short" xml:space="preserve">
+    <value>SYS</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_XXX_Short" xml:space="preserve">
+    <value>XXX</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID__02_Short" xml:space="preserve">
+    <value>_02</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID__03_Short" xml:space="preserve">
+    <value>_03</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID__04_Short" xml:space="preserve">
+    <value>_04</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID__05_Short" xml:space="preserve">
+    <value>_05</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID__06_Short" xml:space="preserve">
+    <value>_06</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID__07_Short" xml:space="preserve">
+    <value>_07</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID__08_Short" xml:space="preserve">
+    <value>_08</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID__09_Short" xml:space="preserve">
+    <value>_09</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID_EUR_Short" xml:space="preserve">
+    <value>EUR</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_USD_Short" xml:space="preserve">
+    <value>USD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ATS_Short" xml:space="preserve">
+    <value>ATS</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_AUD_Short" xml:space="preserve">
+    <value>AUD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BEF_Short" xml:space="preserve">
+    <value>BEF</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_CAD_Short" xml:space="preserve">
+    <value>CAD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_CHF_Short" xml:space="preserve">
+    <value>CHF</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_CNY_Short" xml:space="preserve">
+    <value>CNY</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_DEM_Short" xml:space="preserve">
+    <value>DEM</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_DKK_Short" xml:space="preserve">
+    <value>DKK</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ESP_Short" xml:space="preserve">
+    <value>ESP</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_FIM_Short" xml:space="preserve">
+    <value>FIM</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_FRF_Short" xml:space="preserve">
+    <value>FRF</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_GBP_Short" xml:space="preserve">
+    <value>GBP</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_GRD_Short" xml:space="preserve">
+    <value>GRD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_HKD_Short" xml:space="preserve">
+    <value>HKD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_HUF_Short" xml:space="preserve">
+    <value>HUF</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_IDR_Short" xml:space="preserve">
+    <value>IDR</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_IEP_Short" xml:space="preserve">
+    <value>IEP</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ILS_Short" xml:space="preserve">
+    <value>ILS</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ITL_Short" xml:space="preserve">
+    <value>ITL</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_JPY_Short" xml:space="preserve">
+    <value>JPY</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_KRW_Short" xml:space="preserve">
+    <value>KRW</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_LUF_Short" xml:space="preserve">
+    <value>LUF</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MXN_Short" xml:space="preserve">
+    <value>MXN</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MYR_Short" xml:space="preserve">
+    <value>MYR</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_NLG_Short" xml:space="preserve">
+    <value>NLG</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_NOK_Short" xml:space="preserve">
+    <value>NOK</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_NZD_Short" xml:space="preserve">
+    <value>NZD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_PHP_Short" xml:space="preserve">
+    <value>PHP</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_PLZ_Short" xml:space="preserve">
+    <value>PLZ</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_PTE_Short" xml:space="preserve">
+    <value>PTE</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ROL_Short" xml:space="preserve">
+    <value>ROL</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_RUR_Short" xml:space="preserve">
+    <value>RUR</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SEK_Short" xml:space="preserve">
+    <value>SEK</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SGD_Short" xml:space="preserve">
+    <value>SGD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_THB_Short" xml:space="preserve">
+    <value>THB</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_TWD_Short" xml:space="preserve">
+    <value>TWD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_XEU_Short" xml:space="preserve">
+    <value>XEU</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_YUN_Short" xml:space="preserve">
+    <value>YUN</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ZAR_Short" xml:space="preserve">
+    <value>ZAR</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID__33_Short" xml:space="preserve">
+    <value>_33</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID__34_Short" xml:space="preserve">
+    <value>_34</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID__35_Short" xml:space="preserve">
+    <value>_35</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID__36_Short" xml:space="preserve">
+    <value>_36</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID__37_Short" xml:space="preserve">
+    <value>_37</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID_ARS_Short" xml:space="preserve">
+    <value>ARS</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BMD_Short" xml:space="preserve">
+    <value>BMD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BOB_Short" xml:space="preserve">
+    <value>BOB</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BRR_Short" xml:space="preserve">
+    <value>BRR</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BSD_Short" xml:space="preserve">
+    <value>BSD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_CLP_Short" xml:space="preserve">
+    <value>CLP</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_COP_Short" xml:space="preserve">
+    <value>COP</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_CRC_Short" xml:space="preserve">
+    <value>CRC</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_CZK_Short" xml:space="preserve">
+    <value>CZK</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_DOP_Short" xml:space="preserve">
+    <value>DOP</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ECS_Short" xml:space="preserve">
+    <value>ECS</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_EGP_Short" xml:space="preserve">
+    <value>EGP</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_HNL_Short" xml:space="preserve">
+    <value>HNL</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_INR_Short" xml:space="preserve">
+    <value>INR</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_JMD_Short" xml:space="preserve">
+    <value>JMD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_JOD_Short" xml:space="preserve">
+    <value>JOD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_KWD_Short" xml:space="preserve">
+    <value>KWD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MOP_Short" xml:space="preserve">
+    <value>MOP</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_NIO_Short" xml:space="preserve">
+    <value>NIO</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_PAB_Short" xml:space="preserve">
+    <value>PAB</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_PEN_Short" xml:space="preserve">
+    <value>PEN</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_PKR_Short" xml:space="preserve">
+    <value>PKR</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_PYG_Short" xml:space="preserve">
+    <value>PYG</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SAR_Short" xml:space="preserve">
+    <value>SAR</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SIT_Short" xml:space="preserve">
+    <value>SIT</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SKK_Short" xml:space="preserve">
+    <value>SKK</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SVC_Short" xml:space="preserve">
+    <value>SVC</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_TRY_Short" xml:space="preserve">
+    <value>TRY</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_TTD_Short" xml:space="preserve">
+    <value>TTD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_UYU_Short" xml:space="preserve">
+    <value>UYU</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_VEB_Short" xml:space="preserve">
+    <value>VEB</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_VND_Short" xml:space="preserve">
+    <value>VND</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BRL_Short" xml:space="preserve">
+    <value>BRL</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_PLN_Short" xml:space="preserve">
+    <value>PLN</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_RUB_Short" xml:space="preserve">
+    <value>RUB</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_YUM_Short" xml:space="preserve">
+    <value>YUM</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BYB_Short" xml:space="preserve">
+    <value>BYB</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_UAH_Short" xml:space="preserve">
+    <value>UAH</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_AFA_Short" xml:space="preserve">
+    <value>AFA</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ALL_Short" xml:space="preserve">
+    <value>ALL</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_DZD_Short" xml:space="preserve">
+    <value>DZD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ADP_Short" xml:space="preserve">
+    <value>ADP</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_AOA_Short" xml:space="preserve">
+    <value>AOA</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_XCD_Short" xml:space="preserve">
+    <value>XCD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_AMD_Short" xml:space="preserve">
+    <value>AMD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_AWG_Short" xml:space="preserve">
+    <value>AWG</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_AZM_Short" xml:space="preserve">
+    <value>AZM</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BHD_Short" xml:space="preserve">
+    <value>BHD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BDT_Short" xml:space="preserve">
+    <value>BDT</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BBD_Short" xml:space="preserve">
+    <value>BBD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BYR_Short" xml:space="preserve">
+    <value>BYR</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BZD_Short" xml:space="preserve">
+    <value>BZD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_XOF_Short" xml:space="preserve">
+    <value>XOF</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BTN_Short" xml:space="preserve">
+    <value>BTN</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BAM_Short" xml:space="preserve">
+    <value>BAM</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BWP_Short" xml:space="preserve">
+    <value>BWP</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BND_Short" xml:space="preserve">
+    <value>BND</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BGL_Short" xml:space="preserve">
+    <value>BGL</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BGN_Short" xml:space="preserve">
+    <value>BGN</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BIF_Short" xml:space="preserve">
+    <value>BIF</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_KHR_Short" xml:space="preserve">
+    <value>KHR</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_XAF_Short" xml:space="preserve">
+    <value>XAF</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_CVE_Short" xml:space="preserve">
+    <value>CVE</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_KYD_Short" xml:space="preserve">
+    <value>KYD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_KMF_Short" xml:space="preserve">
+    <value>KMF</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_CDF_Short" xml:space="preserve">
+    <value>CDF</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_HRK_Short" xml:space="preserve">
+    <value>HRK</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_CUP_Short" xml:space="preserve">
+    <value>CUP</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_CYP_Short" xml:space="preserve">
+    <value>CYP</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_DJF_Short" xml:space="preserve">
+    <value>DJF</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_TPE_Short" xml:space="preserve">
+    <value>TPE</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ERN_Short" xml:space="preserve">
+    <value>ERN</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_EEK_Short" xml:space="preserve">
+    <value>EEK</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ETB_Short" xml:space="preserve">
+    <value>ETB</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_FKP_Short" xml:space="preserve">
+    <value>FKP</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_FJD_Short" xml:space="preserve">
+    <value>FJD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_XPF_Short" xml:space="preserve">
+    <value>XPF</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_GMD_Short" xml:space="preserve">
+    <value>GMD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_GEL_Short" xml:space="preserve">
+    <value>GEL</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_GHC_Short" xml:space="preserve">
+    <value>GHC</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_GIP_Short" xml:space="preserve">
+    <value>GIP</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_GTQ_Short" xml:space="preserve">
+    <value>GTQ</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_GNF_Short" xml:space="preserve">
+    <value>GNF</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_GWP_Short" xml:space="preserve">
+    <value>GWP</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_GYD_Short" xml:space="preserve">
+    <value>GYD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_HTG_Short" xml:space="preserve">
+    <value>HTG</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ISK_Short" xml:space="preserve">
+    <value>ISK</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_IRR_Short" xml:space="preserve">
+    <value>IRR</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_IQD_Short" xml:space="preserve">
+    <value>IQD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_KZT_Short" xml:space="preserve">
+    <value>KZT</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_KES_Short" xml:space="preserve">
+    <value>KES</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_KPW_Short" xml:space="preserve">
+    <value>KPW</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_KGS_Short" xml:space="preserve">
+    <value>KGS</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_LAK_Short" xml:space="preserve">
+    <value>LAK</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_LVL_Short" xml:space="preserve">
+    <value>LVL</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_LBP_Short" xml:space="preserve">
+    <value>LBP</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_LSL_Short" xml:space="preserve">
+    <value>LSL</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_LRD_Short" xml:space="preserve">
+    <value>LRD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_LYD_Short" xml:space="preserve">
+    <value>LYD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_LTL_Short" xml:space="preserve">
+    <value>LTL</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MKD_Short" xml:space="preserve">
+    <value>MKD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MGF_Short" xml:space="preserve">
+    <value>MGF</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MWK_Short" xml:space="preserve">
+    <value>MWK</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MVR_Short" xml:space="preserve">
+    <value>MVR</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MTL_Short" xml:space="preserve">
+    <value>MTL</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MRO_Short" xml:space="preserve">
+    <value>MRO</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MUR_Short" xml:space="preserve">
+    <value>MUR</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MDL_Short" xml:space="preserve">
+    <value>MDL</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MNT_Short" xml:space="preserve">
+    <value>MNT</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MAD_Short" xml:space="preserve">
+    <value>MAD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MZM_Short" xml:space="preserve">
+    <value>MZM</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MMK_Short" xml:space="preserve">
+    <value>MMK</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_NAD_Short" xml:space="preserve">
+    <value>NAD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_NPR_Short" xml:space="preserve">
+    <value>NPR</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ANG_Short" xml:space="preserve">
+    <value>ANG</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_NGN_Short" xml:space="preserve">
+    <value>NGN</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_OMR_Short" xml:space="preserve">
+    <value>OMR</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_PGK_Short" xml:space="preserve">
+    <value>PGK</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_QAR_Short" xml:space="preserve">
+    <value>QAR</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_RWF_Short" xml:space="preserve">
+    <value>RWF</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SHP_Short" xml:space="preserve">
+    <value>SHP</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_WST_Short" xml:space="preserve">
+    <value>WST</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_STD_Short" xml:space="preserve">
+    <value>STD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SCR_Short" xml:space="preserve">
+    <value>SCR</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SLL_Short" xml:space="preserve">
+    <value>SLL</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SBD_Short" xml:space="preserve">
+    <value>SBD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SOS_Short" xml:space="preserve">
+    <value>SOS</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_LKR_Short" xml:space="preserve">
+    <value>LKR</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SDD_Short" xml:space="preserve">
+    <value>SDD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SRG_Short" xml:space="preserve">
+    <value>SRG</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SZL_Short" xml:space="preserve">
+    <value>SZL</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SYP_Short" xml:space="preserve">
+    <value>SYP</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_TJR_Short" xml:space="preserve">
+    <value>TJR</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_TJS_Short" xml:space="preserve">
+    <value>TJS</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_TZS_Short" xml:space="preserve">
+    <value>TZS</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_TOP_Short" xml:space="preserve">
+    <value>TOP</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_TND_Short" xml:space="preserve">
+    <value>TND</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_TMM_Short" xml:space="preserve">
+    <value>TMM</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_UGX_Short" xml:space="preserve">
+    <value>UGX</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_AED_Short" xml:space="preserve">
+    <value>AED</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_UZS_Short" xml:space="preserve">
+    <value>UZS</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_VUV_Short" xml:space="preserve">
+    <value>VUV</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_YER_Short" xml:space="preserve">
+    <value>YER</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ZMK_Short" xml:space="preserve">
+    <value>ZMK</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ZWD_Short" xml:space="preserve">
+    <value>ZWD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_VEF_Short" xml:space="preserve">
+    <value>VEF</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MGA_Short" xml:space="preserve">
+    <value>MGA</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_RSD_Short" xml:space="preserve">
+    <value>RSD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_CSD_Short" xml:space="preserve">
+    <value>CSD</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+
+  <data name="CYID_SYS_Long" xml:space="preserve">
+    <value>System</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_XXX_Long" xml:space="preserve">
+    <value>Non</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID__02_Long" xml:space="preserve">
+    <value>_reserved_02</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID__03_Long" xml:space="preserve">
+    <value>_reserved_03</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID__04_Long" xml:space="preserve">
+    <value>_reserved_04</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID__05_Long" xml:space="preserve">
+    <value>_reserved_05</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID__06_Long" xml:space="preserve">
+    <value>_reserved_06</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID__07_Long" xml:space="preserve">
+    <value>_reserved_07</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID__08_Long" xml:space="preserve">
+    <value>_reserved_08</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID__09_Long" xml:space="preserve">
+    <value>_reserved_09</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID_EUR_Long" xml:space="preserve">
+    <value>Euro</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_USD_Long" xml:space="preserve">
+    <value>United States Dollar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ATS_Long" xml:space="preserve">
+    <value>Austrian Schilling</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_AUD_Long" xml:space="preserve">
+    <value>Australian Dollar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BEF_Long" xml:space="preserve">
+    <value>Belgian Franc</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_CAD_Long" xml:space="preserve">
+    <value>Canadian Dollar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_CHF_Long" xml:space="preserve">
+    <value>Swiss Franc</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_CNY_Long" xml:space="preserve">
+    <value>Chinese Yuan Renminbi</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_DEM_Long" xml:space="preserve">
+    <value>German Mark</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_DKK_Long" xml:space="preserve">
+    <value>Danish Krone</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ESP_Long" xml:space="preserve">
+    <value>Spanish Peseta</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_FIM_Long" xml:space="preserve">
+    <value>Finnish Markka</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_FRF_Long" xml:space="preserve">
+    <value>French Franc</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_GBP_Long" xml:space="preserve">
+    <value>British Pound Sterling</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_GRD_Long" xml:space="preserve">
+    <value>Greek Drachma</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_HKD_Long" xml:space="preserve">
+    <value>Hong Kong SAR Dollar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_HUF_Long" xml:space="preserve">
+    <value>Hungarian Forint</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_IDR_Long" xml:space="preserve">
+    <value>Indonesian Rupiah</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_IEP_Long" xml:space="preserve">
+    <value>Irish Punt</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ILS_Long" xml:space="preserve">
+    <value>New Israeli Shekel</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ITL_Long" xml:space="preserve">
+    <value>Italian Lira</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_JPY_Long" xml:space="preserve">
+    <value>Japanese Yen</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_KRW_Long" xml:space="preserve">
+    <value>Korean Won</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_LUF_Long" xml:space="preserve">
+    <value>Luxembourgian Franc</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MXN_Long" xml:space="preserve">
+    <value>Mexican Peso</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MYR_Long" xml:space="preserve">
+    <value>Malaysian Ringgit</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_NLG_Long" xml:space="preserve">
+    <value>Dutch Guilder</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_NOK_Long" xml:space="preserve">
+    <value>Norwegian Krone</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_NZD_Long" xml:space="preserve">
+    <value>New Zealand Dollar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_PHP_Long" xml:space="preserve">
+    <value>Philippine Peso</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_PLZ_Long" xml:space="preserve">
+    <value>Polish Zloty</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_PTE_Long" xml:space="preserve">
+    <value>Portuguese Escudo</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ROL_Long" xml:space="preserve">
+    <value>Romanian Leu</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_RUR_Long" xml:space="preserve">
+    <value>Russian Ruble</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SEK_Long" xml:space="preserve">
+    <value>Swedish Kroner</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SGD_Long" xml:space="preserve">
+    <value>Singapore Dollar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_THB_Long" xml:space="preserve">
+    <value>Thai Baht</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_TWD_Long" xml:space="preserve">
+    <value>New Taiwan Dollar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_XEU_Long" xml:space="preserve">
+    <value>ECU (pre-1998)</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_YUN_Long" xml:space="preserve">
+    <value>Serbian Dinar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ZAR_Long" xml:space="preserve">
+    <value>South African Rand</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID__33_Long" xml:space="preserve">
+    <value>_reserved_33</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID__34_Long" xml:space="preserve">
+    <value>_reserved_34</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID__35_Long" xml:space="preserve">
+    <value>_reserved_35</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID__36_Long" xml:space="preserve">
+    <value>_reserved_36</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID__37_Long" xml:space="preserve">
+    <value>_reserved_37</value>
+    <comment>Currency string. Already localized in the Visio client product.{Locked}</comment>
+  </data>
+  <data name="CYID_ARS_Long" xml:space="preserve">
+    <value>Argentinian Peso</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BMD_Long" xml:space="preserve">
+    <value>Bermudian Dollar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BOB_Long" xml:space="preserve">
+    <value>Bolivian Boliviano</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BRR_Long" xml:space="preserve">
+    <value>Brazilian Cruzeiro Real</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BSD_Long" xml:space="preserve">
+    <value>Bahamanian Dollar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_CLP_Long" xml:space="preserve">
+    <value>Chilean Peso</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_COP_Long" xml:space="preserve">
+    <value>Colombian Peso</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_CRC_Long" xml:space="preserve">
+    <value>Costa Rican Colon</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_CZK_Long" xml:space="preserve">
+    <value>Czech Koruna</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_DOP_Long" xml:space="preserve">
+    <value>Dominican Peso</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ECS_Long" xml:space="preserve">
+    <value>Ecuadorean Sucre</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_EGP_Long" xml:space="preserve">
+    <value>Egyptian Pound</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_HNL_Long" xml:space="preserve">
+    <value>Honduran Lempira</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_INR_Long" xml:space="preserve">
+    <value>Indian Rupee</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_JMD_Long" xml:space="preserve">
+    <value>Jamaican Dollar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_JOD_Long" xml:space="preserve">
+    <value>Jordanian Dinar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_KWD_Long" xml:space="preserve">
+    <value>Kuwaiti Dinar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MOP_Long" xml:space="preserve">
+    <value>Macanese Pataca</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_NIO_Long" xml:space="preserve">
+    <value>Nicaraguan Cordoba Oro</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_PAB_Long" xml:space="preserve">
+    <value>Panamanian Balboa</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_PEN_Long" xml:space="preserve">
+    <value>Peruvian Nuevo Sol</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_PKR_Long" xml:space="preserve">
+    <value>Pakistani Rupee</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_PYG_Long" xml:space="preserve">
+    <value>Paraguayan Guarani</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SAR_Long" xml:space="preserve">
+    <value>Saudi Riyal</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SIT_Long" xml:space="preserve">
+    <value>Slovenian Tolar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SKK_Long" xml:space="preserve">
+    <value>Slovakian Koruna</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SVC_Long" xml:space="preserve">
+    <value>El Salvadoran Colon</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_TRY_Long" xml:space="preserve">
+    <value>Turkish lira</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_TTD_Long" xml:space="preserve">
+    <value>Trinidad and Tobago Dollar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_UYU_Long" xml:space="preserve">
+    <value>Uruguayan Peso Uruguayo</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_VEB_Long" xml:space="preserve">
+    <value>Venezuelan Bolivar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_VND_Long" xml:space="preserve">
+    <value>Vietnamese Dong</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BRL_Long" xml:space="preserve">
+    <value>Brazilian Real</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_PLN_Long" xml:space="preserve">
+    <value>Polish Zloty</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_RUB_Long" xml:space="preserve">
+    <value>Russian Ruble</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_YUM_Long" xml:space="preserve">
+    <value>Serbian Dinar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BYB_Long" xml:space="preserve">
+    <value>Belarusian Ruble</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_UAH_Long" xml:space="preserve">
+    <value>Ukrainian Hryvnia</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_AFA_Long" xml:space="preserve">
+    <value>Afghani</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ALL_Long" xml:space="preserve">
+    <value>Lek</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_DZD_Long" xml:space="preserve">
+    <value>Algerian Dinar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ADP_Long" xml:space="preserve">
+    <value>Andorran Peseta</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_AOA_Long" xml:space="preserve">
+    <value>Kwanza</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_XCD_Long" xml:space="preserve">
+    <value>East Caribbean Dollar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_AMD_Long" xml:space="preserve">
+    <value>Armenian Dram</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_AWG_Long" xml:space="preserve">
+    <value>Aruban Guilder</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_AZM_Long" xml:space="preserve">
+    <value>Azerbaijanian Manat</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BHD_Long" xml:space="preserve">
+    <value>Bahraini Dinar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BDT_Long" xml:space="preserve">
+    <value>Taka</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BBD_Long" xml:space="preserve">
+    <value>Barbados Dollar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BYR_Long" xml:space="preserve">
+    <value>Belarussian Ruble</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BZD_Long" xml:space="preserve">
+    <value>Belize Dollar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_XOF_Long" xml:space="preserve">
+    <value>CFA Franc BCEAO</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BTN_Long" xml:space="preserve">
+    <value>Ngultrum</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BAM_Long" xml:space="preserve">
+    <value>Convertible Marks</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BWP_Long" xml:space="preserve">
+    <value>Pula</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BND_Long" xml:space="preserve">
+    <value>Brunei Dollar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BGL_Long" xml:space="preserve">
+    <value>Lev</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BGN_Long" xml:space="preserve">
+    <value>Bulgarian Lev</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_BIF_Long" xml:space="preserve">
+    <value>Burundi Franc</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_KHR_Long" xml:space="preserve">
+    <value>Riel</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_XAF_Long" xml:space="preserve">
+    <value>CFA Franc BEAC</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_CVE_Long" xml:space="preserve">
+    <value>Cape Verde Escudo</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_KYD_Long" xml:space="preserve">
+    <value>Cayman Islands Dollar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_KMF_Long" xml:space="preserve">
+    <value>Comoro Franc</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_CDF_Long" xml:space="preserve">
+    <value>Franc Congolais</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_HRK_Long" xml:space="preserve">
+    <value>Croatian Kuna</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_CUP_Long" xml:space="preserve">
+    <value>Cuban Peso</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_CYP_Long" xml:space="preserve">
+    <value>Cyprus Pound</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_DJF_Long" xml:space="preserve">
+    <value>Djibouti Franc</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_TPE_Long" xml:space="preserve">
+    <value>Timor Escudo</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ERN_Long" xml:space="preserve">
+    <value>Nakfa</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_EEK_Long" xml:space="preserve">
+    <value>Kroon</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ETB_Long" xml:space="preserve">
+    <value>Ethiopian Birr</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_FKP_Long" xml:space="preserve">
+    <value>Falkland Pound</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_FJD_Long" xml:space="preserve">
+    <value>Fijian Dollar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_XPF_Long" xml:space="preserve">
+    <value>CFP Franc</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_GMD_Long" xml:space="preserve">
+    <value>Dalasi</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_GEL_Long" xml:space="preserve">
+    <value>Lari</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_GHC_Long" xml:space="preserve">
+    <value>Cedi</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_GIP_Long" xml:space="preserve">
+    <value>Gibraltar Pound</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_GTQ_Long" xml:space="preserve">
+    <value>Quetzal</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_GNF_Long" xml:space="preserve">
+    <value>Guinea Franc</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_GWP_Long" xml:space="preserve">
+    <value>Guinea-Bissau Peso</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_GYD_Long" xml:space="preserve">
+    <value>Guyana Dollar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_HTG_Long" xml:space="preserve">
+    <value>Gourde</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ISK_Long" xml:space="preserve">
+    <value>Iceland Krona</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_IRR_Long" xml:space="preserve">
+    <value>Iranian Rial</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_IQD_Long" xml:space="preserve">
+    <value>Iraqi Dinar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_KZT_Long" xml:space="preserve">
+    <value>Tenge</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_KES_Long" xml:space="preserve">
+    <value>Kenyan Shilling</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_KPW_Long" xml:space="preserve">
+    <value>North Korean Won</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_KGS_Long" xml:space="preserve">
+    <value>Som</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_LAK_Long" xml:space="preserve">
+    <value>Kip</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_LVL_Long" xml:space="preserve">
+    <value>Latvian Lats</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_LBP_Long" xml:space="preserve">
+    <value>Lebanese Pound</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_LSL_Long" xml:space="preserve">
+    <value>Loti</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_LRD_Long" xml:space="preserve">
+    <value>Liberian Dollar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_LYD_Long" xml:space="preserve">
+    <value>Libyan Dinar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_LTL_Long" xml:space="preserve">
+    <value>Lithuanian Litus</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MKD_Long" xml:space="preserve">
+    <value>Denar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MGF_Long" xml:space="preserve">
+    <value>Malagasy Franc</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MWK_Long" xml:space="preserve">
+    <value>Malawian Kwacha</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MVR_Long" xml:space="preserve">
+    <value>Rufiyaa</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MTL_Long" xml:space="preserve">
+    <value>Maltese Lira</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MRO_Long" xml:space="preserve">
+    <value>Ouguiya</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MUR_Long" xml:space="preserve">
+    <value>Mauritius Rupee</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MDL_Long" xml:space="preserve">
+    <value>Moldovan Leu</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MNT_Long" xml:space="preserve">
+    <value>Tugrik</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MAD_Long" xml:space="preserve">
+    <value>Moroccan Dirham</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MZM_Long" xml:space="preserve">
+    <value>Metical</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MMK_Long" xml:space="preserve">
+    <value>Kyat</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_NAD_Long" xml:space="preserve">
+    <value>Namibia Dollar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_NPR_Long" xml:space="preserve">
+    <value>Nepalese Rupee</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ANG_Long" xml:space="preserve">
+    <value>Netherlands Antillian Guilder</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_NGN_Long" xml:space="preserve">
+    <value>Naira</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_OMR_Long" xml:space="preserve">
+    <value>Rial Omani</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_PGK_Long" xml:space="preserve">
+    <value>Kina</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_QAR_Long" xml:space="preserve">
+    <value>Qatari Rial</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_RWF_Long" xml:space="preserve">
+    <value>Rwanda Franc</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SHP_Long" xml:space="preserve">
+    <value>Saint Helena Pound</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_WST_Long" xml:space="preserve">
+    <value>Tala</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_STD_Long" xml:space="preserve">
+    <value>Dobra</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SCR_Long" xml:space="preserve">
+    <value>Seychelles Rupee</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SLL_Long" xml:space="preserve">
+    <value>Leone</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SBD_Long" xml:space="preserve">
+    <value>Solomon Islands Dollar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SOS_Long" xml:space="preserve">
+    <value>Somali Shilling</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_LKR_Long" xml:space="preserve">
+    <value>Sri Lanka Rupee</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SDD_Long" xml:space="preserve">
+    <value>Sudanese Dinar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SRG_Long" xml:space="preserve">
+    <value>Suriname Guilder</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SZL_Long" xml:space="preserve">
+    <value>Lilangeni</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_SYP_Long" xml:space="preserve">
+    <value>Syrian Pound</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_TJR_Long" xml:space="preserve">
+    <value>Tajik Ruble</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_TJS_Long" xml:space="preserve">
+    <value>Tajik Somoni</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_TZS_Long" xml:space="preserve">
+    <value>Tanzanian Shilling</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_TOP_Long" xml:space="preserve">
+    <value>Pa'anga</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_TND_Long" xml:space="preserve">
+    <value>Tunisian Dinar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_TMM_Long" xml:space="preserve">
+    <value>Manat</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_UGX_Long" xml:space="preserve">
+    <value>Uganda Shilling</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_AED_Long" xml:space="preserve">
+    <value>UAE Dirham</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_UZS_Long" xml:space="preserve">
+    <value>Uzbekistan Sum</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_VUV_Long" xml:space="preserve">
+    <value>Vatu</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_YER_Long" xml:space="preserve">
+    <value>Yemeni Rial</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ZMK_Long" xml:space="preserve">
+    <value>Zambian Kwacha</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_ZWD_Long" xml:space="preserve">
+    <value>Zimbabwe Dollar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_VEF_Long" xml:space="preserve">
+    <value>Venezuelan Bolivar Fuerte</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_MGA_Long" xml:space="preserve">
+    <value>Malagasy Ariary</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_RSD_Long" xml:space="preserve">
+    <value>Serbian Dinar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <data name="CYID_CSD_Long" xml:space="preserve">
+    <value>Serbian Dinar</value>
+    <comment>Currency string. Already localized in the Visio client product.</comment>
+  </data>
+  <!-- End Currency strings -->
+
+  <data name="InternalServerError" xml:space="preserve">
+    <value>The server failed to process the request.</value>
+  </data>
+  <data name="FaultGenericError" xml:space="preserve">
+    <value>Internal server error. The server failed to process the request with fault code {0}.</value>
+  </data>
+  <data name="FaultLicenseExpired" xml:space="preserve">
+    <value>The trial period for this product has expired.</value>
+    <comment>{@PseudoOK@} The message shown in the UI pages when the timebomb has expired.</comment>
+  </data>
+  <data name="FaultAccessDenied" xml:space="preserve">
+  <value>Visio Services was unable to load this Web Drawing because the Web Drawing URL web part setting does not refer to an existing .VDW file or you do not have permissions to view it. To resolve this issue, verify that the Web Drawing URL refers to an existing .VDW file that you have permissions to view.</value>
+  </data>
+  <data name="FaultRecalcTimedOut" xml:space="preserve">
+  <value>Visio Services was unable to load this Web Drawing because it is either too large or too complex. To resolve this issue, ask your system administrator to increase the amount of time Visio Services may process this Web Drawing or decrease the complexity of this Web Drawing using Visio.</value>
+  </data>
+  <data name="FaultDataConnectivityError" xml:space="preserve">
+  <value>Visio Services was unable to refresh external data connections in this Web Drawing because an underlying data source is unreachable. To resolve this issue, try again or ask your system administrator to make sure that all underlying data sources are available and reachable.</value>
+  </data>
+  <data name="FaultOfficeDataConnectionFileNotFound" xml:space="preserve">
+  <value>Visio Services was unable to update external data connections in this Web Drawing because it could not retrieve an underlying data connection file. To resolve this issue, ask your system administrator to verify that the data connection file exists and verify that the path to the data connection file embedded in this Web Drawing is correct.</value>
+  </data>
+  <data name="FaultOfficeDataConnectionFileRetrievalError" xml:space="preserve">
+  <value>Visio Services was unable to update external data connections in this Web Drawing because it could not retrieve an underlying data connection file. To resolve this issue, contact your system administrator.</value>
+  </data>
+  <data name="FaultOfficeDataConnectionFileAccessDenied" xml:space="preserve">
+  <value>Visio Services was unable to update external data connections in this Web Drawing because you do not have permissions to access an underlying data connection file, or this file does not exist. To resolve this issue, ask your system administrator to verify that the relevant data connection file exists and to grant you permissions to access it.</value>
+  </data>
+  <data name="FaultIncompatibleDomain" xml:space="preserve">
+  <value>Visio Services was unable to refresh external data connections in this Web Drawing because an underlying data connection attempted to retrieve data from a SharePoint list hosted on a domain you do not have access to. To resolve this issue, update this Web Drawing to contain only connections to SharePoint lists within this domain or ask your system administrator to grant you access to other domains.</value>
+  <comment>Error message displayed in browser when a diagram is connected to a SharePoint list from a different domain to which the user has no access.</comment>
+  </data>
+  <data name="FaultWssListAccessDenied" xml:space="preserve">
+  <value>Visio Services was unable to refresh external data connections in this Web Drawing because you do not have permissions to access an underlying SharePoint list data source. To resolve this issue, ask your system administrator to grant you permissions to access this data source.</value>
+  <comment>Error message displayed in browser when a diagram is connected to a SharePoint list which the user has no access.</comment>
+  </data>
+  <data name="FaultWssViewAccessDenied" xml:space="preserve">
+  <value>Visio Services was unable to refresh external data connections in this Web Drawing because a connection to an underlying SharePoint list view data source failed with errors. To resolve this issue, ensure that the view is not a Personal View owned by another user, that the view exists and that you have permissions to access it.</value>
+  <comment>Error message displayed in browser when a diagram is connected to a SharePoint list view.</comment>
+  </data>
+  <data name="FaultInvalidPageNumber" xml:space="preserve">
+  <value>Visio Services was unable to display the requested page because it does not exist within this Web Drawing. To resolve this issue, make sure to request a page that exists within this Web Drawing.</value>
+  </data>
+  <data name="FaultInvalidFileUrl" xml:space="preserve">
+  <value>Visio Services was unable to load this Web Drawing because the Web Drawing URL web part setting is invalid. To resolve this issue, verify that the Web Drawing URL is properly formed and refers to an existing .VDW file.</value>
+  </data>
+  <data name="FaultRasterizationError" xml:space="preserve">
+  <value>Visio Services was unable to display the requested page because of an error during Web Drawing rasterization. To resolve this issue, install Silverlight or contact your system administrator.</value>
+  </data>
+  <data name="FaultEmptyServerData" xml:space="preserve">
+  <value>Visio Services was unable to load this Web Drawing because its file format is unsupported or this Web Drawing may be corrupt. To resolve this issue, save this Web Drawing from Visio as a valid .VDW file.</value>
+  </data>
+  <data name="FaultOpenServerFileFailed" xml:space="preserve">
+  <value>Visio Services was unable to load this Web Drawing because its file format is unsupported or this Web Drawing may be corrupt. To resolve this issue, save this Web Drawing from Visio as a valid .VDW file.</value>
+  </data>
+  <data name="FaultNoReadPermissionToFile" xml:space="preserve">
+  <value>Visio Services was unable to load this Web Drawing because you do not have the permissions to view it. To resolve this issue, ask your system administrator to grant you permissions to view it.</value>
+  <comment>An error message through browser when the above happens</comment>
+  </data>
+  <data name="FaultFileLocationNotTrusted" xml:space="preserve">
+  <value>The server does not trust the location of the specified Visio file.</value>
+  </data>
+  <data name="FaultExceededMaxDiagramSize" xml:space="preserve">
+  <value>Visio Services was unable to load this Web Drawing because it is larger than the maximum Web Drawing size it is allowed to open and process. To resolve this issue, ask your system administrator to increase the maximum Web Drawing size Visio Services can process.</value>
+  <comment>Error message shown in the user interface / logs when the Visio file size is more than what the administrator configured it to be</comment>
+  </data>
+  <data name="QuotaExceededExceptionMessage" xml:space="preserve">
+  <value>Internal server error. The requested Web Drawing is too large to render.</value>
+  <comment>Error message shown in the user interface / logs when the generated Visio file size is more what the system supports.</comment>
+  </data>
+  <data name="FaultIncompatibleVersion" xml:space="preserve">
+  <value>Visio Services was unable to load this Web Drawing because it was created with an older version of Visio. To resolve this issue, open this Web drawing with an updated version of Visio and save it again.</value>
+  </data>
+  <data name="FaultDataProviderNotTrusted" xml:space="preserve">
+  <value>Visio Services was unable to refresh external data connections in this Web Drawing because one or more data provider required by these connections is not trusted by the Visio Graphics Service. To resolve this issue, ask your system administrator to add the data providers you need to refresh this Web Drawing to the Trusted Data Providers list of the Visio Graphics Service.</value>
+  </data>
+  <data name="FaultDataBindingConflict" xml:space="preserve">
+  <value>Visio Services was unable to refresh external data connections in this Web Drawing because changes have been made to the structure of an underlying data source since this Web Drawing was last saved. To resolve this issue, restore the data source structure to its previous state or update the data connection information in this Web Drawing using Visio.</value>
+  </data>
+  <data name="FaultUnableToGetExternalDataSourceCredentials" xml:space="preserve">
+  <value>Visio Services was unable to refresh external data connections in this Web Drawing because it was unable to retrieve credentials to access underlying data sources from the farm's Secure Store Service. To resolve this issue, contact your system administrator.</value>
+  <comment>Shown in webpart when the Secure Store service does not return credentials</comment>
+  </data>
+  <data name="FaultUnattendedAccountTypeMismatch" xml:space="preserve">
+  <value>Visio Services was unable to refresh external data connections because the Unattended Service Account provided by the service administrator is not of type Windows. To resolve this issue, contact your system administrator.</value>
+  <comment>Shown in webpart when the Secure Store service does not return credentials of type windows for the Unattended Service Account</comment>
+  </data>
+  <data name="ConflictColumnDeleted" xml:space="preserve">
+  <value>Visio Services was unable to refresh external data connections in this Web Drawing because of changes in the structure of an underlying data source. One or more columns in this data source have been deleted after this Web Drawing was last saved. To resolve this issue, restore the deleted columns or update the data connection information in this Web Drawing using Visio.</value>
+  </data>
+  <data name="ConflictColumnTypeChanged" xml:space="preserve">
+  <value>Visio Services was unable to refresh external data connections in this Web Drawing because of changes in the structure of an underlying data source. One or more columns in this data source have changed data type after this Web Drawing was last saved. To resolve this issue, restore the data types of the affected columns to their previous values or update the data connection information in this Web drawing using Visio.</value>
+  </data>
+  <data name="ConflictRowDeleted" xml:space="preserve">
+  <value>Visio Services was unable to refresh external data connections in this Web Drawing because of changes in the structure of an underlying data source. One or more rows in this data source have been deleted after this Web Drawing was last saved. To resolve this issue, restore the deleted rows or update the data connection information in this Web Drawing using Visio.</value>
+  </data>
+  <data name="ConflictRowDuplicated" xml:space="preserve">
+  <value>Visio Services was unable to refresh external data connections in this Web Drawing because of changes in the structure of an underlying data source. One or more rows with duplicate primary keys have been introduced into this data source after this Web Drawing was last saved. To resolve this issue, delete primary key duplicates or update the data connection information in this Web Drawing using Visio.</value>
+  </data>
+  <data name="ConflictPrimaryKeyColumnDeleted" xml:space="preserve">
+  <value>Visio Services was unable to refresh external data connections in this Web Drawing because of changes in the structure of an underlying data source. The primary key column in this data source has been deleted after this Web Drawing was last saved. To resolve this issue, restore the deleted primary key column or update the data connection information in this Webd Drawing using Visio.</value>
+  </data>
+  <data name="AddonDataHandlerTimeoutError" xml:space="preserve">
+  <value>Visio Services was unable to update external data connections in this Web Drawing because a connection to an underlying custom data source timed out. To resolve this issue, try again or contact your system administrator.</value>
+  </data>
+  <data name="ExternalDataRefreshFailed" xml:space="preserve">
+  <value>Visio Services was unable to refresh external data connections in this Web Drawing because a connection to an underlying Excel file data source failed to refresh. To resolve this issue, ask your system administrator to verify that Excel Services are enabled on this site and are functioning properly.</value>
+  </data>
+  <data name="ExcelServicesFailed" xml:space="preserve">
+  <value>Visio Services was unable to refresh external data connections in this Web Drawing because a connection to an underlying Excel file data source failed with errors. To resolve this issue, ask your system administrator to verify that Excel Services are enabled on this site and are functioning properly.</value>
+  </data>
+  <data name="IncompatibleDomainForExcelFile" xml:space="preserve">
+  <value>Visio Services was unable to refresh external data connections in this Web Drawing because it contains a connection to an underlying Excel file data source that is hosted in a domain you do not have access to. To resolve this issue, update this Web Drawing with connections to an Excel file within this domain or ask your system administrator to grant you access to other domains.</value>
+  </data>
+  <data name="ExcelFileOpenNotFound" xml:space="preserve">
+  <value>Visio Services was unable to refresh external data connections in this Web Drawing because an underlying Excel file data source was not found. To resolve this issue ensure that the Excel file exists at the specified location.</value>
+  </data>
+  <data name="ToolbarTitleFormat" xml:space="preserve">
+    <value>{0} - {1}</value>
+  </data>
+  <data name="SPDesignerUITitle" xml:space="preserve">
+    <value>No preview available</value>
+    <comment>The title shown in webpart when it's displayed in SharePoint Designer</comment>
+  </data>
+  <data name="SPDesignerUIText" xml:space="preserve">
+    <value>Open this page in a Web browser to see the web part contents.</value>
+    <comment>The content text shown in webpart when it's displayed in SharePoint Designer</comment>
+  </data>
+  <data name="InvalidRasterizedImageResolution" xml:space="preserve">
+    <value>The resolution of the rasterized image is invalid.</value>
+  </data>
+  <!-- Toolpart strings -->
+  <data name="DisplayDiagramCategory" xml:space="preserve">
+    <value>Web Drawing Display</value>
+    <comment>The name of the 'Display Web Drawing' toolpart category.</comment>
+  </data>
+  <data name="WebPartUICategory" xml:space="preserve">
+    <value>Toolbar and User Interface</value>
+    <comment>The name of the 'Web Part UI' toolpart category.</comment>
+  </data>
+  <data name="DiagramInteractivityCategory" xml:space="preserve">
+    <value>Web Drawing Interactivity</value>
+    <comment>The name of the 'Web Drawing Interactivity' toolpart category.</comment>
+  </data>
+  <data name="DiagramPathName" xml:space="preserve">
+    <value>Web Drawing URL</value>
+    <comment>The friendly name of the DiagramPath webpart property.</comment>
+  </data>
+  <data name="DiagramPathDescription" xml:space="preserve">
+    <value>Enter the URL of the Web Drawing that you want to display.</value>
+    <comment>The description of the DiagramPath webpart property.</comment>
+  </data>
+  <data name="OverrideViewSettingsName" xml:space="preserve">
+    <value>Override the Web Drawing's default initial view using the web part's current page, pan and zoom</value>
+    <comment>The friendly name of the OverrideViewSettings webpart property.</comment>
+  </data>
+  <data name="OverrideViewSettingsDescription" xml:space="preserve">
+    <value>Select to override the Web Drawing's default initial view using the page, pan and zoom set in page edit mode.</value>
+    <comment>The description of the OverrideViewSettings webpart property.</comment>
+  </data>
+  <data name="AutoRefreshIntervalName" xml:space="preserve">
+    <value>Automatic Refresh Interval (in minutes)</value>
+    <comment>The friendly name of the AutoRefreshInterval webpart property.</comment>
+  </data>
+  <data name="AutoRefreshIntervalDescription" xml:space="preserve">
+    <value>Sets the amount of time in minutes between automatic refresh operations. A value of 0 disables automatic refresh. Web Drawings that do not have external data connections cannot be automatically refreshed.</value>
+    <comment>The description of the AutoRefreshInterval webpart property.</comment>
+  </data>
+  <data name="InvalidAutoRefreshInterval" xml:space="preserve">
+    <value>The automatic refresh interval must be greater than or equal to 0 seconds and less than or equal to 86400 seconds (1 day). A value of 0 seconds specifies that automatic refresh is disabled. A positive number specifies the automatic refresh interval in seconds.</value>
+    <comment>Error message for invalid periodic refresh interval.</comment>
+  </data>
+  <data name="ShowRefreshName" xml:space="preserve">
+    <value>Show Refresh</value>
+    <comment>The friendly name of the ShowRefresh webpart property.</comment>
+  </data>
+  <data name="ShowRefreshDescription" xml:space="preserve">
+    <value>Select to display the 'Refresh' button on the web part toolbar.</value>
+    <comment>The description of the ShowRefresh webpart property.</comment>
+  </data>
+  <data name="ShowOpenInVisioName" xml:space="preserve">
+    <value>Show Open in Visio</value>
+    <comment>The friendly name of the ShowOpenInVisio webpart property.</comment>
+  </data>
+  <data name="ShowOpenInVisioDescription" xml:space="preserve">
+    <value>Select to display the 'Open in Visio' button on the web part toolbar.</value>
+    <comment>The description of the ShowOpenInVisio webpart property.</comment>
+  </data>
+  <data name="ShowPageNavigationName" xml:space="preserve">
+    <value>Show Page Navigation</value>
+    <comment>The friendly name of the ShowPageNavigation webpart property.</comment>
+  </data>
+  <data name="ShowPageNavigationDescription" xml:space="preserve">
+    <value>Select to display the page navigation control on the web part toolbar.</value>
+    <comment>The description of the ShowPageNavigation webpart property.</comment>
+  </data>
+  <data name="ShowZoomControlName" xml:space="preserve">
+    <value>Show Zoom</value>
+    <comment>The friendly name of the ShowZoomControl webpart property.</comment>
+  </data>
+  <data name="ShowZoomControlDescription" xml:space="preserve">
+    <value>Select to display the zoom controls on the web part toolbar.</value>
+    <comment>The description of the ShowZoomControl webpart property.</comment>
+  </data>
+  <data name="ShowShapeInfoButtonName" xml:space="preserve">
+    <value>Show the Shape Information Pane</value>
+    <comment>The friendly name of the ShowShapeInfoButton webpart property.</comment>
+  </data>
+  <data name="ShowShapeInfoButtonDescription" xml:space="preserve">
+    <value>Select to display the 'Show Shape Information Pane' button on the web part toolbar.</value>
+    <comment>The description of the ShowShapeInfoButton webpart property.</comment>
+  </data>
+  <data name="ShowStatusBarName" xml:space="preserve">
+    <value>Show Status Bar</value>
+    <comment>The friendly name of the ShowStatusBar webpart property.</comment>
+  </data>
+  <data name="ShowStatusBarDescription" xml:space="preserve">
+    <value>Select to display the status bar at the bottom of the web part.</value>
+    <comment>The description of the ShowStatusBar webpart property.</comment>
+  </data>
+  <data name="ShowBackgroundName" xml:space="preserve">
+    <value>Show default background</value>
+    <comment>The friendly name of the ShowBackground webpart property.</comment>
+  </data>
+  <data name="ShowBackgroundDescription" xml:space="preserve">
+    <value>Select to show the default web part background color (the background is transparent otherwise).</value>
+    <comment>The description of the ShowBackground webpart property.</comment>
+  </data>
+  <data name="AlwaysRasterName" xml:space="preserve">
+    <value>Force raster rendering</value>
+    <comment>The friendly name of the AlwaysRaster webpart property.</comment>
+  </data>
+  <data name="AlwaysRasterDescription" xml:space="preserve">
+    <value>Select to force Visio Services to render the Web Drawing as PNG even if Silverlight is installed.</value>
+    <comment>The description of the AlwaysRaster webpart property.</comment>
+  </data>
+  <data name="DisableZoomName" xml:space="preserve">
+    <value>Disable Zoom</value>
+    <comment>The friendly name of the DisableZoom webpart property.</comment>
+  </data>
+  <data name="DisableZoomDescription" xml:space="preserve">
+    <value>Select to disable zooming for this Web Drawing.</value>
+    <comment>The description of the DisableZoom webpart property.</comment>
+  </data>
+  <data name="DisablePanName" xml:space="preserve">
+    <value>Disable Pan</value>
+    <comment>The friendly name of the DisablePan webpart property.</comment>
+  </data>
+  <data name="DisablePanDescription" xml:space="preserve">
+    <value>Select to disable panning for this Web Drawing.</value>
+    <comment>The description of the DisablePan webpart property.</comment>
+  </data>
+  <data name="DisableHyperlinkName" xml:space="preserve">
+    <value>Disable Hyperlink</value>
+    <comment>The friendly name of the DisableHyperlink webpart property.</comment>
+  </data>
+  <data name="DisableHyperlinkDescription" xml:space="preserve">
+    <value>Select to disable hyperlinks in this Web Drawing.</value>
+    <comment>The description of the DisableHyperlink webpart property.</comment>
+  </data>
+  <data name="DisableSelectionName" xml:space="preserve">
+    <value>Disable Selection</value>
+    <comment>The friendly name of the DisableSelection webpart property.</comment>
+  </data>
+  <data name="DisableSelectionDescription" xml:space="preserve">
+    <value>Select to disable shape selection in this Web Drawing.</value>
+    <comment>The description of the DisableSelection webpart property.</comment>
+  </data>
+  <data name="ShapeDataNames" xml:space="preserve">
+    <value>Expose the following shape data items to web part connections</value>
+    <comment>The friendly name of the ShapeDataNames webpart property.</comment>
+  </data>
+  <data name="ShapeDataNamesDescription" xml:space="preserve">
+    <value>Enter a comma-delimited list of Shape Data item labels. These Shape Data items are sent to web parts that are connected using the "Send Shape Data To" web part connection.</value>
+    <comment>The description of the ShapeDataName webpart property.</comment>
+  </data>
+  <data name="InvalidShapeDataNames" xml:space="preserve">
+    <value>The shape data items cannot include duplicates and cannot include the following predefined values: {0}, {1}, {2}, or {3}.</value>
+    <comment>Error message for invalid shape data names displayed in the "edit web part" page. Predefined values ("Shape Name", etc.) are appended to the string.</comment>
+  </data>
+  <data name="Vwa_DiagramUrlPageName" xml:space="preserve">
+    <value>Web Drawing URL and Page Name</value>
+    <comment>This is shown in the drop down box on the Web Part frame: Connections -> Get Diagram URL and Page Name From</comment>
+  </data>
+  <data name="Vwa_DiagramUrl" xml:space="preserve">
+    <value>Web Drawing URL</value>
+    <comment>This is shown in the drop down list on the Web Part Connections -> Get Diagram URL and Page Name From configuration</comment>
+  </data>
+  <data name="Vwa_PageName" xml:space="preserve">
+    <value>Page Name</value>
+    <comment>This is shown in the drop down list on the Web Part Connections -> Get Diagram URL and Page Name From configuration</comment>
+  </data>
+  <data name="Vwa_ShapesToHighlight" xml:space="preserve">
+    <value>Shapes to Highlight</value>
+    <comment>This is shown in the drop down box on the Web Part frame: Connections -> Get Shapes to Highlight From</comment>
+  </data>
+  <data name="Vwa_ShapeNames" xml:space="preserve">
+    <value>Shape Names</value>
+    <comment>This is shown in the drop down list on the Web Part Connections -> Get Shapes to Highlight From configuration</comment>
+  </data>
+  <data name="Vwa_HighlightColor" xml:space="preserve">
+    <value>Highlight Color</value>
+    <comment>This is shown in the drop down list on the Web Part Connections -> Get Shapes to Highlight From configuration</comment>
+  </data>
+  <data name="Vwa_FilteredList" xml:space="preserve">
+    <value>Filter Results</value>
+    <comment>This is shown in the drop down box on the Web Part frame: Connections -> Get Filtered List From</comment>
+  </data>
+  <data name="Vwa_ShapeToPan" xml:space="preserve">
+    <value>Shape to View</value>
+    <comment>This is shown in the drop down box on the Web Part frame: Connections -> Get Shape to Pan From</comment>
+  </data>
+  <data name="Vwa_ShapeName" xml:space="preserve">
+    <value>Shape Name</value>
+    <comment>This is shown in the drop down list on the Web Part Connections -> Get Shape to Pan From configuration</comment>
+  </data>
+  <data name="Vwa_Zoom" xml:space="preserve">
+    <value>Zoom Level</value>
+    <comment>This is shown in the drop down list on the Web Part Connections -> Get Shape to Pan From configuration</comment>
+  </data>
+  <data name="Vwa_ShapeData" xml:space="preserve">
+    <value>Shape Data</value>
+    <comment>This is shown in the drop down box on the Web Part frame: Connections -> Send Shape Data To</comment>
+  </data>
+  <data name="Vwa_ShapeId" xml:space="preserve">
+    <value>Shape ID</value>
+    <comment>This is shown in the drop down list on the Web Part Connections -> Get Shape to Pan From configuration</comment>
+  </data>
+  <!-- Process Repository schema.xml -->
+  <data name="PR_schemaListTitle" xml:space="preserve">
+    <value>Visio Process Repository</value>
+    <comment>Title of the process repository document library</comment>
+  </data>
+  <data name="PR_contenttype_basflo" xml:space="preserve">
+    <value>Basic Flowchart (Metric)</value>
+    <comment>Displayed in the New menu in the processes document library. "(Metric)" should only appear in lcid=1033</comment>
+  </data>
+  <data name="PR_contenttype_basfloU" xml:space="preserve">
+    <value>Basic Flowchart (US units)</value>
+    <comment>Displayed in the New menu in the processes document library. Used only in lcid=1033 {Locked}</comment>
+  </data>
+  <data name="PR_contenttype_bpmn" xml:space="preserve">
+    <value>BPMN Diagram (Metric)</value>
+    <comment>Displayed in the New menu in the processes document library. "(Metric)" should only appear in lcid=1033</comment>
+  </data>
+  <data name="PR_contenttype_bpmnU" xml:space="preserve">
+    <value>BPMN Diagram (US units)</value>
+    <comment>Displayed in the New menu in the processes document library. Used only in lcid=1033 {Locked}</comment>
+  </data>
+  <data name="PR_contenttype_xfunc" xml:space="preserve">
+    <value>Cross Functional Flowchart (Metric)</value>
+    <comment>Displayed in the New menu in the processes document library. "(Metric)" should only appear in lcid=1033</comment>
+  </data>
+  <data name="PR_contenttype_xfuncU" xml:space="preserve">
+    <value>Cross Functional Flowchart (US units)</value>
+    <comment>Displayed in the New menu in the processes document library. Used only in lcid=1033 {Locked}</comment>
+  </data>
+  <data name="PR_schemaContentTypeGroup" xml:space="preserve">
+    <value>Document Content Types</value>
+    <comment>Name of the content type group for all process repository content types. Same as sts\resources\core.ress Document_Content_Types</comment>
+  </data>
+  <data name="PR_View_MyProcesses" xml:space="preserve">
+    <value>My Processes</value>
+    <comment>Displayed in the processes custom views menu</comment>
+  </data>
+  <data name="PR_View_ApprovedProcesses" xml:space="preserve">
+    <value>Approved Processes</value>
+    <comment>Displayed in the processes custom views menu</comment>
+  </data>
+  <data name="PR_View_InvalidProcesses" xml:space="preserve">
+    <value>Invalid Processes</value>
+    <comment>Displayed in the processes custom views menu</comment>
+  </data>
+  <data name="PR_View_Category_ValidationErrors" xml:space="preserve">
+    <value>Validation errors found</value>
+    <comment>Query filter for invalid processes view. Localize the same as Visio:IDS_SDPubValidatedErrors</comment>
+  </data>
+  <data name="PR_View_Category_ValidationModified" xml:space="preserve">
+    <value>Modified since last validation</value>
+    <comment>Query filter for invalid processes view. Localize the same as Visio:IDS_SDPubModified</comment>
+  </data>
+  <!-- DocLib.xml -->
+  <data name="PR_doclibName" xml:space="preserve">
+    <value>Process Diagram Library (Metric)</value>
+    <comment>The name of the processes list. Displayed in SharePoint "more create options" page.</comment>
+  </data>
+  <data name="PR_doclibNameUS" xml:space="preserve">
+    <value>Process Diagram Library (US Units)</value>
+    <comment>The name of the processes list. Displayed in SharePoint "more create options" page.</comment>
+  </data>
+  <data name="PR_doclibDesc" xml:space="preserve">
+    <value>Create a Visio Process Diagram Document Library when you want to organize and share Visio diagrams. In addition to having versioning enabled, this document library integrates with Visio through features such as columns that display validation status as well as cross-functional flowchart headings.</value>
+    <comment>Description of the process repository site definition</comment>
+  </data>
+  <!-- VisioProcessRepository feature -->
+  <data name="PR_featureTitle" xml:space="preserve">
+    <value>Visio Process Repository</value>
+    <comment>Title of the process repository document library feature</comment>
+  </data>
+  <data name="PR_featureDesc" xml:space="preserve">
+    <value>Visio Process Repository document library feature</value>
+    <comment>Description of the process repository document library feature</comment>
+  </data>
+  <!-- Site Template vispr\onet.xml -->
+  <data name="PR_projectTitle" xml:space="preserve">
+    <value>Visio Process Repository</value>
+    <comment>Title of the process repository site definition</comment>
+  </data>
+  <data name="PR_doctemplate_name" xml:space="preserve">
+    <value>Microsoft Visio drawing</value>
+    <comment>Name of the process repository document template. Displayed in SharePoint "more create options" page after selecting the process repository list.</comment>
+  </data>
+  <data name="PR_reviewListTitle" xml:space="preserve">
+    <value>Team Discussion</value>
+    <comment>Displayed in the process repository navigation sidebar under the documents category.</comment>
+  </data>
+  <data name="PR_taskListTitle" xml:space="preserve">
+    <value>Tasks</value>
+    <comment>Displayed in the process repository navigation sidebar under the documents category.</comment>
+  </data>
+  <data name="PR_documentsListTitle" xml:space="preserve">
+    <value>Documentation</value>
+    <comment>Displayed in the process repository navigation sidebar under the documents category.</comment>
+  </data>
+  <data name="PR_processListTitle" xml:space="preserve">
+    <value>Process Diagrams</value>
+    <comment>Displayed in the process repository navigation sidebar under the documents category.</comment>
+  </data>
+  <data name="PR_processListDesc" xml:space="preserve">
+    <value>Share a process with the team by adding it to this document library.</value>
+    <comment>Description of the Processess document library</comment>
+  </data>
+  <data name="PR_processListUrl" xml:space="preserve">
+    <value>Processes</value>
+    <comment>Relative URL of the process repository document library under the process repository site</comment>
+  </data>
+  <data name="PR_uploadPageTitle" xml:space="preserve">
+    <value>Upload</value>
+    <comment>Title of the form to upload a file to the process repository library</comment>
+  </data>
+  <data name="PR_uploadPageTitleInTitleArea" xml:space="preserve">
+    <value>Upload</value>
+    <comment>Title of the form to upload a file to the process library. Displayed in the title area</comment>
+  </data>
+  <!-- End Process Repository strings -->
+
+  <!-- Begin Health Monitoring Rule strings -->
+  <data name="Health_MinCacheAgeZeroRuleSummary" xml:space="preserve">
+    <value>The Visio Graphics Service has a minimum cache age setting that may cause a security issue.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_MinCacheAgeZeroRuleRemedy" xml:space="preserve">
+    <value>The resolve this issue, the Visio Graphics Service administrator must assign a value greater than 0 minutes to this setting.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_MinCacheAgeZeroRuleExplanation" xml:space="preserve">
+    <value>Setting minimum cache age to 0 minutes may leave the Visio Graphics Service open to a denial of service (DoS) attack. A value of 0 for this setting may lead to large processor and network load of the Visio Graphics Service and SharePoint, decreasing the expected performance of both. However, increasing this value means that users will not see their Web Drawings refreshing as frequently.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_MinCacheAgeZeroRuleFailed" xml:space="preserve">
+    <value>The minimum cache age rule for value 0 failed.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_MinCacheAgeRuleSummary" xml:space="preserve">
+    <value>The Visio Graphics Service has a minimum cache age setting that will adversely impact performance.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_MinCacheAgeRuleRemedy" xml:space="preserve">
+    <value>To resolve this issue, the Visio Graphics Service administrator must assign a value equal to or larger than {0} minutes to this setting.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_MinCacheAgeRuleExplanation" xml:space="preserve">
+    <value>Setting minimum cache age to a value smaller than {0} minutes may lead to large processor and network load of the Visio Graphics Service and SharePoint, decreasing the expected  performance of both. However, increasing this value means that users will not see their Web Drawings refreshing as frequently.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_MinCacheAgeRuleFailed" xml:space="preserve">
+    <value>The minimum cache age rule failed.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_MaxCacheAgeRuleSummary" xml:space="preserve">
+    <value>The Visio Graphics Service has a maximum cache age setting that will adversely impact performance.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_MaxCacheAgeRuleRemedy" xml:space="preserve">
+    <value>To resolve this issue, the Visio Graphics Service administrator must assign a value equal to or smaller than {0} minutes to this setting.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_MaxCacheAgeRuleExplanation" xml:space="preserve">
+    <value>Setting maximum cache age to a value larger than {0} minutes may lead to large memory load of the Visio Graphics Service.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_MaxCacheAgeRuleFailed" xml:space="preserve">
+    <value>The maximum cache age rule failed.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_MaxDiagramSizeRuleSummary" xml:space="preserve">
+    <value>The Visio Graphics Service has a maximum Web Drawing size setting that will adversely impact performance.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_MaxDiagramSizeRuleRemedy" xml:space="preserve">
+    <value>To resolve this issue, the Visio Graphics Service administrator must assign a value equal to or smaller than {0} MB to this setting.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_MaxDiagramSizeRuleExplanation" xml:space="preserve">
+    <value>Setting maximum Web Drawing size to a value greater than {0} MB may lead to large processor and network load of the Visio Graphics Service and SharePoint, decreasing the expected performance of both.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_MaxDiagramSizeRuleFailed" xml:space="preserve">
+    <value>The maximum Web Drawing size rule failed.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_MaxRecalcDurationRuleSummary" xml:space="preserve">
+    <value>The Visio Graphics Service has a maximum recalc duration setting that will adversely impact user perceived performance.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_MaxRecalcDurationRuleRemedy" xml:space="preserve">
+    <value>To resolve this issue, the Visio Graphics Service administrator must assign a value equal to or less than {0} seconds to this setting.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_MaxRecalcDurationRuleExplanation" xml:space="preserve">
+    <value>Setting maximum recalc duration to a value greater than {0} seconds may lead to large processor load of the Visio Graphics Service and SharePoint, decreasing the expected performance of both.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_MaxRecalcDurationRuleFailed" xml:space="preserve">
+    <value>The maximum recalc duration rule failed.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_SecureStoreAppIdRuleSummary" xml:space="preserve">
+    <value>The Unattended Service Account Application ID is not specified or has an invalid value.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_SecureStoreAppIdRuleRemedy" xml:space="preserve">
+    <value>To resolve this issue, the Visio Graphics Services administrator must provision the Secure Store Service, create a target application, and assign the ID of this target application to this setting.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_SecureStoreAppIdRuleExplanation" xml:space="preserve">
+    <value>The Unattended Service Account is a single account that all documents can use to refresh data. It is required when connecting to data sources external to SharePoint, such as SQL. Without a valid Unattended Service Account Application ID, Visio Graphics Services will not be able to refresh Web Drawings that are connected to external data sources.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_SecureStoreAppIdRuleFailed" xml:space="preserve">
+    <value>The rule for the Unattended Service Account Application ID {0} failed.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <data name="Health_SecureStoreAppIdNotExistRuleFailed" xml:space="preserve">
+    <value>The rule for the Unattended Service Account Application ID failed. The ID does not exist.</value>
+    <comment>Shown in SharePoint Central Administrator's health monitoring section.</comment>
+  </data>
+  <!-- End Health Monitoring Rule strings -->
+  <!-- End-->
+</root>

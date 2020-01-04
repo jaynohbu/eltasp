@@ -1,0 +1,77 @@
+﻿@model ELT.WEB.Models.OceanReportMasterModel
+@{
+    ViewBag.Title = "Ocean Export Operation Report (HOUSE B/L)";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+@using ELT.WEB.Models
+@using ELT.CDT
+@using ELT.WEB.Controllers
+
+@Styles.Render("~/Content/css/ReportOperation.css")
+<hgroup>
+    <h1 class="pageheader">@ViewBag.Title</h1>
+</hgroup>
+@using (Html.BeginForm("OceanExport", "Report", FormMethod.Post, new { Operation = "OceanExport"}))
+{
+    
+    if (ViewBag.IsSelected != true)
+    {
+        Html.RenderPartial("_ReportSelectionBox", new ReportSelection());
+    }
+    else
+    {
+    
+   
+    <p class="Note">
+       
+    </p>
+    <table>
+        <tr>
+            <td></td>
+            <td colspan="2" style="text-align:right">
+                @foreach (string typeName in GridViewExportHelper.ExportTypes.Keys)
+                {
+                    <input type="submit" name="@typeName" value="@GridViewExportHelper.ExportTypes[typeName].Title" />
+                    <text>&nbsp;</text>
+                    //http://localhost/Report/AirExport
+                }
+
+                <input type="button" name="ReSelect" value="Go Back to Search" onclick="RedirectPrentTo('@Url.Content("~/Report/OceanExport")')" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:left">
+                Category: @Model.CategorizeBy
+                <br />
+                Period: @Model.PeriodBegin.ToShortDateString() ~ @Model.PeriodEnd.ToShortDateString()
+                <br />
+                Scale: @if (Model.CategorizeBy == "K")
+                {
+                    <span>KG</span>
+                }
+                else
+                {
+                    <span>LB</span>
+                }
+
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                @Html.Partial("_OceanExportMaster", Model)
+            </td>
+        </tr>
+        <tr><td></td><td></td><td></td></tr>
+    </table>
+    
+   
+    }
+}
+
+
+
+
+
+  
+ 

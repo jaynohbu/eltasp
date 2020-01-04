@@ -1,0 +1,158 @@
+﻿@model ELT.WEB.Models.PNLSelection
+@using ELT.WEB.Controllers
+@{
+
+    
+    <div id="report_ae_form" class="report-form">
+       <table cellspacing="0" cellpadding="0">
+            <tr>
+                <th class="main-header">
+                    Selection Period
+                </th>
+                <th class="main-header">
+                    From
+                </th>
+               <th class="main-header">
+                    To
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DropDownList("PeriodList", Model.PeriodList, new { id = "PeriodList" })
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.PeriodBegin, new { id = "PeriodBegin" })
+                </td>
+                <td>@Html.TextBoxFor(m => m.PeriodEnd, new { id = "PeriodEnd" })
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="divider"></td>
+            </tr>
+           <tr>
+               <th>
+                   Export/Import
+               </th>
+               <th>
+                   Air/Ocean
+               </th>
+               <th>
+                   MAWB/MBOL
+               </th>
+           </tr>
+           <tr>
+               <td>
+                   @Html.DropDownListFor(m => m.ImportExport, Model.ImportExportList )
+               </td>
+               <td>
+                   @Html.DropDownListFor(m => m.AirOcean, Model.AirOceanList)
+
+               </td>
+               <td >
+                   @Html.TextBoxFor(m => m.MAWB)
+               </td>
+           </tr>
+         
+            <tr>
+                <td>
+                  
+                </td>
+                <td>
+                  
+                </td>
+                <td style=" text-align:center;">
+                    <input type="submit" value="" class="btn-go" />
+                </td>
+            </tr>
+        </table>
+    </div>  
+    }
+    
+<script type="text/javascript">
+
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
+    today = mm + '/' + dd + '/' + yyyy;
+    $(document).ready(function () {
+
+        $("#PeriodBegin").datepicker();
+        $("#PeriodEnd").datepicker();
+
+        $("#PeriodBegin").val(today);
+        $("#PeriodEnd").val(today);
+         $("#PeriodList").change(GetPeriod);
+        
+
+    });
+     function daysInMonth(iMonth, iYear) {
+         return new Date(iYear, iMonth, 0).getDate();
+    }
+
+    function getQuarterMonth(d) {
+        d = d || new Date(); // If no date supplied, use today
+        var q = [4,1,2,3];
+        result= q[Math.floor(d.getMonth() / 3)];
+        if (result == 4) {
+            return "1";
+        }
+        if (result == 1) {
+            return "4";
+        }
+        if (result == 2) {
+            return "7";
+        }
+        if (result == 3) {
+            return "10";
+        }
+    }
+
+    function GetPeriod() {
+        var begin = today;
+        var end = today;
+        if ($("#PeriodList").val() == "0") {//<option value="0">Today</option>
+             begin = today;
+             end = today;
+            $("#PeriodBegin").val(begin);
+            $("#PeriodEnd").val(end);
+        }
+        if ($("#PeriodList").val() == "1") {//<option value="1">Month to Date</option>
+            begin  = mm + '/' + "1" + '/' + yyyy;
+            $("#PeriodBegin").val(begin);
+            $("#PeriodEnd").val(end);
+        }
+        if ($("#PeriodList").val() == "2") {//<option value="2">Quarter to Date</option>
+            begin = getQuarterMonth() + '/' + "1" + '/' + yyyy;
+            $("#PeriodBegin").val(begin);
+            $("#PeriodEnd").val(end);
+        }
+        if ($("#PeriodList").val() == "3") {//<option value="3">Year to Date</option>
+            begin = "1" + '/' + "1" + '/' + yyyy;
+            $("#PeriodBegin").val(begin);
+            $("#PeriodEnd").val(end);
+        }
+        if ($("#PeriodList").val() == "4") {//<option value="4">This Month</option>
+            begin = mm + '/' + "1" + '/' + yyyy;
+            end = mm + '/' + daysInMonth(mm, yyyy) + '/' + yyyy;
+            $("#PeriodBegin").val(begin);
+            $("#PeriodEnd").val(end);
+        }
+        if ($("#PeriodList").val() == "5") {//<option value="5">This Quearter</option>
+            begin = getQuarterMonth() + '/' + "1" + '/' + yyyy;
+            end = (parseInt(getQuarterMonth()) + 2) + '/' + daysInMonth((parseInt(getQuarterMonth()) + 2), yyyy) + '/' + yyyy;
+            $("#PeriodBegin").val(begin);
+            $("#PeriodEnd").val(end);
+        }
+        if ($("#PeriodList").val() == "6") {//<option value="6">This Year</option>
+            begin = "1" + '/' + "1" + '/' + yyyy;
+            end = "12" + '/' + "31" + '/' + yyyy;
+            $("#PeriodBegin").val(begin);
+            $("#PeriodEnd").val(end);
+        }
+    }
+
+</script>
+
+
+

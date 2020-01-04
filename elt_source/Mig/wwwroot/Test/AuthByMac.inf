@@ -1,0 +1,8 @@
+[Add.Code]
+AuthByMac.ocx=AuthByMac.ocx
+
+[AuthByMac.ocx]
+file=thiscab
+clsid={7C159314-7E2C-4E6E-B580-5DF25610F581}
+RegisterServer=yes
+FileVersion=1,1,9,0

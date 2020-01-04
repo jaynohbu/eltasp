@@ -1,0 +1,306 @@
+<%@ Register TagPrefix="igtbar" Namespace="Infragistics.WebUI.UltraWebToolbar" Assembly="Infragistics.WebUI.UltraWebToolbar.v5.1, Version=5.1.20051.1045, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<%@ Page language="c#" Codebehind="ARAgingDetail.aspx.cs" AutoEventWireup="false" Inherits="IFF_MAIN.ASPX.Reports.Accounting.ARAgingDetail" %>
+<%@ Register TagPrefix="igtbl" Namespace="Infragistics.WebUI.UltraWebGrid" Assembly="Infragistics.WebUI.UltraWebGrid.v5.1, Version=5.1.20051.1045, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<%@ Register TagPrefix="cc1" Namespace="Infragistics.WebUI.UltraWebGrid.ExcelExport" Assembly="Infragistics.WebUI.UltraWebGrid.ExcelExport.v5.1, Version=5.1.20051.1045, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+  <HEAD>
+		<title>ARAgingDetail</title>
+<meta content="Microsoft Visual Studio .NET 7.1" name=GENERATOR>
+<meta content=C# name=CODE_LANGUAGE>
+<meta content=JavaScript name=vs_defaultClientScript>
+<meta content=http://schemas.microsoft.com/intellisense/ie5 name=vs_targetSchema>
+<script language=javascript>
+
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_goToURL() { //v3.0
+
+var i, args=MM_goToURL.arguments;
+  document.MM_returnValue = false;
+  
+  for (i=0; i<(args.length-1); i+=2) 	{			
+			if(args[i].indexOf("mainFrame") < 0)	{
+				eval(args[i]+".location='"+args[i+1]+"'");
+			}
+			else
+			{
+				if(args[i+1].indexOf("ASPX") >=0) {
+				parent.MenuLink(args[i+1]);				
+				}
+				else {				
+				parent.MenuLink('../acct_reports/'+args[i+1]);
+				}
+			}			
+	}
+}
+
+function formRest(tr,id) {
+	var idText = id.Key
+
+	if(idText == 'Reset' ) {
+		__doPostBack("btnReset", "");
+		return true;
+	}
+	else if(idText == 'Back' ) {
+		__doPostBack("btnBack", "");   		
+		return true;
+	}
+	else if(idText == 'Hide' ) {
+		__doPostBack("butHideCol", "");   		
+		return true;
+	}
+	else if (idText == 'Asce') {
+		__doPostBack("btnSortAsce", "");			
+	}	
+	else if (idText == 'Desc') {
+		__doPostBack("btnSortDesc", "");			
+	}	
+	else if (idText == 'Excel') {
+		__doPostBack("btnExcel", "");			
+	}	
+	else if (idText == 'XML') {
+		__doPostBack("btnXML", "");			
+	}	
+	
+}
+
+
+	var igS;
+	function acuh(tableName,itemName) {
+	var cell = igtbl_getElementById(itemName);
+		  cell.innerHTML = igS;		
+	}
+
+	function bcuh(tableName,itemName) {
+	var cell = igtbl_getElementById(itemName);
+		 igS = cell.innerHTML; 	
+	}
+		
+	function ExpandAllRows(btnEl) {
+		// Loop thru the rows of Band 0 and expand each one
+		var oGrid = oUltraWebGrid1;
+		var oBands = oGrid.Bands;
+		var oBand = oBands[0];
+		var oColumns = oBand.Columns;
+		var count = oColumns.length;
+		var oRows = oGrid.Rows;
+		oGrid.suspendUpdates(true);
+		for(i=0; i<oRows.length; i++) {
+			oRow = oRows.getRow(i);
+			if(btnEl.value == "Expand All") {
+				oRow.setExpanded(true);
+			}
+			else {
+				oRow.setExpanded(false);
+			}
+		}
+		oGrid.suspendUpdates(false);
+		if(btnEl.value == "Expand All") 
+			btnEl.value = "Collapse All";
+		else		
+			btnEl.value = "Expand All";		
+	}
+	
+	function resetFind() {
+			var btnEl = igtbl_getElementById("Find");
+			btnEl.value="Find";
+		}
+		
+	function FindValue(btnEl) {
+			var eVal = igtbl_getElementById("FindVal");
+			findValue = eVal.value;
+			var re = new RegExp("^" + findValue, "gi");
+			if(btnEl.value=="Find") {
+				igtbl_clearSelectionAll(oUltraWebGrid1.Id)
+				var oCell = oUltraWebGrid1.find(re);
+				if(oCell != null) {
+					btnEl.value="Find Next";
+					var row = oCell.Row.ParentRow;
+					while(row != null) {
+						row.setExpanded(true);
+						row = row.ParentRow;
+					}
+					oCell.setSelected(true);
+				}
+				else
+				{
+				alert("Not found! : "+findValue)
+				}
+			}
+			else {
+				var oCell = oUltraWebGrid1.findNext();
+				if(oCell == null) {
+					btnEl.value="Find";
+				}
+				else {
+					var row = oCell.Row.ParentRow;
+					while(row != null) {
+						row.setExpanded(true);
+						row = row.ParentRow;
+					}
+					oCell.setSelected(true);
+				}
+			}
+		}
+	
+	
+		</script>
+<LINK href="/IFF_MAIN/ASPX/CSS/AppStyle.css" type=text/css rel=stylesheet >
+  </HEAD>
+<body MS_POSITIONING="FlowLayout">
+<!--  #INCLUDE FILE="/ASP/tabs/acct_reports_subs_aspx.htm" -->
+<form id=Form1 method=post runat="server">
+<TABLE id=Table2 height="372" cellSpacing=0 cellPadding=0 width="1359" 
+bgColor=#ffffff style="WIDTH: 1359px; HEIGHT: 372px">
+  <TR>
+    <TD style="HEIGHT: 2px"><FONT face=±¼¸²></FONT></TD>
+    <TD style="HEIGHT: 2px" vAlign=middle align=left><asp:label id=Label1 runat="server" Height="8px" DESIGNTIMEDRAGDROP="18" Font-Size="Larger" ForeColor="Black" Font-Bold="True" Width="100%"> A/R Aging</asp:label></TD>
+    <TD style="WIDTH: 2px; HEIGHT: 2px"></TD></TR>
+  <TR>
+    <TD style="HEIGHT: 4px"></TD>
+    <TD style="HEIGHT: 4px" bgColor=#cdcc9d></TD>
+    <TD style="WIDTH: 2px; HEIGHT: 4px"></TD></TR>
+  <TR>
+    <TD style="HEIGHT: 13px"></TD>
+    <TD style="HEIGHT: 13px" vAlign=top bgColor=whitesmoke 
+      ><asp:label id=Label2 runat="server" Width="100%" Font-Bold="True" ForeColor="Navy" Font-Size="10px" Height="8px" Font-Italic="True"></asp:label></TD>
+    <TD style="WIDTH: 2px; HEIGHT: 13px"></TD></TR>
+  <TR>
+    <TD style="HEIGHT: 2px"></TD>
+    <TD style="HEIGHT: 2px" vAlign=top bgColor=#f5f5f5><asp:label id=lblNoData runat="server" Width="100%" Font-Bold="True" ForeColor="Navy" Font-Italic="True" Font-Underline="True">...</asp:label></TD>
+    <TD style="WIDTH: 2px; HEIGHT: 2px"></TD></TR>
+  <TR>
+    <TD height=5></TD>
+    <TD vAlign=top bgColor=#cdcc9d height=5></TD>
+    <TD style="WIDTH: 2px" height=5></TD></TR>
+  <TR>
+    <TD style="HEIGHT: 1px"></TD>
+    <TD style="HEIGHT: 1px" vAlign=top><igtbar:ultrawebtoolbar id=UltraWebToolbar1 runat="server" Width="184px" Font-Size="9pt" ForeColor="White"
+							ImageDirectory="/ig_common/images/" MovableImage="ig_tb_move00.gif" ItemWidthDefault="80px" BorderWidth="0px" BorderStyle="None"
+							Font-Names="Arial" BackColor="White">
+<HoverStyle Cursor="Hand" Font-Size="9pt" Font-Names="Arial" BorderStyle="Outset" ForeColor="Black" BackColor="Silver">
+</HoverStyle>
+
+<ClientSideEvents Click="formRest">
+</ClientSideEvents>
+
+<SelectedStyle Cursor="Default" Font-Size="9pt" Font-Names="Arial" BorderStyle="Inset" ForeColor="Black" BackColor="Silver">
+</SelectedStyle>
+
+<Items>
+<igtbar:TBarButton Key="Back" Image="../../../images/button_back.gif"></igtbar:TBarButton>
+<igtbar:TBarButton Tag="" Key="Reset" HoverImage="" ToolTip="" SelectedImage="" TargetURL="" DisabledImage="" TargetFrame="" Image="../../../images/button_refresh.gif"></igtbar:TBarButton>
+<igtbar:TBarButton Tag="" Key="Hide" HoverImage="" ToolTip="" SelectedImage="" TargetURL="" DisabledImage="" TargetFrame="" Image="../../../images/button_hide.gif"></igtbar:TBarButton>
+<igtbar:TBarButton Tag="" Key="Asce" HoverImage="" ToolTip="" SelectedImage="" TargetURL="" DisabledImage="" TargetFrame="" Image="../../../images/button_asce.gif"></igtbar:TBarButton>
+<igtbar:TBarButton Tag="" Key="Desc" HoverImage="" ToolTip="" SelectedImage="" TargetURL="" DisabledImage="" TargetFrame="" Image="../../../images/button_desc.gif"></igtbar:TBarButton>
+<igtbar:TBarButton Tag="" Key="Excel" HoverImage="" ToolTip="" SelectedImage="" TargetURL="" DisabledImage="" TargetFrame="" Image="../../../Images/button_exel.gif"></igtbar:TBarButton>
+<igtbar:TBarButton Tag="" Key="XML" HoverImage="" ToolTip="" SelectedImage="" TargetURL="" DisabledImage="" TargetFrame="" Image="../../../images/button_xmlg.gif"></igtbar:TBarButton>
+</Items>
+
+<DefaultStyle Cursor="Hand" BorderWidth="0px" Font-Size="9pt" Font-Names="Arial" BorderColor="White" BorderStyle="None" ForeColor="Black" BackColor="White">
+</DefaultStyle>
+						</igtbar:ultrawebtoolbar></TD>
+    <TD style="WIDTH: 2px; HEIGHT: 1px"></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD vAlign=top align=right><igtbl:ultrawebgrid id=UltraWebGrid1 runat="server" Width="99%" Height="456px">
+<DisplayLayout ColWidthDefault="80px" RowHeightDefault="20px" Version="4.00" ViewType="Hierarchical" HeaderClickActionDefault="SortMulti" BorderCollapseDefault="Separate" Name="UltraWebGrid1" AllowUpdateDefault="Yes">
+
+<AddNewBox>
+
+<Style BorderWidth="1px" BorderStyle="Solid" BackColor="LightGray">
+
+<BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White">
+</BorderDetails>
+
+</Style>
+
+</AddNewBox>
+
+<Pager>
+
+<Style BorderWidth="1px" BorderStyle="Solid" BackColor="LightGray">
+
+<BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White">
+</BorderDetails>
+
+</Style>
+
+</Pager>
+
+<HeaderStyleDefault BorderStyle="Solid" ForeColor="#1B5AA1" BackColor="#CFDDF0" Height="17px">
+
+<BorderDetails WidthLeft="0px" StyleBottom="Solid" ColorBottom="173, 203, 239" WidthRight="0px" StyleTop="None" StyleRight="None" WidthBottom="1px" StyleLeft="None">
+</BorderDetails>
+
+</HeaderStyleDefault>
+
+<FrameStyle Width="99%" BorderWidth="1px" Font-Size="8pt" Font-Names="Tahoma" BorderColor="#7F9DB9" BorderStyle="Solid" Height="456px">
+</FrameStyle>
+
+<FooterStyleDefault BorderWidth="1px" BorderStyle="Solid" BackColor="#CFDDF0">
+
+<BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White">
+</BorderDetails>
+
+</FooterStyleDefault>
+
+<ClientSideEvents AfterCellUpdateHandler="acuh" BeforeCellUpdateHandler="bcuh">
+</ClientSideEvents>
+
+<GroupByBox>
+
+<BandLabelStyle BackColor="White">
+</BandLabelStyle>
+
+</GroupByBox>
+
+<EditCellStyleDefault BorderWidth="0px" BorderStyle="None">
+</EditCellStyleDefault>
+
+<RowAlternateStyleDefault BackColor="WhiteSmoke">
+</RowAlternateStyleDefault>
+
+<RowStyleDefault BorderWidth="1px" BorderColor="#ADCBEF" BorderStyle="Solid">
+
+<Padding Left="3px">
+</Padding>
+
+<BorderDetails WidthLeft="1px" WidthTop="0px" WidthRight="1px" StyleLeft="None">
+</BorderDetails>
+
+</RowStyleDefault>
+
+</DisplayLayout>
+
+<Bands>
+<igtbl:UltraGridBand></igtbl:UltraGridBand>
+</Bands>
+						</igtbl:ultrawebgrid></TD>
+    <TD style="WIDTH: 1px"></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD vAlign=top align=left><INPUT id=ExpandAll style="WIDTH: 80px; HEIGHT: 20px; BACKGROUND-COLOR: #e0e0e0" onclick=javascript:ExpandAllRows(this); type=button value="Expand All" name=ExpandAll><asp:radiobutton id=radSingle runat="server" Text="Single Page" Width="100px" Checked="True" AutoPostBack="True" GroupName="SingleMulti"></asp:radiobutton><asp:radiobutton id=radMulti runat="server" Text="Multi Page" Width="100px" AutoPostBack="True" GroupName="SingleMulti"></asp:radiobutton><asp:checkbox id=CheckBox1 runat="server" Text="Intelli. Search" Width="104px" Checked="True" AutoPostBack="True"></asp:checkbox></TD>
+    <TD style="WIDTH: 1px"></TD></TR></TABLE><asp:button id=btnValidate runat="server" Text="for Validation" Visible="False"></asp:button><asp:linkbutton id=LinkButton1 runat="server" Visible="False">LinkButton</asp:linkbutton><cc1:ultrawebgridexcelexporter 
+id=UltraWebGridExcelExporter1 
+runat="server"></cc1:ultrawebgridexcelexporter><asp:button id=btnReset runat="server" Text="Reset" Width="80px" Height="20px" BackColor="#E0E0E0" Visible="False"></asp:button><asp:button id=butHideCol runat="server" Text="Hide" Width="80px" Height="20px" BackColor="#E0E0E0" Visible="False"></asp:button><asp:button id=btnSortAsce runat="server" Text="Asce." Width="80px" Height="20px" BackColor="#E0E0E0" Visible="False"></asp:button><asp:button id=btnSortDesc runat="server" Text="Desc." Width="80px" Height="20px" BackColor="#E0E0E0" Visible="False"></asp:button><asp:button id=btnPrint runat="server" Text="Print" Width="80px" Height="20px" BackColor="#E0E0E0" Visible="False"></asp:button><asp:button id=btnExcel runat="server" Text="Excel" Width="80px" Height="20px" BackColor="#E0E0E0" Visible="False"></asp:button><asp:button id=btnXML runat="server" Text="XML" Width="80px" Height="20px" BackColor="#E0E0E0" Visible="False"></asp:button><asp:button id=btnBack runat="server" Text="<< Back" Width="60px" DESIGNTIMEDRAGDROP="14" Visible="False"></asp:button></form>
+
+	</body>
+</HTML>

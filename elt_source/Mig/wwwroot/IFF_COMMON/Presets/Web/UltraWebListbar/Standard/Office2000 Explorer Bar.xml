@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Office 2000 Explorer Bar" PresetDescription="Office 2000 looking ExplorerBar.  Sets both Look and Behavior properties." PresetType="All" />-->
+<iglbar:UltraWebListbar BarWidth="100%" BorderStyle="None" MergeStyles="True" ViewType="ExplorerBar" GroupSpacing="10px" BorderWidth="0px">
+  <DefaultGroupStyle Height="100%" BorderWidth="1px" BorderColor="Silver" BorderStyle="Solid" />
+  <DefaultItemStyle />
+  <DefaultItemHoverStyle />
+  <DefaultGroupHeaderAppearance>
+    <CollapsedAppearance ExpansionIndicatorImage="downarrows_white.gif">
+      <Style />
+    </CollapsedAppearance>
+    <HoverAppearance>
+      <Style />
+    </HoverAppearance>
+    <ExpandedAppearance ExpansionIndicatorImage="uparrows_white.gif">
+      <Style BorderWidth="2px" BorderStyle="Groove" BackColor="Silver" />
+    </ExpandedAppearance>
+  </DefaultGroupHeaderAppearance>
+  <DefaultItemSelectedStyle />
+</iglbar:UltraWebListbar>

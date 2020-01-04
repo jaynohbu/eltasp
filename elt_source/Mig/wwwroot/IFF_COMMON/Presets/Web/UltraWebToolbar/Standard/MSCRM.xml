@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="MSCRM Theme" PresetDescription="Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<igtbar:UltraWebToolbar ImageDirectory="/ig_common/images/" BackColor="#7288AC" BackgroundImage="" Font-Size="8pt" Font-Names="Microsoft Sans Serif" ItemWidthDefault="" ForeColor="White" MovableImage="ig_tb_move00.gif" Height="22px">
+  <HoverStyle BorderColor="Blue" BorderStyle="Solid" ForeColor="White" BackColor="#64799C">
+    <BorderDetails WidthLeft="1px" WidthTop="1px" WidthRight="1px" WidthBottom="1px" />
+  </HoverStyle>
+  <SelectedStyle />
+  <DefaultStyle BackColor="#7288AC" BorderStyle="Solid" ForeColor="White">
+    <BorderDetails ColorTop="114, 136, 172" WidthLeft="1px" ColorBottom="114, 136, 172" WidthTop="1px" ColorRight="114, 136, 172" WidthRight="1px" WidthBottom="1px" ColorLeft="114, 136, 172" />
+  </DefaultStyle>
+</igtbar:UltraWebToolbar>

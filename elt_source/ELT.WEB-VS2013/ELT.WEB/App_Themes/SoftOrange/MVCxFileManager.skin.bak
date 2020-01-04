@@ -1,0 +1,15 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxFileManager" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxmvc:MVCxFileManager runat="server">
+    <Styles CssFilePath="~/App_Themes/SoftOrange/{0}/styles.css" CssPostfix="SoftOrange"></Styles>
+    <Images SpriteCssFilePath="~/App_Themes/SoftOrange/{0}/sprite.css" LoadingPanel-Url="~/App_Themes/SoftOrange/Web/Loading.gif" 
+            FolderContainerNodeLoadingPanel-Url="~/App_Themes/SoftOrange/Web/tvNodeLoading.gif"></Images>
+    <ImagesDetailsView>
+        <HeaderActiveFilter SpriteProperties-CssClass="dxWeb_fmGvHeaderFilterActive_SoftOrange"></HeaderActiveFilter>
+        <HeaderFilter SpriteProperties-CssClass="dxWeb_fmGvHeaderFilter_SoftOrange"></HeaderFilter>
+        <HeaderSortDown SpriteProperties-CssClass="dxWeb_fmGvHeaderSortDown_SoftOrange"></HeaderSortDown>
+        <HeaderSortUp SpriteProperties-CssClass="dxWeb_fmGvHeaderSortUp_SoftOrange"></HeaderSortUp>
+    </ImagesDetailsView>
+</dxmvc:MVCxFileManager>

@@ -1,0 +1,14 @@
+;*** Sample Source Code MakeCAB Directive file example
+;
+.OPTION EXPLICIT     ; Generate errors 
+.Set CabinetNameTemplate=ELTAuth.cab       
+.set DiskDirectoryTemplate=CDROM	; All cabinets go in a single directory
+.Set CompressionType=MSZIP	;** All files are compressed in cabinet files
+.Set UniqueFiles="OFF"
+.Set Cabinet=on
+.Set DiskDirectory1=C:\Inetpub\wwwroot\MFCActiveX\ELTAuth\
+C:\Inetpub\wwwroot\MFCActiveX\ELTAuth\ELTAuth.inf
+C:\Inetpub\wwwroot\MFCActiveX\ELTAuth\ELTAuth.ocx
+C:\Inetpub\wwwroot\MFCActiveX\ELTAuth\IEPrint.ocx
+C:\Inetpub\wwwroot\MFCActiveX\ELTAuth\ClientTrack.ocx
+;*** <the end>

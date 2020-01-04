@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Windows XP - Olive Theme" PresetDescription="Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<igtbar:UltraWebToolbar Movable="True" BorderStyle="Solid" BorderColor="#ECE9D8" BorderWidth="1px" BackColor="#EEEEDD" BackgroundImage="none" Font-Size="9pt" Font-Names="Arial" ItemWidthDefault="80px"  ImageDirectory="/ig_common/images/"  MovableImage="ig_tb_move00.gif" ForeColor="Black" ItemSpacing="0" ItemPadding="0">
+  <HoverStyle Cursor="Default" BorderWidth="1px" BorderColor="#B7C691" BorderStyle="Solid" BackgroundImage="none" BackColor="Gainsboro" Font-Size="9pt" Font-Names="Arial" ForeColor="Black" />
+  <SelectedStyle Cursor="Default" BorderWidth="1px" BorderColor="#B7C691" BorderStyle="Solid" BackgroundImage="none" BackColor="Gainsboro" Font-Size="9pt" Font-Names="Arial" ForeColor="Black" />
+  <DefaultStyle BorderWidth="0px" BorderColor="OliveDrab" BackColor="#EEEEDD" BorderStyle="None" Font-Size="9pt" Font-Names="Arial" ForeColor="Black" />
+</igtbar:UltraWebToolbar>

@@ -1,0 +1,15 @@
+﻿<nav>
+    <ul class="pagination" id="ul_pager">
+        <li >
+            <a href="#" aria-label="Previous" ng-click="goToPage(-2)">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li ng-repeat="i in pageBlocks track by $index" id="li_{{i}}" ><a href="#" ng-click="goToPage(i)">{{i}}</a></li>
+        <li>
+            <a href="#" aria-label="Next" ng-click="goToPage(-1)">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>

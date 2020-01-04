@@ -1,0 +1,6 @@
+﻿@{
+    ViewBag.Title = "CertificateOfOrigin";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+
+<iframe id ="ContentFrame" scrolling="no"   frameborder="0" width="100%" onload="autoResize('ContentFrame');" src="@Url.Content("~/ASP/air_export/certificate_of_origin_air.asp" + ViewBag.Params)"></iframe>

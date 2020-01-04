@@ -1,0 +1,61 @@
+<public:component>
+    <public:attach event="oncontentready" onevent="SetTableScroll();" />
+    <script language="jscript" type="text/jscript">
+    <!--
+    function SetTableScroll()
+    {
+        var objNewDiv       = null;
+        var strNewDiv       = "";
+        
+        var objNewTable     = null;
+        var strNewTable     = "";
+        var aryNewTableRows = null;
+        
+        var objRegEx        = /<tr[^>]*>[\s\S]*?<\/tr>/ig;
+        
+        var strTableID      = element.id;
+        var strBuffer       = "";
+        var iCnt            = 1;
+        var iLastIndex      = 0;
+        
+        // 동적으로 새로운 DIV 태그를 추가한다.
+        strNewDiv = "<div "
+                  + "ID=\"" + strTableID + "_DIV\" "
+                  + "style=\"width: 400px; height: 89px; overflow-y: auto; behavior:url(/lib/htc/AttachScrollEH.htc);\">"
+                  + "</div>";
+        element.insertAdjacentHTML("beforeBegin", strNewDiv);
+        objNewDiv = element.document.getElementById(strTableID + "_DIV");
+        
+        // 현재 TABLE 태그 전체를 DIV 태그의 자식으로 설정한다.
+        element.applyElement(objNewDiv);
+        
+        // 복사본 TABLE 태그를 생성하기 위해서 문자열 작업을 한다.
+        strNewTable = element.outerHTML;
+        while ((aryNewTableRows = objRegEx.exec(strNewTable)) != null)
+        {
+            if (iCnt == 1)
+            {
+                strBuffer = strNewTable.substring(0, aryNewTableRows.lastIndex);
+                strBuffer = strBuffer.replace(/id=\S+/i, "");
+                strBuffer = strBuffer.replace(/behavior\: url\([^\)]+?\)/i, "");
+            }
+            iLastIndex = aryNewTableRows.lastIndex;
+            iCnt++;
+        }
+        
+        if (iLastIndex != 0)
+            strBuffer += strNewTable.substring(iLastIndex, strNewTable.length);
+            
+        // 동적으로 복사본 TABLE 태그를 추가한다.
+        element.insertAdjacentHTML("beforeBegin", strBuffer);
+        
+        // 복사본 테이블의 스타일쉬트를 설정한다.
+        objNewTable = objNewDiv.children[0];
+        objNewTable.style.position = "absolute";
+        objNewTable.style.zIndex   = "10";
+        objNewTable.style.left     = "0px";
+        objNewTable.style.top      = "0px";
+    }
+    //-->
+    </script>
+</public:component>

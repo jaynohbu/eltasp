@@ -1,0 +1,128 @@
+﻿@model ELT.WEB.Models.ARAgingDetailModel
+
+@Html.DevExpress().GridView(settings => {
+
+    settings.Name = "detailGrid_" + Model.Key.Replace(' ', '_');
+    settings.SettingsDetail.MasterGridName = "grid";
+    settings.CallbackRouteValues = new { Controller = "Accounting", Action = "ARAgingDetail", KeyFieldName = Model.KeyFieldName, Key = Model.Key };
+    settings.Width = Unit.Percentage(100);
+    settings.KeyFieldName = Model.KeyFieldName;
+    settings.SettingsPager.PageSize = 50;
+    
+
+
+    settings.Columns.Add("Type");
+   
+    settings.Columns.Add("IV_Date","I/V Date");
+    settings.Columns.Add("IV_Number", "I/V No.");
+   
+    settings.Columns.Add("House_Number","House No.");
+    settings.Columns.Add("Ref_Number","Ref No.");
+    settings.Columns.Add("Due_Date", "Due");
+    settings.Columns.Add("Term");
+    settings.Columns.Add("Aging");
+    
+    settings.Columns.Add(column =>
+    {
+        column.FieldName = "Open_Balance";
+        column.Caption = "Open Balance";
+        column.SetDataItemTemplateContent(a =>
+        {
+            if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Open_Balance"))))
+            {
+                string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                if (a.Text == "0") val = "0";
+                ViewContext.Writer.Write(val
+                   );
+            }
+        });
+
+    });  
+
+    settings.Columns.Add(column =>
+    {
+        column.FieldName = "One_Month";
+        column.Caption = "1~30";
+        column.SetDataItemTemplateContent(a =>
+        {
+            if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "One_Month"))))
+            {
+                string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                if (a.Text == "0") val = "0";
+                ViewContext.Writer.Write(val
+                   );
+            }
+        });
+
+    });  
+
+    settings.Columns.Add(column =>
+    {
+        column.FieldName = "Two_Month";
+        column.Caption = "31~60";
+        column.SetDataItemTemplateContent(a =>
+        {
+            if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Two_Month"))))
+            {
+                string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                if (a.Text == "0") val = "0";
+                ViewContext.Writer.Write(val
+                   );
+            }
+        });
+
+    });
+  
+    settings.Columns.Add(column =>
+    {
+        column.FieldName = "Three_Month";
+        column.Caption = "61~90";
+        column.SetDataItemTemplateContent(a =>
+        {
+            if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Three_Month"))))
+            {
+                string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                if (a.Text == "0") val = "0";
+                ViewContext.Writer.Write(val
+                   );
+            }
+        });
+
+    });
+   
+    settings.Columns.Add(column =>
+    {
+        column.FieldName = "More_Than_Three_Month";
+        column.Caption = "+90";
+        column.SetDataItemTemplateContent(a =>
+        {
+            if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "More_Than_Three_Month"))))
+            {
+                string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                if (a.Text == "0") val = "0";
+                ViewContext.Writer.Write(val
+                   );
+            }
+        });
+
+    });
+
+    settings.Columns.Add(column =>
+    {
+        column.FieldName = "Total";
+        column.SetDataItemTemplateContent(a =>
+        {
+            if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Total"))))
+            {
+                string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                if (a.Text == "0") val = "0";
+                ViewContext.Writer.Write(val
+                   );
+            }
+        });
+
+    });
+   
+
+
+  }).Bind(Model.Elements).GetHtml()

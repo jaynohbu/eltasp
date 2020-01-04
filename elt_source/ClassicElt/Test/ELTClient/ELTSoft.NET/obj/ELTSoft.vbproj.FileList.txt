@@ -1,0 +1,7 @@
+.\bin\ELTSoft.dll
+.\bin\ELTSoft.pdb
+.\bin\ELTSoft.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\ELTSoft.dll
+obj\Debug\ELTSoft.xml
+obj\Debug\ELTSoft.pdb

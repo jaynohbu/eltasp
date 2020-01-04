@@ -1,0 +1,20 @@
+body       {background-color:#222222; color:#BBBBBB; font-size:8pt; font-family:Arial,±¼¸²; line-height:13pt; margin:0;
+            scrollbar-face-color        : #333333;
+            scrollbar-shadow-color      : #1A1A1A;
+            scrollbar-highlight-color   : #555555;
+            scrollbar-3dlight-color     : #000000;
+            scrollbar-darkshadow-color  : #000000;
+            scrollbar-track-color       : #000000;
+            scrollbar-arrow-color       : #DDDDDD;}
+
+A           {text-decoration:none; color:#CCCCCC; font-size:8pt; font-family:Arial,±¼¸²; line-height:13pt;}
+A:active    {text-decoration:none; color:#FFFFFF; font-size:8pt; font-family:Arial,±¼¸²; line-height:13pt;}
+A:hover     {text-decoration:none; color:#FFFFFF; font-size:8pt; font-family:Arial,±¼¸²; line-height:13pt;}
+
+table       {color:#BBBBBB; font-size:8pt; font-family:Arial,±¼¸²; line-height:13pt;}
+tr          {color:#BBBBBB; font-size:8pt; font-family:Arial,±¼¸²; line-height:13pt;}
+td          {color:#BBBBBB; font-size:8pt; font-family:Arial,±¼¸²; line-height:13pt;}
+
+.code       {color:#BBBBBB; font-size:8pt; font-family:Arial,±¼¸²; line-height:12pt;}
+.text01     {color:#CCCCCC; font-size:8pt; font-family:Arial,±¼¸²; line-height:13pt;}
+.text02     {color:#EEEEEE; font-size:9pt; font-family:Arial,±¼¸²; line-height:14pt;}

@@ -1,0 +1,22 @@
+﻿@model ELT.CDT.AuthorizedPage
+@Html.HiddenFor(m => m.user_id)
+@Html.HiddenFor(m => m.page_id)
+<tr>
+    <td width="15%">
+        @Html.DisplayTextFor(m=>m.top_module)
+        @Html.HiddenFor(m => m.top_module)
+    </td>
+    <td width="15%">
+        @Html.DisplayTextFor(m => m.sub_module)
+        @Html.HiddenFor(m => m.sub_module)
+       
+    </td>
+    <td width="30%">
+        @Html.DisplayTextFor(m => m.page_label)
+        @Html.HiddenFor(m => m.page_label)
+       
+    </td>
+    <td width="40%">
+        @Html.CheckBoxFor(m => m.is_accessible, new { @Class = "PageAcessCheck", onclick = "ItemChecked(this)" })
+    </td>
+</tr>

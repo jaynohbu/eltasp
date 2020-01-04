@@ -1,0 +1,89 @@
+﻿#LayoutSplitter .HeadPane,
+#PrintLayoutSplitter .HeadPane
+{
+	background: white;
+}
+#LayoutSplitter .dxsplPane_Moderno, 
+#LayoutSplitter .dxsplPaneCollapsed_Moderno,
+#LayoutSplitter .dxheControl_Moderno
+{
+    border: 1px solid #d1d1d1;
+}
+
+.HeadPane .ActionToolbar .Spacer b
+{
+    background: #d1d1d1;
+}
+#LayoutSplitter .HeadPane .NavigationToolbar .NavigationMenu .dxm-item .dxm-content,
+#LayoutSplitter .HeadPane .NavigationToolbar .NavigationMenu .dxm-item .dxm-content.dxm-hovered
+{
+    font-size: 24px;
+    color: #0072c6;
+}
+.HeadPane .ActionToolbar .SearchBox
+{
+    margin-top: 1px;
+}
+.HeadPane .ActionToolbar .SearchBoxButton
+{
+    background: Transparent!important;
+    border-color: Transparent   !important;
+    padding: 4px 8px;
+}
+.HeadPane .ActionToolbar .SearchBox input
+{
+    font-size: 14px!important;
+}
+
+.CalendarNavArea
+{
+	background: white;
+}
+
+.ContactCard 
+{
+    border: 1px solid #d1d1d1;
+}
+.contacts .dxdvContent_Moderno
+{
+    padding: 18px;
+}
+
+.dxgvTable_Moderno,
+.dxgvGroupPanel_Moderno,
+.dxscControl_Moderno,
+.feeds .dxgvControl_Moderno .dxgvHSDC,
+.feeds .dxgvControl_Moderno .dxgvFSDC
+{
+    border: 0;
+}
+.dxgvControl_Moderno .dxgvHSDC,
+.dxgvControl_Moderno .dxgvCSD
+{
+    border-left: 0;
+}
+.feeds .dxnbLite_Moderno.FeedNavBar .dxnb-gr:first-child .dxnb-header,
+.feeds .dxnbLite_Moderno.FeedNavBar .dxnb-gr:first-child .dxnb-headerCollapsed
+{
+    border-top: 0;
+}
+
+#AddressBookButton
+{
+    padding: 3px 12px 4px;
+}
+
+.Landscape .ContactCard {
+    width: 420px !important;
+    height: 240px !important;
+}
+.Portrait .ContactCard {
+    width: 320px !important;
+    height: 320px !important;
+}
+
+#LayoutSplitter .ContactsNavArea .field .label
+{
+    padding-top: 9px;
+}
+

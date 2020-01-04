@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "MBOL";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+
+<iframe id ="ContentFrame" scrolling="no"   frameborder="0" width="100%" onload="autoResize('ContentFrame');" src="@Url.Content("~/ASP/ocean_export/new_edit_mbol.asp" + ViewBag.Params)"></iframe>
+<script type="text/javascript" language="javascript">
+
+
+  
+    var BillNumbr;
+
+    $('#ContentFrame').load(function () {
+        var iframe = document.getElementById('ContentFrame');
+        var contentDocument = iframe.contentDocument || iframe.contentWindow.document;
+        contentDocument = this.contentDocument || this.contentWindow.document;
+        var billNo = contentDocument.getElementById("lstBookingNum").value;
+
+        $(contentDocument.getElementById("NewPrintVeiw1")).click(function () { PrepPDFPrintOptions(billNo); });
+        $(contentDocument.getElementById("NewPrintVeiw2")).click(function () { PrepPDFPrintOptions(billNo); });
+
+    });
+
+    function PrepPDFPrintOptions(BillNumbr) {
+
+        var url = "/AspPrintPDF/MBOLPrintPDF?MBOL=" + BillNumbr;
+        //alert(url);
+        ShowInModalBox(url);
+    }
+    function ShowInModalBox(url) {
+
+        $("#ModalPlaceHolder").remove();
+        var content = "<div id='ModalPlaceHolder'></div>";
+        $('body').append(content);
+        $("#ModalPlaceHolder").append($("<iframe frameborder='0' id='modalframe' onload='autoResize(''modalframe'');'  scrolling='no' style='width:100%' />").attr("src", url)).dialog(
+
+        {
+            autoOpen: true,
+            modal: true,
+            resizable: "auto",
+            width: "auto",
+            height: "auto",
+            minHeight: "auto"
+        }
+        );
+    }
+
+    </script>

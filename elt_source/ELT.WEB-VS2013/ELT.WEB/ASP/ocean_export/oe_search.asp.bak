@@ -1,0 +1,1528 @@
+<%@ LANGUAGE = VBScript %>
+<html><head>
+<title>OE Search</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<script type="text/jscript" language="javascript" src="../include/WebDateSetJN.js" > </script>
+<script type="text/javascript" language="javascript" src="../ajaxFunctions/ajax.js"></script>
+<script type="text/jscript" language="javascript" src="../include/JPED.js"></script> 
+		
+<link href="../css/elt_css.css" rel="stylesheet" type="text/css">
+<!--  #INCLUDE FILE="../include/connection.asp" -->
+<script language='JScript' src='../Include/iMoonCombo.js'></script>
+
+
+<script type="text/javascript">
+
+var ComboBoxes =  new Array('lstMAWB');
+<!--var ComboBoxes2 =  new Array('lstBooking');'
+// -->
+</script>
+<script type="text/jscript">
+	// changed by stanley
+	function lstShipperNameChange(orgNum,orgName){
+		var hiddenObj = document.getElementById("hShipperAcct");
+		var infoObj = document.getElementById("txtShipperInfo");
+		var txtObj = document.getElementById("lstShipperName");
+		var divObj = document.getElementById("lstShipperNameDiv");
+		
+		hiddenObj.value = orgNum;
+		infoObj.value = getOrganizationInfo(orgNum,"B");
+		txtObj.value = orgName;
+		divObj.style.position = "absolute";
+		divObj.style.visibility = "hidden";
+		divObj.innerHTML = "";
+
+	}
+	// changed by stanley
+	function lstConsigneeNameChange(CONum,COName){
+		var chiddenObj = document.getElementById("hConsigneeAcct");
+		var cinfoObj = document.getElementById("txtConsigneeInfo");
+		var ctxtObj = document.getElementById("lstConsigneeName");
+		var cdivObj = document.getElementById("lstConsigneeNameDiv");
+		
+		chiddenObj.value = CONum;
+		cinfoObj.value = getOrganizationInfo(CONum,"B");
+		ctxtObj.value = COName;
+		cdivObj.style.position = "absolute";
+		cdivObj.style.visibility = "hidden";
+		cdivObj.innerHTML = "";
+
+	}
+	// changed by stanley
+	function lstAgentNameChange(ANum,AName){
+		var AhiddenObj = document.getElementById("hAgentAcct");
+		var AinfoObj = document.getElementById("txtAgentInfo");
+		var AtxtObj = document.getElementById("lstAgentName");
+		var AdivObj = document.getElementById("lstAgentNameDiv");
+		AhiddenObj.value = ANum;
+		AinfoObj.value = getOrganizationInfo(ANum,"B");
+		AtxtObj.value = AName;
+		AdivObj.style.position = "absolute";
+		AdivObj.style.visibility = "hidden";
+		AdivObj.innerHTML = "";		
+	}
+function getOrganizationInfo(orgNum,infoFormat){
+		if (window.ActiveXObject) {
+			try {
+				xmlHTTP = new ActiveXObject("Msxml2.XMLHTTP");
+			} catch(error) {
+				try {
+					xmlHTTP = new ActiveXObject("Microsoft.XMLHTTP");
+				} catch(error) { return ""; }
+			}
+		} 
+		else if (window.XMLHttpRequest) {
+			xmlHTTP = new XMLHttpRequest();
+		} 
+		else { return ""; }
+		var url="../ajaxFunctions/ajax_get_org_address_info.asp?type=" + infoFormat + "&org=" + orgNum;	
+		xmlHTTP.open("GET",url,false); 
+		xmlHTTP.send();		
+		return xmlHTTP.responseText; 
+	}
+	function S_checked(){
+	if (document.getElementById("Check_Sub").checked=true)
+	{
+	document.getElementById("Check_Sub").value="Y";
+	document.getElementById("Check_AL1").checked=false;
+	document.getElementById("Check_Mas").checked=false;
+	document.getElementById("Check_Mas").value="";
+	}
+	}
+	// changed by stanley
+	function M_checked(){
+	if (document.getElementById("Check_Mas").checked=true)
+	{
+	document.getElementById("Check_Mas").value="Y";
+	document.getElementById("Check_AL1").checked=false;
+	document.getElementById("Check_Sub").checked=false;
+	document.getElementById("Check_Sub").value="";
+	}
+	}
+	// changed by stanley	
+	function AL_checked(){
+	if (document.getElementById("Check_AL1").checked=true)
+	{
+	document.getElementById("Check_Mas").checked=false;
+	document.getElementById("Check_Sub").checked=false;
+	document.getElementById("Check_Mas").value="";
+    document.getElementById("Check_Sub").value="";
+	}
+	}
+	function Y_checked(){
+	if (document.getElementById("Check_Yes").checked=true)
+	{
+	document.getElementById("Check_Yes").value="yes";
+	document.getElementById("Check_Co").value="";
+	document.getElementById("Check_Co").checked=false;
+	document.getElementById("Check_Bo").checked=false;
+	}
+	}
+	// changed by stanley
+	function C_checked(){
+	if (document.getElementById("Check_Co").checked=true)
+	{
+	document.getElementById("Check_Co").value="yes";
+	document.getElementById("Check_Yes").value="";
+	document.getElementById("Check_Yes").checked=false;
+	document.getElementById("Check_Bo").checked=false;
+	}
+	}
+	// changed by stanley
+	function B_checked(){
+	if (document.getElementById("Check_Bo").checked=true)
+	{
+	document.getElementById("Check_Yes").value="";
+	document.getElementById("Check_Co").value="";
+	document.getElementById("Check_Yes").checked=false;
+	document.getElementById("Check_Co").checked=false;
+	}
+	}
+	function DreloadPage(){
+	if (SearchType==MBOL)
+	{
+        MreloadPage();
+	}
+	else 
+	{
+	    HreloadPage();
+	}
+	}	
+	function HreloadPage()
+	{
+    document.getElementById("lstAgentName").value="";
+	document.getElementById("txt_HAWB").value="";
+	document.getElementById("txtLC").value="";
+	document.getElementById("txtInvoice").value="";
+	document.getElementById("txtUserRef").value="";
+	document.getElementById("Check_AL1").checked=true;
+	document.getElementById("Check_AL1").value="";
+	document.getElementById("Check_Mas").checked=false;
+	document.getElementById("Check_Mas").value="";
+	document.getElementById("Check_Sub").checked=false;
+	document.getElementById("Check_Sub").value="";
+    vreloadPage();
+	}
+// changed by stanley	
+	function MreloadPage()
+	{
+	document.getElementById("Check_Co").checked=false;
+	document.getElementById("Check_Bo").checked=true;
+	document.getElementById("Check_Yes").checked=false;
+    vreloadPage();
+	}
+	// changed by stanley	
+	function vreloadPage()
+	{
+	
+<!--	document.getElementById("LastFour").value="";-->
+	document.getElementById("txt_FILE_NO").value="";
+    document.getElementById("lstMAWB").value="";
+	document.getElementById("lstConsigneeName").value="";
+	document.getElementById("lstSortType").value="";
+	document.getElementById("lstShipperName").value="";
+	document.getElementById("D_select").value="";
+	document.getElementById("lstDestPort").value="";
+	document.getElementById("lstOriginPort").value="";
+	document.getElementById("txtNoPiece").value="";
+	document.getElementById("txtEndDate").value="";
+	document.getElementById("txtFlight").value="";	
+	document.getElementById("txtStartDate").value="";
+	document.getElementById("txtGrossWeight").value="";
+	document.getElementById("lstBooking").value="";		
+	document.getElementById("Rsort").value="";	
+    document.getElementById("Rew").value="";
+	document.getElementById("Refer").value="Y";
+    document.getElementById("txtCBM").value="";
+	AllClick();
+	}
+	
+
+</script>
+
+
+<style type="text/css">
+<!--
+.style1 {color: #cc6600}
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style>
+</head>
+<!--  #INCLUDE FILE="../include/header.asp" -->
+<!--  #include file="../include/recent_file.asp" -->
+<%
+
+
+dim vNoResult
+vNoResult=false
+
+SearchType=Request.QueryString("SearchType")
+FormID=""
+vStartDate=Request("txtStartDate")
+vEndDate=Request("txtEndDate")
+
+if vStartDate="" then vStartDate=Date
+if vEndDate="" then vEndDate=DateAdd("d",1,Date)
+
+'//changed by stanley//
+'vLast=Request("LastFour")
+'vLast = Replace(vLast,"'","`")
+vDeptPort=Request("lstOriginPort")
+vDeptPort = Replace(vDeptPort,"'","`")
+vDestPort=Request("lstDestPort")
+vDestPort = Replace(vDestPort,"'","`")
+NotCont=request("check_Yes")
+vCBM=Request("txtCBM")
+vCBM = Replace(vCBM,"'","`")
+IsCont=request("Check_Co")
+sort_By_TH=request("lstSortType")
+sort_By_TY=request("lstSortType")
+'//changed by stanley//
+vShipper=Request("lstShipperName")
+vShipper = Replace(vShipper,"'","`")
+'//changed by stanley//
+vConsignee=Request("lstConsigneeName")
+vConsignee = Replace(vConsignee,"'","`")
+'//changed by stanley//
+vON_MAS=Request("Check_Mas")
+vON_SUB=Request("Check_Sub")
+vFile=Request("txt_FILE_NO")
+vFile = Replace(vFile,"'","`")
+vAgent=Request("lstAgentName")
+vAgent = Replace(vAgent,"'","`")
+vHAWB=Request("txt_HAWB")
+vHAWB = Replace(vHAWB,"'","`")
+vRew=Request("Rew")
+SelectD=request("select")
+vFlight=Request("txtFlight")
+vBooking=Request("lstBooking")
+'--------------------------------------------------
+vLC=Request("txtLC")
+vLC = Replace(vLC,"'","`")
+vInvoice=Request("txtInvoice")
+vInvoice = Replace(vInvoice,"'","`")
+vUserRef=Request("txtUserRef")
+vUserRef = Replace(vUserRef,"'","`")
+MMS=request("Rsort")
+vREF=request("refer")
+'-------------------------------------------------
+vNoPiece=Request("txtNoPiece")
+vGrossWeight=Request("txtGrossWeight")
+vWeightScale=Request("lstWeightScale")
+if Not vGrossWeight="" And vWeightScale="LB" then
+	qGrossWeight=vGrossWeight/2.2
+else
+	qGrossWeight=vGrossWeight
+end if
+myServer=Request.ServerVariables("SERVER_NAME")
+DM="'"
+%>
+<!--changed by stanley//-->
+<%
+'//changed by stanley//
+Dim aMAWB(2000)
+Dim rsm,SQLm,LabelStartNo
+Set rsm = Server.CreateObject("ADODB.Recordset")
+
+SQLm= "select mbol_num from ocean_booking_number where elt_account_number= " & elt_account_number & "  order by mbol_num"
+rsm.Open SQLm, eltConn, adOpenStatic, , adCmdText
+mIndex=1
+aMAWB(0)="Select One"
+Do While Not rsm.EOF 
+	aMAWB(mIndex)=rsm("mbol_num")
+	mIndex=mIndex+1
+	rsm.MoveNext
+Loop
+rsm.close
+goMAWB=Request.QueryString("MAWB")
+vMAWB=Request("lstMAWB")
+if ( goMAWB="yes" ) then
+	Dim aHAWB(128),aPiece(128),aFrom(128),aDest(128),aLabel(128),aDestCode(128)
+	if goMAWB="yes" then
+		SQLm= "select * from hbol_master where elt_account_number= " & elt_account_number & " and mawb_num='" & vMAWB & "' order by hbol_num"
+	end if
+	rsm.Open SQLm, eltConn, adOpenStatic, , adCmdText
+	hIndex=0
+	Do While Not rsm.EOF 
+		hMAWB=rsm("mawb_num")
+	rsm.MoveNext
+	Loop
+	rsm.close	
+	if hIndex=0 then 
+		SQLm= "select * from mawb_master where elt_account_number= " & elt_account_number & " and mawb_num='" & vMAWB & "'"
+		rsm.Open SQLm, eltConn, adOpenStatic, , adCmdText
+		if Not rsm.EOF  then
+			hMAWB=rsm("mawb_num")
+		end if
+		rsm.close
+		hIndex=1
+	end if
+		rsm.close
+	end if
+Set rsm=Nothing
+%>
+
+
+<%
+Dim rsp, SQLp
+Set rsp = Server.CreateObject("ADODB.Recordset")
+Dim PortCode(200),PortID(200),PortDesc(200),PortState(200),PortCountry(200),PortCountryCode(200)
+SQLp= "select * from port where elt_account_number = " & elt_account_number & " order by port_desc"
+rsp.Open SQLp, eltConn, adOpenForwardOnly, , adCmdText
+pIndex=0
+Do While Not rsp.EOF
+	PortCode(pIndex)=rsp("port_code")
+	PortID(pIndex)=rsp("port_id")
+	PortDesc(pIndex)=rsp("port_desc")
+	PortState(pIndex)=rsp("port_state")
+	PortCountry(pIndex)=rsp("port_country")
+	PortCountryCode(pIndex)=rsp("port_country_code")
+	pIndex=pIndex+1
+	rsp.MoveNext
+Loop
+rsp.Close
+Set rsp=Nothing
+
+
+'Dim abooking(2000)
+'Dim rsb,SQLb,LabelStartNob
+'Set rsb = Server.CreateObject("ADODB.Recordset")
+
+'SQLb= "select booking_num from ocean_booking_number where elt_account_number= " & elt_account_number & "  order by booking_num"
+'rsb.Open SQLb, eltConn, adOpenStatic, , adCmdText
+'bIndex=1
+'abooking(0)="Select One"
+'Do While Not rsb.EOF 
+'	abooking(bIndex)=rsb("booking_num")
+'	bIndex=bIndex+1
+'	rsb.MoveNext
+'Loop
+'rsb.close
+Dim rsb, SQLb
+Set rsb = Server.CreateObject("ADODB.Recordset")
+Dim BookingNo(1000)
+SQLb= "select booking_num from ocean_booking_number where elt_account_number = " & elt_account_number & " order by booking_num"
+rsb.Open SQLb, eltConn, adOpenForwardOnly, , adCmdText
+bIndex=0
+Do While Not rsb.EOF
+	BookingNo(bIndex)=rsb("booking_num")
+	bIndex=bIndex+1
+	rsb.MoveNext
+Loop
+rsb.Close
+Set rsb=Nothing
+%>
+
+<script type="text/jscript">
+
+function S_BH(){
+	var Sort_B_H;
+	Sort_B_H=document.getElementById("lstSortType").value
+	if (Sort_B_H=="BY House BOL No")
+	{
+	if (document.getElementById("Rsort").value=="")
+	{
+    document.getElementById("Rsort").value="Y";
+	}
+	else
+	{
+	document.getElementById("Rsort").value="";
+	}
+	}
+	document.getElementById("lstSortType").value="BY House BOL No";
+	AllClick();
+	}
+
+    function S_BM(){	
+	var Sort_B_M;
+	Sort_B_M=document.getElementById("lstSortType").value
+	if (Sort_B_M=="BY Master BOL No")
+	{
+	if (document.getElementById("Rsort").value=="")
+	{
+    document.getElementById("Rsort").value="Y";
+	}
+	else
+	{
+	document.getElementById("Rsort").value="";
+	}
+	}
+	document.getElementById("lstSortType").value="BY Master BOL No";
+	AllClick();
+	}
+
+	
+    function S_BF(){	
+	var Sort_B_F;
+	Sort_B_F=document.getElementById("lstSortType").value
+	if (Sort_B_F=="BY FILE No")
+	{
+	if (document.getElementById("Rsort").value=="")
+	{
+    document.getElementById("Rsort").value="Y";
+	}
+	else
+	{
+	document.getElementById("Rsort").value="";
+	}
+	}
+	document.getElementById("lstSortType").value="BY FILE No";
+	AllClick();
+	}
+    function S_BB(){	
+	var Sort_B_B;
+	Sort_B_B=document.getElementById("lstSortType").value
+	if (Sort_B_B=="BY BOOKING NO")
+	{
+	if (document.getElementById("Rsort").value=="")
+	{
+    document.getElementById("Rsort").value="Y";
+	}
+	else
+	{
+	document.getElementById("Rsort").value="";
+	}
+	}
+	document.getElementById("lstSortType").value="BY BOOKING NO";
+	AllClick();
+	}
+
+    function S_BD(){
+	var Sort_B_D;
+	Sort_B_D=document.getElementById("lstSortType").value
+	if (Sort_B_D=="BY DATE")
+	{
+	if (document.getElementById("Rsort").value=="")
+	{
+    document.getElementById("Rsort").value="Y";
+	}
+	else
+	{
+	document.getElementById("Rsort").value="";
+	}
+	}
+	document.getElementById("lstSortType").value="BY DATE";
+	AllClick();
+	}
+    
+	function S_BS(){
+	var Sort_B_S;
+	Sort_B_S=document.getElementById("lstSortType").value
+	if (Sort_B_S=="BY SHIPPER NAME")
+	{
+	if (document.getElementById("Rsort").value=="")
+	{
+    document.getElementById("Rsort").value="Y";
+	}
+	else
+	{
+	document.getElementById("Rsort").value="";
+	}
+	}
+	document.getElementById("lstSortType").value="BY SHIPPER NAME";
+	AllClick();
+	}
+    
+	function S_BC(){
+	var Sort_B_C;
+	Sort_B_C=document.getElementById("lstSortType").value
+	if (Sort_B_C=="BY CONSIGEE NAME")
+	{
+	if (document.getElementById("Rsort").value=="")
+	{
+    document.getElementById("Rsort").value="Y";
+	}
+	else
+	{
+	document.getElementById("Rsort").value="";
+	}
+	}
+	document.getElementById("lstSortType").value="BY CONSIGEE NAME";
+	AllClick();
+	}
+    
+	function S_BA(){
+	var Sort_B_A;
+	Sort_B_A=document.getElementById("lstSortType").value
+	if (Sort_B_A=="BY AGENT NAME")
+	{
+	if (document.getElementById("Rsort").value=="")
+	{
+    document.getElementById("Rsort").value="Y";
+	}
+	else
+	{
+	document.getElementById("Rsort").value="";
+	}
+	}
+	document.getElementById("lstSortType").value="BY AGENT NAME";
+	AllClick();
+	}
+
+	function S_BP(){
+	var Sort_B_P;
+	Sort_B_P=document.getElementById("lstSortType").value
+	if (Sort_B_P=="BY DEPARTURE PORT")
+	{
+	if (document.getElementById("Rsort").value=="")
+	{
+    document.getElementById("Rsort").value="Y";
+	}
+	else
+	{
+	document.getElementById("Rsort").value="";
+	}
+	}
+	document.getElementById("lstSortType").value="BY DEPARTURE PORT";
+	AllClick();
+	}
+
+
+    function S_BT(){
+	var Sort_B_T;
+	Sort_B_T=document.getElementById("lstSortType").value
+	if (Sort_B_T=="BY DESTINATION PORT")
+	{
+	if (document.getElementById("Rsort").value=="")
+	{
+    document.getElementById("Rsort").value="Y";
+	}
+	else
+	{
+	document.getElementById("Rsort").value="";
+	}
+	}
+	document.getElementById("lstSortType").value="BY DESTINATION PORT";
+	AllClick();
+	}
+
+	function dw_change(){	
+    document.getElementById("Rew").value="Y";
+	document.getElementById("D_select").value="clear";
+	SelectD=document.getElementById("D_select").value;
+
+	vStartDate= Date ;
+    vEndDate= Date+1;
+
+	
+	document.getElementById("txtStartDate").value="<%=vStartDate  %>";
+    document.getElementById("txtEndDate").value="<%= vEndDate %>";
+
+	document.getElementById("txtStartDate").style.background="#FFFFFF";
+	document.getElementById("txtEndDate").style.background="#FFFFFF";
+	}
+	function dw_change2(){	
+	document.getElementById("txtStartDate").style.background="#FFFFFF";
+	document.getElementById("txtEndDate").style.background="#FFFFFF";
+	}
+	function loadCheckValues(){
+	
+		if ("<%=SearchType%>"=="HBOL" || "<%=SearchType%>"=="" )
+		{
+			if("<%=vON_MAS%>" == "Y"){
+				document.getElementById("check_Mas").checked=true;
+				}
+			if("<%=vON_SUB%>" == "Y"){
+				document.getElementById("check_Sub").checked=true;
+				}
+			if ("<%=vON_MAS%>"!= "Y" && "<%=vON_SUB%>"!= "Y")
+			{
+			document.getElementById("Check_AL1").checked=true;
+			}	
+			
+		}
+		else
+		{
+			if ("<%=IsCont%>"== "yes")
+			{
+			document.getElementById("Check_Co").checked=true;
+			}
+			if ("<%=NotCont%>"== "yes")
+			{
+			document.getElementById("Check_Yes").checked=true;
+			}
+			if ("<%=NotCont%>"!= "yes" && "<%=IsCont%>"!= "yes")
+			{
+			document.getElementById("Check_Bo").checked=true;
+			}
+		}
+		
+			if("<%=MMS%>" == "Y"){
+			document.getElementById("Rsort").value="Y";
+			}
+
+			if("<%=SelectD%>" == "All Time"){
+			  document.getElementById("txtStartDate").style.background="#CCCCCC";
+			  document.getElementById("txtEndDate").style.background="#CCCCCC";
+
+			  }
+		   if ("<%=SelectD%>" == "")
+			  {
+			  document.getElementById("txtStartDate").style.background="#CCCCCC";
+			  document.getElementById("txtEndDate").style.background="#CCCCCC";
+			  
+			  }
+	}
+</script>
+
+<body link="336699" vlink="336699" topmargin="0" onLoad="self.focus(); loadCheckValues();">
+<form id="form1" name="frmSearch" action="Post" method="post">   
+<!-- pointer disabled
+<table width="100%" height="12" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" valign="top"><img src="../images/spacer.gif" width="400" height="6"><img src=<% 
+	
+	if Not isPopWin then  
+	response.write("'../images/pointer_oe.gif'") 
+	end if%> width="11" height="7"><img src="../images/spacer.gif" width="10" height="6"></td>
+  </tr>
+</table>
+-->
+<table width="95%" border="0" align="center" cellpadding="2" cellspacing="0">
+  <tr>
+    <td height="32" align="left" valign="middle" class="pageheader">OE Search</td>
+  </tr>
+</table>
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#6D8C80"  bgcolor="#6D8C80">
+  <tr> 
+    <td>
+		<input type="hidden"  id="Rew" name="Rew" value=""  />
+        <table width="100%" border="0" cellpadding="2" cellspacing="1">
+          <tr> 
+            <td colspan="14" height="8" align="left" valign="top" bgcolor="BFD0C9" class="bodyheader"></td>
+					<input type="hidden"  id="Refer" name="Refer" value=""  />
+          </tr>
+          <tr align="center" valign="middle" bgcolor="#f3f3f3"> 
+            <td colspan="14"><br> 
+			<table width="60%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td align="right"><%If (SearchType="MBOL") then%>
+                        <img src="../images/button_fresh.gif" width="64" height="18" onClick="MreloadPage()" style="cursor:hand">
+                        <%end if%>
+                        <%If not (SearchType="MBOL") then%>
+                        <img src="../images/button_fresh.gif" width="64" height="18" onClick="HreloadPage()" style="cursor:hand">
+                        <%end if%></td>
+                </tr>
+            </table>
+                <table width="64%" border="0" cellpadding="0" cellspacing="0" bordercolor="#997132" bgcolor="f3f3f3" class="border1px" style="padding-left:8px">
+                  <tr align="left" valign="middle" bgcolor="#E0EDE8" class="bodyheader">
+                    <td>&nbsp;</td>
+                    <td height="20"><span class="bodyheader style1">List Results by</span></td>
+                    <td bgcolor="#E0EDE8">Departure Date:</td>
+                    <td>Start Date</td>
+                    <td>End Date</td>
+                    <td width="3">&nbsp;</td>
+                  </tr>
+                  <tr align="left" valign="middle" bgcolor="#ffffff" class="bodycopy">
+                    <td>&nbsp;</td>
+                    <td bgcolor="#ffffff"><strong>
+                      <select name="lstSearchType" size="1" class="bodyheader" style="WIDTH: 104px" onChange="vreloadPage()">
+                        <option value="HBOL" <% if SearchType="HBOL" then response.write("selected") %>>House B/L No.</option>
+                        <option value="MBOL" <% if SearchType="MBOL" then response.write("selected") %>>Master B/L No.</option>
+                      </select>
+                    </strong></td>
+                    <td align="left" valign="middle"><select name="select"  id="D_select" class="smallselect" onChange= "Javascript:myRadioButtonforDateSet1CheckDate(this)" onmousedown="dw_change2()">
+                        <!--change by stanley -->
+                        <% If vRew="Y" And selectD="" then%>
+                        <option value="Clear" > Select </option>
+                        <%else%>
+                        <% If selectD="Clear" then%>
+                        <option value="Clear" > Select </option>
+                        <%elseIf selectD="" then%>
+                        <option value="All Time" >All Time</option>
+                        <%else%>
+                        <option value="<%= selectD %>" selected="selected"><%= selectD %></option>
+                        <%End if%>
+                        <%End if%>
+                        <!--change by stanley -->
+                        <%If Not selectD="" Or vRew="Y" then%>
+                        <option value="All Time" >All Time</option>
+                        <%End if%>
+                        <option value="Today">Today</option>
+                        <option value="Month to Date">Month to Date</option>
+                        <option value="Quarter to Date">Quarter to Date</option>
+                        <option value="Year to Date">Year to Date</option>
+                        <option value="This Month">This Month</option>
+                        <option value="This Quarter">This Quarter</option>
+                        <option value="This Year">This Year</option>
+                        <option value="Last Month">Last Month</option>
+                        <option value="Last Quarter">Last Quarter</option>
+                        <option value="Last Year">Last Year</option>
+                    </select></td>
+                    <% If selectD = "All Time" Then 
+						vStartDate=Date 
+						vEndDate=Date+1
+						end If
+						%>
+                    <!-- <%= vStartDate %> <%= vEndDate %> -->
+                    <td><input id="txtStartDate" name="txtStartDate" class="m_shorttextfield" preset="shortdate" value="<%= vStartDate %>"  size="16" onMouseDown="dw_change()"></td>
+                    <td><input id="txtEndDate" name="txtEndDate" class="m_shorttextfield" preset="shortdate" value="<%= vEndDate %>"  size="16" onMouseDown="dw_change()"></td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td height="2" colspan="6" align="left" valign="top" bgcolor="#6D8C80"></td>
+                  </tr>
+                  <tr bgcolor="#F3F3F3">
+				   <td bgcolor="#F3F3F3">&nbsp;</td>
+                    <td height="20" colspan="2" bgcolor="#F3f3f3" class="bodyheader style2">Booking NO.</td>
+				   <td bgcolor="#F3F3F3">&nbsp;</td>
+				   <td bgcolor="#F3F3F3">&nbsp;</td>
+                  </tr>
+                  <!--  fouth line -->
+                  <tr bgcolor="#F3f3f3">
+                    <td bgcolor="#FFFFFF">&nbsp;</td>
+
+						
+						 <td colspan="2" bgcolor="#FFFFFF" class="bodycopy"><select name="lstBooking" size="1" class="shorttextfield" value="" style="WIDTH: 230px" tabindex=7>
+                        <%If vBooking = "" then%>
+                        <option value="<%= vBooking %>" selected="selected">Select One</option>
+                        <%End if%>
+                        <%If Not vBooking = "" then%>
+                        <option value="<%= vBooking %>" selected="selected"><%= vBooking %></option>
+                        <%End if%>
+                        <option value=""> </option>
+                        <% for i= 0 to bIndex-1 %>
+                        <option value="<%=  BookingNo(i) %>" <% if vBooking=BookingNo(i) Then response.write("selected") %>><%= BookingNo(i) %></option>
+                        <% next %>
+                    </select></td>
+						
+<!--		if vBooking = "Select One" then
+			vBooking = ""
+		end if
+
+		%>
+                                iMoonDefaultValue = vBooking %>
+                                iMoonComboBoxName =  "lstBooking" %>
+                                iMoonComboBoxWidth =  "200px" %>
+                              <div id="=iMoonComboBoxName%>_Container" class="ComboBox" style="width:=iMoonComboBoxWidth%>;POSITION:;TOP:;LEFT:;Z-INDEX:;">
+                                <span class="ComboBox" style="width:=iMoonComboBoxWidth%>;POSITION:;TOP:;LEFT:;Z-INDEX:;"><span class="ComboBox" style="width:<=iMoonComboBoxWidth%>;POSITION:;TOP:;LEFT:;Z-INDEX:;"><span class="ComboBox" style="width:=iMoonComboBoxWidth%>;POSITION:;TOP:;LEFT:;Z-INDEX:;"><span class="ComboBox" style="width:=iMoonComboBoxWidth%>;POSITION:;TOP:;LEFT:;Z-INDEX:;">
+                                <input name="=iMoonComboBoxName%>:Text2" type="text" id="=iMoonComboBoxName%>:Text" class="ComboBox" autocomplete="off" style="width:=iMoonComboBoxWidth%>;vertical-align:middle" value="=iMoonDefaultValue%>"/>
+                                </span></span></span></span>
+                                <div id="=iMoonComboBoxName%>_Div" style="display:none;position:absolute;top:0;left:0;width:17px"><img id="=iMoonComboBoxName%>_Button" src="/ig_common/Images/combobox_drop.gif" border="0" /></div>
+                          </div>
+                            <div id="=iMoonComboBoxName%>_NewDiv" style="display:none;position:absolute;top:0;left:0;width:17px"><img id="=iMoonComboBoxName%>_AddNewButton" src="/ig_common/Images/combobox_addnew.gif" border="0" /></div>
+
+                              <select name="lstBooking" id="lstBooking" value="= vBooking %>" listsize = "20" class="ComboBox" style="width: 200px;display:none" onChange="ComboBox_SimpleAttach(this, this.form['=iMoonComboBoxName%>_Text'])">
+                                <for i=0 to bIndex-1 
+                                <option if vBooking=aBooking(i) then response.write("selected") %>>= aBooking(i) %></option>
+                                <next 
+                              </select>
+                       </td>
+ -->   
+                    
+
+
+                        <!--end table -->
+                        <!--changed by stanley//-->                   
+                    <!--row-->
+                                          
+                    <!--fifth line -->
+<tr align="left" valign="middle" bgcolor="#f3f3f3" class="bodyheader">
+                    <td width="7">&nbsp;</td>
+					<td height="20" colspan="2" bgcolor="#F3f3f3" class="bodyheader style2">Master B/L NO.</td>
+                    <td width="191" height="20">File NO.</td>
+                    <td width="126">&nbsp;</td>
+                    <td width="132">&nbsp;</td>
+                  </tr>
+				  <tr align="left" valign="middle" class="bodycopy">
+				  <td>&nbsp;</td>
+				  <td bgcolor="#FFFFFF"><%
+		if vMAWB = "Select One" then
+			vMAWB = ""
+		end if
+
+		%>
+                              <%  iMoonDefaultValue = vMAWB %>
+                              <%  iMoonComboBoxName =  "lstMAWB" %>
+                              <%  iMoonComboBoxWidth =  "230px" %>
+                              <div id="<%=iMoonComboBoxName%>_Container" class="ComboBox" style="width:<%=iMoonComboBoxWidth%>;POSITION:;TOP:;LEFT:;Z-INDEX:;">
+                                <span class="ComboBox" style="width:<%=iMoonComboBoxWidth%>;POSITION:;TOP:;LEFT:;Z-INDEX:;"><span class="ComboBox" style="width:<%=iMoonComboBoxWidth%>;POSITION:;TOP:;LEFT:;Z-INDEX:;">
+                                <input name="<%=iMoonComboBoxName%>:Text" type="text" id="<%=iMoonComboBoxName%>_Text" class="ComboBox" autocomplete="off" style="width:<%=iMoonComboBoxWidth%>;vertical-align:middle" value="<%=iMoonDefaultValue%>"/>
+                                </span></span>
+                                <div id="<%=iMoonComboBoxName%>_Div" style="display:none;position:absolute;top:0;left:0;width:17px"><img id="<%=iMoonComboBoxName%>_Button" src="/ig_common/Images/combobox_drop.gif" border="0" /></div>
+                              </div>
+                            <div id="<%=iMoonComboBoxName%>_NewDiv" style="display:none;position:absolute;top:0;left:0;width:17px"><img id="<%=iMoonComboBoxName%>_AddNewButton" src="/ig_common/Images/combobox_addnew.gif" border="0" /></div>
+                            <!-- /End of Combobox/ -->
+                              <select name="lstMAWB" id="lstMAWB" value="<%= vMAWB %>" listsize = "20" class="ComboBox" style="width: 230px;display:none" onChange="ComboBox_SimpleAttach(this, this.form['<%=iMoonComboBoxName%>_Text'])">
+                                <% for i=0 to mIndex-1 %>
+                                <option <% if vMAWB=aMAWB(i) then response.write("selected") %>><%= aMAWB(i) %></option>
+                                <% next %>
+                              </select>
+                              <!-- /End of Combobox/ -->                          </td>  
+							  				  <td bgcolor="#FFFFFF">
+                  <td colspan="2" bgcolor="#FFFFFF" class="bodycopy"><input name="txt_FILE_NO" class="shorttextfield" value="<%= vFile%>" size="20" style="WIDTH: 230px">                    </td>
+				  </tr>
+				  <tr align="left" valign="middle" bgcolor="#f3f3f3" class="bodyheader">
+                    <td width="7">&nbsp;</td>
+                    <td width="191" height="20">Dearture Port</td>
+                    <td width="112">&nbsp;</td>
+                    <td width="126">Destination Port</td>
+                    <td width="132">&nbsp;</td>
+                  </tr>
+                  <tr align="left" valign="middle" class="bodycopy">
+                    <td bgcolor="#FFFFFF">&nbsp;</td>
+                    <td colspan="2" bgcolor="#FFFFFF" class="bodycopy"><select name="lstOriginPort" size="1" class="shorttextfield" value="" style="WIDTH: 230px" tabindex=7>
+                        <%If vDeptPort = "" then%>
+                        <option value="<%= vDeptPort %>" selected="selected">Select One</option>
+                        <%End if%>
+                        <%If Not vDeptPort = "" then%>
+                        <option value="<%= vDeptPort %>" selected="selected"><%= vDeptPort %></option>
+                        <%End if%>
+                        <option value=""> </option>
+                        <% for i= 0 to pIndex-1 %>
+                        <option value="<%=  PortDesc(i) %>" <% if vOriginPort=PortCode(i) Then response.write("selected") %>><%= PortCode(i) & "-" & PortDesc(i) %></option>
+                        <% next %>
+                    </select></td>
+                    <!--port droplist-->
+                    <td colspan="2" bgcolor="#FFFFFF" class="bodycopy"><select name="lstDestPort" value="" size="1" class="smallselect" style="WIDTH: 230px" tabindex=14>
+                        <%If vDestPort = "" then%>
+                        <option value="<%= vDestPort %>" selected="selected">Select One</option>
+                        <%End if%>
+                        <%If Not vDestPort = "" then%>
+                        <option value="<%= vDestPort %>" selected="selected"><%= vDestPort %></option>
+                        <%End if%>
+                        <option value=""> </option>
+                        <% for i= 0 to pIndex-1 %>
+                        <option value="<%= PortDesc(i) %>" <% if vDestPort=PortCode(i) Then response.write("selected") %>><%= PortCode(i) & "-" & PortDesc(i) %></option>
+                        <% next %>
+                    </select></td>
+                  </tr>
+                  <tr align="left" valign="middle" class="bodyheader">
+                    <td bgcolor="#F3f3f3">&nbsp;</td>
+                    <td height="20" bgcolor="#F3f3f3">Shipper</td>
+                    <td bgcolor="#F3f3f3">&nbsp;</td>
+                    <td bgcolor="#F3f3f3">Consignee</td>
+                    <td bgcolor="#F3f3f3">&nbsp;</td>
+                  </tr>
+                  <tr align="left" valign="middle" class="bodyheader">
+                    <td bgcolor="#FFFFFF">&nbsp;</td>
+                    <td colspan="2" bgcolor="#FFFFFF" class="bodycopy"><input type="hidden" id="hShipperAcct" name="hShipperAcct" />
+                        <div id="lstshipperNameDiv"></div>
+                      <!--shipper table-->
+                        <table cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td width="216"><input type="text" autocomplete="off" id="lstShipperName" name="lstShipperName" value="<%= vShipper %>"
+					class="shorttextfield" style="width: 215px; border-top: 1px solid #7F9DB9; border-bottom: 1px solid #7F9DB9;
+					border-left: 1px solid #7F9DB9; border-right: 0px solid #7F9DB9;" onKeyUp="organizationFill(this,'Shipper','lstShipperNameChange')"
+					onFocus="initializeJPEDField(this);" /></td>
+                            <td width="33"><img src="/ig_common/Images/combobox_drop.gif" alt="" onClick="organizationFillAll('lstShipperName','Shipper','lstShipperNameChange')"
+					style="border-top: 1px solid #7F9DB9; border-bottom: 1px solid #7F9DB9; border-right: 1px solid #7F9DB9;
+					border-left: 0px solid #7F9DB9; cursor: hand;" /></td>
+                          </tr>
+                        </table>
+                      <input type="hidden" id="txtShipperInfo" name="txtShipperInfo" class="multilinetextfield" cols="" rows="5" style="width: 300px"/>                    </td>
+                    <!--changed by stanley//-->
+                    <td colspan="2" bgcolor="#FFFFFF" class="bodycopy"><input type="hidden" id="hConsigneeAcct" name="hConsigneeAcct" />
+                        <div id="lstConsigneeNameDiv"></div>
+                      <table cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td ><input type="text" autocomplete="off" id="lstConsigneeName" name="lstConsigneeName" value="<%= vConsignee %>"
+					class="shorttextfield" style="width: 215px; border-top: 1px solid #7F9DB9; border-bottom: 1px solid #7F9DB9;
+					border-left: 1px solid #7F9DB9; border-right: 0px solid #7F9DB9;" onKeyUp="organizationFill(this,'Consignee','lstConsigneeNameChange')"
+					onFocus="initializeJPEDField(this);" /></td>
+                            <td><img src="/ig_common/Images/combobox_drop.gif" alt="" onClick="organizationFillAll('lstConsigneeName','Consignee','lstConsigneeNameChange')"
+					style="border-top: 1px solid #7F9DB9; border-bottom: 1px solid #7F9DB9; border-right: 1px solid #7F9DB9;
+					border-left: 0px solid #7F9DB9; cursor: hand;" /></td>
+                          </tr>
+                      </table>
+                      <input type="hidden" id="txtConsigneeInfo" name="txtConsigneeInfo" class="multilinetextfield" cols="" rows="5" style="width: 300px"/></td>
+                  </tr>
+                  <tr align="left" valign="middle" class="bodyheader" bgcolor="#F3f3f3">
+                    <td>&nbsp;</td>
+                    <td height="20">Vessel Name</td>
+                    <td height="20" bgcolor="f3f3f3">No. of Pieces</td>
+                    <td bgcolor="f3f3f3">Gross Weight</td>
+                    <td bgcolor="f3f3f3">Dimension (CBM)</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr align="left" valign="middle" class="bodycopy">
+                    <td bgcolor="#FFFFFF">&nbsp;</td>
+                    <td  bgcolor="#FFFFFF"><input id="txtFlight" name="txtFlight" class="shorttextfield" value="<%= vFlight %>" size="20"></td>
+                    <td bgcolor="#FFFFFF"><input id="txtNoPiece" name="txtNoPiece" class="shorttextfield" value="<%= vNoPiece %>" size="14"></td>
+                    <td bgcolor="#FFFFFF"><input id="txtGrossWeight" name="txtGrossWeight" class="bodycopy" value="<%= vGrossWeight %>" size="8">
+                        <select name="lstWeightScale" size="1" class="smallselect" style="WIDTH: 45px">
+                          <option <% if vWeightScale="KG" then response.write("selected") %>>KG</option>
+                          <option <% if vWeightScale="LB" then response.write("selected") %>>LB</option>
+                      </select></td>
+                       <td bgcolor="#FFFFFF"><input id="txtCBM" name="txtCBM" class="shorttextfield" value="<%= vCBM %>" size="14"></td>
+                  </tr>
+
+                    <!--fifth line -->
+
+                  
+                  <tr align="left" valign="middle" bgcolor="#f3f3f3">
+                    <td height="1" colspan="10" bgcolor="6D8C80" class="bodycopy"></td>
+                  </tr>
+                  <tr align="left" valign="middle" bgcolor="#f3f3f3">
+                    <td bgcolor="#f3f3f3">&nbsp;</td>
+                    <td width="3" bgcolor="#f3f3f3">&nbsp;</td>
+                    <td width="3" bgcolor="#f3f3f3">&nbsp;</td>
+                    <td width="3" bgcolor="#f3f3f3">&nbsp;</td>
+                    <td width="3" bgcolor="#f3f3f3">&nbsp;</td>
+                  </tr>
+                  <%if SearchType="HBOL" or SearchType="" then %>
+                  <tr align="left" valign="middle" bgcolor="#FFFFFF" class="bodycopy">
+                    <td bgcolor="#f3f3f3">&nbsp;</td>
+                    <td bgcolor="f3f3f3"><strong>House B/L No.</strong></td>
+                    <td bgcolor="#F3f3f3" class="bodylistheader">Type of House</td>
+                    <td bgcolor="f3f3f3"><strong>Agent.</strong> </td>
+                    <td bgcolor="#f3f3f3">&nbsp;</td>
+                  </tr>
+                  <tr align="left" valign="middle" class="bodyheader" bgcolor="#F3f3f3">
+                    <td bgcolor="#f3f3f3">&nbsp;</td>
+                    <td bgcolor="#FFFFFF" class="bodycopy"><input name="txt_HAWB" class="shorttextfield" value="<%= vHAWB %>" size="20"></td>
+                        <td bgcolor="#FFFFFF"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="bodycopy">
+                                <tr>
+                                    <td><% If vON_MAS ="Y" Then %>
+                                            <input type="checkbox" id="check_Mas" name="check_Mas" value="Y"  onClick="if (this.checked) {M_checked()}"/>
+                                        Master
+                                        <%else%>
+                                        <input type="checkbox" id="Checkbox3" name="check_Mas" value=""  onClick="if (this.checked) {M_checked()}"/>
+                                        Master
+                                        <%end if%>                                    </td>
+                                    <td><% If vON_SUB ="Y" Then %>
+                                            <input type="checkbox" id="check_SUB" name="check_SUB" value="Y"  onClick="if (this.checked) {S_checked()}"/>
+                                        Sub
+                                        <%else%>
+                                        <input type="checkbox" id="Checkbox4" name="check_SUB" value=""  onClick="if (this.checked) {S_checked()}"/>
+                                        Sub
+                                        <%end if%>                                    </td>
+                                    <td><input type="checkbox" id="check_AL1" name="check_AL1" value="" onClick="if (this.checked) {AL_checked()}"/>
+                                        All </td>
+                                </tr>
+                        </table></td>                    <td colspan="2" bgcolor="#FFFFFF"><input type="hidden" id="hAgentAcct" name="hAgentAcct" />
+                        <div id="lstAgentNameDiv"> </div>
+                      <!-- Agent droplist -->
+                        <table cellpadding="0" cellspacing="0" border="0" >
+                          <tr>
+                            <td><input type="text" autocomplete="off" id="lstAgentName" name="lstAgentName" value="<%= vAgent %>"
+					class="shorttextfield" style="width: 215px; border-top: 1px solid #7F9DB9; border-bottom: 1px solid #7F9DB9;
+					border-left: 1px solid #7F9DB9; border-right: 0px solid #7F9DB9;" onKeyUp="organizationFill(this,'Agent','lstAgentNameChange')"
+					onFocus="initializeJPEDField(this);" /></td>
+                            <td><img src="/ig_common/Images/combobox_drop.gif" alt="" onClick="organizationFillAll('lstAgentName','Agent','lstAgentNameChange')"
+					style="border-top: 1px solid #7F9DB9; border-bottom: 1px solid #7F9DB9; border-right: 1px solid #7F9DB9;
+					border-left: 0px solid #7F9DB9; cursor: hand;" /></td>
+                          </tr>
+                        </table>
+                      <input type="hidden" id="txtAgentInfo" name="txtAgentInfo" class="multilinetextfield"
+	cols="" rows="5" style="width: 200px"/></td>
+                    <td bgcolor="#f3f3f3">&nbsp;</td>
+                  <tr align="left" valign="middle" bgcolor="#FFFFFF" class="bodycopy">
+                    <td bgcolor="#f3f3f3">&nbsp;</td>
+                    <td bgcolor="f3f3f3"><strong>LC No.</strong></td>
+                    <td bgcolor="f3f3f3"><strong>C.I. No. </strong></td>
+                    <td bgcolor="f3f3f3"><strong>Other Reference No.</strong> </td>
+                    <td bgcolor="#f3f3f3">&nbsp;</td>
+                  </tr>
+                  <tr align="left" valign="middle" class="bodyheader" bgcolor="#F3f3f3">
+                    <td bgcolor="#f3f3f3">&nbsp;</td>
+                    <td bgcolor="#FFFFFF"><input id="txtLC" name="txtLC" class="shorttextfield" value="<%= vLC %>" size="16"></td>
+                    <td bgcolor="#FFFFFF"><input id="txtInvoice" name="txtInvoice" class="shorttextfield" value="<%= vInvoice %>" size="16"></td>
+                    <td bgcolor="#FFFFFF"><input id="txtUserRef" name="txtUserRef" class="shorttextfield" value="<%= vUserRef %>" size="18"></td>
+                    <td bgcolor="#f3f3f3">&nbsp;</td>
+                    <%else%>
+				  <tr align="left" valign="middle" bgcolor="#FFFFFF" class="bodycopy">
+                    <td bgcolor="#f3f3f3">&nbsp;</td>
+                    <td bgcolor="f3f3f3"><strong>Type of Shipping</strong></td>
+					<td bgcolor="#f3f3f3">&nbsp;</td>
+                    <td bgcolor="#f3f3f3">&nbsp;</td>
+                    <td bgcolor="#f3f3f3">&nbsp;</td>
+                  </tr>
+				  
+                  <tr align="left" valign="middle" class="bodyheader" bgcolor="#F3f3f3">
+                    <td bgcolor="#f3f3f3">&nbsp;</td>
+                        <td valign="top" colspan="2"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="bodycopy">
+                                <tr>
+                                    <td width="130" bgcolor="#FFFFFF"><% If IsCont ="yes" Then %>
+                                            <input type="checkbox" id="check_Yes" name="check_Yes" value="yes" onClick="if (this.checked) {Y_checked()}"/>
+                                        Direct shipment
+                                        <%else%>
+                                        <input type="checkbox" id="Checkbox1" name="check_Yes" value="yes" onClick="if (this.checked) {Y_checked()}"/>
+                                        Direct Shipment
+                                        <%end if%></td>
+                                    <td width="84" bgcolor="#FFFFFF"><% If NotCont ="yes" Then %>
+                                            <input type="checkbox" id="check_Co" name="check_Co" value="yes" onClick="if (this.checked) {C_checked()}"/>
+                                        Consol
+                                        <%else%>
+                                        <input type="checkbox" id="Checkbox2" name="check_Co" value="yes" onClick="if (this.checked) {C_checked()}"/>
+                                        Consol
+                                        <%end if%></td>
+                                    <td bgcolor="#FFFFFF"><input type="checkbox" id="check_Bo" name="check_Bo" value="" onClick="if (this.checked) {B_checked()}"/>
+                                        All</td>
+                                </tr>
+                        </table></td>
+                    <td width="3" bgcolor="#f3f3f3">&nbsp;</td>
+                    <td width="3" bgcolor="#f3f3f3">&nbsp;</td>
+                    <td width="3" bgcolor="#f3f3f3">&nbsp;</td>
+                  
+				    <%end if%>
+                  </tr>
+                  <tr align="left" valign="middle" bgcolor="#FFFFFF" class="bodycopy">
+                    <td bgcolor="#f3f3f3">&nbsp;</td>
+<td colspan="2" class="bodycopy"><select name="lstSortType" id="lstSortType" size="1" class="bodyheader" style="WIDTH: 0px">
+                                <%If (SearchType="MBOL") then%>
+                                <%If sort_By_TY = "" then%>
+                                <option value="<%= sort_By_TY %>" selected="selected">SELECT SORT TYPE!</option>
+                                <%End if%>
+                                <%If Not sort_By_TY = "" then%>
+                                <option value="<%= sort_By_TY %>" selected="selected"><%= sort_By_TY %></option>
+                                <%End if%>
+                                <%End if%>
+                                <%If (SearchType="HBOL") or (SearchType="") then%>
+                                <%If sort_By_TH = "" then%>
+                                <option value="<%= sort_By_TH %>" selected="selected">SELECT SORT TYPE!</option>
+                                <%End if%>
+                                <%If Not sort_By_TH = "" then%>
+                                <option value="<%= sort_By_TH %>" selected="selected"><%= sort_By_TH %></option>
+                                <%End if%>
+                                <option id= "BY_HOUSE" value="BY House BOL No"   > BY House BOL No.</option>
+                                <%End if%>
+                                <option id= "BY_MAWB" value="BY Master BOL No"  >BY Master BOL No.</option>
+                                <option id= "BY_FILE" value="BY FILE No"  >BY FILE No.</option>
+                                <option id= "BY_DATE" value="BY DATE"  >BY DATE.</option>
+								<option id= "BY_BOOKING" value="BY BOOKING NO"  >BY BOOKING NO.</option>
+                                <option id= "BY_SHIP" value="BY SHIPPER NAME"  >BY SHIPPER NAME.</option>
+                                <option id= "BY_CONS" value="BY CONSIGEE NAME"  >BY CONSIGEE NAME.</option>
+                                <%If (SearchType="HBOL") or (SearchType="") then%>
+                                <option id= "BY_AGEN" value="BY AGENT NAME"  >BY AGENT NAME.</option>
+                                <%End IF%>
+                                <option id= "BY_DEPA" value="BY DEPARTURE PORT"  >BY DEPARTURE PORT.</option>
+                                <option id= "BY_DEST" value="BY DESTINATION PORT"  >BY DESTINATION PORT.</option>
+                            </select>
+                                <% If MMS ="Y" Then %>
+                                <input type="hidden"  id="RSort" name="RSort" value="Y"  />
+                                <%else%>
+                                <input type="hidden"  id="RSort" name="RSort" value=""  />
+                                <%end if%></td>
+
+                    <td width="3" bgcolor="#f3f3f3">&nbsp;</td>
+                    <td width="3" bgcolor="#f3f3f3">&nbsp;</td>
+                    <td width="31" align="center" bgcolor="#f3f3f3"><img src="../images/button_go.gif" width="31" height="18" onClick="AllClick()"  style="cursor:hand"></td>
+					<td width="3" bgcolor="#f3f3f3">&nbsp;</td>
+                  </tr>
+                </table>
+                <br> </td>
+          </tr>
+		  <tr align="left" valign="middle" bgcolor="6D8C80">
+            <td height="1" colspan="10"></td>
+          </tr>
+          <tr align="left" valign="middle" bgcolor="BFD0C9"> 
+<!--           <td height="22" bgcolor="#E0EDE8" class="bodyheader">
+            if SearchType="HAWB" or SearchType="MAWB" then response.write("HAWB#") else response.write("House B/L No.") %>            </td>
+            <td bgcolor="#E0EDE8" class="bodyheader">
+               if SearchType="HAWB" or SearchType="MAWB" then response.write("MAWB#") else response.write("Master B/L No.") %>            </td>
+			  -->
+			  
+				<%if SearchType="HBOL" or SearchType="" then %>
+			<td bgcolor="#E0EDE8" class="bodyheader">House B/L No. <img src="../images/Expand.gif" width="10" height="7"  onclick="S_BH()" style="cursor:hand"></td>
+			<%end if%>
+			<td bgcolor="#E0EDE8" class="bodyheader">Master B/L No. <img src="../images/Expand.gif" width="10" height="7"  onclick="S_BM()" style="cursor:hand"></td>			  
+            <td bgcolor="#E0EDE8" class="bodyheader">Date<img src="../images/Expand.gif" width="10" height="7"  onclick="S_BD()" style="cursor:hand"></td>
+			<td bgcolor="#E0EDE8" class="bodyheader">Booking No. <img src="../images/Expand.gif" width="10" height="7"  onclick="S_BB()" style="cursor:hand"></td>
+            <td bgcolor="#E0EDE8" class="bodyheader">Departure Port<img src="../images/Expand.gif" width="10" height="7"  onclick="S_BP()" style="cursor:hand"></td>
+            <td bgcolor="#E0EDE8" class="bodyheader">Destination Port <img src="../images/Expand.gif" width="10" height="7"  onclick="S_BT()" style="cursor:hand"></td>
+            <td bgcolor="#E0EDE8" class="bodyheader">Shipper<img src="../images/Expand.gif" width="10" height="7"  onclick="S_BS()" style="cursor:hand"></td>
+            <td bgcolor="#E0EDE8" class="bodyheader">Consignee<img src="../images/Expand.gif" width="10" height="7"  onclick="S_BC()" style="cursor:hand"></td>
+			<td bgcolor="#E0EDE8" class="bodyheader">File No. <img src="../images/Expand.gif" width="10" height="7"  onclick="S_BF()" style="cursor:hand"></td> 
+	<%if SearchType="HBOL" or SearchType="" then %>		
+            <td bgcolor="#E0EDE8" class="bodyheader">Agent<img src="../images/Expand.gif" width="10" height="7"  onclick="S_BA()" style="cursor:hand"></td>
+    <td width="61" valign="top" bgcolor="#E0EDE8" class="bodyheader">Type of House</td>
+    <%else%>
+    <td width="46" valign="top" bgcolor="#E0EDE8" class="bodyheader">Type of Shipment </td>
+    <%end if%>
+            <td bgcolor="#E0EDE8">&nbsp;</td>
+            <td bgcolor="#E0EDE8">&nbsp;</td>
+          </tr>
+    <%If vRef= "Y" Then %>     
+	<tr bgcolor="#FFFFFF"> </tr>
+
+<%
+else
+
+Dim rs, SQL, vDBm
+VDBM=VCDM+1
+if not SearchType="" then
+	Set rs = Server.CreateObject("ADODB.Recordset")
+	if SearchType="HBOL" then
+		SQL= "select a.hbol_NUM as h,a.mbol_NUM as m,a.booking_num as booking_num,isnull(b.file_no,'') as file_no, a.CreatedDate as CreatedDate,a.shipper_name as shipper,a.measurement as measurement,a.consignee_name as consignee,a.is_master as is_master,a.is_sub as is_sub, Right(rtrim(a.mbol_NUM),4) as lastF#,a.agent_name as agent,a.loading_port as p1,a.unloading_port as p2 from hbol_master a left outer join ocean_booking_number b on a.elt_account_number = b.elt_account_number and a.booking_num = b.booking_num where a.elt_account_number =" & elt_account_number
+	elseif SearchType="MBOL" then
+		SQL= "select a.mbol_NUM as h,a.mbol_NUM as m,a.booking_num as booking_num ,isnull(b.file_no,'') as file_no,a.CreatedDate as CreatedDate,a.shipper_name as shipper,a.measurement as measurement,a.consignee_name as consignee,Right(rtrim(a.mbol_NUM),4) as lastF#,a.agent_name as agent,a.loading_port as p1,a.unloading_port as p2 from mbol_master a left outer join ocean_booking_number b on a.elt_account_number = b.elt_account_number and a.booking_num = b.booking_num where a.elt_account_number =" & elt_account_number
+	end if
+	if Not FormID="" then
+		SQL=SQL & " and " & SearchType & "_NUM='" & FormID & "'"
+	elseif SearchType="HBOL" or SearchType="MBOL" then
+		'--------------------------------------------------------------------------------------------------------------------------------------------------------------
+		If Not selectD = "All Time" then
+				if not vStartDate="" Then
+					SQL=SQL & " and a.CreatedDate Between " & DM & vStartDate & DM & " and DATEADD(day, 1," & DM  & vEndDate & DM & ")"
+			end If
+			End if
+	    '--------------------------------------------------------------------------------------------------------------------------------------------------------------
+		if not vDeptPort="" Then
+			SQL=SQL & " and loading_port like '%" & vDeptPort & "%'"
+		end if
+		if not vDestPort="" Then
+			SQL=SQL & " and unloading_port like '%" & vDestPort & "%'"
+		end if
+		if not vBooking="" Then
+			SQL=SQL & " and a.booking_num like '%" & vBooking & "%'"
+		end if
+		if not vShipper="" then
+			SQL=SQL & " and Shipper_name like '%" & vShipper & "%'"
+		end if
+		if not vAgent="" then
+				SQL=SQL & " and agent_name  like '%" & vAgent & "%'"
+			end If
+		'if not vLast="" then
+		'		SQL=SQL & " and Right(rtrim(a.mbol_NUM),4) like '%" & vLast & "%'"
+		'	end If
+		if not vFile="" Then
+				SQL=SQL & " and isnull(b.file_no,'') like '%" & vFile & "%'"
+			end If			
+		if not vMAWB="" then
+				SQL=SQL & " and a.mbol_NUM like '%" & vMAWB & "%'"
+			end if			
+		if not vHAWB="" then
+				SQL=SQL & " and a.hbol_NUM like '%"  & vHAWB & "%'" 
+		end If
+		
+		if not vCBM="" then
+				SQL=SQL & " and a.measurement ="  & vCBM 
+		end If
+		if not vConsignee="" then
+			SQL=SQL & " and ( Consignee_name like '%" & vConsignee & "%'" & " or notify_info like '%" & vConsignee & "%' ) "
+		end if
+		'-----------------------------------------------------------------------------------------------------------
+		if not vON_SUB="" then
+				SQL=SQL & " and a.is_sub like '%" & vON_SUB & "%'"
+			end If
+			'//changed by stanley
+			if not vON_MAS="" then
+				SQL=SQL & " and a.is_master like '%" & vON_MAS & "%'"
+			end If
+		if Not vLC="" then
+			SQL=SQL & " and lc like '%" & vLC & "%'"
+		end if
+		if Not vInvoice="" then
+			SQL=SQL & " and ci like '%" & vInvoice & "%'"
+		end if
+		if Not vUserRef="" Then
+			SQL=SQL & " and export_ref like '%" & vUserRef & "%'"
+		end if
+		'-----------------------------------------------------------------------------------------------------------
+		if not vNoPiece="" then
+			SQL=SQL & " and Pieces=" & vNoPiece
+		end if
+		if not qGrossWeight="" then
+			SQL=SQL & " and Gross_Weight=" & qGrossWeight
+		end if
+
+		If Not MMS="Y" then	
+			If sort_By_TH="" then
+			if SearchType="HBOL" then
+			SQL=SQL & "order by a.hbol_NUM"
+			else
+			SQL=SQL & "order by a.mbol_NUM"
+			End IF					
+			else 
+			if sort_By_TH="BY House BOL No" Then
+			SQL=SQL & "order by a.hbol_NUM"
+			elseIf sort_By_TH="BY Master BOL No" Then
+			SQL=SQL & "order by a.mbol_NUM"
+			elseIf sort_By_TH="BY FILE No" Then
+			SQL=SQL & "order by b.file_no"
+	        elseIf sort_By_TH="BY DATE" Then
+			SQL=SQL & "order by a.CreatedDate"
+			elseIf sort_By_TH="BY BOOKING NO" Then
+			SQL=SQL & "order by a.booking_num"
+			elseIf sort_By_TH="BY SHIPPER NAME" Then
+			SQL=SQL & "order by a.Shipper_name"
+			elseIf sort_By_TH="BY CONSIGEE NAME" Then
+			SQL=SQL & "order by a.Consignee_name"
+			elseIf sort_By_TH="BY DEPARTURE PORT" Then
+			SQL=SQL & "order by a.loading_port"
+			elseIf sort_By_TH="BY DESTINATION PORT" Then
+			SQL=SQL & "order by a.unloading_port"
+			elseIf sort_By_TH="BY AGENT NAME" Then
+			SQL=SQL & "order by a.Agent_Name"
+			else
+			SQL=SQL & "order by a.mbol_NUM"
+			End If
+			End If			
+
+			Else
+
+			If sort_By_TH="" then
+			if SearchType="HBOL" then
+			SQL=SQL & "order by a.hbol_NUM DESC"
+			else
+			SQL=SQL & "order by a.mbol_NUM DESC"
+			End IF					
+			else 
+			if sort_By_TH="BY House BOL No" Then
+			SQL=SQL & "order by a.hbol_NUM DESC"			
+			elseIf sort_By_TH="BY Master BOL No" Then
+			SQL=SQL & "order by a.mbol_NUM DESC"
+			elseIf sort_By_TH="BY FILE No" Then
+			SQL=SQL & "order by b.file_no DESC"
+	        elseIf sort_By_TH="BY DATE" Then
+			SQL=SQL & "order by a.CreatedDate DESC"
+			elseIf sort_By_TH="BY BOOKING NO" Then
+			SQL=SQL & "order by a.booking_num DESC"
+			elseIf sort_By_TH="BY SHIPPER NAME" Then
+			SQL=SQL & "order by a.Shipper_name DESC"
+			elseIf sort_By_TH="BY CONSIGEE NAME" Then
+			SQL=SQL & "order by a.Consignee_name DESC"
+			elseIf sort_By_TH="BY DEPARTURE PORT" Then
+			SQL=SQL & "order by a.loading_port DESC"
+			elseIf sort_By_TH="BY DESTINATION PORT" Then
+			SQL=SQL & "order by a.unloading_port DESC"
+			elseIf sort_By_TH="BY AGENT NAME" Then
+			SQL=SQL & "order by a.Agent_Name DESC"
+			else
+			SQL=SQL & "order by a.mbol_NUM DESC"
+			End If
+			End If
+	end If
+	End IF		
+
+	rs.Open SQL, eltConn, , , adCmdText
+	
+	if rs.EOF =true then vNoResult=true
+	Do While Not rs.EOF
+		HAWB=rs("h")
+		MAWB=rs("m")
+		Booking_Num=rs("booking_num")
+		File_no=rs("file_no")
+		if SearchType="HBOL" then
+			EditID=HAWB
+			IS_S=rs("is_sub")
+			IS_M=rs("is_Master")
+		else
+			EditID=Booking_Num
+		end if
+		
+		 '<-------------------by stanley------------------------------------------------ 		
+		    if SearchType="MBOL" Then
+		    Dim MAC_num
+			Set rsc = Server.CreateObject("ADODB.Recordset")
+			SQLC= "select a.booking_num as booking_num from hbol_master a left outer join ocean_booking_number b on a.elt_account_number = b.elt_account_number and a.booking_num = b.booking_num where a.elt_account_number =" & elt_account_number
+			SQLC=SQLC & "and a.booking_num like '%" & Booking_Num & "%'"
+			rsc.Open SQLC, eltConn, adOpenForwardOnly, , adCmdText
+
+			Do While Not rsc.EOF
+			MAC_num=rsc("Booking_Num")
+			rsc.MoveNext			
+
+			Loop
+			if MAC_num=""  then 
+			SS="Direct"
+			Else SS="Consol"
+			end if
+            MAC_num="" 
+			rsc.Close
+			Set rsc=Nothing
+			End If
+		 '<----------------------------------------------------------------------------- 
+		Tran_Date=rs("CreatedDate")
+		 '<----------------------------------------------------------------------------- cut time out
+'		Dim timeCutter
+'		timeCutter=Split(Tran_Date," ")
+'		Tran_Date=timeCutter(0)
+		
+		Shipper=rs("Shipper")
+		Consignee=rs("consignee")
+		Agent=rs("agent")
+		DeptPort=rs("p1")
+		DestPort=rs("p2")
+		
+
+		'//Change By Stanley
+		Dim MORS
+		If IS_M= "Y" then
+		If IS_S= "Y" then
+		MORS = "Master /Sub House"
+		Else
+		MORS = "Master House"
+		End If
+		ElseIf IS_S= "Y" then
+	 	MORS = "Sub House"
+		Else 
+		MORS = ""
+		End if
+
+	 Dim CHOSE
+	   If (SearchType="MBOL") And (NotCont="yes") Then
+		   If Not(SS="Direct") Then
+				rs.MoveNext
+			Else
+			%>
+          <tr align="left" valign="middle" bgcolor="#FFFFFF"> 
+            
+				<%if SearchType="HBOL" or SearchType="" then %>
+              <!-- <td class="bodycopy"> if SearchType="HAWB" or SearchType="HBOL" then response.write(HAWB) %>    -->
+			<td class="bodycopy"><%= HAWB %>       </td>
+			<%end if%>
+            <td class="bodycopy"><%= MAWB %></td>
+            <td class="bodycopy"><%= Tran_Date %></td>
+			<td class="bodycopy"><%= Booking_Num %></td>
+			<td class="bodycopy"><%= DeptPort %></td>
+            <td class="bodycopy"><%= DestPort %></td>
+            <td class="bodycopy"><%= Shipper %></td>
+            <td class="bodycopy"><%= Consignee %></td>
+			<td class="bodycopy"><%= file_no %></td>
+			<%if SearchType="HBOL" or SearchType="" then %>
+            <td class="bodycopy"><%= Agent %></td>
+			<td class="bodycopy"><%= MORS %></td>	
+			<%else%>
+			<td class="bodycopy"><%= SS %></td>	
+			<%End if%>
+            <td width="41" align="center"><img src="../images/button_edit.gif" width="37" height="18" name="Edit" onClick="EditClick('<%= EditID %>')"  style="cursor:hand"></td>
+            <td width="44" align="center"><% if SearchType="HBOL" then%><img src="../images/button_view.gif" width="42" height="18" name="View" Onclick="ViewClick('<%= EditID %>')"  style="cursor:hand"><% end if %></td>
+          </tr>
+		  <%
+		  rs.MoveNext
+		   End If
+	   ElseIf (SearchType="MBOL") And (IsCont="yes") Then
+		   If Not(SS="Consol") Then
+				rs.MoveNext
+			Else
+			%>
+		            <tr align="left" valign="middle" bgcolor="#FFFFFF"> 
+            
+				<%if SearchType="HBOL" or SearchType="" then %>
+              <!-- <td class="bodycopy"> if SearchType="HAWB" or SearchType="HBOL" then response.write(HAWB) %>    -->
+			<td class="bodycopy"><%= HAWB %>       </td>
+			<%end if%>
+            <td class="bodycopy"><%= MAWB %></td>
+            <td class="bodycopy"><%= Tran_Date %></td>
+			<td class="bodycopy"><%= Booking_Num %></td>
+			<td class="bodycopy"><%= DeptPort %></td>
+            <td class="bodycopy"><%= DestPort %></td>
+            <td class="bodycopy"><%= Shipper %></td>
+            <td class="bodycopy"><%= Consignee %></td>
+			<td class="bodycopy"><%= file_no %></td>
+			<%if SearchType="HBOL" or SearchType="" then %>
+            <td class="bodycopy"><%= Agent %></td>
+			<td class="bodycopy"><%= MORS %></td>	
+			<%else%>
+			<td class="bodycopy"><%= SS %></td>	
+			<%End if%>
+            <td width="41" align="center"><img src="../images/button_edit.gif" width="37" height="18" name="Edit" onClick="EditClick('<%= EditID %>')"  style="cursor:hand"></td>
+            <td width="44" align="center"><% if SearchType="HBOL" then%><img src="../images/button_view.gif" width="42" height="18" name="View" Onclick="ViewClick('<%= EditID %>')"  style="cursor:hand"><% end if %></td>
+          </tr>
+		  
+		    <%
+		  rs.MoveNext
+		   End If
+		ELSE
+		%>
+		  		            <tr align="left" valign="middle" bgcolor="#FFFFFF"> 
+            
+				<%if SearchType="HBOL" or SearchType="" then %>
+              <!-- <td class="bodycopy"> if SearchType="HAWB" or SearchType="HBOL" then response.write(HAWB) %>    -->
+			<td class="bodycopy"><%= HAWB %>       </td>
+			<%end if%>
+            <td class="bodycopy"><%= MAWB %></td>
+            <td class="bodycopy"><%= Tran_Date %></td>
+			<td class="bodycopy"><%= Booking_Num %></td>
+			<td class="bodycopy"><%= DeptPort %></td>
+            <td class="bodycopy"><%= DestPort %></td>
+            <td class="bodycopy"><%= Shipper %></td>
+            <td class="bodycopy"><%= Consignee %></td>
+			<td class="bodycopy"><%= file_no %></td>
+			<%if SearchType="HBOL" or SearchType="" then %>
+            <td class="bodycopy"><%= Agent %></td>
+			<td class="bodycopy"><%= MORS %></td>	
+			<%else%>
+			<td class="bodycopy"><%= SS %></td>	
+			<%End if%>
+            <td width="41" align="center"><img src="../images/button_edit.gif" width="37" height="18" name="Edit" onClick="EditClick('<%= EditID %>')"  style="cursor:hand"></td>
+            <td width="44" align="center"><% if SearchType="HBOL" then%><img src="../images/button_view.gif" width="42" height="18" name="View" Onclick="ViewClick('<%= EditID %>')"  style="cursor:hand"><% end if %></td>
+          </tr>		  		  		  
+		  <%
+		rs.MoveNext
+		End IF
+	Loop
+	rs.Close
+end if
+Set rs=Nothing
+end if
+if vNoResult=true then 
+		%> <tr bgcolor="ffffff"> 
+            <td colspan="14" height="22" align="center" valign="middle" class="bodycopy"><font color="#FF0000">No result found from the search!</font> </td>
+          </tr><%
+end if 
+
+
+%>
+          
+		  
+		  
+          <tr align="left" valign="middle" bgcolor="BFD0C9"> 
+            <td height="22" colspan="14">&nbsp;</td>
+          </tr>
+        </table>
+	  </td>
+    </tr>
+</table>
+<br>
+</form>
+</body>
+<SCRIPT LANGUAGE="vbscript">
+<!---
+Sub GoClick()
+Dim FormID
+FormID=""
+sIndex=document.frmSearch.lstSearchType.selectedindex
+sType=document.frmSearch.lstSearchType.item(sIndex).Value
+if Not FormID="" then
+	document.frmSearch.action="oe_search.asp?SearchType=" & sType &"&FormID=" & FormID   & "&WindowName=" & window.name 
+	document.frmSearch.method="POST"
+	document.frmSearch.target="_self"
+	frmSearch.submit()
+else
+	MsgBox "Please enter a BOL number first!"
+end if
+End Sub
+
+Sub Allclick()
+Dim StartDate,EndDate,NoPiece,GrossWeight
+sIndex=document.frmSearch.lstSearchType.selectedindex
+sType=document.frmSearch.lstSearchType.item(sIndex).Value
+StartDate=document.frmSearch.txtStartDate.Value
+EndDate=document.frmSearch.txtEndDate.Value
+NoPiece=document.frmSearch.txtNoPiece.Value
+CBM=document.frmSearch.txtCBM.Value
+GrossWeight=document.frmSearch.txtGrossWeight.Value
+
+If Not StartDate="" And IsDate(StartDate)=False Then
+	MsgBox "Please enter a correct date! (MM/DD/YYYY)"
+	document.frmSearch.txtStartDate.Value=""
+Elseif Not EndDate="" And IsDate(EndDate)=False Then
+	MsgBox "Please enter a correct date! (MM/DD/YYYY)"
+	document.frmSearch.txtEndDate.Value=""
+ElseIf Not NoPiece="" And IsNumeric(NoPiece)=False Then
+	MsgBox "Please enter a numeric value!"
+	document.frmSearch.txtNoPiece.Value=""
+ElseIf Not CBM="" And IsNumeric(CBM)=False Then
+	MsgBox "Please enter a numeric value!"
+	document.frmSearch.txtCBM.Value=""
+ElseIf Not GrossWeight="" And IsNumeric(GrossWeight)=False Then
+	MsgBox "Please enter a numeric value!"
+	document.frmSearch.txtGrossWeight.Value=""
+Else
+	document.frmSearch.action="oe_search.asp?SearchType=" & sType & "&WindowName=" & window.name 
+	document.frmSearch.method="POST"
+	document.frmSearch.target="_self"
+	frmSearch.submit()
+End If
+End Sub
+
+Sub EditClick(EditID)
+sIndex=document.frmSearch.lstSearchType.selectedindex
+sType=document.frmSearch.lstSearchType.item(sIndex).Value
+
+jPopUpNormal()
+
+if sType="HBOL" then
+	document.frmSearch.action= "new_edit_hbol.asp?hbol=" & EditID & "&WindowName=popUpWindow"
+elseif sType="MBOL" then
+	document.frmSearch.action= "new_edit_mbol.asp?BookingNum=" & EditID & "&WindowName=popUpWindow"
+end if
+
+document.frmSearch.target="popUpWindow"
+document.frmSearch.method="POST"
+frmSearch.submit()
+
+End Sub
+
+Sub ViewClick(EditID)
+
+sIndex=document.frmSearch.lstSearchType.selectedindex
+sType=document.frmSearch.lstSearchType.item(sIndex).Value
+
+jPopUpNormal()
+if sType="HBOL" then
+	document.frmSearch.action= "view_print.asp?sType=house&hbol=" & EditID & "&WindowName=popUpWindow"
+elseif sType="MBOL" then
+end if
+document.frmSearch.target="popUpWindow"
+document.frmSearch.method="POST"
+frmSearch.submit()
+
+End Sub
+
+Sub MenuMouseOver()
+End Sub
+Sub MenuMouseOut()
+End Sub
+--->
+</SCRIPT>
+<!--  #INCLUDE FILE="../include/StatusFooter.asp" -->
+</html>

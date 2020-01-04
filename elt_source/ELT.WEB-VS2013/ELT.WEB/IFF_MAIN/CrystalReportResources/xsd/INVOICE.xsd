@@ -1,0 +1,126 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="dSIVPDF" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="dSIVPDF" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Invoice">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="elt_account_number" type="xs:decimal" minOccurs="0" />
+              <xs:element name="invoice_no" type="xs:decimal" minOccurs="0" />
+              <xs:element name="invoice_type" type="xs:string" minOccurs="0" />
+              <xs:element name="import_export" type="xs:string" minOccurs="0" />
+              <xs:element name="air_ocean" type="xs:string" minOccurs="0" />
+              <xs:element name="invoice_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ref_no" type="xs:string" minOccurs="0" />
+              <xs:element name="ref_no_Our" type="xs:string" minOccurs="0" />
+              <xs:element name="Customer_info" type="xs:string" minOccurs="0" />
+              <xs:element name="Total_Pieces" type="xs:string" minOccurs="0" />
+              <xs:element name="Total_Gross_Weight" type="xs:string" minOccurs="0" />
+              <xs:element name="Total_Charge_Weight" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="Origin_Dest" type="xs:string" minOccurs="0" />
+              <xs:element name="origin" type="xs:string" minOccurs="0" />
+              <xs:element name="dest" type="xs:string" minOccurs="0" />
+              <xs:element name="Customer_Number" type="xs:string" minOccurs="0" />
+              <xs:element name="Customer_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="shipper" type="xs:string" minOccurs="0" />
+              <xs:element name="consignee" type="xs:string" minOccurs="0" />
+              <xs:element name="entry_no" type="xs:string" minOccurs="0" />
+              <xs:element name="entry_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Carrier" type="xs:string" minOccurs="0" />
+              <xs:element name="Arrival_Dept" type="xs:string" minOccurs="0" />
+              <xs:element name="mawb_num" type="xs:string" minOccurs="0" />
+              <xs:element name="hawb_num" type="xs:string" minOccurs="0" />
+              <xs:element name="subtotal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="sale_tax" type="xs:decimal" minOccurs="0" />
+              <xs:element name="agent_profit" type="xs:decimal" minOccurs="0" />
+              <xs:element name="accounts_receivable" type="xs:decimal" minOccurs="0" />
+              <xs:element name="amount_charged" type="xs:decimal" minOccurs="0" />
+              <xs:element name="amount_paid" type="xs:decimal" minOccurs="0" />
+              <xs:element name="balance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="total_cost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="remarks" type="xs:string" minOccurs="0" />
+              <xs:element name="pay_status" type="xs:string" minOccurs="0" />
+              <xs:element name="term_curr" type="xs:int" minOccurs="0" />
+              <xs:element name="term30" type="xs:string" minOccurs="0" />
+              <xs:element name="term60" type="xs:string" minOccurs="0" />
+              <xs:element name="term90" type="xs:string" minOccurs="0" />
+              <xs:element name="received_amt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="pmt_method" type="xs:string" minOccurs="0" />
+              <xs:element name="existing_credits" type="xs:decimal" minOccurs="0" />
+              <xs:element name="deposit_to" type="xs:decimal" minOccurs="0" />
+              <xs:element name="lock_ar" type="xs:string" minOccurs="0" />
+              <xs:element name="lock_ap" type="xs:string" minOccurs="0" />
+              <xs:element name="in_memo" type="xs:string" minOccurs="0" />
+              <xs:element name="is_org_merged" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="IVHeaders">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" type="xs:int" minOccurs="0" />
+              <xs:element name="auto_id" type="xs:decimal" minOccurs="0" />
+              <xs:element name="elt_account_number" type="xs:decimal" minOccurs="0" />
+              <xs:element name="invoice_no" type="xs:decimal" minOccurs="0" />
+              <xs:element name="mawb" type="xs:string" minOccurs="0" />
+              <xs:element name="hawb" type="xs:string" minOccurs="0" />
+              <xs:element name="ETA" type="xs:string" minOccurs="0" />
+              <xs:element name="ETD" type="xs:string" minOccurs="0" />
+              <xs:element name="Consignee" type="xs:string" minOccurs="0" />
+              <xs:element name="Shipper" type="xs:string" minOccurs="0" />
+              <xs:element name="FILE_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="GrossWeight" type="xs:string" minOccurs="0" />
+              <xs:element name="ChargeableWeight" type="xs:string" minOccurs="0" />
+              <xs:element name="unit" type="xs:string" minOccurs="0" />
+              <xs:element name="Pieces" type="xs:string" minOccurs="0" />
+              <xs:element name="Origin" type="xs:string" minOccurs="0" />
+              <xs:element name="Destination" type="xs:string" minOccurs="0" />
+              <xs:element name="Carrier" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="IVHeaderDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="pid" type="xs:int" minOccurs="0" />
+              <xs:element name="item_no" type="xs:int" minOccurs="0" />
+              <xs:element name="description" type="xs:string" minOccurs="0" />
+              <xs:element name="amount" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Business">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="business_legal_name" type="xs:string" minOccurs="0" />
+              <xs:element name="business_address" type="xs:string" minOccurs="0" />
+              <xs:element name="business_city" type="xs:string" minOccurs="0" />
+              <xs:element name="business_state" type="xs:string" minOccurs="0" />
+              <xs:element name="business_country" type="xs:string" minOccurs="0" />
+              <xs:element name="business_phone" type="xs:string" minOccurs="0" />
+              <xs:element name="business_fax" type="xs:string" minOccurs="0" />
+              <xs:element name="business_url" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Images">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="image_files" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//IVHeaders" />
+      <xs:field xpath="id" />
+    </xs:unique>
+    <xs:keyref name="Relation1" refer="Constraint1">
+      <xs:selector xpath=".//IVHeaderDetails" />
+      <xs:field xpath="pid" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

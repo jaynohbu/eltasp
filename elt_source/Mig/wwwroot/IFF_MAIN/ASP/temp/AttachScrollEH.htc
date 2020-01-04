@@ -1,0 +1,20 @@
+<public:component>
+    <public:attach event="onscroll" onevent="SetDivScroll();" />
+    <script language="jscript" type="text/jscript">
+    <!--
+    function SetDivScroll()
+    {
+        var positionTop = 0;
+        var objTable    = null;
+        
+        if (element != null)
+        {
+            positionTop = parseInt(element.scrollTop, 10);
+            objTable = element.children[0];
+            if (objTable != null && objTable.tagName.toUpperCase() == "TABLE")
+                objTable.style.top = positionTop;
+        }
+    }
+    //-->
+    </script>
+</public:component>

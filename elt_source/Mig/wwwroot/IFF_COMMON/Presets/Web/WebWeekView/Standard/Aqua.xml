@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Aqua" PresetDescription="Property values that give WebWeekView an aqua theme" PresetType="All" />-->
+<ig_sched:WebWeekView  
+StyleSheetFileName="/ig_common/20053/styles/aqua/ig_webweekview.css" />

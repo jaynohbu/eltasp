@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Classic Tree With Line Connectors" PresetDescription="The classic Windows Tree look and feel with folder icons and line connectors. Sets both LOOK and BEHAVIOR." PresetType="All" />-->
+<ignav:UltraWebTree DefaultSelectedImage="ig_treeFolderOpen.gif" ParentNodeImageUrl="" Width="163px" TargetFrame="" ExpandImage="ig_treePlus.gif" Indentation="20" ImageDirectory="/ig_common/images/" ID="UltraWebTree2" Height="297px" WebTreeTarget="ClassicTree" Cursor="Default" TargetUrl="" FileUrl="" RootNodeImageUrl="" BackImageUrl="" DefaultImage="ig_treeFolder.gif" Font-Size="9pt" Font-Names="Microsoft Sans Serif" CollapseImage="ig_treeMinus.gif" LeafNodeImageUrl="">
+  <SelectedNodeStyle Cursor="Default" BorderWidth="1px" BorderStyle="Solid" ForeColor="White" BackColor="Navy">
+    <Padding Bottom="1px" Left="2px" Top="1px" Right="2px" />
+  </SelectedNodeStyle>
+  <NodePaddings />
+  <NodeEditStyle Font-Size="9pt" Font-Names="Microsoft Sans Serif" />
+  <NodeMargins />
+  <AutoPostBackFlags />
+  <Styles />
+  <ClientSideEvents />
+</ignav:UltraWebTree>

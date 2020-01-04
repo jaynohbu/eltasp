@@ -1,0 +1,716 @@
+#background {
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 1050px;
+	width: 800px;
+	background-image: url(/ASP/Images/dotmatrix_back_bol2.gif);
+	margin-left: 0px;
+	margin-top: 0px;
+	position: absolute;
+	left: 8px;
+}
+#PageDiv 
+{
+	position:absolute;
+	z-index:1;
+	top: 0px;
+	left: 0px;
+}
+#txtMAWB {
+	position:absolute;
+	width:250px;
+	height:24px;
+	z-index:1;
+	left: 50px;
+	top: 7px;
+}
+
+#txtHAWBTop 
+{
+    position:absolute;
+	width:250px;
+	height:24px;
+	z-index:1;
+	left: 490px;
+	top: 7px;
+}
+#txtDate
+{
+    position:absolute;
+	width:354px;
+	height:14;
+	z-index:1;
+	left: 430px;
+	top: 930px;
+}
+
+#txtShipperInfo {
+	position:absolute;
+	width:382px;
+	height:70px;
+	z-index:1;
+	left: 24px;
+	top: 37px;
+}
+#txtShipperAcct {
+	position:absolute;
+	width:163px;
+	height:18px;
+	z-index:1;
+	left: 224px;
+	top: 39px;
+}
+#txtConsigneeAcct {
+	position:absolute;
+	width:162px;
+	height:18px;
+	z-index:1;
+	left: 224px;
+	top: 137px;
+}
+#Layer3 {
+	position:absolute;
+	width:180px;
+	height:77px;
+	z-index:2;
+	left: 63px;
+	top: 120px;
+}
+#txtConsigneeInfo {
+	position:absolute;
+	width:382px;
+	height:70px;
+	z-index:3;
+	left: 24px;
+	top: 132px;
+}
+#txtBookingNum {
+	position:absolute;
+	width:212px;
+	height:14px;
+	z-index:4;
+	left: 426px;
+	top: 37px;
+}
+#txtHBOL {
+	position:absolute;
+	width:139px;
+	height:14px;
+	z-index:4;
+	left: 647px;
+	top: 36px;
+}
+#txtExportRef {
+	position:absolute;
+	width:360px;
+	height:39px;
+	z-index:4;
+	left: 425px;
+	top: 69px;
+} 
+#txtAgentInfo {
+	position:absolute;
+	width:350px;
+	height:36px;
+	z-index:4;
+	left: 413px;
+	top: 120px;
+}
+#txtOriginCountry {
+	position:absolute;
+	width:360px;
+	height:14px;
+	z-index:4;
+	left: 425px;
+	top: 198px;
+}
+#txtNotifyInfo {
+	position:absolute;
+	width:382px;
+	height:70px;
+	z-index:3;
+	left: 24px;
+	top: 228px;
+}
+#txtExportInstr {
+	position:absolute;
+	width:360px;
+	height:113px;
+	z-index:3;
+	left: 426px;
+	top: 229px;
+}
+#txtPreCarriage {
+	position:absolute;
+	width:210px;
+	height:14px;
+	z-index:3;
+	left: 24px;
+	top: 327px;
+}
+#txtPreReceiptPlace {
+	position:absolute;
+	width:168px;
+	height:14px;
+	z-index:3;
+	left: 249px;
+	top: 327px;
+}
+#txtExportCarrier {
+	position:absolute;
+	width:210px;
+	height:14px;
+	z-index:3;
+	left: 24px;
+	top: 359px;
+}
+#txtLoadingPort {
+	position:absolute;
+	width:168px;
+	height:14px;
+	z-index:3;
+	left: 249px;
+	top: 359px;
+}
+#txtLoadingPier {
+	position:absolute;
+	width:360px;
+	height:14px;
+	z-index:3;
+	left: 426px;
+	top: 359px;
+}
+#txtTo1 {
+	position:absolute;
+	width:30px;
+	height:19px;
+	z-index:3;
+	left: 266px;
+	top: 369px;
+}
+#txtTo2 {
+	position:absolute;
+	width:30px;
+	height:19px;
+	z-index:3;
+	left: 333px;
+	top: 369px;
+}
+#txtBy {
+	position:absolute;
+	width:162px;
+	height:19px;
+	z-index:3;
+	left: 92px;
+	top: 369px;
+}
+#txtBy1 {
+	position:absolute;
+	width:28px;
+	height:19px;
+	z-index:3;
+	left: 300px;
+	top: 369px;
+}
+#txtCurrency {
+	position:absolute;
+	width:28px;
+	height:19px;
+	z-index:3;
+	left: 401px;
+	top: 369px;
+}
+#txtBy2 {
+	position:absolute;
+	width:28px;
+	height:19px;
+	z-index:3;
+	left: 369px;
+	top: 369px;
+}
+#txtChargeCode {
+	position:absolute;
+	width:13px;
+	height:19px;
+	z-index:3;
+	left: 440px;
+	top: 369px;
+}
+#ppd1 {
+	position:absolute;
+	width:13px;
+	height:19px;
+	z-index:3;
+	left: 460px;
+	top: 369px;
+}
+#coll1 {
+	position:absolute;
+	width:13px;
+	height:19px;
+	z-index:3;
+	left: 479px;
+	top: 369px;
+}
+#cPPO2{
+	position:absolute;
+	width:13px;
+	height:19px;
+	z-index:3;
+	left: 498px;
+	top: 369px;
+}
+#cCOLL2 {
+	position:absolute;
+	width:13px;
+	height:19px;
+	z-index:3;
+	left: 518px;
+	top: 369px;
+}
+#txtUnloadingPort {
+	position:absolute;
+	width:211px;
+	height:14px;
+	z-index:3;
+	left: 24px;
+	top: 391px;
+}
+#txtDeliveryPlace {
+	position:absolute;
+	width:168px;
+	height:14px;
+	z-index:3;
+	left: 249px;
+	top: 391px;
+}
+#txtMoveType {
+	position:absolute;
+	width:215px;
+	height:14px;
+	z-index:3;
+	left: 426px;
+	top: 391px;
+}
+#txtConYes {
+	position:absolute;
+	width:14px;
+	height:14px;
+	z-index:3;
+	left: 674px;
+	top: 399px;
+}
+#txtConNo {
+	position:absolute;
+	width:14px;
+	height:14px;
+	z-index:3;
+	left: 741px;
+	top: 399px;
+}
+#txtFlightDate2 {
+	position:absolute;
+	width:76px;
+	height:19px;
+	z-index:3;
+	left: 644px;
+	top: 362px;
+}
+#txtDesc1 {
+	position:absolute;
+	width:131px;
+	height:276px;
+	z-index:3;
+	left: 24px;
+	top: 451px;
+}
+#txtDesc5 {
+	position:absolute;
+	width:86px;
+	height:126px;
+	z-index:3;
+	left: 700px;
+	top: 452px;
+}
+#txtDesc3 {
+	position:absolute;
+	width:330px;
+	height:276px;
+	z-index:3;
+	left: 249px;
+	top: 451px;
+}
+#txtDesc6 {
+	position:absolute;
+	width:102px;
+	height:276px;
+	z-index:3;
+	left: 586px;
+	top: 451px;
+}
+#txtPiece1 {
+	position:absolute;
+	width:29px;
+	height:14px;
+	z-index:3;
+	left: 58px;
+	top: 519px;
+}
+#txtGrossWeight1 {
+	position:absolute;
+	width:57px;
+	height:14px;
+	z-index:3;
+	left: 95px;
+	top: 519px;
+}
+#txtKgLb1 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 155px;
+	top: 519px;
+}
+#txtRateClass1 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 173px;
+	top: 519px;
+}
+#txtItemNo1 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 191px;
+	top: 519px;
+}
+#txtChargeableWeight1 {
+	position:absolute;
+	width:66px;
+	height:14px;
+	z-index:3;
+	left: 262px;
+	top: 519px;
+}
+#txtRateCharge1 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 340px;
+	top: 519px;
+}
+#txtManifestDesc {
+	position:absolute;
+	width:86px;
+	height:140px;
+	z-index:3;
+	left: 700px;
+	top: 587px;
+}
+#txtPiece2 {
+	position:absolute;
+	width:29px;
+	height:14px;
+	z-index:3;
+	left: 58px;
+	top: 534px;
+}
+#txtGrossWeight2 {
+	position:absolute;
+	width:57px;
+	height:14px;
+	z-index:3;
+	left: 95px;
+	top: 534px;
+}
+#txtKgLb2 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 155px;
+	top: 534px;
+}
+#txtRateClass2 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 173px;
+	top: 534px;
+}
+#txtItemNo2 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 191px;
+	top: 534px;
+}
+#txtChargeableWeight2 {
+	position:absolute;
+	width:66px;
+	height:14px;
+	z-index:3;
+	left: 262px;
+	top: 534px;
+}
+#txtRateCharge2 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 340px;
+	top: 519px;
+}
+#txtPiece3 {
+	position:absolute;
+	width:29px;
+	height:14px;
+	z-index:3;
+	left: 58px;
+	top: 549px;
+}
+#txtGrossWeight3 {
+	position:absolute;
+	width:57px;
+	height:14px;
+	z-index:3;
+	left: 95px;
+	top: 549px;
+}
+#txtKgLb3 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 155px;
+	top: 549px;
+}
+#txtRateClass3 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 173px;
+	top: 549px;
+}
+#txtItemNo3 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 191px;
+	top: 549px;
+}
+#txtChargeableWeight3 {
+	position:absolute;
+	width:66px;
+	height:14px;
+	z-index:3;
+	left: 262px;
+	top: 549px;
+}
+#txtRateCharge3 {
+	position:absolute;
+	width:11px;
+	height:14px;
+	z-index:3;
+	left: 340px;
+	top: 549px;
+}
+#txtTotalPrepaid {
+	position:absolute;
+	width:70px;
+	height:14px;
+	z-index:3;
+	left: 273px;
+	top: 994px;
+}
+#txtTotalCollect {
+	position:absolute;
+	width:70px;
+	height:14px;
+	z-index:3;
+	left: 344px;
+	top: 994px;
+}
+#txtPrepaidOtherChargeAgent {
+	position:absolute;
+	width:115px;
+	height:14px;
+	z-index:3;
+	left: 24px;
+	top: 853px;
+}
+#txtCollectOtherChargeAgent {
+	position:absolute;
+	width:70px;
+	height:14px;
+	z-index:3;
+	left: 265px;
+	top: 857px;
+}
+#txtPrepaidOtherChargeCarrier {
+	position:absolute;
+	width:115px;
+	height:14px;
+	z-index:3;
+	left: 24px;
+	top: 887px;
+}
+#txtCollectOtherChargeCarrier {
+	position:absolute;
+	width:70px;
+	height:14px;
+	z-index:3;
+	left: 265px;
+	top: 891px;
+}
+#txtPlace {
+	position:absolute;
+	width:315px;
+	height:14;
+	z-index:3;
+	left: 470px;
+	top: 874px;
+}
+#txtPrepaidTotal {
+	position:absolute;
+	width:115px;
+	height:14px;
+	z-index:3;
+	left: 24px;
+	top: 922px;
+}
+#txtCollectTotal {
+	position:absolute;
+	width:70px;
+	height:14px;
+	z-index:3;
+	left: 265px;
+	top: 926px;
+}
+#txtBy {
+	position:absolute;
+	width:341px;
+	height:14;
+	z-index:3;
+	left: 444px;
+	top: 898px;
+}
+#txtConversionRate {
+	position:absolute;
+	width:115px;
+	height:14px;
+	z-index:3;
+	left: 24px;
+	top: 955px;
+}
+#txtCCCharge {
+	position:absolute;
+	width:70px;
+	height:14px;
+	z-index:3;
+	left: 265px;
+	top: 959px;
+}
+#txtChargeDestination {
+	position:absolute;
+	width:70px;
+	height:14px;
+	z-index:3;
+	left: 265px;
+	top: 992px;
+}
+#T15 {
+	position:absolute;
+	width:132px;
+	height:14px;
+	z-index:3;
+	left: 656px;
+	top: 985px;
+}
+#txtDesc2 {
+	position:absolute;
+	width:84px;
+	height:276px;
+	z-index:3;
+	left: 161px;
+	top: 451px;
+}
+#txtAgentInfo {
+	position:absolute;
+	width:360px;
+	height:49px;
+	z-index:5;
+	left: 425px;
+	top: 133px;
+}
+#Layer6 {
+	position:absolute;
+	width:317px;
+	height:190px;
+	z-index:6;
+	left: 0;
+	top: 0;
+	background-image: url(images/back.gif);
+}
+#Layer1 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:6;
+}
+#Layer2 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:6;
+}
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family: Monospace;
+	font-size: 14px;
+	line-height: 14px;
+}
+.monotextarea {
+	font-family: Monospace;
+	font-size: 14px;
+	line-height: 14px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #666666;
+	border-right-color: #999999;
+	border-bottom-color: #999999;
+	border-left-color: #666666;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	background-color: transparent;
+	overflow:hidden;
+	/**/
+}
+
+.pagehead {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family: Monospace;
+	font-size: 15px;
+	line-height: 15px;
+	font-weight:bolder;
+}

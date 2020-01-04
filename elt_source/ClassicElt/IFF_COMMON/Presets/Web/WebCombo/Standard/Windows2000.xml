@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Windows2000" PresetDescription="Infragistics Windows2000 Look and Feel for WebCombo. Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<igcmbo:WebCombo BorderStyle="Groove" BorderWidth="2px" DropImageXP1="/ig_common/images/ig_cmboDown1.bmp" DropImageXP2="/ig_common/images/ig_cmboDown2.bmp" SelBackColor="10, 36, 106" BackColor="White" ForeColor="Black" BorderColor="Gray" SelForeColor="White" Version="3.00">
+  <DropDownLayout DropdownWidth="325px" BorderCollapse="Separate" RowHeightDefault="20px" HeaderClickAction="Select" DropdownHeight="130px">
+    <RowStyle BorderWidth="1px" BorderColor="Gray" BorderStyle="Solid" BackColor="White">
+      <BorderDetails WidthLeft="0px" WidthTop="0px" />
+    </RowStyle>
+    <RowSelectorStyle />
+    <SelectedRowStyle ForeColor="White" BackColor="#0A246A" />
+    <HeaderStyle BorderStyle="Solid" BackColor="LightGray">
+      <BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White" />
+    </HeaderStyle>
+    <RowAlternateStyle />
+    <FooterStyle />
+    <FrameStyle Width="100%" Cursor="Default" BorderWidth="2px" Font-Size="10pt" Font-Names="Verdana" BorderStyle="Ridge" BackColor="Silver" Height="100%" />
+    <ImageUrls />
+  </DropDownLayout>
+  <ExpandEffects ShadowColor="LightGray" />
+</igcmbo:WebCombo>

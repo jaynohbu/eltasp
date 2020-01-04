@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Office2003 - Blue Theme" PresetDescription="Infragistics office 2003 blue for WebSchedule.  Sets both Look and Behavior properties." PresetType="All" />-->
+<igsch:WebDateChooser >
+  <ClientSideEvents />
+  <CalendarLayout DayNameFormat="FirstLetter" ShowYearDropDown="False" PrevMonthImageUrl="igsch_left_arrow.gif" ShowMonthDropDown="False" NextMonthImageUrl="igsch_right_arrow.gif" ShowFooter="False">
+    <SelectedDayStyle BorderWidth="2px" BorderColor="#BB5503" BorderStyle="Solid" ForeColor="Black" BackColor="Transparent" />
+    <OtherMonthDayStyle ForeColor="#ACA899" />
+    <CalendarStyle BorderColor="#7F9DB9" BorderStyle="Solid" BackColor="White" />
+    <TodayDayStyle BackColor="#FBE694" />
+    <DayHeaderStyle>
+      <BorderDetails StyleBottom="Solid" ColorBottom="#ACA899" WidthBottom="1px" />
+    </DayHeaderStyle>
+    <TitleStyle BackColor="#9EBEF5" />
+  </CalendarLayout>
+  <DropButton>
+    <HoverStyle />
+    <Style />
+  </DropButton>
+  <ExpandEffects ShadowColor="LightGray" />
+</igsch:WebDateChooser>

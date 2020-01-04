@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="WebStandard" PresetDescription="A typical web oriented menu. Sets both LOOK and BEHAVIOR." PresetType="All" />-->
+<ignav:UltraWebMenu ScrollImageBottom="ig_menu_scrolldown.gif" TopAligment="Center" FileUrl="" XSLFile="" DefaultImage=""  ScrollImageTopDisabled="ig_menu_scrollup_disabled.gif"  TargetUrl="" ScrollImageBottomDisabled="ig_menu_scrolldown_disabled.gif" Cursor="Default" CssClass="" TargetFrame="" ScrollImageTop="ig_menu_scrollup.gif" SubMenuImage="ig_menuTri.gif">
+  <ItemStyle BorderWidth="1px" BorderStyle="Outset" />
+  <Styles>
+    <ignav:Style Cursor="Default" BorderWidth="1px" BorderStyle="Outset" CssClass="TopHover1" />
+    <ignav:Style BorderWidth="1px" BorderColor="LightGray" BorderStyle="Solid" CssClass="TopClass1" />
+  </Styles>
+  <DisabledStyle ForeColor="LightGray" CssClass="DisabledClass" />
+  <HoverItemStyle Cursor="Default" BorderWidth="1px" BorderStyle="Inset" ForeColor="White" BackColor="DarkBlue" CssClass="HoverClass" />
+  <IslandStyle Cursor="Default" BorderWidth="1px" Font-Size="8pt" Font-Names="MS Sans Serif" BorderStyle="Outset" ForeColor="Black" BackColor="LightGray" CssClass="IslandClass" />
+  <MenuClientSideEvents ItemClick="" SubMenuDisplay="" ItemChecked="" InitializeMenu="" ItemHover="" />
+  <ExpandEffects ShadowColor="LightGray" />
+  <SeparatorStyle BackgroundImage="ig_menuSep.gif" CssClass="SeparatorClass" CustomRules="background-repeat:repeat-x; " />
+</ignav:UltraWebMenu>

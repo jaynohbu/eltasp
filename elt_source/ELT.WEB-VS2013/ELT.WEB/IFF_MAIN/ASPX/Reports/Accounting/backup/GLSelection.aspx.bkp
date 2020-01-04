@@ -1,0 +1,285 @@
+<%@ Register TagPrefix="cr" Namespace="CrystalDecisions.Web" Assembly="CrystalDecisions.Web, Version=11.0.3300.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" %>
+<%@ Page language="c#" Inherits="IFF_MAIN.ASPX.Reports.Accounting.GLSelection" trace="false" CodeFile="GLSelection.aspx.cs" %>
+<%@ Register TagPrefix="uc1" TagName="rdSelectDateControl1" Src="../SelectionControls/rdSelectDateControl1.ascx" %>
+<%@ Register TagPrefix="cc1" Namespace="iMoonComboBox.WebControls" Assembly="iMoonComboBox" %>
+<%@ Register TagPrefix="mbcbb" Namespace="MetaBuilders.WebControls" Assembly="MetaBuilders.WebControls.ComboBox" %>
+<%@ Register TagPrefix="igtxt" Namespace="Infragistics.WebUI.WebDataInput" Assembly="Infragistics2.WebUI.WebDataInput.v6.2, Version=6.2.20062.34, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<%@ Register TagPrefix="igsch" Namespace="Infragistics.WebUI.WebSchedule" Assembly="Infragistics2.WebUI.WebDateChooser.v6.2, Version=6.2.20062.34, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<%@ Register TagPrefix="igtbl" Namespace="Infragistics.WebUI.UltraWebGrid" Assembly="Infragistics2.WebUI.UltraWebGrid.v6.2, Version=6.2.20062.34, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+  <HEAD>
+<% Response.Buffer = true; %>  
+		<title>Account Report</title>
+		<META http-equiv=Content-Type content="text/html; charset=ks_c_5601-1987">
+		<meta content="Microsoft Visual Studio .NET 7.1" name=GENERATOR>
+		<meta content=C# name=CODE_LANGUAGE>
+		<meta content=JavaScript name=vs_defaultClientScript>
+		<meta content=http://schemas.microsoft.com/intellisense/ie5 name=vs_targetSchema>
+		<SCRIPT src="/IFF_MAIN/ASPX/jScripts/WebDateSet1.js" type=text/javascript></SCRIPT>
+		<SCRIPT src="/IFF_MAIN/ASPX/jScripts/ig_dropCalendar.js" type=text/javascript></SCRIPT>
+		<SCRIPT src="/IFF_MAIN/ASPX/jScripts/ig_editDrop1.js" type=text/javascript></SCRIPT>
+		<LINK href="/IFF_MAIN/ASPX/CSS/AppStyle.css" type=text/css rel=stylesheet>
+		
+<script language=javascript>
+<!--
+function isNum(a) {
+
+if(a.value == "") return true;
+
+var number=parseInt(a.value,10);
+
+if( number.toString()=="NaN") {
+     alert('Please input a valid I/V No.');
+	 return false;
+ }
+ else 
+ {
+ 	 return true;
+ }
+}
+function setToGl(){
+ var s = document.Form1.DlGLFrom.value;
+ if (s != "") {
+	document.Form1.DlGLTo.value = document.Form1.DlGLFrom.value;
+ }
+}
+function CheckDate() {
+if (document.Form1.txtCode.value != "expns" && document.Form1.txtCode.value != "trial" && document.Form1.txtCode.value != "bal" && document.Form1.txtCode.value != "incom" && document.Form1.txtCode.value != "genl" && document.Form1.txtCode.value != "chkr" && document.Form1.txtCode.value != "gjn") 
+{
+    if( document.Form1.ComboBox1.value != "") {
+        document.Form1.txtNum.value = document.Form1.ComboBox1.selectedIndex;
+    }
+}
+
+var	Wedit1 = igedit_getById('Webdatetimeedit1')
+var    a=Wedit1.getValue();
+		if(!a)  {
+		alert(' Please input the period!');
+		return false;
+		}
+		return true;
+}
+
+//-->
+			</script>
+<!--  #INCLUDE FILE="../../include/common.htm" -->
+</HEAD>
+	<BODY leftMargin=0 topMargin=0>
+		<form id=Form1 method=post runat="server">
+			<%     string windowName = Request.QueryString["WindowName"];
+          if (Request.UrlReferrer != null && windowName != "PopWin" && windowName != "popupfavorite")
+          { 
+        Server.Execute("/ASP/tabs/acct_reports_subs_aspx.htm");
+}%>
+
+			<TABLE id=Table2 style="HEIGHT: 64px" cellSpacing=0 cellPadding=0 width="100%" >
+				<TR>
+					<TD></TD>
+                    <td style="width: 15px">
+                    </td>
+					<TD></TD>
+					<TD></TD>
+				</TR>
+				<TR>
+					<TD style="height: 11px"></TD>
+                    <td style="width: 15px; height: 11px">
+                    </td>
+					<TD style="height: 11px"><asp:label id=Label4 runat="server" DESIGNTIMEDRAGDROP="285" ForeColor="Black" Font-Size="15px"
+							Width="665px" Height="1px" Font-Bold="True">Sales</asp:label></TD>
+					<TD style="height: 11px"></TD>
+				</TR>
+				<TR>
+					<TD></TD>
+                    <td bgcolor="#d5e8cb" style="width: 15px; height: 10px" valign="top">
+                    </td>
+					<TD style="HEIGHT: 10px" vAlign=top bgcolor="D5E8CB"></TD>
+					<TD></TD>
+				</TR>
+                <tr>
+                    <td style="height: 22px">
+                    </td>
+                    <td align="left" style="width: 15px; height: 22px">
+                    </td>
+                    <td align="left" style="height: 22px">
+							<TABLE id=Table1 align=left style="WIDTH: 864px;">
+								<TR>
+									<TD align=right style="width: 155px"><asp:label id=Label2 runat="server" DESIGNTIMEDRAGDROP="43" Width="100%" Height="19px">Period (from) :</asp:label></TD>
+									<TD align=right><uc1:rdselectdatecontrol1 id=RdSelectDateControl11 runat="server"></uc1:rdselectdatecontrol1></TD>
+									<TD align=left><igtxt:webdatetimeedit id=Webdatetimeedit1 accessKey=e runat="server" ForeColor="DarkCyan" Width="200px"
+											Fields="" EditModeFormat="MM/dd/yyyy" PromptChar=" ">
+											<ButtonsAppearance CustomButtonDisplay="OnRight"></ButtonsAppearance>
+											<SpinButtons Display="OnLeft" SpinOnReadOnly="True"></SpinButtons>
+										</igtxt:webdatetimeedit></TD>
+									<TD align=right><asp:label id=Label1 runat="server" DESIGNTIMEDRAGDROP="3572" Width="40px" Height="22px">(to) :</asp:label></TD>
+									<TD><igtxt:webdatetimeedit id=Webdatetimeedit2 accessKey=e runat="server" DESIGNTIMEDRAGDROP="142" ForeColor="DarkCyan"
+											Width="200px" Fields="" EditModeFormat="MM/dd/yyyy" PromptChar=" ">
+											<ButtonsAppearance CustomButtonDisplay="OnRight"></ButtonsAppearance>
+											<SpinButtons Display="OnLeft" SpinOnReadOnly="True"></SpinButtons>
+										</igtxt:webdatetimeedit></TD>
+									<TD style="width: 120px"></TD>
+								</TR>
+                                <tr>
+                                    <td align="right" style="width: 155px; height: 3px">
+                                        <asp:Label ID="lblBranch" runat="server" Height="19px" Visible="False" Width="100%"> Branch :</asp:Label></td>
+                                    <td align="right" style="height: 3px">
+                                        <asp:Label ID="txtWidth" runat="server" Height="19px" Width="159px"></asp:Label></td>
+                                    <td align="left" style="height: 3px">
+                                        <asp:DropDownList ID="DlBranch" runat="server" BackColor="Yellow" CssClass="smallselect"
+                                            Font-Names="Verdana" Height="20px" Visible="False" Width="200px">
+                                        </asp:DropDownList></td>
+                                    <td style="height: 3px">
+                                    </td>
+                                    <td style="height: 3px">
+                                    </td>
+                                    <td style="width: 120px; height: 3px">
+                                    </td>
+                                </tr>
+								<TR>
+									<TD style="HEIGHT: 3px; width: 155px;" align=right><asp:label id=Label8 runat="server" Width="100%" Height="19px"> Company :</asp:label></TD>
+									<TD style="HEIGHT: 3px" align=right></TD>
+									<TD align=left style="height: 3px"><cc1:combobox id=ComboBox1 runat="server" Width="180px" Rows="20"></cc1:combobox></TD>
+									<TD style="HEIGHT: 3px"></TD>
+									<TD style="HEIGHT: 3px"></TD>
+									<TD style="HEIGHT: 3px; width: 120px;"></TD>
+								</TR>
+								<TR>
+									<TD style="HEIGHT: 6px; width: 155px;" align=right>
+                                        <asp:Label ID="lblGL" runat="server" Height="100%" Visible="False" Width="100%">GL No. (from) :</asp:Label></TD>
+									<TD style="HEIGHT: 6px" align=left></TD>
+									<TD align=left><asp:DropDownList ID="DlGLFrom" runat="server" BackColor="Yellow" CssClass="smallselect"
+                                            Font-Names="Verdana" Height="20px" Visible="False" Width="200px">
+                                    </asp:DropDownList></TD>
+									<TD style="HEIGHT: 6px" align="right">
+                                        <asp:Label ID="lblGLTo" runat="server" DESIGNTIMEDRAGDROP="3572" Height="22px" Width="40px" Visible="False">(to) :</asp:Label></TD>
+									<TD style="HEIGHT: 6px"><asp:DropDownList ID="DlGLTo" runat="server" BackColor="Yellow" CssClass="smallselect"
+                                            Font-Names="Verdana" Height="20px" Visible="False" Width="200px">
+                                    </asp:DropDownList></TD>
+									<TD style="HEIGHT: 6px; width: 120px;"></TD>
+								</TR>
+                                <tr>
+                                    <td align="right" style="width: 155px; height: 6px">
+                                        <asp:Label ID="lblBank" runat="server" Height="100%" Visible="False" Width="100%">Bank Acct. No. :</asp:Label></td>
+                                    <td align="left" style="height: 6px">
+                                    </td>
+                                    <td align="left">
+                                        <asp:DropDownList ID="DlBank" runat="server" BackColor="Yellow" CssClass="smallselect"
+                                            Font-Names="Verdana" Height="20px" Visible="False" Width="200px">
+                                        </asp:DropDownList></td>
+                                    <td align="right" style="height: 6px">
+                                    </td>
+                                    <td style="height: 6px">
+                                    </td>
+                                    <td style="width: 120px; height: 6px">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right" style="width: 155px; height: 6px">
+                                        <asp:Label ID="lblTrn" runat="server" DESIGNTIMEDRAGDROP="3572" Height="100%" Visible="False"
+                                            Width="100%">Transaction Type :</asp:Label></td>
+                                    <td align="left" style="height: 6px">
+                                    </td>
+                                    <td align="left">
+                                        <asp:DropDownList ID="DlTrType" runat="server" BackColor="Yellow" CssClass="smallselect"
+                                            Font-Names="Verdana" Height="20px" Visible="False" Width="200px">
+                                        </asp:DropDownList></td>
+                                    <td align="right" style="height: 6px">
+                                    </td>
+                                    <td style="height: 6px">
+                                    </td>
+                                    <td style="width: 120px; height: 6px">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right" style="width: 155px; height: 22px">
+                                        <asp:Label ID="lblPmtMethod" runat="server" DESIGNTIMEDRAGDROP="3572" Height="100%"
+                                            Visible="False" Width="100%">Payment Method :</asp:Label></td>
+                                    <td align="left" style="height: 22px">
+                                    </td>
+                                    <td align="left" style="height: 22px" valign="top">
+                                        <asp:DropDownList ID="DlPmtMethod" runat="server" BackColor="Yellow" CssClass="smallselect"
+                                            Font-Names="Verdana" Height="20px" Visible="False" Width="200px">
+                                            <asp:ListItem Value="BP-CHK">Check</asp:ListItem>
+                                            <asp:ListItem>Cash</asp:ListItem>
+                                            <asp:ListItem>Credit Card</asp:ListItem>
+                                            <asp:ListItem>Bank to Bank</asp:ListItem>
+                                            <asp:ListItem>All</asp:ListItem>
+                                        </asp:DropDownList></td>
+                                    <td style="height: 22px">
+                                    </td>
+                                    <td align="center" style="height: 22px">
+                                    </td>
+                                    <td align="right" style="width: 120px; height: 22px" valign="top">
+                                    </td>
+                                </tr>
+								<TR>
+									<TD align=right style="height: 22px; width: 155px;"></TD>
+									<TD style="height: 22px;" align=left></TD>
+									<TD align=left style="height: 22px" valign="top">
+                                        <asp:CheckBox ID="CheckUnposted" runat="server" Text="Include Unposted transactions"
+                                            Visible="False" /></TD>
+									<TD style="height: 22px"></TD>
+									<TD align=center style="height: 22px">
+<asp:RadioButtonList id=RadioButtonList1 runat="server" RepeatDirection="Horizontal" Visible="False">
+<asp:ListItem Value="Quick" Selected="True">Quick</asp:ListItem>
+<asp:ListItem Value="Statistic">Statistic</asp:ListItem>
+</asp:RadioButtonList></TD>
+									<TD align=right style="width: 120px; height: 22px" valign="top">
+											<asp:imagebutton id=ImageButton1 runat="server" ImageUrl="../../../images/button_go.gif" OnClick="ImageButton1_Click1"></asp:imagebutton></TD>
+								</TR>
+							</TABLE>
+                    </td>
+                    <td style="width: 2px; height: 22px">
+                    </td>
+                </tr>
+				<TR>
+					<TD style="HEIGHT: 3px"></TD>
+                    <td bgcolor="#d5e8cb" style="width: 15px; height: 10px">
+                    </td>
+					<TD style="HEIGHT: 10px" bgcolor="D5E8CB"></TD>
+					<TD style="WIDTH: 2px; HEIGHT: 3px"></TD>
+				</TR>
+				<TR>
+					<TD style="height: 22px"></TD>
+                    <td style="width: 15px; height: 22px">
+                    </td>
+					<TD style="height: 22px">
+                        <asp:TextBox ID="txtCode" runat="server" Width="1px"></asp:TextBox></TD>
+					<TD style="WIDTH: 2px; HEIGHT: 22px"></TD>
+				</TR>
+			</TABLE>
+			<P><asp:button id=btnValidate runat="server" Text="for Validation" Visible="False"></asp:button><asp:linkbutton id=LinkButton1 runat="server" Visible="False">LinkButton</asp:linkbutton><asp:textbox id=txtNum runat="server" Height="1px" Width="1px"></asp:textbox><!-- end --></P>
+			<igsch:WebCalendar id=CustomDropDownCalendar runat="server" Width="150px">
+				<Layout FooterFormat="Today: {0:d}" TitleFormat="Month" ShowYearDropDown="False" PrevMonthImageUrl="ig_cal_blueP0.gif"
+					ShowMonthDropDown="False" NextMonthImageUrl="ig_cal_blueN0.gif">
+					<DayStyle BackColor="#7AA7E0"></DayStyle>
+					<FooterStyle Height="16pt" Font-Size="8pt" ForeColor="#505080" BackgroundImage="ig_cal_blue2.gif">
+						<BorderDetails ColorTop="LightSteelBlue" WidthTop="1px" StyleTop="Solid"></BorderDetails>
+					</FooterStyle>
+					<SelectedDayStyle BackColor="SteelBlue"></SelectedDayStyle>
+					<OtherMonthDayStyle ForeColor="SlateGray"></OtherMonthDayStyle>
+					<NextPrevStyle BackgroundImage="ig_cal_blue1.gif"></NextPrevStyle>
+					<CalendarStyle Width="150px" BorderWidth="1px" Font-Size="9pt" Font-Names="Verdana" BorderColor="SteelBlue"
+						BorderStyle="Solid" BackColor="#E0EEFF"></CalendarStyle>
+					<TodayDayStyle BackColor="#97B0F0"></TodayDayStyle>
+					<DayHeaderStyle Height="1pt" Font-Size="8pt" Font-Bold="True" ForeColor="#606090" BackColor="#7AA7E0">
+						<BorderDetails StyleBottom="Solid" ColorBottom="LightSteelBlue" WidthBottom="1px"></BorderDetails>
+					</DayHeaderStyle>
+					<TitleStyle Height="18pt" Font-Size="10pt" Font-Bold="True" ForeColor="#505080" BackgroundImage="ig_cal_blue1.gif"
+						BackColor="#CCDDFF"></TitleStyle>
+				</Layout>
+			</igsch:WebCalendar></form>
+		<SCRIPT type=text/javascript>
+            if(document.getElementById('Webdatetimeedit2')) {
+    			ig_initDropCalendar("CustomDropDownCalendar Webdatetimeedit1 Webdatetimeedit2");
+            }
+            else
+            {
+    			ig_initDropCalendar("CustomDropDownCalendar Webdatetimeedit1");            
+            }
+
+		</SCRIPT>
+	</BODY>
+<!--  #INCLUDE FILE="../../include/StatusFooter.htm" -->
+<% Response.Flush(); %>  
+</HTML>

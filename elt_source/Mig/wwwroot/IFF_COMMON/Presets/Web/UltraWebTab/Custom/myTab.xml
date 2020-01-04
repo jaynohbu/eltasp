@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="myTab" PresetDescription="aa" PresetType="Appearance" />-->
+<igtab:UltraWebTab>
+  <DefaultTabStyle Font-Italic="True" ForeColor="ActiveBorder" BackColor="LightSlateGray" />
+  <SelectedTabStyle Font-Underline="True" Font-Italic="True" Font-Bold="True" ForeColor="Navy" BackColor="Khaki" />
+</igtab:UltraWebTab>

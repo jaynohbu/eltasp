@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            <xsd:complexType>
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element name="data">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" />
+                            <xsd:attribute name="type" type="xsd:string" />
+                            <xsd:attribute name="mimetype" type="xsd:string" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="resheader">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" />
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:choice>
+            </xsd:complexType>
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="ResMimeType">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="Version">
+        <value>1.0.0.0</value>
+    </resheader>
+    <resheader name="Reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3102.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="Writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3102.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="Language">
+        <value>La lengua actual es español</value>
+    </data>
+    <data name="TogglePositioningTooltip">
+        <value>En Posición Absoluta</value>
+    </data>
+    <data name="BringForwardTooltip">
+        <value>Mover Delante</value>
+    </data>
+    <data name="SendBackwardTooltip">
+        <value>Mover Atrás</value>
+    </data>
+    <data name="PasteHtmlTooltip">
+        <value>Pegar HTML</value>
+    </data>
+    <data name="CleanWordTooltip">
+        <value>Limpiar el código fuente de Microsoft Word</value>
+    </data>
+    <data name="WordCountTooltip">
+		<value>Cuenta de la Palabra</value>
+    </data>
+    <data name="BoldTooltip">
+        <value>Negrita</value>
+    </data>
+    <data name="ItalicTooltip">
+        <value>Cursiva</value>
+    </data>
+    <data name="UnderlineTooltip">
+        <value>Subrayado</value>
+    </data>
+    <data name="SuperscriptTooltip">
+        <value>Superíndice</value>
+    </data>
+    <data name="SubscriptTooltip">
+        <value>Subíndice</value>
+    </data>
+    <data name="StrikethroughTooltip">
+        <value>Tachado</value>
+    </data>
+    <data name="JustifyLeftTooltip">
+        <value>Alinear Izquierda</value>
+    </data>
+    <data name="JustifyCenterTooltip">
+        <value>Alinear Centro</value>
+    </data>
+    <data name="JustifyRightTooltip">
+        <value>Alinear Derecha</value>
+    </data>
+    <data name="JustifyFullTooltip">
+        <value>Justificado</value>
+    </data>
+    <data name="OrderedListTooltip">
+        <value>Lista Ordenada</value>
+    </data>
+    <data name="UnorderedListTooltip">
+        <value>Lista no Ordenada</value>
+    </data>
+    <data name="IndentTooltip">
+        <value>Sangrar</value>
+    </data>
+    <data name="OutdentTooltip">
+        <value>Quitar Sangríat</value>
+    </data>
+    <data name="CutTooltip">
+        <value>Cortar</value>
+    </data>
+    <data name="CopyTooltip">
+        <value>Copiar</value>
+    </data>
+    <data name="PasteTooltip">
+        <value>Pegar</value>
+    </data>
+    <data name="PreviewTooltip">
+        <value>Vista Preliminar en el navegador</value>
+    </data>
+    <data name="InsertLinkTooltip">
+        <value>Insertar Enlace</value>
+    </data>
+    <data name="RemoveLinkTooltip">
+        <value>Borrar Enlace</value>
+    </data>
+    <data name="PrintTooltip">
+        <value>Imprimir</value>
+    </data>
+    <data name="SaveTooltip">
+        <value>Guardar</value>
+    </data>
+    <data name="UndoTooltip">
+        <value>Deshacer</value>
+    </data>
+    <data name="RedoTooltip">
+        <value>Rehacer</value>
+    </data>
+    <data name="ToggleBordersTooltip">
+        <value>Borrar Columna</value>
+    </data>
+    <data name="SpellCheckTooltip">
+        <value>Check spelling</value>
+    </data>
+    <data name="FontColorTooltip">
+        <value>Color Fuente</value>
+    </data>
+    <data name="FontHighlightTooltip">
+        <value>Resaltar Fuente</value>
+    </data>
+    <data name="SpecialCharacterTooltip">
+        <value>Caracteres Especiales</value>
+    </data>
+    <data name="ColorPickerDialogCaption">
+        <value>Elegir color</value>
+    </data>
+    <data name="SpecialCharacterDialogCaption">
+        <value>Elegir Caracteres Especiales</value>
+    </data>
+    <data name="InsertRuleTooltip">
+        <value>Insertar La Regla</value>
+    </data>
+    <data name="InsertRuleDialogCaption">
+        <value>Insertar la regla horizontal</value>
+    </data>
+    <data name="InsertBookmarkTooltip">
+        <value>Insertar El Marcador</value>
+    </data>
+    <data name="InsertBookmarkDialogCaption">
+        <value>Insertar El marcador</value>
+    </data>
+    <data name="FindReplaceTooltip">
+        <value>Buscar y Reemplazar</value>
+    </data>
+    <data name="FindReplaceDialogCaption">
+        <value>Buscar/Reemplazar</value>
+    </data>
+    <data name="HelpTooltip">
+        <value>Ayuda</value>
+    </data>
+    <data name="HelpDialogCaption">
+        <value>Ayuda</value>
+    </data>
+    <data name="HelpDialogSampleText">
+        <value>&lt;table width='300'&gt;&lt;tr&gt;&lt;td igf='d'&gt;&lt;h3&gt;Sample Help Dialog&lt;/h3&gt;&lt;p&gt;You can use this button to create your own custom help dialog.&lt;br&gt;Simply access this instance of the Help button using the following code:&lt;/p&gt;ToolbarDialogButton helpdlg = &lt;br&gt;(ToolbarDialogButton)WebHtmlEditor1.Toolbar.Items.GetByType(ToolbarDialogButtonType.Help);&lt;br&gt;helpdlg.Dialog.Text = "&amp;lt;p&amp;gt;My New Dialog Text&amp;lt;/p&amp;gt;";&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</value>
+    </data>
+    <data name="FontNameTitle">
+        <value>Fuente</value>
+    </data>
+    <data name="FontSizeTitle">
+        <value>Tamaño</value>
+    </data>
+    <data name="FontStyleTitle">
+        <value>Estilo</value>
+    </data>
+    <data name="FontFormattingTitle">
+        <value>Formato</value>
+    </data>
+    <data name="InsertTitle">
+        <value>Insertar</value>
+    </data>
+    <data name="CustomTitle">
+        <value>Personalizar</value>
+    </data>
+    <data name="InsertTableTooltip">
+        <value>Mostrar El Menú De la Tabla</value>
+    </data>
+    <data name="InsertTableDialogCaption">
+        <value>Insertar tabla</value>
+    </data>
+    <data name="InsertImageCaption">
+        <value>Propiedades de imagen</value>
+    </data>
+    <data name="ModifyTableCaption">
+        <value>Propiedades de tabla</value>
+    </data>
+    <data name="CellPropertiesCaption">
+        <value>Propiedades de celda</value>
+    </data>
+    <data name="TablePropertiesCaption">
+        <value>Insertar nueva tabla</value>
+    </data>
+    <data name="InsertColumnRightCaption">
+        <value>Insertar la derecha de la columna</value>
+    </data>
+    <data name="InsertColumnLeftCaption">
+        <value>Insertar la izquierda de la columna</value>
+    </data>
+    <data name="InsertRowAboveCaption">
+        <value>Insertar la columna arriba</value>
+    </data>
+    <data name="InsertRowBelowCaption">
+        <value>Insertar la columna abajo</value>
+    </data>
+    <data name="DeleteRowCaption">
+        <value>Borrar fila</value>
+    </data>
+    <data name="DeleteColumnCaption">
+        <value>Borrar columna</value>
+    </data>
+    <data name="IncreaseColspanCaption">
+        <value>Aumente el número de columnas</value>
+    </data>
+    <data name="DecreaseColspanCaption">
+        <value>Disminuya el número de columnas</value>
+    </data>
+    <data name="IncreaseRowspanCaption">
+        <value>Aumente el número de filas</value>
+    </data>
+    <data name="DecreaseRowspanCaption">
+        <value>Disminuya el número de filas</value>
+    </data>
+    <data name="ZoomTooltip">
+        <value>Zoom</value>
+    </data>
+    <data name="Zoom25Caption">
+        <value>25%</value>
+    </data>
+    <data name="Zoom50Caption">
+        <value>50%</value>
+    </data>
+    <data name="Zoom75Caption">
+        <value>75%</value>
+    </data>
+    <data name="Zoom100Caption">
+        <value>100%</value>
+    </data>
+    <data name="Zoom200Caption">
+        <value>200%</value>
+    </data>
+    <data name="Zoom300Caption">
+        <value>300%</value>
+    </data>
+    <data name="Zoom400Caption">
+        <value>400%</value>
+    </data>
+    <data name="Zoom500Caption">
+        <value>500%</value>
+    </data>
+    <data name="Zoom600Caption">
+        <value>600%</value>
+    </data>
+    <data name="InsertWindowsMediaTooltip">
+        <value>Insertar Windows Media</value>
+    </data>
+    <data name="InsertWindowsMediaDialogCaption">
+        <value>Insertar Windows Media</value>
+    </data>
+    <data name="InsertFlashTooltip">
+        <value>Insertar Flash</value>
+    </data>
+    <data name="InsertFlashDialogCaption">
+        <value>Insertar Flash</value>
+    </data>
+    <data name="InsertImageTooltip">
+        <value>Insertar Imagen</value>
+    </data>
+    <data name="InsertImageCaption">
+        <value>Insertar imagen</value>
+    </data>
+    <data name="OpenTooltip">
+        <value>Abrir Archivo</value>
+    </data>
+    <data name="OpenFileDialogCaption">
+        <value>Abrir archivo</value>
+    </data>
+    <data name="InsertFileTooltip">
+        <value>Insertar Archivo</value>
+    </data>
+    <data name="InsertFileDialogCaption">
+        <value>Insertar archivo</value>
+    </data>
+    <data name="UploadTooltip">
+        <value>Cargar Archivo</value>
+    </data>
+    <data name="UploadFileDialogCaption">
+        <value>Cargar archivo</value>
+    </data>
+    <data name="DownlevelLabelText">
+        <value>Internet Explorer 5.5, Netscape 7.1, Mozilla 1.3 o versión superior</value>
+    </data>
+    <data name="ProgressBarText">
+        <value>Cargar...</value>
+    </data>
+    <data name="InsertGreetingText">
+        <value>Saludo</value>
+    </data>
+    <data name="InsertGreetingValue">
+        <value>To whom it may concern,&lt;br&gt;</value>
+    </data>
+    <data name="InsertSignatureText">
+        <value>Firma</value>
+    </data>
+    <data name="InsertSignatureValue">
+        <value>Best regards,&lt;br&gt;John Doe&lt;br&gt;Acme Corp&lt;br&gt;555-1111</value>
+    </data>
+    <data name="CopyCaption">
+        <value>Copiar</value>
+    </data>
+    <data name="CutCaption">
+        <value>Cortar</value>
+    </data>
+    <data name="PasteCaption">
+        <value>Pegar</value>
+    </data>
+    <data name="PasteHtmlCaption">
+        <value>Pegar HTML</value>
+    </data>
+    <data name="DefaultFont1">
+        <value>Arial</value>
+    </data>
+    <data name="DefaultFont2">
+        <value>Verdana</value>
+    </data>
+    <data name="DefaultFont3">
+        <value>Tahoma</value>
+    </data>
+    <data name="DefaultFont4">
+        <value>Courier New</value>
+    </data>
+    <data name="DefaultFont5">
+        <value>Georgia</value>
+    </data>
+    <data name="DefaultSize1">
+        <value>1</value>
+    </data>
+    <data name="DefaultSize2">
+        <value>2</value>
+    </data>
+    <data name="DefaultSize3">
+        <value>3</value>
+    </data>
+    <data name="DefaultSize4">
+        <value>4</value>
+    </data>
+    <data name="DefaultSize5">
+        <value>5</value>
+    </data>
+    <data name="DefaultSize6">
+        <value>6</value>
+    </data>
+    <data name="DefaultSize7">
+        <value>7</value>
+    </data>
+    <data name="DefaultFormatting1">
+        <value>Título 1</value>
+    </data>
+    <data name="DefaultFormatting2">
+        <value>Título 2</value>
+    </data>
+    <data name="DefaultFormatting3">
+        <value>Título 3</value>
+    </data>
+    <data name="DefaultFormatting4">
+        <value>Título 4</value>
+    </data>
+    <data name="DefaultFormatting5">
+        <value>Título 5</value>
+    </data>
+    <data name="DefaultFormattingNormal">
+        <value>Normal</value>
+    </data>
+    <data name="DefaultStyle1">
+        <value>Subrayar Azul</value>
+    </data>
+    <data name="DefaultStyle2">
+        <value>En Negrilla Rojo</value>
+    </data>
+    <data name="DefaultStyle3">
+        <value>Capitalice Todos</value>
+    </data>
+    <data name="DefaultStyle4">
+        <value>Minúscula Toda</value>
+    </data>
+    <data name="DefaultStyle5">
+        <value>Reset</value>
+    </data>
+    <data name="DialogOK">
+        <value>Aceptar</value>
+    </data>
+    <data name="DialogCancel">
+        <value>Cancelar</value>
+    </data>
+    <data name="DialogFind">
+        <value>Buscar:</value>
+    </data>
+    <data name="DialogReplaceWith">
+        <value>Reemplazar:</value>
+    </data>
+    <data name="DialogMatchCase">
+        <value>Coincidir mayúsculas y minúsculas</value>
+    </data>
+    <data name="DialogMatchWord">
+        <value>Sólo palabras completas</value>
+    </data>
+    <data name="DialogWidth">
+        <value>Ancho:</value>
+    </data>
+    <data name="DialogHeight">
+        <value>Alto:</value>
+    </data>
+    <data name="DialogSize">
+        <value>Tamaño:</value>
+    </data>
+    <data name="DialogAlign">
+        <value>Alineación:</value>
+    </data>
+    <data name="DialogColor">
+        <value>Color:</value>
+    </data>
+    <data name="DialogColorPreview">
+        <value>Vista preliminar:</value>
+    </data>
+    <data name="DialogHexColor">
+        <value>Hex color:</value>
+    </data>
+    <data name="DialogSolidLine">
+        <value>Línea llena</value>
+    </data>
+    <data name="DialogBookmarkName">
+        <value>El marcador nombre:</value>
+    </data>
+    <data name="DialogRows">
+        <value>Filas:</value>
+    </data>
+    <data name="DialogCols">
+        <value>Columnas:</value>
+    </data>
+    <data name="DialogLayout">
+        <value>Diseño:</value>
+    </data>
+    <data name="DialogCellpadding">
+        <value>Margen de celdas:</value>
+    </data>
+    <data name="DialogCellspacing">
+        <value>Espacio entre celdas:</value>
+    </data>
+    <data name="DialogBorderSize">
+        <value>Tamaño del borde:</value>
+    </data>
+    <data name="DialogBackgroundColor">
+        <value>Color de fondo: </value>
+    </data>
+    <data name="DialogBorderColor">
+        <value>Color del borde:</value>
+    </data>
+    <data name="DialogHorizontalAlignment">
+        <value>Alineación horizontal:</value>
+    </data>
+    <data name="DialogVerticalAlignment">
+        <value>Alineación vertical:</value>
+    </data>
+    <data name="DialogNoWrap">
+        <value>Ninguna Ajuste automático de línea</value>
+    </data>
+    <data name="DialogLeft">
+        <value>
+			Izquierda
+		</value>
+    </data>
+    <data name="DialogCenter">
+        <value>
+			Centro
+		</value>
+    </data>
+    <data name="DialogRight">
+        <value>
+			Derecha
+		</value>
+    </data>
+    <data name="DialogDefault">
+        <value>
+			Defecto
+		</value>
+    </data>
+    <data name="DialogTop">
+        <value>Top
+			Arriba
+		</value>
+    </data>
+    <data name="DialogMiddle">
+        <value>
+			Centro
+		</value>
+    </data>
+    <data name="DialogBottom">
+        <value>
+			Abajo
+		</value>
+    </data>
+    <data name="DialogBaseline">
+        <value>
+			Línea de base
+		</value>
+    </data>
+    <data name="DialogNone">
+        <value>
+			Ninguno
+		</value>
+    </data>
+    <data name="DesignText">
+        <value>Diseño</value>
+    </data>
+    <data name="HtmlText">
+        <value>HTML</value>
+    </data>
+    <data name="DialogUploadDisabledMessage">
+        <value>La función de carga ha sido desactivada.</value>
+    </data>
+    <data name="DialogUploadMaxSizeMessage">
+        <value>Error de carga. El archivo elegido ha superado el tamaño máximo de carga permitido, por lo que no es posible cargarlo.</value>
+    </data>
+    <data name="DialogUploadFileTypeMessage">
+        <value>Error de carga. El archivo cargado no es de un tipo de archivo permitido.</value>
+    </data>
+    <data name="DialogUploadErrorMessage">
+        <value>Error de carga. Se ha producido un error al cargar el archivo. Póngase en contacto con el administrador del sistema.</value>
+    </data>
+    <data name="DialogUploadCouldNotResolve">
+        <value>Error de carga. La trayectoria no podía ser determinada. Programmer: make directory on server for UploadedFilesDirectory property.</value>
+    </data>
+    <data name="DialogUploadImageTitle">
+        <value>Cargar Imagen</value>
+    </data>
+    <data name="DialogUploadMediaTitle">
+        <value>Cargar un archivo de los medios de Windows</value>
+    </data>
+    <data name="DialogUploadStep1">
+        <value>&lt;b&gt;Paso 1:&lt;/b&gt; Haga clic en el botón "EXAMINAR" para localizar un archivo en su equipo.&lt;br&gt;</value>
+    </data>
+    <data name="DialogUploadStep2">
+        <value>&lt;br&gt;&lt;b&gt;Paso 2:&lt;/b&gt; Haga clic en el botón "CARGAR" para transferir el archivo al servidor.&lt;br&gt;</value>
+    </data>
+    <data name="DialogUploadFile">
+        <value>Cargar Archivo</value>
+    </data>
+    <data name="DialogUploadAltText">
+        <value>Texto alternativo:</value>
+    </data>
+    <data name="DialogUploadBorder">
+        <value>Borde:</value>
+    </data>
+    <data name="DialogUploadAlign">
+        <value>Alineación:</value>
+    </data>
+    <data name="DialogUploadFiles">
+        <value>Archivos</value>
+    </data>
+    <data name="DialogUploadPreview">
+        <value>Vista preliminar</value>
+    </data>
+    <data name="DialogUploadBrowseUp">
+        <value>Subir</value>
+    </data>
+    <data name="DialogUploadDelete">
+        <value>[Eliminar]</value>
+    </data>
+    <data name="DialogUploadClose">
+        <value>Cerrar</value>
+    </data>
+    <data name="DialogUploadFileTitle">
+        <value>Cargar un archivo</value>
+    </data>
+    <data name="DialogUploadFlashTitle">
+        <value>Cargar Flash</value>
+    </data>
+    <data name="DialogUploadFlashAlign">
+        <value>Alineación Flash:</value>
+    </data>
+    <data name="DialogUploadFlashQuality">
+        <value>Calidad:</value>
+    </data>
+    <data name="DialogUploadFlashMenu">
+        <value>Mostrar el menú:</value>
+    </data>
+    <data name="DialogUploadFlashLoop">
+        <value>Bucle:</value>
+    </data>
+    <data name="DialogYes">
+        <value>Sí</value>
+    </data>
+    <data name="DialogNo">
+        <value>No</value>
+    </data>
+    <data name="DialogUploadSource">
+        <value>Fuente:</value>
+    </data>
+    <data name="DialogFindNext">
+        <value>Buscar Siguiente</value>
+    </data>
+    <data name="DialogReplace">
+        <value>Reemplazar</value>
+    </data>
+    <data name="DialogReplaceAll">
+        <value>Reemplazar todo</value>
+    </data>
+</root>

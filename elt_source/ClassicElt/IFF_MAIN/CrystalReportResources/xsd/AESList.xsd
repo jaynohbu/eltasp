@@ -1,0 +1,47 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AESList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="auto_uid" type="xs:decimal" minOccurs="0" />
+              <xs:element name="elt_account_number" type="xs:decimal" minOccurs="0" />
+              <xs:element name="party_to_transaction" type="xs:string" minOccurs="0" />
+              <xs:element name="export_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="tran_ref_no" type="xs:string" minOccurs="0" />
+              <xs:element name="consignee_acct" type="xs:decimal" minOccurs="0" />
+              <xs:element name="inter_consignee_acct" type="xs:decimal" minOccurs="0" />
+              <xs:element name="origin_state" type="xs:string" minOccurs="0" />
+              <xs:element name="dest_country" type="xs:string" minOccurs="0" />
+              <xs:element name="tran_method" type="xs:string" minOccurs="0" />
+              <xs:element name="export_carrier" type="xs:string" minOccurs="0" />
+              <xs:element name="export_port" type="xs:string" minOccurs="0" />
+              <xs:element name="unloading_port" type="xs:string" minOccurs="0" />
+              <xs:element name="carrier_id_code" type="xs:string" minOccurs="0" />
+              <xs:element name="shipment_ref_no" type="xs:string" minOccurs="0" />
+              <xs:element name="entry_no" type="xs:string" minOccurs="0" />
+              <xs:element name="hazardous_materials" type="xs:string" minOccurs="0" />
+              <xs:element name="in_bond_type" type="xs:string" minOccurs="0" />
+              <xs:element name="in_bond_no" type="xs:string" minOccurs="0" />
+              <xs:element name="route_export_tran" type="xs:string" minOccurs="0" />
+              <xs:element name="tran_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="last_modified" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="aes_itn" type="xs:string" minOccurs="0" />
+              <xs:element name="aes_status" type="xs:string" minOccurs="0" />
+              <xs:element name="ftz" type="xs:string" minOccurs="0" />
+              <xs:element name="agent_acct" type="xs:decimal" minOccurs="0" />
+              <xs:element name="shipper_acct" type="xs:decimal" minOccurs="0" />
+              <xs:element name="file_type" type="xs:string" minOccurs="0" />
+              <xs:element name="house_num" type="xs:string" minOccurs="0" />
+              <xs:element name="master_num" type="xs:string" minOccurs="0" />
+              <xs:element name="consignee_name" type="xs:string" minOccurs="0" />
+              <xs:element name="inter_consignee_name" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

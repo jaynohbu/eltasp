@@ -1,0 +1,27 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxSiteMapControl" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxSiteMapControl runat="server" SpriteCssFilePath="~/App_Themes/Moderno/{0}/sprite.css" CssPostfix="Moderno" CssFilePath="~/App_Themes/Moderno/{0}/styles.css">
+    <DefaultLevelProperties ImageSpacing="10px" NodeSpacing="8px" BulletStyle="None">
+        <ChildNodesPaddings PaddingLeft="16px" PaddingTop="8px" PaddingBottom="8px"></ChildNodesPaddings>
+        <NodePaddings PaddingRight="60px"></NodePaddings>
+        <CurrentNodeStyle Font-Bold="True"></CurrentNodeStyle>
+    </DefaultLevelProperties>
+
+    <LevelProperties>
+        <dx:LevelProperties NodeSpacing="20px">
+            <Font Bold="False"></Font>
+            <ChildNodesPaddings PaddingLeft="0px"></ChildNodesPaddings>
+            <NodePaddings PaddingBottom="1px"></NodePaddings>
+        </dx:LevelProperties>
+        <dx:LevelProperties></dx:LevelProperties>
+        <dx:LevelProperties></dx:LevelProperties>
+        <dx:LevelProperties></dx:LevelProperties>
+        <dx:LevelProperties></dx:LevelProperties>
+    </LevelProperties>
+
+    <ColumnSeparatorStyle Width="8px">
+        <Paddings Padding="0px"></Paddings>
+    </ColumnSeparatorStyle>
+</dx:ASPxSiteMapControl>
+

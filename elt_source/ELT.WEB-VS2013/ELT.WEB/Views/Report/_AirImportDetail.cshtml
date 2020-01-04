@@ -1,0 +1,82 @@
+﻿@model ELT.WEB.Models.AirReportDetailModel
+@Html.DevExpress().GridView(settings => {
+
+    settings.Name = "detailGrid_" + Model.Key.Replace(' ', '_');
+    settings.SettingsDetail.MasterGridName = "grid";
+    settings.CallbackRouteValues = new { Controller = "Report", Action = "AirImportDetail", KeyFieldName = Model.KeyFieldName, Key = Model.Key };
+    settings.Width = Unit.Percentage(100);
+    settings.KeyFieldName = Model.KeyFieldName;
+
+
+    settings.Columns.Add("FileNo", "File#");
+    
+    var column = settings.Columns.Add("Master", "MAWB#", MVCxGridViewColumnType.HyperLink);
+    HyperLinkProperties properties = column.PropertiesEdit as HyperLinkProperties;
+    String urlFormatString = Url.Action("Deconsolidation", "AirImport", 
+            new RouteValueDictionary(
+                new { iType = "A"
+                    ,Edit="yes", MAWB="{0}" }));
+    //http://e-logitech.net/IFF_MAIN/ASP/air_import/air_import2.asp?iType=A&WindowName=popUpWindow&Edit=yes&MAWB=MASTER1023
+    
+    properties.NavigateUrlFormatString = HttpUtility.UrlDecode(urlFormatString);
+
+    var column2 = settings.Columns.Add("House", "HAWB#", MVCxGridViewColumnType.HyperLink);
+    HyperLinkProperties properties2 = column2.PropertiesEdit as HyperLinkProperties;
+    String urlFormatString2
+        = Url.Action("ArrivalNotice", "AirImport", 
+                new RouteValueDictionary(
+                    new { param = "edit=yes&HAWB={0}" }
+                )
+        );
+    //http://e-logitech.net/IFF_MAIN/ASP/air_import/arrival_notice.asp?iType=A&edit=yes&WindowName=popUpWindow&HAWB=house&MAWB=MASTER1023&Sec=1
+    //http://localhost/AirImport/ArrivalNotice
+    properties2.NavigateUrlFormatString = HttpUtility.UrlDecode(urlFormatString2);
+    
+
+    settings.Columns.Add("Shipper");
+    settings.Columns.Add("Consignee");
+    settings.Columns.Add("Agent");
+    settings.Columns.Add("Carrier");
+    settings.Columns.Add("Origin");
+    settings.Columns.Add("Destination");
+
+    settings.Columns.Add("Date","ETD");
+    settings.Columns.Add("Sale_Rep","Sales Rep.");
+    settings.Columns.Add("Processed_By","Processed By");
+
+
+    settings.Columns.Add(c =>
+    {
+        c.FieldName = "Quantity";
+        c.Caption = "";
+        ((MVCxGridViewColumn)c).CellStyle.CssClass = "numeric";
+    });
+
+    settings.Columns.Add(c =>
+    {
+        c.FieldName = "Gros_Wt";
+        c.Caption = "Gros Wt.";
+        ((MVCxGridViewColumn)c).CellStyle.CssClass = "numeric";
+    });
+
+    settings.Columns.Add(c =>
+    {
+        c.FieldName = "ChargeableWeight";
+        c.Caption = "Chargeable Wt.";
+        ((MVCxGridViewColumn)c).CellStyle.CssClass = "numeric";
+    });
+
+    settings.Columns.Add(c =>
+    {
+        c.FieldName = "Freight_Charge";
+        c.Caption = "Freight Charge";
+        ((MVCxGridViewColumn)c).CellStyle.CssClass = "numeric";
+    });
+
+    settings.Columns.Add(c =>
+    {
+        c.FieldName = "Other_Charge";
+        c.Caption ="Other Charge";
+        ((MVCxGridViewColumn)c).CellStyle.CssClass = "numeric";
+    });
+  }).Bind(Model.Elements).GetHtml()

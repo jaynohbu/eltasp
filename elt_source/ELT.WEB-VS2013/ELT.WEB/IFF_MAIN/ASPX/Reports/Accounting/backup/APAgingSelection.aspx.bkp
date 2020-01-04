@@ -1,0 +1,228 @@
+<%@ Register TagPrefix="cr" Namespace="CrystalDecisions.Web" Assembly="CrystalDecisions.Web, Version=11.0.3300.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" %>
+<%@ Register TagPrefix="igtab" Namespace="Infragistics.WebUI.UltraWebTab" Assembly="Infragistics.WebUI.UltraWebTab.v5.1, Version=5.1.20051.1045, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<%@ Page language="c#" Codebehind="APAgingSelection.aspx.cs" AutoEventWireup="false" Inherits="IFF_MAIN.ASPX.Reports.Accounting.APAgingSelection" trace="false" %>
+<%@ Register TagPrefix="cc1" Namespace="iMoonComboBox.WebControls" Assembly="iMoonComboBox" %>
+<%@ Register TagPrefix="mbcbb" Namespace="MetaBuilders.WebControls" Assembly="MetaBuilders.WebControls.ComboBox" %>
+<%@ Register TagPrefix="igtxt" Namespace="Infragistics.WebUI.WebDataInput" Assembly="Infragistics.WebUI.WebDataInput.v5.1, Version=5.1.20051.1045, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<%@ Register TagPrefix="igsch" Namespace="Infragistics.WebUI.WebSchedule" Assembly="Infragistics.WebUI.WebDateChooser.v5.1, Version=5.1.20051.1045, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<%@ Register TagPrefix="igtbl" Namespace="Infragistics.WebUI.UltraWebGrid" Assembly="Infragistics.WebUI.UltraWebGrid.v5.1, Version=5.1.20051.1045, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+  <HEAD>
+		<title>APAgingSelection</title>
+<META http-equiv=Content-Type content="text/html; charset=ks_c_5601-1987">
+<meta content="Microsoft Visual Studio .NET 7.1" name=GENERATOR>
+<meta content=C# name=CODE_LANGUAGE>
+<meta content=JavaScript name=vs_defaultClientScript>
+<meta content=http://schemas.microsoft.com/intellisense/ie5 name=vs_targetSchema>
+<SCRIPT src="/IFF_MAIN/ASPX/jScripts/ig_dropCalendar.js" type=text/javascript></SCRIPT>
+<SCRIPT src="/IFF_MAIN/ASPX/jScripts/ig_editDrop1.js" type=text/javascript></SCRIPT>
+<LINK href="/IFF_MAIN/ASPX/CSS/AppStyle.css" type=text/css rel=stylesheet >
+<!--  #INCLUDE FILE="../../include/common.htm" -->		
+<script language=javascript>
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_goToURL() { //v3.0
+
+var i, args=MM_goToURL.arguments;
+  document.MM_returnValue = false;
+  
+  for (i=0; i<(args.length-1); i+=2) 	{			
+			if(args[i].indexOf("mainFrame") < 0)	{
+				eval(args[i]+".location='"+args[i+1]+"'");
+			}
+			else
+			{
+				if(args[i+1].indexOf("ASPX") >=0) {
+				parent.MenuLink(args[i+1]);				
+				}
+				else {				
+				parent.MenuLink('../acct_reports/'+args[i+1]);
+				}
+			}			
+	}
+}
+
+function ReqDataCheck() {
+	if( document.Form1.ComboBox1.value != "") {
+		document.Form1.txtNum.value = document.Form1.ComboBox1.selectedIndex;
+		return true;
+	 }
+}
+
+
+//-->
+		</script>
+</HEAD>
+<BODY leftMargin=0 topMargin=0>
+<!--  #INCLUDE FILE="/ASP/tabs/acct_reports_subs_aspx.htm" -->
+<form id=Form1 method=post runat="server">
+<P>
+<TABLE id=Table2 cellSpacing=0 cellPadding=0 width="100%" 
+  >
+  <TR>
+    <TD></TD>
+    <TD><FONT face=±¼¸²></FONT></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD><asp:label id=Label4 runat="server" Height="1px" Width="100%" Font-Size="15px" ForeColor="Black" DESIGNTIMEDRAGDROP="285" Font-Bold="True"> A/P Aging Summary</asp:label></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD style="HEIGHT: 3px" vAlign=top bgColor=#cdcc9d></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD style="HEIGHT: 80px"></TD>
+    <TD style="HEIGHT: 80px">
+      <P align=center>
+      <TABLE id=Table1 align=center>
+        <TR>
+          <TD></TD>
+          <TD 
+          style="WIDTH: 200px" 
+          vAlign=bottom align=center><FONT face=±¼¸²></FONT></TD>
+          <TD style="WIDTH: 120px"><FONT face=±¼¸²></FONT>
+          <TD style="WIDTH: 120px"><FONT face=±¼¸²></FONT></TD></TR>
+        <TR>
+          <TD align=right><asp:label id=Label7 runat="server" Height="22px" Width="112px" ForeColor="DimGray" >Date as of :</asp:label></TD>
+          <TD style="WIDTH: 187px" align=right><igtxt:webdatetimeedit id=Webdatetimeedit2 accessKey=e runat="server" Width="100%" ForeColor="DarkCyan" PromptChar=" " EditModeFormat="MM/dd/yyyy" Fields="">
+<ButtonsAppearance CustomButtonDisplay="OnRight">
+</ButtonsAppearance>
+
+<SpinButtons Display="OnLeft" SpinOnReadOnly="True">
+</SpinButtons>
+										</igtxt:webdatetimeedit></TD>
+          <TD style="WIDTH: 111px; HEIGHT: 29px" align=left><asp:requiredfieldvalidator id=RequiredFieldValidator2 runat="server" Width="200px" ControlToValidate="Webdatetimeedit2" ErrorMessage="Please input to Date !"></asp:requiredfieldvalidator></TD>
+          <TD style="WIDTH: 111px; HEIGHT: 29px" align=left></TD></TR>
+        <TR>
+          <TD style="WIDTH: 109px; HEIGHT: 2px" align=right><asp:label id=lblBranch runat="server" Height="19px" Width="100%" Visible="False"> Branch :</asp:label></TD>
+          <TD 
+          style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; WIDTH: 187px; PADDING-TOP: 0px; HEIGHT: 2px; PADDDING-BOTTOM: 0px" 
+          vAlign=middle align=right><asp:dropdownlist id=DropDownList1 runat="server" Width="100%" Visible="False" BackColor="Yellow"></asp:dropdownlist></TD>
+          <TD style="WIDTH: 111px; HEIGHT: 2px" align=right 
+            ><FONT face=±¼¸²></FONT></TD>
+          <TD style="WIDTH: 111px; HEIGHT: 2px" align=right></TD></TR>
+        <TR>
+          <TD style="WIDTH: 109px; HEIGHT: 16px" align=right 
+          ><asp:label id=Label8 runat="server" Height="19px" Width="100%"> Company :</asp:label></TD>
+          <TD style="WIDTH: 187px; HEIGHT: 16px" align=right 
+          ><cc1:combobox id=ComboBox1 runat="server" Width="210px" Rows="20"></cc1:combobox></TD>
+          <TD style="WIDTH: 111px; HEIGHT: 16px" align=right 
+          ></TD>
+          <TD style="WIDTH: 111px; HEIGHT: 16px" align=right></TD></TR>
+        <TR>
+          <TD style="WIDTH: 109px; HEIGHT: 17px" align=right 
+          ></TD>
+          <TD style="WIDTH: 187px" vAlign=middle><asp:radiobuttonlist id=RadioButtonList1 runat="server" Height="100%" Width="100%">
+<asp:ListItem Value="Posted Transactions" Selected="True">Posted Transactions</asp:ListItem>
+<asp:ListItem Value="Unposted Transactions">Unposted Transactions</asp:ListItem>
+										</asp:radiobuttonlist></TD>
+          <TD><FONT face=±¼¸² 
+          ></FONT></TD>
+          <TD align=right><FONT face=±¼¸²>
+<asp:imagebutton id=ImageButton1 runat="server" ImageUrl="../../../images/button_go.gif"></asp:imagebutton></FONT></TD></TR></TABLE></P></TD>
+    <TD style="HEIGHT: 80px"></TD></TR>
+  <TR>
+    <TD style="HEIGHT: 1px"></TD>
+    <TD style="HEIGHT: 3px" bgColor=#cdcc9d></TD>
+    <TD style="WIDTH: 2px; HEIGHT: 1px"></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD>
+    <TD style="WIDTH: 2px; HEIGHT: 22px"></TD></TR></TABLE></P>
+<P><asp:button id=btnValidate runat="server" Visible="False" Text="for Validation"></asp:button><asp:linkbutton id=LinkButton1 runat="server" Visible="False">LinkButton</asp:linkbutton><asp:textbox id=txtNum runat="server" Height="1px" Width="1px"></asp:textbox><!-- end --></P>
+<igsch:WebCalendar id=CustomDropDownCalendar runat="server" Width="150px">
+<Layout FooterFormat="Today: {0:d}" TitleFormat="Month" ShowYearDropDown="False" PrevMonthImageUrl="ig_cal_blueP0.gif" ShowMonthDropDown="False" NextMonthImageUrl="ig_cal_blueN0.gif">
+
+<DayStyle BackColor="#7AA7E0">
+</DayStyle>
+
+<FooterStyle Height="16pt" Font-Size="8pt" ForeColor="#505080" BackgroundImage="ig_cal_blue2.gif">
+
+<BorderDetails ColorTop="LightSteelBlue" WidthTop="1px" StyleTop="Solid">
+</BorderDetails>
+
+</FooterStyle>
+
+<SelectedDayStyle BackColor="SteelBlue">
+</SelectedDayStyle>
+
+<OtherMonthDayStyle ForeColor="SlateGray">
+</OtherMonthDayStyle>
+
+<NextPrevStyle BackgroundImage="ig_cal_blue1.gif">
+</NextPrevStyle>
+
+<CalendarStyle Width="150px" BorderWidth="1px" Font-Size="9pt" Font-Names="Verdana" BorderColor="SteelBlue" BorderStyle="Solid" BackColor="#E0EEFF">
+</CalendarStyle>
+
+<TodayDayStyle BackColor="#97B0F0">
+</TodayDayStyle>
+
+<DayHeaderStyle Height="1pt" Font-Size="8pt" Font-Bold="True" ForeColor="#606090" BackColor="#7AA7E0">
+
+<BorderDetails StyleBottom="Solid" ColorBottom="LightSteelBlue" WidthBottom="1px">
+</BorderDetails>
+
+</DayHeaderStyle>
+
+<TitleStyle Height="18pt" Font-Size="10pt" Font-Bold="True" ForeColor="#505080" BackgroundImage="ig_cal_blue1.gif" BackColor="#CCDDFF">
+</TitleStyle>
+
+</Layout>
+</igsch:WebCalendar>			</form>
+<SCRIPT type=text/javascript>
+			ig_initDropCalendar("CustomDropDownCalendar Webdatetimeedit2");
+		</SCRIPT>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</BODY>
+</HTML>

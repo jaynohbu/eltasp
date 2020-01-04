@@ -1,0 +1,24 @@
+﻿ @Html.DevExpress().ComboBox(
+    settings => {
+     
+        settings.Name = "comboBoxBillNo";
+        settings.Width = 230;
+        settings.Properties.DropDownWidth = 350;
+        settings.Properties.DropDownStyle = DropDownStyle.DropDownList;
+        settings.CallbackRouteValues = new { Controller = "OceanExport", Action = "_SelectBill" };
+        settings.Properties.CallbackPageSize = 15;
+        settings.Properties.IncrementalFilteringMode = IncrementalFilteringMode.Contains;
+        settings.Properties.TextField = "Text";
+        settings.Properties.TextFormatString = "{0}";
+        settings.Properties.ValueField = "Value";
+        settings.Properties.Columns.Add("Text", "SELECT A BILL NUMBER", 90);
+        settings.Properties.FilterMinLength = 1;
+       
+        settings.Properties.ClientSideEvents.BeginCallback = "OnStartCallback";
+        settings.Properties.ClientSideEvents.EndCallback = "OnEndCallback";
+
+        settings.Properties.ClientSideEvents.SelectedIndexChanged = "OnSelectedIndexChanged";
+    
+    }
+           ).BindList(ELT.WEB.DataProvider.BillNumberListDataProvider.GetOceanExportBillRange, ELT.WEB.DataProvider.BillNumberListDataProvider.GetOceanExportBillByID).GetHtml()
+

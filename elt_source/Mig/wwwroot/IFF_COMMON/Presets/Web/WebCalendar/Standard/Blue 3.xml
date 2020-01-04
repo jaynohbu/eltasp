@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Blue 3" PresetDescription="Infragistics Blue 3 Look" PresetType="Appearance" />-->
+<igsch:WebCalendar >
+  <Layout TitleFormat="Month" ShowYearDropDown="False" PrevMonthImageUrl="ig_cal_blueP0.gif" ShowMonthDropDown="False" NextMonthImageUrl="ig_cal_blueN0.gif">
+    <DayStyle BorderWidth="1px" BorderColor="SteelBlue" BorderStyle="Solid" BackgroundImage="ig_cal_blue3.gif" />
+    <FooterStyle Height="16pt" Font-Size="8pt" ForeColor="#505080" BackgroundImage="ig_cal_blue2.gif" />
+    <SelectedDayStyle ForeColor="White" BackgroundImage="ig_cal_blue2.gif" />
+    <OtherMonthDayStyle ForeColor="SlateGray" />
+    <NextPrevStyle BackgroundImage="ig_cal_blue1.gif" />
+    <CalendarStyle BorderWidth="1px" Font-Size="9pt" Font-Names="Verdana" BorderColor="SteelBlue" BorderStyle="Solid" BackColor="#CCDDFF" />
+    <TodayDayStyle BackgroundImage="ig_cal_blue1.gif" />
+    <DayHeaderStyle Height="1pt" Font-Size="8pt" Font-Bold="True" ForeColor="#606090" BackgroundImage="ig_cal_blue2.gif" />
+    <TitleStyle Height="18pt" Font-Size="10pt" Font-Bold="True" ForeColor="#505080" BackgroundImage="ig_cal_blue1.gif" BackColor="#CCDDFF" />
+  </Layout>
+</igsch:WebCalendar>

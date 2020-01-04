@@ -1,0 +1,29 @@
+﻿
+@Html.DevExpress().CallbackPanel(
+    settings => {
+        settings.Name = "_AESDetail_IntermediateConsignee";
+        settings.CallbackRouteValues = new { Controller = "AirExport", Action = "_AESDetail_IntermediateConsignee" };
+        settings.Width = Unit.Percentage(100);
+        settings.Height = 100;
+
+        settings.SetContent(() =>
+        {
+            ViewContext.Writer.Write(
+            "<table cellpadding='2' cellspacing='0' border='0' class='bodycopy' id='tblShipper'>" +
+            "<tr><td>Tax ID</td><td>" + DataBinder.Eval(Model, "TaxID") + "</td></tr>" +
+            "<tr><td>Address 1</td><td>" + DataBinder.Eval(Model.Address, "Address1") + "</td></tr>" +
+            "<tr><td>Address 2</td><td>" + DataBinder.Eval(Model.Address, "Address2") + "</td></tr>" +
+            "<tr><td>City</td><td>" + DataBinder.Eval(Model.Address, "City") + "</td></tr>" +
+            "<tr><td>State</td><td>" + DataBinder.Eval(Model.Address, "State") + "</td></tr>" +
+            "<tr><td>Zip Code</td><td>" + DataBinder.Eval(Model.Address, "ZipCode") + "</td></tr>" +
+            //"<tr><td>Contact Name</td>" + DataBinder.Eval(Model.Contacts.Single(), "Fname") + "<td></td></tr>" +
+                //"<tr><td>Phone No</td><td>" + DataBinder.Eval(Model.Contacts.Single(), "OfficePhone") + "</td></tr>"+ 
+             "</table>"
+            );
+        });
+
+        settings.ClientSideEvents.BeginCallback = "OnBeginCallback_IntermediateConsignee";
+        settings.ClientSideEvents.EndCallback = "OnEndCallback_IntermediateConsignee";
+    }
+).GetHtml()
+

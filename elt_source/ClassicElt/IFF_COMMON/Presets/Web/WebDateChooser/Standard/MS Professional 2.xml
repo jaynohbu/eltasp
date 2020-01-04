@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="MS Professional 2" PresetDescription="Infragistics MS Professional 2.  Sets both Look and Behavior properties." PresetType="All" />-->
+<igsch:WebDateChooser >
+  <ClientSideEvents />
+  <CalendarLayout CellSpacing="1" ShowYearDropDown="False" NextPrevFormat="ShortMonth" ShowMonthDropDown="False" ShowFooter="False">
+    <DayStyle BackColor="#CCCCCC" />
+    <SelectedDayStyle ForeColor="White" BackColor="#333399" />
+    <OtherMonthDayStyle ForeColor="#999999" />
+    <NextPrevStyle Font-Size="8pt" Font-Bold="True" ForeColor="White" />
+    <CalendarStyle BorderWidth="1px" Font-Size="9pt" Font-Names="Verdana" BorderColor="Black" BorderStyle="Solid" ForeColor="Black" BackColor="White" />
+    <TodayDayStyle ForeColor="White" BackColor="#999999" />
+    <DayHeaderStyle Height="8pt" Font-Size="8pt" Font-Bold="True" />
+    <TitleStyle Height="12pt" Font-Size="12pt" Font-Bold="True" ForeColor="White" BackColor="#333399" />
+  </CalendarLayout>
+  <DropButton>
+    <HoverStyle />
+    <Style />
+  </DropButton>
+  <ExpandEffects ShadowColor="LightGray" />
+</igsch:WebDateChooser>

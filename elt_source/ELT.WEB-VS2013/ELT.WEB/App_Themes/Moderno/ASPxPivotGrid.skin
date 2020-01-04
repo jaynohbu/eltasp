@@ -1,0 +1,30 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register Assembly="DevExpress.Web.ASPxPivotGrid.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxPivotGrid" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.PivotGrid.v13.2.Core, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.XtraPivotGrid" TagPrefix="dx" %>
+
+<dx:ASPxPivotGrid runat="server" >
+    <OptionsPager CurrentPageNumberFormat="{0}">
+    </OptionsPager>
+
+    <OptionsCustomization CustomizationWindowWidth="200" CustomizationWindowHeight="220"> 
+    </OptionsCustomization>
+
+    <OptionsLoadingPanel>
+        <Image Url="PivotGrid/Loading.gif"></Image>
+    </OptionsLoadingPanel>
+
+    <OptionsFilter GroupFilterMode="List"></OptionsFilter>
+
+    <Images SpriteCssFilePath="~/App_Themes/Moderno/{0}/sprite.css">
+        <TreeViewNodeLoadingPanel Url="PivotGrid/tvNodeLoading.gif"></TreeViewNodeLoadingPanel>
+        <LoadingPanel Url="PivotGrid/Loading.gif"></LoadingPanel>
+    </Images>
+
+    <ImagesEditors>
+        <LoadingPanel Url="Editors/Loading.gif"></LoadingPanel>
+    </ImagesEditors>
+
+    <Styles CssPostfix="Moderno" CssFilePath="~/App_Themes/Moderno/{0}/styles.css">
+    </Styles>
+</dx:ASPxPivotGrid>
+

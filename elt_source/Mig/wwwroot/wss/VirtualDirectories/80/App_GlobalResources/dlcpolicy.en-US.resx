@@ -1,0 +1,2162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="14.0.4758.1000" _dal="1" -->
+<!-- _LocalBinding -->
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BarcodeSettings_ErrorColumnsExists" xml:space="preserve">
+    <value>Columns already exist with the name 'Barcode', 'Barcode Image', or 'Barcode Value'.</value>
+  </data>
+  <data name="BarcodeSettings_PromptUsers" xml:space="preserve">
+    <value>Prompt users to insert a barcode before saving or printing</value>
+  </data>
+  <data name="LabelSettings_ErrorInvalid" xml:space="preserve">
+    <value>The label is invalid</value>
+  </data>
+  <data name="LabelSettings_TextFormatting" xml:space="preserve">
+    <value>Appearance:</value>
+  </data>
+  <data name="LabelSettings_Font" xml:space="preserve">
+    <value>Font:</value>
+  </data>
+  <data name="LabelSettings_Size" xml:space="preserve">
+    <value>Size:</value>
+  </data>
+  <data name="LabelSettings_Style" xml:space="preserve">
+    <value>Style:</value>
+  </data>
+  <data name="LabelSettings_Justification" xml:space="preserve">
+    <value>Justification:</value>
+  </data>
+  <data name="LabelSettings_Regular" xml:space="preserve">
+    <value>Regular</value>
+  </data>
+  <data name="LabelSettings_Bold" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="LabelSettings_Italic" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="LabelSettings_BoldItalic" xml:space="preserve">
+    <value>Bold Italic</value>
+  </data>
+  <data name="LabelSettings_Center" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="LabelSettings_Left" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="LabelSettings_Right" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="LabelSettings_Height" xml:space="preserve">
+    <value>Height:</value>
+  </data>
+  <data name="LabelSettings_Width" xml:space="preserve">
+    <value>Width:</value>
+  </data>
+  <data name="LabelSettings_Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="LabelSettings_PromptUsers" xml:space="preserve">
+    <value>Prompt users to insert a label before saving or printing</value>
+  </data>
+  <data name="LabelSettings_LockLabel" xml:space="preserve">
+    <value>Prevent changes to labels after they are added</value>
+  </data>
+  <data name="LabelSettings_Label" xml:space="preserve">
+    <value>Label format</value>
+  </data>
+  <data name="LabelSettings_Examples" xml:space="preserve">
+    <value>Examples:</value>
+  </data>
+  <data name="LabelSettings_ExampleProject" xml:space="preserve">
+    <value>Project {ProjectName}\n Managed By: {ProjectManager}</value>
+    
+  </data>
+  <data name="LabelSettings_ExampleConfidential" xml:space="preserve">
+    <value>Confidential -- {Date}</value>
+    
+  </data>
+  <data name="LabelSettings_Preview" xml:space="preserve">
+    <value>Preview:</value>
+  </data>
+  <data name="LabelSettings_ListFontName" xml:space="preserve">
+    <value>Select a font name</value>
+  </data>
+  <data name="LabelSettings_FontSize" xml:space="preserve">
+    <value>Font size</value>
+  </data>
+  <data name="LabelSettings_FontStyle" xml:space="preserve">
+    <value>Font style</value>
+  </data>
+  <data name="LabelSettings_FontJustification" xml:space="preserve">
+    <value>Font justification</value>
+  </data>
+  <data name="policy_title" xml:space="preserve">
+    <value>Information Management Policy Settings</value>
+  </data>
+  <data name="policy_description" xml:space="preserve">
+    <value>Use this page to change the policy settings.</value>
+  </data>
+  <data name="policy_title2" xml:space="preserve">
+    <value>Information Management Policy Settings: {0}</value>
+    
+  </data>
+  <data name="policy_blockupdates" xml:space="preserve">
+    <value>You cannot change policy settings for this content type because it inherited the settings from its parent content type or a site level content type. To change these policy settings, &lt;a href="{0}"&gt;change the settings for the parent of this content type&lt;/a&gt;.</value>
+    
+  </data>
+  <data name="policy_blockupdates_ro_ct" xml:space="preserve">
+    <value>The policy settings for this content type cannot be changed. This content type may be read-only, or content type management may not be allowed for this list.</value>
+  </data>
+  <data name="policy_blockupdates_builtin_ct" xml:space="preserve">
+    <value>You cannot specify an information management policy for a core content type. Create a new content type that is derived from the core content type, and then apply the policy to the new content type.</value>
+  </data>
+  <data name="policy_blockglobalpolicies" xml:space="preserve">
+    <value>You cannot use a site collection policy on the Document or Item content type.  Instead, define a custom policy.</value>
+  </data>
+  <data name="policy_select" xml:space="preserve">
+    <value>Specify the Policy</value>
+  </data>
+  <data name="policy_select_description" xml:space="preserve">
+    <value>Specify the information management policy for this content type. If you would like to use one of this site's predefined policies then select "Use a site policy". Alternatively, you can directly create or edit the policy settings.</value>
+  </data>
+  <data name="policy_policy" xml:space="preserve">
+    <value>Specify the policy:</value>
+  </data>
+  <data name="policy_none" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="policy_template" xml:space="preserve">
+    <value>Use a site collection policy:</value>
+  </data>
+  <data name="policy_custom" xml:space="preserve">
+    <value>Define a policy...</value>
+  </data>
+  <data name="policy_save_button" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="policy_nocontenttype" xml:space="preserve">
+    <value>Cannot set an information management policy on a list without at least one valid content type.</value>
+  </data>
+  <data name="policycts_page_title" xml:space="preserve">
+    <value>Information Management Policy Settings</value>
+  </data>
+  <data name="policycts_heading_contenttype" xml:space="preserve">
+    <value>Content Type</value>
+  </data>
+  <data name="policycts_heading_policy" xml:space="preserve">
+    <value>Policy</value>
+  </data>
+  <data name="policycts_heading_description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="policycts_policy_none" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="policycts_policy_custom" xml:space="preserve">
+    <value>Custom policy</value>
+  </data>
+  <data name="policycts_description_dl" xml:space="preserve">
+    <value>Use this page to manage the information policies on each content type in this library</value>
+  </data>
+  <data name="policycts_description_list" xml:space="preserve">
+    <value>Use this page to manage the information policies on each content type in this list</value>
+  </data>
+  <data name="policylistcts_description_dl" xml:space="preserve">
+    <value>Use this page to configure hierarchial, folder based retention schedules and to manage information policies on each content type in this library.</value>
+  </data>
+  <data name="policylistcts_description_list" xml:space="preserve">
+    <value>Use this page to configure hierarchial, folder based retention schedules and to manage information policies on each content type in this list.</value>
+  </data>
+  <data name="policycts_policydescription_dl" xml:space="preserve">
+    <value>By default, a library will enforce the retention schedule set on its content types. Alternatively you can stop enforcing content type schedules and instead define schedules on the library and its folders.</value>
+  </data>
+  <data name="policycts_policydescription_list" xml:space="preserve">
+    <value>By default, a list will enforce the retention schedule set on its content types. Alternatively you can stop enforcing content type schedules and instead define schedules on the list and its folders.</value>
+  </data>
+  <data name="policycts_ctpolicydescription_dl" xml:space="preserve">
+    <value>This table shows all the content types for this library, along with the policies and expiration schedules for each type. To modify the policy for a content type, click its name.</value>
+  </data>
+  <data name="policycts_ctpolicydescription_list" xml:space="preserve">
+    <value>This table shows all the content types for this list, along with the policies and expiration schedules for each type. To modify the policy for a content type, click its name.</value>
+  </data>
+  <data name="policycts_ctpolicy_tablesummary" xml:space="preserve">
+    <value>This table shows all the content types for this list, along with the policy descriptions and expiration schedules for each type.</value>
+  </data>
+  <data name="multipage_description" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="policyedit_title" xml:space="preserve">
+    <value>Edit Policy</value>
+  </data>
+  <data name="policycreate_title" xml:space="preserve">
+    <value>Create Policy</value>
+  </data>
+  <data name="policyedit_title2" xml:space="preserve">
+    <value>{0}</value>
+    
+  </data>
+  <data name="policyedit_enablefeature" xml:space="preserve">
+    <value>Enable {0}</value>
+    
+  </data>
+  <data name="policyedit_name_and_description" xml:space="preserve">
+    <value>Name and Administrative Description</value>
+  </data>
+  <data name="policyedit_name_and_description_long" xml:space="preserve">
+    <value>The name and administrative description are shown to list managers when configuring policies on a list or content type.</value>
+  </data>
+  <data name="policyedit_policy_name" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="policyedit_policy_description" xml:space="preserve">
+    <value>Administrative Description:</value>
+  </data>
+  <data name="policyedit_statement" xml:space="preserve">
+    <value>Policy Statement</value>
+  </data>
+  <data name="policyedit_statement_long" xml:space="preserve">
+    <value>The policy statement is displayed to end users when they open items subject to this policy. The policy statement can explain which policies apply to the content or indicate any special handling or information that users need to be aware of.</value>
+  </data>
+  <data name="policyedit_policy_statement" xml:space="preserve">
+    <value>Policy Statement:</value>
+  </data>
+  <data name="policyedit_name_empty_error" xml:space="preserve">
+    <value>You must specify a name for the policy.</value>
+  </data>
+  <data name="policyedit_save_and_export_button" xml:space="preserve">
+    <value>Export...</value>
+  </data>
+  <data name="policyedit_save_button" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="policyedit_delete_button" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="policyedit_cancel_button" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="policyedit_apply_button" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="policylist_page_title" xml:space="preserve">
+    <value>Policies</value>
+  </data>
+  <data name="policylist_page_description" xml:space="preserve">
+    <value>Use this page to create and modify information management policies on this site collection.</value>
+  </data>
+  <data name="policylist_heading_policy_name" xml:space="preserve">
+    <value>Policy (click to edit)</value>
+  </data>
+  <data name="policylist_heading_policy_description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="policylist_button_createnew" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="policylist_button_createnew_tooltip" xml:space="preserve">
+    <value>Create a new Site Collection Policy</value>
+  </data>
+  <data name="policylist_button_import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="policylist_button_import_tooltip" xml:space="preserve">
+    <value>Import a Site Collection Policy</value>
+  </data>
+  <data name="exportpolicy_title" xml:space="preserve">
+    <value>Export a Site Collection Policy</value>
+  </data>
+  <data name="exportpolicy_description" xml:space="preserve">
+    <value>The Site Collection Policy is being exported.</value>
+  </data>
+  <data name="importpolicy_title" xml:space="preserve">
+    <value>Import a Site Collection Policy</value>
+  </data>
+  <data name="importpolicy_description" xml:space="preserve">
+    <value>Use this page to import a Site Collection Policy.</value>
+  </data>
+  <data name="importpolicy_import_button" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="importpolicy_cannotopen" xml:space="preserve">
+    <value>Cannot open the Site Collection Policy file.</value>
+  </data>
+  <data name="importpolicy_invalidmanifest" xml:space="preserve">
+    <value>The file provided is not a valid policy manifest.</value>
+  </data>
+  <data name="importpolicy_policyexists" xml:space="preserve">
+    <value>There is already a Site Collection Policy with the same id.</value>
+  </data>
+  <data name="expiration_invalid_stage" xml:space="preserve">
+    <value>Invalid retention stage defined.</value>
+  </data>
+  <data name="expiration_stage_title" xml:space="preserve">
+    <value>Stage properties</value>
+  </data>
+  <data name="expiration_stage_desc" xml:space="preserve">
+    <value>Specify the event that activates this stage and an action that should occur once the stage is activated.</value>
+  </data>
+  <data name="expiration_stage_Event" xml:space="preserve">
+    <value>Event</value>
+    
+  </data>
+  <data name="expiration_stagedesc_Event" xml:space="preserve">
+    <value>Specify what causes the stage to activate:</value>
+    
+  </data>
+  <data name="expiration_stage_Action" xml:space="preserve">
+    <value>Action</value>
+    
+  </data>
+  <data name="expiration_stage_Recur" xml:space="preserve">
+    <value>Recurrence</value>
+    
+  </data>
+  <data name="expiration_stagedesc_Recur" xml:space="preserve">
+    <value>This stage will execute once according to the event defined above.  Use recurrence to force the stage to repeat its action.  </value>
+    
+  </data>
+  <data name="expiration_period" xml:space="preserve">
+    <value>Specify a predefined formula for this stage to trigger</value>
+  </data>
+  <data name="expiration_formula_builtin" xml:space="preserve">
+    <value>This stage is based off a date property on the item</value>
+  </data>
+  <data name="expiration_formula_builtin_hdr" xml:space="preserve">
+    <value>Time Period:</value>
+  </data>
+  <data name="expiration_formula_builtin_tip" xml:space="preserve">
+    <value>The retention period is: A time period based on the item's properties.</value>
+  </data>
+  <data name="expiration_dd_itemproperty_tip" xml:space="preserve">
+    <value>Item property</value>
+  </data>
+  <data name="expiration_tb_amountoftime_tip" xml:space="preserve">
+    <value>Amount of time</value>
+  </data>
+  <data name="expiration_dd_unitoftime_tip" xml:space="preserve">
+    <value>Unit of time</value>
+  </data>
+  <data name="expiration_formula_workflow" xml:space="preserve">
+    <value>This stage is set by an external event (for example, by a workflow)</value>
+  </data>
+  <data name="expiration_formula_workflow_tip" xml:space="preserve">
+    <value>The retention period is: Set programmatically (for example, by a workflow).</value>
+  </data>
+  <data name="expiration_formula_custom" xml:space="preserve">
+    <value>Set by a custom retention formula installed on this server:</value>
+  </data>
+  <data name="expiration_formula_custom_tip" xml:space="preserve">
+    <value>The retention period is: Set by a custom retention formula installed on this server.</value>
+  </data>
+  <data name="expiration_dd_customperiod_tip" xml:space="preserve">
+    <value>Custom Retention Period</value>
+  </data>
+  <data name="expiration_action" xml:space="preserve">
+    <value>When the item expires:</value>
+  </data>
+  <data name="expiration_days_validation" xml:space="preserve">
+    <value>Number of days must be between 0 and 182500.</value>
+  </data>
+  <data name="expiration_months_validation" xml:space="preserve">
+    <value>Number of months must be between 0 and 6000.</value>
+  </data>
+  <data name="expiration_years_validation" xml:space="preserve">
+    <value>Number of years must be between 0 and 500.</value>
+  </data>
+  <data name="expiration_numeric_validation" xml:space="preserve">
+    <value>Only positive integer values are supported.</value>
+  </data>
+  <data name="expiration_selection_validation" xml:space="preserve">
+    <value>Please select an expiration period.</value>
+  </data>
+  <data name="expiration_actionselection_validation" xml:space="preserve">
+    <value>Please specify what to do when an item expires.</value>
+  </data>
+  <data name="expiration_formula_days" xml:space="preserve">
+    <value>days</value>
+  </data>
+  <data name="expiration_formula_months" xml:space="preserve">
+    <value>months</value>
+  </data>
+  <data name="expiration_formula_years" xml:space="preserve">
+    <value>years</value>
+  </data>
+  <data name="expiration_actions_movetorecycle" xml:space="preserve">
+    <value>Move to Recycle Bin</value>
+  </data>
+  <data name="expiration_actions_delete" xml:space="preserve">
+    <value>Permanently Delete</value>
+  </data>
+  <data name="expiration_actiondesc_recycle" xml:space="preserve">
+    <value>This action will move the item to the site collection recycle bin.</value>
+  </data>
+  <data name="expiration_actionerr_recycle" xml:space="preserve">
+    <value>The Recycle Bin is disabled in this site. Select another action.</value>
+  </data>
+  <data name="expiration_actiondesc_delete" xml:space="preserve">
+    <value>This action will delete the item without sending it to the Recycle Bin.</value>
+  </data>
+  <data name="expiration_actionserr1_transfer" xml:space="preserve">
+    <value>Pages cannot be transferred to another site. Select another action.</value>
+  </data>
+  <data name="expiration_actionserr2_transfer" xml:space="preserve">
+    <value>There are no registered destination locations for this site. Select another action.</value>
+  </data>
+  <data name="expiration_actions_transfer" xml:space="preserve">
+    <value>Transfer to another location</value>
+  </data>
+  <data name="expiration_sendaction_explanation" xml:space="preserve">
+    <value>Transferred due to organizational policy</value>
+  </data>
+  <data name="expiration_actions_skip" xml:space="preserve">
+    <value>Skip to next stage</value>
+  </data>
+  <data name="expiration_actiondesc_skip" xml:space="preserve">
+    <value>This action does not modify the item, but it will cause the item to proceed to the next retention stage. </value>
+  </data>
+  <data name="expiration_actions_record" xml:space="preserve">
+    <value>Declare record</value>
+  </data>
+  <data name="expiration_actiondesc_record" xml:space="preserve">
+    <value>This action will declare the item as a record.  If there is a different retention policy defined for records, the item will begin to execute the record policy. </value>
+  </data>
+  <data name="expiration_actionerr_record" xml:space="preserve">
+    <value>The In Place Records feature is disabled in this site. Select another action.</value>
+  </data>
+  <data name="expiration_actions_deletepreviousdrafts" xml:space="preserve">
+    <value>Delete previous drafts</value>
+  </data>
+  <data name="expiration_actiondesc_deletepreviousdrafts" xml:space="preserve">
+    <value>This action will delete all previous drafts of this document.</value>
+  </data>
+  <data name="expiration_actions_deletepreviousversions" xml:space="preserve">
+    <value>Delete all previous versions</value>
+  </data>
+  <data name="expiration_actiondesc_deletepreviousversions" xml:space="preserve">
+    <value>This action will delete all previous versions of this document. </value>
+  </data>
+  <data name="expiration_actionserr1_wf" xml:space="preserve">
+    <value>Workflows cannot be triggered in site collection policies. Create a retention schedule on a list or content type to schedule a workflow.</value>
+  </data>
+  <data name="expiration_actionserr2_wf" xml:space="preserve">
+    <value>There are no workflows associated with this list. Select another action.</value>
+  </data>
+  <data name="expiration_actionserr3_wf" xml:space="preserve">
+    <value>There are no workflows associated with this content type. Select another action.</value>
+  </data>
+  <data name="expiration_actions_wf" xml:space="preserve">
+    <value>Start a workflow</value>
+  </data>
+  <data name="expiration_actionsdisplay_transfer" xml:space="preserve">
+    <value>Send to the {0} location</value>
+    
+  </data>
+  <data name="expiration_actionsdisplay_wf" xml:space="preserve">
+    <value>Start the {0} workflow</value>
+    
+  </data>
+  <data name="expiration_formulafields_created" xml:space="preserve">
+    <value>Created Date</value>
+  </data>
+  <data name="expiration_formulafields_modified" xml:space="preserve">
+    <value>Last Modified</value>
+  </data>
+  <data name="expiration_action_actions" xml:space="preserve">
+    <value>When this stage is triggered, perform the following action:</value>
+  </data>
+  <data name="expiration_action_actions_tip" xml:space="preserve">
+    <value>When this stage is triggered, perform the following action</value>
+  </data>
+  <data name="expiration_dd_expirationaction_tip" xml:space="preserve">
+    <value>Retention Action</value>
+  </data>
+  <data name="expiration_action_workflows" xml:space="preserve">
+    <value>Start this workflow:</value>
+  </data>
+  <data name="expiration_action_workflows_tip" xml:space="preserve">
+    <value>When the item expires: Start this workflow</value>
+  </data>
+  <data name="expiration_dd_expirationworkflow_tip" xml:space="preserve">
+    <value>Retention Workflow</value>
+  </data>
+  <data name="expiration_stage_addstagedesc" xml:space="preserve">
+    <value>Items will not expire until a stage is added.</value>
+  </data>
+  <data name="expiration_stage_rcd_addstagedesc" xml:space="preserve">
+    <value>Records will not expire until a stage is added.</value>
+  </data>
+  <data name="expiration_stage_addstagelink" xml:space="preserve">
+    <value>Add a retention stage...</value>
+  </data>
+  <data name="expiration_stage_rcd_addstagelink" xml:space="preserve">
+    <value>Add a retention stage for records...</value>
+  </data>
+  <data name="success_title" xml:space="preserve">
+    <value>Operation Completed</value>
+  </data>
+  <data name="OperationSuccess" xml:space="preserve">
+    <value>Operation Completed Successfully</value>
+  </data>
+  <data name="OfficialFile_ItemIncomplete">
+    <value>More Information is needed before the item can be moved to the final destination.</value>
+  </data>
+  <data name="OfficialFile_ItemDeleted" xml:space="preserve">
+    <value>The item has been deleted.</value>
+  </data>
+  <data name="OfficialFile_ItemMissing" xml:space="preserve">
+    <value>The item can not be found.</value>
+  </data>
+  <data name="LabelSettings_DefaultFontName" xml:space="preserve">
+    <value>&lt;Client Default&gt;</value>
+  </data>
+  <data name="LabelSettings_LabelSize" xml:space="preserve">
+    <value>Label Size:</value>
+  </data>
+  <data name="LabelSettings_MetricSizeUnit" xml:space="preserve">
+    <value>Centimeters</value>
+  </data>
+  <data name="LabelSettings_EnglishSizeUnit" xml:space="preserve">
+    <value>Inches</value>
+  </data>
+  <data name="LabelSettings_ErrorInvalidDimension" xml:space="preserve">
+    <value>The value must be between {0} and {1}</value>
+    
+  </data>
+  <data name="LabelSettings_ErrorInvalidLabelTooManyRefs" xml:space="preserve">
+    <value>Label cannot have more than 10 column references</value>
+  </data>
+  <data name="LabelSettings_ErrorInvalidLabelMissingRef" xml:space="preserve">
+    <value>The label reference, {0}, could not be found.</value>
+    
+  </data>
+  <data name="LabelSettings_ErrorInvalidLabelInvalidRef" xml:space="preserve">
+    <value>The label reference, {0}, can not be used in a label.</value>
+    
+  </data>
+  <data name="LabelSettings_SampleAltText" xml:space="preserve">
+    <value>Label Sample Image</value>
+  </data>
+  <data name="Error_Indicator" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="exemptpolicy_title" xml:space="preserve">
+    <value>Policy Exemption</value>
+  </data>
+  <data name="exemptpolicy_set_title" xml:space="preserve">
+    <value>Set Policy Exemption</value>
+  </data>
+  <data name="exemptpolicy_set_description" xml:space="preserve">
+    <value>You are about to set a policy exemption for the selected item. This exemption will suspend any Retention Policy that the item may be subject to.</value>
+  </data>
+  <data name="exemptpolicy_set_button" xml:space="preserve">
+    <value>Exempt</value>
+  </data>
+  <data name="exemptpolicy_remove_title" xml:space="preserve">
+    <value>Remove Policy Exemption</value>
+  </data>
+  <data name="exemptpolicy_remove_description" xml:space="preserve">
+    <value>You are about to remove a policy exemption for the selected item. This exemption will enable back any Retention Policy that the item may be subject to.</value>
+  </data>
+  <data name="exemptpolicy_remove_button" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="hold_title" xml:space="preserve">
+    <value>Item Hold Status</value>
+  </data>
+  <data name="hold_comments" xml:space="preserve">
+    <value>Comments:</value>
+  </data>
+  <data name="hold_save_button" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="hold_addtohold" xml:space="preserve">
+    <value>Add to a hold:</value>
+  </data>
+  <data name="hold_removefromhold" xml:space="preserve">
+    <value>Remove from a hold:</value>
+  </data>
+  <data name="hold_add_or_remove" xml:space="preserve">
+    <value>Add or remove from hold</value>
+  </data>
+  <data name="hold_description" xml:space="preserve">
+    <value>Select whether you would like to add or remove this item from a hold.</value>
+  </data>
+  <data name="hold_audit" xml:space="preserve">
+    <value>Adding or removing holds are audited actions.</value>
+  </data>
+  <data name="hold_noselection" xml:space="preserve">
+    <value>No action was taken. You need to select an operation.</value>
+  </data>
+  <data name="hold_noholdselected" xml:space="preserve">
+    <value>No action was taken. You need to select a hold.</value>
+  </data>
+  <data name="hold_selecthold_in_dd" xml:space="preserve">
+    <value>Select a hold...</value>
+  </data>
+  <data name="holdreport_title" xml:space="preserve">
+    <value>Hold Report</value>
+  </data>
+  <data name="releasehold_title" xml:space="preserve">
+    <value>Release Hold</value>
+  </data>
+  <data name="releasehold_description" xml:space="preserve">
+    <value>You are about to release a hold. This operation is asyncronous and is not undoable.</value>
+  </data>
+  <data name="releasehold_comments" xml:space="preserve">
+    <value>Comments:</value>
+  </data>
+  <data name="releasehold_button" xml:space="preserve">
+    <value>Release Hold</value>
+  </data>
+  <data name="reporting_title" xml:space="preserve">
+    <value>Run Reports</value>
+  </data>
+  <data name="reporting_title2" xml:space="preserve">
+    <value>View {0} Reports</value>
+    
+  </data>
+  <data name="reporting_title2_workflow" xml:space="preserve">
+    <value>View {0} Reports</value>
+    
+  </data>
+  <data name="reporting_category_workflow" xml:space="preserve">
+    <value>Workflow</value>
+  </data>
+  <data name="reporting_description_default" xml:space="preserve">
+    <value>Use these reports to view information about the current state of {0}.</value>
+    
+  </data>
+  <data name="reporting_category_audit" xml:space="preserve">
+    <value>Auditing</value>
+  </data>
+  <data name="reporting_description_audit" xml:space="preserve">
+    <value>Use these reports to view Audit Log data collected for this Site Collection.</value>
+  </data>
+  <data name="reporting_description_workflow" xml:space="preserve">
+    <value>Use these reports to monitor how your business processes are running based on the history information of those workflows.</value>
+  </data>
+  <data name="reporting_goback" xml:space="preserve">
+    <value>Go Back to {0}</value>
+    
+  </data>
+  <data name="reporting_gobackalt" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="reporting_WorkflowContentTypeAssociationSubcategory" xml:space="preserve">
+    <value>{0}{1}{2}</value>
+    
+  </data>
+  <data name="reporting_WorkflowContentTypeAssociationSeparator" xml:space="preserve">
+    <value>: </value>
+    
+  </data>
+  <data name="customizereport_title" xml:space="preserve">
+    <value>Customize Report</value>
+  </data>
+  <data name="customizereport_title2" xml:space="preserve">
+    <value>{0}</value>
+    
+  </data>
+  <data name="customizereport_title_customize" xml:space="preserve">
+    <value>Customize</value>
+    
+  </data>
+  <data name="customizereport_submitMessage" xml:space="preserve">
+    <value>Your report is being generated. To return to the home page, click OK.</value>
+  </data>
+  <data name="auditcustquery_eventsTitle" xml:space="preserve">
+    <value>Events</value>
+  </data>
+  <data name="auditcustquery_eventsDescription" xml:space="preserve">
+    <value>Specify whether this report should be restricted to particular events. If no event filters are specified, the report will include all events matching the other restrictions.</value>
+  </data>
+  <data name="auditcustquery_locationTitle" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="auditcustquery_locationDescription" xml:space="preserve">
+    <value>Specify whether this report should be restricted to a particular list in this Site Collection.</value>
+  </data>
+  <data name="auditcustquery_locationRestrict" xml:space="preserve">
+    <value>Restrict this report to:</value>
+  </data>
+  <data name="auditcustquery_datesTitle" xml:space="preserve">
+    <value>Date Range</value>
+  </data>
+  <data name="auditcustquery_datesDescription" xml:space="preserve">
+    <value>Specify a start date and/or end date that this report should be restricted to. If you specify only a start date, the report will include all events that occur after that date. If you specify only an end date, the report will include all events that occur before that date.</value>
+  </data>
+  <data name="auditcustquery_userTitle" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="auditcustquery_userDescription" xml:space="preserve">
+    <value>Specify which user this report should be restricted to.</value>
+  </data>
+  <data name="auditcustquery_locationWeb" xml:space="preserve">
+    <value>Web:</value>
+  </data>
+  <data name="auditcustquery_locationList" xml:space="preserve">
+    <value>List:</value>
+  </data>
+  <data name="auditcustquery_datesStart" xml:space="preserve">
+    <value>Start Date:</value>
+  </data>
+  <data name="auditcustquery_datesEnd" xml:space="preserve">
+    <value>End Date:</value>
+  </data>
+  <data name="auditcustquery_user" xml:space="preserve">
+    <value>Users:</value>
+  </data>
+  <data name="auditcustquery_AllWebs" xml:space="preserve">
+    <value>All Webs</value>
+  </data>
+  <data name="auditcustquery_NoListChoice" xml:space="preserve">
+    <value>All Lists</value>
+  </data>
+  <data name="auditshared_EventView" xml:space="preserve">
+    <value>Opening or downloading documents, viewing items in lists, or viewing item properties</value>
+  </data>
+  <data name="auditshared_EventUpdate" xml:space="preserve">
+    <value>Editing items</value>
+  </data>
+  <data name="auditshared_EventPerms" xml:space="preserve">
+    <value>Editing users and permissions</value>
+  </data>
+  <data name="auditshared_EventMoveCopy" xml:space="preserve">
+    <value>Moving or copying items to another location in the site</value>
+  </data>
+  <data name="auditshared_EventDeleteRestore" xml:space="preserve">
+    <value>Deleting or restoring items</value>
+  </data>
+  <data name="auditshared_EventCheckInOut" xml:space="preserve">
+    <value>Checking out or checking in items</value>
+  </data>
+  <data name="auditshared_EventColumnContentType" xml:space="preserve">
+    <value>Editing content types and columns</value>
+  </data>
+  <data name="auditshared_EventCustom" xml:space="preserve">
+    <value>Custom events</value>
+  </data>
+  <data name="auditshared_EventAuditChange" xml:space="preserve">
+    <value>Editing auditing settings and deleting audit log events</value>
+  </data>
+  <data name="auditshared_EventWorkflow" xml:space="preserve">
+    <value>Workflow events</value>
+  </data>
+  <data name="auditshared_EventSearch" xml:space="preserve">
+    <value>Searching site content</value>
+  </data>
+  <data name="auditsettings_docs_description" xml:space="preserve">
+    <value>Specify the events that should be audited for documents and items within this site collection.</value>
+  </data>
+  <data name="auditsettings_docs_title" xml:space="preserve">
+    <value>Documents and Items</value>
+  </data>
+  <data name="auditsettings_lists_description" xml:space="preserve">
+    <value>Specify the events that should be audited for lists, libraries, and sites within this site collection.</value>
+  </data>
+  <data name="auditsettings_lists_title" xml:space="preserve">
+    <value>Lists, Libraries, and Sites</value>
+  </data>
+  <data name="auditsettings_title" xml:space="preserve">
+    <value>Configure Audit Settings</value>
+  </data>
+  <data name="auditsettings_ServerDescription" xml:space="preserve">
+    <value>Specify the events to audit:</value>
+  </data>
+  <data name="auditsettings_trimming_title" xml:space="preserve">
+    <value>Audit Log Trimming</value>
+  </data>
+  <data name="auditsettings_trimming_description" xml:space="preserve">
+    <value>Specify whether the audit log for this site should be automatically trimmed and optionally store all of the current audit data in a document library. The schedule for audit log trimming is configured by your server administrator.</value>
+  </data>
+  <data name="auditsettings_trimming_trimlog" xml:space="preserve">
+    <value>Automatically trim the audit log for this site?</value>
+  </data>
+  <data name="auditsettings_trimretention" xml:space="preserve">
+    <value>Optionally, specify the number of days of audit log data to retain:</value>
+  </data>
+  <data name="auditsettings_reportstgloc" xml:space="preserve">
+    <value>Optionally, specify a location to store audit reports before trimming the audit log:</value>
+  </data>
+  <data name="reporting_stglocbrowse" xml:space="preserve">
+    <value>Browse...</value>
+  </data>
+  <data name="reporting_stgloc" xml:space="preserve">
+    <value>File Location</value>
+  </data>
+  <data name="reporting_stglocdesc" xml:space="preserve">
+    <value>Specify where to save the report once it has been generated.</value>
+  </data>
+  <data name="reporting_reportstgloc" xml:space="preserve">
+    <value>Save location:</value>
+  </data>
+  <data name="reporting_InvalidRptStgLoc" xml:space="preserve">
+    <value>Reports cannot be stored at '{0}'. Reports can only be stored in a document library in the current site.</value>
+    
+  </data>
+  <data name="searchandaddtohold_title" xml:space="preserve">
+    <value>Search for items to hold</value>
+  </data>
+  <data name="searchandaddtohold_Hold" xml:space="preserve">
+    <value>Hold</value>
+  </data>
+  <data name="searchandaddtohold_Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="searchandaddtohold_EnterSearchWords" xml:space="preserve">
+    <value>Please enter one or more search words.</value>
+  </data>
+  <data name="searchandaddtohold_AddToHoldDesc">
+    <value>Add search results to the following hold:</value>
+  </data>
+  <data name="searchandaddtohold_HoldDesc" xml:space="preserve">
+    <value>Item added to hold as a search result. Search query: {0}</value>
+    
+  </data>
+  <data name="searchandaddtohold_DisplayName" xml:space="preserve">
+    <value>Search and add to hold: {0}</value>
+    
+  </data>
+  <data name="searchandaddtohold_Success" xml:space="preserve">
+    <value>Your request to hold all of these search results has been scheduled. You will receive a confirmation e-mail when these items are added to hold: {0}</value>
+    
+  </data>
+  <data name="searchandaddtohold_claw_Success" xml:space="preserve">
+    <value>Your request to hold all of these search results has been scheduled.  Since this search spans multiple site collections, you will receive a confirmation email from each site collection specified in the search when these items are added to hold: {0}</value>
+    
+  </data>
+  <data name="ValidationSummary_GeneralErrors" xml:space="preserve">
+    <value>There were errors on the page:</value>
+  </data>
+  <data name="holdreport_noreportyet" xml:space="preserve">
+    <value>There is no report currently available for this hold. Hold reports are generally updated once every 24 hours, depending on the configuration of this system. Contact your system administrator for more information.</value>
+  </data>
+  <data name="holdaspx_selectaction" xml:space="preserve">
+    <value>Select whether you would like to add or remove this item from a hold.  When adding an item to a new hold, choose from the list of holds on this site and any parent site.</value>
+  </data>
+  <data name="holdaspx_viewallholds_link" xml:space="preserve">
+    <value>View all of the holds in this site...</value>
+  </data>
+  <data name="holdaspx_holdlist_link" xml:space="preserve">
+    <value>You cannot add or remove holds from items until you have at least one active hold defined. The {0} list is the place to create, manage, and release holds.</value>
+  </data>
+  <data name="editrule_rulename_title" xml:space="preserve">
+    <value>Rule Name</value>
+    
+  </data>
+  <data name="editrule_rulename_text" xml:space="preserve">
+    <value>Name:</value>
+    
+  </data>
+  <data name="editrule_rulepriority_title" xml:space="preserve">
+    <value>Rule Status And Priority</value>
+    
+  </data>
+  <data name="editrule_rulepriority_sectiontext" xml:space="preserve">
+    <value>Status:</value>
+    
+  </data>
+  <data name="editrule_rulepriority_activebutton" xml:space="preserve">
+    <value>Active</value>
+    
+  </data>
+  <data name="editrule_rulepriority_inactivebutton" xml:space="preserve">
+    <value>Inactive (will not run on incoming content)</value>
+    
+  </data>
+  <data name="editrule_rulepriority_selectpriority" xml:space="preserve">
+    <value>Priority:</value>
+    
+  </data>
+  <data name="editrule_rulecontenttype_title" xml:space="preserve">
+    <value>Submission's Content Type</value>
+    
+  </data>
+  <data name="editrule_rulecontenttype_sectiontext" xml:space="preserve">
+    <value>Content type:</value>
+    
+  </data>
+  <data name="editrule_rulecontenttype_selectedgroup" xml:space="preserve">
+    <value>Group:</value>
+    
+  </data>
+  <data name="editrule_rulecontenttype_selectedtype" xml:space="preserve">
+    <value>Type:</value>
+    
+  </data>
+  <data name="editrule_ruleconditions_title" xml:space="preserve">
+    <value>Conditions</value>
+    
+  </data>
+  <data name="editrule_ruleconditions_addcontenttype" xml:space="preserve">
+    <value>Add alternate name:</value>
+    
+  </data>
+  <data name="editrule_ruleconditions_wildcharalias">
+    <value>Note: Adding the type "*" will allow documents of unknown content types to be organized by this rule.</value>
+  </data>
+  <data name="editrule_ruleconditions_addcontenttypebutton" xml:space="preserve">
+    <value>Add</value>
+    
+  </data>
+  <data name="editrule_ruleconditions_listofcontenttypes" xml:space="preserve">
+    <value>List of alternate names:</value>
+    
+  </data>
+  <data name="editrule_ruleconditions_removecontenttypebutton" xml:space="preserve">
+    <value>Remove</value>
+    
+  </data>
+  <data name="editrule_ruleconditions_conditiontext" xml:space="preserve">
+    <value>Property-based conditions:</value>
+    
+  </data>
+  <data name="editrule_ruleconditions_addconditiontext" xml:space="preserve">
+    <value>(Add another condition)</value>
+    
+  </data>
+  <data name="editrule_ruleconditions_removeconditiontext" xml:space="preserve">
+    <value>Remove this condition</value>
+    
+  </data>
+  <data name="editrule_ruleconditions_property" xml:space="preserve">
+    <value>Property:</value>
+    
+  </data>
+  <data name="editrule_ruleconditions_operator" xml:space="preserve">
+    <value>Operator:</value>
+    
+  </data>
+  <data name="editrule_ruleconditions_value" xml:space="preserve">
+    <value>Value:</value>
+    
+  </data>
+  <data name="editrule_ruletargetlocation_title" xml:space="preserve">
+    <value>Target Location</value>
+    
+  </data>
+  <data name="editrule_ruletargetlocation_sectiontext" xml:space="preserve">
+    <value>Destination:</value>
+    
+  </data>
+  <data name="editrule_ruletargetlocation_browsebutton" xml:space="preserve">
+    <value>Browse...</value>
+    
+  </data>
+  <data name="editrule_ruletargetlocation_autocreatefolderscheckbox" xml:space="preserve">
+    <value>Automatically create a folder for each unique value of a property:</value>
+    
+  </data>
+  <data name="editrule_ruletargetlocation_autocreatefoldersselectproperty" xml:space="preserve">
+    <value>Select a property (must be a required, single value property):</value>
+    
+  </data>
+  <data name="editrule_ruletargetlocation_autocreatefoldersnameformat" xml:space="preserve">
+    <value>Specify the format for the folder name:</value>
+    
+  </data>
+  <data name="editrule_ruletargetlocation_autocreatefolderspostinfo" xml:space="preserve">
+    <value>When the folder is created:&lt;br&gt;  %1 will be replaced by the name of the property&lt;br&gt;  %2 will be replaced with the unique value for the property</value>
+    
+  </data>
+  <data name="editrule_ruletargetlocation_autocreatefoldererror" xml:space="preserve">
+    <value>Folder name format contains some invalid characters</value>
+    
+  </data>
+  <data name="editrule_ruletargetlocation_externalrouter" xml:space="preserve">
+    <value>Another content organizer in a different site:</value>
+    
+  </data>
+  <data name="editrule_ruletargetlocation_localrouter" xml:space="preserve">
+    <value>A library or folder in this site:</value>
+    
+  </data>
+  <data name="editrule_rulecustomrouter_title" xml:space="preserve">
+    <value>Custom Router</value>
+    
+  </data>
+  <data name="editrule_rulecustomrouter_sectiontext" xml:space="preserve">
+    <value>Custom router:</value>
+    
+  </data>
+  <data name="editrule_rulecontenttype_aliastitle" xml:space="preserve">
+    <value>Alternate names:</value>
+    
+  </data>
+  <data name="editrule_rulecontenttype_aliascheckbox" xml:space="preserve">
+    <value>This content type has alternate names in other sites:</value>
+    
+  </data>
+  <data name="editrule_ruletargetlocation_exampleloc" xml:space="preserve">
+    <value>Example: /sites/DocumentCenter/Documents/</value>
+    
+  </data>
+  <data name="editrule_rulename_description" xml:space="preserve">
+    <value>Describe the conditions and actions of this rule. The rule name is used in reports about the content of this site, such as a library's File Plan Report.</value>
+    
+  </data>
+  <data name="editrule_rulepriority_description" xml:space="preserve">
+    <value>Specify whether this rule should run on incoming documents and what the rule's priority is. If a submission matches multiple rules, the router will choose the rule with the higher priority.</value>
+    
+  </data>
+  <data name="editrule_rulecontenttype_description" xml:space="preserve">
+    <value>By selecting a content type, you are determining the properties that can be used in the conditions of this rule. In addition, submissions that match this rule will receive the content type selected here when they are placed in a target location.</value>
+    
+  </data>
+  <data name="editrule_ruleconditions_description" xml:space="preserve">
+    <value>In order to match this rule, a submission's properties must match all the specified property conditions (e.g. "If Date Created is before 1/1/2000").</value>
+    
+  </data>
+  <data name="editrule_ruletargetlocation_description" xml:space="preserve">
+    <value>Specify where to place content that matches this rule.&lt;br&gt;
+
+When sending to another site, the available sites are taken from the list of other sites with content organizers, as defined by the system administrator.&lt;br&gt;&lt;br&gt;Check the "Automatically create a folder for each unique value of a property" box to force the organizer to group similar documents together. For instance, if you have a property that lists all the teams in your organization, you can force the organizer to create a separate folder for each team.</value>
+    
+  </data>
+  <data name="editrule_rulecustomrouter_description" xml:space="preserve">
+    <value>A custom router allows the router to perform special processing when a document matches a rule.</value>
+    
+  </data>
+  <data name="editrule_pagedescription" xml:space="preserve">
+    <value>Use this page to create a new rule. A rule consists of a set of conditions that determine what documents match the rule, as well as a set of actions to take when an incoming document matches the conditions.</value>
+    
+  </data>
+  <data name="editrule_disabledpageroutewarning" xml:space="preserve">
+    <value>Pages cannot be sent to external sites.</value>
+    
+  </data>
+  <data name="expiration_dd_destination_text" xml:space="preserve">
+    <value>Destination location:</value>
+    
+  </data>
+  <data name="expiration_dd_destination_tip" xml:space="preserve">
+    <value>Pick a destination location</value>
+    
+  </data>
+  <data name="expiration_dd_explanation_text" xml:space="preserve">
+    <value>Reason for transfer:</value>
+    
+  </data>
+  <data name="expiration_dd_explanation_tip" xml:space="preserve">
+    <value>Explanation</value>
+    
+  </data>
+  <data name="expiration_cb_recur" xml:space="preserve">
+    <value>Repeat this stage's action until the next stage is activated</value>
+    
+  </data>
+  <data name="expiration_recur_text" xml:space="preserve">
+    <value>After the stage is first triggered, the stage's action will recur forever until the next stage is triggered.</value>
+    
+  </data>
+  <data name="expiration_recur_timeperiod" xml:space="preserve">
+    <value>Recurrence period:</value>
+  </data>
+  <data name="expiration_sendtoaction_copy" xml:space="preserve">
+    <value>Copy</value>
+    
+  </data>
+  <data name="expiration_sendtoaction_link" xml:space="preserve">
+    <value>Move and leave a link</value>
+    
+  </data>
+  <data name="expiration_sendtoaction_move" xml:space="preserve">
+    <value>Move</value>
+    
+  </data>
+  <data name="expiration_sendtoaction_copy_tip" xml:space="preserve">
+    <value>Copy item to location</value>
+    
+  </data>
+  <data name="expiration_sendtoaction_link_tip" xml:space="preserve">
+    <value>Move this item to location and leave a link</value>
+    
+  </data>
+  <data name="expiration_sendtoaction_move_tip" xml:space="preserve">
+    <value>Move this item to location</value>
+    
+  </data>
+  <data name="expiration_action_transfer_type" xml:space="preserve">
+    <value>Type of transfer:</value>
+  </data>
+  <data name="policyconfig_description_lb" xml:space="preserve">
+    <value>Specify a retention schedule for items in this library. By default, all folders in this library will inherit the library's schedule. However, folders can override the library and define a unique schedule.&lt;br/&gt;&lt;br/&gt;A File Plan Report rolls up the retention schedules for a library and all its folders into one document. &lt;a href="{0}"&gt;Generate a File Plan Report for this library...&lt;/a&gt;</value>
+    
+  </data>
+  <data name="policyconfig_description_list" xml:space="preserve">
+    <value>Specify a retention schedule for items in this list. By default, all folders in this list will inherit the list's schedule. However, folders can override the list and define a unique schedule.&lt;br/&gt;&lt;br/&gt;A File Plan Report rolls up the retention schedules for a list and all its folders into one document. &lt;a href="{0}"&gt;Generate a File Plan Report for this library...&lt;/a&gt;</value>
+    
+  </data>
+  <data name="policyconfig_description_folder" xml:space="preserve">
+    <value>Specify a retention schedule for items in this folder. By default, all subfolders in this folder will inherit the folder's schedule. However, subfolders can override the folder and define a unique schedule.&lt;br/&gt;&lt;br/&gt;A File Plan Report rolls up the retention schedules for a library and all its folders into one document. &lt;a href="{0}"&gt;Generate a File Plan Report for this library...&lt;/a&gt;</value>
+    
+  </data>
+  <data name="policyconfig_title_lb" xml:space="preserve">
+    <value>Library Based Retention Schedule</value>
+    
+  </data>
+  <data name="policyconfig_title_list" xml:space="preserve">
+    <value>List Based Retention Schedule</value>
+    
+  </data>
+  <data name="policyconfig_title_folder" xml:space="preserve">
+    <value>Folder Based Retention Schedule</value>
+    
+  </data>
+  <data name="policyedit_chkbox_label" xml:space="preserve">
+    <value>Define a schedule for this library</value>
+    
+  </data>
+  <data name="policyedit_title_lb" xml:space="preserve">
+    <value>Edit Policy: Library Based Retention Schedule</value>
+    
+  </data>
+  <data name="policyedit_title_list" xml:space="preserve">
+    <value>Edit Policy: List Based Retention Schedule</value>
+    
+  </data>
+  <data name="policyedit_title_folder" xml:space="preserve">
+    <value>Edit Policy: Folder Based Retention Schedule</value>
+    
+  </data>
+  <data name="policyedit_confirmsrc_lb" xml:space="preserve">
+    <value>When library and folder based retention schedules are used, all content type retention schedules are ignored. You may be overwriting policies defined by your site administrator.</value>
+    
+  </data>
+  <data name="policyedit_confirmsrc_list" xml:space="preserve">
+    <value>When list and folder based retention schedules are used, all content type retention schedules are ignored. You may be overwriting policies defined by your site administrator.</value>
+    
+  </data>
+  <data name="policyedit_confirmsrc_ct" xml:space="preserve">
+    <value>When content type based retention schedules are used, any existing library or folder based schedules are ignored.</value>
+    
+  </data>
+  <data name="policycts_ctpolicy_title" xml:space="preserve">
+    <value>Content Type Policies</value>
+  </data>
+  <data name="policycts_currentpolicy_title_dl" xml:space="preserve">
+    <value>Source of retention for this library:</value>
+  </data>
+  <data name="policycts_currentpolicy_title_list" xml:space="preserve">
+    <value>Source of retention for this list:</value>
+  </data>
+  <data name="policycts_currentpolicy_source_ct" xml:space="preserve">
+    <value>&lt;b&gt;Content Types&lt;/b&gt;</value>
+    
+  </data>
+  <data name="policycts_currentpolicy_source_lb" xml:space="preserve">
+    <value>&lt;b&gt;Library and Folders&lt;/b&gt;</value>
+    
+  </data>
+  <data name="policycts_currentpolicy_source_list" xml:space="preserve">
+    <value>List and Folders</value>
+  </data>
+  <data name="policycts_currentpolicy_changesource_title" xml:space="preserve">
+    <value>Change source</value>
+  </data>
+  <data name="policycts_currentpolicy_changesourcelb_title" xml:space="preserve">
+    <value>Change source or configure library schedule</value>
+  </data>
+  <data name="policycts_currentpolicy_changesource_list_title" xml:space="preserve">
+    <value>Change source or configure list schedule</value>
+  </data>
+  <data name="policycts_heading_schedule" xml:space="preserve">
+    <value>Retention Policy Defined</value>
+    
+  </data>
+  <data name="policycts_schedule_yes" xml:space="preserve">
+    <value>Yes</value>
+    
+  </data>
+  <data name="policycts_schedule_no" xml:space="preserve">
+    <value>No</value>
+    
+  </data>
+  <data name="policycts_locationbased_title_dl" xml:space="preserve">
+    <value>Library Based Retention Schedule</value>
+  </data>
+  <data name="policycts_locationbased_title_list" xml:space="preserve">
+    <value>List Based Retention Schedule</value>
+  </data>
+  <data name="policycts_locationbased_warning_lb" xml:space="preserve">
+    <value>&lt;b&gt;*Note:&lt;/b&gt; Since this library is using library and folder retention, all documents will use those schedules. Content type retention policies are ignored.</value>
+    
+  </data>
+  <data name="policycts_locationbased_warning_list" xml:space="preserve">
+    <value>&lt;b&gt;*Note:&lt;/b&gt; Since this list is using list and folder retention, all documents will use those schedules. Content type retention policies are ignored.</value>
+    
+  </data>
+  <data name="expiration_dd_description_text" xml:space="preserve">
+    <value>Enter a description for this retention schedule</value>
+  </data>
+  <data name="expiration_dd_description_tip" xml:space="preserve">
+    <value>Use this textbox to enter a description for this retention schedule</value>
+  </data>
+  <data name="expirationdetails_desc" xml:space="preserve">
+    <value>Use this dialog to determine what retention stage an item is in. You can also take action to keep this item in compliance with organizational policy.</value>
+  </data>
+  <data name="expirationdetails_title" xml:space="preserve">
+    <value>Compliance Details</value>
+  </data>
+  <data name="policycts_defineschedule" xml:space="preserve">
+    <value>Define retention stages:</value>
+  </data>
+  <data name="policycts_definerecdschedule" xml:space="preserve">
+    <value>Define different retention stages for records:</value>
+  </data>
+  <data name="policycts_inheritschedule" xml:space="preserve">
+    <value>Inherit retention schedule from parent library or folder</value>
+  </data>
+  <data name="policycts_items_schedule_title" xml:space="preserve">
+    <value>Specify how to manage retention:</value>
+  </data>
+  <data name="policycts_items_schedule_title1" xml:space="preserve">
+    <value>Specify how to manage retention on items that have not been declared records:</value>
+  </data>
+  <data name="policycts_items_section_title" xml:space="preserve">
+    <value>Non-Records</value>
+  </data>
+  <data name="policycts_records_schedule_title" xml:space="preserve">
+    <value>Specify how to manage retention on records:</value>
+  </data>
+  <data name="policycts_records_schedule_title1" xml:space="preserve">
+    <value>&lt;b&gt;Note:&lt;/b&gt; You can specify a different policy that applies once an item has been declared a record.</value>
+  </data>
+  <data name="policycts_records_section_title" xml:space="preserve">
+    <value>Records</value>
+  </data>
+  <data name="policycts_shareschedule" xml:space="preserve">
+    <value>Use the same retention policy as non-records</value>
+  </data>
+  <data name="policyedit_define_label" xml:space="preserve">
+    <value>Define a schedule for this folder</value>
+  </data>
+  <data name="policyedit_define_tooltip" xml:space="preserve">
+    <value>Select button to define a unique schedule</value>
+  </data>
+  <data name="policyedit_inherit_label" xml:space="preserve">
+    <value>Inherit schedule from parent</value>
+  </data>
+  <data name="policyedit_inherit_tooltip" xml:space="preserve">
+    <value>Select button to inherit schedule from parent</value>
+  </data>
+  <data name="policyedit_share_tooltip" xml:space="preserve">
+    <value>Select button to share schedule as non-records</value>
+  </data>
+  <data name="policyedit_void_label" xml:space="preserve">
+    <value>Do not expire items</value>
+  </data>
+  <data name="policyedit_void_tooltip" xml:space="preserve">
+    <value>Select radio button to prevent expiring items in this folder</value>
+  </data>
+  <data name="policy_expconfig_src_title" xml:space="preserve">
+    <value>Source of Retention</value>
+    
+  </data>
+  <data name="policy_expconfig_src_desc_lb" xml:space="preserve">
+    <value>Configure how items in this library receive a retention schedule. Select &lt;b&gt;Content Types&lt;/b&gt; if this site uses retention schedules on site level content types. This will ensure that this library complies with the site's information policy.&lt;br/&gt;&lt;br/&gt;Alternatively, select &lt;b&gt;Library and Folders&lt;/b&gt; if you want to define schedules on the library and its folders.  Those schedules will be enforced regardless of any schedules defined on the content types.</value>
+    
+  </data>
+  <data name="policy_expconfig_src_CT" xml:space="preserve">
+    <value>Content Types</value>
+  </data>
+  <data name="policy_expconfig_src_Location" xml:space="preserve">
+    <value>Library and Folders</value>
+  </data>
+  <data name="policy_expconfig_policydesc_title" xml:space="preserve">
+    <value>Description</value>
+    
+  </data>
+  <data name="policy_expconfig_policydesc_tooltip" xml:space="preserve">
+    <value>Briefly describe the retention policy</value>
+    
+  </data>
+  <data name="policy_expconfig_stageaddaction" xml:space="preserve">
+    <value>Add Stage Above...</value>
+    
+  </data>
+  <data name="policy_expconfig_stageeditaction" xml:space="preserve">
+    <value>Edit...</value>
+    
+  </data>
+  <data name="policy_expconfig_stagedelaction" xml:space="preserve">
+    <value>Delete</value>
+    
+  </data>
+  <data name="retentionstages_nodata" xml:space="preserve">
+    <value>This item is not subject to a retention policy</value>
+    
+  </data>
+  <data name="retentionstages_hdreventcolumn" xml:space="preserve">
+    <value>Event</value>
+    
+  </data>
+  <data name="retentionstages_hdractioncolumn" xml:space="preserve">
+    <value>Action</value>
+    
+  </data>
+  <data name="retentionstages_hdrrecurcolumn" xml:space="preserve">
+    <value>Recurrence</value>
+    
+  </data>
+  <data name="retentionstages_hdrschedule" xml:space="preserve">
+    <value>Scheduled occurence date</value>
+    
+  </data>
+  <data name="retentionstages_valuecompleted" xml:space="preserve">
+    <value>Completed</value>
+    
+  </data>
+  <data name="retentionstages_valueexempt" xml:space="preserve">
+    <value>Exempt</value>
+    
+  </data>
+  <data name="retentionstages_noevent" xml:space="preserve">
+    <value>Set Externally</value>
+    
+  </data>
+  <data name="retentionstages_norecurrence" xml:space="preserve">
+    <value>No</value>
+    
+  </data>
+  <data name="retentionstages_recurrenceprd" xml:space="preserve">
+    <value>Every {0} {1}</value>
+    
+  </data>
+  <data name="expirationdetails_name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="expirationdetails_ct" xml:space="preserve">
+    <value>Content Type</value>
+  </data>
+  <data name="expirationdetails_date" xml:space="preserve">
+    <value>Expiration Date</value>
+  </data>
+  <data name="expirationdetails_exempt" xml:space="preserve">
+    <value>Exemption Status</value>
+  </data>
+  <data name="expirationdetails_hold" xml:space="preserve">
+    <value>Hold Status</value>
+  </data>
+  <data name="expirationdetails_rcd" xml:space="preserve">
+    <value>Record Status</value>
+  </data>
+  <data name="expirationdetails_path" xml:space="preserve">
+    <value>Folder Path</value>
+  </data>
+  <data name="expirationdetails_schedule" xml:space="preserve">
+    <value>Expiration Schedule</value>
+  </data>
+  <data name="expirationdetails_source" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="itemexpiration_retention_stages" xml:space="preserve">
+    <value>Retention Stages</value>
+  </data>
+  <data name="itemexpiration_ctsource" xml:space="preserve">
+    <value>Retention Stages (acquired from content type)</value>
+  </data>
+  <data name="itemexpiration_foldersource" xml:space="preserve">
+    <value>Retention Stages (acquired from {0} folder)</value>
+  </data>
+  <data name="itemexpiration_ItemExemptFalse" xml:space="preserve">
+    <value>Not Exempt</value>
+  </data>
+  <data name="itemexpiration_ItemExemptTrue" xml:space="preserve">
+    <value>Exempt from policy</value>
+  </data>
+  <data name="itemexpiration_ItemHoldFalse" xml:space="preserve">
+    <value>Not on hold</value>
+  </data>
+  <data name="itemexpiration_ItemHoldTrue" xml:space="preserve">
+    <value>On hold</value>
+  </data>
+  <data name="itemexpiration_hold_unavailable" xml:space="preserve">
+    <value>You cannot add/remove item from hold.</value>
+    
+  </data>
+  <data name="itemexpiration_ItemRecordStatusWithDate" xml:space="preserve">
+    <value>Declared record on {0}</value>
+    
+  </data>
+  <data name="itemexpiration_ItemRecordTrue" xml:space="preserve">
+    <value>Record</value>
+  </data>
+  <data name="itemexpiration_ItemRecordFalse" xml:space="preserve">
+    <value>Not a record</value>
+  </data>
+  <data name="itemexpiration_listsource" xml:space="preserve">
+    <value>Retention Stages (acquired from document library)</value>
+  </data>
+  <data name="itemexpiration_exemptbuttontext" xml:space="preserve">
+    <value>Exempt from policy</value>
+    
+  </data>
+  <data name="itemexpiration_holdlink" xml:space="preserve">
+    <value>Add/Remove from hold</value>
+    
+  </data>
+  <data name="itemexpiration_removeexemptionbuttontext" xml:space="preserve">
+    <value>Remove exemption</value>
+    
+  </data>
+  <data name="itemexpiration_declrecord" xml:space="preserve">
+    <value>Declare as a record</value>
+    
+  </data>
+  <data name="itemexpiration_undeclrecord" xml:space="preserve">
+    <value>Undeclare record</value>
+    
+  </data>
+  <data name="itemexpiration_status_processing" xml:space="preserve">
+    <value>Processing request...</value>
+    
+  </data>
+  <data name="itemexpiration_exempt_confirmation" xml:space="preserve">
+    <value>Exempting an item from policy will suspend any retention policy that the item might be subject to.</value>
+    
+  </data>
+  <data name="itemexpiration_unexempt_confirmation" xml:space="preserve">
+    <value>You are about to remove a policy exemption for this item. This will enable any retention policy the item may be subject to.</value>
+    
+  </data>
+  <data name="itemexpiration_exempt_unavailable" xml:space="preserve">
+    <value>You cannot exempt/unexempt item from policy.</value>
+    
+  </data>
+  <data name="itemexpiration_rcd_unavailable" xml:space="preserve">
+    <value>You cannot declare/undeclare item as a record.</value>
+    
+  </data>
+  <data name="itemexpiration_recd_confirmation" xml:space="preserve">
+    <value>This will lock down the item for editing. Continue?</value>
+    
+  </data>
+  <data name="itemexpiration_recd_confirmation_delete_only" xml:space="preserve">
+    <value>This will lock down the item for deleting. Continue?</value>
+    
+  </data>
+  <data name="itemexpiration_recd_confirmation_no_restriction" xml:space="preserve">
+    <value>This will declare the item as a record. Continue?</value>
+    
+  </data>
+  <data name="itemexpiration_recd_confirmation_undeclare_not_available" xml:space="preserve">
+    <value>The item cannot be undeclared as a record because record undeclaration is not available at this location.</value>
+    
+  </data>
+  <data name="itemexpiration_notrecd_confirmation" xml:space="preserve">
+    <value>Item will no longer be a record. Continue?</value>
+    
+  </data>
+  <data name="itemexpiration_ButtonTextClose" xml:space="preserve">
+    <value>Close</value>
+    
+  </data>
+  <data name="itemexpiration_auditlog" xml:space="preserve">
+    <value>Audit Log</value>
+  </data>
+  <data name="itemexpiration_generateauditlog" xml:space="preserve">
+    <value>Generate audit log report</value>
+  </data>
+  <data name="policycts_policy_defersschedule" xml:space="preserve">
+    <value>Defers to location</value>
+    
+  </data>
+  <data name="expirationconfigerror_listpolicydisallowed" xml:space="preserve">
+    <value>This library is configured to enforce content type retention schedules.&lt;br&gt;&lt;br&gt;To define a schedule on a folder, first enable Library and Folder schedules on the library's settings page: {0}</value>
+    
+  </data>
+  <data name="expirationconfigerror_listpolicylink" xml:space="preserve">
+    <value>Information Management Policy Settings Page</value>
+    
+  </data>
+  <data name="expirationconfigerrorFolderNotFound" xml:space="preserve">
+    <value>Invalid folder id {0}</value>
+    
+  </data>
+  <data name="expirationconfigerrorListNotFound" xml:space="preserve">
+    <value>List id was not provided or was invalid</value>
+    
+  </data>
+  <data name="expirationconfigerrorDocsetBlocked" xml:space="preserve">
+    <value>Folder-based retention settings can not be configured for Document Sets. To configure settings for a Document Set, go to the settings page for the Document Set content type.</value>
+    
+  </data>
+  <data name="documentroutersettings_pagetitle" xml:space="preserve">
+    <value>Content Organizer: Settings</value>
+    
+  </data>
+  <data name="documentroutersettings_pagetitleintitlearea" xml:space="preserve">
+    <value>Content Organizer: Settings</value>
+    
+  </data>
+  <data name="documentroutersettings_pagedescription" xml:space="preserve">
+    <value>Use this page to configure this site's content organizer. To create new rules for how content is organized when submitted to this site, visit the Rules list.</value>
+    
+  </data>
+  <data name="documentroutersettings_versioning_title" xml:space="preserve">
+    <value>Duplicate Submissions </value>
+    
+  </data>
+  <data name="documentroutersettings_versioning_description" xml:space="preserve">
+    <value>Specify what should occur when a file with the same name already exists in a target location.&lt;br&gt;If versioning is not enabled in a target library, the organizer will append unique characters to duplicate submissions regardless of the setting selected here.</value>
+    
+  </data>
+  <data name="documentroutersettings_versioning_spvbutton" xml:space="preserve">
+    <value>Use SharePoint versioning</value>
+    
+  </data>
+  <data name="documentroutersettings_versioning_uniqcharsbutton" xml:space="preserve">
+    <value>Append unique characters to the end of duplicate filenames</value>
+    
+  </data>
+  <data name="documentroutersettings_routerowners_title" xml:space="preserve">
+    <value>Rule Managers</value>
+    
+  </data>
+  <data name="documentroutersettings_routerowners_description" xml:space="preserve">
+    <value>Specify the users who manage the rules and can respond when incoming content doesn't match any rule.&lt;br&gt;&lt;br&gt;Rule Managers must have the Manage Web Site permission to access the content organizer rules list from the site settings page. </value>
+    
+  </data>
+  <data name="documentroutersettings_routerowners_instructions" xml:space="preserve">
+    <value>Enter users or groups separated by semicolons:</value>
+    
+  </data>
+  <data name="documentroutersettings_routerowners_emailforproblemscheckbox" xml:space="preserve">
+    <value>E-mail rule managers when submissions do not match a rule</value>
+    
+  </data>
+  <data name="documentroutersettings_routerowners_emailforstalecontentcheckbox" xml:space="preserve">
+    <value>E-mail rule managers when content has been left in the Drop Off Library</value>
+    
+  </data>
+  <data name="documentroutersettings_routerowners_daystowait" xml:space="preserve">
+    <value>Number of days to wait before sending an e-mail:</value>
+    
+  </data>
+  <data name="documentroutersettings_routerdetails_title" xml:space="preserve">
+    <value>Submission Points</value>
+    
+  </data>
+  <data name="documentroutersettings_routerdetails_description" xml:space="preserve">
+    <value>Use this information to set up other sites or e-mail messaging software to send content to this site. </value>
+    
+  </data>
+  <data name="documentroutersettings_routerdetails_webserviceurl" xml:space="preserve">
+    <value>Web service URL:</value>
+    
+  </data>
+  <data name="documentroutersettings_routerdetails_emailaddress" xml:space="preserve">
+    <value>E-mail address:</value>
+    
+  </data>
+  <data name="documentroutersettings_auditlogandproperties_title" xml:space="preserve">
+    <value>Preserving Context</value>
+    
+  </data>
+  <data name="documentroutersettings_auditlogandproperties_description" xml:space="preserve">
+    <value>The organizer can save the original audit logs and properties if they are included with submissions. The saved logs and properties are stored in an audit entry on the submitted document. </value>
+    
+  </data>
+  <data name="documentroutersettings_auditlogandproperties_savepropscheckbox" xml:space="preserve">
+    <value>Save the original audit log and properties of submitted content</value>
+    
+  </data>
+  <data name="documentroutersettings_enforcerouting_description" xml:space="preserve">
+    <value>When this setting is enabled, users are redirected to the Drop Off Library when they try to upload content to libraries in this site that have one or more content organizer rules pointing to them.  &lt;br&gt;If this setting is disabled, users can always bypass the organizer and upload files directly to a library or folder.&lt;br&gt;&lt;br&gt;Users will never be redirected to the Drop Off Library when organizing pages.</value>
+    
+  </data>
+  <data name="documentroutersettings_enforcerouting_enablecheckbox" xml:space="preserve">
+    <value>Require users to use the organizer when submitting new content to libraries with one or more organizer rules pointing to them</value>
+    
+  </data>
+  <data name="documentroutersettings_enforcerouting_title" xml:space="preserve">
+    <value>Redirect Users to the Drop Off Library</value>
+    
+  </data>
+  <data name="contenttypepolicynameerror" xml:space="preserve">
+    <value>Please enter a name for the policy</value>
+    
+  </data>
+  <data name="basecontenttypeWarning" xml:space="preserve">
+    <value>An expiration schedule set on the Document or Item content type cannot be based off of a system generated property such as Date Created or Date Modified. To use a system generated property, create a new content type that is derived from the Document or Item content types </value>
+    
+  </data>
+  <data name="documentroutersettings_autofolder_title" xml:space="preserve">
+    <value>Folder Partitioning</value>
+    
+  </data>
+  <data name="documentroutersettings_autofolder_description" xml:space="preserve">
+    <value>The organizer can automatically create subfolders once a target location exceeds a certain size.</value>
+    
+  </data>
+  <data name="documentroutersettings_autofolder_enabletitle" xml:space="preserve">
+    <value>Create subfolders after a target location has too many items</value>
+    
+  </data>
+  <data name="documentroutersettings_autofolder_maxcapacity" xml:space="preserve">
+    <value>Number of items in a single folder:</value>
+    
+  </data>
+  <data name="documentroutersettings_autofolder_foldernameformat" xml:space="preserve">
+    <value>Format of folder name:</value>
+    
+  </data>
+  <data name="documentroutersettings_autofolder_postinfo" xml:space="preserve">
+    <value>%1 is replaced by the date and time the folder is created. </value>
+    
+  </data>
+  <data name="documentroutersettings_autofolder_invalidformat" xml:space="preserve">
+    <value>Invalid characters in Url</value>
+  </data>
+  <data name="editrule_ruletarget_othersitesdropdownalttext" xml:space="preserve">
+    <value>Content Organizer Enabled Site</value>
+    
+  </data>
+  <data name="recordkeepingsettings_pagetitle" xml:space="preserve">
+    <value>Record Declaration Settings</value>
+    
+  </data>
+  <data name="recordkeepingsettings_pagetitleintitlearea" xml:space="preserve">
+    <value>Record Declaration Settings</value>
+    
+  </data>
+  <data name="recordkeepingsettings_pagedescription" xml:space="preserve">
+    <value>Documents or items declared as records can have additional restrictions or retention policies enforced on them compared to non-records.  Use this page to determine who can declare records and what restrictions to put in place.  You can also use the information management settings on a location or a content type to define separate policies for records and non-records.</value>
+    
+  </data>
+  <data name="recordkeepingsettings_recordbehavior_title" xml:space="preserve">
+    <value>Record Restrictions</value>
+    
+  </data>
+  <data name="recordkeepingsettings_recordbehavior_description" xml:space="preserve">
+    <value>Specify restrictions to place on a document or item once it has been declared as a record.  Changing this setting will not affect items which have already been declared records.  Note:  The information management policy settings can also specify different policies for records and non-records.</value>
+    
+  </data>
+  <data name="recordkeepingsettings_recordbehavior_fyibutton" xml:space="preserve">
+    <value>No Additional Restrictions</value>
+    
+  </data>
+  <data name="recordkeepingsettings_recordbehavior_fyibuttondescription" xml:space="preserve">
+    <value>Records are no more restricted than non-records.</value>
+    
+  </data>
+  <data name="recordkeepingsettings_recordbehavior_nodeletebutton" xml:space="preserve">
+    <value>Block Delete</value>
+    
+  </data>
+  <data name="recordkeepingsettings_recordbehavior_nodeletebuttondescription" xml:space="preserve">
+    <value>Records can be edited but not deleted.</value>
+    
+  </data>
+  <data name="recordkeepingsettings_recordbehavior_nodeleteordeletebutton" xml:space="preserve">
+    <value>Block Edit and Delete</value>
+    
+  </data>
+  <data name="recordkeepingsettings_recordbehavior_nodeleteordeletebuttondescription" xml:space="preserve">
+    <value>Records cannot be edited or deleted.  Any changes will require the record declaration to be revoked.</value>
+    
+  </data>
+  <data name="recordkeepingsettings_locations_title" xml:space="preserve">
+    <value>Record Declaration Availability</value>
+    
+  </data>
+  <data name="recordkeepingsettings_locations_description" xml:space="preserve">
+    <value>Specify whether all lists and libraries in this site should make the manual declaration of records available by default.  When manual record declaration is unavailable, records can only be declared through a policy or workflow.</value>
+    
+  </data>
+  <data name="recordkeepingsettings_locations_manualdescription" xml:space="preserve">
+    <value>Manual record declaration in lists and libraries should be:</value>
+    
+  </data>
+  <data name="recordkeepingsettings_locations_manualyesbutton" xml:space="preserve">
+    <value>Available in all locations by default</value>
+    
+  </data>
+  <data name="recordkeepingsettings_locations_manualnobutton" xml:space="preserve">
+    <value>Not available in all locations by default</value>
+    
+  </data>
+  <data name="recordkeepingsettings_permissions_title" xml:space="preserve">
+    <value>Declaration Roles</value>
+    
+  </data>
+  <data name="recordkeepingsettings_permissions_description" xml:space="preserve">
+    <value>Specify which user roles can declare and undeclare record status manually.</value>
+    
+  </data>
+  <data name="recordkeepingsettings_permissions_declarebydescription" xml:space="preserve">
+    <value>The declaration of records can be performed by:</value>
+    
+  </data>
+  <data name="recordkeepingsettings_permissions_declarebycontribbutton" xml:space="preserve">
+    <value>All list contributors and administrators</value>
+    
+  </data>
+  <data name="recordkeepingsettings_permissions_declarebyadminbutton" xml:space="preserve">
+    <value>Only list administrators</value>
+    
+  </data>
+  <data name="recordkeepingsettings_permissions_declarebypolicybutton" xml:space="preserve">
+    <value>Only policy actions</value>
+    
+  </data>
+  <data name="CSH_AuditLogTrimming" xml:space="preserve">
+    <value>Learn more about audit log trimming.</value>
+  </data>
+  <data name="CSH_eDiscoveryKeyWord" xml:space="preserve">
+    <value>Learn more about keyword syntax.</value>
+  </data>
+  <data name="recordkeepingsettings_permissions_undeclarebydescription" xml:space="preserve">
+    <value>Undeclaring a record can be performed by:</value>
+    
+  </data>
+  <data name="recordkeepingsettings_permissions_undeclarebycontribbutton" xml:space="preserve">
+    <value>All list contributors and administrators</value>
+    
+  </data>
+  <data name="recordkeepingsettings_permissions_undeclarebyadminbutton" xml:space="preserve">
+    <value>Only list administrators</value>
+    
+  </data>
+  <data name="recordkeepingsettings_permissions_undeclarebypolicybutton" xml:space="preserve">
+    <value>Only policy actions</value>
+    
+  </data>
+  <data name="searchandaddtohold_page_title" xml:space="preserve">
+    <value>Search and Add to Hold</value>
+    
+  </data>
+  <data name="searchandaddtohold_page_description" xml:space="preserve">
+    <value>Use this page to discover content related to a particular litigation, investigation, or audit. Each search result can be added to a hold so that it can be properly retained. Alternatively, the results can be sent to another site, such as a Records Center.</value>
+    
+  </data>
+  <data name="searchandaddtohold_searchcriteria_title" xml:space="preserve">
+    <value>Search Criteria</value>
+    
+  </data>
+  <data name="searchandaddtohold_searchcriteria_description_part1" xml:space="preserve">
+    <value>Specify the site that you want to search and the search terms related to the hold.</value>
+    
+  </data>
+  <data name="searchandaddtohold_searchcriteria_description_part2" xml:space="preserve">
+    <value>You can specify complex searches using the keyword syntax.</value>
+    
+  </data>
+  <data name="searchandaddtohold_searchcriteria_claw_clawsearch_text" xml:space="preserve">
+    <value>Specify whether to search the entire subscription or just this site:</value>
+    
+  </data>
+  <data name="searchandaddtohold_searchcriteria_claw_clawsearch_radio" xml:space="preserve">
+    <value>Search all the site collections in this site's subscription</value>
+    
+  </data>
+  <data name="searchandaddtohold_searchcriteria_claw_noclawsearch_radio" xml:space="preserve">
+    <value>Search a specific site within this site:</value>
+    
+  </data>
+  <data name="searchandaddtohold_searchcriteria_siteselection" xml:space="preserve">
+    <value>Currently selected site:</value>
+    
+  </data>
+  <data name="searchandaddtohold_searchcriteria_sitepicker_buttontext" xml:space="preserve">
+    <value>Select Site</value>
+    
+  </data>
+  <data name="searchandaddtohold_searchcriteria_sitepicker_tooltiptext" xml:space="preserve">
+    <value>Pick Site</value>
+    
+  </data>
+  <data name="searchandaddtohold_searchcriteria_entersearchterms" xml:space="preserve">
+    <value>Enter one or more search terms into the box below:</value>
+    
+  </data>
+  <data name="searchandaddtohold_searchcriteria_previewresults_buttontext" xml:space="preserve">
+    <value>Preview Results</value>
+    
+  </data>
+  <data name="searchandaddtohold_localorexport_title" xml:space="preserve">
+    <value>Local Hold or Export</value>
+    
+  </data>
+  <data name="searchandaddtohold_localorexport_description_part1" xml:space="preserve">
+    <value>If your organization's policy allows this repository to store held content, you can keep the relevant content in place. Otherwise, documents can be copied to another repository.</value>
+    
+  </data>
+  <data name="searchandaddtohold_localorexport_description_part2" xml:space="preserve">
+    <value>The destination location list is populated with all valid Document and Records Center locations as configured by the administrator. </value>
+    
+  </data>
+  <data name="searchandaddtohold_localorexport_selectaction" xml:space="preserve">
+    <value>Select the action to perform on the search results: </value>
+    
+  </data>
+  <data name="searchandaddtohold_localorexport_keepinplace_radio" xml:space="preserve">
+    <value>Keep in place and add to hold directly.</value>
+    
+  </data>
+  <data name="searchandaddtohold_localorexport_export_radio" xml:space="preserve">
+    <value>Copy to another location and add the copy to a hold.</value>
+    
+  </data>
+  <data name="searchandaddtohold_localorexport_destinationlocation" xml:space="preserve">
+    <value>Destination location:</value>
+    
+  </data>
+  <data name="searchandaddtohold_localorexport_destinationlocationlistitem" xml:space="preserve">
+    <value>Destination location</value>
+    
+  </data>
+  <data name="searchandaddtohold_relevanthold_title" xml:space="preserve">
+    <value>Relevant Hold</value>
+    
+  </data>
+  <data name="searchandaddtohold_relevanthold_description" xml:space="preserve">
+    <value>Specify the hold that the items should be subject to. If the items will be kept in place, this list is populated based upon the holds defined for this site and all parent sites. Otherwise, the list is populated with the valid holds for the destination location selected above.</value>
+    
+  </data>
+  <data name="searchandaddtohold_relevanthold_viewmodifyholds_linktext" xml:space="preserve">
+    <value>Open this site's hold list in a new window</value>
+    
+  </data>
+  <data name="searchandaddtohold_relevanthold_selectholdtext" xml:space="preserve">
+    <value>Select the hold to apply:</value>
+    
+  </data>
+  <data name="searchandaddtohold_relevanthold_selectholdlistitem" xml:space="preserve">
+    <value>Select the hold to apply</value>
+    
+  </data>
+  <data name="searchandaddtohold_relevanthold_holddescription" xml:space="preserve">
+    <value>Description:</value>
+    
+  </data>
+  <data name="searchandaddtohold_relevanthold_description_noholdselected" xml:space="preserve">
+    <value>None</value>
+    
+  </data>
+  <data name="searchandaddtohold_relevanthold_description_addhold_linktext" xml:space="preserve">
+    <value>Add a new hold...</value>
+    
+  </data>
+  <data name="searchandaddtohold_addresultstohold_buttontext" xml:space="preserve">
+    <value>Add results to hold</value>
+    
+  </data>
+  <data name="searchandaddtohold_errors_invalidsearchlocation" xml:space="preserve">
+    <value>The search location must specify the URL to this site or a subsite within this site.</value>
+    
+  </data>
+  <data name="searchandaddtohold_errors_nopermissiontotargetsite" xml:space="preserve">
+    <value>You don not have access to any holds in this remote location.</value>
+    
+  </data>
+  <data name="searchandaddtohold_errors_nosearchterms" xml:space="preserve">
+    <value>Enter a search query.</value>
+    
+  </data>
+  <data name="searchandaddtohold_errors_noholdsselected" xml:space="preserve">
+    <value>A hold must be selected.</value>
+    
+  </data>
+  <data name="searchandaddtohold_errors_noholdsavailable" xml:space="preserve">
+    <value>There are no valid holds defined.</value>
+    
+  </data>
+  <data name="ediscoverysubscriptionhub_title" xml:space="preserve">
+    <value>Discovery and Hold Setting</value>
+  </data>
+  <data name="ediscoverysubscriptionhub_description" xml:space="preserve">
+    <value>Use this page to configure discovery and hold settings for this subscription</value>
+  </data>
+  <data name="ediscoverysubscriptionhub_multisitecollectionrepository_title" xml:space="preserve">
+    <value>Multi-Site Collection Repository</value>
+  </data>
+  <data name="ediscoverysubscriptionhub_multisitecollectionrepository_description_part1">
+    <value>Document and Records Centers can often times be too big for one site collection. If this subscription was created to band multiple site collections together into a single repository, enable this setting. This will allow one centralized hold list, report library, and search page for the entire subscription.</value>
+  </data>
+  <data name="ediscoverysubscriptionhub_multisitecollectionrepository_description_part2" xml:space="preserve">
+    <value>You are required to specify a search scope that corresponds to the repository. This will allow the preview of your discovery search to be scoped to only the site collections in the repository.</value>
+  </data>
+  <data name="ediscoverysubscriptionhub_enablediscoveryacrosssubscription_checkboxtext" xml:space="preserve">
+    <value>Enable discovery across the entire subscription</value>
+  </data>
+  <data name="ediscoverysubscriptionhub_masterholdslistlocationdropdown_titletext" xml:space="preserve">
+    <value>Location of master holds list:</value>
+  </data>
+  <data name="ediscoverysubscriptionhub_masterholdslistlocationdropdown_defaulttext" xml:space="preserve">
+    <value>Select Site Collection</value>
+  </data>
+  <data name="ediscoverysubscriptionhub_previewsearchscopedropdown_titletext" xml:space="preserve">
+    <value>Repository preview search scope</value>
+  </data>
+  <data name="ediscoverysubscriptionhub_previewsearchscopedropdown_defaulttext" xml:space="preserve">
+    <value>All Sites</value>
+  </data>
+  <data name="ediscoverysubscriptionhub_errors_nositeselected" xml:space="preserve">
+    <value>A site must be selected.</value>
+    
+  </data>
+  <data name="ErrorSecurityValidationFailed" xml:space="preserve">
+    <value>The security validation for this page is invalid and might be corrupted. Please use your web browser's Back button to try your operation again.</value>
+    
+  </data>
+  <data name="uploadex_target_location_title" xml:space="preserve">
+    <value>Destination Folder</value>
+    
+  </data>
+  <data name="uploadex_target_location_description" xml:space="preserve">
+    <value>Specify the folder in this document library where the document should be saved.</value>
+    
+  </data>
+  <data name="uploadex_submit_title" xml:space="preserve">
+    <value>Submit Document</value>
+    
+  </data>
+  <data name="uploadex_submit_description" xml:space="preserve">
+    <value>Browse to the document you intend to submit.</value>
+    
+  </data>
+  <data name="uploadex_document_submit_multiple" xml:space="preserve">
+    <value>Submit Multiple Files...</value>
+    
+  </data>
+  <data name="uploadex_document_submit_warning" xml:space="preserve">
+    <value>Documents uploaded here are automatically moved to the correct library and folder after document properties are collected.</value>
+    
+  </data>
+  <data name="uploadex_title" xml:space="preserve">
+    <value>Upload Document</value>
+    
+  </data>
+  <data name="uploadex_invalid_location" xml:space="preserve">
+    <value>The selected location does not exist in this document library.</value>
+    
+  </data>
+  <data name="uploadex_choose_folder" xml:space="preserve">
+    <value>Choose Folder...</value>
+    
+  </data>
+  <data name="uploadex_routing_title_with_colon" xml:space="preserve">
+    <value>Content Organizer:</value>
+    
+  </data>
+  <data name="recordscenterconsole_title" xml:space="preserve">
+    <value>Records Center Management</value>
+  </data>
+  <data name="recordscenterconsole_desc" xml:space="preserve">
+    <value>Use this page to create a file plan and configure records management settings for the repository.</value>
+  </data>
+  <data name="recordkeepinglistsettings_pagetitle" xml:space="preserve">
+    <value>Library Record Declaration Settings</value>
+    
+  </data>
+  <data name="recordkeepinglistsettings_pagetitleintitlearea" xml:space="preserve">
+    <value>Library Record Declaration Settings</value>
+    
+  </data>
+  <data name="recordkeepinglistsettings_pagedescription" xml:space="preserve">
+    <value>Individual lists and libraries can allow or disallow the manual creation of records, as well as declare all items as records as they are added.</value>
+    
+  </data>
+  <data name="recordkeepinglistsettings_manualdeclare_title" xml:space="preserve">
+    <value>Manual Record Declaration Availability</value>
+    
+  </data>
+  <data name="recordkeepinglistsettings_manualdeclare_description" xml:space="preserve">
+    <value>Specify whether this list should allow the manual declaration of records.  When manual record declaration is unavailable, records can only be declared through a policy or workflow.</value>
+    
+  </data>
+  <data name="recordkeepinglistsettings_manualdeclare_sitedefaultbutton" xml:space="preserve">
+    <value>Use the site collection default setting:</value>
+    
+  </data>
+  <data name="recordkeepinglistsettings_manualdeclare_sitedefaultbuttonpositive" xml:space="preserve">
+    <value>Allow the manual declaration of records</value>
+    
+  </data>
+  <data name="recordkeepinglistsettings_manualdeclare_sitedefaultbuttonnegative" xml:space="preserve">
+    <value>Do not allow the manual declaration of records</value>
+    
+  </data>
+  <data name="recordkeepinglistsettings_manualdeclare_allowmanualbutton" xml:space="preserve">
+    <value>Always allow the manual declaration of records</value>
+    
+  </data>
+  <data name="recordkeepinglistsettings_manualdeclare_disallowmanualbutton" xml:space="preserve">
+    <value>Never allow the manual declaration of records</value>
+    
+  </data>
+  <data name="recordkeepinglistsettings_autodeclaration_title" xml:space="preserve">
+    <value>Automatic Declaration</value>
+    
+  </data>
+  <data name="recordkeepinglistsettings_autodeclaration_description" xml:space="preserve">
+    <value>Specify whether all items should become records when added to this list.</value>
+    
+  </data>
+  <data name="recordkeepinglistsettings_autodeclaration_checkBoxText" xml:space="preserve">
+    <value>Automatically declare items as records when they are added to this list.</value>
+    
+  </data>
+  <data name="recordkeepinglistsettings_autodeclaration_reqCheckOutWarning" xml:space="preserve">
+    <value>Items will be declared a record after the first check in of the item.  When automatic declaration of items is enabled, checkout will also be required on this list before items can be edited.</value>
+    
+  </data>
+  <data name="routermessage_title" xml:space="preserve">
+    <value>Drop Off Library</value>
+    
+  </data>
+  <data name="routermessage_missingproperties_warning">
+    <value>Before this document can be routed to the final location, any required properties must be filled out.</value>
+  </data>
+  <data name="documentroutersettings_enablecrossrouting_title">
+    <value>Sending to Another Site </value>
+  </data>
+  <data name="documentroutersettings_enablecrossrouting_description" xml:space="preserve">
+    <value>If there are too many items to fit into one site collection, enable this setting to distribute content to other sites that also have content organizers.</value>
+    
+  </data>
+  <data name="documentroutersettings_enablecrossrouting_enablecheckbox" xml:space="preserve">
+    <value>Allow rules to specify another site as a target location</value>
+    
+  </data>
+  <data name="RecordResourcesItemExpirationDate_DisplayName" xml:space="preserve">
+    <value>Expiration Date</value>
+    
+  </data>
+  <data name="uploadex_file_assetlib_warning" xml:space="preserve">
+    <value>Assets in this format cannot be played by the Media Player Web Part. The following media formats can be played by the Media Player Web Part: Windows Media Audio (WMA), Windows Media Video (WMV), ISO/MPEG Layer-3 (MP3).</value>
+    
+  </data>
+  <data name="manage_folder_retention_schedule" xml:space="preserve">
+    <value>Manage the retention schedule for items in this folder</value>
+    
+  </data>
+  <data name="feature_not_applicable_to_virtual_list" xml:space="preserve">
+    <value>This feature is not supported for external lists.</value>
+    
+  </data>
+  <data name="restricted_to_web_error" xml:space="preserve">
+    <value>Cannot restrict the report to the selected list. The list name is invalid.</value>
+    
+  </data>
+</root>

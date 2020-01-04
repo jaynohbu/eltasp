@@ -1,0 +1,150 @@
+﻿body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.Body {
+
+}
+.SearchBoxLeft {
+
+ text-align:left;
+}
+.ButtonBoxRight {
+
+}
+.FormTable 
+{
+    margin-top: 5px;
+    margin-bottom:5px;
+    padding-top:10px;
+    padding-bottom:10px;  
+    border: 1px, solid, black;
+    font-size:9px;
+    font-weight:700;
+  
+}
+.FormTableHeader 
+{  
+    font-size: 9px;   
+    color: #000000;
+    background-color:#edd3cf;
+    height:20px;
+    padding-top:3px;
+    padding-bottom:3px;    
+}
+.FormTableBody 
+{  
+    border-style:solid;
+    border-color:#ba9590;
+    border-left: 0px;
+    border-right: 0px;  
+       
+}
+.FormTableRow {
+      margin-top: 5px;
+     margin-bottom:5px;
+}
+.FormTableFooter 
+{
+    font-size: 9px;   
+    color: #000000;
+    background-color:#edd3cf;
+    font-size:9px;
+    font-weight:700;
+    height:20px;
+    padding-top:3px;
+    padding-bottom:3px;
+ 
+   
+}
+.FormInnerTable
+{    
+     margin-top: 5px;
+     margin-bottom:5px;
+    
+    border-style:solid;
+    border-color:#ba9590;
+    border-width:thin;
+     width:65%;    
+     padding-top:10px;
+     padding-bottom:10px;
+     
+    
+}
+.FormInnerTableHeader
+{  
+    font-size: 9px;
+    font-weight: bold;
+    color: #000000;
+    left: 6px;
+     background-color:#edd3cf;  
+     height:9px;
+}
+
+.FormInnerTableAlterContent
+{
+    text-align:left;
+    background-color:#ffffff;
+    padding-left:10px;
+    padding-bottom:5px;
+    padding-top:5px;
+}
+.FormInnerTableAlterLable
+{ 
+    text-align:left;
+    font-size: 9px;
+    font-weight: bold;
+      background-color:#f3f3f3;
+      padding-left:10px;
+       padding-bottom:5px;
+    padding-top:5px;
+}
+ 
+
+
+h3
+{
+    font-size: 14px;
+    font-weight: 700;
+    padding-bottom: 14px;
+    padding-top: 20px;
+    text-align: left;
+    text-transform: uppercase;
+    
+}
+.Emailattachlink
+{
+    display:inline; 
+    text-align:left; 
+}
+.AttachmentList
+{
+ 
+    text-align:left;
+}
+td
+{
+    text-align:left;   
+}
+.EmailItem 
+{   
+    text-align:left;
+    margin-top: 5px;
+    margin-bottom:5px;    
+    border-style:solid;
+    border-color:#A0829C;
+    border-width:thin;   
+    padding-top:10px;
+    padding-bottom:10px;
+    width:65%; 
+}
+
+.MailMsgTypeA{
+width:60%;
+height:80px;
+}
+
+.btnSend
+{
+    cursor:hand; 
+}

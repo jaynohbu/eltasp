@@ -1,0 +1,862 @@
+<%@ Register TagPrefix="igtxt" Namespace="Infragistics.WebUI.WebDataInput" Assembly="Infragistics.WebUI.WebDataInput, Version=11.1.20111.2064, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<%@ Page language="c#" Inherits="IFF_MAIN.ASPX.OnLines.CompanyConfig.CompanyConfigCreate" codePage="949" CodeFile="CompanyConfigCreate.aspx.cs" %>
+
+<%@ Register Assembly="iMoon.WebControls.ComboBox" Namespace="iMoon.WebControls"
+    TagPrefix="iMoon" %>
+<%@ Register TagPrefix="igtbar" Namespace="Infragistics.WebUI.UltraWebToolbar" Assembly="Infragistics.WebUI.UltraWebToolbar, Version=11.1.20111.2064, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<title>Client/Partner Profile</title>
+		<META http-equiv=Content-Type content="text/html; charset=euc-kr">
+		<meta content="Microsoft Visual Studio .NET 7.1" name=GENERATOR>
+		<meta content=C# name=CODE_LANGUAGE>
+		<meta content=JavaScript name=vs_defaultClientScript>
+		<meta content=http://schemas.microsoft.com/intellisense/ie5 name=vs_targetSchema>
+		<SCRIPT src="../jScripts/ig_editDrop1.js" type=text/javascript></SCRIPT>
+		
+		<style type="text/css">
+		.mouseOut{background:##f9f9ff; color:#000000;}
+		.mouseOver{background:#ccccff; color:#000000;}
+		 ul {list-style-type: none;margin-left:0px;padding-left:0px }
+		</style>
+		<script language=javascript>	
+			
+String.prototype.isInteger = function() {
+
+var pattern = /^\d+$/;
+return this != "" && pattern.test(this);
+
+}
+
+function goAddContact() {
+    if ( !chkAccountNum() ) return false;
+    
+var param =  'Start=yes'+'&Num=' + document.CompanyCreate.txtAccountNumber.value + '&Name=' + document.CompanyCreate.txtDBA.value; 
+if ( document.CompanyCreate.dlCountry.value == 'US' )
+{
+    param += '&Mask=yes';
+}
+    popContact = showModalDialog("AddContact.asp?"+param,"AddContact","dialogWidth:950px; dialogHeight:600px; help:0; status:0; scroll:1;center:1;Sunken;");    
+    return true;
+}
+
+function goRemarks() {
+    if ( !chkAccountNum() ) return false;
+    
+var param =  'Start=yes'+'&Num=' + document.CompanyCreate.txtAccountNumber.value + '&Name=' + document.CompanyCreate.txtDBA.value; 
+ popRemarks = showModalDialog("AddRemarks.asp?"+param,"AddRemarks","dialogWidth:950px; dialogHeight:600px; help:0; status:0; scroll:0;center:1;Sunken;");    
+    //window.open("AddRemarks.asp?"+param,"AddRemarks","dialogWidth:950px; dialogHeight:600px; help:0; status:0; scroll:1;center:1;Sunken;");
+    return true;
+}
+
+function chkAccountNum()
+{
+var object = document.CompanyCreate.txtAccountNumber;
+if (!eval("object.value.isInteger()")) {
+	alert('Please select a company!');
+	return false;
+}
+return true;
+}
+
+
+function goFocus() {
+
+    if(event.keyCode == 13){
+        document.CompanyCreate.Go.focus();
+    }    
+}
+
+function goRateEdit() {
+
+if ( !chkAccountNum() ) return false;
+
+var tmpDBAText = document.CompanyCreate.txtDBA.value;
+var indx1= tmpDBAText.indexOf('&');
+if (indx1 > 0) 
+{
+   tmpDBAText = tmpDBAText.substring(0,indx1) + '^' +  tmpDBAText.substring(indx1+1);
+}
+var sURL = "../Rate/RateManagement.aspx?WindowName=PopWin&ff=" + document.CompanyCreate.txtAccountNumber.value + "&nn=" + tmpDBAText;
+
+viewPop(sURL);
+
+return true;
+
+}
+
+function goSc() {
+if ( !chkAccountNum() ) return false;
+
+var sURL = "../ScheduleB/ScheduleBCreate.aspx?WindowName=PopWin&ff=" + document.CompanyCreate.txtAccountNumber.value + "&nn=" + document.CompanyCreate.txtDBA.value;
+viewPop(sURL);
+
+return true;
+
+}
+
+function loadProfile(comboId) {
+
+    var text  = document.getElementById( comboId + '_Text' );
+    var combo = document.getElementById( comboId  );
+    if( text ) {
+        if(text.value=="") { 
+//	        alert('Please input the search text.');
+//	        return false; 
+		__doPostBack("btnNew", "");   	
+	        return false; 		
+
+          }	    
+	}
+	else
+	{
+	        return false; 
+	}
+    
+    
+    var f = false;
+
+    for(i = 0; i <= combo.options.length-1; i++) {
+        if( text.value == combo.options[i].text) {
+            f = true;
+            break;
+        }
+	}
+	
+	if (f) {
+	    document.getElementById( 'txtAccountNumber'  ).value = combo.value;
+	    document.getElementById( 'txtDBA'  ).value = text.value;	
+	    text.value = '';    
+	    return true;
+	}
+	else
+	{
+        goDupChk(text.value)
+  	    return false;
+	}
+	
+}
+
+//function ComboSearchKey_OnChangePlus(combo,text,s) {
+//    if(s > 0 )
+//    {
+//    document.getElementById( 'txtAccountNumber'  ).value = combo.value;
+//    document.getElementById( 'txtDBA'  ).value = text.value;	
+//    text.value = '';    
+//	__doPostBack("Go", "");       
+//	}
+//	else
+//	{
+//		__doPostBack("btnNew", "");   	
+//	}
+//}
+
+function goDupChk(strDBA) {
+	if(strDBA =="" ) return true;	
+	var WinWidth = 640;                                                                                     
+	var WinHeight = 500;                                                                                    
+	var x=screen.width/2-WinWidth/2;     
+	var y=screen.height/2-WinHeight/2;
+	var path='CompanyShowDialog.aspx'; 
+	path +='?BusinessName='+ strDBA ; 
+	path +='&chk=2'; 
+
+	winopen = window.open(path,'popupN','left='+ x +',top='+ y +',width='+ WinWidth +', height='+ WinHeight +' , menubar=no, scrollbars=yes, staus=no, resizable=yes, titlebar=no, toolbar=no, hotkey=0,closeable=no');  
+	winopen.focus();
+	
+}		
+
+function goDupChk2(strDBA,AcctNum) {
+	if(AcctNum =="") AcctNum = '-1';
+	if(strDBA =="" ) return true;	
+	var WinWidth = 640;                                                                                     
+	var WinHeight = 500;                                                                                    
+	var x=screen.width/2-WinWidth/2;     
+	var y=screen.height/2-WinHeight/2;
+	var path='CompanyShowDialog3.aspx'; 
+	path +='?BusinessName='+ strDBA ; 
+	path +='&AcctNum='+ AcctNum ; 
+	path +='&chk=2'; 
+
+	if(showModalDialog(path,'popupN','left='+ x +',top='+ y +',width='+ WinWidth +', height='+ WinHeight +' , menubar=no, scrollbars=no, staus=no, resizable=yes, titlebar=no, toolbar=no, hotkey=0,closeable=no') == 'Y') {
+		return true;
+	}
+	else
+	{
+		return false;
+	}		
+	
+}		
+
+
+function gridRowDelete(strGrid) {
+   igtbl_deleteSelRows(strGrid);
+
+}
+
+function gridRowDeleteAll(strGrid) {
+	var oGrid = igtbl_getGridById(strGrid);
+	var oRows = oGrid.Rows;
+
+	for(i=(oRows.length-1); i>=0; i--) {
+	 strRow = strGrid+"r_"+i;
+	 igtbl_deleteRow(strGrid,strRow);	 
+	}
+}
+
+function formRest(tr,id) {
+	var idText = id.Key;
+
+	if(idText == 'New') {
+		document.CompanyCreate.reset();
+	    document.CompanyCreate.txtSearchKey.value = '';		
+		__doPostBack("btnNew", "");   
+		return true;
+	}
+	else if(idText == 'Delete' ) {
+		__doPostBack("btnDelete", "");   		
+		return true;
+	}
+	else if ( idText == 'Save' ) {
+		if(!goDupChk2(document.CompanyCreate.txtDBA.value,document.CompanyCreate.txtAccountNumber.value)) return true;
+		if(!dataValidation()) return true;
+		if(document.CompanyCreate.txtAccountNumber.value == "") 
+		{ 
+		__doPostBack("btnSaveNew", "");	
+		}
+		else
+		{
+		__doPostBack("btnSave", "");			
+		}
+	}	
+	else if ( idText == 'Print' ) {
+	
+		__doPostBack("btnPrint", "");		
+	}
+	
+	else if ( idText == 'SaveNew' ) {
+//		if(!goDupChk2(document.CompanyCreate.txtDBA.value,document.CompanyCreate.txtAccountNumber.value)) return true;
+		if(!dataValidation()) return true;
+		__doPostBack("btnSaveNew", "");			
+	}	
+}
+
+function setCountry() {
+ var s = document.CompanyCreate.dlState.value;
+ 
+ if (s != "OT" && s.substring(0,2) != "  " ) {
+	document.CompanyCreate.dlCountry.value = "US";
+ }
+ else
+ {
+	document.CompanyCreate.dlCountry.value = ""; 
+ }
+}		
+
+function chk_phone_no() {
+    if (document.CompanyCreate.dlCountry.value != "US") return true;
+    var obj = document.getElementById("txtBPhone");
+    if(obj) {
+	        if (obj.value != ""){
+	            ok = confirm('Do you want to convert the Phone # with US format?');
+	            if(!ok) return false;  
+	        }
+        }    
+    obj = document.getElementById("txtCPhone");
+    if(obj) {
+	        if (obj.value != ""){
+	            ok = confirm('Do you want to convert the Cell Phone # with US format?');
+	            if(!ok) return false;  
+	        }
+        }    
+    obj = document.getElementById("txtBFax");
+    if(obj) {
+	        if (obj.value != ""){
+	            ok = confirm('Do you want to convert the Fax. # with US format?');
+	            if(!ok) return false;  
+	        }
+        }    
+        
+return true;
+}
+
+
+function setCountry2() {
+
+ var s = document.CompanyCreate.dlState2.value;
+ if (s != "OT" && s.substring(0,2) != "  " ) {
+	document.CompanyCreate.dlCountry2.value = "US";
+ }		
+ else
+ {
+	document.CompanyCreate.dlCountry2.value = ""; 
+ }
+
+}		
+function arto(){
+
+}
+		
+function TemplateUpdateControls(gn,ctrlId,cellId,value) {
+    
+	if(ctrlId==null) return true;
+									  
+	if(ctrlId=="txtTmpTitle" ||ctrlId=="txtTmpComment" )	{
+			igtbl_getElementById(ctrlId).innerText=value;
+			return true;
+	}
+
+	if(ctrlId=="txtTmpDate"){
+		if(value=="")	{
+			now = new Date();
+			value= now.toLocaleDateString() + "(" + now.toLocaleTimeString() + ")";
+		}
+		igtbl_getElementById(ctrlId).innerText=value;
+		return true;
+	}
+	
+	if(ctrlId=="txtTmpEditedBy"){
+		if(value=="")	{
+			value= "<%=login_name%>";
+		}
+		igtbl_getElementById(ctrlId).innerText=value;
+		return true;
+	}
+
+
+}
+
+	
+function DoSchedule()
+{
+	if("<%=lblAccountNo.Text%>" != "")
+	{
+		__doPostBack("btnDoSchedule", "");   
+	}
+}
+
+function goUrl() {
+	var txtUrl = document.CompanyCreate.txtBURL.value;
+
+	if(txtUrl != "") {
+		window.open(txtUrl);
+	}
+	
+}
+
+function goEmail() {
+	var txtEmail = document.CompanyCreate.txtCEmail.value;
+	if(validateEmail(txtEmail)) {
+		if(txtEmail != "") {
+			parent.location.href='mailto:'+txtEmail;
+		}							 
+	}
+}
+
+function validateEmail(emailad) {
+
+var exclude=/[^@\-\.\w]|^[_@\.\-]|[\._\-]{2}|[@\.]{2}|(@)[^@]*\1/;
+var check=/@[\w\-]+\./;
+var checkend=/\.[a-zA-Z]{2,3}$/;
+
+	if(((emailad.search(exclude) != -1)||(emailad.search(check)) == -1)||(emailad.search(checkend) == -1)){
+		alert("Incorrect email address");
+		return false;
+	}
+	return true;
+}
+
+function setBillAddr() {
+if(document.CompanyCreate.chkCopy.checked) {
+	document.CompanyCreate.txtCAddress.value = document.CompanyCreate.txtBAdress.value;
+	document.CompanyCreate.txtCCity.value = document.CompanyCreate.txtBCity.value;
+	document.CompanyCreate.dlState2.value = document.CompanyCreate.dlState.value;
+	document.CompanyCreate.txtBCZIP.value = document.CompanyCreate.txtBZIP.value; 
+	document.CompanyCreate.dlCountry2.value = document.CompanyCreate.dlCountry.value; 
+}
+
+}
+
+function dataValidation() {
+
+if(document.CompanyCreate.chkColodee.checked) {
+	if(document.CompanyCreate.dlColodee.selectedindex=0) {
+		alert('Please select colodee!');
+		return false;
+	}
+}
+var object = document.CompanyCreate.txtCHLNo;
+if(object.value != "" && object.value != " ") {
+	if (!eval("object.value.isInteger()")) {
+						alert("Please enter a numeric value for C.H.L No." );
+						object.focus();
+						return false;
+					}
+}
+
+object = document.CompanyCreate.txtCarrierPrefix; 
+if(object.value != "" && object.value != " ") {
+if (!eval("object.value.isInteger()")) {
+						alert("Please enter a numeric value for Prefix" );
+						object.focus();
+						return false;						
+					}
+}
+if(document.CompanyCreate.txtDBA.value=="") {
+	alert("Please enter a business name!");
+	return false;
+}
+
+//	if(document.CompanyCreate.chkTrucker.checked) {
+//		if(document.CompanyCreate.txtCHLNo.value=="") {
+//			alert("Please input the C.H.L number");
+//			return false;
+//		}
+//	}
+//	if(document.CompanyCreate.chkWarehousing.checked) {
+//		if(document.CompanyCreate.txtCHLNo.value=="") {
+//			alert("Please input the C.H.L number");
+//			return false;
+//		}
+//	}
+//	if(document.CompanyCreate.chkCFS.checked) {
+//		if(document.CompanyCreate.txtFirmsCode.value=="") {
+//			alert("Please input the Firms code");
+//			return false;
+//		}
+//	}
+	
+	if(document.CompanyCreate.chkCarrier.checked) {
+//		if(document.CompanyCreate.txtFirmsCode.value=="") {
+//			alert("Please input the Firms code");
+//			return false;
+//		}		
+
+        
+		if(document.CompanyCreate.txtOceanSCAC.value=="" && document.CompanyCreate.txtAirLineCode.value=="") {
+			alert("Please input the SCAC code or Air Line Code");
+			return false;
+		}
+		else
+		{
+            if (document.CompanyCreate.txtAirLineCode.value!=""	&& document.CompanyCreate.txtCarrierPrefix.value==""){	
+			alert("Please input the Carrier prefix.");
+			return false;
+			}
+		
+		}
+	
+	}	
+
+
+return true;
+
+}
+
+		</script>
+		<LINK href="../../CSS/AppStyle.css" type=text/css rel=stylesheet>
+	<!--  #INCLUDE FILE="../../include/common.htm" -->
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.style3 {text-transform: none; font-family: Verdana, Arial, Helvetica, sans-serif; color: #000000;}
+-->
+</style></HEAD>
+	<body>
+	<table width="100%" height="12" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" valign="top"><img src="../../../images/spacer.gif" width="120" height="3"><%	
+                        if(Request.UrlReferrer != null && windowName != "PopWin" && windowName != "popupfavorite") 
+                        { 
+    %><img src="../../../Images/pointer_md.gif" width="11" height="7"><% } %><img src="../../../images/spacer.gif" width="260" height="3"></td>
+  </tr>
+</table><br>
+
+	<FORM id=CompanyCreate onSubmit="" method=post runat="server">
+	<table width="957" border="0" align="center" cellpadding="2" cellspacing="0">
+  <tr>
+    <td height="32" align="left" valign="middle" class="pageheader">Client/Partner Profile</td>
+  </tr>
+</table>
+			<table width="957" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="73beb6" bgcolor="#FF0000" class="border1px">
+              <tr bgcolor="73beb6">
+                <td width="0" height="0" align="center" valign="top" bgcolor="73beb6">
+				<table width="957" border="0" cellpadding="2" cellspacing="0" bgcolor="73beb6">
+                  <tr bgcolor="C7C6E1">
+                    <td width="3" align="left" valign="top" bgcolor="#ccebed" style="height: 8px"></td>
+                    <td width="75" align="left" valign="top" bgcolor="#ccebed" style="height: 8px"></td>
+                    <td align="left" valign="top" bgcolor="#ccebed" style="width: 288px; height: 8px;"></td>
+                    <td align="left" valign="top" bgcolor="#ccebed" style="width: 132px; height: 8px;"></td>
+                    <td width="258" align="left" valign="top" bgcolor="#ccebed" style="height: 8px"></td>
+                    <td width="85" align="left" valign="top" bgcolor="#ccebed" style="height: 8px"></td>
+                    <td width="205" align="left" valign="top" bgcolor="#ccebed" style="height: 8px"></td>
+                  </tr>
+                  <tr bgcolor="#73beb6">
+                    <td colspan="7" align="right" valign="top" style="height: 1px">
+                        &nbsp;&nbsp;&nbsp;</td>
+                  </tr>
+                  
+                  <tr align="left" bgcolor="DDDDED">
+                    <td valign="middle" bgcolor="#ccebed" style="height: 36px">&nbsp;</td>
+                    <td colspan="2"  valign="middle" bgcolor="#ccebed" class="bodyheader" align="left" style="height: 36px">
+                        <table border="0" align="left" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td align="left" class="bodyheader">
+                                    Client/Partner Name</td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><iMoon:ComboBox ID="ComboSearchKey"  CssClass="ComboBox" runat="server" Rows="20" Width="300px">
+                                <asp:ListItem>Unbound</asp:ListItem></iMoon:ComboBox>
+                                </td>
+                                <td align="left"><asp:Button ID="Go" runat="server" Text="Go" OnClick="Go_Click" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td colspan="2"  valign="middle" bgcolor="#ccebed" class="bodycopy" align="left" style="height: 36px">
+                        <asp:Label ID="lblError"  CssClass="bodycopy" runat="server" ForeColor="Red"></asp:Label></td>
+                    <td colspan="2"  valign="middle" bgcolor="#ccebed" class="bodycopy" style="height: 36px">
+                    <igtbar:ultrawebtoolbar id=UltraWebToolbar1 runat="server" Height="24px" Font-Size="10pt"
+							ItemPadding="4" BackgroundImage="none" ItemWidthDefault="80px" MovableImage="ig_tb_move00.gif"
+							ImageDirectory="/ig_common/images/" BorderWidth="0px" Font-Names="Arial" TextAlign="Right">
+                        <HoverStyle Cursor="Hand" Font-Size="9pt" Font-Names="Arial" Font-Bold="True" BorderStyle="None"
+								ForeColor="Gold" BackgroundImage="none" BackColor="Transparent">                        </HoverStyle>
+                        <Items>
+                            <igtbar:TBarButton DisabledImage="" HoverImage="" Image="../../../images/button_new.gif"
+                                Key="New" SelectedImage="" Tag="" TargetFrame="" TargetURL="" ToolTip="">                            </igtbar:TBarButton>
+                            <igtbar:TBarButton DisabledImage="" HoverImage="" Image="../../../images/button_save.gif"
+                                Key="Save" SelectedImage="" Tag="" TargetFrame="" TargetURL="" ToolTip="">                            </igtbar:TBarButton>
+                            <igtbar:TBarButton DisabledImage="" HoverImage="" Image="../../../images/button_print_medium.gif"
+                                Key="Print" SelectedImage="" Tag="" TargetFrame="" TargetURL="" ToolTip="">                            </igtbar:TBarButton>
+                            <igtbar:TBarButton Image="../../../images/button_delete_ig.gif"
+                                Key="Delete">                            </igtbar:TBarButton>
+                        </Items>
+                        
+                        <DefaultStyle Width="100px" Font-Size="9pt" Font-Names="Arial" Font-Bold="True" BorderStyle="None"
+								ForeColor="Black" BackgroundImage="none" BackColor="Transparent" TextAlign="Left">                        </DefaultStyle>
+                        <ClientSideEvents Click="formRest" />
+                        <SelectedStyle Cursor="Default" Font-Size="9pt" Font-Names="Arial" Font-Bold="True" BorderStyle="None"
+								ForeColor="Yellow" BackgroundImage="none" BackColor="DarkBlue">                        </SelectedStyle>
+                    </igtbar:UltraWebToolbar>                                    </td>
+                  </tr>
+                  <tr bgcolor="#73beb6">
+                    <td colspan="7" align="left" valign="top" style="height: 2px">
+                    </td>
+                  </tr>
+                  <tr align="left" bgcolor="#DDDDED">
+                    <td height="20" valign="middle" bgcolor="#ccebed">&nbsp;</td>
+                    <td colspan="2" valign="middle" bgcolor="#ccebed" class="bodyheader">General Information                    
+                    <asp:RequiredFieldValidator ControlToValidate="txtDBA" CssClass="bodycopy" ErrorMessage="Please enter client name." ID=RequiredFieldValidator1 runat="server"></asp:RequiredFieldValidator></td>
+                    <td valign="middle" bgcolor="#ccebed" class="bodyheader" style="width: 132px">&nbsp;</td>
+                    <td valign="middle" bgcolor="#ccebed" class="bodyheader">&nbsp;<asp:TextBox CssClass="m_shorttextfield" ID=txtSearchKey runat="server" Width="130px" onkeydown="javascript:goFocus();"></asp:TextBox></td>
+                    <td valign="middle" bgcolor="#ccebed" class="bodyheader">&nbsp;</td>
+                    <td valign="middle" bgcolor="#ccebed" class="bodyheader">&nbsp;</td>
+                  </tr>
+                  <tr align="left" bgcolor="#F3f3f3">
+                    <td height="22" valign="middle">&nbsp;</td>
+                    <td width="75" valign="middle" class="bodycopy">Name(DBA)</td>
+                    <td valign="middle" class="bodycopy" style="width: 288px">
+                      <asp:TextBox CssClass="m_shorttextfield" ID=txtDBA runat="server" Width="170px" designtimedragdrop="1163"></asp:TextBox>                      <asp:CheckBox ID=chkActivate runat="server" ForeColor="red" designtimedragdrop="74"
+																Text="Active" CssClass="bodycopy"></asp:CheckBox></td>
+                    <td valign="middle" class="bodycopy" style="width: 132px">Legal Name</td>
+                    <td valign="middle" class="bodycopy">
+                      <asp:TextBox CssClass="m_shorttextfield" ID=txtBName runat="server" Width="170px" designtimedragdrop="776"></asp:TextBox>                    </td>
+                    <td valign="middle" class="bodycopy">Tax ID/USPPI</td>
+                    <td valign="middle">
+                      <asp:TextBox CssClass="m_shorttextfield" ID=txtTAXID runat="server" Width="130px" designtimedragdrop="60"></asp:TextBox>                    </td>
+                  </tr>
+                  
+                  <tr align="left" bgcolor="#FFFFFF">
+                    <td height="22" valign="middle">&nbsp;</td>
+                    <td width="75" valign="middle" class="bodycopy">Address</td>
+                    <td valign="middle" class="bodycopy" style="width: 288px">
+                      <asp:TextBox CssClass="m_shorttextfield" ID=txtBAdress runat="server" Width="170px"></asp:TextBox>                    </td>
+                    <td valign="middle" class="bodycopy" style="width: 132px">City</td>
+                    <td valign="middle" class="bodycopy"><asp:TextBox CssClass="m_shorttextfield" ID=txtBCity runat="server" Width="160px"></asp:TextBox></td>
+                    <td valign="middle" class="bodycopy">State/Province</td>
+                    <td valign="middle"><asp:DropDownList CssClass="smallselect" ID=dlState runat="server"></asp:DropDownList></td>
+                  </tr>
+                  <tr align="left" bgcolor="#F3f3f3">
+                    <td height="22" valign="middle">&nbsp;</td>
+                    <td width="75" valign="middle" class="bodycopy">Zip/Postal Code</td>
+                    <td valign="middle" class="bodycopy" style="width: 288px">
+                      <asp:TextBox CssClass="m_shorttextfield" ID=txtBZIP runat="server" Width="80px" class="m_shorttextfield" preset="zip" ></asp:TextBox>                    </td>
+                    <td valign="middle" class="bodycopy" style="width: 132px">Country</td>
+                    <td valign="middle" class="bodycopy"><asp:DropDownList CssClass="smallselect" ID=dlCountry runat="server" Width="120px"></asp:DropDownList></td>
+                    <td valign="middle" bgcolor="#F3f3f3" class="bodycopy">Website</td>
+                    <td valign="middle" bgcolor="#F3f3f3"><asp:TextBox CssClass="m_shorttextfield" ID=txtBURL runat="server" Width="130px"></asp:TextBox>
+                      <input type=button class="bodycopy" id=btnUrl style="WIDTH: 40px; BACKGROUND-COLOR: #e0e0e0" tabindex="1" onClick=javascript:goUrl(); value=URL></td>
+                  </tr>
+				  <tr bgcolor="#73beb6">
+                    <td colspan="7" height="1" align="left" valign="top"></td>
+                  </tr>
+				   <tr>
+				  <td bgcolor="#ccebed">&nbsp;</td>
+				  <td height="20" colspan="6" bgcolor="#ccebed" class="bodyheader"><span>
+				    <asp:Label ID=Label5 runat="server" Cssclass="bodyheader"> Business Type</asp:Label>
+				  </span></td>
+				  </tr>
+				  <tr align="left" bgcolor="#F3f3f3">
+                    <td colspan="4" valign="middle" bgcolor="#f3f3f3" style="height: 61px"><table border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td height="24" align="left" valign="middle" class="bodycopy"><asp:CheckBox ID=chkConsignee runat="server" Text="Consignee"></asp:CheckBox></td>
+                        <td align="left" valign="middle" class="bodycopy">
+                        <asp:CheckBox ID=chkShipper runat="server" Text="Shipper"></asp:CheckBox></td>
+                        <td align="left" valign="middle" class="bodycopy">
+                        <asp:CheckBox ID=chkForwarder runat="server" Text="Agent"></asp:CheckBox></td>
+                        <td align="left" valign="middle" class="bodycopy">
+                        <asp:CheckBox ID=chkCarrier runat="server" Text="Carrier"></asp:CheckBox></td>
+                        <td align="left" valign="middle" class="bodycopy">
+                        <asp:CheckBox ID=chkTrucker runat="server" Text="Trucker"></asp:CheckBox></td>
+                      </tr>
+                      <tr>
+                        <td height="24" align="left" valign="middle" class="bodycopy"><asp:CheckBox ID=chkWarehousing runat="server" Text="Warehouse"></asp:CheckBox></td>
+                        <td align="left" valign="middle" class="bodycopy"><asp:CheckBox ID=chkCFS runat="server" Text="Terminal/CFS"></asp:CheckBox></td>
+                        <td align="left" valign="middle" class="bodycopy"><asp:CheckBox ID=chkBroker runat="server" Text="CHB"></asp:CheckBox></td>
+                        <td align="left" valign="middle" class="bodycopy"><asp:CheckBox ID=chkGovt runat="server" Text="Gov't"></asp:CheckBox></td>
+                        <td align="left" valign="middle" class="bodycopy"><asp:CheckBox ID=chkSpecial runat="server" Text="Other"></asp:CheckBox></td>
+                      </tr>
+                    </table></td>
+                    <td colspan="3" valign="middle" bgcolor="#f3f3f3" class="bodycopy" style="height: 61px"><input id=btnRateEdit onClick="return goRateEdit();" type=button value="AE Rate Manager" style="width: 110px; BACKGROUND-COLOR: #E0E0E0" class="bodycopy">
+                    <input id=btnScheduleB onClick="return goSc();" type=button value="Schedule B" style="width: 70px; BACKGROUND-COLOR: #E0E0E0" class="bodycopy"></td>
+                    </tr>
+				  <tr align="left" bgcolor="#F3f3f3">
+                    <td valign="middle" bgcolor="#FFFFFF" style="height: 22px">&nbsp;</td>
+                    <td width="75" valign="middle" bgcolor="#FFFFFF" class="bodycopy" style="height: 22px">C.H.L No.</td>
+                    <td valign="middle" bgcolor="#FFFFFF" class="bodycopy" style="height: 22px; width: 288px;">
+                      <asp:TextBox CssClass="m_shorttextfield" ID=txtCHLNo runat="server"></asp:TextBox></td>
+                    <td valign="middle" bgcolor="#FFFFFF" class="bodycopy" style="height: 22px; width: 132px;">Firms Code</td>
+                    <td valign="middle" bgcolor="#FFFFFF" class="bodycopy" style="height: 22px"><asp:TextBox CssClass="m_shorttextfield" ID=txtFirmsCode runat="server" designtimedragdrop="5093"></asp:TextBox></td>
+                    <td valign="middle" bgcolor="#FFFFFF" class="bodycopy" style="height: 22px">SCAC Code</td>
+                    <td valign="middle" bgcolor="#FFFFFF" class="bodycopy" style="height: 22px"><asp:TextBox CssClass="m_shorttextfield" ID=txtOceanSCAC MaxLength="4" runat="server" Width="130px" designtimedragdrop="5099"></asp:TextBox></td>
+                  </tr>
+				  <tr align="left" bgcolor="#F3f3f3">
+                    <td valign="middle" bgcolor="#F3f3f3" style="height: 24px">&nbsp;</td>
+                    <td width="75" valign="middle" class="bodycopy" style="height: 24px">Air Line Code</td>
+                    <td valign="middle" class="bodycopy" style="height: 24px; width: 288px;">
+                      <asp:TextBox CssClass="m_shorttextfield" ID="txtAirLineCode" MaxLength="2" runat="server" designtimedragdrop="5099"></asp:TextBox>                    </td>
+                    <td valign="middle" class="bodycopy" style="width: 132px; height: 24px">Prefix</td>
+                    <td valign="middle" class="bodycopy" style="height: 24px">
+                      <asp:TextBox CssClass="m_shorttextfield" ID=txtCarrierPrefix 
+																MaxLength="3" runat="server" Width="50px" designtimedragdrop="2265" ></asp:TextBox>                    </td>
+                    <td valign="middle" class="bodycopy" style="height: 24px">Agent Acct.<br> 
+                    No. (EDT)</td>
+                    <td valign="middle" style="height: 24px">
+                      <asp:TextBox ID=txtAgent_elt_acct style="BEHAVIOR: url(../../Include/igNumChkLeft.htc)" runat="server"
+																designtimedragdrop="1475" Width="100px" BorderWidth="1px" BorderStyle="Inset" MaxLength="8"></asp:TextBox>
+                      <asp:CheckBox CssClass="bodycopy" ForeColor="Black" ID=chkEDT runat="server"
+																Text="Enable EDT" designtimedragdrop="260"></asp:CheckBox>                    </td>
+                  </tr>
+				  <tr align="left" bgcolor="#F3f3f3">
+                    <td valign="middle" bgcolor="#FFFFFF" style="height: 24px">&nbsp;</td>
+                    <td width="75" valign="middle" bgcolor="#FFFFFF" class="bodycopy" style="height: 24px">Coloadee List</td>
+                    <td valign="middle" bgcolor="#FFFFFF" class="bodycopy" style="height: 24px; width: 288px;">
+                    <asp:DropDownList CssClass="smallselect" ID=dlColodee runat="server" designtimedragdrop="2277"></asp:DropDownList></td>
+                    <td valign="middle" bgcolor="#FFFFFF" class="bodycopy" style="width: 132px; height: 24px">&nbsp;<asp:CheckBox ID=chkColodee runat="server" Text="Colodee"></asp:CheckBox></td>
+                    <td valign="middle" bgcolor="#FFFFFF" class="bodycopy" style="height: 24px">&nbsp;</td>
+                    <td valign="middle" bgcolor="#FFFFFF" style="height: 24px">&nbsp;</td>
+                    <td valign="middle" bgcolor="#FFFFFF" style="height: 24px">&nbsp;</td>
+                  </tr>
+				  <tr bgcolor="#73beb6">
+                    <td colspan="7" height="1" align="left" valign="top"></td>
+                  </tr>
+				  <tr>
+				    <td bgcolor="#ccebed">&nbsp;</td>
+				    <td height="20" colspan="6" valign="middle" bgcolor="#ccebed" class="bodyheader">Contact Information </td>
+			      </tr>
+				  <tr>
+				  <td bgcolor="#f3f3f3" style="height: 35px">&nbsp;</td>
+				  <td width="75" valign="middle" bgcolor="#f3f3f3" class="bodycopy" style="height: 35px">Primary Contact</td>
+				  <td valign="middle" bgcolor="#f3f3f3" class="bodycopy" style="height: 35px; width: 288px;"><table border="0" cellpadding="0" cellspacing="0" class="bodycopy">
+                    <tr>
+                      <td class="bodycopy">First Name </td>
+                      <td class="bodycopy">M.I.</td>
+                      <td class="bodycopy">Last Name </td>
+                    </tr>
+                    <tr>
+                      <td><asp:TextBox CssClass="m_shorttextfield" ID=txtBCFName runat="server" Width="70px"></asp:TextBox></td>
+                      <td>
+                        <asp:TextBox CssClass="m_shorttextfield" ID=txtBCMName runat="server" Width="30px"></asp:TextBox>                      </td>
+                      <td><asp:TextBox CssClass="m_shorttextfield" ID=txtBCLName runat="server" Width="70px"></asp:TextBox></td>
+                    </tr>
+                  </table></td>
+				  <td valign="middle" bgcolor="#f3f3f3" class="bodycopy" style="width: 132px; height: 35px">Phone</td>
+				  <td valign="middle" bgcolor="#f3f3f3" class="bodyheader" style="height: 35px">
+				    <asp:TextBox CssClass="m_shorttextfield" ID="txtBPhone" runat="server"
+                                                                Width="100px"></asp:TextBox>				  </td>
+				  <td valign="middle" bgcolor="#f3f3f3" class="bodycopy" style="height: 35px">Fax</td>
+				  <td valign="middle" bgcolor="#f3f3f3" class="bodyheader" style="height: 35px">
+				    <asp:TextBox CssClass="m_shorttextfield" ID="txtBFax" runat="server"
+                                                                Width="130px"></asp:TextBox>				  </td>
+				  </tr>	  
+                  
+
+                  <tr align="left" bgcolor="#F3f3f3">
+                    <td valign="middle" bgcolor="#FFFFFF" style="height: 32px">&nbsp;</td>
+                    <td width="75" valign="middle" bgcolor="#FFFFFF" class="bodycopy" style="height: 32px">Cell</td>
+                    <td valign="middle" bgcolor="#FFFFFF" class="bodycopy" style="height: 32px; width: 288px;">
+                      <asp:TextBox CssClass="m_shorttextfield" ID="txtCPhone" runat="server"
+                                                                Width="160px"></asp:TextBox>                    </td>
+                    <td valign="middle" bgcolor="#FFFFFF" class="bodycopy" style="width: 132px; height: 32px">E-mail</td>
+                    <td valign="middle" bgcolor="#FFFFFF" class="bodycopy" style="height: 32px"><asp:TextBox CssClass="m_shorttextfield" ID=txtCEmail runat="server" Width="160px"></asp:TextBox>
+                      <input
+																type=button class="bodycopy" id=btnEmail style="WIDTH: 40px; BACKGROUND-COLOR: #cccccc" onClick=javascript:goEmail(); value=Email designtimedragdrop="2075"></td>
+                    <td valign="middle" bgcolor="#FFFFFF" style="height: 32px">&nbsp;</td>
+                    <td valign="middle" bgcolor="#FFFFFF" style="height: 32px">&nbsp;</td>
+                  </tr>
+				  <tr bgcolor="#73beb6">
+                    <td colspan="7" align="left" valign="top" style="height: 1px"></td>
+                  </tr>
+				  <tr>
+				  <td valign="middle" bgcolor="#ccebed">&nbsp;</td>
+				  <td height="20" colspan="6" align="left" valign="middle" bgcolor="#ccebed"><asp:Label ID=Label2 runat="server" CssClass="bodyheader"> Billing Information</asp:Label>&nbsp;&nbsp;&nbsp;
+				    <asp:CheckBox ID=chkCopy runat="server" Cssclass="bodycopy" Text="Same As Above"></asp:CheckBox></td>
+				  </tr>
+				  <tr align="left" bgcolor="#F3f3f3">
+				    <td height="22" valign="middle" bgcolor="#F3f3f3">&nbsp;</td>
+				    <td width="75" valign="middle" class="bodycopy">Address</td>
+				    <td valign="middle" class="bodycopy" style="width: 288px"><asp:TextBox CssClass="m_shorttextfield" ID=txtCAddress runat="server" width="200px">
+					</asp:TextBox></td>
+				    <td valign="middle" class="bodycopy" style="width: 132px">City</td>
+				    <td valign="middle" class="bodycopy"><asp:TextBox CssClass="m_shorttextfield" ID=txtCCity runat="server"></asp:TextBox></td>
+				    <td valign="middle" class="bodycopy">State/Province</td>
+				    <td valign="middle" class="bodycopy"><asp:DropDownList CssClass="smallselect" ID=dlState2 runat="server" Width="120"></asp:DropDownList></td>
+			      </tr>
+				  <tr align="left" bgcolor="#F3f3f3">
+				    <td height="22" valign="middle" bgcolor="#FFFFFF">&nbsp;</td>
+				    <td width="75" valign="middle" bgcolor="#FFFFFF" class="bodycopy">Zip/Postal Code</td>
+				    <td valign="middle" bgcolor="#FFFFFF" class="bodycopy" style="width: 288px">
+			        <asp:TextBox CssClass="m_shorttextfield" ID=txtBCZIP runat="server" Width="80px" class="m_shorttextfield" preset="zip" ></asp:TextBox></td>
+				    <td valign="middle" bgcolor="#FFFFFF" class="bodycopy" style="width: 132px">Country</td>
+				    <td valign="middle" bgcolor="#FFFFFF" class="bodycopy"><asp:DropDownList CssClass="smallselect" ID=dlCountry2 runat="server" Width="120px"></asp:DropDownList></td>
+				    <td valign="middle" bgcolor="#FFFFFF">&nbsp;</td>
+				    <td valign="middle" bgcolor="#FFFFFF">&nbsp;</td>
+			      </tr>
+				  <tr align="left" bgcolor="#F3f3f3">
+				    <td height="22" valign="middle" bgcolor="#F3f3f3">&nbsp;</td>
+				    <td width="75" valign="middle" class="bodycopy">Invoice Term</td>
+				    <td valign="middle" class="bodycopy" style="width: 288px">
+			        <asp:TextBox CssClass="m_shorttextfield" ID=txtInvoiceTerm runat="server" Width="70px" style="BEHAVIOR: url(../../Include/igNumChkLeft.htc)"></asp:TextBox></td>
+				    <td valign="middle" class="bodycopy" style="width: 132px">I/V ATTN.<br>
+( ATTN. :)</td>
+				    <td valign="middle" class="bodycopy"><asp:TextBox CssClass="m_shorttextfield" ID="txtz_attn_txt" runat="server" Width="160px"></asp:TextBox></td>
+				    <td valign="middle" class="bodycopy">&nbsp;</td>
+				    <td valign="middle" class="bodycopy">&nbsp;</td>
+			      </tr>
+				  <tr bgcolor="#73beb6">
+                    <td colspan="7" height="1" align="left" valign="top"></td>
+                  </tr>
+				  <tr>
+				  <td bgcolor="#ccebed" style="height: 20px">&nbsp;</td>
+				  <td height="20px" colspan="6" valign="middle" bgcolor="#ccebed" class="bodyheader" style="height: 12px">
+				    <asp:Label CssClass="bodyheader" ID=Label4 runat="server" Width="100%" designtimedragdrop="4548"> Other Information</asp:Label></td>
+				  </tr>
+                  <tr align="left" bgcolor="#F3f3f3">
+                    <td height="22" valign="middle" bgcolor="#F3f3f3">&nbsp;</td>
+                    <td width="75" valign="middle" class="bodycopy">Bond No.</td>
+                    <td valign="middle" class="bodycopy" style="width: 288px">
+                    <asp:TextBox CssClass="shorttextfield" ID=txtBond runat="server"
+																Width="100px" style="BEHAVIOR: url(../../Include/igNumChkLeft.htc)"></asp:TextBox></td>
+                    <td valign="middle" class="bodycopy" style="width: 132px">Exp. Date </td>
+                    <td valign="middle" class="bodycopy"><asp:TextBox ID="txtExpDate" runat="server" Width="80px" CssClass="m_shorttextfield" preset="shortdate"></asp:TextBox></td>
+                    <td valign="middle" class="bodycopy">Bond Amount&nbsp;</td>
+                    <td valign="middle" class="bodycopy">
+                      <igtxt:webnumericedit id=txtBondAmount runat="server" Width="100px" MinDecimalPlaces="Two" CssClass="m_shorttextfield"></igtxt:webnumericedit>                    </td>
+                  </tr>
+                  <tr align="left" bgcolor="#F3f3f3">
+                    <td height="22" valign="middle" bgcolor="#FFFFFF">&nbsp;</td>
+                    <td width="75" valign="middle" bgcolor="#FFFFFF" class="bodycopy">Surety</td>
+                    <td valign="middle" bgcolor="#FFFFFF" class="bodycopy" style="width: 288px"><asp:TextBox BorderStyle="Inset" BorderWidth="1px" CssClass="m_shorttextfield" ID=txtSurety runat="server" Width="100px"></asp:TextBox></td>
+                    <td valign="middle" bgcolor="#FFFFFF" class="bodycopy" style="width: 132px">Bank Name</td>
+                    <td valign="middle" bgcolor="#FFFFFF" class="bodycopy"><asp:TextBox CssClass="m_shorttextfield" ID=txtBankName runat="server" Width="160px"></asp:TextBox></td>
+                    <td valign="middle" bgcolor="#FFFFFF" class="bodycopy">Account No.</td>
+                    <td valign="middle" bgcolor="#FFFFFF" class="bodycopy"><asp:TextBox CssClass="m_shorttextfield" ID=txtBankAccountNo MaxLength="8" runat="server" Width="130px"></asp:TextBox></td>
+                  </tr>
+                  
+                  <tr align="left" bgcolor="#ccebed">
+                      <td height="28" valign="middle">&nbsp;</td>
+                      <td height="28" colspan="6" align="center" valign="middle" class="bodycopy">
+                          <input
+																type=button class="bodycopy" id=Button1 style="WIDTH: 143px; BACKGROUND-COLOR: #f4f2e8" onClick="return goAddContact();" value="Additional Contact" designtimedragdrop="2075">
+                          <input
+																type=button class="bodycopy" id=Button2 style="WIDTH: 90px; BACKGROUND-COLOR: #f4f2e8" onClick="return goRemarks();" value="Remarks" designtimedragdrop="2075">
+                      </td>
+                    </tr>
+                  <tr align="left" bgcolor="#F3f3f3">
+                      <td height="22" valign="middle" bgcolor="#73beb6">&nbsp;</td>
+                      <td colspan="6" valign="middle" bgcolor="#73beb6" class="bodycopy"><igtbar:ultrawebtoolbar id=UltraWebToolbar2 runat="server" ForeColor="White" Height="24px" Font-Size="10pt"
+							ItemPadding="4" BackgroundImage="none" BorderColor="Transparent" ItemWidthDefault="80px" MovableImage="ig_tb_move00.gif"
+							ImageDirectory="/ig_common/images/" BackColor="Transparent" BorderWidth="0px" Font-Names="Arial" TextAlign="Center">
+                                <HoverStyle Cursor="Hand" Font-Size="9pt" Font-Names="Arial" Font-Bold="True" BorderStyle="None"
+								ForeColor="Gold" BackgroundImage="none" BackColor="Transparent"></HoverStyle>
+                                <ClientSideEvents Click="formRest"></ClientSideEvents>
+                                <SelectedStyle Cursor="Default" Font-Size="9pt" Font-Names="Arial" Font-Bold="True" BorderStyle="None"
+								ForeColor="Yellow" BackgroundImage="none" BackColor="DarkBlue"></SelectedStyle>
+                                <Items>
+                                    <igtbar:TBarButton Tag="" Key="New" HoverImage="" ToolTip="" SelectedImage="" TargetURL="" DisabledImage=""
+									TargetFrame="" Image="../../../images/button_new.gif"></igtbar:TBarButton>
+                                    <igtbar:TBarButton Tag="" Key="Save" HoverImage="" ToolTip="" SelectedImage="" TargetURL="" DisabledImage=""
+									TargetFrame="" Image="../../../images/button_save.gif"></igtbar:TBarButton>
+                                    <igtbar:TBarButton DisabledImage="" HoverImage="" Image="../../../images/button_print_medium.gif"
+                                Key="Print" SelectedImage="" Tag="" TargetFrame="" TargetURL="" ToolTip=""> </igtbar:TBarButton>
+                                    <igtbar:TBarButton Key="Delete" Image="../../../images/button_delete_ig.gif"></igtbar:TBarButton>
+                                </Items>
+                                <DefaultStyle Width="100px" Font-Size="9pt" Font-Names="Arial" Font-Bold="True" BorderStyle="None"
+								ForeColor="Black" BackgroundImage="none" BackColor="Transparent" TextAlign="Left"></DefaultStyle>
+                        </igtbar:ultrawebtoolbar></td>
+                    </tr>
+                </table></td>
+              </tr>
+      </table>
+			<p align="center">
+                                                        <asp:button id=btnSave runat="server" Font-Size="Larger" Width="60px" DESIGNTIMEDRAGDROP="2846"
+					Visible="False" onclick="btnSave_Click"></asp:button>
+					
+					<asp:button id=btnPrint runat="server" Font-Size="Larger" Width="60px" DESIGNTIMEDRAGDROP="2846"
+					Visible="False" OnClick="btnPrint_Click" ></asp:button>	
+									
+					
+					<asp:button id=btnNew runat="server" Font-Size="Larger" Width="60px" DESIGNTIMEDRAGDROP="1398"
+					Visible="False" onclick="btnNew_Click"></asp:button><asp:button id=btnBack runat="server" Font-Size="Larger" Width="60px" DESIGNTIMEDRAGDROP="1399"
+					Visible="False" onclick="btnBack_Click"></asp:button><asp:button id=btnCancel runat="server" Font-Size="Larger" Width="60px" DESIGNTIMEDRAGDROP="1400"
+					Visible="False" onclick="btnCancel_Click"></asp:button><asp:button id=btnShow runat="server" Font-Size="Larger" Width="60px" DESIGNTIMEDRAGDROP="1401" onclick="btnShow_Click" Visible="False"></asp:button><asp:button id=btnEdit runat="server" Font-Size="Larger" Width="60px" DESIGNTIMEDRAGDROP="1402"
+					Visible="False" onclick="btnEdit_Click"></asp:button><asp:button id=btnDelete runat="server" Font-Size="Larger" Width="60px" DESIGNTIMEDRAGDROP="1403"
+					Visible="False" onclick="btnDelete_Click"></asp:button><asp:label id=lblAccountNo runat="server" ForeColor="Red" Width="136px" Font-Bold="True" Font-Italic="True"
+					Font-Underline="True" Visible="False"></asp:label>
+                              <asp:textbox  id=txtAccountNumber runat="server" Width="0px" BorderWidth="1px" BackColor="#E0E0E0" BorderStyle="Inset"></asp:textbox>
+                        <input  type="hidden" id="keyword" style="width: 168px; height:18px;"  onkeyup="LoadResults(this.value);" onblur= "HandleOnblur();"/>
+                <asp:button id=btnSaveNew runat="server" Font-Size="Larger" Width="60px" Visible="False" onclick="btnSaveNew_Click"></asp:button><asp:label id=lblTask runat="server" Font-Size="Larger" Height="1%" ForeColor="DarkGreen"
+					Width="344px" Font-Bold="True" Font-Italic="True" Visible="false"></asp:label>&nbsp;</p>			
+	</FORM>
+<div align=left id="searchresults" onblur="HideDiv('searchresults')" style="TOP: 0px; left: -500px; width: 170px; height:200px;  z-index: 1; position: absolute; background-color: #f9f9ff;  overflow-x: hidden; overflow-y: scroll; cursor: default;"> </div>
+<div id="btnSearchDiv" style="TOP: 0px; left: -500px;visibility:hidden; z-index: 1; position: absolute;"> <img src="Images/dd_box.gif" width="17" height="18"  onmousedown="ddPressed(this)"  onmouseup ="ddUp(this); LoadResults('^');" > </div>
+</body>
+<!--  #INCLUDE FILE="../../include/StatusFooter.htm" -->
+
+<% if  ( lblTask.Text == "Edit") { %>
+<script language='javascript'> 
+    var text  = document.getElementById( 'ComboSearchKey_Text' );
+    text.focus();
+    
+</script>
+<% 
+   }
+   else
+   {  
+%>
+<script language='javascript'> 
+    var text  = document.getElementById( 'txtDBA' );
+    text.focus();    
+</script>
+<% 
+   }
+%>
+
+</HTML>

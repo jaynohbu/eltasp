@@ -1,0 +1,7 @@
+﻿@{
+    ViewBag.Title = "DeliveryConfirmation";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+
+
+<iframe id ="ContentFrame" scrolling="no"   frameborder="0" width="100%" onload="autoResize('ContentFrame');" src="@Url.Content("~/ASP/domestic/shipper_notice.asp" + ViewBag.Params)"></iframe>

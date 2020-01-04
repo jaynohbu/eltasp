@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Office2003 - Blue Theme" PresetDescription="Infragistics Office2003 Blue Preset.  Sets both Look and Behavior properties." PresetType="All" />-->
+<igtxt:WebCurrencyEdit BorderStyle="Solid" UseBrowserDefaults="False" BorderWidth="1px" BorderColor="#7F9DB9" CellSpacing="1">
+  <ButtonsAppearance CustomButtonDefaultTriangleImages="Arrow">
+    <ButtonPressedStyle BackColor="#83A6F4" />
+    <ButtonStyle Width="13px" BorderWidth="1px" BorderColor="#ABC1F4" BorderStyle="Solid" ForeColor="#506080" BackColor="#C5D5FC" />
+    <ButtonHoverStyle BackColor="#DCEDFD" />
+    <ButtonDisabledStyle BackColor="#E1E1DD" BorderColor="#D7D7D7" ForeColor="#BEBEBE" />
+  </ButtonsAppearance>
+  <SpinButtons DefaultTriangleImages="ArrowSmall" Width="15px" />
+</igtxt:WebCurrencyEdit>

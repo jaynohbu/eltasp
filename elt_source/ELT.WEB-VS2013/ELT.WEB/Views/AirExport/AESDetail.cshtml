@@ -1,0 +1,743 @@
+﻿
+@model ELT.WEB.Models.AESModel
+@{
+    ViewBag.Title = "AES Form";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+@using ELT.WEB.Models
+@using ELT.CDT
+@using ELT.WEB.Controllers
+
+<script type="text/javascript">
+//<![CDATA[
+    function ItemDescSelected(s, e) {
+
+        document.getElementById("gvLineItems_DXEditor3_I").value = s.GetValue();
+        document.getElementById("gvLineItems_DXEditor2_I").value = s.GetText();
+        
+}
+
+
+
+
+    var companyId = null;
+    function OnListBoxIndexChanged(s, e) {
+        companyId = lblExporterList.GetValue();
+        if (!_AESDetail_Exporter.InCallback())
+            _AESDetail_Exporter.PerformCallback();
+
+        UpdateText_lblExporterList();
+        ddlExporterList.HideDropDown();
+    }
+    function UpdateText_lblExporterList() {
+        var selectedItems = lblExporterList.GetSelectedItems();
+        ddlExporterList.SetText(GetSelectedItemsText(selectedItems));
+    }
+    function SynchronizeListBoxValues(dropDown, args) {
+
+        var texts = dropDown.GetText().split(textSeparator);
+        var values = GetValuesByTexts(texts);
+        
+        lblExporterList.SelectValues(values);
+        UpdateText_lblExporterList();
+    }
+
+
+    function OnUltimateConsigneeListIndexChanged(s, e) {
+        companyId = lblUltimateConsigneeList.GetValue();
+        if (!_AESDetail_UltimateConsignee.InCallback())
+            _AESDetail_UltimateConsignee.PerformCallback();
+
+        UpdateText_lblUltimateConsigneeList();
+        ddlUltimateConsigneeList.HideDropDown();
+    }
+    function UpdateText_lblUltimateConsigneeList() {
+        var selectedItems = lblUltimateConsigneeList.GetSelectedItems();
+        ddlUltimateConsigneeList.SetText(GetSelectedItemsText(selectedItems));
+    }
+    function SynchronizeUltimateConsigneeListBoxValues(dropDown, args) {
+
+        var texts = dropDown.GetText().split(textSeparator);
+        var values = GetValuesByTexts(texts);
+        
+        lblUltimateConsigneeList.SelectValues(values);
+        UpdateText_lblUltimateConsigneeList();
+    }
+
+
+
+    function OnIntermediateConsigneeListIndexChanged(s, e) {
+        companyId = lblIntermediateConsigneeList.GetValue();
+        if (!_AESDetail_IntermediateConsignee.InCallback())
+            _AESDetail_IntermediateConsignee.PerformCallback();
+
+        UpdateText_IntermediateConsigneeList();
+        ddlIntermediateConsigneeList.HideDropDown();
+    }
+    function UpdateText_IntermediateConsigneeList() {
+        var selectedItems = lblIntermediateConsigneeList.GetSelectedItems();
+        ddlIntermediateConsigneeList.SetText(GetSelectedItemsText(selectedItems));
+    }
+    function SynchronizeIntermediateConsigneeListBoxValues(dropDown, args) {
+
+        var texts = dropDown.GetText().split(textSeparator);
+        var values = GetValuesByTexts(texts);
+        
+        lblIntermediateConsigneeList.SelectValues(values);
+        UpdateText_IntermediateConsigneeList();
+    }
+
+
+
+    function OnBeginCallback_Exporter(s, e) {
+        e.customArgs["companyId"] = companyId;
+        document.getElementById("ExporterID").value = companyId;
+        companyId = null;
+    }
+
+    function OnBeginCallback_IntermediateConsignee(s, e) {
+        e.customArgs["companyId"] = companyId;
+        document.getElementById("IntermediateConsigneeID").value = companyId;
+        companyId = null;
+    }
+
+    function OnBeginCallback_UltimateConsignee(s, e) {
+        e.customArgs["companyId"] = companyId;
+        document.getElementById("UltimateConsigneeID").value = companyId;
+        companyId = null;
+    }
+    function OnEndCallback_Exporter(s, e) {
+        if (companyId != null) {
+            
+            _AESDetail_Exporter.PerformCallback();
+            
+        }
+    }
+
+    function OnEndCallback_IntermediateConsignee(s, e) {
+        if (companyId != null)
+            _AESDetail_IntermediateConsignee.PerformCallback();
+    }
+
+    function OnEndCallback_UltimateConsignee(s, e) {
+        if (companyId != null)
+            _AESDetail_UltimateCosignee.PerformCallback();
+    }
+
+
+    var textSeparator = ";";
+
+   
+    function GetSelectedItemsText(items) {
+        var texts = [];
+        for (var i = 0; i < items.length; i++)
+            texts.push(items[i].text);
+        return texts.join(textSeparator);
+    }
+
+ 
+
+
+    function GetValuesByTexts(texts) {
+        var actualValues = [];
+        var item;
+        for (var i = 0; i < texts.length; i++) {
+            item = lblExporterList.FindItemByText(texts[i]);
+            if (item != null)
+                actualValues.push(item.value);
+        }
+        return actualValues;
+    }
+// ]]>
+</script>
+<hgroup>
+    <h1 class="pageheader">@ViewBag.Title</h1>
+</hgroup>
+@using (Html.BeginForm("AESDetail", "AirExport", FormMethod.Post, new { Operation = "AESDetail", id = "form_AESDetail" }))
+{
+    @Html.ValidationSummary(true)
+    if (ViewBag.IsSelected != true)
+    {
+
+    }
+    else
+    {
+
+       <table cellpadding="2" cellspacing="0" border="0" style="width: 95%; text-align: left;
+                border: solid 1px #a0829c" class="bodycopy">
+            <tr style="height: 8px; background-color: #E5D4E3">
+                <td style="text-align: center">
+                </td>
+            </tr>
+            <tr style="height: 1px; background-color: #a0829c">
+                <td style="padding: 0">
+                </td>
+            </tr>
+             <tr>
+                <td>
+                @Html.HiddenFor(model => model.AESNo)
+                @Html.HiddenFor(model => model.EltAccountNumber)
+                @Html.HiddenFor(model => model.FileType)
+     
+                    <table cellpadding="2" cellspacing="0" border="0" class="bodyheader">
+                        <tr>
+                            <td>
+                                House AWB:
+                            </td>
+                            <td style="width: 150px">
+                                @Html.DisplayFor(model => model.HAWB)
+                                 @Html.HiddenFor(model => model.HAWB)
+                            </td>
+                            <td>
+                                Master AWB:
+                            </td>
+                            <td style="width: 150px">
+                                @Html.DisplayFor(model => model.MAWB)
+                                 @Html.HiddenFor(model => model.MAWB)
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr style="height: 1px; background-color: #a0829c">
+                <td style="padding: 0">
+                </td>
+            </tr>
+            <tr style="background-color: #f0e7ef">
+                <td>
+                    <strong>
+                        <img src="/ASP/images/required.gif" align="absbottom" alt="" />Shipment Information</strong>
+                </td>
+            </tr>
+            <tr style="height: 1px; background-color: #a0829c">
+                <td style="padding: 0">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                 <!-- Shipment Information -->
+                 <table cellpadding="2" cellspacing="0" border="0" style="width: 100%" class="bodycopy">
+                        <tr>
+                            <td style="width: 25%">
+                                Shipment Reference Number
+                            </td>
+                            <td style="width: 25%">
+                                
+        
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ShipmentReferenceNumber)
+            @Html.ValidationMessageFor(model => model.ShipmentReferenceNumber)
+        </div>
+                            </td>
+                            <td style="width: 25%">
+                                Transportation Reference Number
+                            </td>
+                            <td style="width: 25%">
+                                
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TransportationReferenceNumber)
+            @Html.ValidationMessageFor(model => model.TransportationReferenceNumber)
+        </div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr style="background-color: #eeeeee">
+                            <td>
+                                State of Origin
+                            </td>
+                            <td>
+                         
+        <div class="editor-field">
+
+            @Html.DropDownListFor(m => m.StateOfOrigin, Model.StateOfOriginList)
+            @Html.ValidationMessageFor(model => model.StateOfOrigin)
+        </div>
+
+                            </td>
+                            <td>
+                                Port of Export
+                            </td>
+                            <td>
+
+                           
+        <div class="editor-field">
+
+             @Html.DropDownListFor(m => m.PortOfExport, Model.PortList)
+            @Html.ValidationMessageFor(model => model.PortOfExport)
+        </div>
+                             </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Country of Destination
+                            </td>
+                            <td>
+            
+        <div class="editor-field">
+             @Html.DropDownListFor(m => m.CountryOfDestination, Model.CountryOfDestinationList)
+            @Html.ValidationMessageFor(model => model.CountryOfDestination)
+        </div>
+                             </td>
+                            <td>
+                                Port of Unloading (Vessel Only)
+                            </td>
+                            <td>
+      
+        <div class="editor-field">
+
+             @Html.DropDownListFor(m => m.PortOfUnloading, Model.PortList)
+            @Html.ValidationMessageFor(model => model.PortOfUnloading)
+        </div>
+
+                            
+                            </td>
+                        </tr>
+                        <tr style="background-color: #eeeeee">
+                            <td>
+                                Departure Date (MM/DD/YY)
+                            </td>
+                            <td>
+                            
+
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DepartureDate)
+            @Html.ValidationMessageFor(model => model.DepartureDate)
+        </div>
+
+                             </td>
+                            <td>
+                                Mode of Transportation
+                            </td>
+                            <td>
+         
+        <div class="editor-field">
+            @Html.DropDownListFor(m => m.ModeOfTransportation, Model.ModeOfTransportationList)
+            @Html.ValidationMessageFor(model => model.ModeOfTransportation)
+        </div>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Carrier
+                            </td>
+                            <td>
+          
+        <div class="editor-field">
+            @Html.DropDownListFor(m => m.CarrierID, Model.CarrierList)
+            @Html.ValidationMessageFor(model => model.CarrierID)
+        </div>
+
+       
+
+
+                             </td>
+                            <td>
+                                Parties to Transaction
+                            </td>
+                            <td>
+                            
+      
+       
+        <div class="editor-field">
+            @Html.DropDownListFor(m => m.PartiesToTransaction, Model.HazardousCargoList)
+            @Html.ValidationMessageFor(model => model.PartiesToTransaction)
+        </div>
+
+                            </td>
+                        </tr>
+                        <tr style="background-color: #eeeeee">
+                            <td>
+                                Hazardous Cargo
+                            </td>
+                            <td>
+               
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HazardousCargo)
+            @Html.ValidationMessageFor(model => model.HazardousCargo)
+        </div>
+                            </td>
+                            <td>
+                                Routed Export Transaction
+                            </td>
+                            <td>
+                            
+
+        <div class="editor-field">
+            @Html.DropDownListFor(m => m.RoutedExportTransaction, Model.RoutedExportTransactionList)
+            @Html.ValidationMessageFor(model => model.RoutedExportTransaction)
+        </div>
+
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Inbond Type (Requires Inbond Number & FTZ)
+                            </td>
+                            <td>
+                
+        <div class="editor-field">
+            @Html.DropDownListFor(m => m.InbondType, Model.InbondTypeList)
+            @Html.ValidationMessageFor(model => model.InbondType)
+        </div>
+
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr runat="server" id="trInbond" visible="false" style="background-color: #eeeeee">
+                            <td>
+                                Foreign Trade Zone (FTZ)
+                            </td>
+                            <td>
+                       
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ForeignTradeZone)
+            @Html.ValidationMessageFor(model => model.ForeignTradeZone)
+        </div>
+
+                             </td>
+                            <td>
+                                Inbond Number
+                            </td>
+                            <td>
+                         
+        <div class="editor-field">
+            @Html.EditorFor(model => model.InbondNumber)
+            @Html.ValidationMessageFor(model => model.InbondNumber)
+        </div>
+                            </td>
+                        </tr>
+                        <tr style="background-color: #dcdcdc" runat="server" id="trInfo1">
+                            <td>
+                                ITN No.
+                            </td>
+                            <td>
+              
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.ITNNo)
+        </div>
+                            </td>
+                            <td>
+                                AES Status
+                            </td>
+                            <td>
+                     
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.AESStatus)
+        </div>
+                            </td>
+                        </tr>
+                        <tr style="background-color: #dcdcdc" runat="server" id="trInfo2">
+                            <td>
+                                AES Submit Date
+                            </td>
+                            <td>
+                    
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.AESSubmitDate)
+        </div>
+                            </td>
+                            <td>
+                                Last Updated
+                            </td>
+                            <td>
+                       
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.LastUpdated)
+        </div>
+
+                            </td>
+                        </tr>
+                    </table>
+                 <!-- /Shipment Information -->
+                </td>
+            </tr>
+            <tr style="height: 1px; background-color: #a0829c">
+                <td style="padding: 0">
+                </td>
+            </tr>
+            <tr style="background-color: #f0e7ef">
+                <td>
+                    <strong>Exporter & Freight Fowarder</strong>
+                </td>
+            </tr>
+            <tr style="height: 1px; background-color: #a0829c">
+                <td style="padding: 0">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <!-- Exporter & Freight Fowarder -->
+                    <div style="float: left; width: 50%;">
+                        <strong>Shipper List </strong>
+                         @Html.HiddenFor(model => model.ExporterID)
+     
+        
+                        <div>
+                        @Html.DevExpress().DropDownEditFor(model=>model.Exporter.CompanyName,
+                        
+                            settings => {
+                                settings.Name = "ddlExporterList";
+
+                                settings.Text = "SELECT";
+                                settings.Width = 210;
+                                
+                                settings.SetDropDownWindowTemplateContent(c =>
+                                {
+
+                                    @Html.DevExpress().ListBox(
+                                    listBoxSettings =>
+                                    {
+                                        listBoxSettings.Name = "lblExporterList";
+                                        listBoxSettings.Width = 250;
+                                        listBoxSettings.Height = 500;
+                                        listBoxSettings.Properties.EnableClientSideAPI = true;
+
+                                        listBoxSettings.Properties.TextField = "CompanyName";
+                                        listBoxSettings.Properties.ValueField = "CompanyId";
+
+                                        listBoxSettings.Properties.ValueType = typeof(Int32);
+                                        listBoxSettings.SelectedIndex = 0;
+                                        
+                                        listBoxSettings.Properties.ClientSideEvents.ValueChanged = "OnListBoxIndexChanged";
+                                    }).BindList(ViewData["CompanyList"]).GetHtml();
+                                  });
+                                settings.Properties.ClientSideEvents.TextChanged = "SynchronizeListBoxValues";
+                                settings.Properties.ClientSideEvents.DropDown = "SynchronizeListBoxValues";
+                            }
+                        ).GetHtml()
+                        </div>
+
+                        @Html.Partial("_AESDetail_Exporter",Model.Exporter)
+ 
+                    </div>
+                    
+                    
+                    <div style="float: left; width: 50%;">
+                        <strong>Freight Forwarder</strong>
+                        <table cellpadding="2" cellspacing="0" border="0" class="bodycopy" id="tblAgent">
+                            <tr>
+                                <td style="width: 80px">
+                                    DBA
+                                </td>
+                                <td>@Html.DisplayFor(model => model.FreightForwarder.CompanyName)</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Tax ID
+                                </td>
+                               <td>@Html.DisplayFor(model => model.FreightForwarder.TaxID)</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Address 1
+                                </td>
+                               <td>@Html.DisplayFor(model => model.FreightForwarder.Address.Address1)</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Address 2
+                                </td>
+                               <td>@Html.DisplayFor(model => model.FreightForwarder.Address.Address2)</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    City
+                                </td>
+                               <td>@Html.DisplayFor(model => model.FreightForwarder.Address.City)</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    State
+                                </td>
+                               <td>@Html.DisplayFor(model => model.FreightForwarder.Address.State)</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Zip Code
+                                </td>
+                                <td>@Html.DisplayFor(model => model.FreightForwarder.Address.ZipCode)</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Country
+                                </td>
+                                <td>@Html.DisplayFor(model => model.FreightForwarder.Address.Country)</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Contact Name
+                                </td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Contact Phone
+                                </td>
+                               <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <!--  
+                    https://demos.devexpress.com/MVCxMultiUseExtensionsDemos/CallbackPanel/Example
+                    -->
+
+
+                    <div style="clear:left"></div>
+                <!-- /Exporter & Freight Fowarder -->
+                 </td>
+            </tr>
+            <tr style="height: 1px; background-color: #a0829c">
+                <td style="padding: 0">
+                </td>
+            </tr>
+            <tr style="background-color: #f0e7ef">
+                <td>
+                    <strong>Consignee(s)</strong>
+                </td>
+            </tr>
+            <tr style="height: 1px; background-color: #a0829c">
+                <td style="padding: 0">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                 <!-- Consignee(s) -->
+                 <div style="float: left; width: 50%;">
+                        <strong>Ultimate Consignee</strong>
+                         @Html.HiddenFor(model => model.UltimateConsigneeID)
+
+                        <div>
+                        @Html.DevExpress().DropDownEditFor(model=>model.UltimateConsignee.CompanyName,
+                            settings => {
+                                settings.Name = "ddlUltimateConsigneeList";
+
+                                settings.Text = "SELECT";
+                                settings.Width = 210;
+                                
+                                settings.SetDropDownWindowTemplateContent(c =>
+                                {
+
+                                    @Html.DevExpress().ListBox(
+                                    listBoxSettings =>
+                                    {
+                                        listBoxSettings.Name = "lblUltimateConsigneeList";
+                                        listBoxSettings.Width = 250;
+                                        listBoxSettings.Height = 500;
+                                        listBoxSettings.Properties.EnableClientSideAPI = true;
+
+                                        listBoxSettings.Properties.TextField = "CompanyName";
+                                        listBoxSettings.Properties.ValueField = "CompanyId";
+                                        listBoxSettings.Properties.ValueType = typeof(Int32);
+                                        listBoxSettings.SelectedIndex = 0;
+
+                                        listBoxSettings.Properties.ClientSideEvents.ValueChanged = "OnUltimateConsigneeListIndexChanged";
+                                    }).BindList(ViewData["CompanyList"]).GetHtml();
+                                  });
+                                settings.Properties.ClientSideEvents.TextChanged = "SynchronizeUltimateConsigneeListBoxValues";
+                                settings.Properties.ClientSideEvents.DropDown = "SynchronizeUltimateConsigneeListBoxValues";
+                            }
+                        ).GetHtml()
+                        </div>
+
+                        @Html.Partial("_AESDetail_UltimateConsignee", Model.UltimateConsignee)
+ 
+                    </div>
+
+
+                <div style="float: left; width: 50%;">
+                        <strong>Intermediate Consignee </strong>
+                        @Html.HiddenFor(model => model.IntermediateConsigneeID)
+                        <div>
+                        @Html.DevExpress().DropDownEditFor(model=>model.IntermediateConsignee.CompanyName,
+
+                            settings => {
+                                settings.Name = "ddlIntermediateConsigneeList";
+
+                                settings.Text = "SELECT";
+                                settings.Width = 210;
+                                
+                                settings.SetDropDownWindowTemplateContent(c =>
+                                {
+
+                                    @Html.DevExpress().ListBox(
+                                    listBoxSettings =>
+                                    {
+                                        listBoxSettings.Name = "lblIntermediateConsigneeList";
+                                        listBoxSettings.Width = 250;
+                                        listBoxSettings.Height = 500;
+                                        listBoxSettings.Properties.EnableClientSideAPI = true;
+
+                                        listBoxSettings.Properties.TextField = "CompanyName";
+                                        listBoxSettings.Properties.ValueField = "CompanyId";
+                                        listBoxSettings.Properties.ValueType = typeof(Int32);
+                                        listBoxSettings.SelectedIndex = 0;
+
+                                        listBoxSettings.Properties.ClientSideEvents.ValueChanged = "OnIntermediateConsigneeListIndexChanged";
+                                    }).BindList(ViewData["CompanyList"]).GetHtml();
+                                  });
+                                settings.Properties.ClientSideEvents.TextChanged = "SynchronizeIntermediateConsigneeListBoxValues";
+                                settings.Properties.ClientSideEvents.DropDown = "SynchronizeIntermediateConsigneeListBoxValues";
+                            }
+                        ).GetHtml()
+                        </div>
+
+                        @Html.Partial("_AESDetail_IntermediateConsignee", Model.IntermediateConsignee)
+ 
+                    </div>
+                 <!-- /Consignee(s) -->
+
+
+                </td>
+            </tr>
+            <tr style="height: 1px; background-color: #a0829c">
+                <td style="padding: 0">
+                </td>
+            </tr>
+            <tr style="background-color: #f0e7ef">
+                <td>
+                    <strong>Line Items</strong>
+                </td>
+            </tr>
+            <tr style="height: 1px; background-color: #a0829c">
+                <td style="padding: 0">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                 <!-- Line Items -->
+                 @Html.Partial("_AESLineItemsPartial", Model.LineItems.ToList())
+                 </td>
+            </tr>
+            <tr style="height: 1px; background-color: #a0829c">
+                <td style="padding: 0">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center; background-color: #E5D4E3">
+                    <!-- Button -->
+                </td>
+            </tr>
+
+        </table>
+       <fieldset>
+
+        <p>
+
+
+            <input type="submit"  value="Save" />
+        </p>
+    </fieldset>
+
+
+    }
+  
+    
+}

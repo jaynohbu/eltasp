@@ -1,0 +1,443 @@
+<% Option Explicit %>
+<% response.buffer = true %>
+<% Response.Expires=-1 %>
+
+
+ 
+
+
+
+<!-- #include file="../inc/dbinfo.asp" -->
+<!-- #include file="../inc/info_tb.asp" -->
+<!-- #include file="../inc/joint.asp" -->
+
+<% if session_login_name <> "admin" then Response.Redirect "../inc/error.asp?no=1" %>
+
+
+
+<%
+	Dim pagecount, recordCount,point,po_write,po_comment
+	dim ss
+	 
+
+	pagesize = Request("pagesize")
+	if pagesize = "" then
+		pagesize=10
+	end if
+
+	page = Request("page")
+	if page = "" then page = 1
+	
+	block=10
+
+	sw = Request("sw")
+
+	if sw = "" then
+		SQL = "select count(num) as recCount from member WHERE elt_account_number=" & elt_account_number 
+
+		Set Rs = db.Execute(SQL)
+
+		recordCount = Rs(0)
+		pagecount = int((recordCount-1)/pagesize) +1
+		id_num = recordCount - (Page -1) * PageSize
+
+'		SQL = "SELECT TOP " & pagesize & " * FROM member "
+'		if int(page) > 1 then
+'		SQL = SQL & " WHERE elt_account_number=" & elt_account_number & "AND num not in "
+'		SQL = SQL & "(SELECT TOP " & ((page - 1) * pagesize) & " num FROM member WHERE elt_account_number=" & elt_account_number 
+'		SQL = SQL & " ORDER BY num DESC)"
+'		end if
+'		SQL = SQL & " WHERE elt_account_number=" & elt_account_number & " order by num desc" 
+
+		SQL = "SELECT TOP " & pagesize & " * FROM member "
+		if int(page) > 1 then
+		SQL = SQL & " WHERE num not in "
+		SQL = SQL & "(SELECT TOP " & ((page - 1) * pagesize) & " num FROM member "
+		SQL = SQL & " ORDER BY num DESC)"
+		end if
+		SQL = SQL & " order by num desc" 
+
+	else
+		ss = Request("ss")
+				
+'		SQL = "select count(num) from member where elt_account_number=" & elt_account_number & "AND " & ss & " like '%" & sw & "%'"
+		SQL = "select count(num) from member where " & ss & " like '%" & sw & "%'"
+		Set rs = db.Execute(SQL)
+
+		recordCount = Rs(0)
+		pagecount = int((recordCount-1)/pagesize) +1
+		id_num = recordCount - (Page -1) * PageSize
+  
+
+'		SQL = "SELECT TOP " & pagesize & " * FROM member"
+'		SQL = SQL & " WHERE elt_account_number=" & elt_account_number & "AND " & ss & " like '%" & sw & "%'"
+'		if int(page) > 1 then
+'		SQL = SQL & " and num not in "
+'		SQL = SQL & "(SELECT TOP " & ((page - 1) * pagesize) & " num FROM member"
+'		SQL = SQL & " where elt_account_number=" & elt_account_number & "AND " & ss & " like '%" & sw & "%' ORDER BY num DESC)"
+'		end if
+'		SQL = SQL & " WHERE elt_account_number=" & elt_account_number & " order by num desc" 
+
+		SQL = "SELECT TOP " & pagesize & " * FROM member"
+		SQL = SQL & " WHERE  " & ss & " like '%" & sw & "%'"
+		if int(page) > 1 then
+		SQL = SQL & " and num not in "
+		SQL = SQL & "(SELECT TOP " & ((page - 1) * pagesize) & " num FROM member"
+		SQL = SQL & " where  " & ss & " like '%" & sw & "%' ORDER BY num DESC)"
+		end if
+		SQL = SQL & "  order by num desc" 
+
+	end if
+
+  Set Rs = db.Execute(SQL)
+%>
+
+<html>
+<head>
+<title>Admin Page</title>
+
+<LINK rel="stylesheet" type="text/css" href="../inc/style.css">
+<Script Language="javascript">
+<!--
+
+var checkflag = "false"; 
+
+function checkboxall() { 
+
+field = eval("document.inno_check.cart");
+
+if (checkflag == "false") { 
+for (i = 0; i < field.length; i++) { 
+field[i].checked = true;} 
+checkflag = "true"; 
+return; 
+} 
+
+else { 
+for (i = 0; i < field.length; i++) { 
+field[i].checked = false; } 
+checkflag = "false"; 
+return; 
+} 
+}
+
+
+function level_change()
+{ 
+	inno_check.action = "user_process.asp?mode=cart&pagesize=<%=pagesize%><% if sw<>"" then %>&ss=<%=ss%>&sw=<%=sw%><% end if %>"
+	inno_check.submit();
+}
+
+function mem_del()
+{ 
+	inno_check.action = "user_process.asp?mode=del&pagesize=<%=pagesize%><% if sw<>"" then %>&ss=<%=ss%>&sw=<%=sw%><% end if %>"
+	inno_check.submit();
+}
+
+function mem_mail()
+{ 
+	inno_check.action = "../admin/mailling.asp?mode=sel&h_url=<%=h_url%>"
+	inno_check.submit();
+}
+
+function OpenWindow(url,intWidth,intHeight) { 
+      window.open(url, "joins", "width="+intWidth+",height="+intHeight+",resizable=0,scrollbars=1");
+}
+
+
+var i;
+
+function ans_mem_del(i)
+{
+	ans = confirm("선택된 회원을 강제탈퇴 시키겠습니까?")
+
+	if(ans == true)
+	{ 
+		inno_check.cart[i].checked = true;
+		inno_check.action = "../member/user_process.asp?mode=del&pagesize=<%=pagesize%>"
+		inno_check.submit();
+	}
+	else
+	{ }
+}
+
+//-->
+</Script>
+</head>
+<body bgcolor="#FFFFFF" marginwidth="0" marginheight="0" leftmargin="0" topmargin="0">
+
+<div align="center">
+
+<br>
+<table cellpadding="0" cellspacing="0" border="0" width="95%">
+  <tr>
+    <td class="font"><img src="../img/reference.gif" border="0"> <img src="../img/total.gif" border="0"> <%=recordCount%>, &nbsp; <img src="../img/pages.gif" border="0"> <%=page%> / <%=pagecount%></td>
+  </tr>
+</table>
+<table width="95%" border="0" cellpadding="0" cellspacing="0">
+<form method="post" name="inno_check">
+<tr>
+	<td colspan="10" height="29">
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" ID="Table1">
+	<tr>
+		<td height="1" bgcolor="#333333"></td>
+	</tr>
+	<tr>
+		<td height="1" bgcolor="#ffffff"></td>
+	</tr>
+	<tr>
+		<td height="25" bgcolor="#333333">
+		<table border="0" width="100%" cellpadding="0" cellspacing="0">
+		<tr align="center">
+			<td width="50"><font color="#FFFFFF"><b>번호</b></font></td>
+			<td width="24"><a href=javascript:checkboxall();><font color="#FFFFFF"><b>*</b></font></a></td>
+			<td><font color="#FFFFFF"><b>아이디</b></font></td>
+			<td width="100"><font color="#FFFFFF"><b>이름</b></font></td>
+			<td width="30"><font color="#FFFFFF"><b>레벨</b></font></td>
+			<td width="80"><font color="#FFFFFF"><b>포인트</b></font></td>
+			<td width="100"><font color="#FFFFFF"><b>가입일</b></font></td>
+			<td width="100"><font color="#FFFFFF"><b>만료일</b></font></td>
+			<td width="50"><font color="#FFFFFF"><b>수정</b></font></td>
+			<td width="50"><font color="#FFFFFF"><b>삭제</b></font></td>
+		</tr>
+		</table>	
+		</td>
+	</tr>
+	<tr>
+		<td height="1" bgcolor="#ffffff"></td>
+	</tr>
+	<tr>
+		<td height="1" bgcolor="#333333"></td>
+	</tr>
+	</table></td>
+</tr>
+
+
+<%
+  Dim num, name,id,join_day,id_num,term_day,i
+
+	i=0
+	Do until Rs.EOF
+
+    num = rs("num")
+    id = rs("id")
+    name = rs("name")
+    user_level = rs("user_level")
+    point = rs("point")
+    po_write = rs("po_write")
+    po_comment = rs("po_comment")
+    join_day = left(rs("join_day"),10)
+        
+    if trim(rs("term_day"))<>"" and id <> "admin" then
+		term_day = left(rs("term_day"),10)
+	else
+		term_day = "무제한"
+	end if
+%>
+
+<tr align="center">
+	<td width="50"><%=id_num%></td>
+	<td width="24"><input type="checkbox" name="cart" id="<%=i%>" value="<%=id%>"></td>
+	<td><%=id%></td>
+	<td width="100"><%=name%></td>
+	<td width="30"><%=user_level%></td>
+	<td width="80"><span style="font-size:8.5pt;"><%=point%></span><span style="font-size:7.5pt;">(<%=po_write%>/<%=po_comment%>)</span></td>
+	<td width="100"><%=join_day%></td>
+	<td width="100"><%=term_day%></td>
+	<td width="50"><a href="javascript:OpenWindow('../member/user_edit.asp?id=<%=id%>&admin=ok','500','520')">수정</a></td>
+	
+	<input type="hidden" name="id" value="<%=id%>">
+	<td width="50"><a href="javascript:ans_mem_del(<%=i%>);">삭제</a></td>
+</tr>
+<tr>
+	<td colspan="10" height="1" bgcolor="#999999"></td>
+</tr>
+
+<%
+    Rs.Movenext
+	id_num = id_num - 1
+	i=i+1
+	Loop
+
+%>
+<tr>
+	<td colspan="10" height="8">
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td height="1" bgcolor="#ffffff"></td>
+	</tr>
+	<tr>
+		<td height="4" bgcolor="#333333"></td>
+	</tr>
+	<tr>
+		<td height="1" bgcolor="#ffffff"></td>
+	</tr>
+	<tr>
+		<td height="1" bgcolor="#333333"></td>
+	</tr>
+	</table></td>
+</tr>
+
+<tr>
+	<td colspan="10" class="font1" align="right" style="word-break:break-all;padding:5px;">
+	
+	<%
+		dim sql_level1,rs_level1
+		SQL_level1 = "SELECT level_select FROM f_member"
+		Set rs_level1 = db.execute (SQL_level1)
+	 
+		if rs_level1(0) = 0 then
+	%>
+	선택된 회원
+	<select name="i_level">
+	<%	
+		dim level,i_level,j
+		
+		j=10
+		do while j > 0
+		level = j & " Level"
+		i_level = j
+		
+	%>
+	<option value="<%=i_level%>"<% if i_level=9 then %>selected<% end if %>><%=level%></option>
+	<%
+		j=j-1
+		loop
+	%>
+	</select>로 <input type="button" class="but" value="변경" onClick="javascript:level_change();">, &nbsp; 
+	<% 
+		rs_level1.close
+		set rs_level1=nothing
+	
+		end if
+	 %><input type="button" class="but" value="선택된 회원 삭제" onClick="javascript:mem_del();">, &nbsp; <input type="button" class="but" value="회원 추가" onClick="javascript:OpenWindow('../member/join.asp?page=<%=page%>&pagesize=<%=pagesize%>','500','520');" id=button1 name=button1><% if sw<>"" then %>, &nbsp; <input type="button" class="but" value="회원 전체보기" onClick="location.href='user_list.asp?pagesize=<%=pagesize%>'"><% end if %>
+	 </td>
+</tr>
+
+
+<tr>
+	<td colspan="10" class="font1" align="right" style="word-break:break-all;padding:5px;">
+	메일 보내기 : <input type="button" class="but" value="회원전체" onClick="location.href='../admin/mailling.asp?mode=sel_all&h_url=<%=h_url%>'"> &nbsp; <input type="button" class="but" value="선택된 회원" onClick="javascript:mem_mail();">
+	 </td>
+</tr>
+</form>
+<Script Language="javascript">
+<!--
+
+function search_submit()
+{
+	if (document.inno_search.sw.value == "") {
+		alert("검색어를 입력해 주세요.");
+		document.inno_search.sw.focus();
+		return;
+	}
+	
+	document.inno_search.submit();
+
+}
+
+//-->
+</Script>
+<form name="inno_search" Method="post" action="user_list.asp">
+<tr>
+	<td colspan="10" class="font1" align="right" style="word-break:break-all;padding:5px;">
+	<select name="ss" align="absmiddle">
+	<option value="id"<% if ss="id" then %> selected<% end if %>>아이디</option>
+	<option value="name"<% if ss="name" then %> selected<% end if %>>이 름</option>
+	<option value="email"<% if ss="email" then %> selected<% end if %>>전자우편</option>
+	<option value="url"<% if ss="url" then %> selected<% end if %>>홈페이지</option>
+	</select>
+	<input type="text" size="15" name="sw" class="form_input" value="<% if sw<>"" then %><%=sw%><% end if %>">
+	<input type="hidden" name="page" value="<%=page%>">
+	<input type="hidden" name="pagesize" value="<%=pagesize%>">
+	
+	<input type="button" class="but" value="검 색" onClick="javascript:search_submit();" id=button1 name=button1></td>
+</tr>
+</form>
+<script language="javascript">
+<!--
+
+function page_size_submit()
+{
+	if (document.inno_page.pagesize.value == "") {
+		alert("페이지수를 입력해 주세요.");
+		document.inno_page.pagesize.focus();
+		return;
+	}
+	
+	document.inno_page.submit();
+
+}
+
+//-->
+</script>
+<form method="post" name="inno_page" action="user_list.asp?page=<%=page%><% if sw<>"" then %>&sw=<%=sw%>&ss=<%=ss%><% end if %>">
+<tr>
+	<td colspan="10" class="font1" align="right" style="word-break:break-all;padding:5px;">한페이지에 나타낼 회원수 <input type="text" name="pagesize" size="4" class="form_input" value="<%=pagesize%>">명으로 <input type="button" class="but" value="다시보기" onClick="javascript:page_size_submit();" id=button1 name=button1></td>
+</tr>
+</form>
+<tr>
+	<td colspan="10" height="15" align="center">
+		<% If Rs.BOF Then %>
+	
+	<%
+		Else
+		If Int(Page) <> 1 Then 
+	%>
+		<a href="user_list.asp?page=<%=Page-1%>&pagesize=<%=pagesize%><% if sw<>"" then %>&ss=<%=ss%>&sw=<%=sw%><% end if %>" onFocus="this.blur()"><font color="#000000" style="font-size:8pt;">[prv]</font></a>
+	<%
+		end if
+		
+		First_Page = Int((Page-1)/Block)*Block+1
+		If First_Page <> 1 Then
+	%>
+			[<a href="user_list.asp?page=1&pagesize=<%=pagesize%><% if sw<>"" then %>&ss=<%=ss%>&sw=<%=sw%><% end if %>" onFocus="this.blur()"><font color="#000000" style="font-size:8pt;">1</font></a>]&nbsp;..
+	<%
+		end if
+		
+		If PageCount - First_Page < Block Then
+			End_Page = PageCount
+		Else
+			End_Page = First_Page + Block - 1
+		End If
+
+		For i = First_Page To End_Page
+		If Int(Page) = i Then
+	%>
+			[<font color="#FF0000" style="font-size:8pt;"><b><%=i%></b></font>]
+	<% Else %>
+			[<a href="user_list.asp?page=<%=i%>&pagesize=<%=pagesize%><% if sw<>"" then %>&ss=<%=ss%>&sw=<%=sw%><% end if %>" onFocus="this.blur()"><font color="#000000" style="font-size:8pt;"><%=i%></font></a>]
+	<%
+		End If
+		Next
+		
+		If End_Page <> PageCount Then
+	%>
+	&nbsp;..&nbsp;[<a href="user_list.asp?page=<%=PageCount%>&pagesize=<%=pagesize%><% if sw<>"" then %>&ss=<%=ss%>&sw=<%=sw%><% end if %>" onFocus="this.blur()"><font color="000000" style="font-size:8pt;"><%=PageCount%></font></a>]
+	<%
+		end if
+		
+		If Int(Page) <> PageCount Then
+	%>
+	&nbsp;<a href="user_list.asp?page=<%=page+1%>&pagesize=<%=pagesize%><% if sw<>"" then %>&ss=<%=ss%>&sw=<%=sw%><% end if %>" onFocus="this.blur()"><font color="#000000" style="font-size:8pt;">[next]</font></a>
+	<%
+		End If
+		End If
+	%>
+	
+	</td>
+</tr>
+
+</table>
+<br><br>
+<%
+
+  Rs.close
+  db.close
+  Set Rs = Nothing
+  Set db = Nothing
+%>
+</div>
+
+</body>
+</html>

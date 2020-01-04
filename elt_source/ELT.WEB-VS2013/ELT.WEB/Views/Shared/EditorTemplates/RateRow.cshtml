@@ -1,0 +1,11 @@
+﻿@model ELT.WEB.Models.RateRow
+
+<tr class="customerEdit">
+    @Html.EditorFor(m=>m.Columns)
+    @Html.HiddenFor(m => m.RouteId)
+    @Html.HiddenFor(m => m.Id)
+    <td><div class="childActionHeader"><ul><li><a href="#" onclick="DeleteCarrier('@Model.RouteId','@Model.Id')"><span>Delete</span></a></li></ul></div></td>
+</tr>
+<script>
+    $(".btnSaveAll").css("display","block");
+</script>

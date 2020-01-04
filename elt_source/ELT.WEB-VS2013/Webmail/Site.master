@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Root.master" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="RootHolder" Runat="Server">
+    <dx:ASPxSplitter ID="LayoutSplitter" runat="server" FullscreenMode="True" Width="100%" Height="100%" Orientation="Horizontal" SeparatorVisible="false" AllowResize="False"
+        ClientInstanceName="ClientLayoutSplitter">
+        <Panes>
+            <dx:SplitterPane Name="LeftPane" Size="262">
+                <Panes>
+                    <dx:SplitterPane Name="LeftHeadPart" Size="80">
+                        <ContentCollection><dx:SplitterContentControl runat="server">
+                            <dx:NavigationToolbar runat="server" />
+                        </dx:SplitterContentControl></ContentCollection>
+                        <PaneStyle CssClass="HeadPane" BorderTop-BorderWidth="0" />
+                    </dx:SplitterPane>
+                    <dx:SplitterPane Name="SidePane" ScrollBars="Auto">
+                        <ContentCollection><dx:SplitterContentControl runat="server">
+                            <div class="SidePaneContentWrapper">
+                                <div class="SidePaneContent">
+                                    <asp:ContentPlaceHolder ID="SideHolder" runat="server" />
+                                </div>
+                            </div>
+                            <div class="Logo">
+                                <dx:ASPxImage ID="LogoImage" runat="server" SpriteCssClass="Sprite_Logo" />
+                            </div>
+                        </dx:SplitterContentControl></ContentCollection>
+                        <PaneStyle CssClass="SidePane" />
+                    </dx:SplitterPane>
+                </Panes>
+                <PaneStyle BorderRight-BorderWidth="0" />
+                <CollapsedStyle CssClass="CollapsedPane" />
+            </dx:SplitterPane>
+            <dx:SplitterPane Name="RightPane">
+                <Panes>
+                    <dx:SplitterPane Name="RightHeadPart" Size="80">
+                        <ContentCollection><dx:SplitterContentControl runat="server">
+                            <dx:ActionToolbar runat="server" />
+                        </dx:SplitterContentControl></ContentCollection>
+                        <PaneStyle CssClass="HeadPane" BorderTop-BorderWidth="0" />
+                    </dx:SplitterPane>
+                    <dx:SplitterPane Name="MainPane">
+                        <ContentCollection><dx:SplitterContentControl runat="server">
+                            <asp:ContentPlaceHolder ID="MainHolder" runat="server" />
+                        </dx:SplitterContentControl></ContentCollection>
+                    </dx:SplitterPane>
+                </Panes>
+                <PaneStyle CssClass="RightPane" />
+            </dx:SplitterPane>
+        </Panes>
+        <Styles>
+            <Pane Paddings-Padding="0" />
+        </Styles>
+        <ClientSideEvents PaneResized="MailDemo.ClientLayoutSplitter_PaneResized" />
+    </dx:ASPxSplitter>
+</asp:Content>

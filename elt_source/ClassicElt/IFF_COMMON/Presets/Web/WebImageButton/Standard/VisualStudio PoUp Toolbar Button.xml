@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="VisualStudio PopUp Toolbar Button" PresetDescription="VisualStudio Toolbar PopUp Button Preset. Sets Look properties only. Notes: 1. The 'Reset' box should be checked. 2. Background and borders appear on mouse move and press. 3. Position of text and image is shifted for different states of button." PresetType="Appearance" />-->
+<igtxt:WebImageButton UseBrowserDefaults="False">
+	<FocusAppearance>
+		<Style BackColor="#DEEAF3">
+		</Style>
+		<InnerBorder ColorTop="#256CB4" WidthLeft="1px" StyleBottom="Solid" ColorBottom="#256CB4" WidthTop="1px" ColorRight="#256CB4" WidthRight="1px" StyleTop="Solid" StyleRight="Solid" WidthBottom="1px" StyleLeft="Solid" ColorLeft="#256CB4">
+		</InnerBorder>
+	</FocusAppearance>
+	<PressedAppearance ContentShift="DownRight">
+		<Style BackColor="#92B8E7">
+		</Style>
+		<InnerBorder ColorTop="#256CB4" WidthLeft="1px" StyleBottom="Solid" ColorBottom="#256CB4" WidthTop="1px" ColorRight="#256CB4" WidthRight="1px" StyleTop="Solid" StyleRight="Solid" WidthBottom="1px" StyleLeft="Solid" ColorLeft="#256CB4">
+		</InnerBorder>
+	</PressedAppearance>
+	<HoverAppearance ContentShift="UpLeft">
+		<Style BackColor="#BCD7F1">
+		</Style>
+		<InnerBorder ColorTop="#256CB4" WidthLeft="1px" StyleBottom="Solid" ColorBottom="#256CB4" WidthTop="1px" ColorRight="#256CB4" WidthRight="1px" StyleTop="Solid" StyleRight="Solid" WidthBottom="1px" StyleLeft="Solid" ColorLeft="#256CB4">
+		</InnerBorder>
+	</HoverAppearance>
+	<DisabledAppearance ContentShift="NotSet" />
+	<RoundedCorners RenderingType="Disabled">
+	</RoundedCorners>
+	<Appearance ContentShift="NotSet" />
+</igtxt:WebImageButton>

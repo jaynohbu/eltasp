@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Silver" PresetDescription="Infragistics Silver Look" PresetType="Appearance" />-->
+<igsch:WebCalendar >
+  <Layout TitleFormat="Month" ShowYearDropDown="False" PrevMonthImageUrl="ig_cal_silverP0.gif" ShowMonthDropDown="False" NextMonthImageUrl="ig_cal_silverN0.gif">
+    <FooterStyle Height="16pt" Font-Size="8pt" ForeColor="#707377" BackgroundImage="ig_cal_silver1.gif" />
+    <SelectedDayStyle ForeColor="White" BackColor="#888990" />
+    <OtherMonthDayStyle ForeColor="#888B90" />
+    <NextPrevStyle BackgroundImage="ig_cal_silver2.gif" />
+    <CalendarStyle BorderWidth="1px" Font-Size="9pt" Font-Names="Verdana" BorderColor="Gray" BorderStyle="Solid" ForeColor="#404050" BackColor="#EFF6F8" />
+    <TodayDayStyle ForeColor="Black" BackColor="#D0D2D6" />
+    <DayHeaderStyle Height="1pt" Font-Size="8pt" Font-Bold="True" ForeColor="White" BackColor="#9A98AE" />
+    <TitleStyle Height="18pt" Font-Size="10pt" Font-Bold="True" ForeColor="#303040" BackgroundImage="ig_cal_silver2.gif" BackColor="#D8E0E2" />
+  </Layout>
+</igsch:WebCalendar>

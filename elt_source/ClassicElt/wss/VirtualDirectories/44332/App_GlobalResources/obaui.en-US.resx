@@ -1,0 +1,578 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="14.0.4743.1000" _dal="1" -->
+<!-- _LocalBinding -->
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="SSSAdmin_ServiceAppTitle">
+    <value>Create New Secure Store Service Application</value>
+  </data>
+  <data name="SSSAdmin_ServiceAppName">
+    <value>Name</value>
+  </data>
+  <data name="SSSAdmin_ServiceAppNameLabel">
+    <value>Service Application Name</value>
+  </data>
+  <data name="SSSAdmin_ServiceAppNameDescription">
+    <value>Enter the name of the Secure Store Service Application. The name entered here will be used in the list of Service Applications displayed in the Manage Service Applications page.</value>
+  </data>
+  <data name="SSSAdmin_AuditLogDescription">
+    <value>Specifies if auditing should be enabled or disabled. With auditing enabled, all operations on the Secure Store Service Application are logged to the Secure Store database. Audit log will purge after the number of days specified.</value>
+  </data>
+  <data name="SSSAdmin_EnableAuditTitle">
+    <value>Enable Audit</value>
+  </data>
+  <data name="SSSAdmin_ServiceAppNameTitle">
+    <value>Enter a Service Application Name</value>
+  </data>
+  <data name="SSSAdmin_RequiredFieldErrorMessage">
+    <value>You must specify a value for this required field</value>
+  </data>
+  <data name="SSSAdmin_PassPhraseValidationErrorMessage">
+    <value>You must specify a value for this required field.</value>
+  </data>
+  <data name="SSSAdmin_PassPhraseNotMatchingErrorMessage">
+    <value>The pass phrase input does not match. Please confirm pass phrase and try again.</value>
+  </data>
+  <data name="SSSAdmin_InvalidEmailAddress">
+    <value>The e-mail address is invalid.</value>
+  </data>
+  <data name="SSSAdmin_InvalidUrl">
+    <value>The URL is invalid.</value>
+  </data>
+  <data name="SSSAdmin_ServiceAppDBServer">
+    <value>Database Server</value>
+  </data>
+  <data name="SSSAdmin_ServiceAppDBServerTitle">
+    <value>Database</value>
+  </data>
+  <data name="SSSAdmin_PassPhrase">
+    <value>Pass Phrase:</value>
+  </data>
+  <data name="SSSAdmin_ConfirmPassPhrase">
+    <value>Confirm Pass Phrase:</value>
+  </data>
+  <data name="SSSAdmin_PassPhraseTitle">
+    <value>Enter pass phrase</value>
+  </data>
+  <data name="SSSAdmin_PurgeAuditLogAfter">
+    <value>Days Until Purge</value>
+  </data>
+  <data name="SSSAdmin_PurgeAuditLogAfterTitle">
+    <value>Enter how many days the audit log will be kept</value>
+  </data>
+  <data name="SSSAdmin_AuditLogDaysValidateError">
+    <value>Audit log is required to be a number of days between 1 and 365</value>
+  </data>
+  <data name="SSSAdmin_ServiceAppEnableAudit">
+    <value>Audit log enabled</value>
+  </data>
+  <data name="SSSAdmin_ServiceAppEnableAuditTitle">
+    <value>Check to enable auditing</value>
+  </data>
+  <data name="SSSAdmin_AutoAssociateWebApp">
+    <value>Automatically associate with Web Applications</value>
+  </data>
+  <data name="SSSAdmin_AutoAssociateWebAppTitle">
+    <value>Check to automatically associate with Web applications</value>
+  </data>
+  <data name="SSSAdmin_ServiceAppPageCaption">
+    <value>Please specify the settings for the Secure Store Service Application. The settings you specify here can be changed later at the Manage Service Applications page.</value>
+  </data>
+  <data name="SSSAdmin_GenerateKeyPageDescription">
+    <value>The credential database is encrypted by using a key. The key is generated based on the pass phrase. Please specify the pass phrase.</value>
+  </data>
+  <data name="SSSAdmin_TicketTimeOutValidationMessage">
+    <value>Invalid time-out value. Please enter an integer between 1 and 525600.</value>
+  </data>
+  <data name="SSSAdmin_TargetAppTitle">
+    <value>Create New Secure Store Target Application</value>
+  </data>
+  <data name="SSSAdmin_ReachMaxFieldNumber">
+    <value>The maximum field number was reached.</value>
+  </data>
+  <data name="SSSAdmin_TargetAppId">
+    <value>Secure Store Target Application ID</value>
+  </data>
+  <data name="SSSAdmin_TargetAppIdAltText">
+    <value>Enter the application ID for this Target Application</value>
+  </data>
+  <data name="SSSAdmin_TargetAppDisplayName">
+    <value>Display Name</value>
+  </data>
+  <data name="SSSAdmin_TargetAppDisplayNameAltText">
+    <value>Enter the display name for this Target Application</value>
+  </data>
+  <data name="SSSAdmin_TargetAppContactEmail">
+    <value>Contact E-mail</value>
+  </data>
+  <data name="SSSAdmin_TargetAppContactEmailAltText">
+    <value>Enter the primay contact e-mail for this Target Application</value>
+  </data>
+  <data name="SSSAdmin_TargetAppPageUrl">
+    <value>Target Application Page URL</value>
+  </data>
+  <data name="SSSAdmin_TargetAppPageUrlDefault">
+    <value>Use default page</value>
+  </data>
+  <data name="SSSAdmin_TargetAppPageUrlCustom">
+    <value>Use custom page</value>
+  </data>
+  <data name="SSSAdmin_TargetAppPageUrlNone">
+    <value>None</value>
+  </data>
+  <data name="SSSAdmin_TargetAppPageUrlAltText">
+    <value>Enter the application page URL for this Target Application</value>
+  </data>
+  <data name="SSSAdmin_TargetApplicationType">
+    <value>Target Application Type</value>
+  </data>
+  <data name="SSSAdmin_TargetApplicationTypeAltText">
+    <value>Select the Target Application type</value>
+  </data>
+  <data name="SSSAdmin_NextButtonAltText">
+    <value>Click to go to the next page</value>
+  </data>
+  <data name="SSSAdmin_TargetAppTimeout">
+    <value>Ticket Timeout (Minutes)</value>
+  </data>
+  <data name="SSSAdmin_TargetAppTimeoutAltText">
+    <value>Enter the ticket time-out in minutes</value>
+  </data>
+  <data name="SSSAdmin_CredentialFieldValidationError">
+    <value>All credential fields added are required and cannot be empty. Use the delete button to explicitly delete a field.</value>
+  </data>
+  <data name="SSSAdmin_TargetAppNoCredentialField">
+    <value>No credential field.</value>
+  </data>
+  <data name="SSSAdmin_TargetAppCredentialFieldName">
+    <value>Field Name</value>
+  </data>
+  <data name="SSSAdmin_NextButtonTitle">
+    <value>Click to go to the next page</value>
+  </data>
+  <data name="SSSAdmin_TargetAppCredentialFieldIsMasked">
+    <value>Masked</value>
+  </data>
+  <data name="SSSAdmin_TargetAppCredentialFieldCaption">
+    <value>Specify the credential fields for your Secure Store Target Application.</value>
+  </data>
+  <data name="SSSAdmin_TargetAppCredentialFieldCaptionForEdit">
+    <value>Credential fields cannot be added or removed at this time. Only the 'Masked' property can be updated.</value>
+  </data>
+  <data name="SSSAdmin_TargetAppCredentialFieldNote">
+    <value>Important: The field names and field types cannot be edited later.</value>
+  </data>
+  <data name="SSSAdmin_TargetAppMembershipCaption">
+    <value>Specify the membership settings.</value>
+  </data>
+  <data name="SSSAdmin_TargetAppAdmins">
+    <value>Target Application Administrators</value>
+  </data>
+  <data name="SSSAdmin_TargetAppAdminsDescription">
+    <value>The list of users who have access to manage the Target Application settings. The farm administrator will have access by default.</value>
+  </data>
+  <data name="SSSAdmin_TargetAppMembers">
+    <value>Members</value>
+  </data>
+  <data name="SSSAdmin_TargetAppMembersDescription">
+    <value>The users and groups that are mapped to the credentials defined for this Target Application.</value>
+  </data>
+  <data name="SSSAdmin_TargetAppTicketRedeemers">
+    <value>Ticket Redeemers</value>
+  </data>
+  <data name="SSSAdmin_TargetAppTicketRedeemersDescription">
+    <value>The list of users authorized to redeem the tickets issued for this Target Application.</value>
+  </data>
+  <data name="SSSAdmin_TargetAppNote1">
+    <value>After creating the new application, you can add credential mappings by using the "Set Credentials" button for the selected application. You can edit the settings of this application later at the Manage Target Applications page.</value>
+  </data>
+  <data name="SSSAdmin_TargetAppPageCaption">
+    <value>Specify the settings for the new Secure Store Target Application. The settings that you specify here can be changed later at Secure Store Target Application page.</value>
+  </data>
+  <data name="SSSAdmin_SelectOneOrMoreTargetApplications">
+    <value>Please select one or more Secure Store Target Applications for this operation.</value>
+  </data>
+  <data name="SSSAdmin_SelectOneTargetApplication">
+    <value>Please select one Secure Store Target Application for this operation.</value>
+  </data>
+  <data name="SSSAdmin_CannotSelectMoreThanOneTargetApplication">
+    <value>You cannot select more than one Secure Store Target Application for this operation.</value>
+  </data>
+  <data name="SSSAdmin_TargetApplicationName">
+    <value>Target Application Name</value>
+  </data>
+  <data name="SSSAdmin_TargetApplicationTypeColumn">
+    <value>Type</value>
+  </data>
+  <data name="SSSAdmin_TargetApplicationID">
+    <value>Target Application ID</value>
+  </data>
+  <data name="SSSAdmin_TargetApplicationSettingSectionTitle">
+    <value>Target Application Settings</value>
+  </data>
+  <data name="SSSAdmin_TargetApplicationGroupLabel">
+    <value>Credential Owners:</value>
+  </data>
+  <data name="SSSAdmin_TargetApplicationGroupToolTip">
+    <value>Credential owners</value>
+  </data>
+  <data name="SSSAdmin_TargetApplicationIDDescription">
+    <value>The Secure Store Target Application ID is a unique identifier. You cannot change this property after you create the Target Application.</value>
+  </data>
+  <data name="SSSAdmin_TargetApplicationDisplayNameDescription">
+    <value>The display name is used for display purposes only.</value>
+  </data>
+  <data name="SSSAdmin_TargetApplicationContactEmailDescription">
+    <value>The contact e-mail should be a valid e-mail address of the primary contact for this Target Application.</value>
+  </data>
+  <data name="SSSAdmin_TargetApplicationPageUrlDescription">
+    <value>The Target Application page URL can be used to set the values for the credential fields for the Target Application by individual users.</value>
+  </data>
+  <data name="SSSAdmin_TargetApplicationTypeDescription">
+    <value>The Target Application type determines whether this application uses a group mapping or individual mapping. Ticketing indicates whether tickets are used for this Target Application. You cannot change this property after you create the Target Application.</value>
+  </data>
+  <data name="SSSAdmin_TargetApplicationTicketTimeoutDescription">
+    <value>The Ticket Timeout value indicates how long a ticket is considered valid after creation (measured in minutes).</value>
+  </data>
+  <data name="SSSAdmin_TargetAppManageCredentials">
+    <value>Set Credentials</value>
+  </data>
+  <data name="SSSAdmin_TargetAppDelete">
+    <value>Delete</value>
+  </data>
+  <data name="SSSAdmin_NoTargetApplication">
+    <value>There are no Secure Store Target Applications in this Secure Store Service Application. You can create a new Target Application from the Manage Target Applications group in the Edit ribbon group.</value>
+  </data>
+  <data name="SSSAdmin_ManageSSSvcPageTitle">
+    <value>Manage Secure Store Service Application</value>
+  </data>
+  <data name="SSSAdmin_DeleteTargetAppConfirmation">
+    <value>Are you sure you want to delete the selected Target Application(s)?</value>
+  </data>
+  <data name="SSSAdmin_ServerBusy">
+    <value>The page is busy submitting data to the server.</value>
+  </data>
+  <data name="SSSAdmin_AtLeastOneField">
+    <value>You must specify at least one field.</value>
+  </data>
+  <data name="SSSAdmin_NoTargetAppField">
+    <value>No Target Application field</value>
+  </data>
+  <data name="SSSAdmin_TargetAppFieldName">
+    <value>Name</value>
+  </data>
+  <data name="SSSAdmin_TargetAppFieldValue">
+    <value>Value</value>
+  </data>
+  <data name="SSSAdmin_TargetAppUser">
+    <value>Credential Owner:</value>
+  </data>
+  <data name="SSSAdmin_SetCredentialNote">
+    <value>Note: Once the credentials are set, they cannot be retrieved by the administrator. Any existing credentials for this credential owner will be overwritten.</value>
+  </data>
+  <data name="SSSAdmin_ConfirmFieldValueMismatchError">
+    <value>Confirmation field value did not match.</value>
+  </data>
+  <data name="SSSAdmin_ChangeKeyPageTitle">
+    <value>Generate New Key</value>
+  </data>
+  <data name="SSSAdmin_ChangeKeyTopLegend1">
+    <value>Generating new key requires encrypting the database by using a new key. This process may take several minutes.</value>
+  </data>
+  <data name="SSSAdmin_ChangeKeyTopLegend2">
+    <value>The pass phrase you enter will not be stored. Make sure you record the pass phrase and store it safely. The pass phrase is case-sensitive and will be required to add new secure store service servers, and for restoring to a backed-up Secure Store database. During the credential store encryption it will not be possible to set credentials.</value>
+  </data>
+  <data name="SSSAdmin_ChangeKeyErrorMessage">
+    <value>An error occurred during the "Generate Key" process. Please try again or contact your administrator.</value>
+  </data>
+  <data name="SSSAdmin_ApplicationAdminPickerTitle">
+    <value>Enter Target Application administrators</value>
+  </data>
+  <data name="SSSAdmin_ApplicationAdminDisclaimer">
+    <value>Users who have Full Control or All Target Applications privileges can administer this Secure Store Target Application.</value>
+  </data>
+  <data name="SSSAdmin_GroupPickerTitle">
+    <value>Enter members</value>
+  </data>
+  <data name="SSSAdmin_TickerRedeemerPickerTitle">
+    <value>Enter ticket redeemers</value>
+  </data>
+  <data name="SSSAdmin_CredentialFieldUserPickerTitle">
+    <value>Click to select user</value>
+  </data>
+  <data name="SSSAdmin_AddApplicationField">
+    <value>Add Field</value>
+  </data>
+  <data name="SSSAdmin_CredentialFieldSectionTitle">
+    <value>Credential Fields</value>
+  </data>
+  <data name="SSSAdmin_CredentialFieldSectionDescription">
+    <value>Enter the credential fields. The maximum number of fields enabled is 10. The field names cannot be edited later. To add a new field, click the "Add Field" button</value>
+  </data>
+  <data name="SSSAdmin_AddApplicationFieldToolTip">
+    <value>Click here to add a new credential field</value>
+  </data>
+  <data name="SSSAdmin_DeleteApplicationField">
+    <value>Delete</value>
+  </data>
+  <data name="SSSAdmin_Edit">
+    <value>Edit</value>
+  </data>
+  <data name="SSSAdmin_SetPermissions">
+    <value>Set Permissions</value>
+  </data>
+  <data name="SSSAdmin_SSSvcTargetAppPageTitle">
+    <value>Secure Store Target Application</value>
+  </data>
+  <data name="SSSAdmin_SSSvcTargetAppFieldPageTitle">
+    <value>Credential Fields</value>
+  </data>
+  <data name="SSSAdmin_SSSvcTargetAppMembershipPageTitle">
+    <value>Membership Settings</value>
+  </data>
+  <data name="SSSAdmin_SSSvcTargetAppStateInfoPageTitle">
+    <value>State Information</value>
+  </data>
+  <data name="SSSAdmin_ServiceApplicationTitle">
+    <value>Secure Store Service Application</value>
+  </data>
+  <data name="SSSAdmin_TargetApplicationPageDescription">
+    <value>Use this page to create and modify Secure Store Target Applications</value>
+  </data>
+  <data name="SimpleSolution_PackeGenerationPageTitle">
+    <value>Generating Client Artifacts</value>
+  </data>
+  <data name="SSSAdmin_CredentialFieldType">
+    <value>Field Type</value>
+  </data>
+  <data name="SSSAdmin_CredentialFieldTypeToolTip">
+    <value>Select credential field type</value>
+  </data>
+  <data name="SSSAdmin_TypeUserName">
+    <value>User Name</value>
+  </data>
+  <data name="SSSAdmin_TypePassword">
+    <value>Password</value>
+  </data>
+  <data name="SSSAdmin_TypePIN">
+    <value>PIN</value>
+  </data>
+  <data name="SSSAdmin_TypeKey">
+    <value>Key</value>
+  </data>
+  <data name="SSSAdmin_TypeGeneric">
+    <value>Generic</value>
+  </data>
+  <data name="SSSAdmin_TypeWindowsUserName">
+    <value>Windows User Name</value>
+  </data>
+  <data name="SSSAdmin_TypeWindowsPassword">
+    <value>Windows Password</value>
+  </data>
+  <data name="SSSAdmin_SetCredentialPageDescription">
+    <value>Set values for the credential fields that are defined for this Secure Store Target Application.</value>
+  </data>
+  <data name="BDC_CreateProfileTitle">
+    <value>Create/Upgrade Profile Pages</value>
+  </data>
+  <data name="BDC_CreateProfileDescription1">
+    <value>A profile page for the selected External Content Type(s) will be created on the indicated host site. A "View Profile" action will be created to point to the created profile page. The 'View Profile' Action will be used as the External Content Type Default Action.</value>
+  </data>
+  <data name="BDC_CreateProfileDescription2">
+    <value>If a profile page already exists, re-creating it will overwrite the previous one, unless the profile host site has changed. Use caution when you choose to re-create the profile page, as previous customizations will be lost.</value>
+  </data>
+  <data name="BDC_CreateProfileDescription3">
+    <value>In case that you have specified a Custom Action as the External Content Type Default Action, creating the profile page will change the Default Action to the 'View Profile' Action.</value>
+  </data>
+  <data name="BDC_CreateProfileDescription4">
+    <value>In case of upgrade from SharePoint 2007, a "View Profile (SharePoint 2007)" action will be created. It will point to the location of the previous profile page. "View Profile" action will point to the newly created profile page.</value>
+  </data>
+  <data name="BDC_Profile_TopZone">
+    <value>Top Zone</value>
+  </data>
+  <data name="BDC_Profile_MiddleZone">
+    <value>Middle Zone</value>
+  </data>
+  <data name="BDC_Profile_MiddleRightZone">
+    <value>Middle Right Zone</value>
+  </data>
+  <data name="BDC_Profile_BottomZone">
+    <value>Bottom Zone</value>
+  </data>
+  <data name="BDC_Profile_TemplateTitle">
+    <value>Business Data Profile Template</value>
+  </data>
+  <data name="BDC_SetProfilePageHost_PageTitle">
+    <value>Configure External Content Type Profile Page Host</value>
+  </data>
+  <data name="BDC_SetProfilePageHost_PageDesc1">
+    <value>Specify a SharePoint site where profile pages of External Content Types will be created. You can update this site at any time. But we strongly recommend you use a single, dedicated SharePoint site to host the profile pages of all your External Content Types.</value>
+  </data>
+  <data name="BDC_SetProfilePageHost_PageDesc2">
+    <value>Make sure you set up the permission of the SharePoint site correctly. For those who need to create profile pages, give them at minimum the "Design" permission, which allows "Add and Customize Pages" at the host site; You can also assign them to a SharePoint Group that has the "Design" permission. For end users, give read-only permission. If you need to create a new web application, please make sure you associate the web application with this Business Data Connectivity Shared Services Application.</value>
+  </data>
+  <data name="BDC_SetProfilePageHost_Url" xml:space="preserve">
+    <value>Host SharePoint site URL (e.g. http://www.contoso.com/sitename)  </value>
+  </data>
+  <data name="BDC_SetProfilePageHost_ErrUrlMissing">
+    <value>Missing profile page host URL</value>
+  </data>
+  <data name="BDC_SetProfilePageHost_ChkBoxEnableProfileCreationText">
+    <value>Enable Profile Page Creation</value>
+  </data>
+  <data name="troubleshoot_issues">
+    <value>Troubleshoot issues with Microsoft SharePoint Foundation</value>
+  </data>
+  <data name="SSS_ErrorTitle">
+    <value>Error</value>
+  </data>
+  <data name="SSS_ErrorTitleDescription">
+    <value>Secure Store Service Error</value>
+  </data>
+  <data name="SSS_ErrorText1">
+    <value>The following error occurred while performing this operation. For more information, contact your system administrator.</value>
+  </data>
+  <data name="SSS_SecurityWarningTitle">
+    <value>Secure Store Service Security Warning</value>
+  </data>
+  <data name="SSS_SecurityWarningTitleDescription">
+    <value>There is a problem with this website's security certificate.</value>
+  </data>
+  <data name="SSS_SslSecurityWarningText1">
+    <value>The website does not have a security certificate, all information that you enter will be sent in clear text.</value>
+  </data>
+  <data name="SSS_SslSecurityWarningText2">
+    <value>Security certificate problems may indicate a try to act as you or intercept any data that you send to the server.</value>
+  </data>
+  <data name="SSS_GoBackToSite">
+    <value>Go Back to Site</value>
+  </data>
+  <data name="SSS_GoBackToSiteToolTip">
+    <value>Go Back to Site</value>
+  </data>
+  <data name="SSS_ContinueToSite">
+    <value>Continue to this Site</value>
+  </data>
+  <data name="SSS_ContinueToSiteToolTip">
+    <value>Continue to this Site</value>
+  </data>
+  <data name="SSS_SetCredentialsPageTitle">
+    <value>Secure Store Service Set Credentials</value>
+  </data>
+  <data name="SSS_SetCredentialsPageDescription">
+    <value>Use this page to set credentials for a Target Application.</value>
+  </data>
+</root>

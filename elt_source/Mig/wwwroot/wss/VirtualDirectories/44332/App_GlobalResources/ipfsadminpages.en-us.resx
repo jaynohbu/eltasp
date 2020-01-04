@@ -1,0 +1,636 @@
+<root xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!---->
+<xsd:schema id="root" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+<xsd:element name="root" msdata:IsDataSet="true">
+<xsd:complexType>
+<xsd:choice maxOccurs="unbounded">
+<xsd:element name="metadata">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="value" type="xsd:string" minOccurs="0" />
+</xsd:sequence>
+<xsd:attribute name="name" type="xsd:string" />
+<xsd:attribute name="type" type="xsd:string" />
+<xsd:attribute name="mimetype" type="xsd:string" />
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="assembly">
+<xsd:complexType>
+<xsd:attribute name="alias" type="xsd:string" />
+<xsd:attribute name="name" type="xsd:string" />
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="data">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+</xsd:sequence>
+<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="resheader">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+</xsd:sequence>
+<xsd:attribute name="name" type="xsd:string" use="required" />
+</xsd:complexType>
+</xsd:element>
+</xsd:choice>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>
+<resheader name="resmimetype">
+<value>text/microsoft-resx</value>
+</resheader>
+<resheader name="version">
+<value>2.0</value>
+</resheader>
+<resheader name="reader">
+<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<resheader name="writer">
+<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<data name="manageforms_pagetitle">
+<value>Manage Form Templates</value>
+</data>
+<data name="manageforms_typeColumnHeader">
+<value>Type</value>
+</data>
+<data name="manageforms_nameColumnHeader">
+<value>Name</value>
+</data>
+<data name="manageforms_versionColumnHeader">
+<value>Version</value>
+</data>
+<data name="manageforms_modifiedDateColumnHeader">
+<value>Modified</value>
+</data>
+<data name="manageforms_categoryColumnHeader">
+<value>Category</value>
+</data>
+<data name="manageforms_statusColumnHeader">
+<value>Status</value>
+</data>
+<data name="manageforms_workflowEnabledColumnHeader">
+<value>Workflow Enabled</value>
+</data>
+<data name="manageforms_addFormButtonCaption">
+<value>Upload form template</value>
+</data>
+<data name="manageforms_addFormButtonAccessKey">
+<value>U</value>
+</data>
+<data name="manageforms_viewPropertiesMenuItem">
+<value>View Properties</value>
+</data>
+<data name="manageforms_publishMenuItem">
+<value>Activate to a Site Collection</value>
+</data>
+<data name="manageforms_unpublishMenuItem">
+<value>Deactivate from a Site Collection</value>
+</data>
+<data name="manageforms_quiesceMenuItem">
+<value>Quiesce Form Template</value>
+</data>
+<data name="manageforms_removeMenuItem">
+<value>Remove Form</value>
+</data>
+<data name="manageforms_listViewsLabel">
+<value>List Views</value>
+</data>
+<data name="manageforms_allFormsViewLabel">
+<value>All Forms</value>
+</data>
+<data name="manageforms_last20FormsViewLabel">
+<value>Last 20</value>
+</data>
+<data name="manageforms_byCategoryViewLabel">
+<value>By Category</value>
+</data>
+<data name="manageforms_byStatusViewLabel">
+<value>By Status</value>
+</data>
+<data name="manageforms_noFormTemplatesMessage">
+<value>There are no form templates on this server. To add a form template, click "Upload" above.</value>
+</data>
+<data name="uploadform_pagetitle">
+<value>Upload Form Template</value>
+</data>
+<data name="uploadform_File_Caption">
+<value>Upload Form Template</value>
+</data>
+<data name="uploadform_File_Details">
+<value>Browse to the form template you intend to add to the server.</value>
+</data>
+<data name="uploadform_File_label">
+<value>File Name:</value>
+</data>
+<data name="uploadform_File_Txt_Title">
+<value>File Name</value>
+</data>
+<data name="UploadFormVerifyText">
+<value>Before uploading, you can check this form template for detailed errors, warnings, and other information.</value>
+</data>
+<data name="UploadFormVerifyReportSetionTitle">
+<value>Form Verification Status</value>
+</data>
+<data name="UploadFormReportSetionTitle">
+<value>Form Template Status</value>
+</data>
+<data name="uploadform_Upgrade_Caption">
+<value>Upgrade</value>
+</data>
+<data name="uploadform_Upgrade_Details">
+<value>Set the behavior if the server contains a previous version of this form template with the same Form ID.</value>
+</data>
+<data name="uploadform_Upgrade_option_label">
+<value>Upgrade the form template if it already exists</value>
+</data>
+<data name="uploadform_UpgradeChoice_details">
+<value>New sessions will start using the upgraded version of the form template. Forms already open will continue to use the current version of the form template.</value>
+</data>
+<data name="uploadform_UpgradeType_label">
+<value>How would you like to handle existing browser-based form filling sessions?</value>
+</data>
+<data name="uploadform_Upgrade_Option_Gradual">
+<value>Allow existing browser-based form filling sessions to complete using the current version of the form template.</value>
+</data>
+<data name="uploadform_Upgrade_Option_Overwrite">
+<value>Terminate existing browser-based form filling sessions. Any data in those sessions will be lost.</value>
+</data>
+<data name="uploadform_UpgradeNote">
+<value>If you wish to wait until all sessions of the form template have completed before upgrading, navigate to Manage Form Templates, select the form template, and choose Quiesce form.</value>
+</data>
+<data name="Upload_Button_Text">
+<value>Upload</value>
+</data>
+<data name="Upload_Button_AccessKey">
+<value>U</value>
+</data>
+<data name="Verify_Button_Text">
+<value>Verify</value>
+</data>
+<data name="QuiesceFormTemplatePageTitle">
+<value>Quiesce Form Template</value>
+</data>
+<data name="QuiesceFormTemplatePageDescription">
+<value>Use this page to Quiesce Form Template.</value>
+</data>
+<data name="QuiesceFormTemplateQuiesce">
+<value>Quiesce</value>
+</data>
+<data name="QuiesceFormTemplateQuiesceInstructions">
+<value>Quiesce to take the Form Template gradually offline for maintenance.</value>
+</data>
+<data name="QuiesceFormTemplateFormTemplate">
+<value>Form Template</value>
+</data>
+<data name="QuiesceFormTemplateFormTemplateDescription">
+<value>This is the form template that you selected from the previous page. Use this page to see the state and quiesce.</value>
+</data>
+<data name="QuiesceFormTemplateFormTemplateName">
+<value>Name:</value>
+</data>
+<data name="QuiesceFormTemplateStatusNormal">
+<value>Status Normal</value>
+</data>
+<data name="QuiesceFormTemplateStatusNormalDescription">
+<value>Quiesce the Form Template to stop accepting new user sessions for long running operations.</value>
+</data>
+<data name="QuiesceFormTemplateStatusNormalDescription2">
+<value>The Form Template should be fully quiesced after this long (Time in Minutes):</value>
+</data>
+<data name="QuiesceFormTemplateTimeTooltip">
+<value>Quiesce Time in Minutes</value>
+</data>
+<data name="QuiesceFormTemplateQuiesceTimeErrorMessage">
+<value>The value Quiesce End Time is not valid. Specify a value from 0 through 1440.</value>
+</data>
+<data name="QuiesceFormTemplateButtonTextStartQuiescing">
+<value>Start Quiescing</value>
+</data>
+<data name="QuiesceFormTemplateStatusQuiescing">
+<value>Status Quiescing</value>
+</data>
+<data name="QuiesceFormTemplateStatusQuiescingDescription">
+<value>The Form Template is currently quiescing. It is no longer accepting new sessions.</value>
+</data>
+<data name="QuiesceFormTemplateButtonTextStopQuiescing">
+<value>Stop Quiescing</value>
+</data>
+<data name="QuiesceFormTemplateStatusQuiesced">
+<value>Status Quiesced</value>
+</data>
+<data name="QuiesceFormTemplateStatusQuiescedDescription">
+<value>The Form Template is currently quiesced. There are no open sessions.</value>
+</data>
+<data name="QuiesceFormTemplateButtonTextResetSolution">
+<value>Reset Template</value>
+</data>
+<data name="QuiesceFormTemplateRefreshButton">
+<value>Refresh</value>
+</data>
+<data name="formActivateDeactivateRemove_Properties_Caption">
+<value>Form Template Properties</value>
+</data>
+<data name="formRemove_PageInstructions">
+<value>After you remove the form template, it no longer correctly functions in any site collections. To remove the form template from the server, click Remove.</value>
+</data>
+<data name="formRemove_GoText">
+<value>Remove</value>
+</data>
+<data name="formRemove_GoAccessKey">
+<value>M</value>
+</data>
+<data name="formActivate_LocationSection_Caption">
+<value>Activation Location</value>
+</data>
+<data name="formActivate_LocationSection_Details">
+<value>Choose a site collection where you want to activate the form template.</value>
+</data>
+<data name="formDeactivate_LocationSection_Caption">
+<value>Deactivation Location</value>
+</data>
+<data name="formDeactivate_LocationSection_Details">
+<value>Choose a site collection where you want to deactivate the form template.</value>
+</data>
+<data name="ConfigureServerPageTitle">
+<value>Configure InfoPath Forms Services</value>
+</data>
+<data name="ConfigureServerEndUserPublishedTemplatesLabel">
+<value>User Browser-enabled Form Templates</value>
+</data>
+<data name="ConfigureServerPageDisableActivationLabel">
+<value>Allow users to browser-enable form templates</value>
+</data>
+<data name="ConfigureServerPageDisableRenderingLabel">
+<value>Render form templates that are browser-enabled by users</value>
+</data>
+<data name="formProperties_GeneralSection_Caption">
+<value>General Properties</value>
+</data>
+<data name="formProperties_GeneralSection_Details">
+<value>Type a new category name to be stored in the configuration database. This will appear in the Manage Form Templates page.</value>
+</data>
+<data name="formProperties_IdentitySection_Caption">
+<value>Identification</value>
+</data>
+<data name="formProperties_IdentitySection_Details">
+<value>These properties show the unique values assigned to this form.</value>
+</data>
+<data name="formProperties_SecuritySection_Caption">
+<value>Security Information</value>
+</data>
+<data name="formProperties_SecuritySection_Details">
+<value>These properties indicate the security settings for this form template. Trust level is either domain trust or full trust. Domain trust form templates can communicate only with data sources within their own domain.</value>
+</data>
+<data name="formProperties_NamePropertyCaption">
+<value>Form name:</value>
+</data>
+<data name="formProperties_FileNamePropertyCaption">
+<value>File name:</value>
+</data>
+<data name="formProperties_CreatedDatePropertyCaption">
+<value>Created on:</value>
+</data>
+<data name="formProperties_ModifiedDatePropertyCaption">
+<value>Last modified on:</value>
+</data>
+<data name="formProperties_CategoryPropertyCaption">
+<value>Category name:</value>
+</data>
+<data name="formProperties_CategoryPropertyTooltip">
+<value>Category name</value>
+</data>
+<data name="formProperties_VersionPropertyCaption">
+<value>Version:</value>
+</data>
+<data name="formProperties_StatusPropertyCaption">
+<value>Status:</value>
+</data>
+<data name="formProperties_ContainsCodePropertyCaption">
+<value>Contains business logic:</value>
+</data>
+<data name="formProperties_IsDigitallySignedPropertyCaption">
+<value>Digitally signed:</value>
+</data>
+<data name="formProperties_TrustLevelPropertyCaption">
+<value>Trust level:</value>
+</data>
+<data name="formProperties_WorkflowEnabledCaption">
+<value>Workflow Enabled:</value>
+</data>
+<data name="formProperties_FormLocalePropertyCaption">
+<value>Form locale:</value>
+</data>
+<data name="formProperties_DescrptionPropertyCaption">
+<value>Description:</value>
+</data>
+<data name="formProperties_DescrptionPropertyTooltip">
+<value>Description</value>
+</data>
+<data name="formProperties_UrnPropertyCaption">
+<value>Form ID:</value>
+</data>
+<data name="formProperties_TemplateIdPropertyCaption">
+<value>Template ID:</value>
+</data>
+<data name="formProperties_FeatureTitlePropertyCaption">
+<value>Form title:</value>
+</data>
+<data name="ValidationSummaryHeaderText">
+<value>There were errors on the page:</value>
+</data>
+<data name="DataConnectionTimeout_Title">
+<value>Data Connection Timeouts</value>
+</data>
+<data name="DataConnectionTimeout_Description">
+<value>Specify default and maximum timeouts for data connections from browser-enabled form. The connection timeout can be changed by code in the form template, but will never exceed the maximum timeout specified.</value>
+</data>
+<data name="DataConnectionTimeout_DefaultTimeout">
+<value>Default data connection timeout:</value>
+</data>
+<data name="DataConnectionTimeout_DefaultTimeoutValidationMessage">
+<value>This value must be a non-negative integer and less than or equal to the Maximum data connection timeout.</value>
+</data>
+<data name="DataConnectionTimeout_MaxTimeout">
+<value>Maximum data connection timeout:</value>
+</data>
+<data name="DataConnectionTimeout_MaxTimeoutValidationMessage">
+<value>
+			This value must be a non-negative integer and greater than or equal to the Default data connection timeout.</value>
+</data>
+<data name="DataConnectionTimeout_Milliseconds">
+<value>milliseconds</value>
+</data>
+<data name="DataConnectionResponseSize_Title">
+<value>Data Connection Response Size</value>
+</data>
+<data name="DataConnectionResponseSize_Description">
+<value>Specify the maximum size of responses data connections are allowed to process.</value>
+</data>
+<data name="DataConnectionResponseSize_Kilobytes">
+<value>kilobytes</value>
+</data>
+<data name="DataConnectionResponseSize_MaxResponseSizeValidationMessage">
+<value>This value must be a non-negative integer.</value>
+</data>
+<data name="DataRequireSsl_Title">
+<value>HTTP data connections</value>
+</data>
+<data name="DataRequireSsl_Description">
+<value>If data connections in browser-enabled form templates require Basic Authentication or Digest Authentication, a password will be sent over the network. Check this box to require an SSL-encrypted connection for these authentication types.</value>
+</data>
+<data name="DataRequireSsl_CheckBox">
+<value>Require SSL for HTTP authentication to data sources</value>
+</data>
+<data name="DataAllowEmbeddedSql_Title">
+<value>Embedded SQL Authentication</value>
+</data>
+<data name="DataAllowEmbeddedSql_Description">
+<value>Forms that connect to databases may embed SQL username and password in the connection string. The connection string can be read in cleartext in the UDC file associated with the solution, or in the solution manifest. Uncheck this box to block forms from using embedded SQL credentials.</value>
+</data>
+<data name="DataAllowEmbeddedSql_CheckBox">
+<value>Allow embedded SQL authentication</value>
+</data>
+<data name="DataAllowUdcAuth_Title">
+<value>Authentication to data sources (user form templates)</value>
+</data>
+<data name="DataAllowUdcAuth_Description">
+<value>Data connection files can contain authentication information, such as an explicit username and password or a Microsoft Office Secure Store Application ID. Check this box to allow user form templates to use this authentication information.</value>
+</data>
+<data name="DataAllowUdcAuth_CheckBox">
+<value>Allow user form templates to use authentication information contained in data connection files</value>
+</data>
+<data name="DataAllowIWCrossDomain_Title">
+<value>Cross-Domain Access for User Form Templates</value>
+</data>
+<data name="DataAllowIWCrossDomain_Description">
+<value>Form templates can contain data connections that access data from other domains. Select this check box to allow user form templates to access data from another domain.</value>
+</data>
+<data name="DataAllowIWCrossDomain_CheckBox">
+<value>Allow cross-domain data access for user form templates that use connection settings in a data connection file</value>
+</data>
+<data name="DoSLoggingThreshold_Title">
+<value>Thresholds</value>
+</data>
+<data name="DoSLoggingThreshold_Description">
+<value>Specify the thresholds at which to end user sessions and log error messages.</value>
+</data>
+<data name="DoSLoggingThreshold_SessionStateSize">
+<value>Maximum size of user session data:</value>
+</data>
+<data name="DoSLoggingThreshold_Bytes">
+<value>kilobytes</value>
+</data>
+<data name="DoSLoggingThreshold_PostbacksPerSession">
+<value>Number of postbacks per session:</value>
+</data>
+<data name="DoSLoggingThreshold_ActionsPerPostback">
+<value>Number of actions per postback:</value>
+</data>
+<data name="DoSLoggingThreshold_ValidationMessage">
+<value>Values must be a non-negative integer and less than or equal to 999999.</value>
+</data>
+<data name="DoSLoggingThreshold_SessionStateValidationMessage">
+<value>Values must be a non-negative integer and less than or equal to 99999999.</value>
+</data>
+<data name="StateTimeout_Title">
+<value>User Sessions</value>
+</data>
+<data name="StateTimeout_Description">
+<value>Specify time and data limits for user sessions. User session data is stored by the Microsoft SharePoint Server State Service.</value>
+</data>
+<data name="StateTimeout_ActiveSessions">
+<value>Active sessions should be terminated after:</value>
+</data>
+<data name="StateTimeout_Minutes">
+<value>minutes</value>
+</data>
+<data name="ManageDataConnectionFiles_PageTitle">
+<value>Manage Data Connection Files</value>
+</data>
+<data name="ManageDataConnectionFiles_ListViewsLabel">
+<value>List Views</value>
+</data>
+<data name="ManageDataConnectionFiles_AllDataConnectionFilesViewLabel">
+<value>All Data Connection Files</value>
+</data>
+<data name="ManageDataConnectionFiles_ByCategoryViewLabel">
+<value>By category</value>
+</data>
+<data name="ManageDataConnectionFiles_AddDataConnectionFilesButtonCaption">
+<value>Upload</value>
+</data>
+<data name="ManageDataConnectionFiles_AddDataConnectionFilesButtonAccessKey">
+<value>U</value>
+</data>
+<data name="ManageDataConnectionFiles_NoDataConnectionFilesMessage">
+<value>There are no form data connection files on this server. To upload a data connection file, click "Upload" above.</value>
+</data>
+<data name="ManageDataConnectionFiles_TypeColumnHeader">
+<value>Type</value>
+</data>
+<data name="ManageDataConnectionFiles_FileNameColumnHeader">
+<value>Name</value>
+</data>
+<data name="ManageDataConnectionFiles_NameColumnHeader">
+<value>Display Name</value>
+</data>
+<data name="ManageDataConnectionFiles_DescriptionColumnHeader">
+<value>Description</value>
+</data>
+<data name="ManageDataConnectionFiles_CategoryColumnHeader">
+<value>Category</value>
+</data>
+<data name="ManageDataConnectionFiles_WebAccessibleColumnHeader">
+<value>Web Accessible</value>
+</data>
+<data name="ManageDataConnectionFiles_ViewPropertiesMenuEdit">
+<value>Edit Properties</value>
+</data>
+<data name="ManageDataConnectionFiles_ViewPropertiesMenuRemove">
+<value>Delete</value>
+</data>
+<data name="AddDataConnectionFile_PageTitle">
+<value>Upload Data Connection File</value>
+</data>
+<data name="AddDataConnectionFile_SelectFileCaption">
+<value>Select File</value>
+</data>
+<data name="AddDataConnectionFile_SelectFileDescription">
+<value>Browse to the data connection file you intend to upload.</value>
+</data>
+<data name="AddDataConnectionFile_SelectFileInputLabel">
+<value>File name:</value>
+</data>
+<data name="AddDataConnectionFile_SelectFileInputTooltip">
+<value>Choose a file to upload</value>
+</data>
+<data name="AddDataConnectionFile_SelectFileOverwriteLabel">
+<value>Overwrite the file if it already exists</value>
+</data>
+<data name="AddDataConnectionFile_CategoryCaption">
+<value>Category</value>
+</data>
+<data name="AddDataConnectionFile_CategoryDescription">
+<value>Specify the category of this file.</value>
+</data>
+<data name="AddDataConnectionFile_WebAccessibilityCaption">
+<value>Web Accessibility</value>
+</data>
+<data name="AddDataConnectionFile_WebAccessibilityDescription">
+<value>Select whether clients such as Microsoft InfoPath can access this file over HTTP.</value>
+</data>
+<data name="AddDataConnectionFile_WebAccessibilityAllowLabel">
+<value>Allow HTTP access to this file</value>
+</data>
+<data name="AddDataConnectionFile_UploadButtonLabel">
+<value>Upload</value>
+</data>
+<data name="AddDataConnectionFile_UploadButtonAccessKey">
+<value>u</value>
+</data>
+<data name="EditDataConnectionFile_ModifyButtonLabel">
+<value>Modify</value>
+</data>
+<data name="EditDataConnectionFile_ModifyButtonAccessKey">
+<value>m</value>
+</data>
+<data name="EditDataConnectionFile_ReferencesCaption">
+<value>References</value>
+</data>
+<data name="RemoveDataConnectionFile_PageTitle">
+<value>Delete Data Connection File</value>
+</data>
+<data name="RemoveDataConnectionFile_DetailsSectionTitle">
+<value>File details</value>
+</data>
+<data name="RemoveDataConnectionFile_DetailsSectionFileNameLabel">
+<value>Name:</value>
+</data>
+<data name="RemoveDataConnectionFile_DetailsSectionNameLabel">
+<value>Display name:</value>
+</data>
+<data name="RemoveDataConnectionFile_DetailsSectionDescriptionLabel">
+<value>Description:</value>
+</data>
+<data name="RemoveDataConnectionFile_DetailsSectionCategoryLabel">
+<value>Category:</value>
+</data>
+<data name="RemoveDataConnectionFile_DetailsSectionWebAccessibleLabel">
+<value>Web accessible:</value>
+</data>
+<data name="RemoveDataConnectionFile_RemoveButtonLabel">
+<value>Delete</value>
+</data>
+<data name="RemoveDataConnectionFile_RemoveButtonAccessKey">
+<value>M</value>
+</data>
+<data name="ManageFormsServiceProxy_PageTitle">
+<value>Configure InfoPath Forms Services Web Service Proxy</value>
+</data>
+<data name="ManageFormsServiceProxy_EnableProxySectionLabel">
+<value>Enable InfoPath Forms Services Web service proxy</value>
+</data>
+<data name="ManageFormsServiceProxy_EnableProxySectionDescription">
+<value>Use the proxy for data connections between InfoPath Forms Services forms and Web services. The data connections must be defined in universal data connection (UDC) files and they must be enabled to use a proxy. </value>
+</data>
+<data name="ManageFormsServiceProxy_EnableCheckbox_Label">
+<value>Enable</value>
+</data>
+<data name="ManageFormsServiceProxy_AllowIWSectionLabel">
+<value>Enable InfoPath Forms Services Web service proxy for user forms</value>
+</data>
+<data name="ManageFormsServiceProxy_AllowIWSectionDescription">
+<value>Use the proxy for data connections in user forms</value>
+</data>
+<data name="ManageFormsServiceProxy_AllowIWCheckbox_Label">
+<value>Enable</value>
+</data>
+<data name="AdminBreadCrumbs_ipfsConfig">
+<value>Configure InfoPath Forms Services</value>
+</data>
+<data name="AdminBreadCrumbs_manageformsserviceproxy">
+<value>Configure InfoPath Forms Services Web Service Proxy</value>
+</data>
+<data name="AdminBreadCrumbs_manageformtemplates">
+<value>Manage Form Templates</value>
+</data>
+<data name="AdminBreadCrumbs_uploadformtemplate">
+<value>Upload Form Template</value>
+</data>
+<data name="AdminBreadCrumbs_formtemplateproperties">
+<value>View Properties</value>
+</data>
+<data name="AdminBreadCrumbs_activateformtemplate">
+<value>Activate to a Site Collection</value>
+</data>
+<data name="AdminBreadCrumbs_deactivateformtemplate">
+<value>Deactivate from a Site Collection</value>
+</data>
+<data name="AdminBreadCrumbs_removeformtemplate">
+<value>Remove</value>
+</data>
+<data name="AdminBreadCrumbs_quiesceformtemplate">
+<value>Quiesce Form Template</value>
+</data>
+<data name="AdminBreadCrumbs_managedataconnectionfiles">
+<value>Manage Data Connection Files</value>
+</data>
+<data name="AdminBreadCrumbs_adddataconnectionfile">
+<value>Upload Data Connection File</value>
+</data>
+<data name="AdminBreadCrumbs_editdataconnectionfile">
+<value>Edit Data Connection File</value>
+</data>
+<data name="AdminBreadCrumbs_removedataconnectionfile">
+<value>Remove Data Connection File</value>
+</data>
+</root>
+

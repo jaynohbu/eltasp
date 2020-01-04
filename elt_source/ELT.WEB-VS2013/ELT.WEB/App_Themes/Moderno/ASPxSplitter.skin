@@ -1,0 +1,8 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxSplitter" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxSplitter runat="server" SeparatorSize="9px" CssFilePath="~/App_Themes/Moderno/{0}/styles.css" CssPostfix="Moderno">
+    <Styles CssPostfix="Moderno" CssFilePath="~/App_Themes/Moderno/{0}/styles.css"></Styles>
+    <Images SpriteCssFilePath="~/App_Themes/Moderno/{0}/sprite.css"></Images>
+</dx:ASPxSplitter>
+

@@ -1,0 +1,57 @@
+<!-- #include file="dbinfo.asp" -->
+<%
+Dim emailAddress,password
+
+Call get_parameters
+
+If emailAddress <> "" And password <> "" Then
+	If Not check_email Then
+		Call create_setup_session
+		Response.Write(get_setup_session_id)
+	Else
+		Response.Write("exists")
+	End If
+Else
+	Response.Write("error")
+End If
+
+Sub get_parameters
+    emailAddress = Request.QueryString("email")
+    password = Request.QueryString("password")
+End Sub
+
+Function check_email
+    dim sql,rs,resVal
+    resVal = False
+    sql = "SELECT * FROM setup_session WHERE email='" & emailAddress & "'"
+    Set rs = db.Execute(SQL)
+    
+    If Not rs.EOF And Not rs.BOF Then
+        resVal = True
+    End If
+
+    check_email = resVal
+End Function
+
+Function get_setup_session_id
+    dim sql,rs,resVal
+    resVal = ""
+    sql = "SELECT sid FROM setup_session WHERE email='" & emailAddress & "' AND password='" & password & "'"
+
+    Set rs = db.Execute(SQL)
+    
+    If Not rs.EOF And Not rs.BOF Then
+        resVal = rs("sid").value
+    End If
+    
+    get_setup_session_id = resVal
+End Function
+
+Sub create_setup_session
+    dim sql
+    sql = "INSERT INTO setup_session VALUES " _
+        & "(NEWID(),'" & emailAddress & "','" & password _
+        & "',NULL,GETDATE(),GETDATE(),NULL,'','','',NULL)"
+    db.Execute SQL
+End Sub
+%>

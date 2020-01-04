@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Blue 2" PresetDescription="Infragistics Blue 2 Preset" PresetType="Appearance" />-->
+<igsch:WebDateChooser >
+  <ClientSideEvents />
+  <CalendarLayout TitleFormat="Month" ShowYearDropDown="False" PrevMonthImageUrl="ig_cal_blueP0.gif" ShowMonthDropDown="False" NextMonthImageUrl="ig_cal_blueN0.gif">
+    <DayStyle BackColor="#7AA7E0" />
+    <FooterStyle Height="16pt" Font-Size="8pt" ForeColor="#505080" BackgroundImage="ig_cal_blue2.gif">
+      <BorderDetails ColorTop="LightSteelBlue" WidthTop="1px" StyleTop="Solid" />
+    </FooterStyle>
+    <SelectedDayStyle BackColor="SteelBlue" />
+    <OtherMonthDayStyle ForeColor="SlateGray" />
+    <NextPrevStyle BackgroundImage="ig_cal_blue1.gif" />
+    <CalendarStyle BorderWidth="1px" Font-Size="9pt" Font-Names="Verdana" BorderColor="SteelBlue" BorderStyle="Solid" BackColor="#E0EEFF" />
+    <TodayDayStyle BackColor="#97B0F0" />
+    <DayHeaderStyle Height="1pt" Font-Size="8pt" Font-Bold="True" ForeColor="#606090" BackColor="#7AA7E0">
+      <BorderDetails StyleBottom="Solid" ColorBottom="LightSteelBlue" WidthBottom="1px" />
+    </DayHeaderStyle>
+    <TitleStyle Height="18pt" Font-Size="10pt" Font-Bold="True" ForeColor="#505080" BackgroundImage="ig_cal_blue1.gif" BackColor="#CCDDFF" />
+  </CalendarLayout>
+  <DropButton>
+    <HoverStyle />
+    <Style />
+  </DropButton>
+  <ExpandEffects ShadowColor="LightGray" />
+</igsch:WebDateChooser>

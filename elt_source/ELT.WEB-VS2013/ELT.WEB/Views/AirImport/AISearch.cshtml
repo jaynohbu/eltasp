@@ -1,0 +1,6 @@
+﻿@{
+    ViewBag.Title = "AISearch";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+
+<iframe id ="ContentFrame" scrolling="no"   frameborder="0" width="100%" onload="autoResize('ContentFrame');" src="@Url.Content("~/IFF_MAIN/ASPX/Search/AirImportSearch.aspx" + ViewBag.Params)"></iframe>

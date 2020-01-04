@@ -1,0 +1,36 @@
+﻿// var formData = { Type: $("#hBillType").val(), BillNo: $("#hBillNumber").val() }; //Array 
+            //var URL = '@Url.Content("~/AirExport/_SendAgentPreAlert")';
+         
+            //$.ajax({
+            //    url: URL,
+            //    type: "POST",
+            //    data: formData,
+            //    success: function (data, textStatus, jqXHR) {
+            //        alert(data.Status);
+            //    },
+            //    error: function (jqXHR, textStatus, errorThrown) {
+            //        alert(errorThrown);
+            //    }
+            //});
+
+//adding id column to [aes_detail] 
+DECLARE @id decimal 
+SET @id = 0 
+UPDATE [PRDDB].[dbo].[aes_detail] 
+SET @id = id = @id + 1 
+GO 
+
+
+  DECLARE @id decimal to [all_rate_table]
+SET @id = 0 
+UPDATE [PRDDB].[dbo].[all_rate_table]
+SET @id = id = @id + 1 
+GO 
+
+<ClientSideEvents RowDblClick="function(s, e) {
+        s.StartEditRow(e.visibleIndex);
+    }" />
+
+
+
+var dxo = aspxGetControlCollection().Get('GridMaster_ef0_GridWeightBreaks'); 

@@ -1,0 +1,34 @@
+<SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+<a1:ObjectStreamer id="ref-1" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Infragistics.Shared.Serialization/Infragistics.Shared.v3.2">
+<TargetTypeName id="ref-3">UltraGridBase</TargetTypeName>
+<DisplayLayout href="#ref-4"/>
+<PresetDescription id="ref-5">A typical Outlook GroupBy grid. unlike in Outlook, the rows can be updated or deleted and new rows can be added.</PresetDescription>
+<PresetType>2</PresetType>
+<PresetName id="ref-6">Outlook GroupBy - updatable</PresetName>
+</a1:ObjectStreamer>
+<a1:ObjectStreamer id="ref-4" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Infragistics.Shared.Serialization/Infragistics.Shared.v3.2">
+<TargetTypeName id="ref-7">UltraGridLayout</TargetTypeName>
+<TabNavigation>2</TabNavigation>
+<ViewStyleBand>2</ViewStyleBand>
+<Override href="#ref-8"/>
+<ScrollStyle>1</ScrollStyle>
+<PresetType>2</PresetType>
+</a1:ObjectStreamer>
+<a1:ObjectStreamer id="ref-8" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Infragistics.Shared.Serialization/Infragistics.Shared.v3.2">
+<AllowAddNew>6</AllowAddNew>
+<SelectTypeCell>1</SelectTypeCell>
+<RowSelectors>2</RowSelectors>
+<AllowGroupBy>1</AllowGroupBy>
+<AllowDelete>1</AllowDelete>
+<AllowUpdate>1</AllowUpdate>
+<HeaderClickAction>3</HeaderClickAction>
+<CellClickAction>2</CellClickAction>
+<SelectTypeGroupByRow>1</SelectTypeGroupByRow>
+<PresetType>2</PresetType>
+<SelectTypeCol>1</SelectTypeCol>
+<TargetTypeName id="ref-9">UltraGridOverride</TargetTypeName>
+<SelectTypeRow>3</SelectTypeRow>
+</a1:ObjectStreamer>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

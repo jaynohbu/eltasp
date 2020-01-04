@@ -1,0 +1,15 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxImageGallery" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxImageGallery runat="server" PagerPanelSpacing="8px">
+    <Images SpriteCssFilePath="~/App_Themes/MetropolisBlue/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/MetropolisBlue/Web/Loading.gif" />
+    </Images>
+    <Styles CssPostfix="MetropolisBlue" CssFilePath="~/App_Themes/MetropolisBlue/{0}/styles.css">
+        <Pager ItemSpacing="0px" Spacing="0px" />
+    </Styles>
+    <PagerSettings CurrentPageNumberFormat="{0}">
+		<PageSizeItemSettings ShowPopupShadow="False">
+        </PageSizeItemSettings>
+	</PagerSettings>
+</dx:ASPxImageGallery>

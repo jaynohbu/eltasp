@@ -1,0 +1,68 @@
+﻿@model BalanceSheetMasterModel
+@{
+    ViewBag.Title = "Balance Sheet";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+@using ELT.WEB.Models
+@using ELT.CDT
+@using ELT.WEB.Controllers
+
+<hgroup>
+    <h1 class="pageheader">@ViewBag.Title</h1>
+</hgroup>
+
+@using (Html.BeginForm("BalanceSheet", "Accounting", FormMethod.Post, new { Operation = "BalanceSheet" }))
+{
+
+    {
+   @* <br />
+        
+    <br />
+   *@
+    
+    
+      <table  style="margin-top:20px;text-align:center "  align="center"  >
+          <tr>
+             
+              <td valign="top" colspan="2" align="right">
+                  @foreach (string typeName in GridViewExportHelper.ExportTypes.Keys)
+                  {
+                  <input type="submit" name="@typeName" value="@GridViewExportHelper.ExportTypes[typeName].Title" />
+                  <text>&nbsp;</text>
+                  }
+                 <input type="button" name="ReSelect" value="Go Back to Search" onclick="RedirectParentTo('@Url.Content("~/Accounting/BalanceSheet/parm=bal")')" />
+              </td>
+          </tr>
+
+          <tr>
+              <td colspan="2" style="text-align:left">
+                  <br />
+                  As of: @Model.AsOf 
+                 
+                  <br />
+            
+          </tr>
+
+
+            <tr>
+                <td valign="top" align="left">
+                    @Html.Partial("_BalanceSheet/_BalanceSheetPartial_Asset", Model.Asset)
+                </td>
+                <td valign="top" align="left">
+                    @Html.Partial("_BalanceSheet/_BalanceSheetPartial_Liability", Model.LiabilityEquity)
+                </td>
+            </tr>
+        </table> 
+
+   
+    }
+}
+ <style type="text/css">
+    
+  
+    .dxgvGroupPanel 
+    {
+        display:none;
+    }
+    </style>
+

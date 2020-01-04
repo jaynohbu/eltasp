@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Windows 2000" PresetDescription="Infragistics Windows 2000 Preset.  Sets both Look and Behavior properties." PresetType="All" />-->
+<igtxt:WebCurrencyEdit BorderStyle="Inset" UseBrowserDefaults="False" BorderWidth="2px" BorderColor="White">
+  <ButtonsAppearance>
+    <ButtonPressedStyle BorderStyle="Inset">
+      <BorderDetails ColorBottom="White" ColorRight="White" />
+    </ButtonPressedStyle>
+    <ButtonStyle BorderWidth="2px" BorderColor="White" BorderStyle="Outset" BackColor="Control">
+      <BorderDetails StyleBottom="Ridge" ColorBottom="#A0A0A0" ColorRight="#A0A0A0" StyleRight="Ridge" />
+    </ButtonStyle>
+  </ButtonsAppearance>
+  <BorderDetails ColorTop="#A0A0A0" StyleTop="Ridge" StyleLeft="Ridge" ColorLeft="#A0A0A0" />
+</igtxt:WebCurrencyEdit>

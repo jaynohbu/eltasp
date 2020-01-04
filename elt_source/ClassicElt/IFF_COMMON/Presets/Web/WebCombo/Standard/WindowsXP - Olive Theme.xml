@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="WindowsXP - Olive Theme" PresetDescription="Infragistics Windows XP Olive Preset. Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<igcmbo:WebCombo BorderStyle="Solid" DropImage1="/ig_common/images/ig_cmbodownxp_olive.gif" DropImage2="/ig_common/images/ig_cmbodownxp_olive2.gif" BorderWidth="1px" DropImageXP1="/ig_common/images/ig_cmbodownxp_olive.gif" DropImageXP2="/ig_common/images/ig_cmbodownxp_olive2.gif" SelBackColor="147, 160, 112" BackColor="White" ForeColor="Black" Font-Size="8pt" Font-Names="Tahoma" BorderColor="LightGray" SelForeColor="White" Version="3.00">
+  <DropDownLayout DropdownWidth="325px" BorderCollapse="Separate" RowHeightDefault="15pt" HeaderClickAction="Select" DropdownHeight="130px">
+    <RowStyle BorderWidth="1px" BorderColor="Gray" BorderStyle="None" BackColor="White">
+      <BorderDetails WidthLeft="0px" WidthTop="0px" />
+    </RowStyle>
+    <RowSelectorStyle />
+    <SelectedRowStyle ForeColor="White" BackColor="#93A070" />
+    <HeaderStyle BorderStyle="Solid" BackColor="#8BA169">
+      <BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White" />
+    </HeaderStyle>
+    <RowAlternateStyle />
+    <FooterStyle />
+    <FrameStyle Width="100%" Cursor="Default" BorderWidth="2px" Font-Size="8pt" Font-Names="Tahoma" BorderStyle="Ridge" BackColor="White" Height="100%" />
+    <ImageUrls />
+  </DropDownLayout>
+  <ExpandEffects ShadowColor="LightGray" Type="Pixelate" />
+</igcmbo:WebCombo>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="MS Classic" PresetDescription="Infragistics MS Classic Look" PresetType="Appearance" />-->
+<igsch:WebCalendar >
+  <Layout DayNameFormat="FirstLetter" TitleFormat="Month" ShowYearDropDown="False" NextPrevFormat="FullMonth" ShowMonthDropDown="False" ShowFooter="False">
+    <SelectedDayStyle ForeColor="White" BackColor="#CC3333" />
+    <OtherMonthDayStyle ForeColor="#999999" />
+    <NextPrevStyle Font-Size="8pt" Font-Bold="True" ForeColor="White" />
+    <CalendarStyle BorderWidth="1px" Font-Size="10pt" Font-Names="Times New Roman" BorderColor="Black" BorderStyle="Solid" ForeColor="Black" BackColor="White" />
+    <TodayDayStyle BackColor="#CCCC99" />
+    <DayHeaderStyle Height="10px" Font-Size="7pt" Font-Names="Verdana" Font-Bold="True" ForeColor="#333333" BackColor="#CCCCCC" />
+    <TitleStyle Height="14px" Font-Size="13pt" Font-Bold="True" ForeColor="White" BackColor="Black" />
+  </Layout>
+</igsch:WebCalendar>

@@ -1,0 +1,167 @@
+﻿
+.masterGrid table { border-collapse: collapse; text-align: left; width: 100%; } 
+.masterGrid {font: normal 12px/150% Arial, Helvetica, sans-serif; background: #fff; overflow: hidden; border: 1px solid #8C8C8C; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+.masterGrid table td, .masterGrid table th { padding: 3px 5px; }
+.masterGrid table thead th {background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #8C8C8C), color-stop(1, #7D7D7D) );background:-moz-linear-gradient( center top, #8C8C8C 5%, #7D7D7D 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C8C8C', endColorstr='#7D7D7D');background-color:#8C8C8C; color:#FFFFFF; font-size: 15px; font-weight: bold; border-left: 1px solid #A3A3A3; } 
+.masterGrid table thead th:first-child { border: none; }
+.masterGrid table thead td div { border-top: 1px solid #8C8C8C;background: #EBEBEB;} 
+.masterGrid table thead td { padding: 0; font-size: 12px } 
+.masterGrid table thead td div{ padding: 2px; }
+.masterGrid table thead td ul { margin: 0; padding:0; list-style: none; text-align: left; }
+.masterGrid table thead  li { display: inline; }
+.masterGrid table thead li a { text-decoration: none; display: inline-block;  padding: 2px 8px; margin: 1px;color: #F5F5F5;border: 1px solid #8C8C8C;-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #8C8C8C), color-stop(1, #7D7D7D) );background:-moz-linear-gradient( center top, #8C8C8C 5%, #7D7D7D 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C8C8C', endColorstr='#7D7D7D');background-color:#8C8C8C; }
+.masterGrid table thead ul.active, 
+.masterGrid table thead ul a:hover { text-decoration: none;border-color: #7D7D7D; color: #F5F5F5; background: none; background-color:#8C8C8C;}
+
+.masterGrid table tbody td { color: #7D7D7D; border-left: 1px solid #DBDBDB;font-size: 12px;font-weight: normal; }
+.masterGrid table tbody .alt td { background: #EBEBEB; color: #7D7D7D; }
+.masterGrid table tbody td:first-child { border-left: none; }
+.masterGrid table tbody tr:last-child td { border-bottom: none; }
+.masterGrid table tfoot td div { border-top: 1px solid #8C8C8C;background: #EBEBEB;} 
+.masterGrid table tfoot td { padding: 0; font-size: 12px } 
+.masterGrid table tfoot td div{ padding: 2px; }
+.masterGrid table tfoot td ul { margin: 0; padding:0; list-style: none; text-align: left; }
+.masterGrid table tfoot  li { display: inline; }
+.masterGrid table tfoot li a { text-decoration: none; display: inline-block;  padding: 2px 8px; margin: 1px;color: #F5F5F5;border: 1px solid #8C8C8C;-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #8C8C8C), color-stop(1, #7D7D7D) );background:-moz-linear-gradient( center top, #8C8C8C 5%, #7D7D7D 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C8C8C', endColorstr='#7D7D7D');background-color:#8C8C8C; }
+.masterGrid table tfoot ul.active, 
+.masterGrid table tfoot ul a:hover { text-decoration: none;border-color: #7D7D7D; color: #F5F5F5; background: none; background-color:#8C8C8C;}
+div.dhtmlx_window_active, div.dhx_modal_cover_dv { position: fixed !important; }
+    .masterGrid .actionHeader {
+        padding-left:20px;
+    }
+      .masterGrid select {
+        width:120px!important;
+    }
+    .childActionHeader {
+        margin: 0; padding:0;text-align: left!important;
+    }
+
+ .childActionHeader  ul { margin: 0; padding:0; list-style: none; text-align: left; }
+ .childActionHeader  li { display: inline; }
+ .childActionHeader li a { text-decoration: none; display: inline-block;  padding: 2px 8px; margin: 1px;color: #F5F5F5;border: 1px solid #8C8C8C;-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #8C8C8C), color-stop(1, #7D7D7D) );background:-moz-linear-gradient( center top, #8C8C8C 5%, #7D7D7D 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C8C8C', endColorstr='#7D7D7D');background-color:#8C8C8C; }
+ .childActionHeader  ul.active, .childGrid table tfoot ul a:hover { text-decoration: none;border-color: #7D7D7D; color: #F5F5F5; background: none; background-color:#8C8C8C;}
+
+  .childGrid {
+     padding:4px 4px 4px 4px;
+       margin:10px 10px 10px 10px;
+    }
+    .childGrid select {
+        width:100%
+    }
+.childGrid table { border-collapse: collapse; text-align: left; width: 100%; } 
+.childGrid {font: normal 12px/150% Arial, Helvetica, sans-serif; background: #fff; overflow: hidden; border: 1px solid #8C8C8C; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+.childGrid table td, .childGrid table th { padding: 3px 5px; }
+.childGrid table thead th {background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #EBEBEB), color-stop(1, #949494) );background:-moz-linear-gradient( center top, #EBEBEB 5%, #949494 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#EBEBEB', endColorstr='#949494');background-color:#EBEBEB; color:#808080; font-size: 10px; font-weight: bold; border-left: 1px solid #A3A3A3; } 
+.childGrid table thead th:first-child { border: none; }       
+
+.childGrid table thead th:first-child {  width:100px; }
+.childGrid table thead th:last-child {  width:80px; }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                           
+.childGrid table tbody td { color: #7D7D7D; border-left: 1px solid #DBDBDB;font-size: 12px;font-weight: normal; }
+.childGrid table tbody .alt td { background: #EBEBEB; color: #7D7D7D; }
+    .childGrid table tbody tr {
+        border: 1px solid #DBDBDB;
+    }
+.childGrid table tbody td:first-child { border-left: none;  }
+
+.childGrid table tbody tr:last-child td { border-bottom: none;}
+.childGrid table tfoot td div { border-top: 1px solid #8C8C8C;background: #EBEBEB;} 
+.childGrid table tfoot td { padding: 0; font-size: 12px }
+ .childGrid table tfoot td div{ padding: 2px; }
+ .childGrid table tfoot td ul { margin: 0; padding:0; list-style: none; text-align: left; }
+ .childGrid table tfoot  li { display: inline; }
+ .childGrid table tfoot li a { text-decoration: none; display: inline-block;  padding: 2px 8px; margin: 1px;color: #F5F5F5;border: 1px solid #8C8C8C;-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #8C8C8C), color-stop(1, #7D7D7D) );background:-moz-linear-gradient( center top, #8C8C8C 5%, #7D7D7D 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C8C8C', endColorstr='#7D7D7D');background-color:#8C8C8C; }
+ .childGrid table tfoot ul.active, .childGrid table tfoot ul a:hover { text-decoration: none;border-color: #7D7D7D; color: #F5F5F5; background: none; background-color:#8C8C8C;}
+ div.dhtmlx_window_active, div.dhx_modal_cover_dv { position: fixed !important; }
+
+
+ .routeEdit table{
+
+     border:none;
+     margin:0px 0px 0px 0px!important; 
+     padding:0px 0px 0px 0px!important; 
+ }
+ .routeEdit table td{
+     margin:0px 0px 0px 0px!important; 
+     border:none!important; padding:0px 0px 0px 0px!important; 
+     text-align:center;
+ }
+  .routeEdit table td input[type="text"]
+{
+     width:150px;margin:5px 5px 5px 5px;
+}
+    .childGrid  td input[type="text"]
+{  margin:0px 0px 0px 0px!important; 
+     border:none!important; padding:0px 0px 0px 0px!important; 
+     text-align:center;
+     width:100%;
+}
+.RateColText {
+    margin:0px 0px 0px 0px!important; 
+     border:none!important; padding:0px 0px 0px 0px!important; 
+     text-align:center;
+   
+     background-color:transparent;
+}
+.RateHeaderColText {
+    margin:0px 0px 0px 0px!important; 
+     border:none!important; padding:0px 0px 0px 0px!important; 
+     text-align:center;
+   
+     background-color:transparent;
+}
+.RateDropHidden {
+    display:none;
+    min-width:220px;
+}
+.RateColValueHidden {
+   display:none;
+}
+
+.ColHeaderEdit {
+      display:none;
+}
+
+
+.AddBtnHolder {
+    text-align:left;
+}
+
+.ComboInputWarp {
+     margin:0px 0px 0px 0px!important; 
+     border:none!important; padding:0px 0px 0px 0px!important; 
+}
+.ComboInputWarp input {
+
+    background-color:white;
+    height:14px!important;
+}
+.HiddenDrop {
+    display:none;
+}
+.ClearBoth{ clear:both;}
+.JnohComboUl {
+     clear:both;
+}
+
+.JnohComboUl li{
+   
+    display:block;
+    margin-top:1px;
+    margin-right:10px;
+    margin-bottom:1px;
+    
+
+}
+
+.ColHeaderEditBegin {
+
+    width:60px!important;
+   
+}
+
+.ColHeaderEditEnd {
+     width:60px!important;
+  
+}

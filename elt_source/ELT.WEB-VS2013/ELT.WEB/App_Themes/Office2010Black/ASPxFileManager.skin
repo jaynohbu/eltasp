@@ -1,0 +1,16 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxFileManager" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxFileManager runat="server">
+    <Styles CssFilePath="~/App_Themes/Office2010Black/{0}/styles.css" CssPostfix="Office2010Black">
+        <LoadingPanel ImageSpacing="5" />
+    </Styles>
+    <Images SpriteCssFilePath="~/App_Themes/Office2010Black/{0}/sprite.css" LoadingPanel-Url="~/App_Themes/Office2010Black/Web/Loading.gif" 
+            FolderContainerNodeLoadingPanel-Url="~/App_Themes/Office2010Black/Web/tvNodeLoading.gif"></Images>
+    <ImagesDetailsView>
+        <HeaderActiveFilter SpriteProperties-CssClass="dxWeb_fmGvHeaderFilterActive_Office2010Black"></HeaderActiveFilter>
+        <HeaderFilter SpriteProperties-CssClass="dxWeb_fmGvHeaderFilter_Office2010Black"></HeaderFilter>
+        <HeaderSortDown SpriteProperties-CssClass="dxWeb_fmGvHeaderSortDown_Office2010Black"></HeaderSortDown>
+        <HeaderSortUp SpriteProperties-CssClass="dxWeb_fmGvHeaderSortUp_Office2010Black"></HeaderSortUp>
+    </ImagesDetailsView>
+</dx:ASPxFileManager>

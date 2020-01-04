@@ -1,0 +1,5 @@
+﻿@{
+    ViewBag.Title = "BankManageChecks";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+<iframe id ="ContentFrame" scrolling="no"   frameborder="0" width="100%" height="1000" src="@Url.Content("~/ASP/acct_tasks/manage_chk.asp" + ViewBag.Params)"></iframe>

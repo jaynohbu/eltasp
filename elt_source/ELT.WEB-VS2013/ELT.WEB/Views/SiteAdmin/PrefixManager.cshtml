@@ -1,0 +1,7 @@
+﻿@{
+    ViewBag.Title = "PrefixManager";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+
+<iframe id ="ContentFrame" scrolling="no"   frameborder="0" width="100%" onload="autoResize('ContentFrame');" src="@Url.Content("~/ASP/site_admin/prefix_manager.asp" + ViewBag.Params)"></iframe>
+

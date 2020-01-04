@@ -1,0 +1,2968 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="14.0.4732.1000" _dal="1" -->
+<!-- _LocalBinding -->
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <!-- ********************** 01: DataBindingList_aspx********************************-->
+  <data name="DataBindingList_aspx_litDescription_Text" xml:space="preserve">
+    <value>In order to properly bind your chart to a data source, data binding "meta" data about every connection must be kept in memory. This meta data is information that defines how your data source's data columns are to be bound to your chart elements. The list below allows you to view all existing data bindings, and will also allow you to add new data bindings, and edit or delete existing data bindings.
+&lt;br&gt;&lt;br&gt;
+If your chart does not currently have any existing data bindings, but is nevertheless connected to data, it will attempt to render a default view of the data source used. However, it should be noted that in this case the rendered result will be less predictable than using an explicit data binding. You should try to use an explicit data binding where possible.</value>
+  </data>
+  <data name="DataBindingList_aspx_litPageTitle_Text" xml:space="preserve">
+    <value>Web Chart for SharePoint - Data Connectivity</value>
+  </data>
+  <data name="DataBindingList_aspx_litPageTitleInTitleArea_Text" xml:space="preserve">
+    <value>Data Connectivity</value>
+  </data>
+  <!-- ********************** 02: propertiesAdvanced_ascx********************************-->
+  <data name="propertiesAdvanced_ascx_litChartPreview_Text" xml:space="preserve">
+    <value>Chart Preview</value>
+  </data>
+  <data name="propertiesAdvanced_ascx_litHeader_Annotations_Text" xml:space="preserve">
+    <value>&lt;b&gt;Annotation Menu&lt;/b&gt;</value>
+  </data>
+  <data name="propertiesAdvanced_ascx_litHeader_Chart_Text" xml:space="preserve">
+    <value>&lt;b&gt;Chart Properties&lt;/b&gt;</value>
+  </data>
+  <data name="propertiesAdvanced_ascx_litHeader_ChartAreas_Text" xml:space="preserve">
+    <value>&lt;b&gt;Axis Menu&lt;/b&gt;</value>
+  </data>
+  <data name="propertiesAdvanced_ascx_litHeader_Legends_Text" xml:space="preserve">
+    <value>&lt;b&gt;Legend Menu&lt;/b&gt;</value>
+  </data>
+  <data name="propertiesAdvanced_ascx_litHeader_Series_Text" xml:space="preserve">
+    <value>&lt;b&gt;Series Menu&lt;/b&gt;</value>
+  </data>
+  <data name="propertiesAdvanced_ascx_litHeader_Titles_Text" xml:space="preserve">
+    <value>&lt;b&gt;Titles Menu&lt;/b&gt;</value>
+  </data>
+  <data name="propertiesAdvanced_ascx_litHeader_UI_ContextMenu_Text" xml:space="preserve">
+    <value>&lt;b&gt;Context Menu Properties&lt;/b&gt;</value>
+  </data>
+  <data name="propertiesAdvanced_ascx_litHeader_UI_Toolbar_Text" xml:space="preserve">
+    <value>&lt;b&gt;Toolbar Properties&lt;/b&gt;</value>
+  </data>
+  <!-- ********************** 03: propertiesAdvanced_aspx********************************-->
+  <data name="propertiesAdvanced_aspx_buttonCancel_Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="propertiesAdvanced_aspx_buttonOK_Text" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="propertiesAdvanced_aspx_dropDownListCollectionItems_NoAnnotationsMessage" xml:space="preserve">
+    <value>&lt; No Annotations &gt;</value>
+  </data>
+  <data name="propertiesAdvanced_aspx_dropDownListCollectionItems_NoChartAreasMessage" xml:space="preserve">
+    <value>&lt; No Chart Areas &gt;</value>
+  </data>
+  <data name="propertiesAdvanced_aspx_dropDownListCollectionItems_NoLegendsMessage" xml:space="preserve">
+    <value>&lt; No Legends &gt;</value>
+  </data>
+  <data name="propertiesAdvanced_aspx_dropDownListCollectionItems_NoSeriesMessage" xml:space="preserve">
+    <value>&lt; No Series &gt;</value>
+  </data>
+  <data name="propertiesAdvanced_aspx_dropDownListCollectionItems_NoTitlesMessage" xml:space="preserve">
+    <value>&lt; No Titles &gt;</value>
+  </data>
+  <data name="propertiesAdvanced_aspx_litNavTitle_Text" xml:space="preserve">
+    <value>Select an Element</value>
+  </data>
+  <data name="propertiesAdvanced_aspx_litPageTitle_Text" xml:space="preserve">
+    <value>Chart Web Part</value>
+  </data>
+  <data name="propertiesAdvanced_aspx_litPageTitleInTitleArea_Text" xml:space="preserve">
+    <value>Advanced Properties</value>
+  </data>
+  <data name="propertiesAdvanced_aspx_treeViewChartProperties_Chart" xml:space="preserve">
+    <value>Chart</value>
+  </data>
+  <data name="propertiesAdvanced_aspx_treeViewChartProperties_Chart_Annotations" xml:space="preserve">
+    <value>Annotations</value>
+  </data>
+  <data name="propertiesAdvanced_aspx_treeViewChartProperties_Chart_ChartAreas" xml:space="preserve">
+    <value>Chart Areas</value>
+  </data>
+  <data name="propertiesAdvanced_aspx_treeViewChartProperties_Chart_ContextMenu" xml:space="preserve">
+    <value>Context Menu</value>
+  </data>
+  <data name="propertiesAdvanced_aspx_treeViewChartProperties_Chart_Legends" xml:space="preserve">
+    <value>Legends</value>
+  </data>
+  <data name="propertiesAdvanced_aspx_treeViewChartProperties_Chart_Series" xml:space="preserve">
+    <value>Series</value>
+  </data>
+  <data name="propertiesAdvanced_aspx_treeViewChartProperties_Chart_Titles" xml:space="preserve">
+    <value>Titles</value>
+  </data>
+  <data name="propertiesAdvanced_aspx_treeViewChartProperties_Chart_Toolbar" xml:space="preserve">
+    <value>Toolbar</value>
+  </data>
+  <data name="propertiesAdvanced_aspx_ClickForHelp_Text" xml:space="preserve">
+    <value>Click for help</value>
+  </data>
+  <data name="propertiesAdvanced_aspx_ClickToEdit_Text" xml:space="preserve">
+    <value>Click to edit</value>
+  </data>
+  <!-- ********************** 05: wizardConnectToData_aspx********************************-->
+  <data name="wizardConnectToData_aspx_buttonCancel_Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="wizardConnectToData_aspx_buttonNext_Text" xml:space="preserve">
+    <value>Next &gt;</value>
+  </data>
+  <data name="wizardConnectToData_aspx_buttonOK_Text" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="wizardConnectToData_aspx_buttonPrevious_Text" xml:space="preserve">
+    <value>&lt; Back</value>
+  </data>
+  <data name="wizardConnectToData_aspx_litHeader_Text" xml:space="preserve">
+    <value>Please wait...</value>
+  </data>
+  <data name="wizardConnectToData_aspx_litNavTitle_Text" xml:space="preserve">
+    <value>Data Connection Wizard</value>
+  </data>
+  <data name="wizardConnectToData_aspx_litPageTitle_Text" xml:space="preserve">
+    <value>Web Chart for SharePoint</value>
+  </data>
+  <data name="wizardConnectToData_aspx_litPageTitleInTitleArea_Text" xml:space="preserve">
+    <value>Data Connection Wizard</value>
+  </data>
+  <data name="wizardConnectToData_aspx_treeNavigation_Step1" xml:space="preserve">
+    <value>Step 1: Choose a Data Source</value>
+  </data>
+  <data name="wizardConnectToData_aspx_treeNavigation_Step2" xml:space="preserve">
+    <value>Step 2: Connect to Data Source</value>
+  </data>
+  <data name="wizardConnectToData_aspx_treeNavigation_Step3" xml:space="preserve">
+    <value>Step 3: Retrieve and Filter Data</value>
+  </data>
+  <data name="wizardConnectToData_aspx_treeNavigation_Step4" xml:space="preserve">
+    <value>Step 4: Bind Chart to Data</value>
+  </data>
+  <!-- ********************** 06: wizardConnectToDataStep1_ascx********************************-->
+  <data name="wizardConnectToDataStep1_ascx_litDataSourceBdc_Text" xml:space="preserve">
+    <value>&lt;b&gt;Connect to Business Data Catalog&lt;/b&gt;&lt;br&gt;Connect to an external content type defined in the Business Data Catalog.</value>
+  </data>
+  <data name="wizardConnectToDataStep1_ascx_litDataSourceExcelServices_Text" xml:space="preserve">
+    <value>&lt;b&gt;Connect to Excel Services&lt;/b&gt;&lt;br&gt;Connect to data from an Excel workbook using Excel Services.</value>
+  </data>
+  <data name="wizardConnectToDataStep1_ascx_litDataSourceWebPart_Text" xml:space="preserve">
+    <value>&lt;b&gt;Connect to another Web Part&lt;/b&gt;&lt;br&gt;If your page contains another Web Part capable of providing data, you can connect to it as a data source for the chart.</value>
+  </data>
+  <data name="wizardConnectToDataStep1_ascx_litDataSourceWebList_Text" xml:space="preserve">
+    <value>&lt;b&gt;Connect to a List&lt;/b&gt;&lt;br&gt;Connect to data from a list that exists within this site collection.</value>
+  </data>
+  <data name="wizardConnectToDataStep1_ascx_litHeader_Text" xml:space="preserve">
+    <value>&lt;b&gt;Step 1: Choose a Data Source&lt;/b&gt;&lt;br&gt;&lt;br&gt;Your Chart Web Part can be connected to any one of the data sources shown below.</value>
+  </data>
+  <data name="wizardConnectToDataStep1_ascx_valSummary_HeaderText" xml:space="preserve">
+    <value>Please correct the following:</value>
+  </data>
+  <!-- ********************** 07: wizardConnectToDataStep2_ascx********************************-->
+  <data name="wizardConnectToDataStep2_ascx_btnWebPartListRefresh_Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_litConnectToWebPart_Text" xml:space="preserve">
+    <value>Web Part</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_litConnectToWebList_Text" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_litConnectToWebSite_Text" xml:space="preserve">
+    <value>Site</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_litDataSourceSharePoint_Text" xml:space="preserve">
+    <value>Source Web Part</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_litEntity_Text" xml:space="preserve">
+    <value>External Content Type</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_litHeaderBdc_Text" xml:space="preserve">
+    <value>&lt;b&gt;Step 2: Connect to Data from Business Data Catalog&lt;/b&gt;&lt;br&gt;&lt;br&gt;Business Data Catalog provides an easy way to integrate external business data from back-end systems, such as SAP, Siebel, or a SQL Server database, into your SharePoint site.</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_litHeaderExcelServices_Text" xml:space="preserve">
+    <value>&lt;b&gt;Step 2: Connect to Data from Excel Services&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+You can connect your chart to data in in an Excel workbook that has been published to a SharePoint site by using Excel Services.</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_litHeaderWebPart_Text" xml:space="preserve">
+    <value>&lt;b&gt;Step 2: Connect to another Web Part&lt;/b&gt;&lt;br&gt;&lt;br&gt;Your page can contain many kinds of Web Parts that can provide data to the Chart Web Part. Choose one of these Web Parts as the data source for your chart.</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_litHeaderWebList_Text" xml:space="preserve">
+    <value>&lt;b&gt;Step 2: Connect to a List&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+Connect your chart to data stored in a list in this site collection. </value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_litRangeName_Text" xml:space="preserve">
+    <value>Range Name</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_litUseExcelFormatting_Text" xml:space="preserve">
+    <value>Use Excel Formatting</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_litUseFirstRowAsColumnNames_Text" xml:space="preserve">
+    <value>First Row Contains Column Names</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_litWebPartList_Text" xml:space="preserve">
+    <value>Web Part</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_litWebList_Text" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_litWebSite_Text" xml:space="preserve">
+    <value>Site</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_litWebPartPageUrl_Text" xml:space="preserve">
+    <value>Source page URL</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_litWebServiceUrl_Text" xml:space="preserve">
+    <value>Excel Web Service URL</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_litWorkbookUrl_Text" xml:space="preserve">
+    <value>Excel Workbook Path</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_sectionBdc_Description" xml:space="preserve">
+    <value>Business Data Catalogs contain a list of applications, and each application can have multiple external content types. Choose the external content type that you want to use as a data source for your chart.</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_sectionBdc_Title" xml:space="preserve">
+    <value>Business Data Catalog Connection</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_sectionExcelServices_Description" xml:space="preserve">
+    <value>Connect to the Excel Web Service and enter the full URL of the workbook and the range in that workbook that you want to use as a data source for your chart.&lt;br&gt;&lt;br&gt;
+Example of valid URL:  http:
+Example of valid range:  Sheet1!$G$21:$L$30 or the name of a range if you have one labeled in the workbook.
+</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_sectionExcelServices_Title" xml:space="preserve">
+    <value>Excel Services Connection</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_sectionWebPart_Description" xml:space="preserve">
+    <value>Choose the Web Part to use as the data provider for your chart.</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_sectionWebList_Description" xml:space="preserve">
+    <value>Choose a site and then choose a list in that site to use as the data source for your chart.</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_sectionWebPart_Title" xml:space="preserve">
+    <value>Web Part Connection</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_sectionWebList_Title" xml:space="preserve">
+    <value>List Connection</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_valcustBdcIsEmpty_ErrorMessage" xml:space="preserve">
+    <value>The Business Data Catalog is empty. Please ask your server administrator to configure the Shared Services Provider. When that task is complete, you or your IT staff can use SharePoint Designer to create an external content type and publish it to the Business Data Catalog.</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_valcustNoWebParts_ErrorMessage" xml:space="preserve">
+    <value>Your page does not contain any Web Parts that are capable of providing data to your chart Web Part.</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_valcustNoWebLists_ErrorMessage" xml:space="preserve">
+    <value>No Site Definition Lists currently exist.</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_valreqConnectionName_ErrorMessage" xml:space="preserve">
+    <value>Specify Connection Name</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_valSummary_HeaderText" xml:space="preserve">
+    <value>Please correct the following:</value>
+  </data>
+  <data name="wizardConnectToDataStep2_ascx_Root_Text" xml:space="preserve">
+    <value>(Root)</value>
+  </data>
+  <!-- ********************** 08: wizardConnectToDataStep3_ascx********************************-->
+  <data name="wizardConnectToDataStep3_ascx_btnBdcRun_Text" xml:space="preserve">
+    <value>Preview Data</value>
+  </data>
+  <data name="wizardConnectToDataStep3_ascx_btnWebListRun_Text" xml:space="preserve">
+    <value>Preview Data</value>
+  </data>
+  <data name="wizardConnectToDataStep3_ascx_btnExcelServicesRun_Text" xml:space="preserve">
+    <value>Preview Data</value>
+  </data>
+  <data name="wizardConnectToDataStep3_ascx_litBdcParameters_Text" xml:space="preserve">
+    <value>Filter Data</value>
+  </data>
+  <data name="wizardConnectToDataStep3_ascx_litWebListParameters_Text" xml:space="preserve">
+    <value>Filter Data</value>
+  </data>
+  <data name="wizardConnectToDataStep3_ascx_litBdcRecordCount_Format" xml:space="preserve">
+    <value>Preview: First &lt;b&gt;{0}&lt;/b&gt; of &lt;b&gt;{1}&lt;/b&gt; records.</value>
+  </data>
+  <data name="wizardConnectToDataStep3_ascx_litWebListRecordCount_Format" xml:space="preserve">
+    <value>Preview: First &lt;b&gt;{0}&lt;/b&gt; of &lt;b&gt;{1}&lt;/b&gt; records.</value>
+  </data>
+  <data name="wizardConnectToDataStep3_ascx_litExcelServicesRecordCount_Format" xml:space="preserve">
+    <value>Preview: First &lt;b&gt;{0}&lt;/b&gt; of &lt;b&gt;{1}&lt;/b&gt; records.</value>
+  </data>
+  <data name="wizardConnectToDataStep3_ascx_litHeaderBdc_Text" xml:space="preserve">
+    <value>&lt;b&gt;Step 3: Retrieve and Filter Data&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+In this step, you can view the data that gets retrieved from the Business Data Catalog and optionally add parameters to filter the data.</value>
+  </data>
+  <data name="wizardConnectToDataStep3_ascx_litHeaderWebList_Text" xml:space="preserve">
+    <value>&lt;b&gt;Step 3: Retrieve and Filter Data&lt;/b&gt;&lt;br&gt;&lt;br&gt;In this step, you can view the data retrieved from the selected lilst and filter the data by using an existing column as a parameter.</value>
+  </data>
+  <data name="wizardConnectToDataStep3_ascx_litHeaderExcelServices_Text" xml:space="preserve">
+    <value>&lt;b&gt;Step 3: Retrieve and Filter Data&lt;/b&gt;&lt;br&gt;&lt;br&gt;In this step, you can view the data that is retrieved from Excel Services and optionally add parameters to filter the data.</value>
+  </data>
+  <data name="wizardConnectToDataStep3_ascx_litHeaderWebPart_Text" xml:space="preserve">
+    <value>&lt;b&gt;Step 3: Retrieve Data&lt;/b&gt;&lt;br&gt;&lt;br&gt;Some data provider Web Parts can deliver data in different formats. In this step, you can choose an appropriate format for the data.</value>
+  </data>
+  <data name="wizardConnectToDataStep3_ascx_litParameters_Text" xml:space="preserve">
+    <value>Define Filter Parameters</value>
+  </data>
+  <data name="wizardConnectToDataStep3_ascx_litSqlRecordCount_Format" xml:space="preserve">
+    <value>Preview: First &lt;b&gt;{0}&lt;/b&gt; of &lt;b&gt;{1}&lt;/b&gt; records.</value>
+  </data>
+  <data name="wizardConnectToDataStep3_ascx_litWebPartInterfaces_Text" xml:space="preserve">
+    <value>Data Format</value>
+  </data>
+  <data name="wizardConnectToDataStep3_ascx_sectionBdc_Description" xml:space="preserve">
+    <value>Define parameters to filter the data coming from your Business Data Catalog.</value>
+  </data>
+  <data name="wizardConnectToDataStep3_ascx_sectionBdc_Title" xml:space="preserve">
+    <value>Filter Data</value>
+  </data>
+  <data name="wizardConnectToDataStep3_ascx_sectionWebList_Description" xml:space="preserve">
+    <value>Use parameters to filter the data returned to the Chart Web Part. To filter based on any of the columns shown below, enter the column name as the Parameter Name, indicate its data type, and set its default value. You can preview the results by clicking the &lt;b&gt;Preview Data&lt;/b&gt; button.</value>
+  </data>
+  <data name="wizardConnectToDataStep3_ascx_sectionWebList_Title" xml:space="preserve">
+    <value>Filter Data</value>
+  </data>
+  <data name="wizardConnectToDataStep3_ascx_sectionExcelServices_Description" xml:space="preserve">
+    <value>Use parameters to filter the data returned to the Chart Web Part. To filter based on any of the columns shown below, enter the column name as the Parameter Name, indicate its data type, and set its default value. You can preview the results by clicking the &lt;b&gt;Preview Data&lt;/b&gt; button.</value>
+  </data>
+  <data name="wizardConnectToDataStep3_ascx_sectionExcelServices_Title" xml:space="preserve">
+    <value>Filters</value>
+  </data>
+  <data name="wizardConnectToDataStep3_ascx_sectionWebPart_Description" xml:space="preserve">
+    <value>Choose whether the data is provided in Table, List, or Data format.</value>
+  </data>
+  <data name="wizardConnectToDataStep3_ascx_sectionWebPart_Title" xml:space="preserve">
+    <value>Source Data Format</value>
+  </data>
+  <data name="wizardConnectToDataStep3_ascx_valSummary_HeaderText" xml:space="preserve">
+    <value>Please correct the following:</value>
+  </data>
+  <!-- ********************** 09: wizardConnectToDataStep4_ascx********************************-->
+  <data name="wizardConnectToDataStep4_ascx_litHeader_Text" xml:space="preserve">
+    <value>&lt;b&gt;Step 4: Bind Chart to Data&lt;/b&gt;&lt;br&gt;&lt;br&gt;</value>
+  </data>
+  <data name="wizardConnectToDataStep4_ascx_litHeaderJump_Text" xml:space="preserve">
+    <value>&lt;b&gt;Step 4: Bind Chart to Data&lt;/b&gt;&lt;br&gt;&lt;br&gt;You jumped to the last step of the wizard because you already have a data source connected to your chart. If you want to start the wizard again, use the links in the navigation pane.</value>
+  </data>
+  <data name="wizardConnectToDataStep4_ascx_valSummary_HeaderText" xml:space="preserve">
+    <value>Please correct the following:</value>
+  </data>
+  <!-- ********************** 10: wizardCustomizeChart_aspx********************************-->
+  <data name="wizardCustomizeChart_aspx_buttonCancel_Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="wizardCustomizeChart_aspx_buttonNext_Text" xml:space="preserve">
+    <value>Next &gt;</value>
+  </data>
+  <data name="wizardCustomizeChart_aspx_buttonOK_Text" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="wizardCustomizeChart_aspx_buttonPrevious_Text" xml:space="preserve">
+    <value>&lt; Back</value>
+  </data>
+  <data name="wizardCustomizeChart_aspx_litNavTitle_Text" xml:space="preserve">
+    <value>Chart Customization Wizard</value>
+  </data>
+  <data name="wizardCustomizeChart_aspx_litPageTitle_Text" xml:space="preserve">
+    <value>Chart Web Part</value>
+  </data>
+  <data name="wizardCustomizeChart_aspx_litPageTitleInTitleArea_Text" xml:space="preserve">
+    <value>Chart Customization Wizard</value>
+  </data>
+  <data name="wizardCustomizeChart_aspx_treeNavigation_Step1" xml:space="preserve">
+    <value>Step 1: Select Chart Type</value>
+  </data>
+  <data name="wizardCustomizeChart_aspx_treeNavigation_Step11" xml:space="preserve">
+    <value>Standard Chart Types</value>
+  </data>
+  <data name="wizardCustomizeChart_aspx_treeNavigation_Step12" xml:space="preserve">
+    <value>Custom Chart Types</value>
+  </data>
+  <data name="wizardCustomizeChart_aspx_treeNavigation_Step2" xml:space="preserve">
+    <value>Step 2: Chart Appearance Properties</value>
+  </data>
+  <data name="wizardCustomizeChart_aspx_treeNavigation_Step21" xml:space="preserve">
+    <value>Appearance Themes</value>
+  </data>
+  <data name="wizardCustomizeChart_aspx_treeNavigation_Step22" xml:space="preserve">
+    <value>Background and Borders</value>
+  </data>
+  <data name="wizardCustomizeChart_aspx_treeNavigation_Step23" xml:space="preserve">
+    <value>3D Properties</value>
+  </data>
+  <data name="wizardCustomizeChart_aspx_treeNavigation_Step3" xml:space="preserve">
+    <value>Step 3: Chart Element Properties</value>
+  </data>
+  <data name="wizardCustomizeChart_aspx_treeNavigation_Step31" xml:space="preserve">
+    <value>Title and Legend</value>
+  </data>
+  <data name="wizardCustomizeChart_aspx_treeNavigation_Step32" xml:space="preserve">
+    <value>Axes and Grid Lines</value>
+  </data>
+  <data name="wizardCustomizeChart_aspx_treeNavigation_Step33" xml:space="preserve">
+    <value>Data Labels and Markers</value>
+  </data>
+  <data name="wizardCustomizeChart_aspx_treeNavigation_Step34" xml:space="preserve">
+    <value>Hyperlinks and Tooltips</value>
+  </data>
+  <!-- ********************** 11: wizardCustomizeChartStep1_ascx********************************-->
+  <data name="wizardCustomizeChartStep1_ascx_litCategories_Text" xml:space="preserve">
+    <value>Chart Type Categories</value>
+  </data>
+  <data name="wizardCustomizeChartStep1_ascx_litHeader_Text" xml:space="preserve">
+    <value>&lt;b&gt;Step 1: Select Chart Type&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;On the Standard Chart Types tab, you can choose a chart type from any of the available chart types, including all 2D and 3D chart types. On the Current Chart Types tab, you can continue with the current chart type.</value>
+  </data>
+  <data name="wizardCustomizeChartStep1_ascx_litTemplates_Text" xml:space="preserve">
+    <value>Chart Templates</value>
+  </data>
+  <data name="wizardCustomizeChartStep1_ascx_tablistDimesions_2D" xml:space="preserve">
+    <value>2D Chart Types</value>
+  </data>
+  <data name="wizardCustomizeChartStep1_ascx_tablistDimesions_3D" xml:space="preserve">
+    <value>3D Chart Types</value>
+  </data>
+  <data name="wizardCustomizeChartStep1_ascx_tablistDimesions_All" xml:space="preserve">
+    <value>All Chart Types</value>
+  </data>
+  <data name="wizardCustomizeChartStep1_ascx_tablistMain_Custom" xml:space="preserve">
+    <value>Custom Chart Types</value>
+  </data>
+  <data name="wizardCustomizeChartStep1_ascx_tablistMain_Standard" xml:space="preserve">
+    <value>Standard Chart Types </value>
+  </data>
+  <!-- ********************** 12: wizardCustomizeChartStep2_ascx********************************-->
+  <data name="wizardCustomizeChartStep2_ascx_litHeader_Text" xml:space="preserve">
+    <value>&lt;b&gt;Step 2: Chart Appearance Properties&lt;/b&gt;&lt;br&gt;&lt;br&gt;Select your chart's appearance theme, and if you are using a 3D chart, select any of the 3D properties that you want to use. Once you have finished, click the &lt;b&gt;Next&lt;/b&gt; button to proceed.
+</value>
+  </data>
+  <data name="wizardCustomizeChartStep2_ascx_section3DProperties_Description" xml:space="preserve">
+    <value>Use 3D charts to create a rich visual experience for your data.</value>
+  </data>
+  <data name="wizardCustomizeChartStep2_ascx_section3DProperties_Title" xml:space="preserve">
+    <value>3D Properties</value>
+  </data>
+  <data name="wizardCustomizeChartStep2_ascx_sectionBackground_Description" xml:space="preserve">
+    <value>Use this section to change the Background Appearance of the Chart.</value>
+  </data>
+  <data name="wizardCustomizeChartStep2_ascx_sectionBackground_Title" xml:space="preserve">
+    <value>Background and Borders</value>
+  </data>
+  <data name="wizardCustomizeChartStep2_ascx_sectionSizeType_Description" xml:space="preserve">
+    <value>Please note that the chart preview will not resize once you change the Width and Height because the preview chart is scaled to fit into the preview area. The image format and format specific effects will also not be available in preview.</value>
+  </data>
+  <data name="wizardCustomizeChartStep2_ascx_sectionSizeType_Title" xml:space="preserve">
+    <value>Size and Format</value>
+  </data>
+  <data name="wizardCustomizeChartStep2_ascx_sectionTheme_Description" xml:space="preserve">
+    <value>Use predefined themes to create an engaging look and feel for your chart.</value>
+  </data>
+  <data name="wizardCustomizeChartStep2_ascx_sectionTheme_Title" xml:space="preserve">
+    <value>Appearance Theme</value>
+  </data>
+  <data name="wizardCustomizeChartStep2_ascx_tablistMain_3DEffects" xml:space="preserve">
+    <value>3D Properties</value>
+  </data>
+  <data name="wizardCustomizeChartStep2_ascx_tablistMain_Background" xml:space="preserve">
+    <value>Background and Borders</value>
+  </data>
+  <data name="wizardCustomizeChartStep2_ascx_tablistMain_Themes" xml:space="preserve">
+    <value>Appearance Themes</value>
+  </data>
+  <!-- ********************** 13: wizardCustomizeChartStep3_ascx********************************-->
+  <data name="wizardCustomizeChartStep3_ascx_litHeader_Text" xml:space="preserve">
+    <value>&lt;b&gt;Step 3: Chart element properties&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;Configure the elements of the chart such as axes, titles, legends, gridlines, and labels.&lt;br/&gt;</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_sectionDataLabel_Description" xml:space="preserve">
+    <value>Add data labels to the chart to highlight or explain data shown in your chart.</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_sectionDataLabel_Title" xml:space="preserve">
+    <value>Labels</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_sectionDataMarker_Description" xml:space="preserve">
+    <value>Add data markers to highlight specific data points shown in your chart.</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_sectionDataMarker_Title" xml:space="preserve">
+    <value>Data Markers</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_sectionInteractivityAxes_Description" xml:space="preserve">
+    <value>Todo!</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_sectionInteractivityAxes_Title" xml:space="preserve">
+    <value>Axes</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_sectionInteractivitySeries_Description" xml:space="preserve">
+    <value>Add a hyperlink or tooltip to elements of the chart for each data series.</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_sectionInteractivitySeries_Title" xml:space="preserve">
+    <value>Hyperlinks and Tooltips</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_sectionInteractivityTitles_Description" xml:space="preserve">
+    <value>Todo!</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_sectionInteractivityTitles_Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_sectionLegend_Description" xml:space="preserve">
+    <value>Add a legend to help define the data series shown in the chart.</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_sectionLegend_Title" xml:space="preserve">
+    <value>Legend</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_sectionTitles_Description" xml:space="preserve">
+    <value>Displayed a title on the chart.</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_sectionTitles_Title" xml:space="preserve">
+    <value>Titles</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_sectionX2Axis_Description" xml:space="preserve">
+    <value>A secondary x-axis allows you to put two series that use different scales on the same chart.</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_sectionX2Axis_Title" xml:space="preserve">
+    <value>Secondary X-Axis</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_sectionXAxis_Description" xml:space="preserve">
+    <value>Format the x-axis and its gridlines.</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_sectionXAxis_Title" xml:space="preserve">
+    <value>X-Axis</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_sectionY2Axis_Description" xml:space="preserve">
+    <value>A secondary y-axis allows you to put two series that use different ranges on the same chart.</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_sectionY2Axis_Title" xml:space="preserve">
+    <value>Secondary Y-Axis</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_sectionYAxis_Description" xml:space="preserve">
+    <value>Format the y-axis and its gridlines.</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_sectionYAxis_Title" xml:space="preserve">
+    <value>Y-Axis</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_tablistMain_AxesAndGridlines" xml:space="preserve">
+    <value>Axes and Grid Lines</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_tablistMain_DataLabelsAndMarkers" xml:space="preserve">
+    <value>Data Labels and Markers</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_tablistMain_InteractivityFeatures" xml:space="preserve">
+    <value>Hyperlinks and Tooltips</value>
+  </data>
+  <data name="wizardCustomizeChartStep3_ascx_tablistMain_TitlesAndLegend" xml:space="preserve">
+    <value>Title and Legend</value>
+  </data>
+  <!-- ********************** 14: wizardList_aspx********************************-->
+  <data name="wizardList_aspx_litDescription_Text" xml:space="preserve">
+    <value>These wizards help you to easily connect your chart to data and customize the look and feel of your chart. In addition to the wizards below, you can use the Advanced Properties tool (available from the Chart Web Part menu) to fine tune chart settings.&lt;br/&gt;&lt;br/&gt;</value>
+  </data>
+  <data name="wizardList_aspx_litPageTitle_Text" xml:space="preserve">
+    <value>Chart Web Part - Data &amp; Appearance Wizards</value>
+  </data>
+  <data name="wizardList_aspx_litPageTitleInTitleArea_Text" xml:space="preserve">
+    <value>Data Connection &amp; Chart Appearance Wizards</value>
+  </data>
+  <data name="wizardList_aspx_litWizardConnectToDataDescription_Text" xml:space="preserve">
+    <value>This wizard will help you connect your chart Web Part to a data source.</value>
+  </data>
+  <data name="wizardList_aspx_litWizardConnectToDataHeader_Text" xml:space="preserve">
+    <value>Connect Chart To Data</value>
+  </data>
+  <data name="wizardList_aspx_litWizardCustomizeChartDescription_Text" xml:space="preserve">
+    <value>This wizard will help you set your chart's look and feel.</value>
+  </data>
+  <data name="wizardList_aspx_litWizardCustomizeChartHeader_Text" xml:space="preserve">
+    <value>Customize Your Chart</value>
+  </data>
+  <!-- ********************** 16: wizardSaveToTemplate_aspx********************************-->
+  <data name="wizardSaveToTemplate_aspx_buttonCancel_Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="wizardSaveToTemplate_aspx_buttonNext_Text" xml:space="preserve">
+    <value>Next &gt;</value>
+  </data>
+  <data name="wizardSaveToTemplate_aspx_buttonOK_Text" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="wizardSaveToTemplate_aspx_buttonPrevious_Text" xml:space="preserve">
+    <value>&lt; Back</value>
+  </data>
+  <data name="wizardSaveToTemplate_aspx_litPageTitle_Text" xml:space="preserve">
+    <value>Web Chart for SharePoint</value>
+  </data>
+  <data name="wizardSaveToTemplate_aspx_litPageTitleInTitleArea_Text" xml:space="preserve">
+    <value>Save Template Wizard</value>
+  </data>
+  <!-- ********************** 17: wizardSaveToTemplateStep1_ascx********************************-->
+  <data name="wizardSaveToTemplateStep1_ascx_chkChart_Text" xml:space="preserve">
+    <value>Save Chart Properties</value>
+  </data>
+  <!--MWC:DEL-->
+  <!--<data name="wizardSaveToTemplateStep1_ascx_chkCustomCode_Text" xml:space="preserve">
+    <value>Save Code Script</value>
+  </data>-->
+  <data name="wizardSaveToTemplateStep1_ascx_chkDataBindings_Text" xml:space="preserve">
+    <value>Save Data Binding Properties</value>
+  </data>
+  <data name="wizardSaveToTemplateStep1_ascx_litHeader_Text" xml:space="preserve">
+    <value>&lt;b&gt;Step 1: Create A Chart Template&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+A template can be used to save your chart's properties into a file so they can be reloaded into another chart web part.</value>
+  </data>
+  <data name="wizardSaveToTemplateStep1_ascx_sectionOptions_Description" xml:space="preserve">
+    <value>You can choose to save your chart along with all of its static data, or you can choose to save only its appearance settings.</value>
+  </data>
+  <data name="wizardSaveToTemplateStep1_ascx_sectionOptions_Title" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <!-- ********************** 18: wizardSaveToTemplateStep2_ascx********************************-->
+  <data name="wizardSaveToTemplateStep2_ascx_hlDownload_Text" xml:space="preserve">
+    <value>Download: ChartTemplate.xml</value>
+  </data>
+  <data name="wizardSaveToTemplateStep2_ascx_litHeader_Text" xml:space="preserve">
+    <value>&lt;b&gt;Step 2: Save Template File&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;
+Click on the icon shown to begin the downloading process, and save the template file onto your local machine.</value>
+  </data>
+  <!-- ********************** 01: Binding_ascx********************************-->
+  <data name="Binding_ascx_btnAdd_Text" xml:space="preserve">
+    <value>+</value>
+  </data>
+  <data name="Binding_ascx_btnProperties_Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="Binding_ascx_btnRemove_Text" xml:space="preserve">
+    <value>x</value>
+  </data>
+  <data name="Binding_ascx_JavaScript_SeriesNameDuplicate" xml:space="preserve">
+    <value>Another series with the same name exists in the chart.</value>
+  </data>
+  <data name="Binding_ascx_litBindingSeriesInfo_Text" xml:space="preserve">
+    <value>Series Properties</value>
+  </data>
+  <data name="Binding_ascx_litNoData_Text" xml:space="preserve">
+    <value>The Web Part that was connected is not currently providing any data to the chart. Please start the wizard from the Step 1 to connect to another Web Part, or click &lt;b&gt;Cancel&lt;/b&gt; and check that the Web Part used as the data provider is valid.</value>
+  </data>
+  <data name="Binding_ascx_litSectionWebPartDescription_Text" xml:space="preserve">
+    <value>The image below illustrates how the X, Y, and Group fields are associated with various chart elements.</value>
+  </data>
+  <data name="Binding_ascx_litSeries_Text" xml:space="preserve">
+    <value>Series</value>
+  </data>
+  <data name="Binding_ascx_litTable_Text" xml:space="preserve">
+    <value>Linked Data for the Chart</value>
+  </data>
+  <data name="Binding_ascx_litValueField_Text" xml:space="preserve">
+    <value>Value Field(s)</value>
+  </data>
+  <data name="Binding_ascx_litWebPartInterfaces_Text" xml:space="preserve">
+    <value>Data Formats</value>
+  </data>
+  <data name="Binding_ascx_sectionWebPart_Title" xml:space="preserve">
+    <value>Data Binding Details</value>
+  </data>
+  <data name="Binding_ascx_valSummary_HeaderText" xml:space="preserve">
+    <value>Please correct the following:</value>
+  </data>
+  <data name="Binding_ascx_litAdvancedProperties_Text" xml:space="preserve">
+    <value>Advanced Properties</value>
+  </data>
+  <data name="Binding_ascx_litRealTimeInterval_Text" xml:space="preserve">
+    <value>Real Time Interval &lt;br&gt; (in seconds)</value>
+  </data>
+  <data name="Binding_ascx_litAlignField_Text" xml:space="preserve">
+    <value>Align Data Points by Axis Label</value>
+  </data>
+  <data name="Binding_ascx_labFormulaTypeFullName_BollingerBands" xml:space="preserve">
+    <value>Bollinger Bands</value>
+  </data>
+  <data name="Binding_ascx_labFormulaTypeFullName_MovingAverage" xml:space="preserve">
+    <value>Simple Moving Average</value>
+  </data>
+  <data name="Binding_ascx_labFormulaTypeFullName_ExponentialMovingAverage" xml:space="preserve">
+    <value>Exponential Moving Average</value>
+  </data>
+  <data name="Binding_ascx_labFormulaTypeFullName_TriangularMovingAverage" xml:space="preserve">
+    <value>Triangular Moving Average</value>
+  </data>
+  <data name="Binding_ascx_labFormulaTypeFullName_Forecasting" xml:space="preserve">
+    <value>Forecasting</value>
+  </data>
+  <data name="Binding_ascx_labFormulaTypeFullName_WeightedMovingAverage" xml:space="preserve">
+    <value>Weighted Moving Average</value>
+  </data>
+  <data name="Binding_ascx_labFormulaTypeFullName_MACD" xml:space="preserve">
+    <value>Moving Avg. Convergence/Divergence</value>
+  </data>
+  <data name="Binding_ascx_labFormulaTypeFullName_DetrendedPriceOscillator" xml:space="preserve">
+    <value>Detrended Price Oscillator</value>
+  </data>
+  <data name="Binding_ascx_labFormulaTypeFullName_Envelopes" xml:space="preserve">
+    <value>Envelopes</value>
+  </data>
+  <data name="Binding_ascx_labFormulaTypeFullName_RateOfChange" xml:space="preserve">
+    <value>Rate Of Change</value>
+  </data>
+  <data name="Binding_ascx_labFormulaTypeFullName_RelativeStrengthIndex" xml:space="preserve">
+    <value>Relative Strength Index</value>
+  </data>
+  <data name="Binding_ascx_labFormulaTypeFullName_StandardDeviation" xml:space="preserve">
+    <value>Standard Deviation</value>
+  </data>
+  <data name="Binding_ascx_labFormulaTypeFullName_TRIX" xml:space="preserve">
+    <value>TRIX</value>
+  </data>
+  <data name="Binding_ascx_labFormulaTypeFullName_Error" xml:space="preserve">
+    <value>Error Bar</value>
+  </data>
+  <data name="Binding_ascx_labFormulaTypeFullName_BoxPlot" xml:space="preserve">
+    <value>Box Plot</value>
+  </data>
+  <data name="Binding_ascx_litTxtParameter1_BollingerBands" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="Binding_ascx_litTxtParameter1_MovingAverage" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="Binding_ascx_litTxtParameter1_ExponentialMovingAverage" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="Binding_ascx_litTxtParameter1_TriangularMovingAverage" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="Binding_ascx_litTxtParameter1_WeightedMovingAverage" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="Binding_ascx_litTxtParameter1_MACD" xml:space="preserve">
+    <value>Short Time Period</value>
+  </data>
+  <data name="Binding_ascx_litTxtParameter1_DetrendedPriceOscillator" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="Binding_ascx_litTxtParameter1_Envelopes" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="Binding_ascx_litTxtParameter1_RateOfChange" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="Binding_ascx_litTxtParameter1_RelativeStrengthIndex" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="Binding_ascx_litTxtParameter1_StandardDeviation" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="Binding_ascx_litTxtParameter1_TRIX" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="Binding_ascx_litTxtParameter1_ErrorBar_StandardError" xml:space="preserve">
+    <value>Standard Error(s)</value>
+  </data>
+  <data name="Binding_ascx_litTxtParameter1_ErrorBar_StandardDeviation" xml:space="preserve">
+    <value>Standard Deviation(s)</value>
+  </data>
+  <data name="Binding_ascx_litTxtParameter1_ErrorBar_Percentage" xml:space="preserve">
+    <value>Percentage (%)</value>
+  </data>
+  <data name="Binding_ascx_litTxtParameter1_ErrorBar_FixedValue" xml:space="preserve">
+    <value>Fixed Value</value>
+  </data>
+  <data name="Binding_ascx_litTxtParameter1_BoxPlot" xml:space="preserve">
+    <value>Whisker Percentile</value>
+  </data>
+  <data name="Binding_ascx_litTxtParameter1_Forecasting" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="Binding_ascx_litTxtParameter2_BollingerBands" xml:space="preserve">
+    <value>Number of Standard Deviations</value>
+  </data>
+  <data name="Binding_ascx_litTxtParameter2_MACD" xml:space="preserve">
+    <value>Long Time Period</value>
+  </data>
+  <data name="Binding_ascx_litTxtParameter2_Envelopes" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="Binding_ascx_litTxtParameter2_BoxPlot" xml:space="preserve">
+    <value>Percentile</value>
+  </data>
+  <data name="Binding_ascx_litTxtParameter2_Forecasting" xml:space="preserve">
+    <value>Forecasting</value>
+  </data>
+  <data name="Binding_ascx_Series_Name" xml:space="preserve">
+    <value>Series</value>
+  </data>
+  <!-- ********************** 02: BindingFieldInfo_ascx********************************-->
+  <data name="BindingFieldInfo_ascx_NotBoundOptionText" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litCategoryField_Text" xml:space="preserve">
+    <value>X Field</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litCustomFields_Text" xml:space="preserve">
+    <value>Custom Fields:</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litDataLabel_Text" xml:space="preserve">
+    <value>Label Field</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litLegendField_Text" xml:space="preserve">
+    <value>Group by Field (Optional)</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litOtherFields_Text" xml:space="preserve">
+    <value>Other Fields</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litSeriesHref_Text" xml:space="preserve">
+    <value>Hyperlink Field</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litSeriesTooltip_Text" xml:space="preserve">
+    <value>Tooltip Field</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litValue0_Text" xml:space="preserve">
+    <value>Y Field </value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litValue1_Text" xml:space="preserve">
+    <value>Y1 Value Field</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litValue2_Text" xml:space="preserve">
+    <value>Y2 Value Field</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litValue3_Text" xml:space="preserve">
+    <value>Y3 Value Field</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litValue4_Text" xml:space="preserve">
+    <value>Y4 Value Field</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litValue5_Text" xml:space="preserve">
+    <value>Y5 Value Field</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litFormulas_Text" xml:space="preserve">
+    <value>Data Analysis</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litFormulaType_Text" xml:space="preserve">
+    <value>Formula Type</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlFormulaType_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlFormulaType_BollingerBands" xml:space="preserve">
+    <value>Bollinger Bands</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlFormulaType_DetrendedPriceOscillator" xml:space="preserve">
+    <value>Detrended PO</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlFormulaType_Envelopes" xml:space="preserve">
+    <value>Envelopes</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlFormulaType_ExponentialMovingAverage" xml:space="preserve">
+    <value>Exponential MA</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlFormulaType_Forecasting" xml:space="preserve">
+    <value>Forecasting</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlFormulaType_MACD" xml:space="preserve">
+    <value>MACD</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlFormulaType_Performance" xml:space="preserve">
+    <value>Performance</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlFormulaType_RateOfChange" xml:space="preserve">
+    <value>Rate of Change</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlFormulaType_RelativeStrengthIndex" xml:space="preserve">
+    <value>Relative Strength</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlFormulaType_MovingAverage" xml:space="preserve">
+    <value>Moving Average</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlFormulaType_StandardDeviation" xml:space="preserve">
+    <value>Standard Deviation</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlFormulaType_TriangularMovingAverage" xml:space="preserve">
+    <value>Triangular MA</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlFormulaType_TRIX" xml:space="preserve">
+    <value>TRIX</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlFormulaType_WeightedMovingAverage" xml:space="preserve">
+    <value>Weighted MA</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlFormulaType_Mean" xml:space="preserve">
+    <value>Mean</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlFormulaType_Median" xml:space="preserve">
+    <value>Median</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlFormulaType_Error" xml:space="preserve">
+    <value>Error Bar</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlFormulaType_BoxPlot" xml:space="preserve">
+    <value>Box Plot</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litNewChartArea_Text" xml:space="preserve">
+    <value>Show Formula&lt;br&gt;In New Chart Area</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litErrorBarStyle_Text" xml:space="preserve">
+    <value>Style</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlErrorBarStyle_Both" xml:space="preserve">
+    <value>Both</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlErrorBarStyle_Upper" xml:space="preserve">
+    <value>Upper</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlErrorBarStyle_Lower" xml:space="preserve">
+    <value>Lower</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litErrorBarCalculationMethod_Text" xml:space="preserve">
+    <value>Error Calculation</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlErrorBarCalculationMethod_StandardError" xml:space="preserve">
+    <value>Standard Error</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlErrorBarCalculationMethod_StandardDeviation" xml:space="preserve">
+    <value>Standard Deviation</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlErrorBarCalculationMethod_Percentage" xml:space="preserve">
+    <value>Percentage</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlErrorBarCalculationMethod_FixedValue" xml:space="preserve">
+    <value>Fixed Value</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litRegressionType_Text" xml:space="preserve">
+    <value>Regression Type</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlRegressionType_Linear" xml:space="preserve">
+    <value>Linear</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlRegressionType_Polynomial" xml:space="preserve">
+    <value>Polynomial</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlRegressionType_Exponential" xml:space="preserve">
+    <value>Exponential</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlRegressionType_Logarithmic" xml:space="preserve">
+    <value>Logarithmic</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_ddlRegressionType_Power" xml:space="preserve">
+    <value>Power</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litBoxPlotShowAverage_Text" xml:space="preserve">
+    <value>Show Average Line</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litBoxPlotShowMedian_Text" xml:space="preserve">
+    <value>Show Median Line</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litBoxPlotShowUnusualValues_Text" xml:space="preserve">
+    <value>Show Unusual Points</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litError_Text" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litForecastingError_Text" xml:space="preserve">
+    <value>Forecasting Error</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litShowLegend_Text" xml:space="preserve">
+    <value>Show Legend</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litLegendText_Text" xml:space="preserve">
+    <value>Legend Text</value>
+  </data>
+  <data name="BindingFieldInfo_ascx_litStartFirstColumn_Text" xml:space="preserve">
+    <value>Start From First Column</value>
+  </data>
+  <!-- ********************** 03: BindingSeriesInfo_ascx********************************-->
+  <data name="BindingSeriesInfo_ascx_ddlAxisType_Primary" xml:space="preserve">
+    <value>Primary</value>
+  </data>
+  <data name="BindingSeriesInfo_ascx_ddlAxisType_Secondary" xml:space="preserve">
+    <value>Secondary</value>
+  </data>
+  <data name="BindingSeriesInfo_ascx_litChartArea_Text" xml:space="preserve">
+    <value>Series Chart Area</value>
+  </data>
+  <data name="BindingSeriesInfo_ascx_litLegend_Text" xml:space="preserve">
+    <value>Series Legend</value>
+  </data>
+  <data name="BindingSeriesInfo_ascx_litSeriesName_Text" xml:space="preserve">
+    <value>Series Name</value>
+  </data>
+  <data name="BindingSeriesInfo_ascx_litSeriesType_Text" xml:space="preserve">
+    <value>Series Type</value>
+  </data>
+  <data name="BindingSeriesInfo_ascx_litXAxisType_Text" xml:space="preserve">
+    <value>Series X-Axis Type</value>
+  </data>
+  <data name="BindingSeriesInfo_ascx_litYAxisType_Text" xml:space="preserve">
+    <value>Series Y-Axis Type</value>
+  </data>
+  <data name="BindingSeriesInfo_ascx_valreqSeriesName_ErrorMessage" xml:space="preserve">
+    <value>Series name cannot be empty</value>
+  </data>
+  <!-- ********************** 04: BindingValue_ascx********************************-->
+  <data name="BindingValue_ascx_litExistingSeries_Text" xml:space="preserve">
+    <value>Bind Value To This Series</value>
+  </data>
+  <data name="BindingValue_ascx_litNewChartArea_Text" xml:space="preserve">
+    <value>New series chart area</value>
+  </data>
+  <data name="BindingValue_ascx_litNewChartType_Text" xml:space="preserve">
+    <value>New series chart type</value>
+  </data>
+  <data name="BindingValue_ascx_litNewSeriesName_Text" xml:space="preserve">
+    <value>New series name</value>
+  </data>
+  <data name="BindingValue_ascx_valcustNewSeriesChartType_ErrorMessage" xml:space="preserve">
+    <value>The new data series chart type is not compatible with the existing data series chart type. The Chart Area must contain compatible series. Please choose another chart type to represent your data series.</value>
+  </data>
+  <data name="BindingValue_ascx_valcustNewSeriesName_ErrorMessage" xml:space="preserve">
+    <value>The name for your new data series is missing, please add a name for your new data series.</value>
+  </data>
+  <!-- ********************** 05: Properties3D_ascx********************************-->
+  <data name="Properties3D_ascx_lit3DEnabled_Text" xml:space="preserve">
+    <value>Show Chart in 3D</value>
+  </data>
+  <data name="Properties3D_ascx_litClustered_Text" xml:space="preserve">
+    <value>Clustered</value>
+  </data>
+  <data name="Properties3D_ascx_litDegrees_Text" xml:space="preserve">
+    <value>degrees</value>
+  </data>
+  <data name="Properties3D_ascx_litLight_Text" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="Properties3D_ascx_litPerspective_Text" xml:space="preserve">
+    <value>Perspective</value>
+  </data>
+  <data name="Properties3D_ascx_litPixels_Text" xml:space="preserve">
+    <value>pixels</value>
+  </data>
+  <data name="Properties3D_ascx_litRightAngleAxis_Text" xml:space="preserve">
+    <value>Right Angle Axes</value>
+  </data>
+  <data name="Properties3D_ascx_litWallThickness_Text" xml:space="preserve">
+    <value>Wall Thickness</value>
+  </data>
+  <data name="Properties3D_ascx_litXAngle_Text" xml:space="preserve">
+    <value>Rotation Around X-Axis</value>
+  </data>
+  <data name="Properties3D_ascx_litYAngle_Text" xml:space="preserve">
+    <value>Rotation Around Y-Axis</value>
+  </data>
+  <data name="Properties3D_ascx_rbl3DLight_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Properties3D_ascx_rbl3DLight_Realistic" xml:space="preserve">
+    <value>Realistic</value>
+  </data>
+  <data name="Properties3D_ascx_rbl3DLight_Simplistic" xml:space="preserve">
+    <value>Simplistic</value>
+  </data>
+  <!-- ********************** 06: PropertiesAxis_ascx********************************-->
+  <data name="PropertiesAxis_ascx_chkInterlaced_Text" xml:space="preserve">
+    <value>Interlaced</value>
+  </data>
+  <data name="PropertiesAxis_ascx_chkLogarithmicScale_Text" xml:space="preserve">
+    <value>Logarithmic scale</value>
+  </data>
+  <data name="PropertiesAxis_ascx_chkReversed_Text" xml:space="preserve">
+    <value>Reversed</value>
+  </data>
+  <data name="PropertiesAxis_ascx_chkScaleBreaks_Text" xml:space="preserve">
+    <value>Scale breaks</value>
+  </data>
+  <data name="PropertiesAxis_ascx_chkShowMajorGridlines_Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PropertiesAxis_ascx_chkShowMinorGridlines_Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PropertiesAxis_ascx_chkSideMargins_Text" xml:space="preserve">
+    <value>Side margins</value>
+  </data>
+  <data name="PropertiesAxis_ascx_chkStartFromZero_Text" xml:space="preserve">
+    <value>Start from zero</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlEnabled_Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlEnabled_False" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlEnabled_True" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlTickmark_Cross" xml:space="preserve">
+    <value>Cross</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlTickmark_Inside" xml:space="preserve">
+    <value>Inside</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlTickmark_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlTickmark_Outside" xml:space="preserve">
+    <value>Outside</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlTitleAlign_Center" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlTitleAlign_Far" xml:space="preserve">
+    <value>Far</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlTitleAlign_Near" xml:space="preserve">
+    <value>Near</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlType_Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlType_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlType_DateTime" xml:space="preserve">
+    <value>DateTime</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlType_Double" xml:space="preserve">
+    <value>Double</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlType_Int" xml:space="preserve">
+    <value>Int</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlType_Long" xml:space="preserve">
+    <value>Long</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlType_Single" xml:space="preserve">
+    <value>Single</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlType_String" xml:space="preserve">
+    <value>String</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlType_Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlType_UInt" xml:space="preserve">
+    <value>UInt</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlType_ULong" xml:space="preserve">
+    <value>ULong</value>
+  </data>
+  <data name="PropertiesAxis_ascx_litAxisLabelsFont_Text" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="PropertiesAxis_ascx_litAxisLabelsFormat_Text" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="PropertiesAxis_ascx_litAxisNotAvailable_Text" xml:space="preserve">
+    <value>Current chart type does not have configurable axes.</value>
+  </data>
+  <data name="PropertiesAxis_ascx_litAxisTitleFont_Text" xml:space="preserve">
+    <value>Title Font</value>
+  </data>
+  <data name="PropertiesAxis_ascx_litEnabled_Text" xml:space="preserve">
+    <value>Show Axis</value>
+  </data>
+  <data name="PropertiesAxis_ascx_litInterval_Text" xml:space="preserve">
+    <value>Interval</value>
+  </data>
+  <data name="PropertiesAxis_ascx_litMajorGridlines_Text" xml:space="preserve">
+    <value>Show Major Grid Lines</value>
+  </data>
+  <data name="PropertiesAxis_ascx_litMaximum_Text" xml:space="preserve">
+    <value>Maximum</value>
+  </data>
+  <data name="PropertiesAxis_ascx_litMinimum_Text" xml:space="preserve">
+    <value>Minimum</value>
+  </data>
+  <data name="PropertiesAxis_ascx_litMinorGridlines_Text" xml:space="preserve">
+    <value>Show Minor Grid Lines</value>
+  </data>
+  <data name="PropertiesAxis_ascx_litSettings_Text" xml:space="preserve">
+    <value>Axis Settings</value>
+  </data>
+  <data name="PropertiesAxis_ascx_litShowAxisLabels_Text" xml:space="preserve">
+    <value>Show Axis Labels</value>
+  </data>
+  <data name="PropertiesAxis_ascx_litShowTitle_Text" xml:space="preserve">
+    <value>Show Axis Title</value>
+  </data>
+  <data name="PropertiesAxis_ascx_litTickMarks_Text" xml:space="preserve">
+    <value>Tick Marks</value>
+  </data>
+  <data name="PropertiesAxis_ascx_litTitle_Text" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="PropertiesAxis_ascx_litTitleAlign_Text" xml:space="preserve">
+    <value>Title Alignment</value>
+  </data>
+  <data name="PropertiesAxis_ascx_litType_Text" xml:space="preserve">
+    <value>Value Type</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlGridlinesIntervalType_Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlGridlinesIntervalType_Number" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlGridlinesIntervalType_Years" xml:space="preserve">
+    <value>Years</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlGridlinesIntervalType_Months" xml:space="preserve">
+    <value>Months</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlGridlinesIntervalType_Weeks" xml:space="preserve">
+    <value>Weeks</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlGridlinesIntervalType_Days" xml:space="preserve">
+    <value>Days</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlGridlinesIntervalType_Hours" xml:space="preserve">
+    <value>Hours</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlGridlinesIntervalType_Minutes" xml:space="preserve">
+    <value>Minutes</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlGridlinesIntervalType_Seconds" xml:space="preserve">
+    <value>Seconds</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlGridlinesIntervalType_Milliseconds" xml:space="preserve">
+    <value>Milliseconds</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlGridlinesIntervalType_NotSet" xml:space="preserve">
+    <value>Not Set</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlTickmark_OutsideArea" xml:space="preserve">
+    <value>Outside Area</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlTickmark_InsideArea" xml:space="preserve">
+    <value>Inside Area</value>
+  </data>
+  <data name="PropertiesAxis_ascx_ddlTickmark_AcrossAxis" xml:space="preserve">
+    <value>Across Axis</value>
+  </data>
+  <!-- ********************** 07: PropertiesBackground_ascx********************************-->
+  <data name="PropertiesBackground_ascx_litBorderSkinStyle_Text" xml:space="preserve">
+    <value>Chart Border Style</value>
+  </data>
+  <data name="PropertiesBackground_ascx_ddlBorderSkinStyle_Emboss" xml:space="preserve">
+    <value>Emboss, no frame</value>
+  </data>
+  <data name="PropertiesBackground_ascx_ddlBorderSkinStyle_FrameThin1" xml:space="preserve">
+    <value>Frame - type 1</value>
+  </data>
+  <data name="PropertiesBackground_ascx_ddlBorderSkinStyle_FrameThin2" xml:space="preserve">
+    <value>Frame - type 2</value>
+  </data>
+  <data name="PropertiesBackground_ascx_ddlBorderSkinStyle_FrameThin3" xml:space="preserve">
+    <value>Frame - type 3</value>
+  </data>
+  <data name="PropertiesBackground_ascx_ddlBorderSkinStyle_FrameThin4" xml:space="preserve">
+    <value>Frame - type 4</value>
+  </data>
+  <data name="PropertiesBackground_ascx_ddlBorderSkinStyle_FrameThin5" xml:space="preserve">
+    <value>Frame - type 5</value>
+  </data>
+  <data name="PropertiesBackground_ascx_ddlBorderSkinStyle_FrameThin6" xml:space="preserve">
+    <value>Frame - type 6</value>
+  </data>
+  <data name="PropertiesBackground_ascx_ddlBorderSkinStyle_FrameTitle1" xml:space="preserve">
+    <value>Frame with title - type 1</value>
+  </data>
+  <data name="PropertiesBackground_ascx_ddlBorderSkinStyle_FrameTitle2" xml:space="preserve">
+    <value>Frame with title - type 2</value>
+  </data>
+  <data name="PropertiesBackground_ascx_ddlBorderSkinStyle_FrameTitle3" xml:space="preserve">
+    <value>Frame with title - type 3</value>
+  </data>
+  <data name="PropertiesBackground_ascx_ddlBorderSkinStyle_FrameTitle4" xml:space="preserve">
+    <value>Frame with title - type 4</value>
+  </data>
+  <data name="PropertiesBackground_ascx_ddlBorderSkinStyle_FrameTitle5" xml:space="preserve">
+    <value>Frame with title - type 5</value>
+  </data>
+  <data name="PropertiesBackground_ascx_ddlBorderSkinStyle_FrameTitle6" xml:space="preserve">
+    <value>Frame with title - type 6</value>
+  </data>
+  <data name="PropertiesBackground_ascx_ddlBorderSkinStyle_FrameTitle7" xml:space="preserve">
+    <value>Frame with title - type 7</value>
+  </data>
+  <data name="PropertiesBackground_ascx_ddlBorderSkinStyle_FrameTitle8" xml:space="preserve">
+    <value>Frame with title - type 8</value>
+  </data>
+  <data name="PropertiesBackground_ascx_ddlBorderSkinStyle_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="PropertiesBackground_ascx_ddlBorderSkinStyle_Raised" xml:space="preserve">
+    <value>Raised, no frame</value>
+  </data>
+  <data name="PropertiesBackground_ascx_ddlBorderSkinStyle_Sunken" xml:space="preserve">
+    <value>Sunken, no frame</value>
+  </data>
+  <data name="PropertiesBackground_ascx_litChartAreaBorder_Text" xml:space="preserve">
+    <value>Chart Area Border</value>
+  </data>
+  <data name="PropertiesBackground_ascx_litChartAreaFill_Text" xml:space="preserve">
+    <value>Chart Area Background</value>
+  </data>
+  <data name="PropertiesBackground_ascx_litChartBorder_Text" xml:space="preserve">
+    <value>Chart Border</value>
+  </data>
+  <data name="PropertiesBackground_ascx_litChartFill_Text" xml:space="preserve">
+    <value>Chart Background</value>
+  </data>
+  <!-- ********************** 08: PropertiesDataLabel_ascx********************************-->
+  <data name="PropertiesDataLabel_ascx_ddlPosition_Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlPosition_Bottom" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlPosition_BottomLeft" xml:space="preserve">
+    <value>BottomLeft</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlPosition_BottomRight" xml:space="preserve">
+    <value>BottomRight</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlPosition_Center" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlPosition_Ellipse" xml:space="preserve">
+    <value>Ellipse</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlPosition_Inside" xml:space="preserve">
+    <value>Inside</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlPosition_Left" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlPosition_Outside" xml:space="preserve">
+    <value>Outside</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlPosition_OutsideInColumn" xml:space="preserve">
+    <value>OutsideInColumn</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlPosition_Right" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlPosition_Top" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlPosition_TopLeft" xml:space="preserve">
+    <value>TopLeft</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlPosition_TopRight" xml:space="preserve">
+    <value>TopRight</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlValue_AxisLabel" xml:space="preserve">
+    <value>Show Axis label (#AXISLABEL)</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlValue_DataPointIndex" xml:space="preserve">
+    <value>Show Data Point index (#INDEX)</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlValue_Other" xml:space="preserve">
+    <value>Other... (specify below)</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlValue_SeriesName" xml:space="preserve">
+    <value>Show Series name (#SERIESNAME)</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlValue_ShowLabelAsValue" xml:space="preserve">
+    <value>Show default values</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlValue_XValue" xml:space="preserve">
+    <value>Show X value (#VALX)</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlValue_YAverage" xml:space="preserve">
+    <value>Show average of Y values (#AVG)</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlValue_YFirstValue" xml:space="preserve">
+    <value>Show the first Y value (#FIRST)</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlValue_YLastValue" xml:space="preserve">
+    <value>Show the last Y value (#LAST)</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlValue_YMax" xml:space="preserve">
+    <value>Show maximum of Y values (#MAX)</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlValue_YMin" xml:space="preserve">
+    <value>Show minimum of Y values (#MIN)</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlValue_YPercent" xml:space="preserve">
+    <value>Show percentage value (#PERCENT)</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlValue_YTotal" xml:space="preserve">
+    <value>Show total of Y values (#TOTAL)</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_ddlValue_YValue" xml:space="preserve">
+    <value>Show Y value (#VALY)</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_litAngle_Text" xml:space="preserve">
+    <value>Label Angle</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_litAutoPositioning_Text" xml:space="preserve">
+    <value>Auto Position Labels</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_litDegrees_Text" xml:space="preserve">
+    <value>degrees</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_litFont_Text" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_litFormat_Text" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_litOtherValue_Text" xml:space="preserve">
+    <value>Custom Value</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_litPosition_Text" xml:space="preserve">
+    <value>Label Alignment</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_litValue_Text" xml:space="preserve">
+    <value>Label Value</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_litVisible_Text" xml:space="preserve">
+    <value>Show Labels</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_valrngAngle_ErrorMessage" xml:space="preserve">
+    <value>Angle must be an integer number between -90 and 90.</value>
+  </data>
+  <data name="PropertiesDataLabel_ascx_valrngAngle_Text" xml:space="preserve">
+    <value>(?)</value>
+  </data>
+  <!-- ********************** 09: PropertiesDataMarker_ascx********************************-->
+  <data name="PropertiesDataMarker_ascx_litMarkersNotAvailable_Text" xml:space="preserve">
+    <value>Markers cannot be used with pie charts, doughnut charts, or any of the stacked chart types.</value>
+  </data>
+  <data name="PropertiesDataMarker_ascx_litPixels_Text" xml:space="preserve">
+    <value>pixels</value>
+  </data>
+  <data name="PropertiesDataMarker_ascx_litSize_Text" xml:space="preserve">
+    <value>Marker Size</value>
+  </data>
+  <data name="PropertiesDataMarker_ascx_litStyle_Text" xml:space="preserve">
+    <value>Marker Style</value>
+  </data>
+  <data name="PropertiesDataMarker_ascx_litVisible_Text" xml:space="preserve">
+    <value>Show Markers</value>
+  </data>
+  <data name="PropertiesDataMarker_ascx_valrngSize_ErrorMessage" xml:space="preserve">
+    <value>Marker size is an integer number between 0 and 100.</value>
+  </data>
+  <data name="PropertiesDataMarker_ascx_valrngSize_Text" xml:space="preserve">
+    <value>(?)</value>
+  </data>
+  <data name="PropertiesDataMarker_ascx_ddlStyle_Square" xml:space="preserve">
+    <value>Square</value>
+  </data>
+  <data name="PropertiesDataMarker_ascx_ddlStyle_Circle" xml:space="preserve">
+    <value>Circle</value>
+  </data>
+  <data name="PropertiesDataMarker_ascx_ddlStyle_Diamond" xml:space="preserve">
+    <value>Diamond</value>
+  </data>
+  <data name="PropertiesDataMarker_ascx_ddlStyle_Triangle" xml:space="preserve">
+    <value>Triangle</value>
+  </data>
+  <data name="PropertiesDataMarker_ascx_ddlStyle_Cross" xml:space="preserve">
+    <value>Cross</value>
+  </data>
+  <data name="PropertiesDataMarker_ascx_ddlStyle_Star4" xml:space="preserve">
+    <value>Star 4</value>
+  </data>
+  <data name="PropertiesDataMarker_ascx_ddlStyle_Star5" xml:space="preserve">
+    <value>Star 5</value>
+  </data>
+  <data name="PropertiesDataMarker_ascx_ddlStyle_Star6" xml:space="preserve">
+    <value>Star 6</value>
+  </data>
+  <data name="PropertiesDataMarker_ascx_ddlStyle_Star10" xml:space="preserve">
+    <value>Star 10</value>
+  </data>
+  <!-- ********************** 10: PropertiesInteractivitySeries_ascx********************************-->
+  <data name="PropertiesInteractivitySeries_ascx_litHref_Text" xml:space="preserve">
+    <value>Series Hyperlink</value>
+  </data>
+  <data name="PropertiesInteractivitySeries_ascx_litLabelHref_Text" xml:space="preserve">
+    <value>Label Hyperlink</value>
+  </data>
+  <data name="PropertiesInteractivitySeries_ascx_litLabelTooltip_Text" xml:space="preserve">
+    <value>Label Tooltip</value>
+  </data>
+  <data name="PropertiesInteractivitySeries_ascx_litLegendHref_Text" xml:space="preserve">
+    <value>Legend Hyperlink</value>
+  </data>
+  <data name="PropertiesInteractivitySeries_ascx_litLegendTooltip_Text" xml:space="preserve">
+    <value>Legend Tooltip</value>
+  </data>
+  <data name="PropertiesInteractivitySeries_ascx_litSeries_Text" xml:space="preserve">
+    <value>Data Series</value>
+  </data>
+  <data name="PropertiesInteractivitySeries_ascx_litTooltip_Text" xml:space="preserve">
+    <value>Series Tooltip</value>
+  </data>
+  <!-- ********************** 11: PropertiesLegend_ascx********************************-->
+  <data name="PropertiesLegend_ascx_ddlChartArea_Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PropertiesLegend_ascx_ddlLegendStyle_Column" xml:space="preserve">
+    <value>Column</value>
+  </data>
+  <data name="PropertiesLegend_ascx_ddlLegendStyle_Row" xml:space="preserve">
+    <value>Row</value>
+  </data>
+  <data name="PropertiesLegend_ascx_ddlLegendStyle_Table" xml:space="preserve">
+    <value>Table</value>
+  </data>
+  <data name="PropertiesLegend_ascx_litDockLegendToChartArea_Text" xml:space="preserve">
+    <value>Dock to Chart Area</value>
+  </data>
+  <data name="PropertiesLegend_ascx_litLegendBorder_Text" xml:space="preserve">
+    <value>Border</value>
+  </data>
+  <data name="PropertiesLegend_ascx_litLegendFill_Text" xml:space="preserve">
+    <value>Fill</value>
+  </data>
+  <data name="PropertiesLegend_ascx_litLegendFont_Text" xml:space="preserve">
+    <value>Legend Font</value>
+  </data>
+  <data name="PropertiesLegend_ascx_litLegendPosition_Text" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="PropertiesLegend_ascx_litLegendStyle_Text" xml:space="preserve">
+    <value>Style</value>
+  </data>
+  <data name="PropertiesLegend_ascx_litLegendTitle_Text" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="PropertiesLegend_ascx_litLegendTitleFont_Text" xml:space="preserve">
+    <value>Title Font</value>
+  </data>
+  <data name="PropertiesLegend_ascx_litShowLegend_Text" xml:space="preserve">
+    <value>Show Legend</value>
+  </data>
+  <data name="PropertiesLegend_ascx_litShowLegendInsideChartArea_Text" xml:space="preserve">
+    <value>Dock Inside The Chart Area</value>
+  </data>
+  <!-- ********************** 12: PropertiesSizeType_ascx********************************-->
+  <data name="PropertiesSizeType_ascx_ddlAnimationTheme_Fading" xml:space="preserve">
+    <value>Fading</value>
+  </data>
+  <data name="PropertiesSizeType_ascx_ddlAnimationTheme_GrowingAndFading" xml:space="preserve">
+    <value>Growing And Fading</value>
+  </data>
+  <data name="PropertiesSizeType_ascx_ddlAnimationTheme_GrowingOneByOne" xml:space="preserve">
+    <value>Growing One By One</value>
+  </data>
+  <data name="PropertiesSizeType_ascx_ddlAnimationTheme_GrowingTogether" xml:space="preserve">
+    <value>Growing Together</value>
+  </data>
+  <data name="PropertiesSizeType_ascx_ddlAnimationTheme_MovingFromTop" xml:space="preserve">
+    <value>Moving From Top</value>
+  </data>
+  <data name="PropertiesSizeType_ascx_ddlAnimationTheme_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="PropertiesSizeType_ascx_ddlImageType_Bmp" xml:space="preserve">
+    <value>Bmp</value>
+  </data>
+  <data name="PropertiesSizeType_ascx_ddlImageType_Emf" xml:space="preserve">
+    <value>Emf</value>
+  </data>
+  <!--MWC: DELF-->
+  <!--<data name="PropertiesSizeType_ascx_ddlImageType_Flash" xml:space="preserve">
+    <value>Flash</value>
+  </data>-->
+  <data name="PropertiesSizeType_ascx_ddlImageType_Jpeg" xml:space="preserve">
+    <value>Jpeg</value>
+  </data>
+  <data name="PropertiesSizeType_ascx_ddlImageType_Png" xml:space="preserve">
+    <value>Png</value>
+  </data>
+  <!--MWC: DELF-->
+  <!--<data name="PropertiesSizeType_ascx_ddlImageType_Svg" xml:space="preserve">
+    <value>Svg</value>
+  </data>-->
+  <data name="PropertiesSizeType_ascx_litAnimationDuration_Text" xml:space="preserve">
+    <value>Animation Duration</value>
+  </data>
+  <data name="PropertiesSizeType_ascx_litAnimationTheme_Text" xml:space="preserve">
+    <value>Animation Theme</value>
+  </data>
+  <data name="PropertiesSizeType_ascx_litHeight_Text" xml:space="preserve">
+    <value>Chart Height</value>
+  </data>
+  <data name="PropertiesSizeType_ascx_litImageType_Text" xml:space="preserve">
+    <value>Chart Image Format</value>
+  </data>
+  <data name="PropertiesSizeType_ascx_litSeconds_Text" xml:space="preserve">
+    <value>seconds</value>
+  </data>
+  <data name="PropertiesSizeType_ascx_litWidth_Text" xml:space="preserve">
+    <value>Chart Width</value>
+  </data>
+  <!-- ********************** 13: PropertiesTheme_ascx********************************-->
+  <data name="PropertiesTheme_ascx_litDrawingStyle_Text" xml:space="preserve">
+    <value>Drawing Style</value>
+  </data>
+  <data name="PropertiesTheme_ascx_litTheme_Text" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="PropertiesTheme_ascx_litTransparency_Text" xml:space="preserve">
+    <value>Transparency</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlChartDrawingStyleColumnRow_Cylinder" xml:space="preserve">
+    <value>Cylinder</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlChartDrawingStyleColumnRow_Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlChartDrawingStyleColumnRow_Emboss" xml:space="preserve">
+    <value>Emboss</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlChartDrawingStyleColumnRow_LightToDark" xml:space="preserve">
+    <value>LightToDark</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlChartDrawingStyleColumnRow_Wedge" xml:space="preserve">
+    <value>Wedge</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlChartDrawingStylePie_Concave" xml:space="preserve">
+    <value>Concave</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlChartDrawingStylePie_Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlChartDrawingStylePie_SoftEdge" xml:space="preserve">
+    <value>SoftEdge</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlChartTheme_Berry" xml:space="preserve">
+    <value>Berry</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlChartTheme_Chocolate" xml:space="preserve">
+    <value>Chocolate</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlChartTheme_Custom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlChartTheme_BrightPastel" xml:space="preserve">
+    <value>Bright Pastel</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlChartTheme_EarthTones" xml:space="preserve">
+    <value>Earth Tones</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlChartTheme_ExcelLike" xml:space="preserve">
+    <value>Blue Purple</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlChartTheme_Fire" xml:space="preserve">
+    <value>Fire</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlChartTheme_GrayScale" xml:space="preserve">
+    <value>Gray Scale</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlChartTheme_GreenBlue" xml:space="preserve">
+    <value>Green Blue</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlChartTheme_LightBeige" xml:space="preserve">
+    <value>Light Beige</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlChartTheme_LightSteelBlue" xml:space="preserve">
+    <value>Light Steel Blue</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlChartTheme_SemiTransparent" xml:space="preserve">
+    <value>Semi Transparent</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlTransparency_Alfa0" xml:space="preserve">
+    <value>100% - Invisible</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlTransparency_Alfa10" xml:space="preserve">
+    <value>90% </value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlTransparency_Alfa100" xml:space="preserve">
+    <value>0% - Solid</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlTransparency_Alfa20" xml:space="preserve">
+    <value>80%</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlTransparency_Alfa30" xml:space="preserve">
+    <value>70%</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlTransparency_Alfa40" xml:space="preserve">
+    <value>60%</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlTransparency_Alfa50" xml:space="preserve">
+    <value>50%</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlTransparency_Alfa60" xml:space="preserve">
+    <value>40%</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlTransparency_Alfa70" xml:space="preserve">
+    <value>30%</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlTransparency_Alfa80" xml:space="preserve">
+    <value>20%</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlTransparency_Alfa90" xml:space="preserve">
+    <value>10%</value>
+  </data>
+  <data name="PropertiesTheme_ascx_litBorderSkinStyle_Text" xml:space="preserve">
+    <value>Chart Border Style</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlBorderSkinStyle_Emboss" xml:space="preserve">
+    <value>Emboss, no frame</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlBorderSkinStyle_FrameThin1" xml:space="preserve">
+    <value>Frame - type 1</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlBorderSkinStyle_FrameThin2" xml:space="preserve">
+    <value>Frame - type 2</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlBorderSkinStyle_FrameThin3" xml:space="preserve">
+    <value>Frame - type 3</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlBorderSkinStyle_FrameThin4" xml:space="preserve">
+    <value>Frame - type 4</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlBorderSkinStyle_FrameThin5" xml:space="preserve">
+    <value>Frame - type 5</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlBorderSkinStyle_FrameThin6" xml:space="preserve">
+    <value>Frame - type 6</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlBorderSkinStyle_FrameTitle1" xml:space="preserve">
+    <value>Frame with title - type 1</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlBorderSkinStyle_FrameTitle2" xml:space="preserve">
+    <value>Frame with title - type 2</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlBorderSkinStyle_FrameTitle3" xml:space="preserve">
+    <value>Frame with title - type 3</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlBorderSkinStyle_FrameTitle4" xml:space="preserve">
+    <value>Frame with title - type 4</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlBorderSkinStyle_FrameTitle5" xml:space="preserve">
+    <value>Frame with title - type 5</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlBorderSkinStyle_FrameTitle6" xml:space="preserve">
+    <value>Frame with title - type 6</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlBorderSkinStyle_FrameTitle7" xml:space="preserve">
+    <value>Frame with title - type 7</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlBorderSkinStyle_FrameTitle8" xml:space="preserve">
+    <value>Frame with title - type 8</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlBorderSkinStyle_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlBorderSkinStyle_Raised" xml:space="preserve">
+    <value>Raised, no frame</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlBorderSkinStyle_Sunken" xml:space="preserve">
+    <value>Sunken, no frame</value>
+  </data>
+  <data name="PropertiesTheme_ascx_litChartAreaBorder_Text" xml:space="preserve">
+    <value>Chart Area Border</value>
+  </data>
+  <data name="PropertiesTheme_ascx_litChartAreaFill_Text" xml:space="preserve">
+    <value>Chart Area Fill</value>
+  </data>
+  <data name="PropertiesTheme_ascx_litChartBorder_Text" xml:space="preserve">
+    <value>Chart Picture Border</value>
+  </data>
+  <data name="PropertiesTheme_ascx_litChartFill_Text" xml:space="preserve">
+    <value>Chart Picture Fill</value>
+  </data>
+  <data name="PropertiesTheme_ascx_ddlTransparency_Custom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <!-- ********************** 14: PropertiesTitle_ascx********************************-->
+  <data name="PropertiesTitle_ascx_ddlTitleStyle_Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="PropertiesTitle_ascx_ddlTitleStyle_Embed" xml:space="preserve">
+    <value>Embed</value>
+  </data>
+  <data name="PropertiesTitle_ascx_ddlTitleStyle_Emboss" xml:space="preserve">
+    <value>Emboss</value>
+  </data>
+  <data name="PropertiesTitle_ascx_ddlTitleStyle_Frame" xml:space="preserve">
+    <value>Frame</value>
+  </data>
+  <data name="PropertiesTitle_ascx_ddlTitleStyle_Shadow" xml:space="preserve">
+    <value>Shadow</value>
+  </data>
+  <data name="PropertiesTitle_ascx_litChartTitle_Text" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="PropertiesTitle_ascx_litChartTitleBorder_Text" xml:space="preserve">
+    <value>Border</value>
+  </data>
+  <data name="PropertiesTitle_ascx_litChartTitleFill_Text" xml:space="preserve">
+    <value>Fill</value>
+  </data>
+  <data name="PropertiesTitle_ascx_litChartTitleFont_Text" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="PropertiesTitle_ascx_litChartTitlePosition_Text" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="PropertiesTitle_ascx_litShowChartTitle_Text" xml:space="preserve">
+    <value>Show Chart Title</value>
+  </data>
+  <data name="PropertiesTitle_ascx_litTitleStyle_Text" xml:space="preserve">
+    <value>Style</value>
+  </data>
+  <data name="PropertiesTitle_ascx_litWebPartTitle_Text" xml:space="preserve">
+    <value>Web Part Title</value>
+  </data>
+  <!-- ********************** 15: ColorPickerDialog.aspx********************************-->
+  <data name="ColorPickerDialog_aspx_Title_Text" xml:space="preserve">
+    <value>Choose a Color</value>
+  </data>
+  <data name="ColorPickerDialog_aspx_SelectColor_Text" xml:space="preserve">
+    <value>Select Color:</value>
+  </data>
+  <data name="ColorPickerDialog_aspx_CurrentColor_Text" xml:space="preserve">
+    <value>Current/new color:</value>
+  </data>
+  <data name="ColorPickerDialog_aspx_RedColor_Text" xml:space="preserve">
+    <value>Red:</value>
+  </data>
+  <data name="ColorPickerDialog_aspx_GreenColor_Text" xml:space="preserve">
+    <value>Green:</value>
+  </data>
+  <data name="ColorPickerDialog_aspx_BlueColor_Text" xml:space="preserve">
+    <value>Blue:</value>
+  </data>
+  <data name="ColorPickerDialog_aspx_Opacity_Text" xml:space="preserve">
+    <value>Opacity:</value>
+  </data>
+  <data name="ColorPickerDialog_aspx_OK_Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ColorPickerDialog_aspx_Cancel_Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <!-- ********************** 16: FillPickerDialog.aspx ********************************-->
+  <data name="FillPickerDialog_aspx_Title_Text" xml:space="preserve">
+    <value>Choose a Color</value>
+  </data>
+  <!-- ********************** 17: FormatPickerDialog.aspx ********************************-->
+  <data name="FormatPickerDialog_aspx_Title_Text" xml:space="preserve">
+    <value>Choose a Format</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_NotSet" xml:space="preserve">
+    <value>Not Set</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_NotSet_Hint" xml:space="preserve">
+    <value>Default format</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_Numeric" xml:space="preserve">
+    <value>Numeric</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_Numeric_Hint" xml:space="preserve">
+    <value>Please select one of the numeric formats below</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_General" xml:space="preserve">
+    <value> - General</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_General_Hint" xml:space="preserve">
+    <value>The number is converted to the most compact decimal form, using fixed or scientific notation. The precision specifier determines the number of significant digits in the resulting string.</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_Currency" xml:space="preserve">
+    <value> - Currency</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_Currency_Hint" xml:space="preserve">
+    <value>The number is converted to a string that represents a currency amount. The conversion is controlled by the system currency format information. The precision specifier indicates the desired number of decimal places.</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_Number" xml:space="preserve">
+    <value> - Number</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_Number_Hint" xml:space="preserve">
+    <value>The number is converted to a string of the form "-d,ddd,ddd.ddd", where each "d" indicates a digit (0-9). The string starts with a minus sign if the number is negative. Thousand separators are inserted between each group of three digits to the left of the decimal point. The precision specifier indicates the desired number of decimal places.</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_FixedPoint" xml:space="preserve">
+    <value> - Fixed-point</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_FixedPoint_Hint" xml:space="preserve">
+    <value>The number is converted to a string of the form " -ddd.ddd " where each " d " indicates a digit (0-9). The string starts with a minus sign if the number is negative. The precision specifier indicates the desired number of decimal places.</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_Percent" xml:space="preserve">
+    <value> - Percent</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_Percent_Hint" xml:space="preserve">
+    <value>When using percentages, no actual conversion of any number takes place. Therefore, the precision displayed will always show two decimal places regardless of input. In the example shown here, a percentage sign (%) was simply appended to the original number to indicate that it represents a percentage value.</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_Scientific" xml:space="preserve">
+    <value> - Scientific</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_Scientific_Hint" xml:space="preserve">
+    <value>The number is converted to a string of the form "-d.dddE+ddd" or " -d.ddde+ddd " , where each "d" indicates a digit (0-9). The string starts with a minus sign if the number is negative. One digit always precedes the decimal point. The precision specifier indicates the desired number of digits after the decimal point.</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_DateTime" xml:space="preserve">
+    <value>DateTime</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_DateTime_Hint" xml:space="preserve">
+    <value>Please select one of the numeric formats below</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_ShortDate" xml:space="preserve">
+    <value> - Short date</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_ShortDate_Hint" xml:space="preserve">
+    <value>The date/time is converted to the short date format.</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_LongDate" xml:space="preserve">
+    <value> - Long date</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_LongDate_Hint" xml:space="preserve">
+    <value>The date/time is converted to the long date format.</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_ShortTime" xml:space="preserve">
+    <value> - Short time</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_ShortTime_Hint" xml:space="preserve">
+    <value>The date/time is converted to the short time format.</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_LongTime" xml:space="preserve">
+    <value> - Long time</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_LongTime_Hint" xml:space="preserve">
+    <value>The date/time is converted to the long time format.</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_FullShortTime" xml:space="preserve">
+    <value> - Full date/time (short time)</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_FullShortTime_Hint" xml:space="preserve">
+    <value>Displays a combination of the long date and short time patterns, separated by a space.</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_FullLongTime" xml:space="preserve">
+    <value> - Full date/time (long time)</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_FullLongTime_Hint" xml:space="preserve">
+    <value>Displays a combination of the long date and long time patterns, separated by a space.</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_GeneralShortTime" xml:space="preserve">
+    <value> - General date/time (short time)</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_GeneralShortTime_Hint" xml:space="preserve">
+    <value>Displays a combination of the short date and short time patterns, separated by a space.</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_GeneralLongTime" xml:space="preserve">
+    <value> - General date/time (long time)</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_GeneralLongTime_Hint" xml:space="preserve">
+    <value>Displays a combination of the short date and long time patterns, separated by a space.</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_MonthDay" xml:space="preserve">
+    <value> - Month day</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_MonthDay_Hint" xml:space="preserve">
+    <value>The date/time is converted to the month day format.</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_RFC" xml:space="preserve">
+    <value> - RFC1123</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_RFC_Hint" xml:space="preserve">
+    <value>The date/time is converted to the RFC1123 standart format. It follows the custom pattern "ddd, dd MMMM yyyy HH:mm:ss G\MT". Note that the "M" in "GMT" needs an escape character so it is not interpreted.</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_ISO" xml:space="preserve">
+    <value> - Sortable date/time ISO8601</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_ISO_Hint" xml:space="preserve">
+    <value>The date/time is converted to the sortable format. Format follows the custom pattern "yyyy-MM-ddTHH:mm:ss".</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_UniversalSortable" xml:space="preserve">
+    <value> - Universal sortable date/time</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_UniversalSortable_Hint" xml:space="preserve">
+    <value>The date/time is converted to the universal sortable format. Pattern is always the same regardless of culture or format provider. The format follows the custom pattern "yyyy-MM-dd HH:mm:ssZ".</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_UniversalFull" xml:space="preserve">
+    <value> - Universal full date/time</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_UniversalFull_Hint" xml:space="preserve">
+    <value>The date/time is converted to the universal full format. Pattern is always the same regardless of culture or format provider. Note that the time displayed is for the Universal, rather than local time.</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_YearMonth" xml:space="preserve">
+    <value> - Year/month</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_YearMonth_Hint" xml:space="preserve">
+    <value>The date/time is converted to the year month format.</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_Custom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_Custom_Hint" xml:space="preserve">
+    <value>Pick one of the custom formats</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_CustomNumeric" xml:space="preserve">
+    <value> - Numeric</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_CustomNumeric_Hint" xml:space="preserve">
+    <value>Characters that can be used to create custom numeric format strings:  "0" - Zero placeholder, "#" - Digit placeholder, "." - Decimal point, "," - Thousand separator and number scaling, "%" - Percentage placeholder, "E0" - Scientific notation, "\" - Escape character, ";" - Section separator. All other characters are copied to the output string as literals in the position they appear.</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_CustomDateTime" xml:space="preserve">
+    <value> - Date/time</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Type_CustomDateTime_Hint" xml:space="preserve">
+    <value>Some characters that can be used to create custom date/time format strings: "d or dd" - One or two digit day of the month, "ddd or dddd" - Three character or full week day name, "h or hh" - One or two digit hour (1-12), "H or HH" - One or two digit hour (1-24), "m or mm" - One or two digit minute, "M or MM" - One or two digit month, "MMM or MMMM" - Three character or full month name, "s or ss" - One or two digit second, "t or tt" - One or full A.M./P.M. designator, "y or yy or yyy" - One, two digit or full year.</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_FormatType_Text" xml:space="preserve">
+    <value>Format Type:</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Precision_Text" xml:space="preserve">
+    <value>Precision</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_FormatString_Text" xml:space="preserve">
+    <value>Format String:</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Sample_Text" xml:space="preserve">
+    <value>Sample:</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_Hints_Text" xml:space="preserve">
+    <value>Hints:</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_buttonOK_Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="FormatPickerDialog_aspx_buttonCancel_Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <!-- ********************** 18: FontIFrame.aspx ********************************-->
+  <data name="FontIFrame_aspx_Title_Text" xml:space="preserve">
+    <value>Choose a Font</value>
+  </data>
+  <!-- ********************** 19: ColorIFrame.aspx ********************************-->
+  <data name="ColorIFrame_aspx_Title_Text" xml:space="preserve">
+    <value>Pick Color</value>
+  </data>
+  <!-- ********************** 20: FontPickerDialog.aspx ********************************-->
+  <data name="FontPickerDialog_aspx_Title_Text" xml:space="preserve">
+    <value>Choose a Font</value>
+  </data>
+  <data name="FontPickerDialog_aspx_Size_Text" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="FontPickerDialog_aspx_Pt_Text" xml:space="preserve">
+    <value>pt</value>
+    
+  </data>
+  <data name="FontPickerDialog_aspx_Style_Text" xml:space="preserve">
+    <value>Style</value>
+  </data>
+  <data name="FontPickerDialog_aspx_StyleBold_Text" xml:space="preserve">
+    <value>Bold</value>
+    
+  </data>
+  <data name="FontPickerDialog_aspx_StyleItalic_Text" xml:space="preserve">
+    <value>Italic</value>
+    
+  </data>
+  <data name="FontPickerDialog_aspx_StyleUnderline_Text" xml:space="preserve">
+    <value>Underline</value>
+    
+  </data>
+  <data name="FontPickerDialog_aspx_StyleStrikeout_Text" xml:space="preserve">
+    <value>Strikeout</value>
+    
+  </data>
+  <data name="FontPickerDialog_aspx_SampleText_Text" xml:space="preserve">
+    <value>Sample Text</value>
+  </data>
+  <!-- ********************** 21: MossChartWebPart.webpart.pp ********************************-->
+  <data name="ChartWebPartTitle" xml:space="preserve">
+    <value>Chart Web Part</value>
+    
+  </data>
+  <data name="ChartWebPartDesc" xml:space="preserve">
+    <value>Helps you to visualize your data on SharePoint sites and portals.</value>
+    
+  </data>
+  <data name="BusinessDataWebPartGroup" xml:space="preserve">
+    <value>Business Data</value>
+    
+  </data>
+  <!-- ********************** 22 : wizardCustomizeChart.aspx ********************************-->
+  <!-- ********************** Chart Type Categories ********************************-->
+  <data name="wizardCC_aspx_chartCategory_Custom" xml:space="preserve"> 
+    <value>Custom</value>
+    
+  </data>
+  <data name="wizardCC_aspx_chartCategory_Bar" xml:space="preserve">
+    <value>Bar</value>
+    
+  </data>
+  <data name="wizardCC_aspx_chartCategory_Area" xml:space="preserve">
+    <value>Area</value>
+    
+  </data>
+  <data name="wizardCC_aspx_chartCategory_Line" xml:space="preserve">
+    <value>Line</value>
+    
+  </data>
+  <data name="wizardCC_aspx_chartCategory_PointBubble" xml:space="preserve">
+    <value>Point/Bubble</value>
+    
+  </data>
+  <data name="wizardCC_aspx_chartCategory_Financial" xml:space="preserve">
+    <value>Financial</value>
+    
+  </data>
+  <data name="wizardCC_aspx_chartCategory_Pie" xml:space="preserve">
+    <value>Pie</value>
+    
+  </data>
+  <data name="wizardCC_aspx_chartCategory_Radar" xml:space="preserve">
+    <value>Radar</value>
+    
+  </data>
+  <data name="wizardCC_aspx_chartCategory_Polar" xml:space="preserve">
+    <value>Polar</value>
+    
+  </data>
+  <data name="wizardCC_aspx_chartCategory_GanttRangeColumn" xml:space="preserve">
+    <value>Gantt/Range Column</value>
+    
+  </data>
+  <data name="wizardCC_aspx_chartCategory_Range" xml:space="preserve">
+    <value>Range</value>
+    
+  </data>
+  <data name="wizardCC_aspx_chartCategory_ErrorBar" xml:space="preserve">
+    <value>ErrorBar</value>
+    
+  </data>
+  <data name="wizardCC_aspx_chartCategory_BoxPlot" xml:space="preserve">
+    <value>BoxPlot</value>
+    
+  </data>
+  <data name="wizardCC_aspx_chartCategory_Funnel" xml:space="preserve">
+    <value>Funnel</value>
+    
+  </data>
+  <data name="wizardCC_aspx_chartCategory_Pyramid" xml:space="preserve">
+    <value>Pyramid</value>
+    
+  </data>
+  <data name="wizardCC_aspx_chartCategory_Current" xml:space="preserve">
+    <value>Current</value>
+    
+  </data>
+  <!-- ********************** Chart Templates ********************************-->
+  <data name="wizardCC_aspx_columnCategoryTemplate_Column2D" xml:space="preserve">
+    <value>Column</value>
+    
+  </data>
+  <data name="wizardCC_aspx_columnCategoryTemplate_StackedColumn2D" xml:space="preserve">
+    <value>Stacked Column</value>
+    
+  </data>
+  <data name="wizardCC_aspx_columnCategoryTemplate_100StackedColumn2D" xml:space="preserve">
+    <value>100% Stacked Column</value>
+    
+  </data>
+  <data name="wizardCC_aspx_columnCategoryTemplate_ReversedColumn2D" xml:space="preserve">
+    <value>Reversed Column</value>
+    
+  </data>
+  <data name="wizardCC_aspx_columnCategoryTemplate_NoGapStackedColumn2D" xml:space="preserve">
+    <value>No Gap Stacked Column</value>
+    
+  </data>
+  <data name="wizardCC_aspx_columnCategoryTemplate_ThinColumn2D" xml:space="preserve">
+    <value>Thin Column</value>
+    
+  </data>
+  <data name="wizardCC_aspx_barCategoryTemplate_Bar2D" xml:space="preserve">
+    <value>Bar</value>
+    
+  </data>
+  <data name="wizardCC_aspx_barCategoryTemplate_StackedBar2D" xml:space="preserve">
+    <value>Stacked Bar</value>
+    
+  </data>
+  <data name="wizardCC_aspx_barCategoryTemplate_100StackedBar2D" xml:space="preserve">
+    <value>100% Stacked Bar</value>
+    
+  </data>
+  <data name="wizardCC_aspx_barCategoryTemplate_ReversedBar2D" xml:space="preserve">
+    <value>Reversed Bar</value>
+    
+  </data>
+  <data name="wizardCC_aspx_barCategoryTemplate_NoGapStackedBar2D" xml:space="preserve">
+    <value>No Gap Stacked Bar</value>
+    
+  </data>
+  <data name="wizardCC_aspx_barCategoryTemplate_ThinBar2D" xml:space="preserve">
+    <value>Thin Bar</value>
+    
+  </data>
+  <data name="wizardCC_aspx_areaCategoryTemplate_Area2D" xml:space="preserve">
+    <value>Area</value>
+    
+  </data>
+  <data name="wizardCC_aspx_areaCategoryTemplate_SplineArea2D" xml:space="preserve">
+    <value>Spline Area</value>
+    
+  </data>
+  <data name="wizardCC_aspx_areaCategoryTemplate_StackedArea2D" xml:space="preserve">
+    <value>Stacked Area</value>
+    
+  </data>
+  <data name="wizardCC_aspx_areaCategoryTemplate_100StackedArea2D" xml:space="preserve">
+    <value>100% Stacked Area</value>
+    
+  </data>
+  <data name="wizardCC_aspx_areaCategoryTemplate_AreawithMargin2D" xml:space="preserve">
+    <value>Area with Margin</value>
+    
+  </data>
+  <data name="wizardCC_aspx_lineCategoryTemplate_Line2D" xml:space="preserve">
+    <value>Line</value>
+    
+  </data>
+  <data name="wizardCC_aspx_lineCategoryTemplate_Spline2D" xml:space="preserve">
+    <value>Spline</value>
+    
+  </data>
+  <data name="wizardCC_aspx_lineCategoryTemplate_StepLine2D" xml:space="preserve">
+    <value>Step Line</value>
+    
+  </data>
+  <data name="wizardCC_aspx_lineCategoryTemplate_SplinewithMarkers2D" xml:space="preserve">
+    <value>Spline with Markers</value>
+    
+  </data>
+  <data name="wizardCC_aspx_lineCategoryTemplate_LinewithnoMargin2D" xml:space="preserve">
+    <value>Line with no margin</value>
+    
+  </data>
+  <data name="wizardCC_aspx_lineCategoryTemplate_DifferentLineStyle2D" xml:space="preserve">
+    <value>Different Line Style</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pointBubbleCategoryTemplate_Point2D" xml:space="preserve">
+    <value>Point</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pointBubbleCategoryTemplate_PointwithLargeMarkers2D" xml:space="preserve">
+    <value>Point with Large Markers</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pointBubbleCategoryTemplate_Bubble2D" xml:space="preserve">
+    <value>Bubble</value>
+    
+  </data>
+  <data name="wizardCC_aspx_financialCategoryTemplate_Stock2D" xml:space="preserve">
+    <value>Stock</value>
+    
+  </data>
+  <data name="wizardCC_aspx_financialCategoryTemplate_StockOpenMarkersOnly2D" xml:space="preserve">
+    <value>Stock Open Markers Only</value>
+    
+  </data>
+  <data name="wizardCC_aspx_financialCategoryTemplate_StockCloseMarkersOnly2D" xml:space="preserve">
+    <value>Stock Close Markers Only</value>
+    
+  </data>
+  <data name="wizardCC_aspx_financialCategoryTemplate_StockTriangleMarkers2D" xml:space="preserve">
+    <value>Stock Triangle Markers</value>
+    
+  </data>
+  <data name="wizardCC_aspx_financialCategoryTemplate_CandleStick2D" xml:space="preserve">
+    <value>Candle Stick</value>
+    
+  </data>
+  <data name="wizardCC_aspx_financialCategoryTemplate_PriceVolume2D" xml:space="preserve">
+    <value>Price Volume</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pieCategoryTemplate_Pie2D" xml:space="preserve">
+    <value>Pie</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pieCategoryTemplate_Doughnut2D" xml:space="preserve">
+    <value>Doughnut</value>
+     
+  </data>
+  <data name="wizardCC_aspx_pieCategoryTemplate_Ring2D" xml:space="preserve">
+    <value>Ring</value>
+    
+  </data>
+  <data name="wizardCC_aspx_radarCategoryTemplate_RadarArea2D" xml:space="preserve">
+    <value>Radar Area</value>
+    
+  </data>
+  <data name="wizardCC_aspx_radarCategoryTemplate_RadarLine2D" xml:space="preserve">
+    <value>Radar Line</value>
+    
+  </data>
+  <data name="wizardCC_aspx_radarCategoryTemplate_RadarMarker2D" xml:space="preserve">
+    <value>Radar Marker</value>
+    
+  </data>
+  <data name="wizardCC_aspx_radarCategoryTemplate_RadarAreaPolygon2D" xml:space="preserve">
+    <value>Radar Area Polygon</value>
+    
+  </data>
+  <data name="wizardCC_aspx_radarCategoryTemplate_RadarLinePolygon2D" xml:space="preserve">
+    <value>Radar Line Polygon</value>
+    
+  </data>
+  <data name="wizardCC_aspx_radarCategoryTemplate_RadarLineMarkerPolygon2D" xml:space="preserve">
+    <value>Radar Line Marker Polygon</value>
+    
+  </data>
+  <data name="wizardCC_aspx_polarCategoryTemplate_PolarLine2D" xml:space="preserve">
+    <value>Polar Line</value>
+    
+  </data>
+  <data name="wizardCC_aspx_polarCategoryTemplate_PolarMarker2D" xml:space="preserve">
+    <value>Polar Marker</value>
+    
+  </data>
+  <data name="wizardCC_aspx_polarCategoryTemplate_PolarLinePolygon2D" xml:space="preserve">
+    <value>Polar Line Polygon</value>
+    
+  </data>
+  <data name="wizardCC_aspx_polarCategoryTemplate_PolarMarkerPolygon2D" xml:space="preserve">
+    <value>Polar Marker Polygon</value>
+    
+  </data>
+  <data name="wizardCC_aspx_ganttRangeCategoryTemplate_Gantt2D" xml:space="preserve">
+    <value>Gantt</value>
+    
+  </data>
+  <data name="wizardCC_aspx_ganttRangeCategoryTemplate_GanttSideColumn2D" xml:space="preserve">
+    <value>Gantt Side by Side</value>
+    
+  </data>
+  <data name="wizardCC_aspx_ganttRangeCategoryTemplate_GanttThinBars2D" xml:space="preserve">
+    <value>Gantt Thin Bars</value>
+    
+  </data>
+  <data name="wizardCC_aspx_ganttRangeCategoryTemplate_RangeColumn2D" xml:space="preserve">
+    <value>Range Column</value>
+    
+  </data>
+  <data name="wizardCC_aspx_ganttRangeCategoryTemplate_RangeColumnSidebySide2D" xml:space="preserve">
+    <value>Range Column Side by Side</value>
+    
+  </data>
+  <data name="wizardCC_aspx_ganttRangeCategoryTemplate_RangeColumnThinBars2D" xml:space="preserve">
+    <value>Range Column Thin Bars</value>
+    
+  </data>
+  <data name="wizardCC_aspx_rangeCategoryTemplate_Range2D" xml:space="preserve">
+    <value>Range</value>
+    
+  </data>
+  <data name="wizardCC_aspx_rangeCategoryTemplate_SplineRange2D" xml:space="preserve">
+    <value>Spline Range</value>
+    
+  </data>
+  <data name="wizardCC_aspx_rangeCategoryTemplate_RangewithMargin2D" xml:space="preserve">
+    <value>Range with Margin</value>
+    
+  </data>
+  <data name="wizardCC_aspx_errorBarCategoryTemplate_ErrorBar2D" xml:space="preserve">
+    <value>ErrorBar</value>
+    
+  </data>
+  <data name="wizardCC_aspx_errorBarCategoryTemplate_UpperErrorBar2D" xml:space="preserve">
+    <value>Upper ErrorBar</value>
+    
+  </data>
+  <data name="wizardCC_aspx_errorBarCategoryTemplate_LowerErrorBar2D" xml:space="preserve">
+    <value>Lower ErrorBar</value>
+    
+  </data>
+  <data name="wizardCC_aspx_errorBarCategoryTemplate_ErrorBarWithCenterMarker2D" xml:space="preserve">
+    <value>ErrorBar With CenterMarker</value>
+    
+  </data>
+  <data name="wizardCC_aspx_errorBarCategoryTemplate_ErrorBarWithCircleMarker2D" xml:space="preserve">
+    <value>ErrorBar With CircleMarker</value>
+    
+  </data>
+  <data name="wizardCC_aspx_errorBarCategoryTemplate_ErrorBarWithSquareMarker2D" xml:space="preserve">
+    <value>Error Bar With SquareMarker</value>
+    
+  </data>
+  <data name="wizardCC_aspx_boxPlotCategoryTemplate_BoxPlot2D" xml:space="preserve">
+    <value>BoxPlot</value>
+    
+  </data>
+  <data name="wizardCC_aspx_boxPlotCategoryTemplate_BoxPlotNoMedian2D" xml:space="preserve">
+    <value>BoxPlot No Median</value>
+    
+  </data>
+  <data name="wizardCC_aspx_boxPlotCategoryTemplate_BoxPlotNoMedianAverage2D" xml:space="preserve">
+    <value>Box Plot No Media and Average</value>
+    
+  </data>
+  <data name="wizardCC_aspx_boxPlotCategoryTemplate_BoxPlotCircleMarkers2D" xml:space="preserve">
+    <value>Box Plot Circle Markers</value>
+    
+  </data>
+  <data name="wizardCC_aspx_boxPlotCategoryTemplate_ThinBoxPlot2D" xml:space="preserve">
+    <value>Thin BoxPlot</value>
+    
+  </data>
+  <data name="wizardCC_aspx_funnelCategoryTemplate_FunnelVariableHeight2D" xml:space="preserve">
+    <value>Funnel Variable Height</value>
+    
+  </data>
+  <data name="wizardCC_aspx_funnelCategoryTemplate_FunnelVariableWidth2D" xml:space="preserve">
+    <value>Funnel Variable Width</value>
+    
+  </data>
+  <data name="wizardCC_aspx_funnelCategoryTemplate_FunnelWithGaps2D" xml:space="preserve">
+    <value>Funnel with Gaps</value>
+    
+  </data>
+  <data name="wizardCC_aspx_funnelCategoryTemplate_FunnelInsideLabels2D" xml:space="preserve">
+    <value>Funnel Inside Labels</value>
+    
+  </data>
+  <data name="wizardCC_aspx_funnelCategoryTemplate_FunnelOutsideLabels2D" xml:space="preserve">
+    <value>Funnel Outside Labels</value>
+    
+  </data>
+  <data name="wizardCC_aspx_funnelCategoryTemplate_FunnelOutsideColumnLabels2D" xml:space="preserve">
+    <value>Funnel Outside Column Labels</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pyramidCategoryTemplate_Pyramid2D" xml:space="preserve">
+    <value>Pyramid</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pyramidCategoryTemplate_PyramidWithGaps2D" xml:space="preserve">
+    <value>Pyramid With Gaps</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pyramidCategoryTemplate_PyramidInsideLabels2D" xml:space="preserve">
+    <value>Pyramid Inside Labels</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pyramidCategoryTemplate_PyramidOutsideLabels2D" xml:space="preserve">
+    <value>Pyramid Outside Labels</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pyramidCategoryTemplate_PyramidOutsideColumnLabels2D" xml:space="preserve">
+    <value>Pyramid Outside Column Labels</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pyramidCategoryTemplate_PyramidOutsideLeftLabels2D" xml:space="preserve">
+    <value>Pyramid Outside Left Labels</value>
+    
+  </data>
+  <data name="wizardCC_aspx_columnCategoryTemplate_Column3D" xml:space="preserve">
+    <value>Column</value>
+    
+  </data>
+  <data name="wizardCC_aspx_columnCategoryTemplate_StackedColumn3D" xml:space="preserve">
+    <value>Stacked Column</value>
+    
+  </data>
+  <data name="wizardCC_aspx_columnCategoryTemplate_100StackedColumn3D" xml:space="preserve">
+    <value>100% Stacked Column</value>
+    
+  </data>
+  <data name="wizardCC_aspx_columnCategoryTemplate_Cylinder3D" xml:space="preserve">
+    <value>Cylinder</value>
+    
+  </data>
+  <data name="wizardCC_aspx_columnCategoryTemplate_ClusteredColumn3D" xml:space="preserve">
+    <value>Clustered Column</value>
+    
+  </data>
+  <data name="wizardCC_aspx_columnCategoryTemplate_ColumnwithPerspective3D" xml:space="preserve">
+    <value>Column with Perspective</value>
+    
+  </data>
+  <data name="wizardCC_aspx_barCategoryTemplate_Bar3D" xml:space="preserve">
+    <value>Bar</value>
+    
+  </data>
+  <data name="wizardCC_aspx_barCategoryTemplate_StackedBar3D" xml:space="preserve">
+    <value>Stacked Bar</value>
+    
+  </data>
+  <data name="wizardCC_aspx_barCategoryTemplate_100StackedBar3D" xml:space="preserve">
+    <value>100% Stacked Bar</value>
+    
+  </data>
+  <data name="wizardCC_aspx_barCategoryTemplate_HorizontalCylinder3D" xml:space="preserve">
+    <value>Horizontal Cylinder</value>
+    
+  </data>
+  <data name="wizardCC_aspx_barCategoryTemplate_ClusteredBar3D" xml:space="preserve">
+    <value>Clustered Bar</value>
+    
+  </data>
+  <data name="wizardCC_aspx_barCategoryTemplate_BarwithPerspective3D" xml:space="preserve">
+    <value>Bar with Perspective</value>
+    
+  </data>
+  <data name="wizardCC_aspx_areaCategoryTemplate_Area3D" xml:space="preserve">
+    <value>Area</value>
+    
+  </data>
+  <data name="wizardCC_aspx_areaCategoryTemplate_SplineArea3D" xml:space="preserve">
+    <value>Spline Area</value>
+    
+  </data>
+  <data name="wizardCC_aspx_areaCategoryTemplate_StackedArea3D" xml:space="preserve">
+    <value>Stacked Area</value>
+    
+  </data>
+  <data name="wizardCC_aspx_areaCategoryTemplate_100StackedArea3D" xml:space="preserve">
+    <value>100% Stacked Area</value>
+    
+  </data>
+  <data name="wizardCC_aspx_areaCategoryTemplate_AreawithPerspective2D" xml:space="preserve">
+    <value>Area with Perspective</value>
+    
+  </data>
+  <data name="wizardCC_aspx_areaCategoryTemplate_AreawithDropLines2D" xml:space="preserve">
+    <value>Area with Drop Lines</value>
+    
+  </data>
+  <data name="wizardCC_aspx_lineCategoryTemplate_Line3D" xml:space="preserve">
+    <value>Line</value>
+    
+  </data>
+  <data name="wizardCC_aspx_lineCategoryTemplate_Spline3D" xml:space="preserve">
+    <value>Spline</value>
+    
+  </data>
+  <data name="wizardCC_aspx_lineCategoryTemplate_StepLine3D" xml:space="preserve">
+    <value>Step Line</value>
+    
+  </data>
+  <data name="wizardCC_aspx_lineCategoryTemplate_LinewithnoMargin3D" xml:space="preserve">
+    <value>Line with no margin</value>
+    
+  </data>
+  <data name="wizardCC_aspx_lineCategoryTemplate_WiderSpline3D" xml:space="preserve">
+    <value>Wider Spline</value>
+    
+  </data>
+  <data name="wizardCC_aspx_lineCategoryTemplate_LinewithPerspective3D" xml:space="preserve">
+    <value>Line with Perspective</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pointBubbleCategoryTemplate_Point3D" xml:space="preserve">
+    <value>Point</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pointBubbleCategoryTemplate_Bubble3D" xml:space="preserve">
+    <value>Bubble</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pointBubbleCategoryTemplate_BubblewithPerspective3D" xml:space="preserve">
+    <value>Bubble with Perspective</value>
+    
+  </data>
+  <data name="wizardCC_aspx_financialCategoryTemplate_Stock3D" xml:space="preserve">
+    <value>Stock</value>
+    
+  </data>
+  <data name="wizardCC_aspx_financialCategoryTemplate_StockOpenMarkersOnly3D" xml:space="preserve">
+    <value>Stock Open Markers Only</value>
+    
+  </data>
+  <data name="wizardCC_aspx_financialCategoryTemplate_StockCloseMarkersOnly3D" xml:space="preserve">
+    <value>Stock Close Markers Only</value>
+    
+  </data>
+  <data name="wizardCC_aspx_financialCategoryTemplate_StockTriangleMarkers3D" xml:space="preserve">
+    <value>Stock Triangle Markers</value>
+    
+  </data>
+  <data name="wizardCC_aspx_financialCategoryTemplate_CandleStick3D" xml:space="preserve">
+    <value>Candle Stick</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pieCategoryTemplate_Pie3D" xml:space="preserve">
+    <value>Pie</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pieCategoryTemplate_Doughnut3D" xml:space="preserve">
+    <value>Doughnut</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pieCategoryTemplate_Ring3D" xml:space="preserve">
+    <value>Ring</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pieCategoryTemplate_ThickDoughnut3D" xml:space="preserve">
+    <value>Thick Doughnut</value>
+    
+  </data>
+  <data name="wizardCC_aspx_radarCategoryTemplate_RadarArea3D" xml:space="preserve">
+    <value>Radar Area</value>
+    
+  </data>
+  <data name="wizardCC_aspx_radarCategoryTemplate_RadarLine3D" xml:space="preserve">
+    <value>Radar Line</value>
+    
+  </data>
+  <data name="wizardCC_aspx_radarCategoryTemplate_RadarMarker3D" xml:space="preserve">
+    <value>Radar Marker</value>
+    
+  </data>
+  <data name="wizardCC_aspx_radarCategoryTemplate_RadarAreaPolygon3D" xml:space="preserve">
+    <value>Radar Area Polygon</value>
+    
+  </data>
+  <data name="wizardCC_aspx_radarCategoryTemplate_RadarLinePolygon3D" xml:space="preserve">
+    <value>Radar Line Polygon</value>
+    
+  </data>
+  <data name="wizardCC_aspx_radarCategoryTemplate_RadarLineMarkerPolygon3D" xml:space="preserve">
+    <value>Radar Line Marker Polygon</value>
+    
+  </data>
+  <data name="wizardCC_aspx_polarCategoryTemplate_PolarLine3D" xml:space="preserve">
+    <value>Polar Line</value>
+    
+  </data>
+  <data name="wizardCC_aspx_polarCategoryTemplate_PolarMarker3D" xml:space="preserve">
+    <value>Polar Marker</value>
+    
+  </data>
+  <data name="wizardCC_aspx_polarCategoryTemplate_PolarLinePolygon3D" xml:space="preserve">
+    <value>Polar Line Polygon</value>
+    
+  </data>
+  <data name="wizardCC_aspx_polarCategoryTemplate_PolarMarkerPolygon3D" xml:space="preserve">
+    <value>Polar Marker Polygon</value>
+    
+  </data>
+  <data name="wizardCC_aspx_ganttRangeCategoryTemplate_Gantt3D" xml:space="preserve">
+    <value>Gantt</value>
+    
+  </data>
+  <data name="wizardCC_aspx_ganttRangeCategoryTemplate_ClusteredGantt3D" xml:space="preserve">
+    <value>Clustered Gantt</value>
+    
+  </data>
+  <data name="wizardCC_aspx_ganttRangeCategoryTemplate_CylinderGantt3D" xml:space="preserve">
+    <value>Cylinder Gantt</value>
+    
+  </data>
+  <data name="wizardCC_aspx_ganttRangeCategoryTemplate_RangeColumn3D" xml:space="preserve">
+    <value>Range Column</value>
+    
+  </data>
+  <data name="wizardCC_aspx_ganttRangeCategoryTemplate_ClusteredRangeColumn3D" xml:space="preserve">
+    <value>Clustered Range Column</value>
+    
+  </data>
+  <data name="wizardCC_aspx_ganttRangeCategoryTemplate_CylinderRangeColumn3D" xml:space="preserve">
+    <value>Cylinder Range Column</value>
+    
+  </data>
+  <data name="wizardCC_aspx_rangeCategoryTemplate_Range3D" xml:space="preserve">
+    <value>Range</value>
+    
+  </data>
+  <data name="wizardCC_aspx_rangeCategoryTemplate_SplineRange3D" xml:space="preserve">
+    <value>Spline Range</value>
+    
+  </data>
+  <data name="wizardCC_aspx_rangeCategoryTemplate_RangewithMargin3D" xml:space="preserve">
+    <value>Range with Margin</value>
+    
+  </data>
+  <data name="wizardCC_aspx_rangeCategoryTemplate_RangewithDropLines3D" xml:space="preserve">
+    <value>Range with Drop Lines</value>
+    
+  </data>
+  <data name="wizardCC_aspx_rangeCategoryTemplate_RangewithPerspective3D" xml:space="preserve">
+    <value>Range with Perspective</value>
+    
+  </data>
+  <data name="wizardCC_aspx_rangeCategoryTemplate_SplineRangewithPerspective3D" xml:space="preserve">
+    <value>Spline Range with Perspective</value>
+    
+  </data>
+  <data name="wizardCC_aspx_errorBarCategoryTemplate_ErrorBar3D" xml:space="preserve">
+    <value>ErrorBar</value>
+    
+  </data>
+  <data name="wizardCC_aspx_errorBarCategoryTemplate_UpperErrorBar3D" xml:space="preserve">
+    <value>Upper ErrorBar</value>
+    
+  </data>
+  <data name="wizardCC_aspx_errorBarCategoryTemplate_LowerErrorBar3D" xml:space="preserve">
+    <value>Lower ErrorBar</value>
+    
+  </data>
+  <data name="wizardCC_aspx_errorBarCategoryTemplate_ErrorBarWithCenterMarker3D" xml:space="preserve">
+    <value>ErrorBar With CenterMarker</value>
+    
+  </data>
+  <data name="wizardCC_aspx_errorBarCategoryTemplate_ErrorBarWithCircleMarker3D" xml:space="preserve">
+    <value>ErrorBar With CircleMarker</value>
+    
+  </data>
+  <data name="wizardCC_aspx_errorBarCategoryTemplate_ErrorBarWithSquareMarker3D" xml:space="preserve">
+    <value>Error Bar With SquareMarker</value>
+    
+  </data>
+  <data name="wizardCC_aspx_boxPlotCategoryTemplate_BoxPlot3D" xml:space="preserve">
+    <value>BoxPlot</value>
+    
+  </data>
+  <data name="wizardCC_aspx_boxPlotCategoryTemplate_BoxPlotNoMedian3D" xml:space="preserve">
+    <value>BoxPlot No Median</value>
+    
+  </data>
+  <data name="wizardCC_aspx_boxPlotCategoryTemplate_BoxPlotNoMedianAverage3D" xml:space="preserve">
+    <value>BoxPlot No Media and Average</value>
+    
+  </data>
+  <data name="wizardCC_aspx_boxPlotCategoryTemplate_BoxPlotCircleMarkers3D" xml:space="preserve">
+    <value>BoxPlot Circle Markers</value>
+    
+  </data>
+  <data name="wizardCC_aspx_boxPlotCategoryTemplate_ThinBoxPlot3D" xml:space="preserve">
+    <value>Thin BoxPlot</value>
+    
+  </data>
+  <data name="wizardCC_aspx_funnelCategoryTemplate_FunnelVariableHeight3D" xml:space="preserve">
+    <value>Funnel Variable Height</value>
+    
+  </data>
+  <data name="wizardCC_aspx_funnelCategoryTemplate_FunnelVariableWidth3D" xml:space="preserve">
+    <value>Funnel Variable Width</value>
+    
+  </data>
+  <data name="wizardCC_aspx_funnelCategoryTemplate_FunnelWithGaps3D" xml:space="preserve">
+    <value>Funnel with Gaps</value>
+    
+  </data>
+  <data name="wizardCC_aspx_funnelCategoryTemplate_FunnelInsideLabels3D" xml:space="preserve">
+    <value>Funnel Inside Labels</value>
+    
+  </data>
+  <data name="wizardCC_aspx_funnelCategoryTemplate_FunnelOutsideLabels3D" xml:space="preserve">
+    <value>Funnel Outside Labels</value>
+    
+  </data>
+  <data name="wizardCC_aspx_funnelCategoryTemplate_FunnelOutsideColumnLabels3D" xml:space="preserve">
+    <value>Funnel Outside Column Labels</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pyramidCategoryTemplate_Pyramid3D" xml:space="preserve">
+    <value>Pyramid</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pyramidCategoryTemplate_PyramidWithGaps3D" xml:space="preserve">
+    <value>Pyramid With Gaps</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pyramidCategoryTemplate_CylinderInsideLabels3D" xml:space="preserve">
+    <value>Cylinder Inside Labels</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pyramidCategoryTemplate_PyramidOutsideLabels3D" xml:space="preserve">
+    <value>Pyramid Outside Labels</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pyramidCategoryTemplate_PyramidOutsideColumnLabels3D" xml:space="preserve">
+    <value>Pyramid Outside Column Labels</value>
+    
+  </data>
+  <data name="wizardCC_aspx_pyramidCategoryTemplate_PyramidOutsideLeftLabels3D" xml:space="preserve">
+    <value>Pyramid Outside Left Labels</value>
+    
+  </data>
+  <data name="wizardCC_aspx_customCategoryTemplate_CurrentType" xml:space="preserve">
+    <value>Current</value>
+    
+  </data>
+  <!-- ********************** 23: ChartPreview.ascx ********************************-->
+  <data name="ChartPreview_ascx_AutoPreview" xml:space="preserve">
+    <value>Auto Preview</value>
+  </data>
+  <!-- ********************** 24: ChartPreview.aspx ********************************-->
+  <data name="DataParameters_ascx_Empty" xml:space="preserve">
+    <value>Empty</value>
+  </data>
+  <data name="DataParameters_ascx_Object" xml:space="preserve">
+    <value>Object</value>
+  </data>
+  <data name="DataParameters_ascx_DBNull" xml:space="preserve">
+    <value>DBNull</value>
+  </data>
+  <data name="DataParameters_ascx_Boolean" xml:space="preserve">
+    <value>Boolean</value>
+  </data>
+  <data name="DataParameters_ascx_Char" xml:space="preserve">
+    <value>Char</value>
+  </data>
+  <data name="DataParameters_ascx_SByte" xml:space="preserve">
+    <value>SByte</value>
+  </data>
+  <data name="DataParameters_ascx_Byte" xml:space="preserve">
+    <value>Byte</value>
+  </data>
+  <data name="DataParameters_ascx_Int16" xml:space="preserve">
+    <value>Int16</value>
+  </data>
+  <data name="DataParameters_ascx_UInt16" xml:space="preserve">
+    <value>UInt16</value>
+  </data>
+  <data name="DataParameters_ascx_Int32" xml:space="preserve">
+    <value>Int32</value>
+  </data>
+  <data name="DataParameters_ascx_UInt32" xml:space="preserve">
+    <value>UInt32</value>
+  </data>
+  <data name="DataParameters_ascx_Int64" xml:space="preserve">
+    <value>Int64</value>
+  </data>
+  <data name="DataParameters_ascx_UInt64" xml:space="preserve">
+    <value>UInt64</value>
+  </data>
+  <data name="DataParameters_ascx_Single" xml:space="preserve">
+    <value>Single</value>
+  </data>
+  <data name="DataParameters_ascx_Double" xml:space="preserve">
+    <value>Double</value>
+  </data>
+  <data name="DataParameters_ascx_Decimal" xml:space="preserve">
+    <value>Decimal</value>
+  </data>
+  <data name="DataParameters_ascx_DateTime" xml:space="preserve">
+    <value>DateTime</value>
+  </data>
+  <data name="DataParameters_ascx_String" xml:space="preserve">
+    <value>String</value>
+  </data>
+  <data name="DataParameters_ascx_ParameterName_HeaderText" xml:space="preserve">
+    <value>Parameter Name</value>
+  </data>
+  <data name="DataParameters_ascx_Type_HeaderText" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="DataParameters_ascx_DefaultValue_HeaderText" xml:space="preserve">
+    <value>Default value</value>
+  </data>
+  <data name="SessionStateServiceNotFound">
+    <value>The chart cannot be rendered. This may be due to a misconfiguration of the Microsoft SharePoint Server State Service. For more information, contact your server administrator.</value>
+  </data>
+</root>

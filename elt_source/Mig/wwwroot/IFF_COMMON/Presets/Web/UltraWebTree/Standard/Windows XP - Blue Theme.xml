@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Windows XP - Blue Theme" PresetDescription="Windows XP look and feel with blue color theme. Sets both LOOK and BEHAVIOR." PresetType="All" />-->
+<ignav:UltraWebTree DefaultSelectedImage="ig_treeXPFolderOpen.gif" ExpandImage="ig_treeXPPlus.gif" Indentation="20" WebTreeTarget="HierarchicalTree" Cursor="Default"  DefaultImage="ig_treeXPFolderClosed.gif" Font-Size="8pt" Font-Names="Microsoft Sans Serif" CollapseImage="ig_treeXPMinus.gif" >
+  <SelectedNodeStyle ForeColor="White" BackColor="#316AC5">
+    <Padding Bottom="2px" Left="2px" Top="2px" Right="2px" />
+  </SelectedNodeStyle>
+  <NodeStyle>
+    <Padding Bottom="2px" Left="2px" Top="2px" Right="2px" />
+  </NodeStyle>
+</ignav:UltraWebTree>

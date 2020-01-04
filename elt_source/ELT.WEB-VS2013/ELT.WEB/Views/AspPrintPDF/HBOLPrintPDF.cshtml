@@ -1,0 +1,52 @@
+﻿@model ELT.WEB.Models.AspPrintPDFOceanExportHBOL
+@{
+    ViewBag.Title = "AEPNL";
+    Layout = "~/Views/Shared/_LayoutPopUp.cshtml";
+}
+<style  type="text/css">
+header {height:10px;}
+</style>
+@using (Html.BeginForm("HBOLPrintPDF", "AspPrintPDF", FormMethod.Post, new { id = "formPrint" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m=>m.HBOL)
+    <div style="margin-top:20px; margin-left:20px;">
+    <table>    
+    <tr> 
+    <td>@Html.DropDownListFor(m => m.DocType, Model.DocTypeList, new { id = "drpDocType", onchange = "ShowSelected(this);" })</td>   
+
+    </tr>
+    <tr><td> 
+    @Html.DropDownListFor(m => m.PDFCopyType, Model.PDFCopyTypeList, new { id = "drpPDFCopyType", @class = "Sdropd" })
+   
+    </td></tr>
+    <tr><td><input type="submit" id ="btnPrint" value="PRINT" /></td></tr>
+    </table>
+    </div>
+    
+}
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        HideAllSubDropDowns();
+        $('#btnPrint').hide();
+    });
+    function HideAllSubDropDowns() {
+        $(".Sdropd").hide();
+    }
+    function ShowSelected(obj) {
+        HideAllSubDropDowns();
+        if (obj.value ==
+        '0') { $('#btnPrint').hide(); } else {
+            $('#btnPrint').show();
+        }
+
+        if (obj.value ==
+        '1') { $('#drpPDFCopyType').show(); }
+       
+    }
+
+    
+
+</script>

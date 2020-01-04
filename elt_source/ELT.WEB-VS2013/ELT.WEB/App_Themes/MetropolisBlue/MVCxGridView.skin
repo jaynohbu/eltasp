@@ -1,0 +1,24 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxGridView" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxmvc:MVCxGridView runat="server" CssFilePath="~/App_Themes/MetropolisBlue/{0}/styles.css" CssPostfix="MetropolisBlue">
+    <SettingsPager CurrentPageNumberFormat="{0}">
+        <PageSizeItemSettings ShowPopupShadow="False">
+        </PageSizeItemSettings>
+    </SettingsPager>
+    <Images SpriteCssFilePath="~/App_Themes/MetropolisBlue/{0}/sprite.css">
+        <LoadingPanelOnStatusBar Url="~/App_Themes/MetropolisBlue/GridView/gvLoadingOnStatusBar.gif" />
+        <LoadingPanel Url="~/App_Themes/MetropolisBlue/GridView/Loading.gif" />
+    </Images>
+    <Styles CssPostfix="MetropolisBlue" CssFilePath="~/App_Themes/MetropolisBlue/{0}/styles.css" />
+    <StylesPager>
+        <Pager ItemSpacing="0px" Spacing="0px" />
+    </StylesPager>
+    <StylesEditors>
+        <Calendar>
+            <Border BorderColor="Silver" BorderStyle="Solid" BorderWidth="1px" />
+        </Calendar>
+    </StylesEditors>
+</dxmvc:MVCxGridView>
+

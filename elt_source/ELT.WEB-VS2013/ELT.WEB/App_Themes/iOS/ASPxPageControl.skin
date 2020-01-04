@@ -1,0 +1,15 @@
+<%@ Register Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Data" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxTabControl" TagPrefix="dxtc"%>
+<%@ Register Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxClasses" tagprefix="dxw"%> 
+
+<dxtc:ASPxPageControl runat="server" CssFilePath="~/App_Themes/iOS/{0}/styles.css" SpriteCssFilePath="~/App_Themes/iOS/{0}/sprite.css" CssPostfix="iOS">
+</dxtc:ASPxPageControl>
+
+<dxtc:ASPxPageControl runat="server"  CssFilePath="~/App_Themes/iOS/{0}/styles.css"
+    SpriteCssFilePath="~/App_Themes/iOS/{0}/sprite.css" CssPostfix="TabBar" SkinID="TabBar"
+    Width="100%" TabAlign="Center" TabPosition="Bottom" >
+    <TabStyle HorizontalAlign="Center">
+    </TabStyle>
+    <LoadingPanelImage Url="~/App_Themes/iOS/Web/Loading.gif" />
+	<LoadingPanelStyle ImageSpacing="5" />
+</dxtc:ASPxPageControl>

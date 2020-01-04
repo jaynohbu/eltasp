@@ -1,0 +1,71 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AR">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Company_x0020_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Current" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0031__x007E_30" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0033_1_x007E_60" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0036_1_x007E_90" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x002B_90" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Total" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ARDETAIL">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Company_x0020_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Type" type="xs:string" minOccurs="0" />
+              <xs:element name="I_x002F_V_x0020_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="I_x002F_V_x0020_No." type="xs:string" minOccurs="0" />
+              <xs:element name="House_x0020_No." type="xs:string" minOccurs="0" />
+              <xs:element name="Ref_x0020_No." type="xs:string" minOccurs="0" />
+              <xs:element name="Due_x0020_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Term" type="xs:string" minOccurs="0" />
+              <xs:element name="Aging" type="xs:string" minOccurs="0" />
+              <xs:element name="Open_x0020_Balance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Current" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0031__x007E_30" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0033_1_x007E_60" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0036_1_x007E_90" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x002B_90" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Total" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Link" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BUSINFO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="As_Of" type="xs:string" minOccurs="0" />
+              <xs:element name="Branch_Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Branch_Code" type="xs:string" minOccurs="0" />
+              <xs:element name="User_FullName" type="xs:string" minOccurs="0" />
+              <xs:element name="business_address" type="xs:string" minOccurs="0" />
+              <xs:element name="business_city" type="xs:string" minOccurs="0" />
+              <xs:element name="business_state" type="xs:string" minOccurs="0" />
+              <xs:element name="business_zip" type="xs:string" minOccurs="0" />
+              <xs:element name="business_country" type="xs:string" minOccurs="0" />
+              <xs:element name="business_fax" type="xs:string" minOccurs="0" />
+              <xs:element name="business_phone" type="xs:string" minOccurs="0" />
+              <xs:element name="business_url" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//AR" />
+      <xs:field xpath="Company_x0020_Name" />
+    </xs:unique>
+    <xs:keyref name="Relation1" refer="Constraint1">
+      <xs:selector xpath=".//ARDETAIL" />
+      <xs:field xpath="Company_x0020_Name" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

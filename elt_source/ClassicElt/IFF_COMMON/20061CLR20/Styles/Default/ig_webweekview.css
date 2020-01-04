@@ -1,0 +1,111 @@
+.igwv_WeekViewFrame
+{
+	background-color: #FFFFD5;
+}
+
+.igwv_CaptionHeader
+{
+	background-image: url(images/MonthHeaderCaption_bg.png);
+	background-repeat: repeat-x;
+	background-color:#2050B0;
+	border-right: 1px solid #002D96;
+	border-left: 1px solid #002D96;
+	border-bottom: 1px solid #002D96;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;	
+	font-size: x-small;
+	text-align: center;
+	color: #FFFFFF;
+	height: 25px;
+}
+
+.igwv_NavigationButton
+{ 
+	margin-left:5px;
+	margin-right:5px;
+	padding: 0px;
+	height: 24px;
+	border: 0px;
+	background-image: url(images/MonthHeaderCaption_bg.png);
+	background-position: top left;
+	background-color:transparent;
+}
+	
+.igwv_DayHeader
+{
+	background-color: #ECE9D8; 
+	text-align: right;
+	white-space:nowrap;
+	height:18px;
+	padding: 0px 2px 0px 0px;
+	border-bottom: 1px solid #ACA899;
+	cursor:default;
+	font-size: 8pt;
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+}
+
+.igwv_TodayHeader
+{
+	background-color:#FFEE90;
+	background-image: url(images/TodayHeader_bg.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+.igwv_ActiveDayHeader 
+{
+	background-image: none;
+	background-color: #316AC5;
+	color: #FFFFFF;
+}
+
+.igwv_Day
+{
+	font-family: Microsoft Sans Serif; 
+	font-size: 8pt;
+	overflow-x:hidden;	
+}
+
+.igwv_DayArea {
+	border-width: 0px 1px 1px 1px;
+	border-style: solid;
+	border-color: #000000;
+	background-color: #FFFFD5;	
+}
+		
+.igwv_ActiveDay {}
+
+.igwv_Appointment
+{
+	line-height:150%;
+	white-space:nowrap;
+	cursor: pointer;
+	padding: 2px;
+	margin: 1px 1px 0px 1px;
+	
+}
+
+.igwv_SelectedAppointment { 
+	background-color: #316AC5;
+	padding: 2px;
+	white-space:nowrap;
+	color: #FFFFFF;
+	cursor: pointer;
+	margin: 1px 1px 0px 1px;
+}
+
+.igwv_ReminderIcon {
+	background-image: url(images/reminder.gif);
+	display: inline;
+	margin-right: 5px;
+	margin-left: 3px;
+	width: 16px;
+	height: 13px;	
+}
+
+.igwv_AllDayEvent { 
+	border-style:solid;
+	border-color:black;
+	border-width:1;
+	background-color:lightyellow;
+}

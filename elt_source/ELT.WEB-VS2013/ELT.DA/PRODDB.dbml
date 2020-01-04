@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PRDDB" Class="PRODDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=WEBDEV;Initial Catalog=PRDDB;Integrated Security=True" SettingsObjectName="ELT.DA.Properties.Settings" SettingsPropertyName="PRDDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.agent" Member="agents">
+    <Type Name="agent">
+      <Column Name="elt_account_number" Type="System.Decimal" DbType="Decimal(8,0) NOT NULL" CanBeNull="false" />
+      <Column Name="dba_name" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="class_code" Type="System.Char" DbType="NChar(1)" CanBeNull="true" />
+      <Column Name="date_opened" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="business_legal_name" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="business_fed_taxid" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="business_st_taxid" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="usppi" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="business_address" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="business_address_add" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="business_city" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="business_province" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="business_state" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="business_zip" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="business_country" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="country_code" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="business_phone" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="business_fax" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="business_url" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="owner_ssn" Type="System.String" DbType="NVarChar(9)" CanBeNull="true" />
+      <Column Name="owner_lname" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="owner_fname" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="owner_mname" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="owner_mail_address" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="owner_mail_city" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="owner_mail_state" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="owner_mail_zip" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="owner_mail_country" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="owner_phone" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="owner_email" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="account_statue" Type="System.Char" DbType="NChar(1)" CanBeNull="true" />
+      <Column Name="Agent_IATA_Code" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="OTI_Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="board_name" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="iv_statement" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="faa_approval_no" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="maxuser" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="is_dome" Type="System.String" DbType="NVarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="is_intl" Type="System.String" DbType="NVarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="faa_approval_date" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="is_cartage" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="is_warehouse" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="is_accounting" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="is_exporter" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="is_aes" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Office 2003 (Dark)" PresetDescription="A panel as it would appear in Office 2003, using the Darker Header gradient." PresetType="Appearance" />-->
+<igmisc:WebPanel>
+  <PanelStyle BorderWidth="1px" BorderColor="#002D96" BorderStyle="Solid">
+    <Padding Bottom="1px" Left="1px" Top="1px" Right="1px" />
+    <BorderDetails WidthTop="0px" />
+  </PanelStyle>
+  <Header TextAlignment="Left">
+    <ExpandedAppearance>
+      <Style BorderWidth="1px" Font-Size="10pt" Font-Names="Times New Roman" Font-Bold="True" BorderColor="#002D96" BorderStyle="Solid" ForeColor="White" BackgroundImage="igpnl_office2k3_drk.png">
+        <Padding Bottom="4px" Left="4px" Top="4px" Right="4px" />
+      </Style>
+    </ExpandedAppearance>
+    <ExpansionIndicator Height="0px" Width="0px" />
+  </Header>
+</igmisc:WebPanel>

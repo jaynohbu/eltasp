@@ -1,0 +1,153 @@
+html, body, form {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: #CCCCCC;
+}
+/*******************************
+* DIVS
+********************************/
+
+.igspell_Wrapper {
+	position:relative;
+	width: 100%;
+	height: 100%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	margin: 0px;
+	background-repeat: no-repeat;
+}
+
+.igspell_documentTextPanel 
+{
+	border: 1px solid #CCCCCC;
+	position: absolute;
+	height: 85px;
+	width: 230px;
+	left: 10px;
+	top: 47px;
+	overflow:auto;
+	background-color:White;
+	bottom: -1px;
+}
+
+/**********************************
+ * Button Styles
+ **********************************/
+.igspell_button {
+	width: 95px;
+	height: 21px;
+	position: absolute;
+	left: 250px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	bottom: -1px;
+}
+
+.igspell_button:hover {
+
+}
+ 
+.igspell_ignoreButton {
+	top: 47px;
+}
+
+.igspell_ignoreAllButton {
+	top: 73px;
+}
+
+.igspell_changeButton {
+	top: 306px;
+}
+
+.igspell_changeAllButton {
+	top: 332px;
+}
+
+.igspell_finishButton 
+{
+	top: 362px;
+}
+
+.igspell_addButton {
+	top: 128px;
+}
+
+
+/**************************
+ Text Boxes
+ **************************/
+
+.igspell_changeToBox {
+	position: absolute;
+	left: 10px;
+	top: 306px;
+	width: 230px;
+	height: 25px;
+	border: 1px solid #CCCCCC;
+	bottom: -1px;
+}
+
+/**************************
+ Select Boxes
+ **************************/
+
+.igspell_suggestions {
+	position: absolute;
+	left: 10px;
+	top: 167px;
+	width: 340px;
+	height: 109px;
+	border: 1px solid #CCCCCC;
+	bottom: -1px;
+}
+
+/**************************
+ Labels
+ **************************/
+.igspell_label {
+	font-weight: bold;
+	font-size: xx-small;
+	margin-bottom: 2px;
+	position: absolute;
+	left: 10px;
+	color: #151C55;
+	width: 87px;
+	bottom: -1px;
+}
+
+.igspell_changeToLabel {
+	top: 284px;
+	left: 0px;
+	padding-left: 10px;
+	padding-top: 3px;
+	margin-left: 0px;
+	border-top: 1px dashed #999999;
+	width: 100%;
+}
+
+.igspell_suggestionsLabel {
+	top: 143px;
+	left: 0px;
+	padding-left: 10px;
+	padding-top: 3px;	
+	margin-left: 0px;
+	border-top: 1px dashed #999999;
+	width: 100%;
+}
+
+.igspell_notFoundLabel {
+	top: 10px;
+}
+
+/*************************
+Other
+**************************/
+.igspell_BadWord
+{
+	BORDER-BOTTOM: red 1px solid;	
+}

@@ -1,0 +1,32 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxgv" Namespace="DevExpress.Web.ASPxGridLookup" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %> 
+
+<dxmvc:MVCxGridLookup runat="server" SpriteCssFilePath="~/App_Themes/Youthful/{0}/sprite.css" CssPostfix="Youthful" CssFilePath="~/App_Themes/Youthful/{0}/styles.css">
+    <GridViewProperties>
+        <SettingsLoadingPanel Text="" />
+        <SettingsPager CurrentPageNumberFormat="{0}" />
+    </GridViewProperties>
+    <GridViewImages SpriteCssFilePath="~/App_Themes/Youthful/{0}/sprite.css" >
+        <LoadingPanel Url="~/App_Themes/Youthful/GridView/Loading.gif" />
+        <LoadingPanelOnStatusBar Url="~/App_Themes/Youthful/GridView/gvLoadingOnStatusBar.gif" />
+    </GridViewImages>
+    <GridViewImagesFilterControl>
+        <LoadingPanel Url="~/App_Themes/Youthful/Editors/Loading.gif" />
+    </GridViewImagesFilterControl>
+    <GridViewStyles>
+        <Header SortingImageSpacing="5px" />
+		<LoadingPanel ImageSpacing="10px" />
+    </GridViewStyles>	
+    <GridViewStylesEditors>
+        <ProgressBar Height="25px" />
+        <CalendarHeader Spacing="8px" />
+    </GridViewStylesEditors>
+    <ValidationSettings>
+        <ErrorFrameStyle ImageSpacing="4px">
+            <ErrorTextPaddings PaddingLeft="4px" />
+        </ErrorFrameStyle>
+    </ValidationSettings>
+</dxmvc:MVCxGridLookup>
+

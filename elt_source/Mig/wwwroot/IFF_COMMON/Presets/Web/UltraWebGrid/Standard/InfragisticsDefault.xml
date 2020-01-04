@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="InfragisticsDefault" PresetDescription="Infragistics WebGrid Default " PresetType="All" />-->
+<igtbl:UltraWebGrid>
+  <DisplayLayout BorderCollapseDefault="Separate" RowHeightDefault="20px" ViewType="OutlookGroupBy" AllowColSizingDefault="Free" AllowColumnMovingDefault="OnServer" AllowDeleteDefault="Yes" AllowSortingDefault="OnClient" AllowUpdateDefault="Yes" HeaderClickActionDefault="SortMulti" RowSelectorsDefault="No" SelectTypeRowDefault="Extended">
+    <ActivationObject>
+      <BorderDetails />
+    </ActivationObject>
+    <AddNewBox Hidden="False">
+      <Style BorderWidth="1px" BorderColor="InactiveCaption" BorderStyle="Solid" BackColor="Window">
+        <BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White" />
+      </Style>
+      <ButtonStyle />
+    </AddNewBox>
+    <EditCellStyleDefault BorderWidth="0px" BorderStyle="None" />
+    <FixedCellStyleDefault />
+    <FixedFooterStyleDefault />
+    <FixedHeaderStyleDefault />
+    <FooterStyleDefault BorderWidth="1px" BorderStyle="Solid" BackColor="LightGray">
+      <BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White" />
+    </FooterStyleDefault>
+    <FormulaErrorStyleDefault />
+    <FrameStyle BorderWidth="1px" Font-Size="8.25pt" Font-Names="Microsoft Sans Serif" BorderColor="InactiveCaption" BorderStyle="Solid" BackColor="Window" />
+    <GroupByBox>
+      <Style BorderColor="Window" BackColor="ActiveBorder" />
+      <BandLabelStyle />
+    </GroupByBox>
+    <GroupByRowStyleDefault BorderColor="Window" BackColor="Control" />
+    <HeaderStyleDefault BorderStyle="Solid" HorizontalAlign="Left" BackColor="LightGray">
+      <BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White" />
+    </HeaderStyleDefault>
+    <ImageUrls />
+    <Pager>
+      <Style BorderWidth="1px" BorderStyle="Solid" BackColor="LightGray">
+        <BorderDetails ColorTop="White" WidthLeft="1px" WidthTop="1px" ColorLeft="White" />
+      </Style>
+      <ComboStyle />
+    </Pager>
+    <RowAlternateStyleDefault />
+    <RowExpAreaStyleDefault />
+    <RowSelectorStyleDefault />
+    <RowStyleDefault BorderWidth="1px" BorderColor="Silver" BorderStyle="Solid" BackColor="Window">
+      <Padding Left="3px" />
+      <BorderDetails WidthLeft="0px" WidthTop="0px" />
+    </RowStyleDefault>
+    <SelectedGroupByRowStyleDefault />
+    <SelectedHeaderStyleDefault />
+    <SelectedRowStyleDefault />
+  </DisplayLayout>
+</igtbl:UltraWebGrid>

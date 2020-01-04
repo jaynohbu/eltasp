@@ -1,0 +1,467 @@
+<siteMap enableLocalization="true">
+  <siteMapNode title="" url="/">
+    <siteMapNode title="$Resources:wss,lstsetng_settings" url="/_layouts/listedit.aspx" requiredParameters="List">
+      <siteMapNode title="$Resources:wss,addcontenttypetolist_pagehtmltitle" url="/_layouts/AddContentTypeToList.aspx" />
+      <siteMapNode title="$Resources:wss,advsetng_sitemaptitle" url="/_layouts/advsetng.aspx" />
+      <siteMapNode title="$Resources:wss,addfieldfromtemplate_pagehtmltitle" url="/_layouts/AddFieldFromTemplate.aspx" />
+      <siteMapNode title="$Resources:wss,changecontenttypeorder_pagehtmltitle" url="/_layouts/changecontenttypeorder.aspx?List=1" />
+      <siteMapNode title="$Resources:wss,emailsettings_pagetitle" url="/_layouts/EmailSettings.aspx" />
+      <siteMapNode title="$Resources:wss,fldedit_editcolumn" url="/_layouts/fldedit.aspx" />
+      <siteMapNode title="$Resources:wss,fldedit_editcolumn" url="/_layouts/FldEditEx.aspx" />
+      <siteMapNode title="$Resources:wss,fldedit_createnewcolumn" url="/_layouts/fldnew.aspx?List=1" />
+      <siteMapNode title="$Resources:wss,fldedit_createnewcolumn" url="/_layouts/fldnewex.aspx?List=1" />
+      <siteMapNode title="$Resources:wss,formedt_pagetitle" url="/_layouts/formedt.aspx" />
+      <siteMapNode title="$Resources:wss,indxcol_pagetitle" url="/_layouts/IndexedColumns.aspx?List=1" requiredParameters="List">
+        <siteMapNode title="$Resources:wss,EditIndex_PageTitle" url="/_layouts/EditIndex.aspx?List=1" requiredParameters="List" />
+      </siteMapNode>
+      <siteMapNode title="$Resources:wss,indxcol_pagetitle" url="/_layouts/indxcol.aspx?List=1" />
+      <siteMapNode title="$Resources:wss,irm_pagetitle" url="/_layouts/irm.aspx" />
+      <siteMapNode title="$Resources:wss,lstsetng_pagetitle_chgsetng" url="/_layouts/lstsetng.aspx" />
+      <siteMapNode title="$Resources:wss,listedit_generalset" url="/_layouts/ListGeneralSettings.aspx" />
+      <siteMapNode title="$Resources:wss,listsyndication_pagetitle" url="/_layouts/listsyndication.aspx" />
+      <siteMapNode title="$Resources:wss,managecheckedoutfiles_title" url="/_layouts/ManageCheckedOutFiles.aspx" />
+      <siteMapNode title="$Resources:wss,managecontenttype_list_sitemaptitle" url="/_layouts/ManageContentType.aspx?List=1" requiredParameters="ctype,List">
+        <siteMapNode title="$Resources:wss,changecontenttypeoptionalsettings_sitemaptitle" url="/_layouts/ChangeContentTypeOptionalSettings.aspx?List=1" />
+        <siteMapNode title="$Resources:wss,changefieldorder_sitemaptitle" url="/_layouts/ChangeFieldOrder.aspx?List=1" />
+        <siteMapNode title="$Resources:wss,ctypedit_pagehtmltitle" url="/_layouts/ctypedit.aspx?List=1" />
+        <siteMapNode title="$Resources:wss,fldpick_sitemaptitle" url="/_layouts/fldpick.aspx?List=1" />
+        <siteMapNode title="$Resources:wss,managecontenttypefield_pagehtmltitle" url="/_layouts/ManageContentTypeField.aspx?List=1" />
+        <siteMapNode url="/_layouts/ctdmsettings.aspx?List=1" parentUrl="/_layouts/ManageContentType.aspx?List=1" title="$Resources:dlcdm,ctdmsettings_pagetitle" />
+        <siteMapNode url="/_layouts/docsetsettings.aspx?List=1" parentUrl="/_layouts/ManageContentType.aspx?List=1" title="$Resources:dlcdm,docsetsettings_title" />
+      </siteMapNode>
+      <siteMapNode title="$Resources:wss,fldedit_addquestion" url="/_layouts/qstnew.aspx" />
+      <siteMapNode title="$Resources:wss,fldedit_editquestion" url="/_layouts/qstedit.aspx" />
+      <siteMapNode title="$Resources:wss,savetmpl_L_ListTitle_Text" url="/_layouts/savetmpl.aspx?List=1" />
+      <siteMapNode title="$Resources:wss,user_pagetitle" url="/_layouts/user.aspx?List=1" requiredParameters="obj,List">
+        <siteMapNode title="$Resources:wss,aclinv_pagetitle" url="/_layouts/aclinv.aspx?List=1" />
+        <siteMapNode title="$Resources:wss,checkperm_pagetitle" url="/_layouts/chkperm.aspx?List=1" />
+        <siteMapNode title="$Resources:wss,editprms_modifysettings_title" url="/_layouts/editprms.aspx?List=1" />
+        <siteMapNode title="$Resources:wss,setanon_pagetitle" url="/_layouts/setanon.aspx?List=1" />
+        <siteMapNode title="$Resources:wss,setrqacc_pagetitle" url="/_layouts/setrqacc.aspx?List=1" />
+        <siteMapNode title="$Resources:wss,uniqperm_pagetitle" url="/_layouts/uniqperm.aspx?List=1" />
+      </siteMapNode>
+      <siteMapNode title="$Resources:wss,viewedit_pagetitle" url="/_layouts/viewedit.aspx" />
+      <siteMapNode title="$Resources:wss,viewnew_pagetitle" url="/_layouts/viewnew.aspx" />
+      <siteMapNode title="$Resources:wss,viewtype_sitemaptitle" url="/_layouts/viewtype.aspx" />
+      <siteMapNode title="$Resources:wss,vldsetng_sitemaptitle" url="/_layouts/VldSetng.aspx" />
+      <siteMapNode title="$Resources:wss,listedit_changeworkflowsettings" url="/_layouts/wrksetng.aspx?List=1" requiredParameters="List">
+        <siteMapNode title="$Resources:wss,AddWrkfl_sitemaptitle" url="/_layouts/addwrkfl.aspx?List=1" requiredParameters="List">
+          <siteMapNode title="$Resources:wss,idsItemRWfAssocPage_Title" url="/_layouts/itemrwfassoc.aspx?List=1" requiredParameters="List" />
+        </siteMapNode>
+        <siteMapNode title="$Resources:wss,RemWrkfl_PageTitle" url="/_layouts/remwrkfl.aspx?List=1" requiredParameters="List" />
+      </siteMapNode>
+      <siteMapNode url="/_layouts/metanavsettings.aspx?List=1" parentUrl="/_layouts/listedit.aspx" title="$Resources:dlcdm,MetaNavSettings_PageTitle" requiredParameters="List" />
+      <siteMapNode url="/_layouts/MetaNavPerNode.aspx?List=1" parentUrl="/_layouts/listedit.aspx" title="$Resources:dlcdm,MetaNavPerNode_PageTitle" requiredParameters="List" />
+      <siteMapNode url="/_layouts/ColumnDefaults.aspx?List=1" parentUrl="/_layouts/listedit.aspx" title="$Resources:dlcdm,columndefaults_page_breadcrumb" requiredParameters="List" />
+      <siteMapNode url="/_layouts/FormSettings.aspx" parentUrl="/_layouts/listedit.aspx" title="$Resources:ipfs,FormSettingsBreadCrumb" />
+      <siteMapNode url="/_layouts/policycts.aspx?List=1" parentUrl="/_layouts/listedit.aspx" title="$Resources:dlcpolicy,policycts_page_title" requiredParameters="List">
+        <siteMapNode title="$Resources:dlcpolicy,policy_title" url="/_layouts/policy.aspx?List=1" requiredParameters="ctype,list" />
+        <siteMapNode title="$Resources:dlcpolicy,policy_title" url="/_layouts/expirationconfig.aspx?List=1" />
+        <siteMapNode title="$Resources:dlcpolicy,policycts_page_title" url="/_layouts/policyconfig.aspx?List=1" />
+      </siteMapNode>
+      <siteMapNode url="/_layouts/reporting.aspx?List=1" parentUrl="/_layouts/listedit.aspx" title="$Resources:dlcpolicy,reporting_title" requiredParameters="List,Category">
+        <siteMapNode title="$Resources:dlcpolicy,customizereport_title" url="/_layouts/customizereport.aspx?List=1" requiredParameters="List,Category" />
+      </siteMapNode>
+      <siteMapNode url="/_layouts/inplacerecordslistsettings.aspx?List=1" parentUrl="/_layouts/listedit.aspx" title="$Resources:dlcpolicy,recordkeepinglistsettings_pagetitle" requiredParameters="List" />
+    </siteMapNode>
+    <siteMapNode title="$Resources:wss,settings_pagetitle" url="/_layouts/settings.aspx">
+      <siteMapNode title="$Resources:wss,adminrecyclebin_title" url="/_layouts/AdminRecycleBin.aspx" />
+      <siteMapNode title="$Resources:wss,deleteweb_pagetitle" url="/_layouts/deleteweb.aspx" />
+      <siteMapNode title="$Resources:wss,topnav_editlink" url="/_layouts/editnav.aspx" />
+      <siteMapNode title="$Resources:wss,exporttranslations_pagetitle" url="/_layouts/exporttranslations.aspx" />
+      <siteMapNode title="$Resources:wss,importtranslations_pagetitle" url="/_layouts/importtranslations.aspx" />
+      <siteMapNode title="$Resources:wss,helpsettings_pagetitle" url="/_layouts/helpsettings.aspx" />
+      <siteMapNode title="$Resources:wss,indxcol_pagetitle" url="/_layouts/indxcol.aspx?Web=1" />
+      <siteMapNode title="$Resources:wss,managefeatures_site_pagetitle" url="/_layouts/ManageFeatures.aspx" />
+      <siteMapNode title="$Resources:wss,mcontent_pagetitle" url="/_layouts/mcontent.aspx" />
+      <siteMapNode title="$Resources:wss,sharepointdesignersettings_pagetitle" url="/_layouts/SharePointDesignerSettings.aspx" />
+      <siteMapNode title="$Resources:wss,storagemetrics_title" url="/_layouts/storman.aspx" />
+      <siteMapNode title="$Resources:wss,mngctype_pagetitle" url="/_layouts/mngctype.aspx">
+        <siteMapNode title="$Resources:wss,ctypenew_pagetitle" url="/_layouts/ctypenew.aspx" />
+        <siteMapNode title="$Resources:wss,managecontenttype_site_sitemaptitle" url="/_layouts/ManageContentType.aspx?Web=1" requiredParameters="ctype">
+          <siteMapNode title="$Resources:wss,changecontenttypeoptionalsettings_sitemaptitle" url="/_layouts/ChangeContentTypeOptionalSettings.aspx" />
+          <siteMapNode title="$Resources:wss,changefieldorder_sitemaptitle" url="/_layouts/ChangeFieldOrder.aspx?Web=1" />
+          <siteMapNode title="$Resources:wss,ctypedit_pagehtmltitle" url="/_layouts/ctypedit.aspx?Web=1" />
+          <siteMapNode title="$Resources:wss,fldpick_sitemaptitle" url="/_layouts/fldpick.aspx?Web=1" />
+          <siteMapNode title="$Resources:wss,managecontenttypefield_pagehtmltitle" url="/_layouts/ManageContentTypeField.aspx?Web=1" />
+          <siteMapNode title="$Resources:wss,listedit_changeworkflowsettings" url="/_layouts/wrksetng.aspx?ctype=1" requiredParameters="ctype">
+            <siteMapNode title="$Resources:wss,AddWrkfl_sitemaptitle" url="/_layouts/addwrkfl.aspx?ctype=1" requiredParameters="ctype" />
+            <siteMapNode title="$Resources:wss,RemWrkfl_PageTitle" url="/_layouts/remwrkfl.aspx?ctype=1" requiredParameters="ctype" />
+          </siteMapNode>
+          <siteMapNode url="/_layouts/ctdmsettings.aspx" parentUrl="/_layouts/ManageContentType.aspx?Web=1" title="$Resources:dlcdm,ctdmsettings_pagetitle" />
+          <siteMapNode url="/_layouts/docsetsettings.aspx" parentUrl="/_layouts/ManageContentType.aspx?Web=1" title="$Resources:dlcdm,docsetsettings_title" />
+          <siteMapNode url="/_layouts/managectpublishing.aspx" parentUrl="/_layouts/ManageContentType.aspx?Web=1" title="$Resources:taxonomy,ManagectPublishing_breadcrumb" requiredParameters="ctype" />
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode title="$Resources:wss,mngdisc_pagetitle" url="/_layouts/mngdisc.aspx" />
+      <siteMapNode title="$Resources:wss,mngfield_pagetitle" url="/_layouts/mngfield.aspx">
+        <siteMapNode title="$Resources:wss,fldedit_editcolumn" url="/_layouts/fldedit.aspx?Web=1" />
+        <siteMapNode title="$Resources:wss,fldedit_editcolumn" url="/_layouts/FldEditEx.aspx?Web=1" />
+        <siteMapNode title="$Resources:wss,fldedit_createnewcolumn" url="/_layouts/fldnew.aspx?Web=1" />
+        <siteMapNode title="$Resources:wss,fldedit_createnewcolumn" url="/_layouts/fldnewex.aspx?Web=1" />
+      </siteMapNode>
+      <siteMapNode title="$Resources:wss,mngsubwebs_pagetitle" url="/_layouts/mngsubwebs.aspx" />
+      <siteMapNode title="$Resources:wss,muisetng_language" url="/_layouts/muisetng.aspx" />
+      <siteMapNode title="$Resources:wss,navoptions_pagetitle" url="/_layouts/navoptions.aspx" />
+      <siteMapNode title="$Resources:wss,portal_pagetitle" url="/_layouts/portal.aspx" />
+      <siteMapNode title="$Resources:wss,prjsetng_pagetitle" url="/_layouts/prjsetng.aspx" />
+      <siteMapNode title="$Resources:wss,quiklnch_pagetitle" url="/_layouts/quiklnch.aspx">
+        <siteMapNode title="$Resources:wss,topnav_newlink" url="/_layouts/newnav.aspx" />
+        <siteMapNode title="$Resources:wss,quiklnch_newcat" url="/_layouts/newnav.aspx?ParentId=1025" />
+        <siteMapNode title="$Resources:wss,topnav_changeorder" url="/_layouts/qlreord.aspx" />
+      </siteMapNode>
+      <siteMapNode title="$Resources:wss,reghost_pagetitle" url="/_layouts/reghost.aspx" />
+      <siteMapNode title="$Resources:wss,regionalsetng_pagetitle" url="/_layouts/regionalsetng.aspx" />
+      <siteMapNode title="$Resources:wss,siterss_pagetitle" url="/_layouts/siterss.aspx" />
+      <siteMapNode title="$Resources:wss,sitesubs_pagetitle" url="/_layouts/sitesubs.aspx" />
+      <siteMapNode title="$Resources:wss,srchvis_pagetitle" url="/_layouts/srchvis.aspx" />
+      <siteMapNode title="$Resources:wss,themeweb_pagetitle" url="/_layouts/themeweb.aspx" />
+      <siteMapNode title="$Resources:wss,topnav_pagetitle" url="/_layouts/topnav.aspx">
+        <siteMapNode title="$Resources:wss,topnav_newlink" url="/_layouts/newnav.aspx?ParentId=1002" />
+        <siteMapNode title="$Resources:wss,topnav_changeorder" url="/_layouts/tnreord.aspx" />
+      </siteMapNode>
+      <siteMapNode title="$Resources:wss,savetmpl_L_ListTitle_Text" url="/_layouts/savetmpl.aspx?Web=1" />
+      <siteMapNode title="$Resources:wss,usage_pagetitle" url="/_layouts/usage.aspx" />
+      <siteMapNode title="$Resources:wss,usagedetails_pagetitle" url="/_layouts/usagedetails.aspx" />
+      <siteMapNode title="$Resources:wss,user_pagetitle" url="/_layouts/user.aspx?Web=1" requiredParameters="obj,Web">
+        <siteMapNode title="$Resources:wss,aclinv_pagetitle" url="/_layouts/aclinv.aspx?Web=1" />
+        <siteMapNode title="$Resources:wss,checkperm_pagetitle" url="/_layouts/chkperm.aspx?web=1" />
+        <siteMapNode title="$Resources:wss,editprms_modifysettings_title" url="/_layouts/editprms.aspx?Web=1" />
+        <siteMapNode title="$Resources:wss,mngsiteadmin_pagetitle" url="/_layouts/mngsiteadmin.aspx" />
+        <siteMapNode title="$Resources:wss,uniqperm_pagetitle" url="/_layouts/uniqperm.aspx" />
+        <siteMapNode title="$Resources:wss,role_pagetitle" url="/_layouts/role.aspx">
+          <siteMapNode title="$Resources:wss,addrole_pagetitle" url="/_layouts/addrole.aspx" />
+          <siteMapNode title="$Resources:wss,editrole_pagetitle" url="/_layouts/editrole.aspx" />
+          <siteMapNode title="$Resources:wss,copyrole_pagetitle" url="/_layouts/copyrole.aspx" />
+        </siteMapNode>
+        <siteMapNode title="$Resources:wss,setanon_pagetitle" url="/_layouts/setanon.aspx?Web=1" />
+        <siteMapNode title="$Resources:wss,setrqacc_pagetitle" url="/_layouts/setrqacc.aspx?Web=1" />
+      </siteMapNode>
+      <siteMapNode title="$Resources:wss,vsubwebs_pagetitle" url="/_layouts/vsubwebs.aspx" />
+      <siteMapNode title="$Resources:wss,workspce_pagetitle" url="/_layouts/workspce.aspx" />
+      <siteMapNode title="$Resources:wss,wrkmng_PageTitle" url="/_layouts/wrkmng.aspx" />
+      <siteMapNode title="$Resources:wss,listedit_changeworkflowsettings" url="/_layouts/wrksetng.aspx">
+        <siteMapNode title="$Resources:wss,AddWrkfl_sitemaptitle" url="/_layouts/addwrkfl.aspx" />
+        <siteMapNode title="$Resources:wss,AddWrkfl_sitemaptitle" url="/_layouts/addwrkfl.aspx?TemplateID=1" requiredParameters="TemplateID" />
+        <siteMapNode title="$Resources:wss,RemWrkfl_PageTitle" url="/_layouts/remwrkfl.aspx" />
+        <siteMapNode url="/_layouts/CstWrkflIP.aspx" parentUrl="/_layouts/wrksetng.aspx" title="$Resources:dlc,CstWrkfl_PageTitleGeneric" />
+        <siteMapNode url="/_layouts/XlateWfAssoc.aspx" parentUrl="/_layouts/wrksetng.aspx" title="$Resources:dlc,XlateWfAssocPage_Title" />
+      </siteMapNode>
+      <siteMapNode url="/_layouts/DocIdSettings.aspx" parentUrl="/_layouts/settings.aspx" title="$Resources:dlcdm,DocIdSettings_PageTitle" />
+      <siteMapNode url="/_layouts/auditsettings.aspx" parentUrl="/_layouts/settings.aspx" title="$Resources:dlcpolicy,auditsettings_title" />
+      <siteMapNode url="/_layouts/policylist.aspx" parentUrl="/_layouts/settings.aspx" title="$Resources:dlcpolicy,policylist_page_title">
+        <siteMapNode title="$Resources:dlcpolicy,importpolicy_title" url="/_layouts/importpolicy.aspx" />
+        <siteMapNode title="$Resources:dlcpolicy,exportpolicy_title" url="/_layouts/exportpolicy.aspx" />
+      </siteMapNode>
+      <siteMapNode url="/_layouts/reporting.aspx" parentUrl="/_layouts/settings.aspx" title="$Resources:dlcpolicy,reporting_title" requiredParameters="Category">
+        <siteMapNode title="$Resources:dlcpolicy,customizereport_title" url="/_layouts/customizereport.aspx" requiredParameters="Category" />
+      </siteMapNode>
+      <siteMapNode url="/_layouts/documentroutersettings.aspx" parentUrl="/_layouts/settings.aspx" title="$Resources:dlcpolicy,documentroutersettings_pagetitle" />
+      <siteMapNode url="/_layouts/inplacerecordssettings.aspx" parentUrl="/_layouts/settings.aspx" title="$Resources:dlcpolicy,recordkeepingsettings_pagetitle" />
+      <siteMapNode url="/_layouts/AreaNavigationSettings.aspx" parentUrl="/_layouts/settings.aspx" title="$Resources:cms,siteactions_modifynavigation_displaytext" />
+      <siteMapNode url="/_layouts/AreaCacheSettings.aspx" parentUrl="/_layouts/settings.aspx" title="$Resources:cms,areacachesettings_pagetitle" />
+      <siteMapNode url="/_layouts/AreaTemplateSettings.aspx" parentUrl="/_layouts/settings.aspx" title="$Resources:cms,areatemplatesettings_pagetitle" />
+      <siteMapNode url="/_layouts/AreaWelcomePage.aspx" parentUrl="/_layouts/settings.aspx" title="$Resources:cms,areawelcomepage_pagetitleintitlearea" />
+      <siteMapNode url="/_layouts/ChangeSiteMasterPage.aspx" parentUrl="/_layouts/settings.aspx" title="$Resources:cms,areachromesettings_pagetitle" />
+      <siteMapNode url="/_layouts/NewPageLayout.aspx" parentUrl="/_layouts/settings.aspx" title="$Resources:cms,areachromesettings_pagetitle" />
+      <siteMapNode url="/_layouts/ObjectCacheSettings.aspx" parentUrl="/_layouts/settings.aspx" title="$Resources:cms,objectcachesettings_pagetitle" />
+      <siteMapNode url="/_layouts/SiteCacheSettings.aspx" parentUrl="/_layouts/settings.aspx" title="$Resources:cms,sitecachesettings_pagetitle" />
+      <siteMapNode url="/_layouts/VariationSettings.aspx" parentUrl="/_layouts/settings.aspx" title="$Resources:cms,variationsettings_pagetitle" />
+      <siteMapNode url="/_layouts/VariationLabels.aspx" parentUrl="/_layouts/settings.aspx" title="$Resources:cms,VariationLabels_PageTitle">
+        <siteMapNode url="/_layouts/VariationLabel.aspx" parentUrl="/_layouts/VariationLabels.aspx" title="$Resources:cms,VariationLabel_SiteMapPageTitle" />
+      </siteMapNode>
+      <siteMapNode url="/_layouts/VariationLogs.aspx" parentUrl="/_layouts/settings.aspx" title="$Resources:cms,variationlogs_pagetitle" />
+      <siteMapNode url="/_layouts/TranslatableSettings.aspx" parentUrl="/_layouts/settings.aspx" title="$Resources:cms,translatecol_pagetitle" />
+      <siteMapNode title="$Resources:Microsoft.Office.Server.Search,EnhancedSearch_SearchAdminBreadcrumb" url="/_layouts/enhancedsearch.aspx" parentUrl="/_layouts/settings.aspx" />
+      <siteMapNode title="$Resources:Microsoft.Office.Server.Search,EditUserPref_SearchAdminBreadcrumb" url="/_layouts/edituserpref.aspx" parentUrl="/_layouts/settings.aspx" />
+      <siteMapNode title="$Resources:sps,UsageWeb_pagetitle" parentUrl="/_layouts/settings.aspx" url="/_layouts/SpUsageWeb.aspx">
+        <siteMapNode title="$Resources:sps,Analytics_AspxWebRequests" url="/_layouts/SpUsageWebTopPages.aspx" />
+        <siteMapNode title="$Resources:sps,Analytics_AspxWebUsers" url="/_layouts/SpUsageWebUsers.aspx" />
+        <siteMapNode title="$Resources:sps,Analytics_AspxWebReferrers" url="/_layouts/SpUsageWebReferrers.aspx" />
+        <siteMapNode title="$Resources:sps,Analytics_AspxWebClickthroughs" url="/_layouts/SpUsageWebClickthroughs.aspx" />
+        <siteMapNode title="$Resources:sps,Analytics_AspxWebHomePage" url="/_layouts/SpUsageWebHomePage.aspx" />
+      </siteMapNode>
+      <siteMapNode title="$Resources:sps,UsageSite_pagetitle" parentUrl="/_layouts/settings.aspx" url="/_layouts/SpUsageSite.aspx">
+        <siteMapNode title="$Resources:sps,Analytics_AspxSearchQueriesReport" url="/_layouts/SpUsageSiteSearchQueries.aspx" />
+        <siteMapNode title="$Resources:sps,Analytics_AspxSearchResultsReport" url="/_layouts/SpUsageSiteSearchResults.aspx" />
+        <siteMapNode title="$Resources:sps,Analytics_AspxSiteRequests" url="/_layouts/SpUsageSiteTopPages.aspx" />
+        <siteMapNode title="$Resources:sps,Analytics_AspxSiteUsers" url="/_layouts/SpUsageSiteUsers.aspx" />
+        <siteMapNode title="$Resources:sps,Analytics_AspxSiteReferrers" url="/_layouts/SpUsageSiteReferrers.aspx" />
+        <siteMapNode title="$Resources:sps,Analytics_AspxSiteClickthroughs" url="/_layouts/SpUsageSiteClickthroughs.aspx" />
+        <siteMapNode title="$Resources:sps,Analytics_AspxSiteHomePage" url="/_layouts/SpUsageSiteHomePage.aspx" />
+      </siteMapNode>
+      <siteMapNode title="$Resources:sps,SiteDirectorySettings_pagetitle" parentUrl="/_layouts/settings.aspx" url="/_layouts/SiteDirectorySettings.aspx" />
+      <siteMapNode title="Web Analytics Reports" url="/_layouts/WebAnalytics/Report.aspx?l=sc" parentUrl="/_layouts/settings.aspx">
+        <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=SummaryReport&amp;l=sc" title="$Resources:wa,SummaryReport" parentUrl="/_layouts/settings.aspx" />
+        <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=SummaryReport&amp;l=sc#a" title="$Resources:wa,SiteUsageHeader" parentUrl="/_layouts/settings.aspx">
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=PageViewTrend&amp;l=sc" title="$Resources:wa,PageViewTrendReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=UniqueVisitorsTrend&amp;l=sc" title="$Resources:wa,UniqueVisitorsTrendReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=ReferrerTrendReport&amp;l=sc" title="$Resources:wa,ReferrerTrendReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=TopPageForPageReport&amp;l=sc" title="$Resources:wa,TopPagesReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=TopVisitorsReport&amp;l=sc" title="$Resources:wa,TopVisitorsReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=TopReferrerForPageReport&amp;l=sc" title="$Resources:wa,TopReferrersReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=TopDestinationForPageReport&amp;l=sc" title="$Resources:wa,TopDestinationsReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=TopBrowsersReport&amp;l=sc" title="$Resources:wa,TopBrowsersReport" />
+        </siteMapNode>
+        <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=SummaryReport&amp;l=sc#b" title="$Resources:wa,SearchUsageHeader" parentUrl="/_layouts/settings.aspx">
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=SearchTrafficTrendReport&amp;l=sc" title="$Resources:wa,SearchTrafficTrendReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=PopularSearchesReport&amp;l=sc" title="$Resources:wa,SearchPopularSearchesReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=SearchFailureReport&amp;l=sc" title="$Resources:wa,SearchFailedSearchesReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=BestBetPerformanceReport&amp;l=sc" title="$Resources:wa,BestBetsPerformanceReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=BestBetRecommendationReport&amp;l=sc" title="$Resources:wa,BestBetsRecommendationsReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=BestBetActionReport&amp;l=sc" title="$Resources:wa,BestBetsActionReportLeftNav" />
+          <siteMapNode url="/_layouts/listkeywords.aspx#" title="$Resources:Microsoft.Office.Server.Search,SiteSettings_ManageSpecialTerms_Title" target="_blank" />
+          <siteMapNode url="/_layouts/contextualkeywordmanagement.aspx#" title="$Resources:Microsoft.Office.Server.Search,FSAdmin_SiteSettings_ContextualKeywordManagement_Title" target="_blank" />
+        </siteMapNode>
+        <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=SummaryReport&amp;l=sc#c" title="$Resources:wa,SiteInventoryHeader" parentUrl="/_layouts/settings.aspx">
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=StorageTrendsReport&amp;l=sc" title="$Resources:wa,StorageTrendReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=SiteTrendsReport&amp;l=sc" title="$Resources:wa,SiteTrendReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=Site_ProductInventoryReport&amp;l=sc" title="$Resources:wa,TopProductVersionsReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=Site_LanguageInventoryReport&amp;l=sc" title="$Resources:wa,TopLanguagesReport" />
+        </siteMapNode>
+        <siteMapNode url="/AnalyticsReports/Forms/AllItems.aspx" title="$Resources:wa,CustomReportsLibraryTitle" target="_blank" />
+      </siteMapNode>
+      <siteMapNode title="Web Analytics Reports" url="/_layouts/WebAnalytics/Report.aspx?l=s" parentUrl="/_layouts/settings.aspx">
+        <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=SummaryReport&amp;l=s" title="$Resources:wa,SummaryReport" parentUrl="/_layouts/settings.aspx" />
+        <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=SummaryReport&amp;l=s#a" title="$Resources:wa,SiteUsageHeader" parentUrl="/_layouts/settings.aspx">
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=PageViewTrend&amp;l=s" title="$Resources:wa,PageViewTrendReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=UniqueVisitorsTrend&amp;l=s" title="$Resources:wa,UniqueVisitorsTrendReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=ReferrerTrendReport&amp;l=s" title="$Resources:wa,ReferrerTrendReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=TopPageForPageReport&amp;l=s" title="$Resources:wa,TopPagesReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=TopVisitorsReport&amp;l=s" title="$Resources:wa,TopVisitorsReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=TopReferrerForPageReport&amp;l=s" title="$Resources:wa,TopReferrersReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=TopDestinationForPageReport&amp;l=s" title="$Resources:wa,TopDestinationsReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=TopBrowsersReport&amp;l=s" title="$Resources:wa,TopBrowsersReport" />
+        </siteMapNode>
+        <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=SummaryReport&amp;l=s#b" title="$Resources:wa,SiteInventoryHeader" parentUrl="/_layouts/settings.aspx">
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=SiteTrendsReport&amp;l=s" title="$Resources:wa,SiteTrendReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=Site_ProductInventoryReport&amp;l=s" title="$Resources:wa,TopProductVersionsReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=Site_LanguageInventoryReport&amp;l=s" title="$Resources:wa,TopLanguagesReport" />
+        </siteMapNode>
+        <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=SummaryReport&amp;l=s&amp;n=1" title="$Resources:wa,CustomReportsLibraryTitle" target="_blank" />
+      </siteMapNode>
+      <siteMapNode title="Web Analytics Reports" url="/_layouts/WebAnalytics/Report.aspx?l=wa" parentUrl="/_layouts/settings.aspx">
+        <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=SummaryReport&amp;l=wa" title="$Resources:wa,SummaryReport" parentUrl="/_layouts/settings.aspx" />
+        <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=SummaryReport&amp;l=wa#a" title="$Resources:wa,SiteUsageHeader" parentUrl="/_layouts/settings.aspx">
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=PageViewTrend&amp;l=wa" title="$Resources:wa,PageViewTrendReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=UniqueVisitorsTrend&amp;l=wa" title="$Resources:wa,UniqueVisitorsTrendReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=ReferrerTrendReport&amp;l=wa" title="$Resources:wa,ReferrerTrendReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=TopPageForPageReport&amp;l=wa" title="$Resources:wa,TopPagesReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=TopVisitorsReport&amp;l=wa" title="$Resources:wa,TopVisitorsReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=TopReferrerForPageReport&amp;l=wa" title="$Resources:wa,TopReferrersReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=TopDestinationForPageReport&amp;l=wa" title="$Resources:wa,TopDestinationsReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=TopBrowsersReport&amp;l=wa" title="$Resources:wa,TopBrowsersReport" />
+        </siteMapNode>
+        <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=SummaryReport&amp;l=wa#b" title="$Resources:wa,SearchUsageHeader" parentUrl="/_layouts/settings.aspx">
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=SearchTrafficTrendReport&amp;l=wa" title="$Resources:wa,SearchTrafficTrendReport" />
+        </siteMapNode>
+        <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=SummaryReport&amp;l=wa#c" title="$Resources:wa,SiteInventoryHeader" parentUrl="/_layouts/settings.aspx">
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=SiteCollectionTrendsReport&amp;l=wa" title="$Resources:wa,SiteCollectionTrendReport" />
+        </siteMapNode>
+        <siteMapNode url="/AdminReports/Forms/AllItems.aspx" title="$Resources:wa,CustomReportsLibraryTitle" target="_blank" />
+      </siteMapNode>
+      <siteMapNode title="Web Analytics Reports" url="/_layouts/WebAnalytics/Report.aspx?l=sa" parentUrl="/_layouts/settings.aspx">
+        <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=SummaryReport&amp;l=sa" title="$Resources:wa,SummaryReport" parentUrl="/_layouts/settings.aspx" />
+        <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=SummaryReport&amp;l=sa#a" title="$Resources:wa,SearchUsageHeader" parentUrl="/_layouts/settings.aspx">
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=SearchTrafficTrendReport&amp;l=sa" title="$Resources:wa,SearchTrafficTrendReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=PopularSearchesReport&amp;l=sa" title="$Resources:wa,SearchPopularSearchesReport" />
+          <siteMapNode url="/_layouts/WebAnalytics/Report.aspx?t=SearchZeroResultReport&amp;l=sa" title="$Resources:wa,SearchZeroResultReport" />
+        </siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="$Resources:wss,approve_pagetitle" url="/_layouts/approve.aspx" />
+    <siteMapNode title="$Resources:wss,avreport_pagetitle" url="/_layouts/avreport.aspx" />
+    <siteMapNode title="$Resources:wss,backlinks_sitemaptitle" url="/_layouts/BackLinks.aspx" />
+    <siteMapNode title="$Resources:wss,changecontenttypeorder_pagehtmltitle" url="/_layouts/changecontenttypeorder.aspx" />
+    <siteMapNode title="$Resources:wss,checkin_pagetitle" url="/_layouts/checkin.aspx" />
+    <siteMapNode title="$Resources:wss,confirmation_pagetitle" url="/_layouts/confirmation.aspx" />
+    <siteMapNode title="$Resources:wss,copy_title" url="/_layouts/copy.aspx" />
+    <siteMapNode title="$Resources:wss,viewlsts_pagetitle_create" url="/_layouts/create.aspx">
+      <siteMapNode title="$Resources:wss,webpagecreation_newbp_pagetitle" url="/_layouts/bpcf.aspx" />
+      <siteMapNode title="$Resources:wss,lstsetng_pagetitle_new" url="/_layouts/new.aspx" />
+      <siteMapNode title="$Resources:wss,newsbweb_pagetitle" url="/_layouts/newsbweb.aspx" />
+      <siteMapNode title="$Resources:wss,webpagecreation_newwp_pagetitle" url="/_layouts/spcf.aspx" />
+      <siteMapNode url="/_layouts/NewTranslationManagement.aspx" parentUrl="/_layouts/create.aspx" title="$Resources:wss,lstsetng_pagetitle_new" />
+    </siteMapNode>
+    <siteMapNode title="$Resources:wss,webpagecreation_newwk_pagetitle" url="/_layouts/createwebpage.aspx" />
+    <siteMapNode title="$Resources:wss,createws_pagetitle" url="/_layouts/createws.aspx" />
+    <siteMapNode title="$Resources:wss,dladvopt_pagetitle" url="/_layouts/dladvopt.aspx" />
+    <siteMapNode title="$Resources:wss,doctran_pagetitle" url="/_layouts/DocTrans.aspx" />
+    <siteMapNode title="$Resources:wss,dws_pagetitle" url="/_layouts/dws.aspx" />
+    <siteMapNode title="$Resources:wss,editcopyinformation_title" url="/_layouts/editcopyinformation.aspx" />
+    <siteMapNode title="$Resources:wss,emaildetails_link" url="/_layouts/emaildetails.aspx" />
+    <siteMapNode title="$Resources:wss,error_pagetitle" url="/_layouts/error.aspx" />
+    <siteMapNode title="$Resources:wss,people_pagetitle" url="/_layouts/groups.aspx" />
+    <siteMapNode title="$Resources:wss,infopage_pagetitle" url="/_layouts/infopage.aspx" />
+    <siteMapNode title="$Resources:wss,managecopies_title" url="/_layouts/managecopies.aspx" />
+    <siteMapNode title="$Resources:wss,mygrps_pagetitleMyGrps" url="/_layouts/mygrps.aspx" />
+    <siteMapNode title="$Resources:wss,newdwp_pagetitle" url="/_layouts/newdwp.aspx" />
+    <siteMapNode title="$Resources:wss,newlink_title" url="/_layouts/newlink.aspx" />
+    <siteMapNode title="$Resources:wss,people_pagetitle" url="/_layouts/people.aspx">
+      <siteMapNode title="$Resources:wss,associatedgroups_pagetitle" url="/_layouts/associatedgroups.aspx" />
+      <siteMapNode title="$Resources:wss,editgrp_pagetitle" url="/_layouts/editgrp.aspx" />
+      <siteMapNode title="$Resources:wss,grpmbrs_pagetitle" url="/_layouts/grpmbrs.aspx" />
+      <siteMapNode title="$Resources:wss,newgrp_pagetitle" url="/_layouts/newgrp.aspx" />
+      <siteMapNode title="$Resources:wss,permsetup_pagetitle" url="/_layouts/permsetup.aspx" />
+      <siteMapNode title="$Resources:wss,useredit_pagetitleintitlearea" url="/_layouts/userdisp.aspx">
+        <siteMapNode title="$Resources:wss,mysubs_pagetitle" url="/_layouts/mysubs.aspx">
+          <siteMapNode title="$Resources:wss,subchoos_pagetitle" url="/_layouts/SubChoos.aspx" />
+        </siteMapNode>
+        <siteMapNode title="$Resources:wss,regionalsetng_pagetitle" url="/_layouts/regionalsetng.aspx?Type=User" />
+        <siteMapNode title="$Resources:wss,useredit_pagetitle" url="/_layouts/useredit.aspx" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="$Resources:wss,publishback_pagetitle" url="/_layouts/publishback.aspx" />
+    <siteMapNode title="$Resources:wss,recent_changes" url="/_layouts/RecentWikiPages.aspx" />
+    <siteMapNode title="$Resources:wss,recyclebin_title" url="/_layouts/recyclebin.aspx" />
+    <siteMapNode title="$Resources:wss,reorder_pagetitle" url="/_layouts/reorder.aspx" />
+    <siteMapNode title="$Resources:wss,scsignup_pagetitle" url="/_layouts/scsignup.aspx" />
+    <siteMapNode title="$Resources:wss,spcontnt_pagetitle" url="/_layouts/spcontnt.aspx" />
+    <siteMapNode title="$Resources:wss,subedit_pagetitle" url="/_layouts/subedit.aspx" />
+    <siteMapNode title="$Resources:wss,subnew_pagetitle" url="/_layouts/subnew.aspx" />
+    <siteMapNode title="$Resources:wss,success_pagetitle" url="/_layouts/success.aspx" />
+    <siteMapNode title="$Resources:wss,lstsetng_settings" url="/_layouts/survedit.aspx" />
+    <siteMapNode title="$Resources:wss,tenantadmin_sites_managesitecollections_pagetitle" url="/_layouts/TA_SiteCollections.aspx" />
+    <siteMapNode title="$Resources:wss,updatecopies_title" url="/_layouts/updatecopies.aspx" />
+    <siteMapNode title="$Resources:wss,upload_pagetitle" url="/_layouts/Upload.aspx" />
+    <siteMapNode title="$Resources:wss,useconf_pagetitle" url="/_layouts/Useconfirmation.aspx" />
+    <siteMapNode title="$Resources:wss,user_pagetitle" url="/_layouts/user.aspx?Item=1" requiredParameters="obj,List">
+      <siteMapNode title="$Resources:wss,aclinv_pagetitle" url="/_layouts/aclinv.aspx?Item=1" />
+      <siteMapNode title="$Resources:wss,editprms_modifysettings_title" url="/_layouts/editprms.aspx?Item=1" />
+    </siteMapNode>
+    <siteMapNode title="$Resources:wss,versions_pagetitle" url="/_layouts/versions.aspx" />
+    <siteMapNode title="$Resources:wss,versiondiff_sitemaptitle" url="/_layouts/VersionDiff.aspx" />
+    <siteMapNode title="$Resources:wss,viewlsts_pagetitle_doclist" url="/_layouts/viewlsts.aspx" />
+    <siteMapNode title="$Resources:wss,Workflow_PageTitle" url="/_layouts/Workflow.aspx?List=1" requiredParameters="List,ID" />
+    <siteMapNode title="$Resources:wss,wpprevw_pagetitle" url="/_layouts/wpprevw.aspx" />
+    <siteMapNode title="$Resources:wss,WrkStat_PageTitle" url="/_layouts/wrkstat.aspx?List=1" requiredParameters="List,WorkflowInstanceID" />
+    <siteMapNode title="$Resources:wss,Workflow_PageTitle" url="/_layouts/Workflow.aspx">
+      <siteMapNode title="$Resources:wss,WrkStat_PageTitle" url="/_layouts/wrkstat.aspx" requiredParameters="WorkflowInstanceID">
+        <siteMapNode url="/_layouts/ModWrkflIP.aspx" parentUrl="/_layouts/wrkstat.aspx" title="$Resources:dlc,ModWrkfl_PageTitleGeneric" />
+      </siteMapNode>
+      <siteMapNode url="/_layouts/IniWrkflIP.aspx" parentUrl="/_layouts/workflow.aspx" title="$Resources:dlc,IniWrkfl_PageTitleGeneric" />
+    </siteMapNode>
+    <siteMapNode title="$Resources:wss,BDC_Applications" url="/_layouts/bdc/TA_BDCApplications.aspx">
+      <siteMapNode title="$Resources:wss,BDC_AddApplication" url="/_layouts/bdc/TA_AddBDCApplication.aspx" />
+      <siteMapNode title="$Resources:wss,BDC_ExportApplication" url="/_layouts/bdc/TA_ExportBDCApplication.aspx" />
+      <siteMapNode title="$Resources:wss,BDC_ViewEntities" url="/_layouts/bdc/TA_ViewBDCApplication.aspx" requiredParameters="ModelName,LobName">
+        <siteMapNode title="$Resources:wss,BDC_ViewEntity" url="/_layouts/bdc/TA_ViewBDCEntity.aspx" requiredParameters="Name,Namespace,ModelName,LobName">
+          <siteMapNode title="$Resources:wss,BDC_AddAction_Title" url="/_layouts/bdc/TA_AddBDCAction.aspx" />
+          <siteMapNode title="$Resources:wss,BDC_EditAction_Title" url="/_layouts/bdc/TA_EditBDCAction.aspx" />
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode title="$Resources:wss,BDC_ViewLOBSystems" url="/_layouts/bdc/TA_ViewBDCLobSystems.aspx">
+        <siteMapNode title="$Resources:wss,BDC_ViewLOBSystemInstances" url="/_layouts/bdc/TA_ViewBDCLobSystemInstances.aspx" requiredParameters="LobName">
+          <siteMapNode title="$Resources:wss,BDC_LobSystemInstanceSettingPageTitle" url="/_layouts/bdc/TA_BDCLobSettings.aspx" />
+        </siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="/_layouts/createdocsetversion.aspx" parentUrl="/" title="$Resources:dlcdm,CreateDocSetVersion_title" />
+    <siteMapNode url="/_layouts/docsetversions.aspx" parentUrl="/" title="$Resources:dlcdm,DocSetVersions_Title" />
+    <siteMapNode url="/_layouts/docsethome.aspx" parentUrl="/" title="$Resources:dlcdm,DocSetHomepage_Title" />
+    <siteMapNode url="/_layouts/newdocset.aspx" parentUrl="/" title="$Resources:dlcdm,DocSetNewPage_Title" />
+    <siteMapNode url="/_layouts/ColumnDefaults.aspx?Item=1" parentUrl="/" title="$Resources:dlcdm,columndefaults_page_breadcrumb" />
+    <siteMapNode title="$Resources:Microsoft.Office.Server.Search,FSAdmin_Keyword_BreadCrumb" url="/_layouts/ContextualKeywordManagement.aspx">
+      <siteMapNode category="Enhancements" title="$Resources:Microsoft.Office.Server.Search,FSAdmin_KeywordDetails_BreadCrumb" url="/_layouts/KeywordDetails.aspx">
+        <siteMapNode title="$Resources:Microsoft.Office.Server.Search,FSAdmin_AddKeyword_BreadCrumb" url="/_layouts/AddKeyword.aspx" />
+        <siteMapNode title="$Resources:Microsoft.Office.Server.Search,FSAdmin_AddBestBet_BreadCrumb" url="/_layouts/AddBestBet.aspx" />
+        <siteMapNode title="$Resources:Microsoft.Office.Server.Search,FSAdmin_AddFeaturedContent_BreadCrumb" url="/_layouts/AddFeaturedContent.aspx" />
+        <siteMapNode title="$Resources:Microsoft.Office.Server.Search,FSAdmin_RankPromotionManagement_BreadCrumb" url="/_layouts/RankPromotionManagement.aspx">
+          <siteMapNode title="$Resources:Microsoft.Office.Server.Search,FSAdmin_AddRankPromotion_BreadCrumb" url="/_layouts/AddRankPromotion.aspx" />
+        </siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="$Resources:Microsoft.Office.Server.Search,FSAdmin_UserContextManagement_BreadCrumb" url="/_layouts/UserContextManagement.aspx">
+      <siteMapNode title="$Resources:Microsoft.Office.Server.Search,FSAdmin_AddContextManagement_BreadCrumb" url="/_layouts/AddUserContext.aspx" />
+    </siteMapNode>
+    <siteMapNode title="$Resources:ObaUI,SSSAdmin_ManageSSSvcPageTitle" url="/_layouts/sssvc/TA_ManageSSSvcApplication.aspx" parentUrl="/default.aspx" requiredParameters="appid">
+      <siteMapNode title="$Resources:ObaUI,SSSAdmin_SSSvcTargetAppPageTitle" url="/_layouts/sssvc/TA_ManageTargetApplication.aspx" />
+    </siteMapNode>
+    <siteMapNode url="/_layouts/exemptpolicy.aspx" parentUrl="/" title="$Resources:dlcpolicy,exemptpolicy_title" />
+    <siteMapNode url="/_layouts/hold.aspx" parentUrl="/" title="$Resources:dlcpolicy,hold_title" />
+    <siteMapNode url="/_layouts/holdreport.aspx" parentUrl="/" title="$Resources:dlcpolicy,holdreport_title" />
+    <siteMapNode url="/_layouts/policy.aspx?ctype=1" parentUrl="/_layouts/ManageContentType.aspx?ctype=1" title="$Resources:dlcpolicy,policy_title" />
+    <siteMapNode url="/_layouts/releasehold.aspx" parentUrl="/" title="$Resources:dlcpolicy,releasehold_title" />
+    <siteMapNode url="/_layouts/SearchAndAddToHold.aspx" parentUrl="/" title="$Resources:dlcpolicy,searchandaddtohold_title" />
+    <siteMapNode url="/_layouts/expirationconfig.aspx?Item=1" parentUrl="/" title="$Resources:dlcpolicy,policy_title" />
+    <siteMapNode title="$Resources:dlcpolicy,uploadex_title" url="/_layouts/UploadEx.aspx" />
+    <siteMapNode url="/_layouts/routermessage.aspx" parentUrl="/" title="$Resources:dlcpolicy,routermessage_title" />
+    <siteMapNode url="/_layouts/ContentTypeConverterSettings.aspx" parentUrl="/_layouts/ManageContentType.aspx" title="$Resources:cms,ctconvertersettings_pagetitleinbreadcrumb" requiredParameters="ctype">
+      <siteMapNode url="/_layouts/ConverterSettings.aspx" parentUrl="/_layouts/ContentTypeConverterSettings.aspx" title="$Resources:cms,convertersettings_pagetitleinbreadcrumb" />
+    </siteMapNode>
+    <siteMapNode url="/_layouts/PageSettings.aspx" parentUrl="" title="$Resources:cms,pagesettings_pagetitle" />
+    <siteMapNode url="/_layouts/createpage.aspx" parentUrl="" title="$Resources:cms,createpage_pagetitle" />
+    <siteMapNode url="/_layouts/Variations/VariationImport.aspx" parentUrl="/_layouts/sitemanager.aspx" title="$Resources:cms,VariationImport_PageTitle" />
+    <siteMapNode title="$Resources:ReportServer,CentralAdmin" url="/_admin/ReportServer/ReportServerSiteSettings.aspx">
+      <siteMapNode title="$Resources:ReportServer,RSIntegrationResults" url="/_layouts/ReportServer/RSIntegrationResults.aspx" />
+    </siteMapNode>
+    <siteMapNode title="$Resources:ReportServer,CentralAdmin" url="/_admin/ReportServer/ManageTrustedAccounts.aspx" />
+    <siteMapNode title="$Resources:ReportServer,CentralAdmin" url="/_admin/ReportServer/ReportServerProperties.aspx" />
+    <siteMapNode title="$Resources:ReportServer,SiteLevelSettings" url="/_layouts/ReportServer/SiteLevelSettings.aspx" />
+    <siteMapNode title="$Resources:ReportServer,DataSourceList" url="/_layouts/ReportServer/DataSourceList.aspx" requiredParameters="List,ID">
+      <siteMapNode title="$Resources:ReportServer,DataSourceProps" url="/_layouts/ReportServer/DataSourceProperties.aspx" />
+    </siteMapNode>
+    <siteMapNode title="$Resources:ReportServer,ParameterList" url="/_layouts/ReportServer/ParameterList.aspx" requiredParameters="List,ID">
+      <siteMapNode title="$Resources:ReportServer,ParameterProps" url="/_layouts/ReportServer/ParameterProperties.aspx" />
+    </siteMapNode>
+    <siteMapNode title="$Resources:ReportServer,ReportExecution" url="/_layouts/ReportServer/ReportExecution.aspx" />
+    <siteMapNode title="$Resources:ReportServer,SharedDataSource" url="/_layouts/ReportServer/SharedDataSource.aspx" />
+    <siteMapNode title="$Resources:ReportServer,ReportHistoryList" url="/_layouts/ReportServer/ReportHistory.aspx" />
+    <siteMapNode title="$Resources:ReportServer,DependentItemList" url="/_layouts/ReportServer/DependentItems.aspx" />
+    <siteMapNode title="$Resources:ReportServer,ClickThroughReports" url="/_layouts/ReportServer/ModelClickThrough.aspx" />
+    <siteMapNode title="$Resources:ReportServer,ModelItemSecurity" url="/_layouts/ReportServer/ModelItemSecurity.aspx" />
+    <siteMapNode title="$Resources:ReportServer,GenerateModel" url="/_layouts/ReportServer/GenerateModel.aspx" />
+    <siteMapNode title="$Resources:ReportServer,SubscriptionList" url="/_layouts/ReportServer/ManageSubscriptions.aspx" requiredParameters="List,SubscriptionID,ID">
+      <siteMapNode title="$Resources:ReportServer,SubscriptionProps" url="/_layouts/ReportServer/SPSubscriptionProperties.aspx" />
+      <siteMapNode title="$Resources:ReportServer,DataDrivenSubscriptionProps" url="/_layouts/ReportServer/DataDrivenSubscriptionWizard.aspx" />
+    </siteMapNode>
+    <siteMapNode title="$Resources:ReportServer,ScheduleList" url="/_layouts/ReportServer/ScheduleList.aspx">
+      <siteMapNode title="$Resources:ReportServer,ScheduleProperties" url="/_layouts/ReportServer/ScheduleProperties.aspx" />
+    </siteMapNode>
+    <siteMapNode title="$Resources:ReportServer,UnsupportedRSFunctionality" url="/_layouts/ReportServer/RSError.aspx" />
+    <siteMapNode title="$Resources:Microsoft.Office.Server.Search,ListKeywords_SearchAdminBreadcrumb" url="/_layouts/listkeywords.aspx">
+      <siteMapNode category="Enhancements" title="$Resources:Microsoft.Office.Server.Search,AddKeyword_SearchAdminBreadcrumb" url="/_layouts/keyword.aspx" />
+    </siteMapNode>
+    <siteMapNode title="$Resources:sps,ProfMngr_pagetitle" url="/_layouts/ProfMngr.aspx">
+      <siteMapNode title="$Resources:sps,ProfNew_pagetitle" url="/_layouts/ProfNew.aspx" />
+      <siteMapNode title="$Resources:sps,ProfAdminEdit_pagetitle" url="/_layouts/ProfAdminEdit.aspx" />
+    </siteMapNode>
+    <siteMapNode title="$Resources:sps,SetImport_pagetitle" url="/_layouts/SetImport.aspx" />
+    <siteMapNode title="$Resources:sps,MgrDSServer_pagetitle" url="/_layouts/MgrDSServer.aspx">
+      <siteMapNode title="$Resources:sps,EditDSServer_pagetitle" url="/_layouts/EditDSServer.aspx" />
+    </siteMapNode>
+    <siteMapNode title="$Resources:sps,MgrProperty_pagetitle" url="/_layouts/MgrProperty.aspx">
+      <siteMapNode title="$Resources:sps,EditProperty_pagetitle" url="/_layouts/EditProperty.aspx" />
+      <siteMapNode title="$Resources:sps,EditSection_pagetitle" url="/_layouts/EditSection.aspx" />
+    </siteMapNode>
+    <siteMapNode title="$Resources:sps,Audience_Main_pagetitle" url="/_layouts/Audience_Main.aspx">
+      <siteMapNode title="$Resources:sps,Audience_Sched_pagetitle" url="/_layouts/Audience_Sched.aspx" />
+      <siteMapNode title="$Resources:sps,Audience_List_pagetitle" url="/_layouts/Audience_List.aspx">
+        <siteMapNode title="$Resources:sps,Audience_Edit_pagetitle" url="/_layouts/Audience_Edit.aspx" />
+        <siteMapNode title="$Resources:sps,Audience_View_pagetitle" url="/_layouts/Audience_View.aspx" />
+        <siteMapNode title="$Resources:sps,Audience_DefRuleEdit_pagetitle" url="/_layouts/Audience_DefRuleEdit.aspx" />
+        <siteMapNode title="$Resources:sps,Audience_MemberList_pagetitle" url="/_layouts/Audience_MemberList.aspx" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="$Resources:sps,ManagePrivacyPolicy_pagetitle" url="/_layouts/ManagePrivacyPolicy.aspx">
+      <siteMapNode title="$Resources:sps,EditPolicy_pagetitle" url="/_layouts/EditPolicy.aspx" />
+    </siteMapNode>
+    <siteMapNode title="$Resources:sps,PersonalSites_pagetitle" url="/_layouts/PersonalSites.aspx" />
+    <siteMapNode title="$Resources:sps,ManageServicePermissions_pagetitle" url="/_layouts/ManageServicePermissions.aspx" />
+    <siteMapNode title="$Resources:sps,MyContactLinks_pagetitle" url="/_layouts/MyContactLinks.aspx">
+      <siteMapNode title="$Resources:sps,QuickLinks_AddColleague_pagetitle" url="/_layouts/QuickLinks.aspx?Mode=Person" />
+    </siteMapNode>
+    <siteMapNode title="$Resources:sps,MyMemberships_pagetitle" url="/_layouts/MyMemberships.aspx" />
+    <siteMapNode title="$Resources:sps,MyQuickLinks_pagetitle" url="/_layouts/MyQuickLinks.aspx">
+      <siteMapNode title="$Resources:sps,QuickLinks_AddLink_pagetitle" url="/_layouts/QuickLinks.aspx?Mode=Link" />
+    </siteMapNode>
+    <siteMapNode title="$Resources:sps,QuickLinks_pagetitle" url="/_layouts/QuickLinks.aspx" />
+    <siteMapNode title="$Resources:sps,EditProfile_pagetitle" url="/_layouts/EditProfile.aspx" />
+    <siteMapNode title="$Resources:sps,CreateMySite_pagetitle" url="/_layouts/MySite.aspx" />
+    <siteMapNode title="$Resources:sps,EnableListTargeting_PageTitle" url="/_layouts/ListEnableTargeting.aspx" />
+    <siteMapNode title="$Resources:sps,Ratings_ListSettingTitle" url="/_layouts/RatingsSettings.aspx" />
+    <siteMapNode url="/_layouts/metadatacolsettings.aspx?List=1" parentUrl="/_layouts/listedit.aspx?List=1" title="$Resources:taxonomy,metadatacolsettings_breadcrumb" requiredParameters="List" />
+    <siteMapNode url="/_layouts/BulkWrkTaskHandler.aspx" parentUrl="/" title="$Resources:dlc,BulkWrkTaskHandler_PageTitle" />
+    <siteMapNode url="/_layouts/BulkWrkTaskIP.aspx" parentUrl="/" title="$Resources:dlc,BulkWrkTaskIP_PageTitle" />
+  </siteMapNode>
+</siteMap>

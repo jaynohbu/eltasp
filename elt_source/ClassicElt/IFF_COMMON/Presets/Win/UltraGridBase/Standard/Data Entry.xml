@@ -1,0 +1,23 @@
+<SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+<a1:ObjectStreamer id="ref-1" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Infragistics.Shared.Serialization/Infragistics.Shared.v3.2">
+<TargetTypeName id="ref-3">UltraGridBase</TargetTypeName>
+<DisplayLayout href="#ref-4"/>
+<PresetDescription id="ref-5">A typical Access-Style data entry grid with an addnew row at the bottom of each band. Users can add, remove, and edit rows.</PresetDescription>
+<PresetType>2</PresetType>
+<PresetName id="ref-6">Data Entry</PresetName>
+</a1:ObjectStreamer>
+<a1:ObjectStreamer id="ref-4" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Infragistics.Shared.Serialization/Infragistics.Shared.v3.2">
+<TargetTypeName id="ref-7">UltraGridLayout</TargetTypeName>
+<Override href="#ref-8"/>
+<PresetType>2</PresetType>
+</a1:ObjectStreamer>
+<a1:ObjectStreamer id="ref-8" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Infragistics.Shared.Serialization/Infragistics.Shared.v3.2">
+<TargetTypeName id="ref-9">UltraGridOverride</TargetTypeName>
+<AllowUpdate>1</AllowUpdate>
+<AllowDelete>1</AllowDelete>
+<PresetType>2</PresetType>
+<AllowAddNew>6</AllowAddNew>
+</a1:ObjectStreamer>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

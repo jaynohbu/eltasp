@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="MSCRM" PresetDescription="WebCombo MSCRM look. Sets both LOOK and BEHAVIOR" PresetType="All" />-->
+<igcmbo:WebCombo BorderStyle="Solid" DropImage1="/ig_common/images/igcmbo_mscrmup.gif" DropImage2="/ig_common/images/igcmbo_mscrmdown.gif" BorderWidth="1px" DropImageXP1="/ig_common/images/igcmbo_mscrmup.gif" DropImageXP2="/ig_common/images/igcmbo_mscrmdown.gif" SelBackColor="171, 192, 231" BackColor="White" ForeColor="Black" Font-Size="9pt" Font-Names="Tahoma" BorderColor="#7B9EBD" SelForeColor="Black" Version="3.00">
+  <DropDownLayout DropdownWidth="325px" BorderCollapse="Separate" RowSelectors="No" RowHeightDefault="20px" HeaderClickAction="Select" DropdownHeight="130px" GridLines="None">
+    <RowStyle BorderWidth="1px" BorderColor="Gray" BorderStyle="Solid" BackColor="White">
+      <BorderDetails WidthLeft="0px" WidthTop="0px" />
+    </RowStyle>
+    <RowSelectorStyle />
+    <SelectedRowStyle ForeColor="Black" BackColor="#ABC0E7" />
+    <HeaderStyle BorderStyle="Solid" BackColor="#E9E7D7">
+      <BorderDetails ColorTop="LightGray" WidthLeft="1px" StyleBottom="Solid" ColorBottom="DarkGray" WidthTop="1px" StyleTop="Outset" WidthBottom="2px" ColorLeft="White" />
+    </HeaderStyle>
+    <RowAlternateStyle />
+    <FooterStyle />
+    <FrameStyle Width="100%" Cursor="Default" Font-Size="9pt" Font-Names="Verdana" BorderStyle="None" BackColor="White" Height="100%" />
+    <ImageUrls />
+  </DropDownLayout>
+  <ExpandEffects ShadowColor="LightGray" />
+</igcmbo:WebCombo>

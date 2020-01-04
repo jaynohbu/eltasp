@@ -1,0 +1,26 @@
+﻿#LayoutSplitter .HeadPane,
+#PrintLayoutSplitter .HeadPane
+{
+    background: #ededed;
+}
+
+.DateNavigatorContainer
+{
+	background: #f6f7f9;
+}
+
+.HeadPane .ActionToolbar .Spacer b
+{
+    background: #696969;
+}
+
+#LayoutSplitter .HeadPane .NavigationToolbar .NavigationMenu .dxm-item .dxm-content,
+#LayoutSplitter .HeadPane .NavigationToolbar .NavigationMenu .dxm-item.dxm-hovered .dxm-content
+{
+    color: #696969;
+}
+
+.HeadPane .ActionToolbar .SearchBox
+{
+    margin-top: 1px;
+}

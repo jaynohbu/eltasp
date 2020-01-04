@@ -1,0 +1,103 @@
+﻿@Html.DevExpress().GridView(
+    settings =>
+    {
+        settings.Name = "grid";
+        settings.CallbackRouteValues = new { Controller = "Accounting", Action = "BankRegisterPartial" };
+
+        settings.Width = Unit.Percentage(100);
+        settings.SettingsPager.PageSize = 50;
+        settings.Theme = "Metropolis";
+        settings.SettingsBehavior.AllowFocusedRow = false;
+        settings.KeyFieldName = "Date";
+        settings.Columns.Add(c =>
+        {
+            c.Caption = "Date";
+            c.FieldName = "Date";
+            c.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;           
+        });
+
+        var glacc = settings.Columns.Add("Bank_Account", "Bank Account");
+        var checkno = settings.Columns.Add("CheckNo", "Check#");  
+        var clear = settings.Columns.Add("Clear");     
+        var v = settings.Columns.Add("Void");      
+
+        settings.Columns.Add(c =>
+        {
+            c.Caption = "Type";
+            c.FieldName = "Type";
+            c.SetDataItemTemplateContent(a =>
+            {
+                if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Type"))))
+                {
+                    string url =DataBinder.Eval(a.DataItem, "Link").ToString();
+                    url = "\"" + url + "\"";
+                    ViewContext.Writer.Write(
+                        "<a href='javascript:void(0)' onclick = 'viewPop("+url+")'>"+a.Text+"</a>");
+                }
+            });   
+            c.CellStyle.CssClass = "numeric";
+        });
+
+        var desc = settings.Columns.Add("Description","Company Name"); 
+        var pto = settings.Columns.Add("PrintCheckAs", "Pay to the Order of");       
+        var memo = settings.Columns.Add("Memo");
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Debit";
+            column.SetDataItemTemplateContent(a =>
+            {
+                if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Debit"))))
+                {
+                    string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                    if (a.Text == "0") val = "0";
+                    ViewContext.Writer.Write(val
+                       );
+                }
+            });       
+        
+        });
+
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Credit";
+            column.SetDataItemTemplateContent(a =>
+            {
+                if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Credit"))))
+                {
+                    string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                    if (a.Text == "0") val = "0";
+                    ViewContext.Writer.Write(val
+                       );
+                }
+            });      
+         
+        });
+
+        decimal total = 0;
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Accumulation";
+            column.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            column.PropertiesEdit.DisplayFormatString = "c";
+            column.Width = 80;
+            column.CellStyle.CssClass = "numeric";
+        });
+
+        settings.CustomUnboundColumnData = (sender, e) =>
+        {
+            if (e.Column.FieldName == "Accumulation")
+            {
+                if (e.ListSourceRowIndex == 0) total = 0;
+                
+                    decimal Debit = e.GetListSourceFieldValue("Debit") == "" ? 0 : Convert.ToDecimal(e.GetListSourceFieldValue("Debit"));
+                    decimal Credit = e.GetListSourceFieldValue("Credit") == "" ? 0 : Convert.ToDecimal(e.GetListSourceFieldValue("Credit"));
+                    total = total + Debit + Credit;
+                    string s_detail_total = "0";
+                    if (total > 0)
+                        s_detail_total = string.Format("{0:###,###,###.00}", Convert.ToDecimal(total));
+                    e.Value = s_detail_total;
+             
+            }
+        };
+
+    }).Bind(Model).GetHtml()

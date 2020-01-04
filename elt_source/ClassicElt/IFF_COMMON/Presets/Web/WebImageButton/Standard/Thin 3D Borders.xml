@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Thin 3D Borders" PresetDescription="Infragistics Thin 3D Borders Preset. Sets Look properties only. Note: The 'Reset' box should be checked." PresetType="Appearance" />-->
+<igtxt:WebImageButton UseBrowserDefaults="False">
+	<HoverAppearance ContentShift="NotSet" />
+	<FocusAppearance ContentShift="NotSet" />
+	<PressedAppearance>
+		<Style BorderColor="#F8F8F8">
+			<BorderDetails ColorTop="104, 104, 104" ColorLeft="104, 104, 104">
+			</BorderDetails>
+		</Style>
+	</PressedAppearance>
+	<DisabledAppearance ContentShift="NotSet" />
+	<Appearance>
+		<Style BorderWidth="1px" BorderColor="#F8F8F8" BorderStyle="Solid" BackColor="Control">
+			<BorderDetails ColorBottom="104, 104, 104" ColorRight="104, 104, 104">
+			</BorderDetails>
+		</Style>
+	</Appearance>
+	<RoundedCorners RenderingType="Disabled">
+	</RoundedCorners>
+</igtxt:WebImageButton>

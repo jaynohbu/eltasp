@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="StandardTree" PresetDescription="Basic Hierarchical tree with folder icons. Sets both LOOK and BEHAVIOR." PresetType="All" />-->
+<ignav:UltraWebTree XslFile="" DefaultSelectedImage="ig_treeFolderOpen.gif" ParentNodeImageUrl="" Width="158px" TargetFrame="" ExpandImage="ig_treePlus.gif" Indentation="20" ImageDirectory="/ig_common/images/" ID="UltraWebTree1" Height="285px" WebTreeTarget="HierarchicalTree" Cursor="Default" TargetUrl="" FileUrl="" RootNodeImageUrl="" BackImageUrl="" DefaultImage="ig_treeFolder.gif" Font-Size="9pt" Font-Names="Microsoft Sans Serif" CollapseImage="ig_treeMinus.gif" CssClass="" LeafNodeImageUrl="">
+  <SelectedNodeStyle Cursor="Default" BorderWidth="1px" BorderStyle="Solid" ForeColor="White" BackColor="Navy">
+    <Padding Bottom="1px" Left="2px" Top="1px" Right="2px" />
+  </SelectedNodeStyle>
+  <NodePaddings />
+  <NodeEditStyle Font-Size="9pt" Font-Names="Microsoft Sans Serif" />
+  <NodeMargins />
+  <AutoPostBackFlags />
+  <Styles />
+  <ClientSideEvents EditKeyDown="" BeforeBeginNodeEdit="" AfterNodeSelectionChange="" BeforeNodeSelectionChange="" AfterEndNodeEdit="" NodeExpand="" NodeCollapse="" Drag="" KeyUp="" AfterBeginNodeEdit="" DragOver="" DragEnter="" BeforeEndNodeEdit="" DemandLoad="" NodeChecked="" DragLeave="" DragEnd="" DragStart="" BeforeNodeUpdate="" NodeClick="" AfterNodeUpdate="" KeyDown="" EditKeyUp="" Drop="" InitializeTree="" />
+</ignav:UltraWebTree>

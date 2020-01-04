@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="BWChart" PresetDescription="Sets LOOK Only" PresetType="Appearance" />-->
+<igchart:UltraChart Height="616px" BackgroundImageFileName="" ID="UltraChart1" Layer="(Collection)" Width="711px" CrossHairColor="#404040" UserLayerIndex="" BackColor="White" ImageUrl="">
+  <ColorModel ModelStyle="LinearRandom" Grayscale="True" />
+  <TitleBottom Text="Copyright Infragistics Inc." HorizontalAlign="Far" Location="Bottom">
+    <Margins />
+  </TitleBottom>
+  <Axis BackColor="#E0E0E0">
+    <Y TickmarkInterval="0">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels HorizontalAlign="Far" ItemFormatString="&lt;DATA_VALUE:00.00&gt;" Flip="False" ItemFormat="DataValue" VerticalAlign="Center" Orientation="Horizontal" OrientationAngle="0" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </Y>
+    <Y2 Visible="False" TickmarkInterval="0">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels HorizontalAlign="Near" ItemFormatString="&lt;DATA_VALUE:00.00&gt;" Flip="False" ItemFormat="DataValue" VerticalAlign="Center" Orientation="Horizontal" OrientationAngle="0" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </Y2>
+    <X2 Visible="False" TickmarkInterval="0">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels ItemFormatString="&lt;ITEM_LABEL&gt;" Flip="False" ItemFormat="ItemLabel" VerticalAlign="Center" Orientation="VerticalLeftFacing" OrientationAngle="0" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </X2>
+    <Z2 Visible="False" TickmarkInterval="0">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels HorizontalAlign="Near" SeriesFormatString="" ItemFormatString="" Flip="False" ItemFormat="None" VerticalAlign="Center" Orientation="Horizontal" OrientationAngle="0" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </Z2>
+    <Z Visible="False" TickmarkInterval="0">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels HorizontalAlign="Near" SeriesFormatString="" ItemFormatString="&lt;ITEM_LABEL&gt;" Flip="False" ItemFormat="ItemLabel" VerticalAlign="Center" Orientation="Horizontal" OrientationAngle="0" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </Z>
+    <X TickmarkInterval="0">
+      <ScrollScale Height="10" Width="15" Visible="False" />
+      <Labels HorizontalAlign="Near" ItemFormatString="&lt;ITEM_LABEL&gt;" Flip="False" ItemFormat="ItemLabel" VerticalAlign="Center" Orientation="VerticalLeftFacing" OrientationAngle="0" />
+      <MinorGridLines Color="LightGray" Visible="False" />
+    </X>
+  </Axis>
+  <Tooltips />
+  <TitleRight Text="UltraChart for .NET is #1 !" Location="Right">
+    <Margins />
+  </TitleRight>
+  <TitleLeft Location="Left">
+    <Margins />
+  </TitleLeft>
+</igchart:UltraChart>

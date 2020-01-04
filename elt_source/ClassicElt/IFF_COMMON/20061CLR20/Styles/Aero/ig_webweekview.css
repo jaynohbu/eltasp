@@ -1,0 +1,118 @@
+.igwv_WeekViewFrame {
+	margin-top: 2px;
+	background-color: #FFFFD5;
+}
+
+.igwv_CaptionHeader {	
+	background-image: url(images/MonthHeaderCaption_bg.png);
+	background-repeat: repeat-x;
+	border-width: 0px 1px 1px 1px;
+	border: 1px solid #10377C;
+	
+	overflow: hidden;
+
+	font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	font-weight: bold;
+	text-align: center;
+	color: #151C55;
+
+	line-height: 25px;
+	height: 25px;	
+}
+
+.igwv_NavigationButton { 
+	border:0px;
+	width: 17px;
+	background-color:transparent;
+	vertical-align:middle;
+	cursor: hand;
+}
+	
+.igwv_DayHeader {
+	background-color: #FFFFFF; 
+	color: #151C55;
+	text-align: right;
+	height:18px;
+	padding: 0px 2px 0px 0px;
+	cursor:default;
+	font-size: 8pt;
+	font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+}
+
+.igwv_TodayHeader 
+{
+	background-image: url(images/TodayHeader_bg.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	background-color: #FFFFFF;
+	color: #151C55;
+}
+
+.igwv_ActiveDayHeader 
+{
+	background-image: url(images/ActiveDayHeader_bg.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	background-color: #FFFFFF;
+	color: #151C55;
+}
+
+.igwv_Day {
+	font-family: Microsoft Sans Serif; 
+	font-size: 8pt;
+	overflow-x:hidden;	
+}
+
+.igwv_DayArea {
+	background-color: #FFFFFF;
+	background-image: url(images/cell_bg.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	
+	border-width: 0px 1px 1px 1px;
+	border-style: solid;
+	border-color: #151C55;
+}
+		
+.igwv_ActiveDay { 
+	background-color: #FFFFFF;
+	background-image: url(images/cellActive_bg.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+.igwv_Appointment {
+	line-height:150%;
+	white-space:nowrap;
+	cursor: pointer;
+	padding: 2px;
+	margin: 1px 1px 0px 1px;
+	
+}
+
+.igwv_SelectedAppointment { 
+	line-height:150%;
+	white-space:nowrap;
+	cursor: pointer;
+	padding: 2px;
+	margin: 1px 1px 0px 1px;
+	background-color: #151C55;
+	color: #FFFFFF;
+}
+
+.igwv_ReminderIcon {
+	background-image: url(images/reminder.png);
+	display: inline;
+	margin-right: 5px;
+	margin-left: 3px;
+	width: 16px;
+	height: 13px;	
+}
+
+.igwv_AllDayEvent { 
+	border-style:solid;
+	border-color:black;
+	border-width:1;
+	background-color:#FFFFFF;
+}

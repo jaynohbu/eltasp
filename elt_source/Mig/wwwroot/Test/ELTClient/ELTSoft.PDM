@@ -1,0 +1,323 @@
+[Root]
+Most Recent Package=Standard Setup Package 2
+
+
+[Package|Internet Package 1|Root]
+SubWizProgID=PDWizard.InetCABPkgSubWiz
+BuildFolder=C:\Program Files\ELTClient\Package
+
+[Package|Internet Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Internet Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Internet Package 1|Files Found]
+
+[Package|Internet Package 1|Files Released]
+
+[Package|Internet Package 1|Missing Dependency Information]
+
+[Package|Internet Package 1|Out-of-Date Dependency Information]
+
+[Package|Internet Package 1|Files Added]
+
+[Package|Internet Package 1|Files Removed]
+
+[Package|Internet Package 1|Files In Project]
+C:\Program Files\ELTClient\ELTClient.dll=Yes
+C:\WINNT\SYSTEM32\MSVBVM60.DLL=Yes
+C:\WINNT\SYSTEM32\OLEAUT32.DLL=Yes
+C:\WINNT\SYSTEM32\OLEPRO32.DLL=Yes
+C:\WINNT\SYSTEM32\ASYCFILT.DLL=Yes
+C:\WINNT\SYSTEM32\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+
+[Package|Internet Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Internet Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Internet Package 1|Install Locations]
+
+[Package|Internet Package 1|Configure Shared Files]
+Applicable=
+
+[Package|Internet Package 1|ComponentInfo]
+ELTClient.dll=thiscab
+MSVBVM60.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+OLEAUT32.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+OLEPRO32.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+ASYCFILT.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+STDOLE2.TLB=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+COMCAT.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+
+[Package|Internet Package 1|ObjectInfo]
+EltClient=true;true
+
+[Package|Internet Package 1|Package]
+PackageFolder=C:\Program Files\ELTClient\Package
+ProjectFolder=C:\Program Files\ELTClient
+ServerSideCab=C:\Program Files\ELTClient\Package\ELTClient.CAB
+File1=C:\Program Files\ELTClient\Package\ELTClient.CAB
+File2=C:\Program Files\ELTClient\Package\ELTClient.HTM
+Handler1=PDWizard.WebPostDplySubWiz
+Handler2=PDWizard.FolderDplySubWiz
+
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\Program Files\ELTClient\PackageDownload
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+
+[Package|Standard Setup Package 1|Files Released]
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+
+[Package|Standard Setup Package 1|Files Added]
+
+[Package|Standard Setup Package 1|Files Removed]
+
+[Package|Standard Setup Package 1|Files In Project]
+C:\Program Files\ELTClient\ELTClient.dll=Yes
+C:\WINNT\SYSTEM32\MSVBVM60.DLL=Yes
+C:\WINNT\SYSTEM32\OLEAUT32.DLL=Yes
+C:\WINNT\SYSTEM32\OLEPRO32.DLL=Yes
+C:\WINNT\SYSTEM32\ASYCFILT.DLL=Yes
+C:\WINNT\SYSTEM32\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINNT\SYSTEM32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+C:\Program Files\ELTClient\ELTClient.dll=$(AppPath)
+C:\WINNT\SYSTEM32\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\SYSTEM32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+C:\Program Files\ELTClient\ELTClient.dll=No
+
+[Package|Standard Setup Package 1|ComponentInfo]
+ELTClient.dll=thiscab
+MSVBVM60.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+OLEAUT32.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+OLEPRO32.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+ASYCFILT.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+STDOLE2.TLB=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+COMCAT.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+
+[Package|Standard Setup Package 1|ObjectInfo]
+EltClient=true;true
+
+[Package|Standard Setup Package 1|Distribution]
+Type=single
+Size=
+Title=ELTSoft
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=C:\Program Files\ELTClient\PackageDownload
+ProjectFolder=C:\Program Files\ELTClient
+ServerSideCab=
+File1=C:\Program Files\ELTClient\PackageDownload\setup.exe
+File2=C:\Program Files\ELTClient\PackageDownload\Setup.Lst
+File3=C:\Program Files\ELTClient\PackageDownload\ELTClient.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|Internet Package 2|Root]
+SubWizProgID=PDWizard.InetCABPkgSubWiz
+BuildFolder=C:\Program Files\ELTClient\PackageForAll
+
+[Package|Internet Package 2|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Internet Package 2|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Internet Package 2|Files Found]
+
+[Package|Internet Package 2|Files Released]
+
+[Package|Internet Package 2|Missing Dependency Information]
+
+[Package|Internet Package 2|Out-of-Date Dependency Information]
+
+[Package|Internet Package 2|Files Added]
+
+[Package|Internet Package 2|Files Removed]
+
+[Package|Internet Package 2|Files In Project]
+C:\Program Files\ELTClient\ELTClient.dll=Yes
+C:\WINNT\SYSTEM32\MSVBVM60.DLL=Yes
+C:\WINNT\SYSTEM32\OLEAUT32.DLL=Yes
+C:\WINNT\SYSTEM32\OLEPRO32.DLL=Yes
+C:\WINNT\SYSTEM32\ASYCFILT.DLL=Yes
+C:\WINNT\SYSTEM32\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+
+[Package|Internet Package 2|Configure Registry Files]
+Applicable=No
+
+[Package|Internet Package 2|Configure Remote Servers]
+Applicable=No
+
+[Package|Internet Package 2|Install Locations]
+C:\Program Files\ELTClient\ELTClient.dll=$(AppPath)
+C:\WINNT\SYSTEM32\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\SYSTEM32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Internet Package 2|Configure Shared Files]
+Applicable=Yes
+C:\Program Files\ELTClient\ELTClient.dll=No
+
+[Package|Internet Package 2|ComponentInfo]
+ELTClient.dll=thiscab
+MSVBVM60.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+OLEAUT32.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+OLEPRO32.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+ASYCFILT.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+STDOLE2.TLB=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+COMCAT.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+
+[Package|Internet Package 2|ObjectInfo]
+EltClient=true;true
+
+[Package|Internet Package 2|Distribution]
+Type=single
+Size=
+Title=ELTSoft
+
+[Package|Internet Package 2|Package]
+PackageFolder=C:\Program Files\ELTClient\PackageForAll
+ProjectFolder=C:\Program Files\ELTClient
+ServerSideCab=C:\Program Files\ELTClient\PackageForAll\ELTClient.CAB
+File1=C:\Program Files\ELTClient\PackageForAll\ELTClient.CAB
+File2=C:\Program Files\ELTClient\PackageForAll\ELTClient.HTM
+Handler1=PDWizard.WebPostDplySubWiz
+Handler2=PDWizard.FolderDplySubWiz
+
+
+[Package|Standard Setup Package 2|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\Program Files\ELTClient\PackageDownload
+
+[Package|Standard Setup Package 2|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 2|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 2|Files Found]
+
+[Package|Standard Setup Package 2|Files Released]
+
+[Package|Standard Setup Package 2|Missing Dependency Information]
+
+[Package|Standard Setup Package 2|Out-of-Date Dependency Information]
+
+[Package|Standard Setup Package 2|Files Added]
+
+[Package|Standard Setup Package 2|Files Removed]
+
+[Package|Standard Setup Package 2|Files In Project]
+C:\Program Files\ELTClient\ELTClient.dll=Yes
+C:\WINNT\SYSTEM32\MSVBVM60.DLL=Yes
+C:\WINNT\SYSTEM32\OLEAUT32.DLL=Yes
+C:\WINNT\SYSTEM32\OLEPRO32.DLL=Yes
+C:\WINNT\SYSTEM32\ASYCFILT.DLL=Yes
+C:\WINNT\SYSTEM32\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINNT\SYSTEM32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Standard Setup Package 2|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 2|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 2|Install Locations]
+C:\Program Files\ELTClient\ELTClient.dll=$(AppPath)
+C:\WINNT\SYSTEM32\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\SYSTEM32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Standard Setup Package 2|Configure Shared Files]
+Applicable=Yes
+C:\Program Files\ELTClient\ELTClient.dll=No
+
+[Package|Standard Setup Package 2|ComponentInfo]
+ELTClient.dll=thiscab
+MSVBVM60.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+OLEAUT32.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+OLEPRO32.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+ASYCFILT.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+STDOLE2.TLB=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+COMCAT.DLL=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+
+[Package|Standard Setup Package 2|ObjectInfo]
+EltClient=true;true
+
+[Package|Standard Setup Package 2|Distribution]
+Type=single
+Size=
+Title=ELTSoft
+
+[Package|Standard Setup Package 2|Package]
+PackageFolder=C:\Program Files\ELTClient\PackageDownload
+ProjectFolder=C:\Program Files\ELTClient
+ServerSideCab=
+File1=C:\Program Files\ELTClient\PackageDownload\setup.exe
+File2=C:\Program Files\ELTClient\PackageDownload\Setup.Lst
+File3=C:\Program Files\ELTClient\PackageDownload\ELTClient.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

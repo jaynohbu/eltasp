@@ -1,0 +1,43 @@
+﻿#LayoutSplitter .HeadPane,
+#PrintLayoutSplitter .HeadPane
+{
+	background: #393939;
+}
+.calendar #LayoutSplitter .SidePane,
+.contacts #LayoutSplitter .SidePane,
+.feeds #LayoutSplitter .SidePane
+{
+	background: #f5f5f5;
+}
+
+#LayoutSplitter .RightPane.HeadPane
+{
+    border-left-color: White;
+}
+
+.CalendarNavArea
+{
+	background: #f5f5f5;
+}
+
+.DateNavigatorContainer
+{
+	background: #f3f3f3;
+}
+
+.HeadPane .ActionToolbar .Spacer b
+{
+    background: White;
+}
+
+#LayoutSplitter .HeadPane .NavigationToolbar .NavigationMenu .dxm-item .dxm-content,
+#LayoutSplitter .HeadPane .NavigationToolbar .NavigationMenu .dxm-item.dxm-hovered .dxm-content,
+#PrintLayoutSplitter .ReportToolbar .dxm-item .dxm-content
+{
+    color: White;
+}
+
+.HeadPane .ActionToolbar .SearchBox
+{
+    margin-top: 1px;
+}

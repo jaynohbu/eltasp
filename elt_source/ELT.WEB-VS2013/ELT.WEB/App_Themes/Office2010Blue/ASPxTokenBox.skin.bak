@@ -1,0 +1,9 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxTokenBox runat="server" CssFilePath="~/App_Themes/Office2010Blue/{0}/styles.css" CssPostfix="Office2010Blue"
+	SpriteCssFilePath="~/App_Themes/Office2010Blue/{0}/sprite.css" Spacing="0" >
+    <LoadingPanelStyle ImageSpacing="5" />
+    <LoadingPanelImage Url="~/App_Themes/Office2010Blue/Editors/Loading.gif" />
+</dx:ASPxTokenBox>
+

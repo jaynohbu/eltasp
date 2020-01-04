@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<PresetInfo PresetName="Office2003 - Silver Theme" PresetDescription="Infragistics Office2003 Silver Preset.  Sets both Look and Behavior properties." PresetType="All" />-->
+<igtxt:WebNumericEdit BorderStyle="Solid" UseBrowserDefaults="False" BorderWidth="1px" BorderColor="#A6ABAE" CellSpacing="1">
+  <ButtonsAppearance CustomButtonDefaultTriangleImages="Arrow">
+    <ButtonPressedStyle BackColor="#E9EAF0" BorderColor="#34383D" ForeColor="Black" />
+    <ButtonStyle Width="13px" BorderWidth="1px" BorderColor="#8D959E" BorderStyle="Solid" ForeColor="#44474B" BackColor="#DDE0ED" />
+    <ButtonHoverStyle BackColor="#E5E7F5" BorderColor="#4B5B5C" ForeColor="Black" />
+    <ButtonDisabledStyle BackColor="#E1E1DD" BorderColor="#D7D7D7" ForeColor="#BEBEBE" />
+  </ButtonsAppearance>
+  <SpinButtons DefaultTriangleImages="ArrowSmall" Width="15px" />
+</igtxt:WebNumericEdit>

@@ -1,0 +1,62 @@
+﻿@model OEPNLMasterModel
+@{
+    ViewBag.Title = "OEPNL";
+    Layout = "~/Views/Shared/_LayoutOperation.cshtml";
+}
+
+@using ELT.WEB.Models
+@using ELT.CDT
+@using ELT.WEB.Controllers
+
+
+<hgroup>
+    <h1 class="pageheader">@ViewBag.Title</h1>
+</hgroup>
+<script src="@Url.Content("~/Scripts/Common.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm("OEPNL", "AirExport", FormMethod.Post, new { Operation = "OEPNL" }))
+{
+
+    {
+        <br />
+        foreach (string typeName in GridViewExportHelper.ExportTypes.Keys)
+        {
+            <input type="submit" name="@typeName" value="@GridViewExportHelper.ExportTypes[typeName].Title" />
+            <text>&nbsp;</text>
+        }
+        <input type="submit" name="ReSelect" value="Go Back to Search" />
+        <br />
+        <p class="Note">
+
+        </p>
+        <div id="report_ae_grid" class="report-grid">
+            <table style="margin-top:20px;text-align:center " align="center">
+                <tr>
+                    <td valign="top" align="left">
+                        @Html.Partial("_PNL/_OEPNLMaster", Model)
+                    </td>
+                </tr>
+            </table>
+
+
+        </div>
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<iframe id ="ContentFrame" scrolling="no"   frameborder="0" width="100%" onload="autoResize('ContentFrame');" src="@Url.Content("~/IFF_MAIN/ASPX/Reports/OperationPNL/PNLSelectAE.aspx" + ViewBag.Params)"></iframe>*@

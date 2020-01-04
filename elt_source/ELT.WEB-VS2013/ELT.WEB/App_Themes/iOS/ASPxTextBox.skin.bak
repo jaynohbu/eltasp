@@ -1,0 +1,6 @@
+<%@ Register assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Data" TagPrefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxDataView" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
+
+<dx:ASPxTextBox runat="server" SpriteCssFilePath="~/App_Themes/iOS/{0}/sprite.css" CssFilePath="~/App_Themes/iOS/{0}/styles.css" CssPostfix="iOS">
+</dx:ASPxTextBox>

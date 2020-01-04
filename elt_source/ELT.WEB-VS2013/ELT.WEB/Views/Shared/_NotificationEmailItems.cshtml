@@ -1,0 +1,18 @@
+﻿@model ELT.WEB.Models.EmailNotificationFormModel
+
+<script type="text/javascript">
+    var Message = "@ViewBag.Message"; 
+  if(Message!="")
+  ShowMessage(Message);
+ </script>
+@using (Ajax.BeginForm("_NotificationEmailItems", null, new AjaxOptions { UpdateTargetId = "DivItems", InsertionMode = InsertionMode.Replace }, new { @id = "FormEmailItems" }))
+{
+    @Html.HiddenFor(m => m.ShouldSend, new { id = "hShouldSend" })
+    @Html.HiddenFor(m => m.BillNumber, new { id = "hBillNumber" })
+      @Html.HiddenFor(m => m.EmailType, new { id = "hEmailType" })
+    if (Model.Items != null)
+    {       
+         @Html.EditorFor(x => x.Items)      
+    }
+   
+}

@@ -1,0 +1,64 @@
+<link href="../css/elt_css.css" rel="stylesheet" type="text/css">   <tr>
+    
+  <td width="100%" height="22" colspan="3" align="right" valign="middle" class="bodycopy"><strong>Dates</strong>&nbsp; 
+    <select Name="lstDates" size="1" class="shorttextfield" style="WIDTH: 120px;">
+      <option >Today</option>
+	<option <% if vDates="Month to Date" then response.write("selected") %>>Month to Date</option>
+	<option <% if vDates="Quarter to Date" then response.write("selected") %>>Quarter to Date</option>
+	<option <% if vDates="Year to Date" then response.write("selected") %>>Year to Date</option>
+	<option <% if vDates="This Month" then response.write("selected") %>>This Month</option>
+	<option <% if vDates="This Quarter" then response.write("selected") %>>This Quarter</option>
+	<option <% if vDatese="This Year" then response.write("selected") %>>This Year</option>
+	<option <% if vDates="Last Month" then response.write("selected") %>>Last Month</option>
+	<option <% if vDates="Last Quarter" then response.write("selected") %>>Last Quarter</option>
+	<option <% if vDates="Last Year" then response.write("selected") %>>Last Year</option>
+	<option <% if vDates="Custom" then response.write("selected") %>>Custom</option>
+	</select>
+    &nbsp; &nbsp; &nbsp; &nbsp; <strong>As of</strong>&nbsp;&nbsp; 
+    <input name="txtToDate" style="width: 90px" type=text class="shorttextfield" id="ToDate" OnKeyPress="key()" Value="<%= ToDate %>">
+    <img src="../images/calendar_image.gif" border="0" align="absmiddle" OnClick="ShowCal()" ></font></b></td>
+<p>
+<object name="oCal" classid="clsid:8E27C92B-1264-101C-8A2F-040224009C02" id="oCal" style="position: 'absolute'; left:'444'; top:'38'; width:'200'; height:'150'; visibility: 'hidden';" OnBlur="GetDate()" CODEBASE="http://eltweb/elt/include/mscal.ocx">
+  <param name="_Version" value="524288">
+  <param name="_ExtentX" value="6456">
+  <param name="_ExtentY" value="3784">
+  <param name="_StockProps" value="1">
+  <param name="BackColor" value="-2147483642">
+  <param name="Year" value="<%= Year(Date) %>">
+  <param name="Month" value="<%= Month(Date) %>">
+  <param name="Day" value="1">
+  <param name="DayLength" value="1">
+  <param name="MonthLength" value="2">
+  <param name="DayFontColor" value="0">
+  <param name="FirstDay" value="1">
+  <param name="GridCellEffect" value="1">
+  <param name="GridFontColor" value="65280">
+  <param name="GridLinesColor" value="-2147483634">
+  <param name="ShowDateSelectors" value="-1">
+  <param name="ShowDays" value="-1">
+  <param name="ShowHorizontalGrid" value="-1">
+  <param name="ShowTitle" value="0">
+  <param name="ShowVerticalGrid" value="-1">
+  <param name="TitleFontColor" value="16776960">
+  <param name="ValueIsNull" value="0">
+</object>
+</p>
+  </tr>
+
+<SCRIPT LANGUAGE="vbscript">
+<!---
+Sub GetDate()
+document.all("oCal").style.visibility="hidden"
+document.all("ToDate").Value=document.all("oCal").Value
+End Sub
+Sub ShowCal()
+if document.all("oCal").style.visibility="visible" then
+	document.all("oCal").style.visibility="hidden"
+else
+	document.all("oCal").style.visibility="visible"
+end if
+document.all("ToDate").Value=document.all("oCal").Value
+	'document.all("oCal").focus
+End Sub
+--->
+</SCRIPT>

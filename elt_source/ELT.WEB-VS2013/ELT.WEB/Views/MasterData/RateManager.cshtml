@@ -1,0 +1,187 @@
+﻿
+@using System.Configuration
+@{
+    ViewBag.Title = "RateManager";
+    Layout = "~/Views/Shared/_LayoutMasterData.cshtml";
+}
+
+@*<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" />*@
+<link rel="stylesheet" href="~/Content/font-awesome-4.6.3/css/font-awesome.min.css" />
+
+<!--[if IE 7]>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome-ie7.min.css" />
+<![endif]-->
+
+<link href="~/app/modules/js-custom-select-master/css/style.css" rel="stylesheet" />
+
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/angular-cookies.min.js" type="text/javascript"></script>
+<script src="~/Scripts/angular-cookies.min.js" type="text/javascript"></script>
+<script src="~/Scripts/angular-cookies.min.js" type="text/javascript"></script>
+<script src="~/Scripts/angular-animate.min.js"></script>
+<script src="~/Scripts/angular-route.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/app/modules/js-custom-select-master/js/customSelect.js"></script>
+<link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/app/modules/rateManager/appStyle.css" rel="stylesheet" />
+<script src="~/app/modules/rateManager/services/rateManagerService.js"></script>
+<script src="~/app/modules/rateManager/services/referenceService.js"></script>
+<script src="~/app/modules/rateManager/services/accountService.js"></script>
+<script src="~/app/modules/rateManager/controllers/rateManagerController.js"></script>
+<script src="~/app/modules/rateManager/app.js"></script>
+<script src="~/app/modules/rateManager/directives/customerSellingGrid.js"></script>
+<script src="~/app/modules/rateManager/directives/agentBuyingGrid.js"></script>
+<script src="~/app/modules/rateManager/directives/iataRateGrid.js"></script>
+<script src="~/app/modules/rateManager/directives/airlineBuyingGrid.js"></script>
+<script src="~/app/modules/rateManager/directives/pager.js"></script>
+
+
+<input id="apiBaseUrl" type="hidden" value="@ConfigurationManager.AppSettings["ApiBaseUrl"]" />
+<input id="rootUrl" type="hidden" value="@ConfigurationManager.AppSettings["RootUrl"]" />
+<input id="pageSize" type="hidden" value="@ConfigurationManager.AppSettings["RatePageSize"]"/>
+<input id="oldModel" type="hidden"/>
+
+<div ng-app="appRateManager" ng-controller="RateManagerController" class="parent">
+
+
+   
+        <div class="modal fade " id="displayMsg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" >Current Status</h4>
+                    </div>
+                    <div class="modal-body ">
+                        <p>
+                            {{message}}
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="modal fade " id="displayError" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" >Error</h4>
+                </div>
+                <div class="modal-body ">
+                    <p>
+                        {{error}}
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <form id="form-rate-man">
+        <div class="panel panel-default filterBox">
+            <!-- Default panel contents -->
+            <!-- Table -->
+            <table class="table">
+                <tr>
+                    <td>
+                        <div class="panel-heading">RATE MANAGER</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-inline">
+                            <div style="display: inline-table; margin-right: 10px;">
+                                <label>Rate Type </label>
+                            </div>
+                            <div style="display: inline-table; margin-right: 100px">
+                                <div class="dropdown">
+                                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                        {{rateTypeText}}
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                        <li ng-click="rateTypeChanged(4)"><a href="#">Customer Selling Rate</a></li>
+                                        <li ng-click="rateTypeChanged(3)"><a href="#">Airline Buying Rate </a></li>
+                                        <li ng-click="rateTypeChanged(1)"><a href="#">Agent Buying Rate</a></li>
+                                        <li ng-click="rateTypeChanged(5)"><a href="#">IATA Rate</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div style="display: inline-table" ng-show="rateTypeId==4">
+                                <label>Customer Name </label>(Optional)
+                            </div>
+                            <div style="display: inline-table" ng-show="rateTypeId==4">
+                                <div custom-select="a.text for a in searchAsync($searchTerm)" custom-select-options="{ 'async': true }" ng-model="customer"></div>
+                            </div>
+
+                            <div style="display: inline-table" ng-show="rateTypeId==1">
+                                <label>Agent Name </label>(Optional)
+                            </div>
+                            <div style="display: inline-table" ng-show="rateTypeId==1">
+                                <div custom-select="a.text for a in searchAsyncAgent($searchTerm)" custom-select-options="{ 'async': true }" ng-model="agent"></div>
+                            </div>
+                            <div class="form-group" ng-init="page_load('L')">
+                                <button type="button" ng-click="getRates()" class="btn btn-default">Go</button>
+                            </div>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <table class="table">
+
+                <tr>
+                    <td>
+                        <div>
+                            <customer-selling-rate-grid ng-model="model.companyWrappers" rate-type="4" on-change="updateModel(model)" ng-show="rateTypeId==4">
+
+                                <div class="form-group" style="text-align: center">
+                                    <button class="button btn-primary" ng-click="saveTable()"><span class="glyphicon glyphicon-floppy-save"></span> Save Table</button>
+                                </div>
+                            </customer-selling-rate-grid>
+                            <iata-rate-grid ng-model="model.iataRateTable" on-change="updateModel(model)" rate-type="5" ng-show="rateTypeId==5">
+                                <div class="form-group" style="text-align: center">
+                                    <button class="button btn-primary" ng-click="saveTable()"><span class="glyphicon glyphicon-floppy-save"></span> Save Table</button>
+                                </div>
+                            </iata-rate-grid>
+                            <airline-buying-rate-grid ng-model="model.airlineBuyingRateTable" on-change="updateModel(model)" rate-type="3" ng-show="rateTypeId==3">
+                                <div class="form-group" style="text-align: center">
+                                    <button class="button btn-primary" ng-click="saveTable()"><span class="glyphicon glyphicon-floppy-save"></span> Save Table</button>
+                                </div>
+                            </airline-buying-rate-grid>
+                            <agent-buying-rate-grid ng-model="model.companyWrappers" on-change="updateModel(model)" rate-type="1" ng-show="rateTypeId==1">
+                                <div class="form-group" style="text-align: center">
+                                    <button class="button btn-primary" ng-click="saveTable()"><span class="glyphicon glyphicon-floppy-save"></span> Save Table</button>
+                                </div>
+                            </agent-buying-rate-grid>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <pager ng-model="totalRows" size="pageSize" on-change="getPage(skip);" reset="reset"></pager>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </form>
+</div>
+
+
+

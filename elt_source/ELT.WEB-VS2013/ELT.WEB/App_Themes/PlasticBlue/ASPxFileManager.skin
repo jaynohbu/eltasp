@@ -1,0 +1,16 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxFileManager" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxFileManager runat="server">
+    <Styles CssFilePath="~/App_Themes/PlasticBlue/{0}/styles.css" CssPostfix="PlasticBlue">
+        <LoadingPanel ImageSpacing="6px" />
+    </Styles>
+    <Images SpriteCssFilePath="~/App_Themes/PlasticBlue/{0}/sprite.css" LoadingPanel-Url="~/App_Themes/PlasticBlue/Web/dvLoading.gif" 
+            FolderContainerNodeLoadingPanel-Url="~/App_Themes/PlasticBlue/Web/tvNodeLoading.gif"></Images>
+    <ImagesDetailsView>
+        <HeaderActiveFilter SpriteProperties-CssClass="dxWeb_fmGvHeaderFilterActive_PlasticBlue"></HeaderActiveFilter>
+        <HeaderFilter SpriteProperties-CssClass="dxWeb_fmGvHeaderFilter_PlasticBlue"></HeaderFilter>
+        <HeaderSortDown SpriteProperties-CssClass="dxWeb_fmGvHeaderSortDown_PlasticBlue"></HeaderSortDown>
+        <HeaderSortUp SpriteProperties-CssClass="dxWeb_fmGvHeaderSortUp_PlasticBlue"></HeaderSortUp>
+    </ImagesDetailsView>
+</dx:ASPxFileManager>

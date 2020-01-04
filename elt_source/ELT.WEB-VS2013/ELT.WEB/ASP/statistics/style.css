@@ -1,0 +1,80 @@
+body,td,textarea{
+font-family: "±¼¸²", "±¼¸²Ã¼", "µ¸¿ò", "µ¸¿òÃ¼", "Arial";
+font-size: 9pt;
+color: #333333;
+text-decoration: none}
+
+A {text-decoration: none; color:#333333 }
+A:hover {text-decoration: underline; color:red }
+
+td {  font-family: "verdana","µ¸¿ò", "Arial"; color: #333333; font-size: 9pt}
+.font{  font-family: "verdana","µ¸¿ò", "Arial"; color: #333333; font-size: 7pt}
+.font1{  font-family: "verdana","µ¸¿ò", "Arial"; color: #333333; font-size: 8pt}
+.font2{  font-family: "verdana","µ¸¿ò", "Arial"; color: #333333; font-size: 8pt}
+
+.but {
+font-weight:bold;
+font-size:11px;
+color:white;
+background-color:#333333;
+border-width:1px;
+border-color:#333333;
+border-style:solid;
+}
+
+.but1 {
+font-weight:bold;
+font-size:11px;
+color:#333333;
+background-color:#999999;
+border-width:1px;
+border-color:#efefef;
+border-style:solid;
+}
+
+.form_title{
+font-family:verdana;
+font-size:9pt;
+color:999999;
+font-weight:none;
+line-height:14pt;}
+
+.form_input{
+border:solid 1;
+font-family:±¼¸²,verdana;
+font-size:9pt;
+color:000000;
+background-color:white;
+font-size:8pt;
+font-family:Arial;
+vertical-align:top;
+border-left-color:D7D6D6;
+border-right-color:D7D6D6;
+border-top-color:D7D6D6;
+border-bottom-color:D7D6D6;
+height:18px;}
+
+.form_textarea{
+border:solid 1;
+font-family:±¼¸²,verdana;
+font-size:9pt;
+color:000000;
+background-color:white font-size:8pt;
+font-family:Arial;
+vertical-align:top;
+border-left-color:D7D6D6;
+border-right-color:D7D6D6;
+border-top-color:D7D6D6;
+border-bottom-color:D7D6D6;}
+
+
+.search {
+border-width:0 0 1;
+border-color:#666666;
+line-height:100%
+font-family:±¼¸²,verdana;
+font-size:9pt;
+color:666666;
+}
+
+.zv3_submit {border:solid 1;border-color:777777;background-color:white;width:100%;height:100%}

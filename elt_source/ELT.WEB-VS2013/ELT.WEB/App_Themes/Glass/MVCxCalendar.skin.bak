@@ -1,0 +1,17 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxmvc:MVCxCalendar runat="server" CssFilePath="~/App_Themes/Glass/{0}/styles.css" CssPostfix="Glass" SpriteCssFilePath="~/App_Themes/Glass/{0}/sprite.css" >    
+	<ValidationSettings>
+		<ErrorFrameStyle ImageSpacing="4px">
+		    <ErrorTextPaddings PaddingLeft="4px" />
+	    </ErrorFrameStyle>
+	</ValidationSettings>
+	<HeaderStyle Spacing="1px" />
+	<FooterStyle Spacing="4px" />
+	<FastNavStyle MonthYearSpacing="4px" />
+	<FastNavFooterStyle Spacing="4px" />
+	<LoadingPanelImage Url="~/App_Themes/Glass/Web/Loading.gif" />
+</dxmvc:MVCxCalendar>
+

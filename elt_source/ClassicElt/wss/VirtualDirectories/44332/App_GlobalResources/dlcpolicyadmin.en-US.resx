@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="14.0.4758.1000" _dal="1" -->
+<!-- _LocalBinding -->
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PolicyRptConfig_PageTitle">
+    <value>Information Management Policy Usage Reports</value>
+  </data>
+  <data name="PolicyRptConfig_WebAppTitle">
+    <value>Web Application</value>
+  </data>
+  <data name="PolicyRptConfig_WebAppDesc">
+    <value>Specify the web application for which you want to configure information management policy usage reports.</value>
+  </data>
+  <data name="PolicyRptConfig_SchdTitle">
+    <value>Schedule Recurring Reports</value>
+  </data>
+  <data name="PolicyRptConfig_SchdDesc">
+    <value>Specify how frequently you want the server to create reports of which policies are being used, and the number of items subject to these policies, in each site collection.</value>
+  </data>
+  <data name="PolicyRptConfig_SchdDesc2">
+    <value>To schedule an immediate one-time reporting job, click "Create Reports Now".</value>
+  </data>
+  <data name="PolicyRptConfig_ChkBoxGenRptLbl">
+    <value>Enable recurring policy usage reports</value>
+  </data>
+  <data name="PolicyRptConfig_OneTimeJobRunning">
+    <value>A policy report is currently being generated for this web application</value>
+  </data>
+  <data name="PolicyRptConfig_ReportSpreadSheetTitle">
+    <value>Report Template</value>
+  </data>
+  <data name="PolicyRptConfig_ReportSpreadSheetDesc">
+    <value>Specify the template you want to use for creating reports.</value>
+  </data>
+  <data name="PolicyRptConfig_DefaultTemplateText">
+    <value>Use the default report template</value>
+  </data>
+  <data name="PolicyRptConfig_CustomTemplateText">
+    <value>Use a custom report template</value>
+  </data>
+  <data name="PolicyRptConfig_TemplateLocReqErrMsg">
+    <value>You have not entered the custom template URL.</value>
+  </data>
+  <data name="PolicyRptConfig_TemplateRadLabel">
+    <value>Report Template: </value>
+  </data>
+  <data name="PolicyRptConfig_TemplateLocLabel">
+    <value>Custom template URL: </value>
+  </data>
+  <data name="PolicyRptConfig_TxtBoxErrMsg">
+    <value>This path contains illegal characters.</value>
+  </data>
+  <data name="PolicyRptConfig_TemplateLocMsgPrefix">
+    <value>Custom template URL</value>
+  </data>
+  <data name="PolicyRptConfig_TemplateLocTitle">
+    <value>Template Location</value>
+  </data>
+  <data name="PolicyRptConfig_Note1">
+    <value>Note: To indicate the root path for this Web application, type a forward slash (/).</value>
+  </data>
+  <data name="PolicyRptConfig_StorageLocTitle">
+    <value>Report File Location</value>
+  </data>
+  <data name="PolicyRptConfig_StorageLocDesc">
+    <value>Specify where you want to store reports. The report for each site collection will be stored as a separate file.</value>
+  </data>
+  <data name="PolicyRptConfig_StorageLocLabel">
+    <value>Report file location:</value>
+  </data>
+  <data name="PolicyRptConfig_StorageLocTxtBoxTitle">
+    <value>Storage Location</value>
+  </data>
+  <data name="PolicyRptConfig_StorageLocReqErrMsg">
+    <value>You have not entered the report file location.</value>
+  </data>
+  <data name="PolicyRptConfig_StorageLocMsgPrefix">
+    <value>Report file location</value>
+  </data>
+  <data name="PolicyRptConfig_GenRptNowText">
+    <value>Create Reports Now</value>
+  </data>
+  <data name="PolicyRptConfig_TestSSText">
+    <value>Test Template</value>
+  </data>
+  <data name="PolicyRptConfig_CheckUrlText">
+    <value>Check URL</value>
+  </data>
+  <data name="PolicyRptConfig_TestFileName">
+    <value>Test Report</value>
+  </data>
+  <data name="PolicyRptConfig_InvalidStorageLocation">
+    <value>Invalid report file location. Please make sure report file location is valid and that you have appropriate access.</value>
+  </data>
+  <data name="BarcodeGlobalSettings_Heading">
+    <value>Barcode style:</value>
+  </data>
+  <data name="BarcodeGlobalSettings_GeneratorToUse_Tip">
+    <value>Barcode style</value>
+  </data>
+  <data name="BarcodeGlobalSettings_SampleAltText">
+    <value>Barcode Sample Image</value>
+  </data>
+  <data name="BarcodeGlobalSettings_InvalidGeneratorId">
+    <value>Please select a new generator.</value>
+  </data>
+  <data name="BarGenSettings_ChooseAlphabet">
+    <value>Include the following characters in barcodes:</value>
+  </data>
+  <data name="BarGenSettings_LettersAndNumbers">
+    <value>Letters (A-Z) and numbers (0-9)&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Example: A1B2C3D4E5</value>
+  </data>
+  <data name="BarGenSettings_LettersAndNumbers_Tip">
+    <value>Use the following in barcodes: Letters (A-Z) and numbers (0-9)</value>
+  </data>
+  <data name="BarGenSettings_Numbers">
+    <value>Numbers (0-9) only&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Example: 1234567890</value>
+  </data>
+  <data name="BarGenSettings_Numbers_Tip">
+    <value>Use the following in barcodes: Numbers (0-9) only</value>
+  </data>
+  <data name="expiration_schedule_service">
+    <value>Schedule this process to run:</value>
+  </data>
+  <data name="expiration_daily_at">
+    <value>Daily at: </value>
+  </data>
+  <data name="expiration_weekly_on">
+    <value>Weekly on: </value>
+  </data>
+  <data name="expiration_starting_at">
+    <value>Starting at: </value>
+  </data>
+  <data name="expiration_run_button">
+    <value>Process Expired Items Now</value>
+  </data>
+  <data name="expiration_run_button_tip">
+    <value>Run Expiration Service Now</value>
+  </data>
+  <data name="expiration_job_running">
+    <value>An expiration timer job is currently running. It may take awhile before all of your expired items are processed, depending on how many expired items you have.</value>
+  </data>
+  <data name="feature_title">
+    <value>Policy Feature Settings</value>
+  </data>
+  <data name="feature_title2">
+    <value>Configure {0}</value>
+  </data>
+  <data name="feature_settings">
+    <value>Settings</value>
+  </data>
+  <data name="feature_settings_description">
+    <value>Configure the system-wide settings for this policy feature.</value>
+  </data>
+  <data name="feature_no_settings">
+    <value>There are no settings for this policy feature.</value>
+  </data>
+  <data name="feature_status">
+    <value>Status</value>
+  </data>
+  <data name="feature_availability">
+    <value>Availability</value>
+  </data>
+  <data name="feature_status_description">
+    <value>Specify whether this feature is available for use in lists, libraries and content types.</value>
+  </data>
+  <data name="feature_visible">
+    <value>Available for use in new site and list policies.</value>
+  </data>
+  <data name="feature_hidden">
+    <value>Decommissioned: Unavailable to new site and list policies, but still available in existing policies that use it.</value>
+  </data>
+  <data name="feature_resources">
+    <value>Resources</value>
+  </data>
+  <data name="feature_resources_description">
+    <value>Configure settings for each of the resources available to this policy feature.</value>
+  </data>
+  <data name="feature_no_resources">
+    <value>There are no resources for this policy feature.</value>
+  </data>
+  <data name="feature_requires_resources">
+    <value>The feature requires one or more types of resources that are not currently available.</value>
+  </data>
+  <data name="feature_required_resource_types">
+    <value>Required resource types:</value>
+  </data>
+  <data name="feature_resource_control_err">
+    <value>There was an error loading the resource control.</value>
+  </data>
+  <data name="feature_save_button">
+    <value>Save</value>
+  </data>
+  <data name="feature_cancel_button">
+    <value>Cancel</value>
+  </data>
+  <data name="feature_feature_na">
+    <value>There is no such Policy Feature.</value>
+  </data>
+  <data name="policyfeatures_title">
+    <value>Information Management Policy Configuration</value>
+  </data>
+  <data name="policyfeatures_description">
+    <value>This list displays all of the available information management policy feature for use within lists, libraries, and content types.</value>
+  </data>
+  <data name="policyfeatures_table_name">
+    <value>Name</value>
+  </data>
+  <data name="policyfeatures_table_description">
+    <value>Description</value>
+  </data>
+  <data name="policyfeatures_table_publisher">
+    <value>Publisher</value>
+  </data>
+  <data name="policyfeatures_table_status">
+    <value>Availability</value>
+  </data>
+  <data name="policyfeatures_availability_decommissioned">
+    <value>Decommissioned</value>
+  </data>
+  <data name="policyfeatures_availability_available">
+    <value>Available</value>
+  </data>
+</root>

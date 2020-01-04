@@ -1,0 +1,9 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxm" Namespace="DevExpress.Web.ASPxMenu" Assembly="DevExpress.Web.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxmvc" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxmvc:MVCxPopupMenu runat="server" SpriteCssFilePath="~/App_Themes/RedWine/{0}/sprite.css" CssFilePath="~/App_Themes/RedWine/{0}/styles.css" CssPostfix="RedWine" LoadingPanelImagePosition="Top">
+    <RootItemSubMenuOffset FirstItemY="-2" LastItemY="-2" Y="-2" FirstItemX="2" LastItemX="2" X="2" />
+    <ItemSubMenuOffset FirstItemX="2" FirstItemY="-2" LastItemX="2" LastItemY="-2" X="2" Y="-2" />
+</dxmvc:MVCxPopupMenu>
+

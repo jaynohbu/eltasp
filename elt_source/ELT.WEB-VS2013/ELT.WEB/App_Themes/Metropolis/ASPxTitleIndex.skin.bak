@@ -1,0 +1,13 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxTitleIndex" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxTitleIndex runat="server" BackToTopText="Back to Top" SpriteCssFilePath="~/App_Themes/Metropolis/{0}/sprite.css" CssPostfix="Metropolis" CssFilePath="~/App_Themes/Metropolis/{0}/styles.css">
+    <BackToTopImage Url="~/App_Themes/Metropolis/Web/tiGotoBack.png" />
+    <LoadingPanelImage Url="~/App_Themes/Metropolis/Web/Loading.gif" />
+    <IndexPanelStyle HorizontalAlign="Center" />
+    <IndexPanelSeparatorStyle Height="1px" BackColor="Silver" />
+    <GroupContentStyle>
+        <Paddings Padding="12px" />
+    </GroupContentStyle>
+</dx:ASPxTitleIndex>
+

@@ -1,0 +1,163 @@
+﻿@using ELT.WEB.Models
+@using ELT.CDT
+@model ELT.WEB.Models.PNLMasterModel
+
+
+        
+@Html.DevExpress().GridView(
+    settings =>
+    {
+        settings.Name = "grid";
+        settings.CallbackRouteValues = new { Controller = "Report", Action = "PNLMaster" };
+        settings.Width = Unit.Pixel(1000);
+        settings.SettingsPager.PageSize = 30;       
+        settings.Columns.Add("Customer_Name", "Customer").Settings.AllowDragDrop= DefaultBoolean.False ;
+        settings.Columns.Add("ImportExport", "Import/Export").Settings.AllowDragDrop = DefaultBoolean.False;
+        settings.Columns.Add("AirOcean", "Air/Ocean").Settings.AllowDragDrop = DefaultBoolean.False;
+       
+       
+        settings.Columns.Add(c =>
+        {
+            c.Caption = "MAWB/MBOL";
+            c.FieldName = "MBL_NUM";
+            c.SetDataItemTemplateContent(a =>
+            {
+                if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "MBL_NUM"))))
+                {
+                    string url = DataBinder.Eval(a.DataItem, "MBL_LINK").ToString();
+                    url = "\"" + Url.Content(url) + "\"";
+                    ViewContext.Writer.Write(
+                        "<a href='javascript:void(0)' onclick = 'viewPop(" + url + ")'>" + a.Text + "</a>");
+                }
+            });
+            c.Settings.AllowDragDrop = DefaultBoolean.False; 
+        });
+        
+        
+    
+
+        settings.Columns.Add(c =>
+        {
+            c.Caption = "HAWB/HBOL";
+            c.FieldName = "HBL_NUM";
+            c.SetDataItemTemplateContent(a =>
+            {
+                if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "HBL_NUM"))))
+                {
+                    string url = DataBinder.Eval(a.DataItem, "HBL_LINK").ToString();
+                    url = "\"" + Url.Content(url) + "\"";
+                    ViewContext.Writer.Write(
+                        "<a href='javascript:void(0)' onclick = 'viewPop(" + url + ")'>" + a.Text + "</a>");
+                }
+            });
+            c.Settings.AllowDragDrop = DefaultBoolean.False; 
+
+        });
+        
+        settings.Columns.Add("Date").Settings.AllowDragDrop = DefaultBoolean.False;
+        settings.Columns.Add("Description", "Item").Settings.AllowDragDrop = DefaultBoolean.False;
+        settings.Columns.Add("ORIGIN", "Origination").Settings.AllowDragDrop = DefaultBoolean.False;
+        settings.Columns.Add("DEST", "Destination").Settings.AllowDragDrop = DefaultBoolean.False;
+        settings.ClientSideEvents.EndCallback = "GroupOrder";
+       
+
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Revenue";       
+          
+            column.SetDataItemTemplateContent(a =>
+            {
+                if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Revenue"))))
+                {
+                    string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                    if (a.Text == "0") val = "0";
+                    ViewContext.Writer.Write(val
+                       );
+                }
+            });
+        });
+
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Expense";
+
+            column.SetDataItemTemplateContent(a =>
+            {
+                if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Expense"))))
+                {
+                    string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                    if (a.Text == "0") val = "0";
+                    ViewContext.Writer.Write(val
+                       );
+                }
+            });
+          
+          
+        });
+
+
+        settings.Columns.Add(column =>
+        {
+            column.FieldName = "Profit";
+
+            column.SetDataItemTemplateContent(a =>
+            {
+                if (!string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(a.DataItem, "Profit"))))
+                {
+                    string val = string.Format("{0:###,###,###.00}", Convert.ToDecimal(a.Text));
+                    if (a.Text == "0") val = "0";
+                    ViewContext.Writer.Write(val
+                       );
+                }
+            });
+           
+        });
+        
+
+      
+     
+        
+        
+        settings.Settings.ShowFooter = true;
+        settings.TotalSummary.Add(DevExpress.Data.SummaryItemType.Sum, "Revenue").DisplayFormat = "Revenue = {0:###,###,##0.00}";
+        settings.TotalSummary.Add(DevExpress.Data.SummaryItemType.Sum, "Expense").DisplayFormat = "Expense = {0:###,###,##0.00}";
+        settings.TotalSummary.Add(DevExpress.Data.SummaryItemType.Sum, "Profit").DisplayFormat = "Profit = {0:###,###,##0.00}";
+        settings.Settings.ShowGroupPanel = true;
+        settings.GroupSummary.Add(DevExpress.Data.SummaryItemType.Sum, "Revenue").DisplayFormat = "Revenue = {0:###,###,##0.00}";
+        settings.GroupSummary.Add(DevExpress.Data.SummaryItemType.Sum, "Expense").DisplayFormat = "Expense = {0:###,###,##0.00}";
+        settings.GroupSummary.Add(DevExpress.Data.SummaryItemType.Sum, "Profit").DisplayFormat = "Profit = {0:###,###,##0.00}";
+        
+
+            
+            
+        settings.PreRender = (sender, e) =>
+        {
+            MVCxGridView grid = (MVCxGridView)sender;
+            grid.SettingsText.GroupPanel = "Use the dropdown above to add groups. Groups will appear in sub groups of previously added groups.";
+            
+        };     
+ 
+        settings.DataBound = (sender, e) =>
+        {
+            MVCxGridView grid = (MVCxGridView)sender;
+            if (ViewBag.ClearGrouping == true)
+            {
+                for (int i = 0; i < grid.Columns.Count; i++)
+                    grid.UnGroup(grid.Columns[i]);
+            }
+            else
+            {
+                if (ViewBag.GroupBy != null)
+                {
+                    ArrayList PNLGropuing = ViewBag.GroupBy as ArrayList;
+                    for (int i = 0; i < PNLGropuing.Count;i++ )
+                        grid.GroupBy(grid.Columns[PNLGropuing[i].ToString()]);
+                    grid.ExpandAll();
+                }
+            }
+           // 
+
+        };
+    }).Bind(Model.PNLTransactionItems).GetHtml()
+
+

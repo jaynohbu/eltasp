@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "IFF_MAIN", "http://localhost/IFF_MAIN", "{87162D2B-68D6-4A3D-A1C9-804661F5B6C8}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = ""
+		SccAuxPath = ""
+		SccLocalPath = ""
+		SccProvider = ""
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/IFF_MAIN"
+		Debug.AspNetCompiler.PhysicalPath = "..\IFF_MAIN\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\IFF_MAIN\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/IFF_MAIN"
+		Release.AspNetCompiler.PhysicalPath = "..\IFF_MAIN\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\IFF_MAIN\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\IFF_MAIN\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87162D2B-68D6-4A3D-A1C9-804661F5B6C8}.Debug|.NET.ActiveCfg = Debug|.NET
+		{87162D2B-68D6-4A3D-A1C9-804661F5B6C8}.Debug|.NET.Build.0 = Debug|.NET
+		{87162D2B-68D6-4A3D-A1C9-804661F5B6C8}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{87162D2B-68D6-4A3D-A1C9-804661F5B6C8}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
+		{87162D2B-68D6-4A3D-A1C9-804661F5B6C8}.Debug|Mixed Platforms.Build.0 = Debug|.NET
+		{87162D2B-68D6-4A3D-A1C9-804661F5B6C8}.Release|.NET.ActiveCfg = Release|.NET
+		{87162D2B-68D6-4A3D-A1C9-804661F5B6C8}.Release|.NET.Build.0 = Release|.NET
+		{87162D2B-68D6-4A3D-A1C9-804661F5B6C8}.Release|Any CPU.ActiveCfg = Release|.NET
+		{87162D2B-68D6-4A3D-A1C9-804661F5B6C8}.Release|Mixed Platforms.ActiveCfg = Release|.NET
+		{87162D2B-68D6-4A3D-A1C9-804661F5B6C8}.Release|Mixed Platforms.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

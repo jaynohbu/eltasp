@@ -1,0 +1,106 @@
+.igwv_WeekViewFrame {
+	margin-top: 2px;
+	/* background-color: #FFFFD5; */
+}
+
+.igwv_CaptionHeader {
+	
+	background-image: url(images/MonthHeaderCaption_bg.png);
+	background-repeat: repeat;
+
+	border-right: 1px solid #9E9E9E;
+	border-left: 1px solid #9E9E9E;
+	border-bottom: 0px solid #9E9E9E;
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;	
+	font-size: 8pt;
+	text-align: center;
+	color: #000000;
+
+	line-height: 16px;
+	height: 16px;	
+}
+
+.igwv_NavigationButton { 
+	border: 0px;
+	width: 17px;
+	background-color: transparent;
+	vertical-align: middle;
+	cursor: hand;
+}
+	
+.igwv_DayHeader {
+	text-align: right;
+	height:18px;
+	padding: 0px 2px 0px 0px;
+	cursor:default;	
+	font-size: 8pt;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.igwv_TodayHeader {
+	color: #000000;
+	background-image: url(images/TodayHeader_bg.png);
+	background-color: #FFFFFF;
+	background-repeat: repeat-x;
+	background-position: top;
+	border-bottom: 1px solid #6693C0;
+}
+
+.igwv_ActiveDayHeader 
+{
+	background-image: none;
+	background-color: #3875D7;
+	color: #FFFFFF;
+	background-image:none;
+}
+
+.igwv_Day {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	overflow-x:hidden;	
+}
+
+.igwv_DayArea {
+	border: 1px solid #9E9E9E;
+	background-color: #FFFFFF;
+}
+		
+.igwv_ActiveDay { 
+
+}
+
+.igwv_Appointment {
+	line-height:150%;
+	white-space:nowrap;
+	cursor: pointer;
+	padding: 2px;
+	margin: 0px 1px 0px 1px;
+}
+
+.igwv_SelectedAppointment { 
+	background-color: #DAEAFF; /* D0D0D0; */
+	margin-top: 1px;
+	padding: 1px;
+	color: #000000;
+	cursor: pointer;
+	margin-left:1px;
+	margin-right: 1px;
+}
+
+.igwv_ReminderIcon {
+	background-image: url(/ig_common/images/reminder.gif);
+	display: inline;
+	margin-right: 5px;
+	margin-left: 3px;
+	width: 16px;
+	height: 13px;	
+}
+
+.igwv_AllDayEvent { 
+	border-style:solid;
+	border-color:black;
+	border-width: 1px;
+	background-color: lightyellow;
+}

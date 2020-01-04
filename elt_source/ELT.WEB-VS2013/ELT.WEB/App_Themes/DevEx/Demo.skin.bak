@@ -1,0 +1,16 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.Mvc" Assembly="DevExpress.Web.Mvc.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<dx:MVCxDropDownEdit SkinID="CheckComboBox"	runat="server" CssFilePath="{0}/styles.css" CssPostfix="DevEx"
+	SpriteCssFilePath="{0}/sprite.css" Spacing="0">
+    <ButtonStyle Width="13" />
+    <DropDownWindowStyle BackColor="White" />		
+    <DropDownButton>
+    </DropDownButton>
+</dx:MVCxDropDownEdit>
+<dx:MVCxListBox runat="server" SkinID="CheckComboBoxListBox" CssFilePath="{0}/styles.css" CssPostfix="DevEx">
+    <Border BorderStyle="None" />
+    <BorderBottom BorderStyle="Solid" BorderWidth="1px" BorderColor="#C3C9E3" />
+    <LoadingPanelStyle ImageSpacing="5" />
+    <LoadingPanelImage Url="Editors/Loading.gif" />    
+</dx:MVCxListBox>

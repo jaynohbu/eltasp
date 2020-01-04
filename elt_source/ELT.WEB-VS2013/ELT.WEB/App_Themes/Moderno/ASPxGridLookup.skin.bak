@@ -1,0 +1,40 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxGridLookup" Assembly="DevExpress.Web.v13.2, Version=13.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dx:ASPxGridLookup runat="server" Spacing="0" SpriteCssFilePath="~/App_Themes/Moderno/{0}/sprite.css" CssPostfix="Moderno" CssFilePath="~/App_Themes/Moderno/{0}/styles.css">
+    <GridViewProperties>
+        <SettingsPager CurrentPageNumberFormat="{0}"></SettingsPager>
+        <Settings GridLines="Vertical"></Settings>
+
+        <SettingsPopup>
+            <HeaderFilter MinWidth="280px" MinHeight="150px"></HeaderFilter>
+        </SettingsPopup>
+    </GridViewProperties>
+
+    <GridViewImages SpriteCssFilePath="~/App_Themes/Moderno/{0}/sprite.css">
+        <LoadingPanelOnStatusBar Url="GridView/gvLoadingOnStatusBar.gif"></LoadingPanelOnStatusBar>
+        <LoadingPanel Url="GridView/Loading.gif"></LoadingPanel>
+    </GridViewImages>
+
+    <GridViewImagesFilterControl>
+        <LoadingPanel Url="Editors/Loading.gif"></LoadingPanel>
+    </GridViewImagesFilterControl>
+
+    <GridViewStyles>
+        <LoadingPanel ImageSpacing="8px"></LoadingPanel>
+    </GridViewStyles>
+
+    <GridViewStylesEditors>
+        <CalendarHeader Spacing="1px"></CalendarHeader>
+        <CalendarFooter Spacing="16px"></CalendarFooter>
+        <ProgressBar Height="41px"></ProgressBar>
+    </GridViewStylesEditors>
+
+    <ValidationSettings>
+        <ErrorFrameStyle ImageSpacing="4px">
+            <ErrorTextPaddings PaddingLeft="4px"></ErrorTextPaddings>
+        </ErrorFrameStyle>
+    </ValidationSettings>
+</dx:ASPxGridLookup>
+

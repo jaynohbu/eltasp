@@ -1,0 +1,147 @@
+<% Option Explicit %>
+<% response.buffer = true %>
+
+ 
+
+<% dim sql,rs %>
+
+<!-- #include file="../inc/dbinfo.asp" -->
+<!-- #include file="../inc/joint.asp" -->
+
+<%
+	dim num,join_id,join_pin,url,point,updatesql
+	
+	h_url = Request("h_url")
+	
+	join_id = Request("join_id")
+	join_pin = Request("join_pin")
+	
+	
+	call f_member
+	
+	SQL = "Select * From member Where elt_account_number=" & elt_account_number & " AND id ='"& join_id &"'"
+	Set rs = db.Execute(SQL)
+	
+	if rs.eof or rs.bof then Response.Redirect "../inc/error.asp?no=16"
+	
+	SQL = "Select * From member Where elt_account_number=" & elt_account_number & " AND id ='"& join_id &"' and pin='"& join_pin &"'"
+	Set rs = db.Execute(SQL)
+	
+		
+	if rs.eof or rs.bof then 
+		Response.Redirect "../inc/error.asp?no=2"
+	else
+	
+		
+
+	'############# 로그인할려는 아이디가 이미 로그인 되어있는지 확인 ########################
+	
+	dim sql1,rs1,another_ip
+	
+	SQL1 = "SELECT * FROM view_login where elt_account_number="&elt_account_number&" AND user_id='"&join_id&"' and ip<>'"&session_ip&"'"
+	Set rs1 = eltConn.execute (SQL1)
+	
+	if not (rs1.eof or rs1.bof) then	'## 현재 로그인할려는 사용자가 있을경우...
+		another_ip = rs1("ip")
+%>
+<form name="inno" method="POST" action="login_ok_pro.asp?h_url=<%=h_url%>">
+<input type="hidden" name="join_id" value="<%=join_id%>">
+<input type="hidden" name="join_pin" value="<%=join_pin%>">
+<input type="hidden" name="auto_login" value="<%=auto_login%>">
+</form>
+
+<script language="javascript">
+<!-- //
+		ans = confirm("Your ID is being used on " + "<%=another_ip%>" + " already. \n Do you want to refuse that connection ?")
+
+         if(ans == true)
+         { document.inno.submit();	}
+         else
+         { top.location.href='/IFF_MAIN/Authentication/login.aspx';}
+
+//-->
+</script>
+
+
+<%
+	else 
+		
+	
+	'############# 로그인할려는 아이디가 이미 로그인 되어있는지 확인 끝부분 ########################
+
+	session_uid = rs("id")
+	session_pin = rs("pin")
+	session_login_name = rs("name")
+	session_email = rs("email")
+	session_url = rs("url")
+	session_level = rs("user_level")
+
+	if rs("id")="admin" then
+	 	 If elt_account_number = "80002000" then
+		  session_admin = "admin"
+	 	  session_level=1	
+    	 End if 
+	end if
+
+
+	if level_select=1 then
+		call point_up
+	end if
+
+	dim h_url1
+	h_url = instr(q_info,"h_url=")
+	h_url1 = len(q_info)
+	h_url = h_url+5
+	h_url = h_url1-h_url
+	h_url = right(q_info,h_url)
+	
+	if rs("id")="admin" then
+		 session_admin="admin"
+		 session_level=1	
+	end if
+	
+	'### 쿠키 설정부분 시작
+	dim auto_login
+	auto_login = request("auto_login")
+	
+	if auto_login = "1" then
+'		Response.Cookies("a_login").expires = #12/31/2020 00:00:00#
+'		Response.Cookies("a_login")("auto_login") = 1
+'		Response.Cookies("a_login")("id") = join_id
+'		Response.Cookies("a_login")("pin") = join_pin
+	else
+'		Response.Cookies("a_login").expires = #12/31/2020 00:00:00#
+'		Response.Cookies("a_login")("auto_login") = 0
+'		Response.Cookies("a_login")("id") = ""
+'		Response.Cookies("a_login")("pin") = ""
+	end if
+	'### 쿠키 설정 부분 끝
+	
+	
+	'##################### 로그인하면 접속자정보에 invalid 에서 회원으로 정보변경 ################33
+	
+	UPDATESQL = "Update view_login Set alive = 0, user_id ='"&rs("id")&"',user_name='"&rs("name")&"',login_time='"&now&"',u_time='"&now&"' ,requested_page='login_ok.asp' where elt_account_numbder="&elt_account_number&" AND ip='"&session_ip&"'"& " AND server_name='" & 	session_server_name & "'"
+	eltConn.Execute UPDATESQL
+
+	'##################### 로그인하면 접속자정보에 invalid 에서 회원으로 정보변경 ################33
+	rs.close
+	db.Close
+
+'	UPDATESQL	
+
+	Set rs=nothing
+	Set db=nothing
+	Set eltConn=nothing
+	
+	
+	h_url = instr(q_info,"h_url=")
+	h_url1 = len(q_info)
+	h_url = h_url+5
+	h_url = h_url1-h_url
+	h_url = right(q_info,h_url)
+'	response.write h_url
+	Response.Redirect h_url
+		
+	end if
+	end if
+%>
